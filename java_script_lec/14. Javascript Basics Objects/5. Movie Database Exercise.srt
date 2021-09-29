@@ -1,0 +1,536 @@
+﻿1
+00:00:00,960 --> 00:00:04,850
+Now it's time for you to write some of your own code using javascript objects.
+
+2
+00:00:04,890 --> 00:00:06,880
+We're just going to do one quick exercise.
+
+3
+00:00:06,880 --> 00:00:10,020
+You're going to build a movie database array.
+
+4
+00:00:10,020 --> 00:00:12,350
+So that sounds much more complicated than it is.
+
+5
+00:00:12,360 --> 00:00:18,510
+The idea is that you have an array called movies and inside of that array you have a bunch of movie
+
+6
+00:00:18,510 --> 00:00:19,650
+objects.
+
+7
+00:00:19,650 --> 00:00:22,700
+So it's just like the posting comments thing that we saw earlier.
+
+8
+00:00:22,740 --> 00:00:29,730
+So a movie should have a title that's a string a rating that's a number and has watched which is a boolean
+
+9
+00:00:29,730 --> 00:00:30,050
+.
+
+10
+00:00:30,090 --> 00:00:34,380
+So that's just supposed to determine if you have seen the movie or if you haven't seen the movie.
+
+11
+00:00:34,380 --> 00:00:37,430
+So I want to define an array with three or four different movies in it.
+
+12
+00:00:37,590 --> 00:00:42,120
+Then you're going to loop through the array and print out something that looks like this.
+
+13
+00:00:42,120 --> 00:00:49,470
+So on each line you will either say you have watched the movie title dash the number of stars the rating
+
+14
+00:00:49,830 --> 00:00:51,800
+or if has watched is false.
+
+15
+00:00:52,030 --> 00:00:56,790
+You're right you have not seen the movie title dash the rating.
+
+16
+00:00:56,790 --> 00:00:59,180
+So again you're going to have an array of movie objects.
+
+17
+00:00:59,190 --> 00:01:02,650
+Each one has a title rating and has watched which is the.
+
+18
+00:01:02,850 --> 00:01:07,720
+Then you're going to loop through that array of movies and print out a line for each one.
+
+19
+00:01:07,890 --> 00:01:09,100
+And that line will include.
+
+20
+00:01:09,270 --> 00:01:12,450
+If you have or haven't seen the movie the title and the rating.
+
+21
+00:01:12,840 --> 00:01:18,030
+OK so possible you attempt this on your own and then I'll be back in a few seconds to go over the answer
+
+22
+00:01:18,040 --> 00:01:18,420
+.
+
+23
+00:01:18,760 --> 00:01:19,170
+OK.
+
+24
+00:01:19,230 --> 00:01:20,890
+So let's start writing the solution.
+
+25
+00:01:20,940 --> 00:01:24,690
+I'm going to open up the console and declare a movie's array.
+
+26
+00:01:24,690 --> 00:01:29,550
+So far movies equals an array.
+
+27
+00:01:30,360 --> 00:01:33,670
+And then inside the Saray we're going to put a bunch of objects.
+
+28
+00:01:34,170 --> 00:01:37,110
+So each movie object is going to have a title
+
+29
+00:01:40,170 --> 00:01:41,410
+and I'm just going to do two.
+
+30
+00:01:41,430 --> 00:01:44,870
+So we don't spend a lot of time here title in Bruges.
+
+31
+00:01:44,940 --> 00:01:47,080
+Great movie if you haven't seen it.
+
+32
+00:01:47,580 --> 00:01:49,130
+Has watched.
+
+33
+00:01:49,530 --> 00:01:53,470
+That will be true for me and rating is five.
+
+34
+00:01:53,970 --> 00:01:59,220
+And because that's just getting a little bit long I'm going to indent this put every property on its
+
+35
+00:01:59,220 --> 00:02:02,460
+own line.
+
+36
+00:02:02,460 --> 00:02:05,500
+It's just much more readable.
+
+37
+00:02:06,900 --> 00:02:21,120
+So we'll do one more movie and that will be tidal frozen which I actually haven't seen.
+
+38
+00:02:22,410 --> 00:02:26,880
+So that's false and rating will be four point five.
+
+39
+00:02:26,970 --> 00:02:31,440
+That's just going based off of what I've heard and we'll leave our movies at that.
+
+40
+00:02:31,560 --> 00:02:34,000
+So two movies each one has a title.
+
+41
+00:02:34,140 --> 00:02:38,000
+A string has watched a boolean and rating a number.
+
+42
+00:02:38,220 --> 00:02:43,170
+So let's hit enter and take a look at our movies array objects.
+
+43
+00:02:43,860 --> 00:02:45,210
+Just like we expect.
+
+44
+00:02:45,600 --> 00:02:51,210
+So now all we have to do is loop through the array and then print out this nice string for every movie
+
+45
+00:02:51,210 --> 00:02:51,930
+.
+
+46
+00:02:51,930 --> 00:02:53,680
+So I'm going to use a for each.
+
+47
+00:02:53,910 --> 00:02:56,730
+So movies for each.
+
+48
+00:02:56,730 --> 00:03:01,610
+But of course you could also easily use a for loop or whatever you prefer.
+
+49
+00:03:02,220 --> 00:03:09,510
+So for each one we'll give it a placeholder name of movie and that will open this up and all that we
+
+50
+00:03:09,510 --> 00:03:12,810
+want to do is print out a line for each movie.
+
+51
+00:03:12,840 --> 00:03:15,030
+So that's going to be a long comp's thought log.
+
+52
+00:03:15,420 --> 00:03:19,930
+And rather than do a giant Cazotte log that has a bunch of plus signs in it.
+
+53
+00:03:20,070 --> 00:03:23,990
+I'm actually going to make a string called result.
+
+54
+00:03:24,180 --> 00:03:31,710
+So that's going to look like this var results equals and it's going to start as you have because if
+
+55
+00:03:31,710 --> 00:03:35,170
+you look over here they all start with you have you have.
+
+56
+00:03:35,220 --> 00:03:40,020
+So I'm going to start my string off like that and then I'm going to have an if statement to decide what
+
+57
+00:03:40,020 --> 00:03:45,410
+comes next I either I'm going to add watched or I'm going to add not seen.
+
+58
+00:03:45,720 --> 00:03:46,990
+So to do that.
+
+59
+00:03:47,280 --> 00:03:51,860
+Make sure you have your space right here and then on the next line just have an if statement.
+
+60
+00:03:52,170 --> 00:03:56,430
+If movie has watched.
+
+61
+00:03:56,790 --> 00:04:06,720
+So if we have watched it we're going to set result two plus equal watched with the space after it or
+
+62
+00:04:06,720 --> 00:04:17,530
+else we're going to set result plus equals not scene.
+
+63
+00:04:17,730 --> 00:04:19,260
+Also with the space after it.
+
+64
+00:04:19,260 --> 00:04:22,780
+So we're basically building this string that we're going to print at the end.
+
+65
+00:04:23,100 --> 00:04:24,440
+So it starts off.
+
+66
+00:04:24,630 --> 00:04:31,770
+You have space and then depending on the value of has watched for each movie we're either going to add
+
+67
+00:04:31,770 --> 00:04:39,540
+in or concatenate watched or not seen then the next step is to go ahead and add in the movie the title
+
+68
+00:04:39,560 --> 00:04:39,950
+.
+
+69
+00:04:40,320 --> 00:04:47,790
+So next we do a result for us equals and you will see there are quotes around the title.
+
+70
+00:04:47,880 --> 00:04:53,820
+So if we wanted to make those quotes work we need to make sure that we have the backslash quote to escape
+
+71
+00:04:54,810 --> 00:04:55,690
+the double quotes.
+
+72
+00:04:55,920 --> 00:04:59,990
+So we're going to result plus equals and then we're going to start off with our quote.
+
+73
+00:05:00,090 --> 00:05:02,410
+So this is a little bit weird looking.
+
+74
+00:05:03,000 --> 00:05:10,700
+And then we're going to add plus movie dot title plus.
+
+75
+00:05:10,710 --> 00:05:15,810
+And then the closing quote at the end which we have to just do backslash quote.
+
+76
+00:05:15,840 --> 00:05:17,860
+So it's a lot of quotation marks.
+
+77
+00:05:17,880 --> 00:05:22,610
+Remember that this turns into just a double quote and this turns into a double quote.
+
+78
+00:05:23,610 --> 00:05:33,060
+And then let's add a space after that double quote and a dash and then the very last thing is to add
+
+79
+00:05:33,060 --> 00:05:37,930
+in result plus equals the number of stars.
+
+80
+00:05:38,040 --> 00:05:47,700
+So that's going to be you don't need quote movie rating plus
+
+81
+00:05:52,290 --> 00:05:55,710
+stars just like that.
+
+82
+00:05:56,280 --> 00:06:01,770
+And then we're going to cost that log result and we end up with this here.
+
+83
+00:06:01,830 --> 00:06:07,540
+You have watched in Bruges five stars you have not seen Frozen 4.5 stars.
+
+84
+00:06:07,800 --> 00:06:10,230
+And we can go ahead and add one more movie in here
+
+85
+00:06:15,410 --> 00:06:19,740
+to title the miserables
+
+86
+00:06:23,160 --> 00:06:34,140
+rating 3.5 and has watched set that to false.
+
+87
+00:06:34,220 --> 00:06:41,190
+I've seen the musical never the movie and let's indent this just so that it's easier to read and read
+
+88
+00:06:41,190 --> 00:06:41,660
+you this.
+
+89
+00:06:41,670 --> 00:06:48,030
+So hit enter here and then run our code again to print things out and we can walk through this one more
+
+90
+00:06:48,030 --> 00:06:48,830
+time.
+
+91
+00:06:48,930 --> 00:06:54,240
+We make a result string each time in the for loop and we're going to slowly build that result string
+
+92
+00:06:54,250 --> 00:06:54,700
+.
+
+93
+00:06:55,140 --> 00:06:57,520
+So let's take the example of in Bruges.
+
+94
+00:06:57,900 --> 00:07:00,610
+We're going to add you have space.
+
+95
+00:07:00,870 --> 00:07:05,990
+And then if movie has watched is true which it is we're going to plus equals watched.
+
+96
+00:07:06,090 --> 00:07:12,270
+So we end up with you have watched and then the space after that and then replace the coil in a double
+
+97
+00:07:12,270 --> 00:07:12,950
+quote.
+
+98
+00:07:13,440 --> 00:07:15,870
+Plus the movie title plus another movie quote.
+
+99
+00:07:16,020 --> 00:07:16,730
+So then we have.
+
+100
+00:07:16,730 --> 00:07:25,260
+You have watched double quote In Bruges and double quote dash space and then we add in the movie rating
+
+101
+00:07:25,350 --> 00:07:26,280
+and stars.
+
+102
+00:07:26,490 --> 00:07:29,000
+So that movie rating is five.
+
+103
+00:07:29,190 --> 00:07:35,810
+So we end up with you have watched in Bruges dash five stars and we print that out.
+
+104
+00:07:36,320 --> 00:07:38,510
+You can see it works just fine.
+
+105
+00:07:38,650 --> 00:07:42,750
+And our newly added Les Miserables shows up as you have not seen.
+
+106
+00:07:42,750 --> 00:07:44,890
+Les Miserables 3.5 stars.
+
+107
+00:07:45,150 --> 00:07:46,420
+And that's all we needed to do.
+
+108
+00:07:46,590 --> 00:07:51,930
+If you wanted to refactor this a little bit it might be a good idea is to move most of the logic in
+
+109
+00:07:51,930 --> 00:07:52,330
+here.
+
+110
+00:07:52,410 --> 00:07:56,190
+Aside from the printing move everything out into a separate function.
+
+111
+00:07:56,430 --> 00:08:04,200
+So I'm going to copy this and make a function called Build string and that will take a single movie
+
+112
+00:08:04,200 --> 00:08:13,710
+object and then inside if they're going to add all this code which takes a result variable and it slowly
+
+113
+00:08:13,710 --> 00:08:16,020
+builds it up exactly the same.
+
+114
+00:08:16,020 --> 00:08:18,830
+I kept it named movie so we don't have to change anything.
+
+115
+00:08:19,050 --> 00:08:27,150
+And then the very last thing would be return result and that's all we need there and then we need to
+
+116
+00:08:27,150 --> 00:08:28,780
+change our for loop a little bit.
+
+117
+00:08:28,920 --> 00:08:34,140
+So we're going to do movie stuff for each function each movie
+
+118
+00:08:37,740 --> 00:08:48,730
+and for each one what we're going to do is go ahead and run build string of movie and to print it will
+
+119
+00:08:48,750 --> 00:08:53,460
+just run cancel that log filled string movie.
+
+120
+00:08:53,460 --> 00:08:55,130
+So this cleaned it up a lot.
+
+121
+00:08:55,140 --> 00:08:59,020
+Just remember when rerun build string we pass in each movie.
+
+122
+00:08:59,070 --> 00:09:01,910
+This makes a string and it returns the result.
+
+123
+00:09:02,100 --> 00:09:07,020
+So this right here is going to be replaced with whatever string is returned and that will be printed
+
+124
+00:09:07,020 --> 00:09:08,040
+out.
+
+125
+00:09:08,290 --> 00:09:09,460
+So we end up with this.
+
+126
+00:09:09,720 --> 00:09:11,100
+So it's a little cleaner.
+
+127
+00:09:11,100 --> 00:09:12,900
+We end up with this nice simple for each.
+
+128
+00:09:12,940 --> 00:09:14,760
+That's very clear what's happening.
+
+129
+00:09:14,760 --> 00:09:16,760
+Print Howsabout log.
+
+130
+00:09:16,980 --> 00:09:18,860
+Build string for each movie.
+
+131
+00:09:18,900 --> 00:09:20,600
+It makes a lot of sense if you just look at it.
+
+132
+00:09:20,610 --> 00:09:22,910
+You can immediately tell what it's supposed to do.
+
+133
+00:09:22,910 --> 00:09:24,150
+Based off of the name.
+
+134
+00:09:24,450 --> 00:09:25,480
+OK so that's it.
+

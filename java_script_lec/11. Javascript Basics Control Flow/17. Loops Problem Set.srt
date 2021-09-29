@@ -1,0 +1,64 @@
+﻿1
+00:00:00,090 --> 00:00:04,920
+For your for loops problem said I'm going to have you do the exact same problems that you did for the
+
+2
+00:00:04,990 --> 00:00:07,800
+wildlife's except you're going to rewrite them with four loops.
+
+3
+00:00:07,830 --> 00:00:12,000
+And the reason I'm having you do this is not because I'm having a hard time thinking of other things
+
+4
+00:00:12,000 --> 00:00:15,590
+to write with loops but it's important that you can translate between the two.
+
+5
+00:00:15,630 --> 00:00:20,190
+We're going to use both of them throughout this course and in a lot of cases you can use one or the
+
+6
+00:00:20,190 --> 00:00:20,650
+other.
+
+7
+00:00:20,850 --> 00:00:22,690
+So I want you to be able to translate.
+
+8
+00:00:22,800 --> 00:00:25,750
+So for this exercise it's the same exact problems.
+
+9
+00:00:25,830 --> 00:00:28,330
+Just use a for loop.
+
+10
+00:00:28,410 --> 00:00:33,810
+So just to jog your memory on the actual problems so you should have four different sections in your
+
+11
+00:00:33,810 --> 00:00:39,370
+output separated by a consul dot log and the four sections correspond to the four problems.
+
+12
+00:00:39,390 --> 00:00:46,020
+So the first one print all the numbers between negative 10 and positive 19 the next one print all the
+
+13
+00:00:46,020 --> 00:00:54,990
+even numbers between 10 and 40 and then all the odd numbers between 300 and 333 and then all the numbers
+
+14
+00:00:54,990 --> 00:01:01,350
+that are divisible both by 5 and three between the number five and 50 which we see down here.
+
+15
+00:01:01,940 --> 00:01:02,400
+OK.
+
+16
+00:01:02,520 --> 00:01:05,830
+So go ahead and give this a shot and what do the solution in the next video.
+

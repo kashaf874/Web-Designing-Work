@@ -1,0 +1,436 @@
+﻿1
+00:00:00,290 --> 00:00:00,650
+OK.
+
+2
+00:00:00,690 --> 00:00:05,850
+So as I mentioned we're going to do a quick exercise and it's going to be very underwhelming as far
+
+3
+00:00:05,850 --> 00:00:11,030
+as the finished product goes but it's a good one just to get some practice with paperchase.
+
+4
+00:00:11,100 --> 00:00:14,920
+So actually really simple 4 ish lines of code that you need.
+
+5
+00:00:15,150 --> 00:00:23,520
+All that I want is a grid of circles and the exact measurements don't matter what I have here is a circle
+
+6
+00:00:23,640 --> 00:00:28,410
+starting at zero zero and every 100 pixels.
+
+7
+00:00:28,620 --> 00:00:29,750
+I'm drawing another circle.
+
+8
+00:00:29,750 --> 00:00:33,720
+I think that radius is 10 all the way until 1000.
+
+9
+00:00:33,720 --> 00:00:36,540
+So this is 1000 1000 right here.
+
+10
+00:00:37,260 --> 00:00:43,680
+So it doesn't really matter just get 100 ish circles on the screen obviously without doing it manually
+
+11
+00:00:43,680 --> 00:00:45,380
+one at a time that's the point.
+
+12
+00:00:45,390 --> 00:00:46,830
+So how can you do that.
+
+13
+00:00:46,890 --> 00:00:48,240
+That's up to you.
+
+14
+00:00:48,270 --> 00:00:53,220
+You'll need to figure out how to generate those coordinates x and y coordinates that are increasing
+
+15
+00:00:53,220 --> 00:00:53,760
+.
+
+16
+00:00:53,760 --> 00:00:57,440
+And feel free to make them all purple or any color.
+
+17
+00:00:57,460 --> 00:01:00,250
+It's not really the point or make them another shape.
+
+18
+00:01:00,270 --> 00:01:07,140
+So try doing a square or a rectangle or try something more fun where you have the colors on a gradient
+
+19
+00:01:07,410 --> 00:01:10,810
+so that as X gets greater the color gets redder.
+
+20
+00:01:10,970 --> 00:01:16,410
+I remember well I guess not really remember I haven't told you this but that paper JSE you can do RGV
+
+21
+00:01:16,410 --> 00:01:17,840
+colors hexadecimal.
+
+22
+00:01:17,970 --> 00:01:23,610
+So you can generate a color where you're incrementing the red component or that green component.
+
+23
+00:01:23,820 --> 00:01:28,670
+But at the very minimum I'm just looking for a grid of circles at least 100.
+
+24
+00:01:28,700 --> 00:01:29,260
+And if you want.
+
+25
+00:01:29,270 --> 00:01:32,770
+You could also randomize them so that they're all over the place.
+
+26
+00:01:32,850 --> 00:01:34,940
+I just want you to get a lot of circles on the page.
+
+27
+00:01:35,010 --> 00:01:35,530
+OK.
+
+28
+00:01:35,610 --> 00:01:37,540
+So take a moment pause a video.
+
+29
+00:01:37,680 --> 00:01:39,020
+Try this on your own.
+
+30
+00:01:39,030 --> 00:01:40,380
+I recommend that you get lost.
+
+31
+00:01:40,380 --> 00:01:41,400
+The docs are a bit.
+
+32
+00:01:41,430 --> 00:01:42,370
+Try some things out.
+
+33
+00:01:42,390 --> 00:01:51,110
+Look at the examples and then come back and we'll go over solution.
+
+34
+00:01:51,120 --> 00:01:51,480
+All right.
+
+35
+00:01:51,480 --> 00:01:52,570
+Great.
+
+36
+00:01:52,590 --> 00:01:58,780
+So this is what I had before where I left off and I'm going to get rid of almost all of this code.
+
+37
+00:01:58,950 --> 00:02:00,940
+So we don't want that line anymore.
+
+38
+00:02:01,230 --> 00:02:02,940
+Any of that.
+
+39
+00:02:02,940 --> 00:02:03,930
+Let's take a look.
+
+40
+00:02:03,930 --> 00:02:07,330
+We solve that giant circle which we don't really need.
+
+41
+00:02:07,470 --> 00:02:12,780
+We will want to keep that code so that we know how to make a circle but we don't want a giant one.
+
+42
+00:02:12,960 --> 00:02:15,500
+So what we want to do here is use a loop.
+
+43
+00:02:15,930 --> 00:02:23,070
+So we want to use a loop to make a circle here and then a circle here circle here basically will add
+
+44
+00:02:23,070 --> 00:02:28,610
+10 or 100 actually to the x coordinate so we can start by doing that.
+
+45
+00:02:28,800 --> 00:02:34,080
+So we'll make a loop and we'll start at zero loops for far.
+
+46
+00:02:34,110 --> 00:02:35,360
+Equals zero.
+
+47
+00:02:35,650 --> 00:02:38,110
+Itis less fun and this can be anything.
+
+48
+00:02:38,130 --> 00:02:40,080
+I did it as 1000.
+
+49
+00:02:40,140 --> 00:02:43,980
+And actually it lets me get X so it's clearer.
+
+50
+00:02:45,300 --> 00:02:46,780
+And each time through.
+
+51
+00:02:46,800 --> 00:02:54,540
+Rather than doing X plus plus which we could use to make a circle every single pixel will make jumps
+
+52
+00:02:54,870 --> 00:03:04,020
+of 100 and then all that will do is copy this code and make a circle but we'll alter it a little bit
+
+53
+00:03:05,220 --> 00:03:05,890
+if we left it.
+
+54
+00:03:05,930 --> 00:03:09,960
+This would make us 10 circles at the exact same point the same race.
+
+55
+00:03:09,960 --> 00:03:19,050
+So not what we want let's do X comma and y will be fixed as 0.
+
+56
+00:03:19,860 --> 00:03:27,260
+So that should make us a line of circles all with y coordinate of zero and radius will make 10.
+
+57
+00:03:27,330 --> 00:03:35,840
+And if we take a look at that refresh you can see here we get 10 circles going across every 100 pixels
+
+58
+00:03:35,850 --> 00:03:38,640
+we get a new one.
+
+59
+00:03:38,670 --> 00:03:42,790
+So what we want to do is basically repeat that again.
+
+60
+00:03:42,930 --> 00:03:45,670
+So we have our first time through.
+
+61
+00:03:45,900 --> 00:03:49,700
+We need one of these rows 10 times going down.
+
+62
+00:03:49,980 --> 00:03:52,790
+And the best way to do that is by using another loop.
+
+63
+00:03:53,070 --> 00:03:58,820
+So we want to take what we have here and just repeat all of this so we can make another loop.
+
+64
+00:03:59,340 --> 00:04:02,990
+And this time we'll do it for the y coordinate.
+
+65
+00:04:03,060 --> 00:04:09,240
+So why should go up and tell 1000 y plus equals 100 as well.
+
+66
+00:04:09,540 --> 00:04:12,130
+And I'll walk you through exactly how this works.
+
+67
+00:04:12,150 --> 00:04:14,520
+I think nested loops can be a little bit confusing
+
+68
+00:04:17,490 --> 00:04:21,560
+if we just change 0 to be y Now that's actually all we need to do.
+
+69
+00:04:21,990 --> 00:04:24,940
+So let's refresh you see if we get that grid.
+
+70
+00:04:25,080 --> 00:04:29,880
+So not the most exciting thing but we very quickly added a bunch of circles.
+
+71
+00:04:29,910 --> 00:04:32,430
+So let's take a look at this nested loop.
+
+72
+00:04:32,460 --> 00:04:37,210
+So I drew a little diagram the first time through X starts at zero.
+
+73
+00:04:37,800 --> 00:04:43,610
+So I'll do it like this where we have x and y.
+
+74
+00:04:44,220 --> 00:04:44,910
+OK.
+
+75
+00:04:44,910 --> 00:04:48,970
+Let me capitalize it so X starts at zero.
+
+76
+00:04:50,460 --> 00:04:55,840
+And then while X is 0 we do this loop word Y starts at zero.
+
+77
+00:04:56,280 --> 00:04:58,540
+Just like that.
+
+78
+00:04:59,400 --> 00:05:03,460
+And then next time through this y loop X is still zero.
+
+79
+00:05:03,660 --> 00:05:06,210
+But this time why is 100.
+
+80
+00:05:06,210 --> 00:05:13,610
+Because we add one hundred and then x is still zero and Y is 200.
+
+81
+00:05:14,130 --> 00:05:15,350
+Then X is zero.
+
+82
+00:05:15,390 --> 00:05:18,090
+Why is 300 and so on.
+
+83
+00:05:18,280 --> 00:05:21,260
+I'll do a dot dot dot and tell X is zero.
+
+84
+00:05:21,660 --> 00:05:31,800
+Why is 1000 are actually because we have less then it will only get to 900 and then X changes over to
+
+85
+00:05:31,800 --> 00:05:37,590
+be 100 and then Y changes over to go back to zero.
+
+86
+00:05:38,460 --> 00:05:44,690
+So basically for every x we're generating 10 y's.
+
+87
+00:05:44,970 --> 00:05:49,500
+So that ends up with us having 100 or 100 iterations.
+
+88
+00:05:49,530 --> 00:05:56,400
+So it's a little confusing but it helps if you step through this X starts at zero y starts at zero but
+
+89
+00:05:56,400 --> 00:06:00,210
+then X stays at 0 and y goes up to 100 than 200.
+
+90
+00:06:00,210 --> 00:06:03,370
+And we're drawing a circle at each one of those intel.
+
+91
+00:06:03,420 --> 00:06:07,590
+Why then resets and then X goes and increments.
+
+92
+00:06:07,890 --> 00:06:08,250
+OK.
+
+93
+00:06:08,250 --> 00:06:12,060
+So kind of in my opinion confusing.
+
+94
+00:06:12,060 --> 00:06:15,000
+Last thing that we can do is a small change.
+
+95
+00:06:15,000 --> 00:06:18,430
+We don't actually need to save this to a variable every time.
+
+96
+00:06:19,230 --> 00:06:26,070
+We can just change this like this and it's slightly more efficient where we're not reassigning a variable
+
+97
+00:06:26,070 --> 00:06:29,740
+constantly because we're never doing anything with those circles again.
+
+98
+00:06:30,120 --> 00:06:31,290
+We're just making them once.
+
+99
+00:06:31,410 --> 00:06:37,650
+So rather than rewriting and re initializing a variable every time through the loop we just make a new
+
+100
+00:06:37,650 --> 00:06:45,730
+circle give it a fill color of purple or let's do yellow save refresh.
+
+101
+00:06:45,900 --> 00:06:46,560
+There we go.
+
+102
+00:06:46,800 --> 00:06:47,220
+OK.
+
+103
+00:06:47,370 --> 00:06:52,560
+So this was a little bit of a diversion here but still pretty important.
+
+104
+00:06:52,560 --> 00:06:54,680
+Again the motivation behind you doing that.
+
+105
+00:06:54,690 --> 00:06:55,380
+Hopefully you did it.
+
+106
+00:06:55,400 --> 00:07:02,010
+But the motivation was for you to just get practice combining javascript skills loops with paper yes
+
+107
+00:07:02,070 --> 00:07:08,550
+and seeing that all you have to do is call you know a short line of code and it would run a bunch of
+
+108
+00:07:08,550 --> 00:07:13,620
+code behind the scenes to actually make that circle OK in the next video will actually get on with the
+
+109
+00:07:13,620 --> 00:07:16,810
+show and start really working on our pad attack clone.
+

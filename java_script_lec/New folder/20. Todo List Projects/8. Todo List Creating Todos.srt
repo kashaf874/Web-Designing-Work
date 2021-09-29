@@ -1,0 +1,576 @@
+﻿1
+00:00:00,360 --> 00:00:01,270
+Welcome back.
+
+2
+00:00:01,290 --> 00:00:07,140
+In this video we'll tackle the last big remaining piece of functionality which is the creation of new
+
+3
+00:00:07,140 --> 00:00:08,140
+to do.
+
+4
+00:00:08,670 --> 00:00:14,610
+So over here on the completed version just to jog your memory the way that it works is I can type it
+
+5
+00:00:14,610 --> 00:00:16,400
+to you and then hit enter.
+
+6
+00:00:16,410 --> 00:00:17,610
+So there's no button to click.
+
+7
+00:00:17,610 --> 00:00:24,240
+I just hit enter and that will then submit and make me a new to do down here which I can check off or
+
+8
+00:00:24,240 --> 00:00:25,360
+delete.
+
+9
+00:00:26,190 --> 00:00:27,510
+So let's get started.
+
+10
+00:00:27,510 --> 00:00:33,330
+The first thing we need to do is add a listener to the text input that fires when we hit the enter key
+
+11
+00:00:33,330 --> 00:00:34,350
+.
+
+12
+00:00:34,350 --> 00:00:36,300
+To do that we have a few options.
+
+13
+00:00:36,540 --> 00:00:44,880
+We can use key press or we can use on we need to start by selecting the input and rather than leaving
+
+14
+00:00:44,880 --> 00:00:46,530
+it as just input.
+
+15
+00:00:46,530 --> 00:00:50,670
+I'm going to be more specific and say input type equals text.
+
+16
+00:00:50,790 --> 00:00:58,940
+So this will affect all inputs or type equals text just like that and then will add our DOT and I'll
+
+17
+00:00:58,940 --> 00:01:04,270
+use key press here input type calls text key press.
+
+18
+00:01:04,290 --> 00:01:11,760
+Here is the callback function we'll just start with a constant alt log and this constant log will run
+
+19
+00:01:12,450 --> 00:01:15,520
+on any key press not just the enter key.
+
+20
+00:01:15,540 --> 00:01:24,340
+So just to keep press and save and go back to the browser and refresh and we'll open this up here.
+
+21
+00:01:24,870 --> 00:01:28,910
+And as I press the key you see that I get key press.
+
+22
+00:01:29,130 --> 00:01:33,160
+So I'll hit another key and that keeps going up.
+
+23
+00:01:33,300 --> 00:01:36,590
+So we don't really want to do anything until the user hits the enter key.
+
+24
+00:01:36,980 --> 00:01:44,090
+So we need to change your code a little bit in the video where we introduced the key press method.
+
+25
+00:01:44,130 --> 00:01:50,940
+I also talked about the which property on the key press object and that corresponds to the key that
+
+26
+00:01:50,940 --> 00:01:53,520
+was pressed or the character code of the key.
+
+27
+00:01:53,550 --> 00:01:58,830
+So we're going to use that here and we're going to check if the character code is 13 which is the code
+
+28
+00:01:58,830 --> 00:02:00,480
+for the enter key.
+
+29
+00:02:00,570 --> 00:02:07,260
+So we need to work with the event object again once again that can be called anything we want and then
+
+30
+00:02:07,260 --> 00:02:17,280
+we're going to run if event which triple equals the number 13 which is how we check for the enter key
+
+31
+00:02:17,730 --> 00:02:24,870
+every single character has its own code and the enter key is 13 then we'll just do a constant log.
+
+32
+00:02:25,290 --> 00:02:31,890
+You hit enter and will save go back here.
+
+33
+00:02:31,920 --> 00:02:34,470
+Now I'm typing a bunch of keys that aren't enter.
+
+34
+00:02:34,620 --> 00:02:36,900
+And now I'm going to hit enter.
+
+35
+00:02:37,000 --> 00:02:39,710
+You can see we get calls about log.
+
+36
+00:02:39,780 --> 00:02:41,610
+You hit enter.
+
+37
+00:02:41,610 --> 00:02:42,040
+OK.
+
+38
+00:02:42,240 --> 00:02:48,100
+So rather than just cancel log in when we hit enter what we need to do is take the text out of here
+
+39
+00:02:48,420 --> 00:02:57,210
+extract it make a new ally that we then add after this one and then we want to clear this input so the
+
+40
+00:02:57,210 --> 00:02:58,700
+text goes away.
+
+41
+00:02:58,920 --> 00:03:03,780
+So we'll start by extracting the value out and that one is pretty simple.
+
+42
+00:03:03,780 --> 00:03:06,270
+We'll use the Val method.
+
+43
+00:03:06,270 --> 00:03:13,750
+So we want the value on the input which we can just do with a simple this vow.
+
+44
+00:03:14,310 --> 00:03:15,620
+So let's do a constable.
+
+45
+00:03:15,660 --> 00:03:23,180
+log this Darvell remember that this refers to the input that the key press occurred in refresh.
+
+46
+00:03:23,580 --> 00:03:25,090
+Type anything that's not enter.
+
+47
+00:03:25,110 --> 00:03:26,280
+Nothing happens.
+
+48
+00:03:26,280 --> 00:03:34,990
+Now if I hit enter a console that logs the value as you can see I type talo and I hit enter.
+
+49
+00:03:35,100 --> 00:03:38,820
+So let's save that to a variable.
+
+50
+00:03:40,020 --> 00:03:45,910
+Let's call it to do text equals the start vowel.
+
+51
+00:03:45,960 --> 00:03:52,440
+So that is grabbing new text from input.
+
+52
+00:03:52,440 --> 00:04:02,660
+And then what we want to do next is create a new ally and add to you well to do that.
+
+53
+00:04:02,670 --> 00:04:08,160
+I'm going to introduce a new method called append the way that append works is that we first select
+
+54
+00:04:08,160 --> 00:04:10,420
+an element to append to.
+
+55
+00:04:10,440 --> 00:04:13,330
+So we're going to be adding our things are to do.
+
+56
+00:04:13,500 --> 00:04:18,000
+So we'll be adding our dues to the U.N. on the page.
+
+57
+00:04:18,000 --> 00:04:22,880
+So this you will and it will be appending allies to that well.
+
+58
+00:04:23,190 --> 00:04:29,180
+So if I do you will append and I can give it a string of h t m l.
+
+59
+00:04:29,220 --> 00:04:35,430
+So if I add in ally right here and I just hardcoded something into start.
+
+60
+00:04:35,460 --> 00:04:44,040
+So this is a new ally that we appended to this UL
+
+61
+00:04:46,810 --> 00:04:51,900
+just like that I select the UL and this actually selects all else.
+
+62
+00:04:51,910 --> 00:04:54,500
+We only have one and then we run out of pens.
+
+63
+00:04:54,790 --> 00:05:02,030
+And it will take this string and add it to the well as each Chimo inside if you will.
+
+64
+00:05:02,410 --> 00:05:07,090
+So I'll show you that when we hit enter here it doesn't matter what we type because we're not using
+
+65
+00:05:07,090 --> 00:05:08,350
+it.
+
+66
+00:05:08,830 --> 00:05:10,660
+It adds in a new ally.
+
+67
+00:05:10,780 --> 00:05:18,370
+And every time I hit enter it will do that and if I inspect you can see it's an element that was added
+
+68
+00:05:18,370 --> 00:05:22,770
+inside the well just like these are like elements.
+
+69
+00:05:22,840 --> 00:05:28,420
+So what we want to do next though is actually use the do text variable.
+
+70
+00:05:28,480 --> 00:05:33,150
+All we need to do is use the plus sign to add that variable in.
+
+71
+00:05:33,520 --> 00:05:40,630
+So we will have two separate opening line tags and closing tags and we'll use a plus sign and add in
+
+72
+00:05:40,780 --> 00:05:47,470
+to do text and this will end up with one big string that has our do text which is whatever the user
+
+73
+00:05:47,470 --> 00:05:57,270
+typed in the input plus the opening and closing ally and we're sending that to you will refresh walk
+
+74
+00:05:57,280 --> 00:06:01,970
+dog and I hit enter and we get a new ally here.
+
+75
+00:06:02,470 --> 00:06:03,710
+So there's two big issues.
+
+76
+00:06:03,760 --> 00:06:08,090
+One we want to clear out this input and two we don't have the span.
+
+77
+00:06:08,590 --> 00:06:10,870
+Let's start by clearing out the input.
+
+78
+00:06:10,870 --> 00:06:20,710
+All we need to do is run dollar sign this vow and give it an empty string where it acts as a setter
+
+79
+00:06:20,800 --> 00:06:22,460
+rather than just a getter.
+
+80
+00:06:22,870 --> 00:06:29,110
+And that should now give us an empty input when I type a new to do every go on to do is added and this
+
+81
+00:06:29,110 --> 00:06:30,120
+is cleared.
+
+82
+00:06:30,490 --> 00:06:32,990
+Next let's get the span to show back up.
+
+83
+00:06:33,460 --> 00:06:41,110
+So all that we need to do there is inside of our ally we'll add in a span stack and that will be appended
+
+84
+00:06:41,120 --> 00:06:41,590
+.
+
+85
+00:06:42,250 --> 00:06:49,690
+And we just need to make sure we have the X right there and space just so that the X has a space between
+
+86
+00:06:49,690 --> 00:06:51,320
+it and denude to do text.
+
+87
+00:06:51,520 --> 00:06:57,500
+And if we save we're now appending a new string with an ally with a span inside of it.
+
+88
+00:06:57,670 --> 00:07:05,030
+So feed the dog and we end up with the span and the new ally.
+
+89
+00:07:05,080 --> 00:07:11,710
+However we have a problem with this code which is when I add new to do's like feed cat and I try and
+
+90
+00:07:11,710 --> 00:07:13,660
+check off the new ones.
+
+91
+00:07:13,660 --> 00:07:18,540
+They don't actually check off nor do they delete the old ones still do.
+
+92
+00:07:18,670 --> 00:07:21,180
+So the live event is still firing.
+
+93
+00:07:21,490 --> 00:07:26,920
+This span event still fires but the new tattoos that are dynamically created the ones that aren't there
+
+94
+00:07:26,920 --> 00:07:30,040
+when the page loads don't work.
+
+95
+00:07:30,040 --> 00:07:36,160
+This is what I was talking about when I showed you this slide and it said in most cases quick and on
+
+96
+00:07:36,210 --> 00:07:38,190
+Quake we'll both get the job done.
+
+97
+00:07:38,380 --> 00:07:40,500
+However there is one key difference.
+
+98
+00:07:40,570 --> 00:07:47,800
+Quick will only add listeners for existing elements on will add listeners for all potential future elements
+
+99
+00:07:47,800 --> 00:07:48,050
+.
+
+100
+00:07:48,220 --> 00:07:53,920
+And that's what we need to do here is use on because we want those listeners to be listening on all
+
+101
+00:07:53,920 --> 00:07:55,310
+potential allies.
+
+102
+00:07:55,390 --> 00:08:01,060
+So open up supply I'm here and I'll demonstrate how we can use on quick rather than just quick.
+
+103
+00:08:01,390 --> 00:08:04,800
+So it's not a matter of just swapping out to be on.
+
+104
+00:08:05,050 --> 00:08:14,130
+So if I just change this to be an ally on click just like that and I leave it like this.
+
+105
+00:08:14,200 --> 00:08:18,180
+Basically it's the exact same thing except with on rather than quick.
+
+106
+00:08:18,310 --> 00:08:25,780
+And if I go back and refresh the works on the original elements and if I add new ones it doesn't work
+
+107
+00:08:25,800 --> 00:08:25,900
+.
+
+108
+00:08:25,990 --> 00:08:29,450
+So it's not a matter of just swapping quick and on quick.
+
+109
+00:08:29,710 --> 00:08:33,250
+Well we actually need to do is change our code slightly.
+
+110
+00:08:33,250 --> 00:08:40,060
+So I'm going to show you the change first and then I'll explain it.
+
+111
+00:08:40,150 --> 00:08:44,940
+So what I did is I wrote you well on quick comma.
+
+112
+00:08:45,180 --> 00:08:46,010
+Why.
+
+113
+00:08:46,060 --> 00:08:52,630
+The reason I had to do this is that we can only add a listener using j query on elements that exist
+
+114
+00:08:52,810 --> 00:08:54,890
+when this code is run the first time.
+
+115
+00:08:55,180 --> 00:08:59,190
+And when this code is run the first time we don't have all the allies.
+
+116
+00:08:59,200 --> 00:09:04,710
+We only have three so if we add a quick listener to allies it will only add to those three.
+
+117
+00:09:04,720 --> 00:09:09,590
+So what we do instead is add a listener to the entire UL parent.
+
+118
+00:09:09,910 --> 00:09:13,590
+So anytime we click on that you will this listener will fire.
+
+119
+00:09:13,810 --> 00:09:16,690
+Except we add this second argument.
+
+120
+00:09:17,140 --> 00:09:24,470
+And what this code does is it says when an ally is clicked inside of a you will run this code.
+
+121
+00:09:24,580 --> 00:09:28,670
+So we added a listener to an element that exists when the page loads.
+
+122
+00:09:28,900 --> 00:09:33,930
+But we're really only listening to the lies that are clicked inside of that.
+
+123
+00:09:34,380 --> 00:09:36,300
+So let me demonstrate this now.
+
+124
+00:09:37,000 --> 00:09:40,400
+I'll refresh and let's add some new ones in here.
+
+125
+00:09:40,930 --> 00:09:44,720
+The old ones still work and the new ones can be checked off as well.
+
+126
+00:09:45,070 --> 00:09:46,550
+But the delete doesn't work.
+
+127
+00:09:46,840 --> 00:09:50,250
+So we need to go back and make the same exact change.
+
+128
+00:09:50,410 --> 00:09:58,450
+So we're going to listen on an event that exists when the page loads with on and then click but we only
+
+129
+00:09:58,450 --> 00:10:03,520
+want this code to run when a span is clicked inside of a well.
+
+130
+00:10:04,120 --> 00:10:06,690
+And if we leave it at that we should be good to go.
+
+131
+00:10:06,700 --> 00:10:08,810
+Now let's test it out.
+
+132
+00:10:09,040 --> 00:10:14,890
+We can delete the old ones and the new ones and we can cross both off as well.
+
+133
+00:10:15,730 --> 00:10:18,620
+All right so let's summarize some of the new material here.
+
+134
+00:10:18,640 --> 00:10:24,850
+The first thing is the append method which can take a string of HMO and it will then append those elements
+
+135
+00:10:25,090 --> 00:10:27,110
+to whatever we selected.
+
+136
+00:10:27,340 --> 00:10:34,940
+And the second thing was using on rather than quick and adding in this UL on quick.
+
+137
+00:10:34,960 --> 00:10:41,200
+And the second argument that specifies allies that may or may not have been on the page when it loaded
+
+138
+00:10:41,990 --> 00:10:46,300
+inside of the well that definitely was on the page when the page loaded.
+
+139
+00:10:46,450 --> 00:10:51,850
+So we're adding event listeners to the elements that exist when page loads so that we can account for
+
+140
+00:10:51,850 --> 00:10:53,530
+elements that aren't there yet.
+
+141
+00:10:53,980 --> 00:10:55,800
+That's it for our basic functionality.
+
+142
+00:10:55,810 --> 00:10:57,810
+We have a complete To Do list.
+
+143
+00:10:57,880 --> 00:11:00,710
+What we'll focus on in the next video is the styling.
+
+144
+00:11:00,850 --> 00:11:02,350
+And we definitely have a ways to go there.
+

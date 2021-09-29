@@ -1,0 +1,176 @@
+﻿1
+00:00:00,300 --> 00:00:01,380
+OK we'll come back.
+
+2
+00:00:01,380 --> 00:00:06,110
+So it's time for a few javascript array exercises the way that this works.
+
+3
+00:00:06,120 --> 00:00:08,280
+There's two exercises in both of them.
+
+4
+00:00:08,280 --> 00:00:09,530
+I give you some code.
+
+5
+00:00:09,540 --> 00:00:13,130
+All you need to do is evaluate what happens when this code is run.
+
+6
+00:00:13,140 --> 00:00:14,400
+So here's the first one.
+
+7
+00:00:14,400 --> 00:00:15,510
+Go ahead take a look.
+
+8
+00:00:15,520 --> 00:00:20,990
+Pozza video if you need to and I'll go over the solution and just a few seconds.
+
+9
+00:00:21,180 --> 00:00:21,500
+OK.
+
+10
+00:00:21,510 --> 00:00:23,300
+So this one is a little bit tricky.
+
+11
+00:00:23,310 --> 00:00:25,650
+We start by defining a numbers array.
+
+12
+00:00:25,650 --> 00:00:27,100
+It has five numbers in it.
+
+13
+00:00:27,510 --> 00:00:33,680
+And then we're printing out something from the numbers array numbers bracket numbers hotlink.
+
+14
+00:00:34,260 --> 00:00:40,470
+So numbers that length in this case is 5 1 2 3 4 5 items.
+
+15
+00:00:40,470 --> 00:00:47,160
+So we're going to access numbers bracket 5 which is a problem because the greatest index in this array
+
+16
+00:00:47,160 --> 00:00:48,370
+is actually 4.
+
+17
+00:00:48,570 --> 00:00:50,990
+We start at 0 1 2 3 4.
+
+18
+00:00:51,030 --> 00:00:53,010
+So numbers 5 doesn't exist.
+
+19
+00:00:53,190 --> 00:00:57,380
+So what we actually get is undefined and I'll show that to you.
+
+20
+00:00:57,600 --> 00:01:00,590
+Paste this in the con. And we get undefined.
+
+21
+00:01:00,990 --> 00:01:07,480
+Just like if I tried to do numbers of 100 that definitely doesn't exist and I get undefined.
+
+22
+00:01:07,620 --> 00:01:15,410
+So if I do numbers of 5 I get undefined or do numbers of I get 88 so I want to a little bit tricky.
+
+23
+00:01:15,720 --> 00:01:21,120
+So here's the second exercise positivity if you need to evaluate the code and then we'll go over solution
+
+24
+00:01:21,180 --> 00:01:24,050
+and just a few moments.
+
+25
+00:01:24,090 --> 00:01:26,060
+So this one looks a little bit scarier.
+
+26
+00:01:26,070 --> 00:01:27,670
+We have nested arrays.
+
+27
+00:01:27,780 --> 00:01:34,060
+So this outer array called friend groups has three items and each one is actually its own array.
+
+28
+00:01:34,080 --> 00:01:39,150
+So this is what we call nested arrays or a two dimensional array because we're nesting in array instead
+
+29
+00:01:39,150 --> 00:01:40,980
+of another array.
+
+30
+00:01:41,070 --> 00:01:47,520
+So each one is three strings long three different friend groups from Harry Potter and I'm con. that
+
+31
+00:01:47,520 --> 00:01:49,610
+logging friend groups.
+
+32
+00:01:49,620 --> 00:01:52,240
+The third item index of 2.
+
+33
+00:01:52,500 --> 00:01:55,890
+So that's going to retrieve this whole array right here.
+
+34
+00:01:56,310 --> 00:02:02,100
+And then we're finding the first item index zero in that array which is Mouni.
+
+35
+00:02:02,100 --> 00:02:11,040
+So I'm going to copy this into my console and demonstrate that if I look at friend groups of two that's
+
+36
+00:02:11,040 --> 00:02:14,240
+going to give me this last friend or peer.
+
+37
+00:02:15,000 --> 00:02:22,920
+And then if I take that and I get the zero index of that I get the first item which is Mouni.
+
+38
+00:02:22,950 --> 00:02:29,490
+So this is pretty common to need to burrow into an array and then another array to have some nested
+
+39
+00:02:29,490 --> 00:02:32,300
+data where we have to access the first layer.
+
+40
+00:02:32,640 --> 00:02:39,270
+Friend groups to which then gives us this and then we have to then access that with index zero to get
+
+41
+00:02:39,270 --> 00:02:45,150
+money out when we get to some more complicated data structures like the data that the Facebook API gives
+
+42
+00:02:45,150 --> 00:02:49,060
+us or the data that comes from our Mongo DB database.
+
+43
+00:02:49,080 --> 00:02:53,230
+Well need to burrow down into nested arrays to access our data.
+
+44
+00:02:53,250 --> 00:02:55,140
+All right so that's it for these quick exercises
+

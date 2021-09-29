@@ -1,0 +1,624 @@
+﻿1
+00:00:01,470 --> 00:00:02,790
+OK welcome back.
+
+2
+00:00:02,790 --> 00:00:05,340
+So this video is going to be a little bit different.
+
+3
+00:00:05,340 --> 00:00:09,750
+We're not going introduce any new ways of manipulating the dom but we're going to take what we've learned
+
+4
+00:00:09,780 --> 00:00:11,410
+and do a little bit of a code along.
+
+5
+00:00:11,640 --> 00:00:13,860
+So we're going to play with Google's home page.
+
+6
+00:00:13,950 --> 00:00:18,990
+So I recommend that you open up Google either do this together with me or you do this on your own after
+
+7
+00:00:18,990 --> 00:00:20,080
+you watch the video.
+
+8
+00:00:20,340 --> 00:00:23,780
+And we're going to just do some fun things like change the logo.
+
+9
+00:00:23,940 --> 00:00:28,530
+We'll do a picture of a kitten this time just to be fair to all those cat lovers will change all the
+
+10
+00:00:28,530 --> 00:00:32,220
+links so that they go to being dot com or something like that.
+
+11
+00:00:32,250 --> 00:00:37,410
+The one point that I do want to emphasize in this lesson is that we can use a loop to manipulate multiple
+
+12
+00:00:37,410 --> 00:00:42,810
+elements so we don't always have to select one thing and change its color or select one image and change
+
+13
+00:00:42,810 --> 00:00:43,710
+its source.
+
+14
+00:00:43,770 --> 00:00:49,440
+We can select all the images and then loop through that list and for each one change its source.
+
+15
+00:00:49,470 --> 00:00:51,080
+So I'm going to show you how I would do that here.
+
+16
+00:00:51,300 --> 00:00:52,790
+So we'll start simple.
+
+17
+00:00:53,100 --> 00:00:55,050
+Let's start by selecting this logo.
+
+18
+00:00:55,380 --> 00:01:00,480
+And a quick side note if you are on Google on a day where they have a Google Doodle instead of this
+
+19
+00:01:00,480 --> 00:01:01,730
+regular logo.
+
+20
+00:01:01,860 --> 00:01:03,640
+It might not be an image here.
+
+21
+00:01:03,780 --> 00:01:06,850
+Sometimes they have fancy animations or interactive games.
+
+22
+00:01:06,930 --> 00:01:10,390
+And in that case they might be something like a canvas element.
+
+23
+00:01:10,470 --> 00:01:14,980
+So if you do encounter that when you inspect That's all right you can just watch this part.
+
+24
+00:01:15,010 --> 00:01:19,650
+We've already seen how to change image sources but I just want to show that you can do it on anybody's
+
+25
+00:01:19,690 --> 00:01:22,100
+website so select it.
+
+26
+00:01:22,530 --> 00:01:26,680
+It's an image and it has an ID so that makes it easy.
+
+27
+00:01:26,850 --> 00:01:28,290
+HP logo.
+
+28
+00:01:28,410 --> 00:01:34,100
+So let's select that let's call it our logo equals document that query selector
+
+29
+00:01:37,320 --> 00:01:38,660
+HP logo.
+
+30
+00:01:38,880 --> 00:01:42,090
+And of course we could have used element by ID as well.
+
+31
+00:01:42,390 --> 00:01:46,210
+So we end up with Logo equal to that.
+
+32
+00:01:46,320 --> 00:01:47,890
+So we've now selected that.
+
+33
+00:01:48,030 --> 00:01:51,540
+And if we want to change the image we gonna change the source.
+
+34
+00:01:51,540 --> 00:01:55,530
+We need to use set attribute and I have just the image here.
+
+35
+00:01:56,190 --> 00:01:57,650
+Nice kitten.
+
+36
+00:01:57,660 --> 00:01:59,070
+So I'm going to take this Kidan you are.
+
+37
+00:01:59,060 --> 00:02:04,540
+I'll copy that and I'm going to update the source of this logo to do that.
+
+38
+00:02:04,650 --> 00:02:10,210
+Do logo dot set attribute instead of fear.
+
+39
+00:02:10,380 --> 00:02:12,630
+We're going to just write source.
+
+40
+00:02:12,810 --> 00:02:20,420
+And the second argument is the new source and I hit enter and I get my nice little cat Roquette appear
+
+41
+00:02:20,410 --> 00:02:21,160
+.
+
+42
+00:02:21,210 --> 00:02:22,760
+You might get a message like this.
+
+43
+00:02:22,860 --> 00:02:24,720
+Depending on the image you use.
+
+44
+00:02:24,900 --> 00:02:26,770
+So I'll briefly explain what this is.
+
+45
+00:02:26,910 --> 00:02:33,300
+It's just mentioning that we are on a page loaded with TTP as you can see that appear and the image
+
+46
+00:02:33,300 --> 00:02:36,470
+that I set the source to B is H TTP.
+
+47
+00:02:36,570 --> 00:02:40,700
+And to make it short HTP is more secure than HGP.
+
+48
+00:02:40,710 --> 00:02:46,400
+So it's complaining that it should be all HTP Yes we shouldn't be using something less secure.
+
+49
+00:02:46,410 --> 00:02:49,560
+That's a really simple version but it still lets us do it.
+
+50
+00:02:49,560 --> 00:02:53,630
+It's not a huge problem for what we're just trying to do here just playing around with Google.
+
+51
+00:02:53,670 --> 00:02:58,020
+It is something though that you would want to consider if you doing something like this in your own
+
+52
+00:02:58,020 --> 00:03:00,990
+application and it would be a problem then.
+
+53
+00:03:01,020 --> 00:03:03,070
+So back to the content here.
+
+54
+00:03:03,280 --> 00:03:09,330
+Found to change the width and height of this cat so that it takes up the same amount of space that the
+
+55
+00:03:09,570 --> 00:03:11,230
+original Google logo did.
+
+56
+00:03:11,460 --> 00:03:19,800
+I can see actually that the height was 92 originally and with was two hundred and seventy two.
+
+57
+00:03:20,280 --> 00:03:22,130
+And so that's what's happening here.
+
+58
+00:03:22,170 --> 00:03:31,510
+You can see if I want to change this I can do something like this logo dot style dot with and takes
+
+59
+00:03:31,530 --> 00:03:36,300
+a string and just change that to be 500 pixels.
+
+60
+00:03:36,810 --> 00:03:39,720
+You can see it stretches out and I can do the same thing.
+
+61
+00:03:39,750 --> 00:03:41,530
+Change it to be a thousand pixels.
+
+62
+00:03:41,970 --> 00:03:45,750
+Get a nice stretch kitty and we can change the width.
+
+63
+00:03:45,870 --> 00:03:51,900
+I mean the height and let's make that 500 or poor cat.
+
+64
+00:03:51,900 --> 00:03:55,410
+It's just getting stretched all over the place.
+
+65
+00:03:55,590 --> 00:03:59,550
+So let's go ahead and reset the height to something a little bit more appropriate.
+
+66
+00:03:59,730 --> 00:04:06,690
+Let's go for the height to be about 100 pixels and the width
+
+67
+00:04:09,960 --> 00:04:13,070
+to be about 200.
+
+68
+00:04:13,080 --> 00:04:16,590
+All right so that will work for us for now just for some more practice.
+
+69
+00:04:16,590 --> 00:04:26,040
+Let's also give it a border around that image so logo that style border equals and we will do a two
+
+70
+00:04:26,040 --> 00:04:34,130
+pixel solid purple border and there is our wonderful partner around that image.
+
+71
+00:04:34,410 --> 00:04:39,690
+OK so now let's move on to what I introduced at the beginning of the video which is selecting a bunch
+
+72
+00:04:39,690 --> 00:04:45,750
+of elements at once and using a loop to manipulate them rather than having to do it individually.
+
+73
+00:04:45,750 --> 00:04:48,980
+So what we're going to do is select all of the anchor tags on the page.
+
+74
+00:04:48,990 --> 00:04:50,740
+There's a lot of links on this page.
+
+75
+00:04:50,820 --> 00:04:56,600
+We're going to take each one and change the ref attribute to go to some other web site rather than wherever
+
+76
+00:04:56,610 --> 00:04:57,290
+they go.
+
+77
+00:04:57,510 --> 00:05:02,830
+So to start we need to select all the anchor tags so we have a bunch of ways of doing that.
+
+78
+00:05:02,880 --> 00:05:07,170
+I'm going to call it links are links and we will do document.
+
+79
+00:05:07,170 --> 00:05:15,540
+We could do a query letter all but I'm going to do get elements by tag name anchor tag and if we look
+
+80
+00:05:15,540 --> 00:05:23,470
+at links you can see we get quite a few on this page so we're going to loop through this.
+
+81
+00:05:23,550 --> 00:05:35,070
+We can't just do links dot set attribute that doesn't exist tells us link starts at attribute it's not
+
+82
+00:05:35,070 --> 00:05:35,750
+a function.
+
+83
+00:05:35,880 --> 00:05:40,860
+And that's because said attribute only exists on individual elements and links.
+
+84
+00:05:40,860 --> 00:05:42,640
+Is this collection of nodes.
+
+85
+00:05:42,750 --> 00:05:47,960
+So I need to loop through it just like I would loop through any other array like object.
+
+86
+00:05:48,330 --> 00:05:51,590
+So I can't use for each because it's not a real array.
+
+87
+00:05:51,660 --> 00:05:54,880
+So I need to use a for loop or technically I could use a while loop.
+
+88
+00:05:54,900 --> 00:05:56,310
+Most people would use a for loop.
+
+89
+00:05:56,490 --> 00:06:05,640
+So for are equals zero is less than links that length and will add 1
+
+90
+00:06:08,700 --> 00:06:14,160
+and then inside the loop we're going to access each individual link links Hi.
+
+91
+00:06:14,340 --> 00:06:18,040
+And let's start by just printing out its text content.
+
+92
+00:06:18,060 --> 00:06:22,850
+So links that text content and we'll cancel that log that.
+
+93
+00:06:24,090 --> 00:06:28,710
+So this is a common pattern looping through a bunch of elements and doing something maybe not printing
+
+94
+00:06:28,710 --> 00:06:35,140
+it out in the console but displaying it somehow or changing something about it changing its color.
+
+95
+00:06:35,420 --> 00:06:40,050
+So we hit enter and you can see this is the text content of all of the links on the page.
+
+96
+00:06:40,200 --> 00:06:46,320
+So we get you know things like photos and translate Google plus drive play YouTube all those links are
+
+97
+00:06:46,320 --> 00:06:50,460
+somewhere on this page which makes sense seeing that it's Google's home page.
+
+98
+00:06:50,520 --> 00:06:56,460
+So rather than just print things out in a hit the up arrow and go back to this loop and let's actually
+
+99
+00:06:56,460 --> 00:07:02,190
+start by changing the style so that we can see the lengths easier let's make them a different color
+
+100
+00:07:02,610 --> 00:07:05,570
+and let's make them have a border around them.
+
+101
+00:07:05,910 --> 00:07:14,520
+So I'm going to get rid of my console that log and I'm going to do lynx I style and we'll change the
+
+102
+00:07:15,150 --> 00:07:19,990
+background to start and let's make that a pink.
+
+103
+00:07:20,800 --> 00:07:25,050
+And if we hit enter you can see I'll close the console.
+
+104
+00:07:25,080 --> 00:07:27,790
+All the links on the page are now Pink.
+
+105
+00:07:27,810 --> 00:07:29,120
+I have a background that's pink.
+
+106
+00:07:29,280 --> 00:07:31,680
+So this thing right here is a link.
+
+107
+00:07:31,750 --> 00:07:34,490
+All of these naff are items in the sign in button.
+
+108
+00:07:34,830 --> 00:07:35,890
+It's also a link.
+
+109
+00:07:36,270 --> 00:07:37,910
+So let's do one more thing.
+
+110
+00:07:38,010 --> 00:07:39,140
+Let's loop through again.
+
+111
+00:07:39,210 --> 00:07:43,870
+Hit the up arrow and let's do a few things so let's do style.
+
+112
+00:07:43,910 --> 00:07:52,060
+Border equals one pixel and let's do dasht purple.
+
+113
+00:07:52,410 --> 00:08:04,980
+And on the next line links I style and let's change the color to be orange.
+
+114
+00:08:05,520 --> 00:08:07,880
+So those two hit enter.
+
+115
+00:08:07,890 --> 00:08:14,820
+And you can see we get these really beautiful links on our page pink background tiny purple border not
+
+116
+00:08:14,820 --> 00:08:16,010
+just a regular border.
+
+117
+00:08:16,110 --> 00:08:18,090
+It's dasht very fancy.
+
+118
+00:08:18,180 --> 00:08:20,610
+And we get some orange text in there as well.
+
+119
+00:08:21,240 --> 00:08:26,730
+But if we click them you can see that the traps haven't yet changed and that makes sense because we
+
+120
+00:08:26,730 --> 00:08:27,640
+haven't changed them.
+
+121
+00:08:27,750 --> 00:08:31,230
+So I want to change them all to go to WDW.
+
+122
+00:08:31,270 --> 00:08:36,590
+Being dot com needs to go to the con. And I already have my links selected.
+
+123
+00:08:36,630 --> 00:08:41,620
+This huge collection and I already have that loop written so I'm going to reuse it.
+
+124
+00:08:42,540 --> 00:08:45,680
+And just to reiterate this is something that will do a lot.
+
+125
+00:08:45,690 --> 00:08:51,070
+So get comfortable if you can writing these four loops where we can't use a for each.
+
+126
+00:08:51,090 --> 00:08:52,610
+So we have to use a for loop.
+
+127
+00:08:52,680 --> 00:08:53,770
+We do this all the time.
+
+128
+00:08:53,790 --> 00:08:59,050
+And from here on out until we get to Jey query we're going to be writing this type of line a lot.
+
+129
+00:08:59,310 --> 00:09:02,080
+So we're going to links I.
+
+130
+00:09:02,430 --> 00:09:08,580
+And we're going to start but just printing out where every light goes so cancel that log.
+
+131
+00:09:10,050 --> 00:09:16,060
+And we're going to cancel that log get attribute of atra.
+
+132
+00:09:18,240 --> 00:09:19,770
+Just like that.
+
+133
+00:09:20,400 --> 00:09:25,740
+And we don't technically need to invent that but just so it's easier for you to see.
+
+134
+00:09:26,250 --> 00:09:33,990
+And we're missing our constant log closing print to see here and now we get a list of all the links
+
+135
+00:09:37,320 --> 00:09:40,290
+and it's interesting you can see that some of them.
+
+136
+00:09:40,380 --> 00:09:45,090
+This one is the link to this thing javascript forward zero or no.
+
+137
+00:09:45,150 --> 00:09:53,280
+So some of them are just empty they don't have an 8 Tref some of them go to separate web sites or some
+
+138
+00:09:53,280 --> 00:10:01,710
+of them are relative paths like this here and some of them are absolute like this one right here.
+
+139
+00:10:01,770 --> 00:10:02,310
+OK.
+
+140
+00:10:02,490 --> 00:10:04,730
+So let's change them now.
+
+141
+00:10:04,890 --> 00:10:11,230
+Compton-Rock blog links I got set attribute and we don't need to constantly log it set attribute.
+
+142
+00:10:11,430 --> 00:10:17,400
+And let's change them to be what we want HGF we want to change HPF to be W.W..
+
+143
+00:10:17,430 --> 00:10:25,930
+That's do HTP colon slash slash BW dot Bing dot com just like that.
+
+144
+00:10:26,340 --> 00:10:27,930
+And we hit enter.
+
+145
+00:10:27,930 --> 00:10:29,570
+It doesn't look like anything changed.
+
+146
+00:10:29,880 --> 00:10:32,650
+If we type links and we just look at what we have.
+
+147
+00:10:32,820 --> 00:10:40,110
+Every single one now goes to being dot com and we can also inspect one and we can see in the element
+
+148
+00:10:40,110 --> 00:10:42,480
+inspector It goes to being dot com.
+
+149
+00:10:42,780 --> 00:10:45,870
+And the last thing we do to test it is to click one.
+
+150
+00:10:45,990 --> 00:10:52,860
+So let's quick the sign in button or let's quit Gmail and you can see it opens up being for me.
+
+151
+00:10:53,580 --> 00:10:59,730
+So to sum up we selected a bunch of things a collection of links and then we loop through that collection
+
+152
+00:10:59,790 --> 00:11:05,580
+with a for loop and then inside that for loop we can do something to each individual element which will
+
+153
+00:11:05,580 --> 00:11:07,470
+then be repeated to all of them.
+
+154
+00:11:07,500 --> 00:11:14,310
+So I changed the background color the border the font color we changed the ref and we only had to write
+
+155
+00:11:14,310 --> 00:11:19,500
+a few lines and it was applied to I don't know 20 or 30 different lengths on this page.
+
+156
+00:11:19,500 --> 00:11:22,470
+So that's a pattern that we're going to use a lot in the next few videos.
+

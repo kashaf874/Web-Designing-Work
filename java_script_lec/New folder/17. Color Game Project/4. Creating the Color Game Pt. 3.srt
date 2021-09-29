@@ -1,0 +1,632 @@
+﻿1
+00:00:00,700 --> 00:00:02,670
+OK so we're going to pick up where we left off.
+
+2
+00:00:02,790 --> 00:00:06,990
+We're going to start adding in some of the behavior for when you click the right color and when you
+
+3
+00:00:06,990 --> 00:00:08,620
+click the wrong color.
+
+4
+00:00:08,640 --> 00:00:10,860
+So let's start with when you pick the wrong color.
+
+5
+00:00:11,010 --> 00:00:16,000
+What we want to do is fade this out so that it matches the background color here.
+
+6
+00:00:16,170 --> 00:00:18,070
+So that's actually pretty straightforward.
+
+7
+00:00:18,070 --> 00:00:26,520
+It's just a matter of writing this dot style that background equals and then we just need to match the
+
+8
+00:00:26,520 --> 00:00:31,080
+color that we set in our C Ss looks like that.
+
+9
+00:00:31,080 --> 00:00:33,980
+So we'll paste that in and save.
+
+10
+00:00:34,530 --> 00:00:35,470
+Let's test it out.
+
+11
+00:00:35,610 --> 00:00:37,050
+Let's click one of the wrong ones.
+
+12
+00:00:37,140 --> 00:00:41,670
+You can see it fades out and if I clicked the right one we still get our alert.
+
+13
+00:00:42,060 --> 00:00:43,710
+OK so I'll refresh.
+
+14
+00:00:43,710 --> 00:00:45,490
+So that's what we're going to start with.
+
+15
+00:00:45,600 --> 00:00:52,230
+And the other thing that we want to happen though is we want a display so you can see here right here
+
+16
+00:00:52,230 --> 00:00:52,280
+.
+
+17
+00:00:52,320 --> 00:00:56,700
+There will be a display so if I click on one of the colors and it says try again.
+
+18
+00:00:57,090 --> 00:01:04,740
+And if I get it right like here it displays correct and then will focus on the other things like changing
+
+19
+00:01:04,740 --> 00:01:05,620
+the color.
+
+20
+00:01:05,820 --> 00:01:07,290
+Once we get that first part.
+
+21
+00:01:07,350 --> 00:01:13,290
+So let's add in this paragraph or the span actually is what it is and have it display the correct message
+
+22
+00:01:13,290 --> 00:01:14,370
+.
+
+23
+00:01:14,370 --> 00:01:20,520
+So we go back to our HMO and we're going to add another div in and we actually have three or four different
+
+24
+00:01:20,520 --> 00:01:22,680
+pieces that will go here eventually.
+
+25
+00:01:22,680 --> 00:01:26,890
+For now it's just going to be a little span that goes inside that div.
+
+26
+00:01:27,450 --> 00:01:29,220
+So as I mentioned it will be more.
+
+27
+00:01:29,220 --> 00:01:34,340
+For now it's just the span it's going to be empty to start as I refresh the page you can see there's
+
+28
+00:01:34,350 --> 00:01:36,480
+no message here.
+
+29
+00:01:36,480 --> 00:01:41,520
+So we're going to go here I have an empty span and let's give it an I.D. and we'll just call it message
+
+30
+00:01:41,530 --> 00:01:41,700
+.
+
+31
+00:01:41,910 --> 00:01:45,410
+And that way we can select it from instead of our Javascript.
+
+32
+00:01:45,420 --> 00:01:49,000
+So let's go to our javascript now and select that.
+
+33
+00:01:49,140 --> 00:01:59,670
+So up here we'll call it Farm message display equals document and we'll do a query selector query selector
+
+34
+00:02:00,080 --> 00:02:02,870
+and that we call that message.
+
+35
+00:02:03,090 --> 00:02:04,410
+We need the ID.
+
+36
+00:02:05,010 --> 00:02:06,400
+So we need the arc to Thor.
+
+37
+00:02:06,960 --> 00:02:09,110
+And then if the user guesses wrong.
+
+38
+00:02:09,210 --> 00:02:20,260
+All we need to do is write message display dot text content equals try again.
+
+39
+00:02:21,180 --> 00:02:25,560
+And if we refresh and you click the wrong one it's really hard to see.
+
+40
+00:02:25,920 --> 00:02:28,470
+So we should change the background color or the text color.
+
+41
+00:02:28,580 --> 00:02:30,120
+We can just do that over here.
+
+42
+00:02:30,420 --> 00:02:37,320
+We'll just say all span's should have color white and if we are fresh.
+
+43
+00:02:37,320 --> 00:02:39,620
+Now I clicked the wrong one.
+
+44
+00:02:39,690 --> 00:02:41,330
+It tells me try again.
+
+45
+00:02:41,910 --> 00:02:42,250
+OK.
+
+46
+00:02:42,270 --> 00:02:44,620
+And we keep getting that until I get the right one.
+
+47
+00:02:44,760 --> 00:02:46,180
+And we still get this alert.
+
+48
+00:02:46,410 --> 00:02:54,360
+So if we get the correct one what we will want to do is change what we display in that message display
+
+49
+00:02:54,360 --> 00:02:54,680
+.
+
+50
+00:02:54,780 --> 00:02:57,060
+We want to change it to be correct.
+
+51
+00:02:57,300 --> 00:03:00,840
+So message display that text content
+
+52
+00:03:03,540 --> 00:03:05,700
+equals correct.
+
+53
+00:03:06,630 --> 00:03:07,980
+Just like that.
+
+54
+00:03:08,080 --> 00:03:11,000
+And now if we try this we get it wrong and just try again.
+
+55
+00:03:11,190 --> 00:03:13,730
+We get it right and it tells us correct.
+
+56
+00:03:14,100 --> 00:03:14,340
+OK.
+
+57
+00:03:14,340 --> 00:03:20,730
+So we have that basic logic in there now where we're checking if we're right or wrong and we're displaying
+
+58
+00:03:20,730 --> 00:03:21,280
+something.
+
+59
+00:03:21,420 --> 00:03:27,030
+The next thing we could do is add the feature where when you get the right answer all the squares change
+
+60
+00:03:27,030 --> 00:03:28,940
+color to match that answer.
+
+61
+00:03:28,950 --> 00:03:32,180
+So here you click the right answer they all change degree.
+
+62
+00:03:32,340 --> 00:03:35,370
+And then we can also do the background of this H1 as well.
+
+63
+00:03:35,370 --> 00:03:38,360
+So the first thing we need to do so to make this work.
+
+64
+00:03:38,580 --> 00:03:42,750
+I'm actually going to write a separate function to do it for me just to keep my code a little bit more
+
+65
+00:03:42,750 --> 00:03:43,900
+organized.
+
+66
+00:03:44,040 --> 00:03:52,290
+Change colors and it will take a single argument a color string and then inside of here we need to loop
+
+67
+00:03:52,290 --> 00:04:01,430
+through all squares change each color to match given color.
+
+68
+00:04:02,550 --> 00:04:09,700
+So to loop through all the squares we've already done that just a matter of four VAR I equals zero is
+
+69
+00:04:09,750 --> 00:04:15,770
+less than color dot length or colors that length plus plus.
+
+70
+00:04:15,970 --> 00:04:21,880
+And then inside is where we'll need to change each color and we've done that before already.
+
+71
+00:04:22,080 --> 00:04:23,530
+It's just a colors.
+
+72
+00:04:23,740 --> 00:04:32,820
+I got style tough background equals color which is what we provided technically our code will change
+
+73
+00:04:32,910 --> 00:04:35,260
+every single square to match the color.
+
+74
+00:04:35,370 --> 00:04:38,670
+So including this one which is the correct color.
+
+75
+00:04:38,700 --> 00:04:42,640
+It will just overwrite it and change it to the same color that it already is.
+
+76
+00:04:42,660 --> 00:04:47,340
+We can add some code to fix that but let's just start with this and then we need to call this function
+
+77
+00:04:47,520 --> 00:04:56,550
+change colors and we need to pass in the correct color which is the variable we created up here which
+
+78
+00:04:56,550 --> 00:04:59,660
+is the styled background of the color that was clicked.
+
+79
+00:04:59,790 --> 00:05:00,700
+And we're doing this.
+
+80
+00:05:00,750 --> 00:05:02,080
+If they guessed it correctly.
+
+81
+00:05:02,130 --> 00:05:05,600
+So if we save and refresh see if we have any errors.
+
+82
+00:05:05,700 --> 00:05:06,330
+Nope.
+
+83
+00:05:06,630 --> 00:05:07,770
+And now it's quick.
+
+84
+00:05:07,770 --> 00:05:08,370
+Wrong.
+
+85
+00:05:08,400 --> 00:05:09,030
+Wrong.
+
+86
+00:05:10,050 --> 00:05:16,250
+Correct and we have a problem when you click on the correct tells us cannot set property background
+
+87
+00:05:16,590 --> 00:05:22,670
+of undefined if we look at what it's talking about colors I style the background.
+
+88
+00:05:22,770 --> 00:05:27,780
+Of course we have a problem here because I'm doing this to our colors array and this should not be our
+
+89
+00:05:27,780 --> 00:05:28,790
+colors.
+
+90
+00:05:29,120 --> 00:05:30,570
+This is our colors array.
+
+91
+00:05:30,600 --> 00:05:35,070
+It should be on the squares array which is the squares that we're trying to change.
+
+92
+00:05:35,060 --> 00:05:39,860
+What I was doing was the colors array just the strings.
+
+93
+00:05:39,960 --> 00:05:45,810
+So squares out length and now it should be good to go and they all change to the color that was picked
+
+94
+00:05:46,650 --> 00:05:48,120
+just like that.
+
+95
+00:05:48,120 --> 00:05:48,790
+All right.
+
+96
+00:05:48,900 --> 00:05:54,990
+So next up let's focus on getting the random colors in the array and then picking a random color from
+
+97
+00:05:54,990 --> 00:05:55,940
+that array.
+
+98
+00:05:55,940 --> 00:06:00,830
+So I'm going to start with the second thing which is picking a random color instead of just automatically
+
+99
+00:06:00,840 --> 00:06:05,910
+making it colors three to help us pick a random element from this array.
+
+100
+00:06:05,910 --> 00:06:07,830
+I'm actually going to make a function.
+
+101
+00:06:07,830 --> 00:06:12,630
+And the reason I'm doing that is one to clean up our code but to we're actually going to use that function
+
+102
+00:06:12,720 --> 00:06:17,910
+later because every time that we start a new game we have to pick a new color.
+
+103
+00:06:17,940 --> 00:06:22,040
+So it's something we're going to have to call a few times to make that work.
+
+104
+00:06:22,050 --> 00:06:25,200
+I'm going to start by calling the function that doesn't exist just yet.
+
+105
+00:06:25,200 --> 00:06:29,460
+So I'm going to say pick's color equals and let's name it.
+
+106
+00:06:29,460 --> 00:06:34,760
+Pick color and then we need to define pick color.
+
+107
+00:06:34,980 --> 00:06:38,420
+So I come down here just do it at the bottom for now function pick.
+
+108
+00:06:38,430 --> 00:06:43,070
+Color in this function we need to do two things.
+
+109
+00:06:43,080 --> 00:06:45,330
+One is pick a random number.
+
+110
+00:06:45,810 --> 00:06:50,650
+So something like 0 or 1 or 2 all the way to the last index of this array.
+
+111
+00:06:51,180 --> 00:06:57,220
+And then we need to use that number to access the color out of this array and return that color.
+
+112
+00:06:57,300 --> 00:06:59,070
+So we'll start by picking a random number.
+
+113
+00:06:59,220 --> 00:07:05,160
+And the way that we pick a random number in javascript is using math random and math out random will
+
+114
+00:07:05,190 --> 00:07:09,420
+pick a number between 0 and 1 and it doesn't include one.
+
+115
+00:07:09,420 --> 00:07:11,420
+So let me show you that math not random
+
+116
+00:07:14,340 --> 00:07:16,620
+and it's a long long decimal.
+
+117
+00:07:16,620 --> 00:07:24,860
+So if we wanted to generate a number between 0 and 6 for instance to mimic a Dayrell we would do math
+
+118
+00:07:24,860 --> 00:07:28,850
+at random and then multiply it.
+
+119
+00:07:29,000 --> 00:07:36,560
+In our case if we did just dime 6 we actually would never get a number above five point nine nine nine
+
+120
+00:07:36,670 --> 00:07:37,320
+nine.
+
+121
+00:07:37,640 --> 00:07:44,790
+So if we want that number to go from one up and tell six we could multiply it by six and then add one
+
+122
+00:07:44,940 --> 00:07:48,350
+at the end.
+
+123
+00:07:48,380 --> 00:07:53,570
+Now we can get as high as six point ninety nine and to get a whole number.
+
+124
+00:07:53,580 --> 00:08:00,660
+We then need to chop off that decimal so we can use math top floor which is another method and that
+
+125
+00:08:00,660 --> 00:08:08,250
+will just take whatever is returned from math out random multiplying by 6 adding 1 and then remove everything
+
+126
+00:08:08,250 --> 00:08:09,630
+after the decimal point.
+
+127
+00:08:09,770 --> 00:08:13,790
+And that gives us random numbers between 1 and 6.
+
+128
+00:08:13,920 --> 00:08:18,460
+As you can see but we don't necessarily want just between 1 and 6.
+
+129
+00:08:18,540 --> 00:08:22,090
+This array eventually might only have three items.
+
+130
+00:08:22,620 --> 00:08:25,800
+As you can see when I go to easy mode there's only three colors.
+
+131
+00:08:25,920 --> 00:08:27,600
+So it might have three and might have six.
+
+132
+00:08:27,690 --> 00:08:33,110
+So we're going to just use the length of the array to generate our color so it will look like this math
+
+133
+00:08:33,120 --> 00:08:38,460
+thought random we're going to generate a number between 0 and 1 and then multiply it by the length of
+
+134
+00:08:38,460 --> 00:08:42,690
+the array and that's OK because remember that it's not inclusive.
+
+135
+00:08:42,750 --> 00:08:47,330
+So even though the length of the array is one more than the highest index.
+
+136
+00:08:47,390 --> 00:08:48,970
+So the length is six.
+
+137
+00:08:49,080 --> 00:08:51,040
+But the highest number we want is five.
+
+138
+00:08:51,410 --> 00:08:54,500
+Because random number only goes between 0 and 1.
+
+139
+00:08:54,500 --> 00:08:57,140
+But it doesn't include one we're in good shape.
+
+140
+00:08:57,330 --> 00:09:03,900
+So we're going to generate that and then we're going to do math that floor of that whole thing which
+
+141
+00:09:03,890 --> 00:09:11,070
+will chop off the remaining decimal point and then once we have that done that gives us a random number
+
+142
+00:09:11,070 --> 00:09:11,530
+.
+
+143
+00:09:11,610 --> 00:09:18,810
+The next thing we need to do is save this to a variable and then use that variable to access an element
+
+144
+00:09:18,810 --> 00:09:20,990
+from the array at that index.
+
+145
+00:09:21,000 --> 00:09:26,720
+So then we're going to say return colors random.
+
+146
+00:09:26,730 --> 00:09:33,230
+So this picks a random number like three and then it returns colors of three.
+
+147
+00:09:33,240 --> 00:09:33,630
+All right.
+
+148
+00:09:33,620 --> 00:09:35,420
+So let's test this out.
+
+149
+00:09:35,460 --> 00:09:36,490
+We have pick color.
+
+150
+00:09:36,620 --> 00:09:39,150
+We're calling pick color up at the top here.
+
+151
+00:09:39,480 --> 00:09:45,690
+So if I refresh we should expect this to change and it does change as I refresh.
+
+152
+00:09:45,720 --> 00:09:51,870
+You can see sometimes you get the same one because there's only six and they never change but it changes
+
+153
+00:09:52,320 --> 00:09:54,170
+almost every time.
+
+154
+00:09:54,170 --> 00:09:57,900
+Now let's check if our quick logic works the same way.
+
+155
+00:09:57,890 --> 00:10:03,060
+So if I click this one is zero red zero green and all blue.
+
+156
+00:10:03,060 --> 00:10:05,430
+So let's try clicking on red cyan.
+
+157
+00:10:05,420 --> 00:10:06,120
+Good.
+
+158
+00:10:06,210 --> 00:10:08,130
+If I click on blue it's correct
+

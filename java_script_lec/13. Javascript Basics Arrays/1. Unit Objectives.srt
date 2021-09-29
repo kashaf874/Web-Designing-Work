@@ -1,0 +1,184 @@
+﻿1
+00:00:00,480 --> 00:00:06,390
+Hi welcome to Unit 11 which is all about javascript arrays so arrays are going to be our first data
+
+2
+00:00:06,390 --> 00:00:12,900
+structure and data structures are just ways of storing data ways of holding information using javascript
+
+3
+00:00:12,910 --> 00:00:13,130
+.
+
+4
+00:00:13,350 --> 00:00:19,470
+So we've seen variables so far which will let us hold one piece of information like a name a phone number
+
+5
+00:00:19,800 --> 00:00:20,970
+a number.
+
+6
+00:00:20,970 --> 00:00:24,360
+But what if we wanted to have all of the names of all of our friends.
+
+7
+00:00:24,390 --> 00:00:28,260
+Hopefully it's not just one but we have multiple friends and we want to be able to store all of them
+
+8
+00:00:28,260 --> 00:00:29,010
+together.
+
+9
+00:00:29,080 --> 00:00:30,990
+A variable is not really going to work for that.
+
+10
+00:00:31,170 --> 00:00:34,940
+So the array is one of javascript's answers to that problem.
+
+11
+00:00:34,950 --> 00:00:39,870
+So arrays are really really useful in all sorts of real world and practical situations.
+
+12
+00:00:40,170 --> 00:00:46,140
+So a site like Facebook or Yelp they're going to have arrays all over the place any time that you imagine
+
+13
+00:00:46,200 --> 00:00:47,780
+or you think of a list of data.
+
+14
+00:00:47,790 --> 00:00:49,940
+So there's groups of data that are related.
+
+15
+00:00:49,960 --> 00:00:56,250
+So let's take an example of it make a Facebook post and that Facebook post hopefully if it's a popular
+
+16
+00:00:56,250 --> 00:01:01,870
+one let's say I'm getting married or I made a funny joke one time or someone close to me died and I
+
+17
+00:01:01,860 --> 00:01:03,300
+get a bunch of sympathy comments.
+
+18
+00:01:03,300 --> 00:01:06,730
+Whatever it is if I get a bunch of comments there's a list there.
+
+19
+00:01:06,930 --> 00:01:11,150
+And Facebook stores them together it keeps track of them together using an array.
+
+20
+00:01:11,190 --> 00:01:15,120
+We're going to use arrays to do things like keep track of that to do that you have in your To Do list
+
+21
+00:01:15,480 --> 00:01:20,520
+or to keep track of the comments on a particular post or to keep track of the photos that correspond
+
+22
+00:01:20,520 --> 00:01:21,800
+to a particular user.
+
+23
+00:01:21,840 --> 00:01:23,070
+So they're really really useful.
+
+24
+00:01:23,070 --> 00:01:27,450
+It's not just some construct something that you're learning early on but it's really something that
+
+25
+00:01:27,450 --> 00:01:31,560
+we'll use throughout the rest of the course and I say that a lot and it's because everything I'm showing
+
+26
+00:01:31,560 --> 00:01:34,310
+you is the stuff that you need for the rest of the course.
+
+27
+00:01:34,320 --> 00:01:35,830
+So not just saying that a promise.
+
+28
+00:01:35,990 --> 00:01:39,460
+OK let's get started with the race so we have three main objectives again.
+
+29
+00:01:39,690 --> 00:01:44,280
+The first one is that I want you to be able to define race not explain what they are not that kind of
+
+30
+00:01:44,280 --> 00:01:44,680
+define.
+
+31
+00:01:44,700 --> 00:01:50,420
+But actually you use code to define an array and then remove and add elements from that array.
+
+32
+00:01:50,430 --> 00:01:56,490
+The second objective is that you should be able to use builtin Array methods to add and remove and manipulate
+
+33
+00:01:56,490 --> 00:01:57,200
+the array.
+
+34
+00:01:57,480 --> 00:02:01,260
+So there are things like push and pop shift and an shift that we'll talk about.
+
+35
+00:02:01,260 --> 00:02:04,950
+These are all built in methods that you should be able to use by the end of the unit.
+
+36
+00:02:05,400 --> 00:02:10,050
+And then the last thing that we'll do is we'll build a simple project to do list application using a
+
+37
+00:02:10,050 --> 00:02:10,580
+race.
+
+38
+00:02:10,640 --> 00:02:14,830
+So will use functions we use arrays will these variables conditional logic.
+
+39
+00:02:14,880 --> 00:02:20,250
+It's not going to be a fully functional crazy to do list with a visual interface just yet we will be
+
+40
+00:02:20,250 --> 00:02:23,000
+working towards a really nice looking visual to do list.
+
+41
+00:02:23,000 --> 00:02:25,020
+It's responsive and it looks really nice.
+
+42
+00:02:25,110 --> 00:02:27,750
+For now this is going to be based in the javascript console.
+
+43
+00:02:27,870 --> 00:02:29,640
+So I do want to set your expectations.
+
+44
+00:02:29,670 --> 00:02:34,320
+We will be revisiting the To-Do list though and it will still use the race and functions and variables
+
+45
+00:02:34,320 --> 00:02:35,650
+and everything else.
+
+46
+00:02:35,670 --> 00:02:36,960
+All right so let's go ahead and get started.
+

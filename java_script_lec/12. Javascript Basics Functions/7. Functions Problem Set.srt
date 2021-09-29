@@ -1,0 +1,200 @@
+﻿1
+00:00:00,600 --> 00:00:04,440
+So it's now time for you to start writing some of your own Javascript functions.
+
+2
+00:00:04,440 --> 00:00:07,680
+So I've written a problem set with three different problems.
+
+3
+00:00:07,680 --> 00:00:10,840
+Each one you'll have to write your own javascript function.
+
+4
+00:00:10,980 --> 00:00:16,140
+So I'm going to introduce all three problems and then in the next video we'll have solutions.
+
+5
+00:00:16,200 --> 00:00:18,170
+So the first one is called is even.
+
+6
+00:00:18,450 --> 00:00:24,270
+So you'll need to write a function called is even which takes a single argument which is a number and
+
+7
+00:00:24,270 --> 00:00:28,550
+it returns true if the number is even and false if it's not.
+
+8
+00:00:28,890 --> 00:00:38,520
+So there's a few examples is even of four returns true is even if 21 returns false is even a 68 is true
+
+9
+00:00:38,870 --> 00:00:41,120
+3 3 3 is false.
+
+10
+00:00:41,130 --> 00:00:45,780
+If you need to jog your memory on how you determine if a number is even you can watch some of the previous
+
+11
+00:00:45,780 --> 00:00:49,300
+videos where we talked about modulo.
+
+12
+00:00:49,320 --> 00:00:52,290
+Next up is a function called factorial.
+
+13
+00:00:52,290 --> 00:00:55,090
+So most of you probably don't remember what factorial is.
+
+14
+00:00:55,110 --> 00:00:57,990
+I think we talked about it like once in my high school math class.
+
+15
+00:00:58,200 --> 00:01:04,260
+Basically you take a number like four and factorial is written with an exclamation point often.
+
+16
+00:01:04,290 --> 00:01:10,030
+So for factorial is equal to 4 times 3 times 2 times 1.
+
+17
+00:01:10,050 --> 00:01:18,330
+So that gives us 24 6 factorial is six times five times four times three times 2 times 1.
+
+18
+00:01:18,330 --> 00:01:23,010
+So basically you're going to write a function that takes a number and multiply that number by every
+
+19
+00:01:23,010 --> 00:01:26,800
+integer below that between that number and 1.
+
+20
+00:01:27,150 --> 00:01:31,200
+So there's one small caveat which is zero factorial is 1.
+
+21
+00:01:31,200 --> 00:01:36,240
+So to write this function in need to have a variable that you're constantly multiplying by smaller and
+
+22
+00:01:36,240 --> 00:01:41,660
+smaller numbers so you multiply by four then three and then two and then one and you'll stop.
+
+23
+00:01:41,700 --> 00:01:43,130
+When you multiply by 1.
+
+24
+00:01:43,860 --> 00:01:45,850
+So you can see a few examples here.
+
+25
+00:01:46,110 --> 00:01:53,580
+Factorial of five is five times four times three times two times one which is a 120 factorial of two
+
+26
+00:01:53,820 --> 00:01:56,150
+is just two factorial of 10.
+
+27
+00:01:56,160 --> 00:01:59,130
+Is this massive number and factorial of zero.
+
+28
+00:01:59,130 --> 00:02:02,260
+Remember it needs to return 1.
+
+29
+00:02:02,640 --> 00:02:05,090
+So the last one here is a little bit different.
+
+30
+00:02:05,130 --> 00:02:07,260
+It's called Khabab to snake.
+
+31
+00:02:07,320 --> 00:02:11,540
+So if you recall there are different ways of writing strings different cases.
+
+32
+00:02:11,570 --> 00:02:15,350
+There's snake case where we use underscores like you see here.
+
+33
+00:02:15,510 --> 00:02:17,680
+Hello underscore world.
+
+34
+00:02:17,700 --> 00:02:22,330
+There's Khabab case where we use dashes haloed dash world.
+
+35
+00:02:22,380 --> 00:02:28,260
+So you're going to write a function called Khabab to snake which takes a single string argument that
+
+36
+00:02:28,260 --> 00:02:29,730
+is going to be Khabab case.
+
+37
+00:02:29,760 --> 00:02:37,260
+So it uses dashes between words and your job is to replace all those dashes with underscores to make
+
+38
+00:02:37,260 --> 00:02:38,490
+it snake case.
+
+39
+00:02:38,850 --> 00:02:44,100
+So in order to do that you may need to research a little bit about how you can replace characters in
+
+40
+00:02:44,100 --> 00:02:45,020
+a string.
+
+41
+00:02:45,480 --> 00:02:50,190
+So it's definitely intentional that this one is last in the problems that you may need to do a little
+
+42
+00:02:50,190 --> 00:02:50,930
+bit of research.
+
+43
+00:02:50,940 --> 00:02:57,240
+Do some googling figure out how you can replace all of a specific character in a string with another
+
+44
+00:02:57,240 --> 00:03:01,180
+specific character so you can see some sample input and output.
+
+45
+00:03:01,440 --> 00:03:03,120
+Hello Dasch world.
+
+46
+00:03:03,120 --> 00:03:07,880
+When you pass it into Khabab to snake should return Hello underscore world.
+
+47
+00:03:08,460 --> 00:03:11,280
+And one key point about all these exercises.
+
+48
+00:03:11,290 --> 00:03:12,420
+No contact logs.
+
+49
+00:03:12,420 --> 00:03:14,210
+These are all returned statements.
+
+50
+00:03:14,560 --> 00:03:16,990
+OK so in the next video we'll go over some solutions.
+

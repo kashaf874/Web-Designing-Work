@@ -1,0 +1,520 @@
+﻿1
+00:00:00,210 --> 00:00:05,100
+All right so it's time for our first Jay queery exercise the way that this one works is that I'm going
+
+2
+00:00:05,100 --> 00:00:11,370
+to give you some sample aged hymnal for divs some have classes some have ideas and they'll take those
+
+3
+00:00:11,370 --> 00:00:18,270
+for divs and put them in your own age HTML file and you'll need to include Jay query correctly up to
+
+4
+00:00:18,270 --> 00:00:22,330
+you how you do that if you want to use a Cdn or if you want to download it.
+
+5
+00:00:22,650 --> 00:00:27,720
+And then there are four quick challenges that I want you to attempt using Jay Querrey and in particular
+
+6
+00:00:27,990 --> 00:00:32,040
+the dollar sign to select and Dot see SS to style.
+
+7
+00:00:32,070 --> 00:00:33,130
+So the first one.
+
+8
+00:00:33,270 --> 00:00:36,590
+Select all divs and give them a purple background.
+
+9
+00:00:36,870 --> 00:00:43,200
+The next one is selects the divs with class highlight and make them 200 pixels wide.
+
+10
+00:00:43,200 --> 00:00:49,800
+The third one is to select the div with the ID third and give it an orange border up to you how wide
+
+11
+00:00:49,920 --> 00:00:51,930
+and what style of the border.
+
+12
+00:00:52,110 --> 00:00:58,630
+And then the bonus is to select the first div only and change its font color to be pink.
+
+13
+00:00:58,650 --> 00:01:00,120
+So go ahead give this a shot.
+
+14
+00:01:00,120 --> 00:01:01,710
+You'll need to post a video.
+
+15
+00:01:01,710 --> 00:01:03,280
+Create a New Age HTML file.
+
+16
+00:01:03,330 --> 00:01:08,730
+Include a query and then copy this code in or type it up yourself and then you'll need to solve these
+
+17
+00:01:08,730 --> 00:01:09,660
+four challenges.
+
+18
+00:01:09,660 --> 00:01:11,130
+So go ahead post a video.
+
+19
+00:01:11,130 --> 00:01:13,500
+I'll be back in just a few seconds with the solution
+
+20
+00:01:20,970 --> 00:01:21,730
+already.
+
+21
+00:01:21,750 --> 00:01:24,700
+Let's go ahead and type up a quick solution to this.
+
+22
+00:01:25,050 --> 00:01:29,070
+As always the first thing we need to do is make our each time file.
+
+23
+00:01:29,070 --> 00:01:30,220
+So I have a new file.
+
+24
+00:01:30,240 --> 00:01:37,740
+I called it exercise that h t m l and I'll save it and then add in my regular h tim l boilerplate and
+
+25
+00:01:37,740 --> 00:01:45,760
+we'll just call this J query exercise in the title and then I'll go ahead and add in our starter DML
+
+26
+00:01:46,060 --> 00:01:48,780
+and I'll just copy it in rather than typing it.
+
+27
+00:01:49,520 --> 00:01:52,080
+OK so we have the four elements.
+
+28
+00:01:52,080 --> 00:01:54,660
+Now let's go and add Jay Querrey.
+
+29
+00:01:54,780 --> 00:02:00,330
+Remember we have two ways of doing that we can include it locally or we can link to a CDN.
+
+30
+00:02:00,480 --> 00:02:03,150
+So I'll show both the first one.
+
+31
+00:02:03,510 --> 00:02:05,710
+I'm just going to copy the file over.
+
+32
+00:02:06,030 --> 00:02:10,430
+So I have to modify version here just to command c command V.
+
+33
+00:02:10,620 --> 00:02:14,350
+So I now have it in the same directory as my exercise that age Simmo.
+
+34
+00:02:14,580 --> 00:02:21,540
+And then I'll go over here and the first thing that I want to do is add a script tag script and then
+
+35
+00:02:21,600 --> 00:02:28,620
+I'll add source equals and then I need to make sure that I match that correctly which is Jay dash to
+
+36
+00:02:28,660 --> 00:02:31,000
+point 1.4 men.
+
+37
+00:02:31,080 --> 00:02:32,110
+Yes.
+
+38
+00:02:32,190 --> 00:02:38,230
+So Jay queery dash to point one point for Dot men.
+
+39
+00:02:38,390 --> 00:02:45,640
+Jesus we'll save that and open it up in our browser and do our little test to see if it works.
+
+40
+00:02:46,650 --> 00:02:47,950
+It looks like it found the file.
+
+41
+00:02:47,970 --> 00:02:55,920
+Otherwise it would give us an error and we can always try doing something like a dollar sign div and
+
+42
+00:02:55,920 --> 00:02:56,910
+see what we get.
+
+43
+00:02:57,030 --> 00:02:57,910
+And it's working.
+
+44
+00:02:57,900 --> 00:03:00,060
+It's selecting our 4 divs.
+
+45
+00:03:00,060 --> 00:03:02,670
+We can also include A-J queries CDN.
+
+46
+00:03:03,180 --> 00:03:04,600
+And I just google for that.
+
+47
+00:03:04,680 --> 00:03:07,510
+Jay quercetin and then pick our version.
+
+48
+00:03:07,980 --> 00:03:09,690
+So we don't want 3.0.
+
+49
+00:03:09,930 --> 00:03:10,670
+I'm sure it works fine.
+
+50
+00:03:10,680 --> 00:03:12,940
+But that's the newest version and it's still an alpha.
+
+51
+00:03:13,050 --> 00:03:15,070
+So there's probably some bugs and some issues.
+
+52
+00:03:15,150 --> 00:03:22,500
+So to point one point four is the most recent stable version then we'll copy this URL and then we'll
+
+53
+00:03:22,500 --> 00:03:27,870
+add another script tag and I'll leave them both here and just comment one out and reset the source equal
+
+54
+00:03:27,870 --> 00:03:28,830
+to that you are wrong.
+
+55
+00:03:28,950 --> 00:03:33,920
+So either one works I'll use the Cdn since I already proved to you that we
+
+56
+00:03:37,260 --> 00:03:38,460
+all use the Cdn.
+
+57
+00:03:38,490 --> 00:03:42,360
+Since I already proved that this one worked just for variety sake.
+
+58
+00:03:42,510 --> 00:03:47,180
+So we'll save and then refresh and double check does our code still work.
+
+59
+00:03:47,460 --> 00:03:49,830
+Yes it's finding dollar signs just fine.
+
+60
+00:03:49,830 --> 00:03:51,510
+It's connected to J Qwerty.
+
+61
+00:03:51,600 --> 00:03:58,320
+One point that I'd like to make is that we include J queery up top in the head and we use it in our
+
+62
+00:03:58,320 --> 00:04:01,330
+scripts that we write down in the body.
+
+63
+00:04:01,590 --> 00:04:06,930
+And the reason we do that remember things load in the order that they're declared So we want Arjay query
+
+64
+00:04:07,200 --> 00:04:11,120
+to definitely load before we use it instead of a script.
+
+65
+00:04:11,430 --> 00:04:18,620
+So our script that we need to define is where we'll write our code and we'll just call it exercise.
+
+66
+00:04:18,640 --> 00:04:19,720
+J s.
+
+67
+00:04:19,850 --> 00:04:28,200
+And then we need to make that file exercise that J us and we'll put that right here in the same directory
+
+68
+00:04:29,550 --> 00:04:36,210
+and what we can do is a really simple test to see if it's connected both to our h tim file and to the
+
+69
+00:04:36,210 --> 00:04:41,790
+J query if it's able to see and use the J query method we'll just do something like this.
+
+70
+00:04:41,820 --> 00:04:54,140
+If J query else will do something else so if there is J query we will alert a query loaded else we'll
+
+71
+00:04:54,130 --> 00:04:59,780
+alerts know Jay Querrey sad face and save.
+
+72
+00:05:00,020 --> 00:05:03,540
+And if we refresh now we get J query loaded.
+
+73
+00:05:03,760 --> 00:05:05,240
+So that tells us two things.
+
+74
+00:05:05,260 --> 00:05:12,020
+One this script is running exercise that Jesus is connected and two were able to use the Jay Querrey
+
+75
+00:05:12,010 --> 00:05:12,570
+methods.
+
+76
+00:05:12,820 --> 00:05:20,200
+If we did this in reverse order though and I put Jay query after I included my exercise Jay Yes and
+
+77
+00:05:20,200 --> 00:05:26,350
+I save and refresh we get an error which tells us J query is not defined so you can see the importance
+
+78
+00:05:26,410 --> 00:05:28,260
+of the order that we put things in.
+
+79
+00:05:28,510 --> 00:05:34,660
+So we always want to put our libraries that our code depends on up top in the head at the very least
+
+80
+00:05:34,690 --> 00:05:37,540
+we want to put them before our scripts that use them.
+
+81
+00:05:37,720 --> 00:05:42,850
+Let's go back to the assignment and the first thing we need to do is correctly include Jay Querrey which
+
+82
+00:05:42,850 --> 00:05:44,020
+we've already done.
+
+83
+00:05:44,020 --> 00:05:48,670
+Next up we need to select all the divs and give them a purple background.
+
+84
+00:05:49,000 --> 00:05:55,530
+So we'll go ahead and select all divs by using dollar sign instead of quotes.
+
+85
+00:05:55,690 --> 00:05:58,360
+All we need to do is select div with CSSA.
+
+86
+00:05:58,390 --> 00:06:02,520
+So just div dot C S S and we'll make them purple.
+
+87
+00:06:02,560 --> 00:06:09,230
+So color or background in this case is purple or we could have used our own R.G. B shade of purple.
+
+88
+00:06:09,380 --> 00:06:14,320
+And if you don't remember how we make purple with RGV then you need to go play the R.G. became a little
+
+89
+00:06:14,320 --> 00:06:15,560
+bit more.
+
+90
+00:06:15,670 --> 00:06:20,110
+So that's the first one we can save and check that that worked by refreshing.
+
+91
+00:06:20,530 --> 00:06:22,910
+And we get four purple backgrounds.
+
+92
+00:06:23,200 --> 00:06:23,770
+OK.
+
+93
+00:06:23,920 --> 00:06:25,050
+So that's that.
+
+94
+00:06:25,090 --> 00:06:28,780
+That is selecting all the divs and giving them a purple background.
+
+95
+00:06:28,780 --> 00:06:32,360
+I'll just add a little note here and comment that out.
+
+96
+00:06:32,620 --> 00:06:38,670
+Next up we want to select the divs with class equal to highlight and make them 200 pixels wide.
+
+97
+00:06:38,990 --> 00:06:45,340
+So that will work very similarly but to select the divs with class equal to highlight what we need to
+
+98
+00:06:45,340 --> 00:06:47,390
+do is use dollar sign again.
+
+99
+00:06:47,950 --> 00:07:02,770
+And rather than div we can use dot highlight and then do C Ss with and that will be 200 peaks.
+
+100
+00:07:02,870 --> 00:07:07,660
+It's worth noting that this technically selects anything that has a class of highlight.
+
+101
+00:07:07,660 --> 00:07:13,540
+If you want it to be explicit and say only the divs that have the class of highlight we could have an
+
+102
+00:07:13,540 --> 00:07:18,470
+anchor tag or a paragraph that also have that class we would write this selector.
+
+103
+00:07:18,670 --> 00:07:22,290
+And this is C S S that says all divs with the class of highlight.
+
+104
+00:07:22,390 --> 00:07:24,370
+But in this case it will make a difference.
+
+105
+00:07:24,380 --> 00:07:31,750
+So 200 pixels with refresh and you can see these two divs have the class of highlight the second and
+
+106
+00:07:31,750 --> 00:07:35,260
+the fourth div and they have a with 200 pixels.
+
+107
+00:07:35,890 --> 00:07:41,100
+OK the next one is to select the div with the idea of third.
+
+108
+00:07:41,460 --> 00:07:50,320
+And to give it an orange border so to select the div with that Id dollar sign again and instead of dot
+
+109
+00:07:50,590 --> 00:07:51,850
+we need our to Thorpe.
+
+110
+00:07:52,300 --> 00:07:59,060
+And then the name of the ID that SS order and it's up to us.
+
+111
+00:07:59,080 --> 00:08:00,680
+All I said was color is orange.
+
+112
+00:08:00,870 --> 00:08:10,420
+So let's do a two pixel solid orange border and save and refresh and we now have that orange border
+
+113
+00:08:10,420 --> 00:08:11,140
+right there.
+
+114
+00:08:11,190 --> 00:08:14,680
+I'll make it a little bit bigger so that it shows better in the screencast.
+
+115
+00:08:14,680 --> 00:08:15,280
+There we go.
+
+116
+00:08:15,500 --> 00:08:20,360
+And that's around a third div which has the ID of the word.
+
+117
+00:08:20,650 --> 00:08:26,710
+So the last challenge which was a bonus is to select the first div only and change its font color to
+
+118
+00:08:26,710 --> 00:08:32,380
+pink the way that will select the first div is using a CSSA pseudo selector.
+
+119
+00:08:32,380 --> 00:08:41,030
+First of type so div colon first dash of dash type which you should be familiar with from some of the
+
+120
+00:08:41,020 --> 00:08:42,710
+CSSA selector videos.
+
+121
+00:08:42,910 --> 00:08:53,440
+And then we'll just make it pink that's the SS color pink and we save and refresh and you can see the
+
+122
+00:08:53,440 --> 00:08:55,730
+color is pink.
+
+123
+00:08:55,730 --> 00:09:02,480
+The other option that we have is there's actually a built in J query shortcut which is just Colan first
+
+124
+00:09:02,920 --> 00:09:05,350
+and that also works just fine.
+
+125
+00:09:05,380 --> 00:09:11,800
+An interesting note is that using colon first is actually a little slower than first of type because
+
+126
+00:09:11,810 --> 00:09:19,970
+first of type is built in to see assess it is a CSSA selector versus first is a J query shortcut.
+
+127
+00:09:20,060 --> 00:09:23,590
+So it's not native C Ss it's just ever so slightly slower.
+
+128
+00:09:23,770 --> 00:09:25,540
+So I would use first of type.
+
+129
+00:09:25,880 --> 00:09:28,870
+OK so that's it for this exercise in the next few videos.
+
+130
+00:09:29,000 --> 00:09:33,360
+We're going to learn about other ways of manipulating things rather than just changing SEUS us
+

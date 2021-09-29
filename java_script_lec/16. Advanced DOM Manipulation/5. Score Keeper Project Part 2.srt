@@ -1,0 +1,1196 @@
+﻿1
+00:00:00,180 --> 00:00:02,530
+So we now have two different things we can focus on.
+
+2
+00:00:02,610 --> 00:00:09,540
+The first one is changing the display up here to be green on the winning player and that one is pretty
+
+3
+00:00:09,540 --> 00:00:10,110
+simple.
+
+4
+00:00:10,140 --> 00:00:14,670
+And the second one is getting the reset button to work so that we can reset and play again.
+
+5
+00:00:14,850 --> 00:00:20,530
+So let's start with the color change and I'm going to do that by defining a class in a CSSA file.
+
+6
+00:00:20,580 --> 00:00:25,420
+So I need to make a C S S file and I'm just going to call that scorekeeper.
+
+7
+00:00:25,590 --> 00:00:35,790
+C Ss then I'm going to link to it instead of my HDMI file scorekeeper Dotsie SS and save.
+
+8
+00:00:35,790 --> 00:00:43,080
+Then I'm going to go to my CSSA file and define a class and I'll just call it winter and I'm going to
+
+9
+00:00:43,080 --> 00:00:47,090
+say color is green and that's all we need and will save.
+
+10
+00:00:47,190 --> 00:00:49,620
+And just to check that it looks the way I want it to.
+
+11
+00:00:49,620 --> 00:00:57,270
+Let's just add it to the span so will say class equals and we'll just give it a class of winner for
+
+12
+00:00:57,270 --> 00:00:59,540
+player 1 display from the get go.
+
+13
+00:00:59,610 --> 00:01:03,090
+And if I refresh you can see we get a green 0.
+
+14
+00:01:03,090 --> 00:01:05,700
+That's exactly what we want as an increment.
+
+15
+00:01:05,730 --> 00:01:09,260
+Of course we want it to start as black and only add the class.
+
+16
+00:01:09,360 --> 00:01:14,320
+When game is over so we need to go back to our javascript and get rid of this.
+
+17
+00:01:14,520 --> 00:01:17,030
+So it goes back to black.
+
+18
+00:01:17,310 --> 00:01:18,910
+Go to our javascript now.
+
+19
+00:01:19,530 --> 00:01:24,840
+So we'll just start for player 1 and we need to check if the player 1 score is equal to winning score
+
+20
+00:01:24,840 --> 00:01:24,870
+.
+
+21
+00:01:24,870 --> 00:01:26,640
+That means that player one has won.
+
+22
+00:01:26,760 --> 00:01:33,360
+So in here we're going to add to the player 1 display class list.
+
+23
+00:01:33,360 --> 00:01:37,570
+We're going to add the class winner and that's all we have to do.
+
+24
+00:01:37,830 --> 00:01:44,500
+So if we refresh you'll see as I increment player 1 score and get to 5.
+
+25
+00:01:44,520 --> 00:01:46,580
+That class has been added.
+
+26
+00:01:46,830 --> 00:01:49,390
+So if we take a look here I'll inspect it.
+
+27
+00:01:49,410 --> 00:01:54,090
+There is no class and I keep incrementing till we get to 5.
+
+28
+00:01:54,090 --> 00:01:59,640
+Pay attention right in here and we get class equals winner added When we get to 5.
+
+29
+00:01:59,910 --> 00:02:02,900
+So we'll do the same thing for Player 2.
+
+30
+00:02:03,150 --> 00:02:07,230
+So if player two scores the winning score will change the player to display.
+
+31
+00:02:07,710 --> 00:02:10,480
+Let's check increment this to 5.
+
+32
+00:02:10,650 --> 00:02:12,060
+Great.
+
+33
+00:02:13,110 --> 00:02:15,030
+Everything seems to be working just fine.
+
+34
+00:02:15,450 --> 00:02:19,260
+So the next piece is getting the reset button to work right now.
+
+35
+00:02:19,350 --> 00:02:22,490
+If we get game over it's always set to be true.
+
+36
+00:02:22,500 --> 00:02:24,990
+There's no way to change game over.
+
+37
+00:02:24,990 --> 00:02:28,830
+So clicking the reset button needs to trigger a few different lines of code.
+
+38
+00:02:28,860 --> 00:02:30,540
+The first one you want to change.
+
+39
+00:02:30,540 --> 00:02:33,390
+Player 1 score and player to score back to zero.
+
+40
+00:02:33,420 --> 00:02:38,820
+We want to change the values here that are displayed in the player 1 display and player to display to
+
+41
+00:02:38,820 --> 00:02:43,860
+be zero and we want to remove this green class from whichever element it's on.
+
+42
+00:02:44,130 --> 00:02:49,170
+And then the last thing is we need to make sure that game over goes back to being false so that our
+
+43
+00:02:49,170 --> 00:02:51,180
+code and here can run again.
+
+44
+00:02:51,240 --> 00:02:57,200
+So the first thing we need to select the button we gave it id equal reset.
+
+45
+00:02:57,390 --> 00:03:00,170
+So we need to go over here and just select it.
+
+46
+00:03:00,330 --> 00:03:02,590
+So I'll do it with the other buttons so far.
+
+47
+00:03:02,640 --> 00:03:11,880
+Reset Button equals document dot and we'll do another get element by id and this time the ID is reset
+
+48
+00:03:13,050 --> 00:03:16,400
+and will save and then just to check that it works.
+
+49
+00:03:16,580 --> 00:03:17,820
+Do a constant log.
+
+50
+00:03:18,060 --> 00:03:22,900
+Reset reset button and refresh.
+
+51
+00:03:22,900 --> 00:03:26,050
+If we look in our console we get our correct button.
+
+52
+00:03:26,070 --> 00:03:27,960
+It's been cancelled got logged.
+
+53
+00:03:28,390 --> 00:03:35,220
+OK so we should start by adding our event listener for a click on that reset button so reset button
+
+54
+00:03:35,610 --> 00:03:45,510
+that event listener click at our callback function and all that we want to do to start again just cancel
+
+55
+00:03:45,510 --> 00:03:53,490
+that log reset clicked just to make sure it works and there we go our reset button has been clicked
+
+56
+00:03:53,500 --> 00:03:53,910
+.
+
+57
+00:03:54,360 --> 00:03:57,780
+So the logic though as we discussed we need to set.
+
+58
+00:03:57,780 --> 00:04:00,330
+Player 1 score and player to score back to zero.
+
+59
+00:04:00,450 --> 00:04:02,440
+So that's straightforward enough.
+
+60
+00:04:02,460 --> 00:04:05,890
+Player 1 score zero player to score is zero.
+
+61
+00:04:06,330 --> 00:04:12,210
+But if I run this right now where I only change player 1 score in player to score to zero and increment
+
+62
+00:04:12,330 --> 00:04:14,790
+so that player one wins and then click reset.
+
+63
+00:04:14,850 --> 00:04:20,050
+Nothing appears to happen and that's because we only change the score in javascript.
+
+64
+00:04:20,100 --> 00:04:26,400
+We never updated the scores on the page so those are the P1 and P2 display variables that we need to
+
+65
+00:04:26,400 --> 00:04:27,050
+update.
+
+66
+00:04:27,300 --> 00:04:34,020
+So we'll want to do one display text content and we can just set it to zero.
+
+67
+00:04:34,020 --> 00:04:37,180
+We could also set it to be 1 score.
+
+68
+00:04:37,320 --> 00:04:38,690
+They should both be zero.
+
+69
+00:04:39,090 --> 00:04:42,700
+So same thing Pete to display text content is zero.
+
+70
+00:04:42,930 --> 00:04:46,060
+If we refresh now and we get to 5.
+
+71
+00:04:47,280 --> 00:04:48,410
+They both go back to zero.
+
+72
+00:04:48,450 --> 00:04:50,750
+So let's get a closer game.
+
+73
+00:04:52,360 --> 00:04:55,120
+And click reset both go back to zero.
+
+74
+00:04:55,500 --> 00:04:58,030
+Next up let's remove the winner clause.
+
+75
+00:04:58,090 --> 00:05:01,430
+Will this do it the easy way by removing the winner class from both.
+
+76
+00:05:01,540 --> 00:05:03,650
+So we won't even check which one has it.
+
+77
+00:05:03,730 --> 00:05:05,260
+We'll just remove it from both.
+
+78
+00:05:05,300 --> 00:05:07,620
+It's just a matter of one display.
+
+79
+00:05:07,780 --> 00:05:12,070
+Class lists remove winner.
+
+80
+00:05:12,310 --> 00:05:16,440
+So that will get rid of the clause and will also do it on to display.
+
+81
+00:05:16,480 --> 00:05:20,830
+So whichever one has it it doesn't matter because we're removing it from both.
+
+82
+00:05:21,940 --> 00:05:25,160
+So now if we play a game we get a winner.
+
+83
+00:05:25,600 --> 00:05:26,850
+I click reset.
+
+84
+00:05:26,920 --> 00:05:30,560
+They both go back to just a blank plain text.
+
+85
+00:05:31,140 --> 00:05:33,700
+But as you can see I get to five.
+
+86
+00:05:33,790 --> 00:05:36,340
+I click reset button still don't work.
+
+87
+00:05:36,610 --> 00:05:39,930
+And that's because game over is still true.
+
+88
+00:05:40,110 --> 00:05:42,900
+And so none of our code instead of these events is going to run.
+
+89
+00:05:43,090 --> 00:05:45,000
+So the last thing we need to do is set.
+
+90
+00:05:45,100 --> 00:05:50,340
+Game over back to false and that should enable us to keep playing.
+
+91
+00:05:50,820 --> 00:05:53,350
+So I will refresh incrementals.
+
+92
+00:05:53,520 --> 00:05:55,530
+Let's get a game over.
+
+93
+00:05:55,540 --> 00:05:55,990
+There we go.
+
+94
+00:05:55,990 --> 00:05:57,240
+I can't play anymore.
+
+95
+00:05:57,250 --> 00:06:04,610
+I click on reset and now game over it's back to false and I can play again and then keep going.
+
+96
+00:06:04,840 --> 00:06:07,220
+So that's the core functionality here.
+
+97
+00:06:07,320 --> 00:06:13,660
+We have almost everything done the very last thing is getting the playing to number or the winning score
+
+98
+00:06:13,870 --> 00:06:14,650
+to be a variable.
+
+99
+00:06:14,640 --> 00:06:16,520
+So it's not always just five.
+
+100
+00:06:16,930 --> 00:06:22,750
+So we have this input and we want to use this so that when I change this to be seven this says playing
+
+101
+00:06:22,750 --> 00:06:27,710
+to 7 and our maximum or our winning score is seven rather than five.
+
+102
+00:06:27,970 --> 00:06:29,750
+So we have a few steps to get there.
+
+103
+00:06:29,760 --> 00:06:35,260
+The first thing we need to do is select this input as you can see we have input type equal to number
+
+104
+00:06:35,260 --> 00:06:35,500
+.
+
+105
+00:06:35,740 --> 00:06:37,330
+It's the only input on the page.
+
+106
+00:06:37,360 --> 00:06:40,410
+So we don't necessarily have to give it an ID or anything.
+
+107
+00:06:40,420 --> 00:06:46,790
+So I'm going to go over here and just select it with my other selectors var.
+
+108
+00:06:47,050 --> 00:06:55,360
+Let's just call it no input equals document and there's a lot of ways of getting it can do document
+
+109
+00:06:55,360 --> 00:06:58,030
+that query selector input.
+
+110
+00:06:58,020 --> 00:07:01,400
+We could also specify only where.
+
+111
+00:07:01,420 --> 00:07:06,540
+Type is equal to number because there could be other inputs.
+
+112
+00:07:06,730 --> 00:07:08,070
+In our case I'll keep it simple.
+
+113
+00:07:08,080 --> 00:07:09,330
+There's only one input.
+
+114
+00:07:09,460 --> 00:07:11,190
+So this will work just fine.
+
+115
+00:07:11,810 --> 00:07:12,120
+OK.
+
+116
+00:07:12,120 --> 00:07:14,420
+So we have that input selected.
+
+117
+00:07:14,440 --> 00:07:16,390
+So now let's add an event.
+
+118
+00:07:16,420 --> 00:07:22,540
+So what we want to happen is that any time this changes the value or that number changes we want this
+
+119
+00:07:22,530 --> 00:07:26,920
+to update and we want the winning score variable to update as well.
+
+120
+00:07:26,950 --> 00:07:29,200
+So what we need to do is add an event.
+
+121
+00:07:29,280 --> 00:07:40,190
+So we'll just go numb and put Dot had event Lessner click just do it this way here.
+
+122
+00:07:41,050 --> 00:07:44,750
+Function and all do an alert.
+
+123
+00:07:45,300 --> 00:07:54,150
+Clicked the input and what you'll see is that actually a click listener is not the best tool for this
+
+124
+00:07:54,150 --> 00:07:54,720
+job.
+
+125
+00:07:54,920 --> 00:07:58,880
+Because yes we can change the value with a click like I just did there.
+
+126
+00:07:59,470 --> 00:08:06,910
+But I can also hit delete and type a number myself and no event was fired because I didn't have to click
+
+127
+00:08:06,930 --> 00:08:07,150
+.
+
+128
+00:08:07,360 --> 00:08:11,110
+So if I use the little buttons here a quick event fires.
+
+129
+00:08:11,110 --> 00:08:14,670
+Otherwise if I just use my keyboard we don't get a quick event.
+
+130
+00:08:14,680 --> 00:08:19,680
+So there's another type of event that's much better in this case which is called change.
+
+131
+00:08:19,770 --> 00:08:25,240
+So a change event will run any time the value changes and it doesn't matter how that value changed.
+
+132
+00:08:25,240 --> 00:08:27,840
+If it was because I clicked or hit the delete key.
+
+133
+00:08:27,850 --> 00:08:35,000
+So let's actually change the alert here to say changed the input and then refresh.
+
+134
+00:08:35,320 --> 00:08:39,900
+And if I click here to change it it tells me you changed the input.
+
+135
+00:08:40,090 --> 00:08:45,900
+But if I delete and I type a number which doesn't involve clicking it also tells me that I change the
+
+136
+00:08:45,900 --> 00:08:47,960
+input so that's great.
+
+137
+00:08:47,980 --> 00:08:52,740
+This is the event we want to use the change event any time the value changes we want to update this
+
+138
+00:08:52,750 --> 00:08:59,430
+number here and we also want to update our winning score so that our game continues to go until we hit
+
+139
+00:08:59,430 --> 00:09:00,650
+that new winning score.
+
+140
+00:09:00,700 --> 00:09:02,700
+Hopefully this is not our actual winning score.
+
+141
+00:09:02,740 --> 00:09:04,850
+Definitely long game of rock paper scissors.
+
+142
+00:09:05,080 --> 00:09:08,530
+So the first thing is updating this value here.
+
+143
+00:09:08,860 --> 00:09:13,020
+So just like before we need to select it which it's a paragraph.
+
+144
+00:09:13,060 --> 00:09:20,440
+So we need to select our paragraph and I'll just do a VAR paragraph equals document that query selector
+
+145
+00:09:21,690 --> 00:09:22,590
+tag.
+
+146
+00:09:23,290 --> 00:09:30,330
+And then in this quick event we'll just change that text content and we'll just start by just changing
+
+147
+00:09:30,340 --> 00:09:35,070
+it to say clicked or let's say value changed.
+
+148
+00:09:36,640 --> 00:09:39,310
+Just like that and refresh.
+
+149
+00:09:39,310 --> 00:09:45,470
+Now if I change the value that paragraph changes to say value changed but this is our same problem we
+
+150
+00:09:45,460 --> 00:09:49,730
+ran into earlier with the H-1 we don't want to change the entire paragraph.
+
+151
+00:09:49,810 --> 00:09:52,390
+We only want to change this small portion.
+
+152
+00:09:52,390 --> 00:09:55,000
+So what we want to use is actually another span.
+
+153
+00:09:55,300 --> 00:09:58,950
+So we'll go back and we'll add a span around the number.
+
+154
+00:09:59,380 --> 00:10:04,300
+And this is a perfect use for a span where again we can use it to target just a small portion of an
+
+155
+00:10:04,300 --> 00:10:06,400
+element not the entire thing.
+
+156
+00:10:06,820 --> 00:10:11,380
+And I'm actually not going to give it an idea this time just to show you another way of selecting it
+
+157
+00:10:11,380 --> 00:10:11,680
+.
+
+158
+00:10:11,710 --> 00:10:14,780
+So just remember it's a span instead of a paragraph.
+
+159
+00:10:14,920 --> 00:10:17,010
+And it's the only one like that on our page.
+
+160
+00:10:17,110 --> 00:10:18,060
+So we'll go back.
+
+161
+00:10:18,310 --> 00:10:26,470
+So rather than selecting the paragraph let's create a new variable and we'll call it winning score display
+
+162
+00:10:27,010 --> 00:10:30,170
+and it's going to be document queries selector.
+
+163
+00:10:30,970 --> 00:10:38,740
+But rather than just span because there are other spans on the page we want to select spans inside of
+
+164
+00:10:38,740 --> 00:10:39,520
+paragraphs.
+
+165
+00:10:39,550 --> 00:10:40,690
+So that's all we have to write.
+
+166
+00:10:40,810 --> 00:10:41,930
+P space.
+
+167
+00:10:41,930 --> 00:10:42,710
+Span.
+
+168
+00:10:43,240 --> 00:10:44,490
+And we'll save.
+
+169
+00:10:44,980 --> 00:10:49,970
+And now let's go ahead and update the winning score displayed on here instead of paragraph.
+
+170
+00:10:49,990 --> 00:10:53,710
+So winning score display like this.
+
+171
+00:10:54,010 --> 00:10:56,020
+And it's still not going to be perfect.
+
+172
+00:10:56,080 --> 00:11:02,080
+It's only going to update value changed every time but at least it's not updating the entire paragraph
+
+173
+00:11:02,080 --> 00:11:02,550
+.
+
+174
+00:11:02,950 --> 00:11:08,680
+So the next step is getting it to update to display the number that's inside the input so that the values
+
+175
+00:11:08,680 --> 00:11:10,840
+are sync together.
+
+176
+00:11:10,880 --> 00:11:13,920
+So we haven't actually seen how we get the data from an input.
+
+177
+00:11:13,960 --> 00:11:15,940
+How do we get the current value.
+
+178
+00:11:15,940 --> 00:11:18,100
+I'm going to show you here by selecting the input.
+
+179
+00:11:18,250 --> 00:11:24,940
+So document that query selector and we're going to do it in the console input and I'm going to save
+
+180
+00:11:24,940 --> 00:11:30,790
+it to a variable so call it var input document taqueria select your input and then we'll do an input
+
+181
+00:11:31,630 --> 00:11:32,750
+daat value.
+
+182
+00:11:33,040 --> 00:11:39,040
+So that value is going to be a string of whatever is contained in this input whatever the value is.
+
+183
+00:11:39,040 --> 00:11:43,800
+So if I change this to 7 and I run the code again I get 7.
+
+184
+00:11:44,120 --> 00:11:50,800
+If I make it a huge number and this time I do it again it reflects whatever value is inside of this
+
+185
+00:11:50,800 --> 00:11:51,520
+input.
+
+186
+00:11:51,520 --> 00:11:56,950
+So we're going to make use of that by changing this instead of to the string value changed.
+
+187
+00:11:56,950 --> 00:12:10,030
+We're going to change it to be Nahm input dot value so that will take the value from here and change
+
+188
+00:12:10,030 --> 00:12:12,710
+the winning score displays text content.
+
+189
+00:12:13,370 --> 00:12:18,690
+So we refresh and I update this and you can either now in sync together.
+
+190
+00:12:19,030 --> 00:12:26,020
+So as I update this to be one to three my playing to or the winning score display also updates to 1
+
+191
+00:12:26,020 --> 00:12:26,900
+to 3.
+
+192
+00:12:27,340 --> 00:12:30,580
+So of course we're not playing to 123.
+
+193
+00:12:30,580 --> 00:12:32,350
+We're still playing to five.
+
+194
+00:12:32,740 --> 00:12:38,590
+And that's because our logic isn't reflecting this new input value all that it's reflecting is our original
+
+195
+00:12:38,870 --> 00:12:40,280
+winning score of 5.
+
+196
+00:12:40,480 --> 00:12:51,430
+So we also want to change down here are winning score to be equal to numb input value and save.
+
+197
+00:12:51,430 --> 00:12:57,700
+And now let's try changing this so we're playing to three and we click and you'll notice we get some
+
+198
+00:12:57,700 --> 00:12:58,790
+weird behavior.
+
+199
+00:12:58,840 --> 00:13:00,940
+So it didn't even stop at five.
+
+200
+00:13:00,970 --> 00:13:02,370
+It just keeps going forever.
+
+201
+00:13:02,650 --> 00:13:08,200
+So this is a fun bug that has to do with different types of data strings and numbers and comparing them
+
+202
+00:13:08,240 --> 00:13:10,300
+double equals versus triple equals.
+
+203
+00:13:10,300 --> 00:13:14,200
+So to get to the bottom of it let's do some cons. logging.
+
+204
+00:13:14,200 --> 00:13:21,220
+So we know that the crux of all of this is this line here or this line here where we're checking if
+
+205
+00:13:21,220 --> 00:13:24,700
+the player has one if the player's score equals the winning score.
+
+206
+00:13:24,820 --> 00:13:26,790
+That's when we set game over to be true.
+
+207
+00:13:27,130 --> 00:13:29,610
+And that's not happening right now because game over.
+
+208
+00:13:29,620 --> 00:13:31,460
+If we change the score.
+
+209
+00:13:31,450 --> 00:13:33,730
+Game over is never changing.
+
+210
+00:13:33,820 --> 00:13:35,460
+It's always false.
+
+211
+00:13:35,710 --> 00:13:37,660
+So something's going wrong with this line.
+
+212
+00:13:37,780 --> 00:13:41,860
+So let's do a canceled out log and we're going to do two things.
+
+213
+00:13:41,870 --> 00:13:46,900
+Let's just print out the player 1 score and we'll print out the winning score and we can separate them
+
+214
+00:13:46,900 --> 00:13:49,700
+by commas and they'll just print them on the same line.
+
+215
+00:13:49,720 --> 00:13:54,640
+Just a quick note using Comstock logs is how we're going to debug for now but we will be talking about
+
+216
+00:13:54,820 --> 00:13:56,820
+more advanced ways of debugging later on.
+
+217
+00:13:57,010 --> 00:14:04,010
+So I'll refresh and if we start we take a look at increased player 1 score and you can see that we get
+
+218
+00:14:04,810 --> 00:14:07,470
+three and we're comparing it to the number five.
+
+219
+00:14:07,540 --> 00:14:10,670
+So player 1 score is three winning score is five.
+
+220
+00:14:10,900 --> 00:14:15,250
+But as soon as I change this to be let's say 7 and now I click.
+
+221
+00:14:15,250 --> 00:14:22,330
+Player 1 we're now comparing player 1 score which is the number four to winning score which is the string
+
+222
+00:14:22,390 --> 00:14:23,160
+seven.
+
+223
+00:14:23,440 --> 00:14:27,090
+So refresh again if I just start with five.
+
+224
+00:14:27,110 --> 00:14:28,420
+It works just fine.
+
+225
+00:14:28,780 --> 00:14:34,490
+But if I change this and now we compare it to number and the string and that's not going to work for
+
+226
+00:14:34,480 --> 00:14:36,680
+us because we're doing triple equals here.
+
+227
+00:14:36,790 --> 00:14:40,590
+So we could do double equals but you know I'm not a fan of that.
+
+228
+00:14:40,610 --> 00:14:45,790
+So what we're going to do instead is go down here and just take this and put that value and turn it
+
+229
+00:14:45,790 --> 00:14:46,670
+into a string.
+
+230
+00:14:46,780 --> 00:14:54,730
+So number just like that capital and number and then pass in and put value which will then turn it into
+
+231
+00:14:54,730 --> 00:14:57,130
+a string and set that to be winning score.
+
+232
+00:14:57,220 --> 00:14:58,020
+So we were fresh.
+
+233
+00:14:58,020 --> 00:15:02,210
+Now this works just fine.
+
+234
+00:15:02,760 --> 00:15:11,120
+We get to five but if we also change this to be to our game is over at 2.
+
+235
+00:15:11,230 --> 00:15:15,790
+There is one small issue we need to focus on which is if we're playing a game to five which is what
+
+236
+00:15:15,790 --> 00:15:17,000
+we started out doing.
+
+237
+00:15:17,170 --> 00:15:22,310
+And if I decide halfway through that I want to change the winning score at the maximum score.
+
+238
+00:15:22,390 --> 00:15:27,160
+Our code right now doesn't handle that very well because if I change this now we're only playing to
+
+239
+00:15:27,160 --> 00:15:28,920
+three.
+
+240
+00:15:28,960 --> 00:15:30,630
+We have two different ways of handling this.
+
+241
+00:15:30,640 --> 00:15:34,610
+The first one is resetting the score and everything back to zero.
+
+242
+00:15:34,880 --> 00:15:37,790
+And the other one is continuing to play to five.
+
+243
+00:15:38,120 --> 00:15:43,010
+But what's actually happening is that we're playing to three but we've already passed three.
+
+244
+00:15:43,300 --> 00:15:48,160
+So because we already passed it our code doesn't really work anymore because we are lying it's just
+
+245
+00:15:48,160 --> 00:15:51,390
+checking is player to score equal to the winning score.
+
+246
+00:15:51,400 --> 00:15:53,790
+It's not checking if it's greater than the winning score.
+
+247
+00:15:54,040 --> 00:15:55,170
+So if we could change that.
+
+248
+00:15:55,180 --> 00:16:00,830
+So it says if it's greater than the winning score then game is over and that's fine.
+
+249
+00:16:00,970 --> 00:16:08,920
+But I think the better solution is to reset to zero whenever we change the maximum score because we
+
+250
+00:16:08,920 --> 00:16:12,970
+had never really changed the maximum score halfway through a game anyways we would want to start the
+
+251
+00:16:12,970 --> 00:16:18,520
+game over and the other reason that I want us to do this is it's a good use case for a short refactor
+
+252
+00:16:18,530 --> 00:16:18,720
+.
+
+253
+00:16:18,880 --> 00:16:22,410
+So when we change the score here are the winning score.
+
+254
+00:16:22,610 --> 00:16:27,370
+We want to reset the game which is the same logic that we're running in here.
+
+255
+00:16:27,430 --> 00:16:34,720
+So we'll do that very simply just going to copy this code out and make a new function called reset.
+
+256
+00:16:34,720 --> 00:16:41,780
+So function reset just put all of this code in there and then once the number input changes we're just
+
+257
+00:16:41,770 --> 00:16:44,780
+going to run reset.
+
+258
+00:16:44,890 --> 00:16:48,920
+So you'll see I reset here playing to five.
+
+259
+00:16:48,940 --> 00:16:49,960
+This works fine.
+
+260
+00:16:49,960 --> 00:16:50,950
+We get to five.
+
+261
+00:16:51,100 --> 00:16:58,240
+I click reset and we haven't called the reset function inside of this event listener so we need to add
+
+262
+00:16:58,240 --> 00:16:59,840
+our reset function call.
+
+263
+00:16:59,950 --> 00:17:02,370
+And now if we refresh we get to 5.
+
+264
+00:17:02,770 --> 00:17:03,980
+I click reset.
+
+265
+00:17:04,030 --> 00:17:04,970
+That's all good.
+
+266
+00:17:05,140 --> 00:17:11,840
+And now if I'm in the middle of a game and I change the score it also resets us and now we play to 1
+
+267
+00:17:11,840 --> 00:17:11,890
+.
+
+268
+00:17:11,890 --> 00:17:12,800
+And it works.
+
+269
+00:17:13,100 --> 00:17:14,220
+Or if I change.
+
+270
+00:17:14,230 --> 00:17:17,710
+So we're now playing to 7.
+
+271
+00:17:17,800 --> 00:17:19,730
+It resets us back to zero.
+
+272
+00:17:20,020 --> 00:17:27,190
+So if I decide you know this is actually a game going to 2 instead it changes the spec to zero.
+
+273
+00:17:27,280 --> 00:17:29,910
+And we don't have to worry about how to handle it.
+
+274
+00:17:29,920 --> 00:17:31,380
+If we change halfway through.
+
+275
+00:17:31,510 --> 00:17:37,510
+So what we're doing is just resetting made a separate function to dry up the code rather than duplicating
+
+276
+00:17:37,510 --> 00:17:40,900
+this here and down here.
+
+277
+00:17:40,960 --> 00:17:41,940
+So that's it for now.
+
+278
+00:17:41,950 --> 00:17:43,510
+That's all we need to do.
+
+279
+00:17:43,630 --> 00:17:48,610
+Some of you may be wondering if this code is really the best way that we could possibly do this.
+
+280
+00:17:48,620 --> 00:17:49,590
+The answer is No.
+
+281
+00:17:49,850 --> 00:17:54,500
+And if you take a close look you'll see that it's extremely similar.
+
+282
+00:17:54,490 --> 00:18:00,150
+It's basically the same except we're doing one up here and P2 down here.
+
+283
+00:18:00,160 --> 00:18:01,930
+But every other word is the same.
+
+284
+00:18:02,470 --> 00:18:06,390
+So there are more advanced ways of refactoring this of making this a little bit better.
+
+285
+00:18:06,490 --> 00:18:12,490
+But I'm not going to do that here because all I want to focus on is conceptually how we can take javascript
+
+286
+00:18:12,550 --> 00:18:18,020
+event listeners selectors dominant relation and interactive HD IMO and that's what I want to focus on
+
+287
+00:18:18,030 --> 00:18:18,170
+.
+
+288
+00:18:18,380 --> 00:18:23,800
+But just know that we will be seeing ways to make code like this look a little bit better be a little
+
+289
+00:18:23,800 --> 00:18:25,010
+bit shorter.
+
+290
+00:18:25,030 --> 00:18:29,860
+There is one thing that we could do down here and put that at event listener.
+
+291
+00:18:30,050 --> 00:18:37,150
+We could just replace numb input here with the word this is a minor change but we can do that and just
+
+292
+00:18:37,150 --> 00:18:38,620
+shorten it up the code a little bit.
+
+293
+00:18:38,740 --> 00:18:41,650
+So if I change this we're now playing to three.
+
+294
+00:18:41,650 --> 00:18:43,870
+Everything still works exactly the same.
+
+295
+00:18:43,880 --> 00:18:50,480
+I just used the keyword this which refers to whatever the event was listening on which was number input
+
+296
+00:18:50,480 --> 00:18:50,770
+.
+
+297
+00:18:50,990 --> 00:18:52,650
+All right so that's it for this lesson.
+
+298
+00:18:52,780 --> 00:18:57,280
+As I mentioned in the next project we're going to build something more substantial and I promise it
+
+299
+00:18:57,280 --> 00:18:59,010
+will look a lot better than this did here.
+

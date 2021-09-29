@@ -1,0 +1,688 @@
+﻿1
+00:00:00,330 --> 00:00:01,500
+Welcome back.
+
+2
+00:00:01,500 --> 00:00:06,510
+So when I initially introduced Jay queery I mentioned that it helps us do things like select elements
+
+3
+00:00:06,630 --> 00:00:08,820
+manipulate them at event listeners.
+
+4
+00:00:08,930 --> 00:00:11,990
+And I also mentioned that it helps with effects and animations.
+
+5
+00:00:12,180 --> 00:00:16,800
+So in this video I'm going to do a quick preview of some of those built in effects in particular I'm
+
+6
+00:00:16,800 --> 00:00:22,000
+going to show two broad categories of effects fading effects and slides.
+
+7
+00:00:22,250 --> 00:00:26,220
+So I'm on the Jay Corey docks here on the effects category.
+
+8
+00:00:26,280 --> 00:00:31,650
+You can see there are quite a few methods that have to do with effects and I'm going to start by showing
+
+9
+00:00:31,650 --> 00:00:36,010
+the fade effects so I'm going to look at fade out to start.
+
+10
+00:00:36,570 --> 00:00:41,900
+What fadeout does is you select an element with a dollar sign or a set of elements and you call that
+
+11
+00:00:41,910 --> 00:00:48,480
+fade out on it and it will animate that element from full opacity down to full transparency or zero
+
+12
+00:00:48,480 --> 00:00:49,470
+opacity.
+
+13
+00:00:49,500 --> 00:00:56,130
+So it basically fades an element out and you can provide a duration if you want it to be slow or fast
+
+14
+00:00:56,220 --> 00:00:57,380
+or very slow.
+
+15
+00:00:57,510 --> 00:00:59,690
+You can provide a number of milliseconds.
+
+16
+00:00:59,700 --> 00:01:05,520
+The default is 400 milliseconds and then you can provide a callback to run at the end which I'll show
+
+17
+00:01:05,520 --> 00:01:06,630
+in just a moment.
+
+18
+00:01:06,780 --> 00:01:13,740
+So I'm going to make a new file here to demonstrate this effect study demo and I'll just copy over our
+
+19
+00:01:13,740 --> 00:01:18,660
+structure from the last demo page and this one will call J Querrey effects.
+
+20
+00:01:18,960 --> 00:01:24,480
+So we have that set up and I'm going to get rid of all of this content here and then I'm going to add
+
+21
+00:01:24,480 --> 00:01:27,000
+in a few divs.
+
+22
+00:01:27,120 --> 00:01:33,240
+Let's do three divs and we're going to use these divs and fade them out and animate them and slide them
+
+23
+00:01:33,240 --> 00:01:34,340
+up and down.
+
+24
+00:01:34,450 --> 00:01:43,620
+And so I'm going to give them some content inside this first one will be these don't fade me the next
+
+25
+00:01:43,620 --> 00:01:45,470
+one.
+
+26
+00:01:45,900 --> 00:01:48,300
+I'm begging you please.
+
+27
+00:01:48,660 --> 00:01:52,380
+And then lastly we'll have one that says Help help help.
+
+28
+00:01:52,720 --> 00:01:55,790
+So these divs are desperate not to be faded away.
+
+29
+00:01:56,040 --> 00:01:58,210
+Unfortunately today's not their lucky day.
+
+30
+00:01:58,410 --> 00:02:00,230
+And we are going to be fighting them out.
+
+31
+00:02:00,240 --> 00:02:05,280
+So to make this clearer I'm going to add in some style here to our lives so that they have a color that
+
+32
+00:02:05,280 --> 00:02:06,720
+we can see fade away.
+
+33
+00:02:07,110 --> 00:02:10,900
+And they also have a width and height that we can see slide up and down.
+
+34
+00:02:10,950 --> 00:02:20,200
+So I'm going to select all divs and give them a with 100 pixels and a height of 100 pixels and a color
+
+35
+00:02:20,220 --> 00:02:28,150
+background of teal and let's save and we'll open this up.
+
+36
+00:02:28,860 --> 00:02:30,420
+We have three divs.
+
+37
+00:02:30,420 --> 00:02:32,570
+However I'd like them to be on the same line.
+
+38
+00:02:32,880 --> 00:02:36,900
+So one way to do that is with the float left.
+
+39
+00:02:37,020 --> 00:02:39,880
+Now they're all in the same line but they bleed into one another.
+
+40
+00:02:40,200 --> 00:02:43,020
+So to fix that we can add a margin.
+
+41
+00:02:43,020 --> 00:02:46,850
+So we'll just do a margin of 20 pixels on all sides.
+
+42
+00:02:46,860 --> 00:02:51,930
+Now we end up with three squares and they each have some text inside and we really don't need to go
+
+43
+00:02:51,930 --> 00:02:56,740
+overboard styling them because all we're going to do is demonstrate how we can fit them in and out.
+
+44
+00:02:57,060 --> 00:03:03,060
+So we're going to add a button up top here and this button will just say click me.
+
+45
+00:03:03,270 --> 00:03:08,000
+And when we click this button what will happen is that our animations will run.
+
+46
+00:03:08,220 --> 00:03:12,760
+So I click this and these three items should fade out to start.
+
+47
+00:03:13,320 --> 00:03:19,350
+So to reiterate fade out will take an element from full opacity or whatever opacity It's currently at
+
+48
+00:03:19,650 --> 00:03:22,500
+and faded to the point of full transparency.
+
+49
+00:03:22,500 --> 00:03:29,730
+So it looks like this select dot fadeout and we can provide an optional string of the speed so slow
+
+50
+00:03:29,730 --> 00:03:33,370
+or fast or we can give it a number of milliseconds.
+
+51
+00:03:33,390 --> 00:03:34,490
+So let me show you that now.
+
+52
+00:03:34,740 --> 00:03:39,870
+I'm actually going to do this in a separate file so I'm going to make a javascript file and save.
+
+53
+00:03:40,250 --> 00:03:45,000
+I'll call it affects just genius save safe that had my alert
+
+54
+00:03:47,940 --> 00:03:52,470
+connected and linked this together correctly the bottom.
+
+55
+00:03:52,470 --> 00:03:54,020
+Just add a script tag.
+
+56
+00:03:54,480 --> 00:03:56,450
+Source equals effects.
+
+57
+00:03:56,560 --> 00:03:57,320
+Yes.
+
+58
+00:03:57,690 --> 00:04:01,030
+And if we refresh we get our connected alert.
+
+59
+00:04:01,350 --> 00:04:04,380
+So what we want to do here is Faid these divs out.
+
+60
+00:04:04,380 --> 00:04:10,040
+So we need to select the device just like that and not fade out.
+
+61
+00:04:10,380 --> 00:04:13,290
+And then we can provide a speed or just leave it like that.
+
+62
+00:04:13,290 --> 00:04:20,630
+And if that's all we want to do or refresh and you can see as the page loads they start to fade up.
+
+63
+00:04:20,640 --> 00:04:23,740
+So let's actually make that happen when we click the button.
+
+64
+00:04:24,090 --> 00:04:34,800
+So we're going to want to do a dollar sign button dot and we can either do click or I'll do dot on quick
+
+65
+00:04:36,300 --> 00:04:38,480
+and then pass in our callback function.
+
+66
+00:04:38,640 --> 00:04:47,770
+So when we click will then fade out all the divs just like that and now will refresh and if I click
+
+67
+00:04:48,490 --> 00:04:50,870
+you can see they all fade out.
+
+68
+00:04:50,980 --> 00:04:56,060
+So as I mentioned we can provide a number here something like 1000 which is a full second.
+
+69
+00:04:56,260 --> 00:05:02,370
+And if I refresh you'll see when I click it takes a full second for them to fade out.
+
+70
+00:05:02,620 --> 00:05:09,580
+An important point about fadeout is that if I inspect the page here and I look at the elements are divs
+
+71
+00:05:09,580 --> 00:05:12,400
+are still in the team either still in the dorm.
+
+72
+00:05:12,430 --> 00:05:15,760
+We just don't see them because their display has been set to none.
+
+73
+00:05:15,760 --> 00:05:18,730
+So it doesn't delete them or doesn't remove them from the page.
+
+74
+00:05:18,910 --> 00:05:20,010
+It's just hiding them.
+
+75
+00:05:20,170 --> 00:05:22,890
+And that's definitely an important distinction.
+
+76
+00:05:22,990 --> 00:05:28,960
+So let's say that I wanted to just print a message once the divs had faded out so I would fade them
+
+77
+00:05:28,960 --> 00:05:35,150
+out and then do something like this fade completed as it cancelled out log.
+
+78
+00:05:35,680 --> 00:05:39,590
+And if I run this I'll open the console and watch the order that things happen.
+
+79
+00:05:39,730 --> 00:05:45,800
+So when I click here I get Faid completed way before the fade is actually done.
+
+80
+00:05:46,090 --> 00:05:51,490
+So what happens here is that we select all the divs and we start the fade out but it takes a full second
+
+81
+00:05:51,500 --> 00:05:51,730
+.
+
+82
+00:05:52,060 --> 00:05:56,280
+And javascript doesn't wait for that second to finish before it moves on to the next line.
+
+83
+00:05:56,350 --> 00:06:02,310
+It immediately moved onto this line and prints out Faid completed and then the fade out finishes.
+
+84
+00:06:02,470 --> 00:06:08,230
+So if we want code to happen right after the fade out finishes we want it to be guaranteed to be after
+
+85
+00:06:08,680 --> 00:06:11,390
+we can pass in a callback here.
+
+86
+00:06:11,440 --> 00:06:16,860
+And so this callback will be called inside of the fadeout automatically when it's done.
+
+87
+00:06:17,020 --> 00:06:20,830
+So I'm going to move our constant log right there and save.
+
+88
+00:06:21,300 --> 00:06:29,530
+And if I refresh and now I click the fade out finishes and then we get 3 Fade completed console dot
+
+89
+00:06:29,540 --> 00:06:31,650
+logs for each one of those.
+
+90
+00:06:31,690 --> 00:06:37,390
+A more common scenario rather than just printing out a string in the Consul is to actually remove the
+
+91
+00:06:37,390 --> 00:06:39,220
+elements once we fade them.
+
+92
+00:06:39,220 --> 00:06:42,580
+So I mentioned that they're just hidden they're not actually gone.
+
+93
+00:06:42,660 --> 00:06:47,350
+And if we wanted to delete them like on our to do list we're going to build when we click on the trash
+
+94
+00:06:47,350 --> 00:06:51,940
+can next to an item we want it to fade out slowly do a nice animation.
+
+95
+00:06:52,060 --> 00:06:55,620
+But then also just delete off the page entirely off the DOM.
+
+96
+00:06:55,810 --> 00:07:02,320
+So we need to use a method called remove and we only want to remove it after the fadeout is finished
+
+97
+00:07:02,320 --> 00:07:03,180
+.
+
+98
+00:07:03,340 --> 00:07:09,460
+So that looks like this will just do this remove.
+
+99
+00:07:10,010 --> 00:07:13,930
+And what this will do is wait until the fadeout is finished.
+
+100
+00:07:13,990 --> 00:07:17,050
+And for each div it will run the Remove method on it.
+
+101
+00:07:17,050 --> 00:07:20,430
+So refresh and click on click me.
+
+102
+00:07:21,100 --> 00:07:26,650
+They fade out and then if we go over to elements you can see that our body only has a button now and
+
+103
+00:07:26,650 --> 00:07:29,850
+a tag all of the divs are completely gone.
+
+104
+00:07:30,100 --> 00:07:36,520
+And if I comment that line out and refresh you can see where they start here three divs and I click
+
+105
+00:07:36,520 --> 00:07:39,130
+on the button and all that happens.
+
+106
+00:07:39,160 --> 00:07:42,910
+They fade away and then display is set to none.
+
+107
+00:07:42,910 --> 00:07:51,340
+So if I put my code in the wrong place and I ran the Remove method down here I did all divs dot remove
+
+108
+00:07:51,430 --> 00:07:52,850
+just like that.
+
+109
+00:07:52,900 --> 00:07:57,080
+What would actually happen is that the order is not guaranteed.
+
+110
+00:07:57,280 --> 00:07:59,210
+And this is going to take a full second.
+
+111
+00:07:59,410 --> 00:08:01,800
+And this code won't wait for that second to finish.
+
+112
+00:08:01,930 --> 00:08:06,410
+So it will start to fade out and then run remove immediately after.
+
+113
+00:08:06,610 --> 00:08:13,150
+So that ends up looking like this where it starts to fade and just immediately after it removes them
+
+114
+00:08:13,160 --> 00:08:13,490
+.
+
+115
+00:08:13,780 --> 00:08:16,450
+So it's basically no fade at all.
+
+116
+00:08:16,480 --> 00:08:17,110
+So that's why J.
+
+117
+00:08:17,110 --> 00:08:21,940
+Corey provides this callback because it's pretty common for us to want to do something after we fade
+
+118
+00:08:21,940 --> 00:08:26,810
+something out or after we slide something down or whatever the animation is.
+
+119
+00:08:26,830 --> 00:08:30,760
+So that brings me to my next point which is that I want to show some of the other animations that we
+
+120
+00:08:30,760 --> 00:08:33,790
+can do so we can also fade things in.
+
+121
+00:08:34,030 --> 00:08:40,920
+So if I set the display to be none in the beginning like this and I refresh.
+
+122
+00:08:41,020 --> 00:08:46,780
+We don't see the divs because now they're hidden rather than fading them out when we click we can fade
+
+123
+00:08:46,780 --> 00:08:49,840
+them in and it works just like you would expect.
+
+124
+00:08:49,840 --> 00:08:55,720
+Click on the button and they fade in over a second and then if we want to run some code afterwards when
+
+125
+00:08:55,720 --> 00:09:00,350
+we know that they're done fading in we can put some code and said if the callback here.
+
+126
+00:09:00,970 --> 00:09:02,310
+All right so that's Faden.
+
+127
+00:09:02,350 --> 00:09:09,610
+GK provides one more nice fade method which is called Faid toggle and Faid toggle works the same way
+
+128
+00:09:09,610 --> 00:09:10,400
+.
+
+129
+00:09:10,660 --> 00:09:16,330
+I provide a number of milliseconds and it will know if it needs to fade something in or out depending
+
+130
+00:09:16,330 --> 00:09:18,080
+on if it's currently showing or not.
+
+131
+00:09:18,310 --> 00:09:25,360
+So if I refresh and I click on Fade toggle it starts by feeding them all in and then fading them all
+
+132
+00:09:25,360 --> 00:09:27,020
+out and back in.
+
+133
+00:09:27,040 --> 00:09:32,500
+It's basically like adding a class to the class list or using toggle class with Jay Querrey where it
+
+134
+00:09:32,500 --> 00:09:35,860
+just decides if it needs to fade in or fade out.
+
+135
+00:09:35,860 --> 00:09:43,960
+All right so that's fading the next set of effects that I want to demonstrate are these sliding effects
+
+136
+00:09:43,960 --> 00:09:44,260
+.
+
+137
+00:09:44,320 --> 00:09:49,170
+So down here we have a slide down slide toggle and slide up.
+
+138
+00:09:49,240 --> 00:09:55,270
+So I'll start with slide down and what it does is it takes an element that's currently not showing rather
+
+139
+00:09:55,270 --> 00:10:00,640
+than animating the opacity on an element like Faid does it actually animates the height of an element
+
+140
+00:10:00,640 --> 00:10:01,060
+.
+
+141
+00:10:01,090 --> 00:10:03,030
+So I'll show you how that works.
+
+142
+00:10:03,130 --> 00:10:04,300
+We're is going to change this.
+
+143
+00:10:04,300 --> 00:10:07,870
+Rather than fade toggle we'll just slide down.
+
+144
+00:10:08,650 --> 00:10:11,810
+And that's because when we refresh our elements are hidden.
+
+145
+00:10:11,920 --> 00:10:19,000
+So if I run slide down when we click on a button you'll see that the height is animated down and same
+
+146
+00:10:19,000 --> 00:10:21,270
+thing goes for slide up.
+
+147
+00:10:21,400 --> 00:10:22,420
+It does the opposite.
+
+148
+00:10:22,480 --> 00:10:26,360
+So if I get rid of display on so that they are showing.
+
+149
+00:10:26,710 --> 00:10:28,630
+And now I click on the button.
+
+150
+00:10:28,630 --> 00:10:33,590
+Their height is animated and they slide upwards and then display set to None at the end.
+
+151
+00:10:33,910 --> 00:10:41,540
+And the other method is slide toggle which works just like Faid toggle where it decides what to do.
+
+152
+00:10:41,650 --> 00:10:48,090
+So if I click they slide up and now slide down and back up and down.
+
+153
+00:10:48,370 --> 00:10:51,740
+So that's all there is to slide up slide down and slide toggle.
+
+154
+00:10:51,760 --> 00:10:54,320
+They were just like they're Faid analog methods.
+
+155
+00:10:54,610 --> 00:10:57,580
+There's also a optional callback that we can pass in.
+
+156
+00:10:57,790 --> 00:11:04,250
+So if we give a duration like 1 second and then I can get my call back in.
+
+157
+00:11:04,600 --> 00:11:09,380
+And I'll just do another con. that log at the end slide is done.
+
+158
+00:11:09,730 --> 00:11:15,250
+And that will only prints out once the full second slide has finished.
+
+159
+00:11:15,250 --> 00:11:16,130
+So I refresh.
+
+160
+00:11:16,270 --> 00:11:24,970
+Let's look at the console and they click on click me and you can see this only printed once the slide
+
+161
+00:11:24,970 --> 00:11:25,630
+was done.
+
+162
+00:11:25,630 --> 00:11:28,380
+Same thing here pay attention right here.
+
+163
+00:11:28,390 --> 00:11:31,330
+This will change to six.
+
+164
+00:11:31,330 --> 00:11:32,630
+There we go.
+
+165
+00:11:33,290 --> 00:11:40,510
+But again a more common pattern is to remove the items once we've slided them out or fade them out or
+
+166
+00:11:40,510 --> 00:11:43,670
+whatever we have done is to remove them.
+
+167
+00:11:43,690 --> 00:11:48,400
+So here it will take a second to slide them and then they're removed from the page.
+
+168
+00:11:48,460 --> 00:11:53,970
+And if we go to the elements tab our body is empty except for that button and the script.
+
+169
+00:11:54,580 --> 00:11:58,810
+So hopefully they give you a good idea of how some of the effects in a quarry work.
+
+170
+00:11:58,810 --> 00:12:02,110
+These are by far the most common fading and sliding.
+
+171
+00:12:02,110 --> 00:12:06,190
+And we're going to use them instead of our to do list app which we're going to start in the next video
+
+172
+00:12:06,200 --> 00:12:06,560
+.
+

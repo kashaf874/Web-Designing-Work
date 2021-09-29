@@ -1,0 +1,568 @@
+﻿1
+00:00:00,270 --> 00:00:05,870
+A few videos ago I introduced this concept of selecting elements and then manipulating them.
+
+2
+00:00:06,120 --> 00:00:13,050
+So we select an H1 or all image tags and then we can change the color or animate them or make them do
+
+3
+00:00:13,050 --> 00:00:14,660
+something when you click on them.
+
+4
+00:00:14,670 --> 00:00:18,360
+So far we've only covered the selecting half and this video.
+
+5
+00:00:18,360 --> 00:00:24,090
+We're going to introduce a few of the many ways to manipulate elements once we've selected them.
+
+6
+00:00:24,120 --> 00:00:26,760
+So here are the four main things I want to talk about.
+
+7
+00:00:26,970 --> 00:00:29,320
+The first one is how do we change an element style.
+
+8
+00:00:29,340 --> 00:00:32,050
+How do we make it blue or make it hide.
+
+9
+00:00:32,070 --> 00:00:34,070
+Change the font size.
+
+10
+00:00:34,080 --> 00:00:40,320
+Next up we'll talk about adding and removing classes with javascript and then changing the content of
+
+11
+00:00:40,320 --> 00:00:40,920
+a tag.
+
+12
+00:00:41,010 --> 00:00:44,490
+So how do I change the text inside of an H-1 tag for instance.
+
+13
+00:00:44,490 --> 00:00:46,590
+And then lastly changing attributes.
+
+14
+00:00:46,590 --> 00:00:52,040
+So how do we change the source on an image tag or the ref on an AA tag.
+
+15
+00:00:52,230 --> 00:00:55,260
+We're going to get started by talking about the style property.
+
+16
+00:00:55,260 --> 00:01:00,900
+So when the DOM is constructed and an individual node is made or an object is made for every single
+
+17
+00:01:00,900 --> 00:01:07,560
+element there is a property called style and the style property is a huge object hundreds of properties
+
+18
+00:01:07,830 --> 00:01:11,220
+one for every single CSSA property that we could set.
+
+19
+00:01:11,370 --> 00:01:15,460
+So we can write javascript that will then go style and element differently.
+
+20
+00:01:15,480 --> 00:01:23,580
+So here I'm selecting an element by its Id highlight so select it save it to a variable called tag and
+
+21
+00:01:23,580 --> 00:01:24,730
+then manipulating it.
+
+22
+00:01:24,750 --> 00:01:26,370
+And what I'm doing I'm setting.
+
+23
+00:01:26,370 --> 00:01:34,190
+Tag dot style dot color to be blue tag dot style dot border equals 10 pixels solid red.
+
+24
+00:01:34,200 --> 00:01:37,830
+It's important to note that the right side must be a string.
+
+25
+00:01:38,280 --> 00:01:43,430
+So even though in C Ss we don't need to put quotes around blue or around 70 P x.
+
+26
+00:01:43,440 --> 00:01:44,730
+This isn't C Ss.
+
+27
+00:01:44,730 --> 00:01:45,720
+This is javascript.
+
+28
+00:01:45,720 --> 00:01:48,820
+So we still have to follow the regular javascript rules.
+
+29
+00:01:49,080 --> 00:01:53,550
+So I have a simple web page set up that I'm going to use to demonstrate some of these properties.
+
+30
+00:01:54,240 --> 00:02:00,190
+So this web page is super simple just one H-1 a paragraph instead of that paragraph.
+
+31
+00:02:00,200 --> 00:02:05,310
+There's a strong tag and then two images of two adorable corgi mixes.
+
+32
+00:02:05,640 --> 00:02:11,100
+So what I'm going to do is go to the Consul and I need to start by selecting something and I'm going
+
+33
+00:02:11,100 --> 00:02:13,770
+to change the color and the border of this H-1.
+
+34
+00:02:13,770 --> 00:02:19,470
+So I need to select it and there's multiple ways to do that in a new document that queries selector
+
+35
+00:02:20,650 --> 00:02:22,800
+H-1.
+
+36
+00:02:25,320 --> 00:02:33,030
+And then I'm going to show you H-1 style which is a giant object tons and tons of properties.
+
+37
+00:02:33,600 --> 00:02:41,680
+So I'm going to try changing one of them like H-1 style dark color and make that yellow.
+
+38
+00:02:42,520 --> 00:02:45,560
+And you could see it immediately changed to yellow.
+
+39
+00:02:45,570 --> 00:02:54,300
+Same thing with border H-1 that style that border equals let's do five pixels solid pink.
+
+40
+00:02:56,100 --> 00:02:56,950
+And there we go.
+
+41
+00:02:57,210 --> 00:03:01,190
+So of course if we just wanted this to be yellow with a pink border.
+
+42
+00:03:01,290 --> 00:03:04,910
+From the time the page loaded there's no reason to use javascript to do that.
+
+43
+00:03:04,920 --> 00:03:09,990
+We just put it in our CSSA file we would use javascript if we wanted it turned yellow and have a pink
+
+44
+00:03:09,990 --> 00:03:15,210
+border when the user has been on the page for five seconds or if he wanted it to happen when the user
+
+45
+00:03:15,210 --> 00:03:18,670
+scrolled to a specific part of the page or in the user clicked on something.
+
+46
+00:03:18,690 --> 00:03:23,450
+It's all about making things interactive and we'll see how to do that shortly.
+
+47
+00:03:24,960 --> 00:03:29,310
+Well the nice thing about using the style property is that if you find yourself manipulating a bunch
+
+48
+00:03:29,310 --> 00:03:35,430
+of files on an individual element like I'm doing here and changing five different properties on this
+
+49
+00:03:35,430 --> 00:03:38,150
+one tag there's definitely a better way.
+
+50
+00:03:38,460 --> 00:03:40,740
+And there's a few reasons that there's a better way.
+
+51
+00:03:40,740 --> 00:03:43,350
+The first one is that this is not very dry code.
+
+52
+00:03:43,350 --> 00:03:46,740
+There's a lot of repeated tagged out style tagged style.
+
+53
+00:03:46,740 --> 00:03:50,670
+More importantly though there is this concept called the separation of concerns.
+
+54
+00:03:50,820 --> 00:03:57,210
+So the separation of concerns is this concept that our H M L R C S s not javascript.
+
+55
+00:03:57,210 --> 00:04:00,840
+Are each responsible for their own little domain and we don't want it.
+
+56
+00:04:00,840 --> 00:04:02,830
+We don't want a lot of crossover between them.
+
+57
+00:04:02,850 --> 00:04:08,190
+So in this diagram you can see that there's a little bit of crossover between each team with which is
+
+58
+00:04:08,190 --> 00:04:12,930
+the structure and javascript which is that behavior and then see assess is presentation.
+
+59
+00:04:12,930 --> 00:04:18,690
+And there's a little overlap with H html javascript but remember that it used to be before C Ss came
+
+60
+00:04:18,690 --> 00:04:25,050
+along you had to write your styles individually in every single element where we actually use the style
+
+61
+00:04:25,050 --> 00:04:25,840
+attribute.
+
+62
+00:04:26,130 --> 00:04:32,310
+In that case our presentation the styling was actually woven into the structure and with C Ss we now
+
+63
+00:04:32,310 --> 00:04:33,500
+have separated them out.
+
+64
+00:04:33,570 --> 00:04:38,710
+So our HMO is pure structure and then our success is pure style.
+
+65
+00:04:38,880 --> 00:04:44,430
+So what javascript fits in is that it should control the behavior of a page and sometimes that means
+
+66
+00:04:44,460 --> 00:04:50,490
+changing how things look but rather than just changing the properties inside the javascript actually
+
+67
+00:04:50,490 --> 00:04:52,620
+doing the styling in the javascript.
+
+68
+00:04:52,680 --> 00:04:57,530
+What we can do is turn them on and off inside of the CSSA file.
+
+69
+00:04:57,570 --> 00:05:04,270
+So one of the patterns that's really common is that we define a CSSA class like highlight and that highlight
+
+70
+00:05:04,270 --> 00:05:08,380
+class will have five or six or however many different properties that we're changing.
+
+71
+00:05:08,380 --> 00:05:13,210
+And then we can then select an element with javascript and give it that highlight class.
+
+72
+00:05:13,210 --> 00:05:18,930
+So in Javascript with one line we can add a class that will then change five different properties.
+
+73
+00:05:19,150 --> 00:05:22,660
+Let's take a look at how this would be implemented in Javascript.
+
+74
+00:05:22,690 --> 00:05:29,020
+So rather than selecting a tag and then changing style but color to be blue and then styled up border
+
+75
+00:05:29,020 --> 00:05:35,770
+to be 10 pixel solid red what we could do instead is to find a class in that class could be called anything
+
+76
+00:05:35,770 --> 00:05:36,200
+.
+
+77
+00:05:36,250 --> 00:05:41,940
+Usually you want it to be somewhat meaningful so reflecting what the class is supposed to do.
+
+78
+00:05:42,040 --> 00:05:45,040
+Is it something that's being highlighted or is it a correct answer.
+
+79
+00:05:45,040 --> 00:05:49,840
+A high score for whatever reason that you're applying the class trying come up with a good name.
+
+80
+00:05:50,170 --> 00:05:56,320
+So this is not a good name but some class some class is changing the color to be blue and border 10
+
+81
+00:05:56,320 --> 00:05:57,820
+pixel solid red.
+
+82
+00:05:57,820 --> 00:06:06,280
+Then all I have to do is select my tag and then tag dot class list dot add some class and that will
+
+83
+00:06:06,310 --> 00:06:12,730
+give my tag with the idea of highlight a new class called some class in all of these styles will be
+
+84
+00:06:12,730 --> 00:06:13,790
+applied.
+
+85
+00:06:13,810 --> 00:06:16,030
+There's a few other things we can do with class list.
+
+86
+00:06:16,270 --> 00:06:22,990
+So in this example I show three methods add which we already saw which is how we can add a class remove
+
+87
+00:06:23,020 --> 00:06:29,200
+which takes a class name and it removes that class name from the class list and then class list toggle
+
+88
+00:06:29,230 --> 00:06:30,760
+which is extremely useful.
+
+89
+00:06:30,760 --> 00:06:31,960
+It takes a class name.
+
+90
+00:06:32,080 --> 00:06:37,570
+And if the given element has that class already it will then remove it if the element doesn't have that
+
+91
+00:06:37,570 --> 00:06:39,270
+class then I will turn it on.
+
+92
+00:06:39,280 --> 00:06:40,550
+So very very useful.
+
+93
+00:06:40,630 --> 00:06:42,180
+We'll use it all the time later on.
+
+94
+00:06:42,400 --> 00:06:46,990
+So let me demonstrate that to you before I go back to my example here.
+
+95
+00:06:46,990 --> 00:06:49,300
+I'm actually going to define a new class.
+
+96
+00:06:49,690 --> 00:06:58,630
+So rather than making a new style sheet and using a link I'm just going to use a style tag just for
+
+97
+00:06:59,500 --> 00:07:00,390
+the sake of time.
+
+98
+00:07:00,530 --> 00:07:04,140
+So I'm going to define a class you're just going to call it big.
+
+99
+00:07:04,990 --> 00:07:14,320
+And what I'm going to do is change the font size to be 100 pixels and change the color to be orange
+
+100
+00:07:14,340 --> 00:07:14,670
+.
+
+101
+00:07:15,010 --> 00:07:22,540
+And then lastly let's give it a border of five pixel solid red.
+
+102
+00:07:22,960 --> 00:07:24,280
+So I'll leave it at that.
+
+103
+00:07:24,370 --> 00:07:30,700
+If I refresh my page nothing changes of course but when I want to do is apply that class to something
+
+104
+00:07:30,700 --> 00:07:30,900
+.
+
+105
+00:07:30,950 --> 00:07:37,120
+So I'm going to make this paragraph have the big class to do that I need to select it so far.
+
+106
+00:07:37,120 --> 00:07:44,900
+Paragraph equals document that query selector paragraph.
+
+107
+00:07:47,180 --> 00:07:47,820
+OK.
+
+108
+00:07:48,010 --> 00:07:53,130
+And let's just start by taking a look at class list and you can see that it's empty.
+
+109
+00:07:53,140 --> 00:07:55,970
+There are no classes assigned to this paragraph yet.
+
+110
+00:07:56,140 --> 00:08:04,090
+So if I want to assign one all I need to do is say P-Dub class list dot add and I want to add the class
+
+111
+00:08:04,180 --> 00:08:05,310
+big.
+
+112
+00:08:06,190 --> 00:08:07,240
+And there we go.
+
+113
+00:08:07,720 --> 00:08:11,370
+So it automatically reflects the new changes from my style sheet.
+
+114
+00:08:11,440 --> 00:08:13,540
+All I had to do is add the big class.
+
+115
+00:08:13,780 --> 00:08:18,880
+So hopefully you can see that this is a lot easier and that we're separating the responsibilities.
+
+116
+00:08:18,880 --> 00:08:24,940
+So all that are javascript does is it turns on or off a specific part of the SS rather than actually
+
+117
+00:08:24,940 --> 00:08:27,610
+manually manipulating individual properties.
+
+118
+00:08:27,610 --> 00:08:32,120
+We're now just changing things as little as possible instead of our Javascript.
+
+119
+00:08:32,470 --> 00:08:42,430
+So if I want to remove it all I need to do is do class classless not remove big and my favorite one
+
+120
+00:08:42,610 --> 00:08:45,940
+which I mentioned is super useful is toggle.
+
+121
+00:08:45,940 --> 00:08:52,170
+So if I hit toggle right now and hit enter there is no class assigned so it will assign it the class
+
+122
+00:08:52,180 --> 00:08:52,940
+big.
+
+123
+00:08:53,320 --> 00:08:56,420
+Now big is already assigned so it will remove it.
+
+124
+00:08:56,440 --> 00:09:04,030
+So this is useful obviously not in this case to make this crazy orange in huge font class but what we
+
+125
+00:09:04,030 --> 00:09:09,610
+might do is on something like a to do list if we want the user to be able to click on it to do.
+
+126
+00:09:09,880 --> 00:09:11,440
+And that will cross it out.
+
+127
+00:09:11,650 --> 00:09:15,400
+But they can click again and then it will uncross out or just go back to normal.
+
+128
+00:09:15,430 --> 00:09:16,400
+That would be done.
+
+129
+00:09:16,410 --> 00:09:23,080
+Or we could do it by toggling a class so we could have a class called done and I click applied click
+
+130
+00:09:23,080 --> 00:09:23,700
+again.
+
+131
+00:09:23,800 --> 00:09:24,820
+It's removed.
+
+132
+00:09:24,820 --> 00:09:27,000
+That's just one example of when you might use toggle.
+
+133
+00:09:27,100 --> 00:09:29,740
+But it's really really useful.
+
+134
+00:09:29,740 --> 00:09:34,090
+The last point I'll bring up about class list is that it's technically not an array.
+
+135
+00:09:34,090 --> 00:09:37,840
+So that means that we have to use an ad in order to add a class.
+
+136
+00:09:37,870 --> 00:09:39,900
+We can't do something like push.
+
+137
+00:09:40,150 --> 00:09:44,000
+So just a minor note but it's important to know that it's not technically an array.
+
+138
+00:09:44,470 --> 00:09:48,260
+So we covered two different ways of manipulating style through our javascript.
+
+139
+00:09:48,280 --> 00:09:53,980
+The first one is doing it manually one property at a time which is it's honestly fine if you're just
+
+140
+00:09:53,980 --> 00:09:55,340
+doing one or two things.
+
+141
+00:09:55,690 --> 00:10:01,150
+But if you're doing it in a batch or you're doing it to multiple elements it's much better more conventional
+
+142
+00:10:01,180 --> 00:10:04,930
+better style to use a class and just turn the class on or off
+

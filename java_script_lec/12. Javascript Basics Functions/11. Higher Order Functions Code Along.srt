@@ -1,0 +1,348 @@
+﻿1
+00:00:00,420 --> 00:00:04,050
+So this video is going to be the last one on functions for a little bit.
+
+2
+00:00:04,050 --> 00:00:07,530
+And we're going to talk about a concept called the higher order functions.
+
+3
+00:00:07,530 --> 00:00:13,950
+So higher order functions are functions that either take a function as an argument or they return another
+
+4
+00:00:13,950 --> 00:00:14,970
+function.
+
+5
+00:00:15,510 --> 00:00:20,850
+So yes this is possible and not only is it possible it's something that we'll be doing a lot especially
+
+6
+00:00:20,850 --> 00:00:22,190
+later in this course.
+
+7
+00:00:22,380 --> 00:00:27,900
+So I'm going to show you an initial example something called set interval and what set interval does
+
+8
+00:00:28,230 --> 00:00:34,140
+is it takes a function and it will call that function at a specific interval that we provide.
+
+9
+00:00:34,140 --> 00:00:38,340
+So it's a way to have something repeat every second or every half a second.
+
+10
+00:00:38,400 --> 00:00:42,340
+Right now with a loop we can repeat things but it happens immediately.
+
+11
+00:00:42,360 --> 00:00:45,010
+So set interval we can time it out.
+
+12
+00:00:45,840 --> 00:00:48,790
+So let's go ahead and take a look at how set interval works.
+
+13
+00:00:49,170 --> 00:00:54,300
+And before we actually dive into that we need to define a function that we are going to pass to set
+
+14
+00:00:54,330 --> 00:00:55,210
+interval.
+
+15
+00:00:55,260 --> 00:00:58,750
+So we're going to write code to sing Twinkle twinkle little star again.
+
+16
+00:00:58,800 --> 00:01:04,410
+We're just going to abreviated and we're going to schedule it to run using set interval every second
+
+17
+00:01:04,430 --> 00:01:04,700
+.
+
+18
+00:01:04,950 --> 00:01:07,620
+So first we need to write the twinkle twinkle code.
+
+19
+00:01:07,710 --> 00:01:15,270
+So I'm going to do a function sing and that's just going to come to don't log.
+
+20
+00:01:15,270 --> 00:01:17,370
+Twinkle twinkle.
+
+21
+00:01:17,970 --> 00:01:19,340
+And then another line
+
+22
+00:01:22,170 --> 00:01:28,100
+I wonder and we'll just leave it at that so I can call sing myself.
+
+23
+00:01:28,200 --> 00:01:29,580
+Just like that.
+
+24
+00:01:29,730 --> 00:01:31,600
+And that works great.
+
+25
+00:01:31,650 --> 00:01:39,060
+So next what we want to do is use set interval to make sing or to call sing every 1000 milliseconds
+
+26
+00:01:39,060 --> 00:01:40,100
+or every second.
+
+27
+00:01:40,410 --> 00:01:45,490
+So to do that I'm going to define the pattern here so set interval takes two arguments.
+
+28
+00:01:45,540 --> 00:01:49,340
+It's just a function but it takes another function as its argument.
+
+29
+00:01:49,380 --> 00:01:53,230
+The first one is just we'll call it another funk.
+
+30
+00:01:53,430 --> 00:01:57,060
+And the second one is the interval in milliseconds.
+
+31
+00:01:57,060 --> 00:01:58,560
+So I'm going to fill this out now.
+
+32
+00:01:58,720 --> 00:02:08,730
+Another phone call the function we want it to call is called Sing and the interval is 1000 milliseconds
+
+33
+00:02:08,730 --> 00:02:09,180
+.
+
+34
+00:02:09,390 --> 00:02:14,750
+Or we could do every half a second 500 milliseconds or one millisecond which would be insanely fast
+
+35
+00:02:14,890 --> 00:02:17,110
+but we're going to do 1000 milliseconds.
+
+36
+00:02:17,130 --> 00:02:23,920
+So this is going to call whatever's inside of sing these two lines every 1000 milliseconds.
+
+37
+00:02:23,970 --> 00:02:29,700
+And when I hit Enter you'll see that it starts to happen.
+
+38
+00:02:29,700 --> 00:02:35,040
+The other thing I just want to call your attention to before it disappears is that when Iran set interval
+
+39
+00:02:35,460 --> 00:02:37,320
+it returns this number two.
+
+40
+00:02:37,470 --> 00:02:39,840
+So we'll see what that's used for and just a moment.
+
+41
+00:02:40,410 --> 00:02:45,720
+So another thing that you might be asking is why do we not need parentheses after seeing.
+
+42
+00:02:46,050 --> 00:02:52,440
+And the reason for that is that we're not the one calling saying set interval is actually calling saying
+
+43
+00:02:53,100 --> 00:02:54,590
+every 1000 seconds.
+
+44
+00:02:54,900 --> 00:02:56,430
+So we don't want to execute it.
+
+45
+00:02:56,460 --> 00:02:58,570
+We want to let's set interval executed.
+
+46
+00:02:58,740 --> 00:03:05,130
+So what we do is just pass the value of saying we're just passing the name Singh and the code inside
+
+47
+00:03:05,130 --> 00:03:05,750
+of it.
+
+48
+00:03:05,940 --> 00:03:07,220
+But we're not running it.
+
+49
+00:03:07,260 --> 00:03:09,470
+We leave that to set interval.
+
+50
+00:03:09,690 --> 00:03:16,200
+So to stop set interval we need to use this number to set interval returns a number and we can use that
+
+51
+00:03:16,200 --> 00:03:18,300
+number to stop it.
+
+52
+00:03:18,300 --> 00:03:24,720
+So there's another function clear interval and we just give it that number two or it might be another
+
+53
+00:03:24,720 --> 00:03:26,160
+number in your case.
+
+54
+00:03:26,160 --> 00:03:33,420
+So to sum this up set interval is just one example of a higher order function and a higher order function
+
+55
+00:03:33,780 --> 00:03:37,480
+is one where we can pass another function to it as an argument.
+
+56
+00:03:37,860 --> 00:03:43,040
+And we could return another function which we haven't seen yet but most often we'll be passing a function
+
+57
+00:03:43,380 --> 00:03:45,210
+to another function.
+
+58
+00:03:45,210 --> 00:03:52,560
+So there's one other change we could make which is sometimes we want to run some code every second.
+
+59
+00:03:52,560 --> 00:03:54,310
+For instance set interval.
+
+60
+00:03:54,420 --> 00:03:58,390
+But we don't want to define a separate function ahead of time.
+
+61
+00:03:59,430 --> 00:04:07,470
+So instead of saying here I don't have a function yet and I want to write it right here I could do that
+
+62
+00:04:07,770 --> 00:04:10,170
+with something called an anonymous function.
+
+63
+00:04:10,350 --> 00:04:13,240
+And that looks like this.
+
+64
+00:04:13,290 --> 00:04:17,850
+So I write function but I don't give it a name because I'm never going to use it again.
+
+65
+00:04:17,970 --> 00:04:20,190
+I'm just giving it to set interval.
+
+66
+00:04:20,250 --> 00:04:27,590
+So function parentheses and then inside of here I'll write my code and I'm going to hit enter.
+
+67
+00:04:27,720 --> 00:04:32,050
+So inside of these braces I put my canceled out log.
+
+68
+00:04:32,910 --> 00:04:41,580
+I am anonymous function and control that log.
+
+69
+00:04:41,580 --> 00:04:43,240
+This is awesome.
+
+70
+00:04:44,100 --> 00:04:45,270
+All right.
+
+71
+00:04:45,270 --> 00:04:52,210
+So then I need to add my interval comma and let's do this every two seconds.
+
+72
+00:04:52,290 --> 00:04:54,790
+So this is a little bit hectic looking.
+
+73
+00:04:54,960 --> 00:05:04,350
+Coming from our simple swing set interval what we're doing though is defining the function right here
+
+74
+00:05:04,380 --> 00:05:05,200
+in line.
+
+75
+00:05:05,400 --> 00:05:08,580
+So this is not something we can call outside of set interval.
+
+76
+00:05:08,580 --> 00:05:13,220
+It's purely a way to pass a group of code into set interval.
+
+77
+00:05:13,410 --> 00:05:15,230
+And then the second argument is the same.
+
+78
+00:05:15,240 --> 00:05:16,530
+It's just another number.
+
+79
+00:05:16,800 --> 00:05:19,850
+And if I do this you'll see every two seconds.
+
+80
+00:05:20,010 --> 00:05:21,580
+It calls this code.
+
+81
+00:05:22,250 --> 00:05:24,470
+But I have no way to call this function again.
+
+82
+00:05:24,660 --> 00:05:26,010
+Outside of it.
+
+83
+00:05:26,190 --> 00:05:31,740
+So we will see anonymous functions quite a bit more later in this class and almost always we use them
+
+84
+00:05:31,860 --> 00:05:35,130
+when we're passing in a function to another function.
+
+85
+00:05:35,130 --> 00:05:39,870
+So if this is still a little hazy for you don't worry we're going to spend a lot more time using these
+
+86
+00:05:40,320 --> 00:05:41,530
+things like set interval.
+
+87
+00:05:41,550 --> 00:05:45,100
+But also some other functions that we're going to introduce in a few videos from now.
+

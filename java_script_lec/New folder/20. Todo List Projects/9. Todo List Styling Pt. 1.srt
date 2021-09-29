@@ -1,0 +1,844 @@
+﻿1
+00:00:00,270 --> 00:00:01,530
+Welcome back.
+
+2
+00:00:01,530 --> 00:00:07,350
+Now that we have the basic functionality of our To Do list app done it's time for us to focus on making
+
+3
+00:00:07,350 --> 00:00:08,580
+it look like this.
+
+4
+00:00:08,880 --> 00:00:11,430
+So we definitely have quite a ways to go.
+
+5
+00:00:11,550 --> 00:00:14,220
+And we're just going to attack this one piece at a time.
+
+6
+00:00:14,280 --> 00:00:17,080
+I'll try and do this in the most logical possible order.
+
+7
+00:00:17,220 --> 00:00:22,800
+We'll start with some of the bigger pieces like the background colors and fonts making sure that we
+
+8
+00:00:22,800 --> 00:00:27,210
+have the right margin and padding on this big container here and then we'll focus on some of the more
+
+9
+00:00:27,210 --> 00:00:28,740
+nuance things.
+
+10
+00:00:28,760 --> 00:00:30,460
+OK let's get started here.
+
+11
+00:00:30,480 --> 00:00:33,200
+The first thing we'll do I'll do a full screen.
+
+12
+00:00:33,720 --> 00:00:35,670
+Let's start by just pushing this down.
+
+13
+00:00:35,670 --> 00:00:37,120
+This is our container div.
+
+14
+00:00:37,440 --> 00:00:41,630
+We'll add a margin to the top so that we have more space up here.
+
+15
+00:00:41,910 --> 00:00:47,180
+So we'll go back to our C S S and can close down or javascript for now.
+
+16
+00:00:47,670 --> 00:00:52,520
+Our div has an idea of container and then we'll go and select that here which you've already done.
+
+17
+00:00:52,860 --> 00:00:59,550
+And rather than a margin of zero OTTO Well give it a hundred pixels on the top and bottom.
+
+18
+00:00:59,820 --> 00:01:05,690
+And remember we need the x if we have zero we don't need X but if we have a number we do.
+
+19
+00:01:05,880 --> 00:01:07,230
+Let's take a look now.
+
+20
+00:01:07,650 --> 00:01:10,100
+OK so now they are starting at the same place.
+
+21
+00:01:10,200 --> 00:01:12,400
+They have the same margin there.
+
+22
+00:01:12,420 --> 00:01:18,090
+The next thing we'll do is add a background color to this container which this one has.
+
+23
+00:01:18,090 --> 00:01:22,830
+It's a little bit difficult to see but when I delete something it shows through in the back.
+
+24
+00:01:22,950 --> 00:01:24,570
+It's this color right here.
+
+25
+00:01:24,630 --> 00:01:25,700
+So that again.
+
+26
+00:01:26,080 --> 00:01:28,190
+So we'll go ahead and add that.
+
+27
+00:01:28,830 --> 00:01:34,680
+So instead of container well say background and the color.
+
+28
+00:01:34,680 --> 00:01:39,680
+I'll just read it out is F 7 7 after 7.
+
+29
+00:01:39,960 --> 00:01:41,210
+Just like that.
+
+30
+00:01:41,850 --> 00:01:43,570
+And let's check how that looks.
+
+31
+00:01:44,000 --> 00:01:44,400
+OK.
+
+32
+00:01:44,490 --> 00:01:50,430
+So we have the same gray color that we have right here.
+
+33
+00:01:50,430 --> 00:01:52,790
+It's the same light gray.
+
+34
+00:01:52,830 --> 00:01:54,990
+The next thing we'll do is work on the border.
+
+35
+00:01:55,230 --> 00:01:57,460
+And this actually doesn't have a border.
+
+36
+00:01:57,540 --> 00:02:00,840
+What it does have is a very slight box shadow.
+
+37
+00:02:00,840 --> 00:02:02,870
+So we haven't seen box shadow yet.
+
+38
+00:02:02,940 --> 00:02:09,820
+I'll demonstrate that here and go into MT-NW and it's just a way of adding a shadow effect.
+
+39
+00:02:09,870 --> 00:02:15,240
+So if I scroll down you can see here are some different box shadows and we're going to have a very light
+
+40
+00:02:15,240 --> 00:02:19,750
+one but if you notice around this there's a really slight shadow.
+
+41
+00:02:20,220 --> 00:02:28,380
+So the syntax and the shadow that we're going to use will get rid of our border is box dash shadow 0
+
+42
+00:02:28,500 --> 00:02:39,020
+0 3 pixels and then a color and our color it's going to be just basically black but it's R.G..
+
+43
+00:02:39,180 --> 00:02:43,260
+And then we're going to make it really really transparent.
+
+44
+00:02:43,560 --> 00:02:45,380
+So just barely noticeable.
+
+45
+00:02:45,400 --> 00:02:46,890
+And if I refresh.
+
+46
+00:02:46,890 --> 00:02:52,090
+We have no border now but there's a slight shadow around this element.
+
+47
+00:02:52,710 --> 00:02:53,170
+OK.
+
+48
+00:02:53,250 --> 00:02:55,460
+That's all we'll do to the container for now.
+
+49
+00:02:55,770 --> 00:02:57,480
+Let's attack the H-1.
+
+50
+00:02:57,480 --> 00:02:59,490
+So this heading up here.
+
+51
+00:02:59,580 --> 00:03:04,320
+So that is in our age him l just considered an H1.
+
+52
+00:03:04,320 --> 00:03:06,710
+It doesn't have an ID or anything and that's fine.
+
+53
+00:03:06,960 --> 00:03:12,120
+Let's go to the CSSA file and start by adding in a background color.
+
+54
+00:03:12,390 --> 00:03:25,950
+So we'll select each one and the background is a color that is 2 9 8 0 be 9 and they'll save and refresh
+
+55
+00:03:27,270 --> 00:03:30,010
+and we now have the correct shade of blue.
+
+56
+00:03:31,210 --> 00:03:33,930
+So we'll also change the font color to white
+
+57
+00:03:36,660 --> 00:03:38,890
+and quickly show you that.
+
+58
+00:03:38,970 --> 00:03:39,450
+All right.
+
+59
+00:03:39,510 --> 00:03:42,890
+Slowly inching closer here.
+
+60
+00:03:43,050 --> 00:03:50,790
+The next thing we'll do is give it no margin and now we'll just get rid of this space that we had here
+
+61
+00:03:50,810 --> 00:03:51,160
+.
+
+62
+00:03:51,420 --> 00:03:53,220
+As you can see here there is no margin.
+
+63
+00:03:53,220 --> 00:03:54,440
+This is our H-1.
+
+64
+00:03:54,510 --> 00:03:55,970
+There is padding here.
+
+65
+00:03:56,340 --> 00:03:59,550
+So the text doesn't go right up against the edge like it does here.
+
+66
+00:03:59,700 --> 00:04:03,330
+But there's no margin on the outside of the blue box.
+
+67
+00:04:03,360 --> 00:04:09,360
+This is our text input and that also has increased padding but there's no margin around that either
+
+68
+00:04:09,360 --> 00:04:10,130
+.
+
+69
+00:04:10,200 --> 00:04:13,360
+So we'll begin by adding some padding around our To Do list.
+
+70
+00:04:13,370 --> 00:04:22,740
+H-1 So here we're going to add 10 pixels to the top and bottom and 20 pixels to the left and right and
+
+71
+00:04:22,740 --> 00:04:24,240
+save.
+
+72
+00:04:25,260 --> 00:04:27,150
+You can see we're getting closer.
+
+73
+00:04:27,480 --> 00:04:29,000
+We need to change the font size.
+
+74
+00:04:29,070 --> 00:04:30,350
+Need to change the font.
+
+75
+00:04:30,420 --> 00:04:34,900
+We also will uppercase all of that and we can do that by now.
+
+76
+00:04:34,980 --> 00:04:40,010
+You should know one of my favorites is text transform uppercase.
+
+77
+00:04:40,320 --> 00:04:42,480
+I just think it's pretty cool.
+
+78
+00:04:42,480 --> 00:04:53,910
+There we go we get all uppercase the font size needs to be 24 pixels so font size 24 x and save OK the
+
+79
+00:04:53,900 --> 00:04:56,840
+last thing we'll do is make sure that it's a normal font weight.
+
+80
+00:04:57,020 --> 00:05:00,970
+So an H1 by default is actually bolded and we don't want that.
+
+81
+00:05:01,290 --> 00:05:09,310
+So we'll do Funt way normal or we could also write font weight 400.
+
+82
+00:05:09,320 --> 00:05:10,290
+There we go.
+
+83
+00:05:10,350 --> 00:05:14,960
+Now it's just a matter of changing the font which will come back to the next thing you want to tackle
+
+84
+00:05:15,380 --> 00:05:17,510
+is getting rid of these bullet points.
+
+85
+00:05:17,510 --> 00:05:20,240
+You can see if we don't have any bullet points here.
+
+86
+00:05:20,250 --> 00:05:23,430
+Those bullet points are considered the default browser style.
+
+87
+00:05:23,510 --> 00:05:25,360
+So we'll override that.
+
+88
+00:05:25,400 --> 00:05:32,270
+We're going to select the UL that they're inside of and say list style none.
+
+89
+00:05:32,370 --> 00:05:37,790
+And if we go back and refresh we now don't have any bullet points.
+
+90
+00:05:37,800 --> 00:05:44,270
+Another thing I'm going to do is honor you well set the margin to be zero and the padding to be zero
+
+91
+00:05:45,240 --> 00:05:51,350
+and it will refresh here and not just get rid of the space on the sides of the well we do have space
+
+92
+00:05:51,360 --> 00:05:56,240
+here that we need to work with but that's the lie not the UL itself.
+
+93
+00:05:56,250 --> 00:05:58,440
+So we'll come back to that.
+
+94
+00:05:58,440 --> 00:06:04,400
+Now let's add in the correct font and the name of this font is rubato and it's part of Google fonts
+
+95
+00:06:04,400 --> 00:06:04,760
+.
+
+96
+00:06:04,880 --> 00:06:09,400
+So I have that open here and I'll just do a search for it rubato.
+
+97
+00:06:09,620 --> 00:06:10,720
+And here we go.
+
+98
+00:06:10,770 --> 00:06:14,230
+Add to collection then use.
+
+99
+00:06:14,510 --> 00:06:16,490
+And we're going to want normal way.
+
+100
+00:06:16,800 --> 00:06:20,660
+We'll add in bold and also medium.
+
+101
+00:06:20,660 --> 00:06:25,620
+Now let's go ahead and copy this link to our HMO and we can close this window.
+
+102
+00:06:25,980 --> 00:06:33,650
+Go back to where each team out here and just up top paste that in and save then we'll go to our to see
+
+103
+00:06:33,650 --> 00:06:37,520
+assess and we'll add some styles to the body.
+
+104
+00:06:37,740 --> 00:06:44,780
+Everything uses this font so we'll just add in font family robotically.
+
+105
+00:06:45,530 --> 00:06:46,680
+Just like that.
+
+106
+00:06:47,390 --> 00:06:53,650
+And if we go back now and refresh our H-1 is pretty much there.
+
+107
+00:06:53,660 --> 00:06:58,810
+Aside from this button which we haven't touched at all the fonts the same the color the spacing all
+
+108
+00:06:58,860 --> 00:06:59,960
+that's good.
+
+109
+00:06:59,970 --> 00:07:01,970
+And our allies are getting there.
+
+110
+00:07:01,980 --> 00:07:03,060
+They have the right font.
+
+111
+00:07:03,140 --> 00:07:06,680
+We need to work on some of the spacing and padding issues.
+
+112
+00:07:06,690 --> 00:07:10,660
+The next thing we'll tackle are the background colors on the lies.
+
+113
+00:07:11,250 --> 00:07:12,750
+So every other lie.
+
+114
+00:07:12,930 --> 00:07:19,280
+It goes from a white color pure white to this gray color that we have as a background of the the.
+
+115
+00:07:19,470 --> 00:07:24,340
+So we can use the SS to add styles to every other ally.
+
+116
+00:07:24,380 --> 00:07:25,450
+So let's do that now.
+
+117
+00:07:25,500 --> 00:07:32,610
+The first thing we'll do is select all allies and give them a background of white so we can do that
+
+118
+00:07:32,610 --> 00:07:43,520
+with F F F or white or R-GA 255 255 to 55 and then we'll do every other lie.
+
+119
+00:07:43,740 --> 00:07:50,080
+And the syntax for that is a lie and child to end.
+
+120
+00:07:50,360 --> 00:07:53,970
+And that too and well defined a pattern of every other.
+
+121
+00:07:54,140 --> 00:07:58,670
+And if we did three and it would say every third but we just want every other.
+
+122
+00:07:59,000 --> 00:08:08,310
+And we'll make the background color the same f7 f7 f7 that we used for the container background and
+
+123
+00:08:08,390 --> 00:08:08,880
+refresh.
+
+124
+00:08:08,880 --> 00:08:16,500
+Now it's hard to see because they're a little small but every other lie is now this gray color.
+
+125
+00:08:16,700 --> 00:08:21,030
+So add in a few more and you can see they alternate perfect.
+
+126
+00:08:21,020 --> 00:08:25,370
+Now let's address the issue of the height of the lies and also the padding.
+
+127
+00:08:25,760 --> 00:08:35,240
+The first thing to do is give them a height of 40 pixels so all allies height 40 x and we'll go back
+
+128
+00:08:35,660 --> 00:08:36,540
+refresh.
+
+129
+00:08:36,950 --> 00:08:39,000
+OK so they take up the right amount of space.
+
+130
+00:08:39,000 --> 00:08:42,620
+Now if we compared them the font has some issues.
+
+131
+00:08:42,620 --> 00:08:44,600
+And also we need to add some padding.
+
+132
+00:08:44,970 --> 00:08:51,050
+Next are going to change the line height property on the lies so that our text is centered vertically
+
+133
+00:08:51,060 --> 00:08:51,570
+.
+
+134
+00:08:51,570 --> 00:08:55,050
+Right now the line is basically this tall.
+
+135
+00:08:55,080 --> 00:09:05,550
+We're going to make it take up the entire 40 pixels show you line height 40 x and that won't change
+
+136
+00:09:05,540 --> 00:09:09,510
+the size of the font it just changes the size of the line.
+
+137
+00:09:09,540 --> 00:09:10,880
+It's now 40 pixels.
+
+138
+00:09:10,880 --> 00:09:13,850
+So the line takes up this entire area.
+
+139
+00:09:14,150 --> 00:09:21,020
+The next minor thing is the color we have pure black and the color I used isn't exactly black.
+
+140
+00:09:21,060 --> 00:09:22,820
+It's slightly lighter.
+
+141
+00:09:23,070 --> 00:09:33,530
+So we'll set color and it is six six six refresh and then we go next let's address the input.
+
+142
+00:09:33,540 --> 00:09:35,260
+So we have a few things you need to do.
+
+143
+00:09:35,490 --> 00:09:39,660
+The first of which is make sure that it takes up the right amount of space.
+
+144
+00:09:39,770 --> 00:09:45,740
+So this input is much larger and it's not just padding or margin the font size is larger.
+
+145
+00:09:45,750 --> 00:09:47,420
+We have a new background color as well.
+
+146
+00:09:47,750 --> 00:09:49,700
+And there's a border when we click.
+
+147
+00:09:49,740 --> 00:09:54,610
+So let's work on all of those and we'll start by just adding in a bigger font size.
+
+148
+00:09:54,840 --> 00:09:59,370
+So we'll select input font size
+
+149
+00:10:02,270 --> 00:10:05,420
+and we'll set font size to be 18 pixels.
+
+150
+00:10:05,960 --> 00:10:11,570
+And while we're here we'll do the background color as well as the background color and it's the same
+
+151
+00:10:11,610 --> 00:10:14,570
+f 7 7 1/2 7.
+
+152
+00:10:14,730 --> 00:10:16,350
+Just like that.
+
+153
+00:10:16,760 --> 00:10:18,040
+And let's refresh.
+
+154
+00:10:18,770 --> 00:10:19,510
+OK.
+
+155
+00:10:19,700 --> 00:10:21,180
+We're getting closer.
+
+156
+00:10:21,170 --> 00:10:29,880
+The next thing we'll do is add a width and the width that we're going to give it is 100 percent.
+
+157
+00:10:29,880 --> 00:10:33,590
+So right now it's only going part of the way across the container.
+
+158
+00:10:33,600 --> 00:10:36,820
+If we refresh it now goes all the way across.
+
+159
+00:10:37,050 --> 00:10:39,200
+But we have a few small issues.
+
+160
+00:10:39,210 --> 00:10:42,970
+First thing that we want to take care of is some padding in there.
+
+161
+00:10:43,400 --> 00:10:50,320
+So we're going to add padding 13 pixels on top 13 pixels on the side on the right.
+
+162
+00:10:50,370 --> 00:10:54,960
+13 pixels on the bottom and 20 pixels on the left.
+
+163
+00:10:54,950 --> 00:10:56,250
+So you can see on this one.
+
+164
+00:10:56,550 --> 00:10:58,770
+We have top and bottom are 13.
+
+165
+00:10:59,000 --> 00:11:01,550
+And on the left there there's 20 pixels.
+
+166
+00:11:01,590 --> 00:11:07,430
+So if I were fresh We now have a bigger input that takes up the right amount of space.
+
+167
+00:11:07,590 --> 00:11:11,670
+We do have a problem which is that the input is now too long.
+
+168
+00:11:11,790 --> 00:11:18,540
+When we said that with should be 100 percent that with was actually just the content and it didn't include
+
+169
+00:11:18,540 --> 00:11:24,460
+the padding and it didn't include the margin which means that our input goes to long past the end of
+
+170
+00:11:24,450 --> 00:11:27,710
+the div and rather than messing with the padding.
+
+171
+00:11:27,770 --> 00:11:33,820
+I mean to show another way of changing it which is a property called Box sizing.
+
+172
+00:11:33,840 --> 00:11:39,420
+So with block sizing you have a few different options but it basically controls how the box is sized
+
+173
+00:11:39,760 --> 00:11:41,400
+of the box model.
+
+174
+00:11:41,390 --> 00:11:44,100
+And we're going to change it to border Dasch box.
+
+175
+00:11:44,270 --> 00:11:50,570
+And what this does I'll just read it says the width and height properties include the padding and border
+
+176
+00:11:50,750 --> 00:11:52,740
+but not the margin.
+
+177
+00:11:52,800 --> 00:12:02,760
+So if we change it to border box which I'll do now we go into here just add box sizing order box and
+
+178
+00:12:02,750 --> 00:12:05,170
+save it before I move on.
+
+179
+00:12:05,310 --> 00:12:10,250
+I will point out this is one of those properties that we do want to have the prefixes.
+
+180
+00:12:10,250 --> 00:12:15,170
+So the Web Kit and Mozy are Moz and the mess from Microsoft.
+
+181
+00:12:15,540 --> 00:12:16,850
+I'm not going to do that now.
+
+182
+00:12:16,910 --> 00:12:18,250
+It will be in the solution code.
+
+183
+00:12:18,410 --> 00:12:20,330
+But it just takes a long time to type up.
+
+184
+00:12:20,660 --> 00:12:25,940
+So it will work just how it is in Chrome at least I refresh it now.
+
+185
+00:12:26,040 --> 00:12:32,180
+Our box is including the padding in the border but it doesn't include the margin.
+
+186
+00:12:32,180 --> 00:12:34,820
+So we end up with a perfect fit.
+
+187
+00:12:34,880 --> 00:12:39,220
+Next I'm going to give the font a color when I type in there.
+
+188
+00:12:39,620 --> 00:12:41,130
+So all we need to do.
+
+189
+00:12:41,330 --> 00:12:48,740
+I'm going to just take the same color from the H-1 and go down to our input and just say color it's
+
+190
+00:12:48,750 --> 00:12:49,920
+that color.
+
+191
+00:12:49,910 --> 00:12:54,400
+And if we refresh now and we start typing There we go.
+
+192
+00:12:54,410 --> 00:12:56,290
+Now let's focus on the effect.
+
+193
+00:12:56,580 --> 00:13:03,860
+When we click which is called focusing in the input you can see here we get a border around it.
+
+194
+00:13:03,920 --> 00:13:05,060
+So we need to work on that.
+
+195
+00:13:05,120 --> 00:13:08,050
+Right now we have the default focus effect.
+
+196
+00:13:08,120 --> 00:13:17,590
+So there's a selector for that input colon focus just like the hover pseudo selector.
+
+197
+00:13:17,650 --> 00:13:21,510
+These cells will only run when we have focused on an input.
+
+198
+00:13:21,920 --> 00:13:27,310
+So I'm going to make the background white when we focus on it.
+
+199
+00:13:27,570 --> 00:13:35,960
+I'm also going to give it a border of three pixels solid The blue color we've been working with and
+
+200
+00:13:36,570 --> 00:13:45,830
+we'll give it an outline of not an outline refers to this annoying highlight that we get from the browser
+
+201
+00:13:45,840 --> 00:13:47,180
+itself.
+
+202
+00:13:47,180 --> 00:13:53,670
+Now if we focus on the input we get this new blue border and we also change the background color so
+
+203
+00:13:53,660 --> 00:13:56,610
+it's gray now it's white.
+
+204
+00:13:57,570 --> 00:14:01,850
+So that's all we need to do for the input although we should go and add the placeholder text that we
+
+205
+00:14:01,860 --> 00:14:02,850
+have here.
+
+206
+00:14:03,030 --> 00:14:10,410
+So I'll go to the index HTL and next to the input or in the input will add the placeholder attribute
+
+207
+00:14:10,420 --> 00:14:10,620
+.
+
+208
+00:14:10,910 --> 00:14:12,270
+And this can be whatever you want.
+
+209
+00:14:12,470 --> 00:14:13,460
+I'll just make it match.
+
+210
+00:14:13,490 --> 00:14:18,800
+So it's add new to do and refresh.
+
+211
+00:14:18,840 --> 00:14:19,490
+There we go.
+

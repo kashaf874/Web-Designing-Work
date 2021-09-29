@@ -1,0 +1,480 @@
+﻿1
+00:00:00,420 --> 00:00:05,310
+So in this video we're going to pick up where we left off with Javascript functions and the next thing
+
+2
+00:00:05,310 --> 00:00:07,990
+we're going to discuss are arguments.
+
+3
+00:00:08,430 --> 00:00:15,870
+So we've seen how to write a function like sing song which does the same thing every single time every
+
+4
+00:00:15,870 --> 00:00:17,350
+time we write sing song.
+
+5
+00:00:17,580 --> 00:00:22,250
+As you can see here it just calls these four lines of consul Dalt logs.
+
+6
+00:00:22,410 --> 00:00:26,650
+But what if I wanted to have a function sing song that could sing a different song.
+
+7
+00:00:26,760 --> 00:00:31,790
+So maybe it could sing Twinkle twinkle little star but it could also seeing three blind mice.
+
+8
+00:00:31,830 --> 00:00:38,670
+And Mary Had A Little Lamb and I wanted to be able to call sing song and tell it which song I wanted
+
+9
+00:00:38,670 --> 00:00:41,550
+it to sing or here's another example.
+
+10
+00:00:41,550 --> 00:00:44,250
+If I had a function called Say hello.
+
+11
+00:00:44,760 --> 00:00:51,540
+And it just cancelled out log hello if I wanted that function to be able to say hello to a specific
+
+12
+00:00:51,540 --> 00:00:57,570
+person I wanted to personalize it so that I could call Say hello with Jeffrey and he would say hello
+
+13
+00:00:57,570 --> 00:01:03,640
+to Jeffery I could call Say hello with Sally and he would call Say hello with Sally.
+
+14
+00:01:04,020 --> 00:01:07,510
+So to do that we need to talk about arguments.
+
+15
+00:01:07,500 --> 00:01:14,160
+So arguments are how we can write functions that take inputs so far or functions haven't taken any inputs
+
+16
+00:01:14,180 --> 00:01:14,340
+.
+
+17
+00:01:14,490 --> 00:01:21,930
+But here's an example of a function called Square and what it does is it takes a number any number and
+
+18
+00:01:21,930 --> 00:01:23,220
+then it counts adult logs.
+
+19
+00:01:23,220 --> 00:01:25,380
+The square of that number.
+
+20
+00:01:25,380 --> 00:01:31,530
+So the syntax to say that a function is expecting something to be passed in that it's expecting an argument
+
+21
+00:01:32,100 --> 00:01:35,310
+looks like this rather than just empty parentheses here.
+
+22
+00:01:35,400 --> 00:01:37,300
+We put the name of an argument.
+
+23
+00:01:37,650 --> 00:01:42,040
+So in this case we called it numb and this can be called anything at all.
+
+24
+00:01:42,240 --> 00:01:44,080
+It's just a placeholder.
+
+25
+00:01:44,130 --> 00:01:52,770
+So whenever the user calls Square and we pass in ten numb is going to hold the value of 10 temporarily
+
+26
+00:01:53,640 --> 00:01:59,080
+if the user calls square with three Nahm is going to hold the value of three.
+
+27
+00:01:59,910 --> 00:02:02,870
+And then we can use Gnome inside of the function.
+
+28
+00:02:02,880 --> 00:02:06,710
+So in this case cancel dot log numb times numb.
+
+29
+00:02:06,960 --> 00:02:11,610
+It's just going to take whatever number was passed in the parentheses and square it.
+
+30
+00:02:11,970 --> 00:02:14,390
+So as you can see here's the examples.
+
+31
+00:02:14,580 --> 00:02:21,400
+Square 10 prints 100 square 3 print 9 square for prints 16.
+
+32
+00:02:21,420 --> 00:02:25,350
+So let's go ahead and write our own function to illustrate how we use arguments.
+
+33
+00:02:25,560 --> 00:02:27,750
+So we're going to write one called Say hello.
+
+34
+00:02:28,320 --> 00:02:30,800
+So function say hello and to start.
+
+35
+00:02:30,810 --> 00:02:34,970
+It's not going to take any arguments it will just look like this.
+
+36
+00:02:36,090 --> 00:02:41,070
+And then inside of here I'm going to type cancel that log.
+
+37
+00:02:42,210 --> 00:02:44,420
+Hello there with exclamation point.
+
+38
+00:02:44,580 --> 00:02:46,760
+And that's all your function will do for now.
+
+39
+00:02:46,760 --> 00:02:51,120
+And let's make this a little bit wider.
+
+40
+00:02:51,270 --> 00:02:57,140
+I hit enter and now I can run say hello and that's all it does.
+
+41
+00:02:57,720 --> 00:03:00,840
+So next I want to define a function called Say hello.
+
+42
+00:03:00,840 --> 00:03:05,910
+That takes a person's name and then it says hello there plus the person's name.
+
+43
+00:03:05,910 --> 00:03:14,010
+So to do that I'm just going to redefine say hello and this time it's not empty parentheses I'm going
+
+44
+00:03:14,010 --> 00:03:18,710
+to put something in here we can call it name or it person or a user.
+
+45
+00:03:18,750 --> 00:03:20,780
+I'm going to go with name though.
+
+46
+00:03:22,440 --> 00:03:25,630
+And now I'm going to write console dot log.
+
+47
+00:03:26,640 --> 00:03:32,650
+Hello there and then I'm going to add in name just like this.
+
+48
+00:03:32,820 --> 00:03:39,030
+And then I'll add my exclamation point at the end and then close the parentheses.
+
+49
+00:03:41,190 --> 00:03:46,500
+So as you can see name is just a placeholder for whatever value we pass in.
+
+50
+00:03:46,500 --> 00:03:48,070
+And then we're going to cancel that log.
+
+51
+00:03:48,120 --> 00:03:50,190
+Hello there with the name in the middle.
+
+52
+00:03:50,190 --> 00:03:51,890
+And then an exclamation point.
+
+53
+00:03:52,080 --> 00:04:02,530
+So to call this we now say say hello and then a name like rusty and we get hello there Rusty.
+
+54
+00:04:03,120 --> 00:04:12,140
+And this time I'll do say hello Charlie or say hello Mary and you can see that our code changes our
+
+55
+00:04:12,150 --> 00:04:16,120
+function has adapted to whatever value we passed in.
+
+56
+00:04:16,170 --> 00:04:20,450
+So the use of arguments is what makes our functions super powerful.
+
+57
+00:04:20,460 --> 00:04:27,060
+So on a Web site like Facebook there might be a function called Make home page and that make home page
+
+58
+00:04:27,340 --> 00:04:32,490
+is going to take information as arguments about the user who's logged in.
+
+59
+00:04:32,490 --> 00:04:38,640
+It's about making a little machine that can take in an argument and then spits something else out.
+
+60
+00:04:38,670 --> 00:04:45,120
+Also we're not limited just to one argument on this slide you can see that our functions can take multiple
+
+61
+00:04:45,120 --> 00:04:45,890
+arguments.
+
+62
+00:04:46,020 --> 00:04:50,660
+So here's an example of a function that calculates the area of a rectangle.
+
+63
+00:04:50,700 --> 00:04:55,330
+It takes a length and the width and then we just multiply them together.
+
+64
+00:04:55,400 --> 00:05:02,760
+Count about log length times with and then to call this function we just pass in two numbers separated
+
+65
+00:05:02,760 --> 00:05:03,930
+by a comma.
+
+66
+00:05:04,170 --> 00:05:07,130
+So the first value corresponds with length.
+
+67
+00:05:07,230 --> 00:05:09,660
+The second one corresponds with with.
+
+68
+00:05:09,690 --> 00:05:11,600
+So it just comes down to the order.
+
+69
+00:05:11,610 --> 00:05:18,560
+So if I switch these two and I put two first two would be length and nine would be with.
+
+70
+00:05:18,570 --> 00:05:24,690
+So here's another example where we have three arguments person one person to person three and then we
+
+71
+00:05:24,690 --> 00:05:28,370
+just say hi to all three of them with separate console that logs.
+
+72
+00:05:28,590 --> 00:05:34,840
+So let's copy this one and I'll just demonstrated here so I'll paste it in.
+
+73
+00:05:34,890 --> 00:05:37,840
+Now if I call greets with three names.
+
+74
+00:05:38,160 --> 00:05:49,470
+Harry Ron and Hermione the order dictates who is person one Harry who's person to run and who's person
+
+75
+00:05:49,470 --> 00:05:51,010
+three her mind.
+
+76
+00:05:51,570 --> 00:05:55,080
+And you can see that those values are placeholders and we get.
+
+77
+00:05:55,080 --> 00:05:55,770
+Hi harry.
+
+78
+00:05:55,800 --> 00:05:56,480
+Hi Ron.
+
+79
+00:05:56,610 --> 00:05:58,030
+Hi how my any.
+
+80
+00:05:58,290 --> 00:06:03,980
+One other interesting note is that I can write a function that is expecting an argument like right.
+
+81
+00:06:04,410 --> 00:06:07,100
+But if I leave those arguments off when I call it.
+
+82
+00:06:07,140 --> 00:06:13,800
+So if I just do this Harry and Ron and I leave her my auntie off I would never do that.
+
+83
+00:06:13,800 --> 00:06:18,890
+By the way as for mine he's my favorite but if I did that you see I get.
+
+84
+00:06:18,900 --> 00:06:19,840
+Hi harry.
+
+85
+00:06:19,920 --> 00:06:20,910
+Hi Ron.
+
+86
+00:06:20,910 --> 00:06:22,630
+And then a high undefined.
+
+87
+00:06:22,890 --> 00:06:24,760
+So it doesn't break my code.
+
+88
+00:06:24,840 --> 00:06:26,160
+I don't get an error message.
+
+89
+00:06:26,370 --> 00:06:32,010
+But what happens is that person 3 is just left as undefined in some programming languages.
+
+90
+00:06:32,070 --> 00:06:35,250
+This would stop everything and throw an error message in javascript.
+
+91
+00:06:35,280 --> 00:06:36,410
+It's totally fine.
+
+92
+00:06:36,450 --> 00:06:40,680
+It just means that you might have to watch out and check if something is undefined or not.
+
+93
+00:06:41,220 --> 00:06:46,530
+So arguments are one of the important pieces and functions that make them really really useful because
+
+94
+00:06:46,530 --> 00:06:52,860
+it's not only about shortening our code and repeating the same chunk of code every time like Twinkle
+
+95
+00:06:52,860 --> 00:06:54,080
+Twinkle Little Star.
+
+96
+00:06:54,330 --> 00:06:59,610
+It's also about making that code change a little bit depending on some inputs.
+
+97
+00:07:00,450 --> 00:07:04,550
+So here are a few examples of when we might use arguments in a real web app.
+
+98
+00:07:04,920 --> 00:07:10,710
+So imagine that we have a web game and in that game there's a score for every player and the player
+
+99
+00:07:10,710 --> 00:07:15,000
+can do things that can increment that score of suit or decrement that score.
+
+100
+00:07:15,000 --> 00:07:20,520
+So if a player does something crazy we might have a function called add to score and if we want to give
+
+101
+00:07:20,520 --> 00:07:23,870
+them a lot of points we would pass in 100 points.
+
+102
+00:07:24,090 --> 00:07:30,750
+If a user died we might subtract 100 points and if we want to award just a few points you might do something
+
+103
+00:07:30,750 --> 00:07:34,200
+like I had to score five.
+
+104
+00:07:34,230 --> 00:07:35,910
+So here's another example.
+
+105
+00:07:36,030 --> 00:07:38,570
+Imagine we had a site that had user lock in.
+
+106
+00:07:38,970 --> 00:07:46,350
+So we might have a function called check credentials and it would take two arguments an e-mail and a
+
+107
+00:07:46,350 --> 00:07:47,370
+password.
+
+108
+00:07:47,670 --> 00:07:51,360
+So we might pass something in like Rustie at gmail dot com.
+
+109
+00:07:51,750 --> 00:07:57,450
+And then a password like with 1 to 3 and then check credentials would take that e-mail and the password
+
+110
+00:07:57,810 --> 00:08:00,270
+and it would check them and make some decision.
+
+111
+00:08:00,270 --> 00:08:02,630
+So there would be probably an if statement in there.
+
+112
+00:08:02,730 --> 00:08:09,180
+It would check if they match correctly and if they did then log Jasin else it shows us an error message
+
+113
+00:08:09,180 --> 00:08:10,560
+.
+
+114
+00:08:10,560 --> 00:08:15,900
+So those are just two simple examples but we'll be writing code like that later on in this class.
+
+115
+00:08:16,020 --> 00:08:21,720
+The ability of functions to take arguments is one of if not the most important part of writing functions
+
+116
+00:08:21,740 --> 00:08:21,910
+.
+
+117
+00:08:22,080 --> 00:08:24,270
+It's not just about repeating code.
+
+118
+00:08:24,270 --> 00:08:27,870
+Singing the same twinkle twinkle little star over and over and over.
+
+119
+00:08:28,080 --> 00:08:33,720
+It's about repeating code that we can also change a little bit that we can have some variables in.
+
+120
+00:08:33,780 --> 00:08:36,140
+So arguments empower us they let us do that.
+

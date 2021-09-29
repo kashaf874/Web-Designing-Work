@@ -1,0 +1,632 @@
+﻿1
+00:00:00,480 --> 00:00:01,710
+Welcome back.
+
+2
+00:00:01,710 --> 00:00:06,660
+So in this lesson we're going to pick up right where we left off and we're going to see how do we change
+
+3
+00:00:06,660 --> 00:00:12,090
+together simple or boolean statements like the one we just saw into more complicated statements that
+
+4
+00:00:12,090 --> 00:00:14,070
+have multiple components.
+
+5
+00:00:14,250 --> 00:00:17,760
+So they're still all going to evaluate to be true or false at the end of the day.
+
+6
+00:00:17,940 --> 00:00:22,890
+But there might be multiple pieces that individually evaluate to be true or false before the entire
+
+7
+00:00:22,890 --> 00:00:25,010
+thing becomes true or false.
+
+8
+00:00:25,020 --> 00:00:30,570
+So there are three logical operators and like we said this is this is basically a way to chain together
+
+9
+00:00:30,640 --> 00:00:32,000
+fully in logic.
+
+10
+00:00:32,040 --> 00:00:36,350
+So those three are called AND OR and NOT.
+
+11
+00:00:36,750 --> 00:00:37,930
+So we're going to start talking right.
+
+12
+00:00:37,950 --> 00:00:40,190
+And and the way that works.
+
+13
+00:00:40,230 --> 00:00:47,430
+First of all you write it with two ampersands and you can see right here we're using it in an example
+
+14
+00:00:47,760 --> 00:00:51,690
+where x is equal to 5 and Y is equal to 9.
+
+15
+00:00:52,080 --> 00:00:54,440
+So and takes two sides.
+
+16
+00:00:54,440 --> 00:00:58,700
+There is a left side and a right side and goes in the middle.
+
+17
+00:00:58,740 --> 00:01:05,620
+So the way you would read this is X less than 10 and X not equal to 5.
+
+18
+00:01:05,670 --> 00:01:07,510
+So we'll evaluate both sides.
+
+19
+00:01:07,710 --> 00:01:09,370
+X is less than 10.
+
+20
+00:01:09,480 --> 00:01:11,640
+That is true.
+
+21
+00:01:11,850 --> 00:01:16,950
+Five is less than 10 x is not equal to 5 and that is false.
+
+22
+00:01:16,980 --> 00:01:19,770
+So we end up with true and false.
+
+23
+00:01:20,040 --> 00:01:24,260
+And the way that works is that it requires both sides to be true.
+
+24
+00:01:24,510 --> 00:01:31,170
+It requires both of them to be true Left and Right and that's not true in this case only the left side
+
+25
+00:01:31,170 --> 00:01:31,760
+is true.
+
+26
+00:01:31,770 --> 00:01:34,190
+So the entire thing is false.
+
+27
+00:01:34,710 --> 00:01:39,650
+The way that or works is slightly different it still takes both sides.
+
+28
+00:01:39,810 --> 00:01:45,360
+But it only requires that one of them be true left or right be true in order for the whole thing to
+
+29
+00:01:45,360 --> 00:01:46,040
+be true.
+
+30
+00:01:46,410 --> 00:01:52,860
+Just a side note the character here the pipe character is located above most peoples enter or return
+
+31
+00:01:52,860 --> 00:01:56,360
+key and you usually need to hit shift to make it work.
+
+32
+00:01:56,520 --> 00:02:00,270
+So two of those is how you write or in Javascript.
+
+33
+00:02:00,270 --> 00:02:03,490
+So the Left Side Y is greater than nine.
+
+34
+00:02:03,930 --> 00:02:12,730
+That is not true because Y has 9 or X is triple equal to 5 which is true X is 5.
+
+35
+00:02:12,990 --> 00:02:20,670
+So we end up with false or true which evaluates to be true overall because or only requires one side
+
+36
+00:02:20,670 --> 00:02:21,660
+to be true.
+
+37
+00:02:22,590 --> 00:02:27,310
+Lastly we have not and the way that not works it's a little bit different.
+
+38
+00:02:27,360 --> 00:02:33,270
+It doesn't take a left or right side it just negates or flips the value of what ever we apply it to
+
+39
+00:02:33,270 --> 00:02:33,630
+.
+
+40
+00:02:33,630 --> 00:02:38,780
+So if something was true and we put a knot in front of it it then becomes false.
+
+41
+00:02:38,820 --> 00:02:42,510
+If something was false and we put a knot in front of it it then becomes true.
+
+42
+00:02:43,110 --> 00:02:47,980
+So in this case the expression X triple equals Y which is false.
+
+43
+00:02:48,000 --> 00:02:50,030
+Five is not equal to nine.
+
+44
+00:02:50,070 --> 00:02:55,710
+So the inside is false but there is a bang or a knot in front of it which negates the whole thing and
+
+45
+00:02:55,710 --> 00:02:57,580
+turns it to be true.
+
+46
+00:02:58,890 --> 00:03:02,070
+So let's go ahead and give this a shot with a quick exercise.
+
+47
+00:03:02,430 --> 00:03:04,220
+So below there are three lines of code.
+
+48
+00:03:04,290 --> 00:03:11,040
+We have a variable x set to turn a variable y equal to the string A and then a short expression here
+
+49
+00:03:11,490 --> 00:03:13,710
+that is using or in the middle.
+
+50
+00:03:13,710 --> 00:03:15,770
+So go ahead and evaluate this yourself.
+
+51
+00:03:15,900 --> 00:03:17,870
+Don't just copy and paste it into the console.
+
+52
+00:03:17,940 --> 00:03:19,130
+We'll go over a solution.
+
+53
+00:03:19,230 --> 00:03:21,310
+So just try and predict what the outcome is.
+
+54
+00:03:21,330 --> 00:03:24,750
+If it is true or false based off of what we've covered so far.
+
+55
+00:03:25,170 --> 00:03:27,080
+OK.
+
+56
+00:03:28,800 --> 00:03:34,720
+So this exercise if we plug in 10 for X and the string A for y.
+
+57
+00:03:34,920 --> 00:03:40,000
+Let's start on the left string a triple equals the string B.
+
+58
+00:03:40,140 --> 00:03:47,850
+That is not true or x is greater than or equal to 10 which is true because X is 10.
+
+59
+00:03:48,180 --> 00:03:53,590
+So we have false or true which gives us of course true.
+
+60
+00:03:54,000 --> 00:03:59,490
+And we could definitely evaluate this over in the console just to verify our work just Center and you'll
+
+61
+00:03:59,490 --> 00:04:01,560
+see that we get true.
+
+62
+00:04:01,590 --> 00:04:03,150
+So one more exercise here.
+
+63
+00:04:03,330 --> 00:04:07,290
+This time it's a little bit longer but it's the same basic components.
+
+64
+00:04:07,500 --> 00:04:10,740
+So resist temptation just to type it into your cons..
+
+65
+00:04:10,770 --> 00:04:16,200
+Make sure you plug in three for X and 8 for Y and see if you can figure out if the whole expression
+
+66
+00:04:16,200 --> 00:04:18,710
+is true or false.
+
+67
+00:04:20,160 --> 00:04:21,270
+OK.
+
+68
+00:04:21,270 --> 00:04:22,420
+So hopefully you did that.
+
+69
+00:04:22,500 --> 00:04:24,160
+Let's go over the answer now.
+
+70
+00:04:24,840 --> 00:04:29,040
+So as I do this let's start by identifying the overall pattern here.
+
+71
+00:04:29,310 --> 00:04:35,160
+So we've got a left side and a right side with an and in the middle.
+
+72
+00:04:35,250 --> 00:04:37,810
+So we need both of these to be true.
+
+73
+00:04:38,250 --> 00:04:40,290
+So let's start with the left side.
+
+74
+00:04:40,590 --> 00:04:43,360
+We have X is 3 y is 8.
+
+75
+00:04:43,440 --> 00:04:50,790
+So this first line X which is three the number double equals three the string that is true because double
+
+76
+00:04:50,790 --> 00:04:53,060
+equals or.
+
+77
+00:04:53,340 --> 00:04:55,120
+And this is a small point here.
+
+78
+00:04:55,260 --> 00:05:01,950
+But technically if the left side of an OR statement is already true that means the entire statement
+
+79
+00:05:01,950 --> 00:05:02,790
+is true.
+
+80
+00:05:03,220 --> 00:05:08,220
+Javascript doesn't even care what's over here it's called short circuiting because we only need one
+
+81
+00:05:08,220 --> 00:05:09,500
+out of two to be true.
+
+82
+00:05:09,540 --> 00:05:11,930
+If we already get that on the left then we're done.
+
+83
+00:05:12,120 --> 00:05:17,580
+But just to evaluate this for more practice X triple equals Y is false.
+
+84
+00:05:17,580 --> 00:05:22,190
+Three is not the same as eight so this whole thing evaluates to true.
+
+85
+00:05:22,290 --> 00:05:24,610
+However there's also a bang here.
+
+86
+00:05:24,890 --> 00:05:31,250
+So that negates the whole thing to be false and just like before this actually short circuits the entire
+
+87
+00:05:31,250 --> 00:05:37,790
+expression because we haven't and here and if the left side is false that means the entire and must
+
+88
+00:05:37,790 --> 00:05:43,100
+be false because we were looking for two out of two and if we've already missed one and this is false
+
+89
+00:05:43,550 --> 00:05:45,420
+then it doesn't matter what's over here.
+
+90
+00:05:45,470 --> 00:05:46,690
+So the whole thing is false.
+
+91
+00:05:46,820 --> 00:05:48,580
+But just to verify that.
+
+92
+00:05:48,620 --> 00:05:50,160
+Let's go over to this side.
+
+93
+00:05:50,450 --> 00:05:54,980
+So we have an and in the middle Why is not equal to 8.
+
+94
+00:05:55,220 --> 00:05:58,780
+That is false and we haven't and in the middle.
+
+95
+00:05:59,030 --> 00:06:01,160
+So that short circuits one more time.
+
+96
+00:06:01,160 --> 00:06:02,360
+This entire thing.
+
+97
+00:06:02,630 --> 00:06:07,130
+Because if we have the left side is already false then it doesn't matter what the right side is.
+
+98
+00:06:07,250 --> 00:06:13,960
+But just to double check once again X is less than or equal to Y three is less than or equal to 8.
+
+99
+00:06:13,960 --> 00:06:15,130
+That is true.
+
+100
+00:06:15,170 --> 00:06:18,500
+So we end up with false and true which is false.
+
+101
+00:06:18,710 --> 00:06:20,470
+And then we negate that whole thing.
+
+102
+00:06:20,660 --> 00:06:21,830
+So that gives us true.
+
+103
+00:06:22,220 --> 00:06:25,350
+So we have false and true.
+
+104
+00:06:26,480 --> 00:06:28,190
+So that evaluates to be false.
+
+105
+00:06:28,400 --> 00:06:32,200
+And just to double check you can paste it into the con..
+
+106
+00:06:32,360 --> 00:06:35,150
+And if we do that we get false.
+
+107
+00:06:36,350 --> 00:06:42,500
+So we have one less thing to cover here which is this idea that every value in javascript is inherently
+
+108
+00:06:42,500 --> 00:06:45,230
+truthy or falsie.
+
+109
+00:06:45,290 --> 00:06:51,590
+So aside from the obvious bully and true and false which are clearly true or false every other value
+
+110
+00:06:51,590 --> 00:06:55,870
+has this inherent truthiness or falseness that javascript assigns them.
+
+111
+00:06:56,860 --> 00:07:00,460
+So I'm going to open up my console and just show you a way of finding this out.
+
+112
+00:07:00,950 --> 00:07:07,430
+So if I just want to know if the string hello is true or false see if I just type the string and hit
+
+113
+00:07:07,430 --> 00:07:10,230
+enter it's just going to give me the string back.
+
+114
+00:07:10,550 --> 00:07:15,710
+So what I can do is actually put it in a boolean statement and the simplest one is just to negate it
+
+115
+00:07:15,720 --> 00:07:16,180
+.
+
+116
+00:07:16,640 --> 00:07:23,870
+So if I negate the string hello and I get true back that tells me that the string hello is falsie because
+
+117
+00:07:23,870 --> 00:07:30,650
+I indicated Likewise if I get false back that tells me that the string hello is truthy and I do get
+
+118
+00:07:30,650 --> 00:07:33,490
+false which means that the string hello is Trixy.
+
+119
+00:07:33,530 --> 00:07:39,680
+The other thing that I can do is double negated which will flip it and then flip it back and tell me
+
+120
+00:07:41,390 --> 00:07:42,740
+that it's truthy.
+
+121
+00:07:43,130 --> 00:07:48,680
+And likewise I can do the same thing on an empty string and you'll see that it's an empty string is
+
+122
+00:07:48,680 --> 00:07:50,180
+actually falsie.
+
+123
+00:07:50,510 --> 00:07:52,280
+Same thing with no
+
+124
+00:07:55,040 --> 00:08:00,000
+0 not a number.
+
+125
+00:08:01,370 --> 00:08:04,570
+And when you do negative 1 you'll see that it's actually true.
+
+126
+00:08:05,270 --> 00:08:08,760
+So these are things that in some languages behave a little bit differently.
+
+127
+00:08:08,990 --> 00:08:14,370
+So just because in javascript negative one is truthy that does not mean that in other languages it is
+
+128
+00:08:14,430 --> 00:08:16,360
+automatically Trixy.
+
+129
+00:08:17,480 --> 00:08:19,180
+So here's a quick recap.
+
+130
+00:08:19,190 --> 00:08:27,890
+The hard rule is that the values false zero empty string no undefined and not a number are always falsie
+
+131
+00:08:28,250 --> 00:08:32,280
+and everything else is truthy.
+
+132
+00:08:32,390 --> 00:08:38,300
+So we have one less exercise here which is just like the others except now it's testing truthiness and
+
+133
+00:08:38,300 --> 00:08:39,230
+faultiness.
+
+134
+00:08:39,470 --> 00:08:44,530
+So three strings and empty string string ha ha and the string false.
+
+135
+00:08:44,660 --> 00:08:48,560
+Evaluate this don't just run the consul we'll go over solution.
+
+136
+00:08:48,560 --> 00:08:51,310
+Plug in the values mentally and see what you come up with.
+
+137
+00:08:51,320 --> 00:08:52,290
+It's a whole thing true.
+
+138
+00:08:52,290 --> 00:08:55,200
+Or is the whole thing false.
+
+139
+00:08:56,990 --> 00:08:57,840
+OK.
+
+140
+00:08:58,100 --> 00:09:02,320
+So the answer here is plug in string message and is funny.
+
+141
+00:09:02,660 --> 00:09:08,820
+So you'll notice that we have an oar and something else.
+
+142
+00:09:08,840 --> 00:09:11,030
+So let's go ahead and solve this first.
+
+143
+00:09:11,030 --> 00:09:12,830
+Or on the left.
+
+144
+00:09:12,830 --> 00:09:18,080
+So we have S T R or string which is an empty string which is falsie.
+
+145
+00:09:18,080 --> 00:09:22,330
+So false or the string ha ha.
+
+146
+00:09:22,550 --> 00:09:23,910
+Which is truthy.
+
+147
+00:09:24,080 --> 00:09:29,410
+So false or true which gives us true for this little section here.
+
+148
+00:09:29,540 --> 00:09:38,030
+Then we have true and is funny which is the string false which is which is a little tricky but the string
+
+149
+00:09:38,030 --> 00:09:43,820
+falls could always double check is truthy.
+
+150
+00:09:44,030 --> 00:09:50,160
+So that tells me that true and true is true.
+
+151
+00:09:50,420 --> 00:09:54,860
+And the last thing you have to do is negate the entire thing which will give me false.
+
+152
+00:09:54,860 --> 00:09:59,840
+So just to verify that you can copy this answer and I get false.
+
+153
+00:09:59,930 --> 00:10:01,020
+Great.
+
+154
+00:10:01,040 --> 00:10:06,950
+So in the next section we're actually going to see how we make decisions in javascript using these boolean
+
+155
+00:10:07,040 --> 00:10:09,050
+logic expressions that we've just talked about.
+
+156
+00:10:09,290 --> 00:10:11,260
+How do we run some code.
+
+157
+00:10:11,480 --> 00:10:13,540
+If something is false how do we run some other code.
+
+158
+00:10:13,550 --> 00:10:14,390
+If something is true
+

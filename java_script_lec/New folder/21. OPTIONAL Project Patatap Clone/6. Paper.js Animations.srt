@@ -1,0 +1,704 @@
+﻿1
+00:00:00,370 --> 00:00:01,460
+OK we'll welcome back.
+
+2
+00:00:01,620 --> 00:00:06,150
+So in this video we're going to take what we've done already and we're going to animate it slightly
+
+3
+00:00:06,160 --> 00:00:06,430
+.
+
+4
+00:00:06,720 --> 00:00:12,090
+So eventually what we want to happen is that for every key press we get a circle in a random location
+
+5
+00:00:14,010 --> 00:00:17,360
+with a color and that color animate slightly.
+
+6
+00:00:18,300 --> 00:00:21,120
+And we also get the size animation.
+
+7
+00:00:21,460 --> 00:00:25,620
+So I don't know if you could pick up on the color changing but it's it's pretty sleights for just adding
+
+8
+00:00:25,620 --> 00:00:26,980
+a little bit to the hue.
+
+9
+00:00:27,330 --> 00:00:30,220
+But either one of those will do for us to start.
+
+10
+00:00:30,210 --> 00:00:34,770
+We're going to start actually just changing the color of these circles and we're actually going to start
+
+11
+00:00:34,770 --> 00:00:37,950
+simpler by just changing the color of one circle.
+
+12
+00:00:38,040 --> 00:00:40,660
+So not all of them that will come later.
+
+13
+00:00:40,680 --> 00:00:48,150
+So if we go to Paperchase go back to tutorials and you look at animation at the bottom.
+
+14
+00:00:48,150 --> 00:00:51,400
+First thing that you can do is take a look at some of the examples.
+
+15
+00:00:51,540 --> 00:00:53,180
+Here's an example.
+
+16
+00:00:53,730 --> 00:00:57,440
+And you can see it's really really simple actually to do the animation.
+
+17
+00:00:57,440 --> 00:01:01,260
+What we do is we define something in this case a rectangle.
+
+18
+00:01:01,260 --> 00:01:08,310
+In our case it will be a circle and then there's this on frame and whatever code we put in here will
+
+19
+00:01:08,310 --> 00:01:11,610
+run on every frame of the animation.
+
+20
+00:01:11,610 --> 00:01:18,360
+So in this case every frame of this animation we're rotating that rectangle three degrees or in this
+
+21
+00:01:18,360 --> 00:01:26,730
+case which is what we're going to use every frame we're adding one to the hue of this circle that we
+
+22
+00:01:26,760 --> 00:01:28,200
+defined up here.
+
+23
+00:01:28,980 --> 00:01:31,580
+So let's try this out.
+
+24
+00:01:31,770 --> 00:01:35,290
+Let's go ahead and make a new circle not inside the key down.
+
+25
+00:01:35,310 --> 00:01:38,290
+So this will just always be there when the page loads.
+
+26
+00:01:38,430 --> 00:01:50,250
+So we'll call it var animate circle equals new path dot circle and will have it be new points and let's
+
+27
+00:01:50,250 --> 00:01:55,870
+make this circle at 300 comma 300 and the radius.
+
+28
+00:01:56,010 --> 00:01:58,200
+Let's make it larger 100.
+
+29
+00:01:58,560 --> 00:01:59,870
+Just like that.
+
+30
+00:02:00,150 --> 00:02:09,190
+And then we'll do animated and what's called animated circle rather than animate dot fill color and
+
+31
+00:02:09,260 --> 00:02:12,380
+set it to be red to start just like that.
+
+32
+00:02:12,540 --> 00:02:13,790
+Great.
+
+33
+00:02:13,890 --> 00:02:18,690
+So it's not going to be animated yet but if you refresh we get one big circle and every time I hit a
+
+34
+00:02:18,690 --> 00:02:22,260
+key we get smaller circles that are random.
+
+35
+00:02:22,260 --> 00:02:31,110
+Now we need to add in our animation and it's really simple as we saw function on frame and we can pass
+
+36
+00:02:31,110 --> 00:02:33,640
+in or out except this event argument.
+
+37
+00:02:33,660 --> 00:02:38,790
+If we wanted to do something with each frame if we wanted some data about it we don't actually need
+
+38
+00:02:38,790 --> 00:02:39,560
+that.
+
+39
+00:02:39,840 --> 00:02:48,050
+And then all of do in here is to animated circle dot fill color that you plus equals one.
+
+40
+00:02:48,120 --> 00:02:50,750
+And this is straight from that example.
+
+41
+00:02:50,820 --> 00:02:57,330
+So every time animation requests a new frame which isn't up to us so we're not deciding the frame rate
+
+42
+00:02:57,480 --> 00:02:59,730
+how often this code is called.
+
+43
+00:02:59,790 --> 00:03:06,570
+Anytime there's a new frame which paper just takes care of we're adding one to the hue of her animated
+
+44
+00:03:06,570 --> 00:03:08,160
+circle.
+
+45
+00:03:08,160 --> 00:03:10,650
+Let's refresh and there we go.
+
+46
+00:03:10,650 --> 00:03:13,720
+So really really simple to do that sort of an animation.
+
+47
+00:03:13,830 --> 00:03:20,040
+We can also do animations though wherever changing position of something and that is a little bit more
+
+48
+00:03:20,040 --> 00:03:21,250
+complicated.
+
+49
+00:03:21,270 --> 00:03:26,760
+This one happens to be even more complex this example because they're not just animated something from
+
+50
+00:03:26,760 --> 00:03:31,360
+one point to another point and it's also not accelerating evenly.
+
+51
+00:03:31,410 --> 00:03:35,630
+So it's a little more complex but still only a few lines.
+
+52
+00:03:36,600 --> 00:03:39,830
+Here's another example of moving things.
+
+53
+00:03:40,500 --> 00:03:42,610
+Some other animations.
+
+54
+00:03:42,610 --> 00:03:48,450
+What we're going to do though is use something they don't show and the examples here that I spend a
+
+55
+00:03:48,450 --> 00:03:54,840
+little bit of time digging into the docs what we want to do is just scale each one down every frame
+
+56
+00:03:54,840 --> 00:03:56,280
+.
+
+57
+00:03:56,340 --> 00:04:00,360
+So what we do is basically when I press a key we make a circle.
+
+58
+00:04:00,390 --> 00:04:09,060
+Let's say it starts out as 300 by 300 or 300 radius excuse me when I hit that character every frame
+
+59
+00:04:09,060 --> 00:04:15,680
+or shrinking it a little bit by basically scaling it by point nine nine point nine eight.
+
+60
+00:04:15,720 --> 00:04:22,590
+I forget the exact number but we're multiplying it by a smaller size every frame and it just shrinks
+
+61
+00:04:22,590 --> 00:04:24,760
+and shrinks so it disappears.
+
+62
+00:04:25,110 --> 00:04:26,940
+So I'll show you how that works.
+
+63
+00:04:27,090 --> 00:04:35,130
+Let's go back to our code we have the circle still animating and inside of on frame rather than just
+
+64
+00:04:35,250 --> 00:04:36,910
+adding one to the hue.
+
+65
+00:04:37,110 --> 00:04:40,370
+What we'll do is do animated circle
+
+66
+00:04:42,910 --> 00:04:51,950
+dot scale which is a method that I found and we can multiply by any fraction that we want if we just
+
+67
+00:04:51,950 --> 00:04:55,760
+leave it at one it will stay the same size so we won't actually see it.
+
+68
+00:04:55,970 --> 00:05:08,600
+But if we do something like point nine and we refresh There we go every frame changes hewe by 1.
+
+69
+00:05:08,960 --> 00:05:14,560
+And it scales by point nine or 90 percent of what it was in the previous frame.
+
+70
+00:05:14,570 --> 00:05:23,960
+So if we change that to something like Point 9 9 to be a slower transition down and if we change it
+
+71
+00:05:23,960 --> 00:05:30,540
+to something like point five it's going to shrink very very quickly.
+
+72
+00:05:30,680 --> 00:05:34,090
+So every frame it gets half as big as it was in the previous run.
+
+73
+00:05:34,280 --> 00:05:37,180
+So I think what I went with was Point 9 to start.
+
+74
+00:05:37,370 --> 00:05:39,040
+So we'll leave it at that.
+
+75
+00:05:39,140 --> 00:05:45,680
+And now we have a single circle changing color and shrinking what we want to do next is when I hit these
+
+76
+00:05:45,680 --> 00:05:46,530
+other keys.
+
+77
+00:05:46,730 --> 00:05:52,300
+You want those circles to do the same thing and that's a little bit more complicated.
+
+78
+00:05:52,490 --> 00:05:58,730
+But honestly the code here it will stay the same all that's different is that we need to do this for
+
+79
+00:05:58,760 --> 00:06:01,410
+every circle that's on the page.
+
+80
+00:06:01,790 --> 00:06:06,410
+And this is probably the most drastic change that will make what will actually do is have an array of
+
+81
+00:06:06,410 --> 00:06:12,950
+circles and every time we press a key We'll add that circle in that new array because right now we're
+
+82
+00:06:12,950 --> 00:06:17,380
+not actually keeping track of all the circles we need to save all of them somehow.
+
+83
+00:06:17,420 --> 00:06:24,830
+So that on frame right here in this function we can then refer back to every circle that already exists
+
+84
+00:06:24,890 --> 00:06:26,240
+and animated.
+
+85
+00:06:26,840 --> 00:06:28,210
+So we'll keep this code.
+
+86
+00:06:28,610 --> 00:06:33,770
+But what we want to do is loop through an array that doesn't exist so we'll just call it circles.
+
+87
+00:06:33,770 --> 00:06:42,230
+So for var i equals zero Ayas less than Circle StarLink.
+
+88
+00:06:42,690 --> 00:06:47,420
+Plus plus what we want to do is do circles.
+
+89
+00:06:47,580 --> 00:06:50,260
+I fill color does here.
+
+90
+00:06:50,260 --> 00:06:54,130
+So we'll just start with the fill color just at the very beginning.
+
+91
+00:06:54,140 --> 00:06:56,500
+So I'll just copy this line.
+
+92
+00:06:58,550 --> 00:07:01,050
+So it's not going to work yet because circle's doesn't exist.
+
+93
+00:07:01,070 --> 00:07:08,780
+But the idea is that on every frame we loop through all circles in this array and we add one to each
+
+94
+00:07:08,780 --> 00:07:11,590
+one hue every frame.
+
+95
+00:07:12,470 --> 00:07:17,900
+And you might think that that's pretty intense and it is it's a lot of stuff happening but paper just
+
+96
+00:07:17,900 --> 00:07:18,760
+takes care of it.
+
+97
+00:07:18,890 --> 00:07:25,550
+But we'll also be adding in a small optimization towards the end so I'll show you what I mean in a future
+
+98
+00:07:25,550 --> 00:07:25,910
+video.
+
+99
+00:07:25,910 --> 00:07:27,780
+But for now this is what we'll do.
+
+100
+00:07:28,340 --> 00:07:35,660
+And all we have to do now is actually add this circle that we're making into the circles array so we
+
+101
+00:07:35,660 --> 00:07:42,590
+can define that array for our circles is an empty array to start and then when you press a key on key
+
+102
+00:07:42,590 --> 00:07:51,830
+down we'll just do circles up push this new circle in circle stop push this new path out circle at this
+
+103
+00:07:51,830 --> 00:07:53,140
+random point.
+
+104
+00:07:53,240 --> 00:07:58,180
+Right now we have a radius of 10 and resetting the kill fill color as orange.
+
+105
+00:07:58,220 --> 00:08:03,660
+So we're just pushing that circle that we already had into this circle's array.
+
+106
+00:08:04,040 --> 00:08:06,830
+And then we're updating every circle.
+
+107
+00:08:06,830 --> 00:08:09,950
+So there might be one circle there might be 20 circles.
+
+108
+00:08:10,070 --> 00:08:12,270
+There might be 100 circles at any given time.
+
+109
+00:08:12,320 --> 00:08:19,790
+We loop through all of them and add one to each queue and if we take a look right now and refresh it
+
+110
+00:08:19,790 --> 00:08:21,670
+doesn't quite work yet.
+
+111
+00:08:21,770 --> 00:08:25,550
+And this brings up a really interesting point about how push works.
+
+112
+00:08:25,550 --> 00:08:33,650
+So if I open the console it tells me I cannot read Prakriti hue of undefined mind 24 which is right
+
+113
+00:08:33,650 --> 00:08:34,570
+here.
+
+114
+00:08:35,150 --> 00:08:41,150
+So it's not somehow it's not reading that Hugh property of Phil color saying Phil code doesn't exist
+
+115
+00:08:41,150 --> 00:08:41,490
+.
+
+116
+00:08:41,540 --> 00:08:43,870
+So let's do a constant log circles.
+
+117
+00:08:44,330 --> 00:08:48,390
+And you'll see what the problem is.
+
+118
+00:08:49,100 --> 00:08:53,610
+If I open this up it's stopped because we had an error.
+
+119
+00:08:53,780 --> 00:09:00,390
+But we actually added orange the string into the array not the actual new circle.
+
+120
+00:09:00,530 --> 00:09:06,710
+And that's because what we're pushing in is not just a new circle we're making the new circle.
+
+121
+00:09:06,740 --> 00:09:09,470
+And then we're setting the fill color to be orange.
+
+122
+00:09:09,500 --> 00:09:13,010
+So the last thing that was returned was the string orange.
+
+123
+00:09:13,010 --> 00:09:16,780
+So the end result is that we're just pushing in orange every time.
+
+124
+00:09:16,850 --> 00:09:18,530
+Which is not what we want.
+
+125
+00:09:19,190 --> 00:09:28,310
+So we'll make a new variable we'll call it our new circle and then we'll do new circle dot fill color
+
+126
+00:09:28,310 --> 00:09:35,920
+separately equals orange and then we'll push in New Circle.
+
+127
+00:09:35,990 --> 00:09:40,480
+So rather than editing this out I do think it's an important error to see.
+
+128
+00:09:40,760 --> 00:09:44,870
+Totally caught me off guard for a moment there but it's important to understand how that works where
+
+129
+00:09:44,870 --> 00:09:51,760
+we have those those chained methods on top of one another where we had passed that circle and then dot
+
+130
+00:09:51,770 --> 00:09:56,450
+fill color equals orange and we just added that whole thing into the array with push.
+
+131
+00:09:56,560 --> 00:09:57,800
+We were just adding orange in.
+
+132
+00:09:57,830 --> 00:09:59,980
+So we need to fix it.
+
+133
+00:10:00,110 --> 00:10:01,290
+So hopefully this does it.
+
+134
+00:10:01,310 --> 00:10:08,300
+And actually I know it does but if we are fresh and take a look now add in new circles randomly placed
+
+135
+00:10:09,700 --> 00:10:15,290
+and they all enemy the Heugh animate so just perfect.
+
+136
+00:10:15,290 --> 00:10:17,450
+Now let's update this to work with size.
+
+137
+00:10:17,570 --> 00:10:21,550
+So it's actually just this exact same line that we have here.
+
+138
+00:10:22,280 --> 00:10:23,860
+I'll get rid of our constant not log.
+
+139
+00:10:23,930 --> 00:10:26,140
+Except we want circles.
+
+140
+00:10:26,160 --> 00:10:28,420
+I.
+
+141
+00:10:30,680 --> 00:10:31,370
+OK.
+
+142
+00:10:31,730 --> 00:10:36,420
+So before I show you if it works let's just review what we did.
+
+143
+00:10:36,440 --> 00:10:42,860
+So when you hit any key we add in a circle at a random point 2 we make a random point to make a new
+
+144
+00:10:42,860 --> 00:10:49,100
+circle with that random point 10 pixel radius and lets actually change that to match what we have in
+
+145
+00:10:49,100 --> 00:10:54,590
+the solution which is five hundred and then we're selling the fill card to start as orange which will
+
+146
+00:10:54,590 --> 00:10:55,770
+change eventually.
+
+147
+00:10:55,880 --> 00:10:58,840
+And then we push that into an array called circles.
+
+148
+00:10:59,060 --> 00:11:07,200
+Then every time a new frame is called Every animation frame we're looping through all circles.
+
+149
+00:11:07,520 --> 00:11:13,180
+And for each one we're adding one to the hewe and we're multiplying the size of the scale by point nine
+
+150
+00:11:13,200 --> 00:11:13,310
+.
+
+151
+00:11:13,430 --> 00:11:17,260
+So we're shrinking it just by tiny bit every frame.
+
+152
+00:11:17,360 --> 00:11:22,130
+But there are so many frames that it actually shrinks pretty quickly and we can get rid of our animated
+
+153
+00:11:22,130 --> 00:11:26,540
+circle now that starts on page load.
+
+154
+00:11:26,540 --> 00:11:28,240
+We don't want to start with a black screen.
+
+155
+00:11:28,250 --> 00:11:30,700
+And then when you hit a key we add a circle.
+
+156
+00:11:30,710 --> 00:11:33,320
+So let's try it.
+
+157
+00:11:33,320 --> 00:11:37,110
+There we go.
+
+158
+00:11:37,130 --> 00:11:40,920
+So this is almost exactly the same way.
+
+159
+00:11:40,980 --> 00:11:43,130
+Here is the sound.
+
+160
+00:11:43,130 --> 00:11:51,260
+One big difference is that the color says these every key has an assigned color here so Q Is this blue
+
+161
+00:11:52,220 --> 00:11:54,000
+a darker blue half.
+
+162
+00:11:54,110 --> 00:11:55,810
+Is it gray.
+
+163
+00:11:55,980 --> 00:12:02,310
+So on our it's a purple right now here we're setting everyone to start is orange and then changing the
+
+164
+00:12:02,310 --> 00:12:03,070
+hue.
+
+165
+00:12:03,500 --> 00:12:08,500
+So we will need to fix that but I mean wait to do that until we add in sound.
+
+166
+00:12:08,510 --> 00:12:10,990
+So we're done for now.
+
+167
+00:12:11,210 --> 00:12:16,820
+There is a small optimization that will make it the end because right now we're never removing those
+
+168
+00:12:16,820 --> 00:12:19,000
+circles from the circle array.
+
+169
+00:12:19,040 --> 00:12:25,490
+So even if you know after 10 seconds that circle has gone even after three seconds we don't see it.
+
+170
+00:12:25,490 --> 00:12:27,330
+Technically it's still in that array.
+
+171
+00:12:27,620 --> 00:12:29,540
+So that's not ideal.
+
+172
+00:12:29,540 --> 00:12:34,640
+If we had ten thousand circles that we had created and we don't see any of them we don't want to be
+
+173
+00:12:34,640 --> 00:12:36,170
+looping over all of them.
+
+174
+00:12:36,170 --> 00:12:41,360
+So in the last video I'll show you how we can remove a circle when we know that it's gone or when we
+
+175
+00:12:41,360 --> 00:12:43,090
+know that it's no longer feasible.
+
+176
+00:12:43,490 --> 00:12:45,320
+OK so next up we'll work with sound
+

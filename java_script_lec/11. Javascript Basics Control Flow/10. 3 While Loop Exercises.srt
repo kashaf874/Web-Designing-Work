@@ -1,0 +1,216 @@
+﻿1
+00:00:00,460 --> 00:00:01,400
+I'll write.
+
+2
+00:00:01,440 --> 00:00:03,730
+So it's time for another quick problem set.
+
+3
+00:00:03,900 --> 00:00:06,780
+This time we're covering wild loops and Javascript.
+
+4
+00:00:07,020 --> 00:00:12,480
+So there are three problems here and rather than you writing code I'm actually giving you code and all
+
+5
+00:00:12,480 --> 00:00:15,450
+I need to do is evaluate what is printed out.
+
+6
+00:00:15,930 --> 00:00:17,130
+So here's the first one.
+
+7
+00:00:17,130 --> 00:00:22,200
+Take a moment pause the video if you need to but please don't just copy the code to your console unless
+
+8
+00:00:22,200 --> 00:00:26,290
+you want to check the answer that you've come up with on your own.
+
+9
+00:00:28,290 --> 00:00:33,990
+So the answer to this one is that it prints out the odd numbers from 1 to 9.
+
+10
+00:00:34,360 --> 00:00:37,660
+And the reason that it does that starts with not equal to 1.
+
+11
+00:00:38,130 --> 00:00:38,710
+Wow.
+
+12
+00:00:38,820 --> 00:00:40,560
+Nahm is less than equal to 10.
+
+13
+00:00:40,560 --> 00:00:43,930
+Print out the number so we print out one and then we add two.
+
+14
+00:00:44,190 --> 00:00:46,870
+So then we go through with the number three.
+
+15
+00:00:46,920 --> 00:00:48,110
+That's less than 10.
+
+16
+00:00:48,120 --> 00:00:53,720
+We print out three and then we go to 5 and it keeps going until we're at nine.
+
+17
+00:00:53,750 --> 00:00:57,510
+Cancel that log nine nine plus equals two.
+
+18
+00:00:57,510 --> 00:01:01,710
+So then we're at 11 and that's no longer less than or equal to 10.
+
+19
+00:01:01,710 --> 00:01:07,920
+So just to verify that if I opened up my javascript counsel here and I paste that in you'll see I get
+
+20
+00:01:07,920 --> 00:01:09,620
+1 through 9.
+
+21
+00:01:09,630 --> 00:01:13,820
+There is one small confusing thing which is that it looks like it printed out 11.
+
+22
+00:01:14,040 --> 00:01:15,630
+But you'll notice it's slightly different.
+
+23
+00:01:15,630 --> 00:01:19,820
+There's this arrow here that we don't see on any of the other ones and we also don't have the sort of
+
+24
+00:01:19,830 --> 00:01:26,070
+link next to 11 so what's actually happening here is that the consul is showing us the value of the
+
+25
+00:01:26,070 --> 00:01:28,290
+last evaluated expression.
+
+26
+00:01:28,380 --> 00:01:35,160
+So even though it's not printed out to is still added to 9 so 11 is the last thing that is evaluated
+
+27
+00:01:35,610 --> 00:01:38,810
+and the Crome Council just shows that to us without printing it out.
+
+28
+00:01:38,970 --> 00:01:41,250
+So let's move on to the next one.
+
+29
+00:01:41,280 --> 00:01:46,020
+Take a moment pause the video if you need to take a longer look and then we'll go over the solution
+
+30
+00:01:46,020 --> 00:01:47,330
+.
+
+31
+00:01:47,370 --> 00:01:52,640
+So this one is going to print out all the multiples of 4 between 1 and 20.
+
+32
+00:01:53,370 --> 00:01:55,990
+So Gnome starts at 1.
+
+33
+00:01:56,040 --> 00:02:00,420
+While Nahm is less than or equal to 20 so we have an if statement inside of a loop.
+
+34
+00:02:00,540 --> 00:02:07,350
+And this if statement is checking if a number is a multiple of four so if number mod 4 is equal to zero
+
+35
+00:02:07,890 --> 00:02:10,520
+which means does 4 divide evenly.
+
+36
+00:02:10,650 --> 00:02:12,510
+If it does printed out.
+
+37
+00:02:12,990 --> 00:02:20,700
+So the first time through we go through 1 2 3 4 and now for maade for is zero.
+
+38
+00:02:20,700 --> 00:02:24,740
+So we print out the number 4 and then we go through again with 5.
+
+39
+00:02:24,760 --> 00:02:32,250
+Nothing happens 6 nothing happens 7 nothing happens 8 8 mod 4 is also 0.
+
+40
+00:02:32,280 --> 00:02:33,950
+So with constant out log number.
+
+41
+00:02:34,230 --> 00:02:35,740
+So just to verify that.
+
+42
+00:02:35,970 --> 00:02:37,140
+Open up the con..
+
+43
+00:02:37,170 --> 00:02:43,180
+You can paste it in and you see we get 4 8 12 16 and 20.
+
+44
+00:02:44,460 --> 00:02:45,960
+So one more here.
+
+45
+00:02:46,620 --> 00:02:51,230
+Take a moment Pozza screen again will go over a solution in just a second.
+
+46
+00:02:52,230 --> 00:02:53,870
+So this one's a little bit tricky.
+
+47
+00:02:53,910 --> 00:03:00,280
+It's actually an infinite loop so you'll see that number starts at 100 and this code will run.
+
+48
+00:03:00,420 --> 00:03:08,180
+While the number is less than 150 So 100 is less than 150 then we're printing out a number plus one
+
+49
+00:03:08,200 --> 00:03:08,660
+.
+
+50
+00:03:09,210 --> 00:03:13,210
+But the important line is here where subtracting one from number every time.
+
+51
+00:03:13,410 --> 00:03:18,180
+So it starts at 100 and we're going the other direction we're subtracting.
+
+52
+00:03:18,180 --> 00:03:20,470
+So it's always going to be less than 150.
+
+53
+00:03:20,790 --> 00:03:22,790
+So I'm not going to run this in the con..
+
+54
+00:03:22,920 --> 00:03:25,150
+But if I did it would tell me I have an infinite loop
+

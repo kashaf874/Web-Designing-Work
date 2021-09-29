@@ -1,0 +1,292 @@
+﻿1
+00:00:00,420 --> 00:00:01,690
+Already Welcome back.
+
+2
+00:00:01,980 --> 00:00:03,600
+So I have some very good news.
+
+3
+00:00:03,600 --> 00:00:08,130
+It's finally time for us to take javascript and combine it with our H.M.S. assess.
+
+4
+00:00:08,250 --> 00:00:10,160
+This is by far my favorite unit.
+
+5
+00:00:10,170 --> 00:00:13,800
+My favorite topic to teach out everything that I've spent my life teaching.
+
+6
+00:00:13,860 --> 00:00:16,180
+It's really where javascript starts to payoff.
+
+7
+00:00:16,200 --> 00:00:18,480
+So we've been doing some simple apps up until this point.
+
+8
+00:00:18,540 --> 00:00:23,340
+Simple to do list using alerts and prompts and I know it's not very exciting but that's all going to
+
+9
+00:00:23,340 --> 00:00:27,310
+change now because we're about to really unleash the power of Javascript.
+
+10
+00:00:27,510 --> 00:00:31,830
+And then this unit we're going to do things like make an interactive game we're going to make a real
+
+11
+00:00:31,830 --> 00:00:38,070
+to do list with a real form with real buttons and checkboxes and Javascript behind it and animations
+
+12
+00:00:38,070 --> 00:00:43,200
+and all sorts of really interesting exciting things where you really feel like you made something not
+
+13
+00:00:43,200 --> 00:00:48,360
+just a little command line or a little javascript console app but something real that you could share
+
+14
+00:00:48,360 --> 00:00:48,830
+.
+
+15
+00:00:48,840 --> 00:00:55,410
+So the way that we do all of this is through a technology called the DOM t o m it's that.
+
+16
+00:00:55,530 --> 00:01:00,210
+So this lesson is going to serve as an introduction to the DOM going to talk about a few things in next
+
+17
+00:01:00,210 --> 00:01:01,090
+few videos.
+
+18
+00:01:01,140 --> 00:01:05,450
+I want to start by defining what the DOM is what those letters stand for.
+
+19
+00:01:05,460 --> 00:01:08,300
+I want you to have a good understanding of why this is exciting.
+
+20
+00:01:08,310 --> 00:01:12,180
+I'm going to show you some cool applications that other people have built using this stuff that we're
+
+21
+00:01:12,180 --> 00:01:17,000
+going to learn then we're going to talk about what I call the select then manipulate workflow.
+
+22
+00:01:17,250 --> 00:01:19,230
+So let's get started.
+
+23
+00:01:19,230 --> 00:01:20,910
+So why should you care about all of this.
+
+24
+00:01:21,000 --> 00:01:22,550
+Well there are so many reasons.
+
+25
+00:01:22,680 --> 00:01:29,550
+Virtually every big web app out there right now things like Twitter and Facebook Instagram YouTube Gmail
+
+26
+00:01:29,790 --> 00:01:35,610
+they all use a ton of javascript and most of that javascript is interacting with the dog interacting
+
+27
+00:01:35,610 --> 00:01:40,890
+with each team out and the SS So we interact with the Dom to do things like games.
+
+28
+00:01:41,130 --> 00:01:46,740
+We could make tic tac toe we could make a platform a game like Mario we can use it to do more practical
+
+29
+00:01:46,740 --> 00:01:50,780
+things like drop down menus form validations.
+
+30
+00:01:50,980 --> 00:01:52,760
+Thats how we make web pages interactive.
+
+31
+00:01:52,770 --> 00:01:54,470
+Its how we can add animations.
+
+32
+00:01:54,600 --> 00:01:59,520
+And the last one here really sums it up pretty much every awesome site ever although really just in
+
+33
+00:01:59,520 --> 00:02:04,710
+the last few years uses a lot of javascript to manipulate the Dom as I mentioned earlier I am going
+
+34
+00:02:04,710 --> 00:02:09,270
+to show you a few examples first before we start defining these terms talk about what the DOM is how
+
+35
+00:02:09,270 --> 00:02:10,040
+it works.
+
+36
+00:02:10,080 --> 00:02:11,870
+I want to show you a few web sites.
+
+37
+00:02:12,540 --> 00:02:17,370
+So the first one is just google and I dont know how much you pay attention to this but when you start
+
+38
+00:02:17,370 --> 00:02:20,910
+to search for something on Google like Halo.
+
+39
+00:02:21,000 --> 00:02:27,060
+Notice how I get this thing that appears this is all its Timo this is some sort of div or something
+
+40
+00:02:27,060 --> 00:02:33,000
+thats being hit in and shown and its changing as I type things like if I type hello kitty I get new
+
+41
+00:02:33,000 --> 00:02:34,020
+results.
+
+42
+00:02:34,020 --> 00:02:38,190
+Thats all done with javascript but this is the kind of thing that we're going to be able to do after
+
+43
+00:02:38,190 --> 00:02:39,080
+a few videos.
+
+44
+00:02:39,120 --> 00:02:43,140
+Of course we won't be able to write the backend that Google has but we'll be able to do the front end
+
+45
+00:02:43,140 --> 00:02:43,770
+stuff here.
+
+46
+00:02:43,770 --> 00:02:49,090
+All of the HMO all the success all these effects that you see will easily be able to replicate.
+
+47
+00:02:49,110 --> 00:02:54,000
+So the next thing that I want to highlight is on you Tomi's website there's this Brough's courses button
+
+48
+00:02:54,380 --> 00:02:59,280
+and when I click on it I get the slide out menu that pushes everything over to the right and I have
+
+49
+00:02:59,280 --> 00:03:01,000
+all these categories to pick from.
+
+50
+00:03:01,290 --> 00:03:06,400
+And as a hover over a category you can see I get this sub menu that pops up.
+
+51
+00:03:06,660 --> 00:03:11,140
+So that's all them javascript things are being added to the page new aged him out elements.
+
+52
+00:03:11,140 --> 00:03:13,230
+These are probably list items and anchor tags.
+
+53
+00:03:13,350 --> 00:03:17,970
+They're being added to the page being hidden and shown in color is changing as I scroll over things
+
+54
+00:03:18,420 --> 00:03:19,790
+lots of interactivity.
+
+55
+00:03:19,830 --> 00:03:22,430
+So the next thing that I want to show is one of my favorites.
+
+56
+00:03:22,650 --> 00:03:24,560
+It's a Web site called pad attack.
+
+57
+00:03:24,780 --> 00:03:26,030
+So this is a little bit different.
+
+58
+00:03:26,100 --> 00:03:31,410
+It's not really a web application that you would use but it's a really fun toy and a great tech demo
+
+59
+00:03:31,410 --> 00:03:33,210
+of what you can do with H.T. mouse.
+
+60
+00:03:33,250 --> 00:03:37,940
+SS In javascript so I highly recommend that you go ahead and try this on your own.
+
+61
+00:03:38,080 --> 00:03:45,660
+Patta tap dot com and I have to do is start typing on my keyboard in every key that I press corresponds
+
+62
+00:03:45,660 --> 00:03:48,810
+to a sound that plays and a cool animation that plays.
+
+63
+00:03:48,900 --> 00:03:51,940
+So let me show you an example.
+
+64
+00:03:52,080 --> 00:03:54,100
+Here's another one.
+
+65
+00:03:55,860 --> 00:03:57,040
+So you can get lost somewhere
+
+66
+00:03:59,100 --> 00:04:02,230
+.
+
+67
+00:04:03,510 --> 00:04:06,010
+So this sums up the kind of thing that we can do.
+
+68
+00:04:06,120 --> 00:04:11,880
+We have interactivity where I'm pressing a key so the code is running only when I press a particular
+
+69
+00:04:11,890 --> 00:04:19,710
+key and then that code is not only playing as sound but it's also changing what we see visually.
+
+70
+00:04:19,710 --> 00:04:23,970
+So it's not just constantly logging it's not just using alerts it's actually changing the screen the
+
+71
+00:04:24,200 --> 00:04:26,280
+came out in the CSSA that we see.
+
+72
+00:04:26,700 --> 00:04:31,110
+So hopefully those examples got you at least a little bit excited about all of the awesome stuff we're
+
+73
+00:04:31,110 --> 00:04:31,790
+about to learn.
+

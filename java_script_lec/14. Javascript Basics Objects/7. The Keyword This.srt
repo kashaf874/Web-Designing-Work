@@ -1,0 +1,372 @@
+﻿1
+00:00:00,300 --> 00:00:05,690
+So I have another practical example of a really usage case for adding methods to an object.
+
+2
+00:00:05,710 --> 00:00:08,300
+There's a popular javascript library called the underscore J.
+
+3
+00:00:08,300 --> 00:00:08,840
+Yes.
+
+4
+00:00:08,910 --> 00:00:13,110
+And we'll talk more about what libraries are but for now think of it as just a bunch of code.
+
+5
+00:00:13,140 --> 00:00:15,200
+Someone else wrote that we can use.
+
+6
+00:00:15,570 --> 00:00:19,880
+So all that underscore is is a bunch of functions that someone else wrote.
+
+7
+00:00:20,050 --> 00:00:21,590
+We can see them here.
+
+8
+00:00:21,630 --> 00:00:23,720
+Each one of these is a different function.
+
+9
+00:00:23,850 --> 00:00:31,050
+So we've got things like find every Some contains min max sort by and doesn't really matter how they
+
+10
+00:00:31,050 --> 00:00:32,210
+work or what they do.
+
+11
+00:00:32,250 --> 00:00:35,110
+But it's important that I show you that there are a lot of them.
+
+12
+00:00:35,850 --> 00:00:42,690
+So underscore name spaces all of them together a group of them altogether instead of an object called
+
+13
+00:00:42,720 --> 00:00:43,230
+underscore.
+
+14
+00:00:43,260 --> 00:00:47,350
+Just to underscore character so you can see this is how you call them.
+
+15
+00:00:47,520 --> 00:00:57,480
+Underscore make this a little bigger underscore dot map underscore dot reduce and that's just done so
+
+16
+00:00:57,480 --> 00:01:02,010
+that all these methods are grouped together so that you know everything that starts with underscore
+
+17
+00:01:02,250 --> 00:01:04,340
+is coming from this underscore library.
+
+18
+00:01:04,350 --> 00:01:06,070
+You didn't write it yourself.
+
+19
+00:01:06,270 --> 00:01:09,430
+We'll eventually talk about how we import a library like underscore.
+
+20
+00:01:09,510 --> 00:01:12,260
+You'll see how we could even write something like underscore eventually.
+
+21
+00:01:12,450 --> 00:01:15,210
+But what I want to show here is not the code itself.
+
+22
+00:01:15,420 --> 00:01:19,510
+I just want to show the fact that everything is grouped inside of an underscore object.
+
+23
+00:01:19,560 --> 00:01:25,230
+So rather than dog space or cat space they decided to use a really short memorable character which is
+
+24
+00:01:25,230 --> 00:01:27,100
+underscore.
+
+25
+00:01:27,390 --> 00:01:33,060
+There's one more thing I want to highlight in this video which is the key word this so in javascript
+
+26
+00:01:33,150 --> 00:01:38,610
+there's a special word this that we can use in different contexts to do different things.
+
+27
+00:01:38,700 --> 00:01:43,710
+So to demonstrate what it does and how it works I'm going to go ahead and do a quick example.
+
+28
+00:01:44,160 --> 00:01:49,500
+So let's suppose that I'm making an app that has some comments and I want to have some common data stored
+
+29
+00:01:49,530 --> 00:01:55,350
+instead of an object as well as a few methods like print or delete that I want to be stored instead
+
+30
+00:01:55,350 --> 00:01:56,440
+of an object as well.
+
+31
+00:01:56,460 --> 00:02:03,030
+Just like we saw with the speak method so I'm going to define a namespace called comments.
+
+32
+00:02:03,030 --> 00:02:08,490
+So var comments it's going to be an object and I'm just going to start with it being empty.
+
+33
+00:02:08,490 --> 00:02:14,840
+Next I'm going to define the data property which is just an array of comments.
+
+34
+00:02:15,090 --> 00:02:21,630
+So it's some silly comments just like this.
+
+35
+00:02:21,630 --> 00:02:22,600
+And we hit enter.
+
+36
+00:02:22,830 --> 00:02:29,640
+So we have comments like this where we just have one property data and that property has that array
+
+37
+00:02:29,640 --> 00:02:31,680
+has three different comments in it.
+
+38
+00:02:32,070 --> 00:02:37,350
+So if I wanted to make a method called print what I could do is define a function separately just like
+
+39
+00:02:37,350 --> 00:02:42,270
+this function print and it takes in an array.
+
+40
+00:02:43,080 --> 00:02:49,110
+And all I want to do is just cancel dot log each comment so I could do it in a weird way where I did
+
+41
+00:02:49,170 --> 00:02:51,880
+print and then I just did a for each.
+
+42
+00:02:51,960 --> 00:02:59,810
+So array for each function call it element.
+
+43
+00:03:03,840 --> 00:03:06,830
+And then I cancel that log.
+
+44
+00:03:07,820 --> 00:03:12,380
+L So this function right now is not a method.
+
+45
+00:03:12,420 --> 00:03:19,290
+It exists outside of my comments object and if I wanted to print out common stock data I would have
+
+46
+00:03:19,290 --> 00:03:25,690
+to run print and then pass in comments dot data.
+
+47
+00:03:26,010 --> 00:03:30,990
+So that's what we've been doing up until this point defining our functions separately in the global
+
+48
+00:03:30,990 --> 00:03:32,260
+window namespace.
+
+49
+00:03:32,500 --> 00:03:35,970
+But if I want to add it to the comments object all I need to do.
+
+50
+00:03:36,150 --> 00:03:41,230
+I mean copy my code here and I'm going to go back here and say comments.
+
+51
+00:03:41,280 --> 00:03:42,800
+Print equals.
+
+52
+00:03:42,830 --> 00:03:46,350
+You're going to paste my function and I can leave this name here.
+
+53
+00:03:46,350 --> 00:03:48,980
+I'm going to get rid of it though because it's unnecessary to name it.
+
+54
+00:03:48,990 --> 00:03:50,250
+There as well.
+
+55
+00:03:50,790 --> 00:03:56,220
+And rather than having it take an array as an argument I want it to use what we already have instead
+
+56
+00:03:56,220 --> 00:03:59,990
+of comments which is we already have the data in the same object.
+
+57
+00:04:00,210 --> 00:04:03,850
+So is there a way for me to share the data instead of an object.
+
+58
+00:04:03,870 --> 00:04:07,610
+So I can use common stock data inside of common stock print.
+
+59
+00:04:07,620 --> 00:04:08,790
+And the answer is yes.
+
+60
+00:04:09,060 --> 00:04:11,730
+And that's where the this keyword comes in.
+
+61
+00:04:11,760 --> 00:04:13,670
+So I don't need any argument.
+
+62
+00:04:13,860 --> 00:04:20,310
+If I only want this to do is print whatever is in common data instead of a radar for each.
+
+63
+00:04:20,550 --> 00:04:23,670
+I can actually write this dot data.
+
+64
+00:04:24,180 --> 00:04:27,660
+So the keyword this is a little bit tricky in different situations.
+
+65
+00:04:27,660 --> 00:04:29,260
+It means different things.
+
+66
+00:04:29,280 --> 00:04:31,860
+Definitely one of the quirkier parts of javascript.
+
+67
+00:04:31,860 --> 00:04:33,780
+A lot of interview questions focus on it.
+
+68
+00:04:33,780 --> 00:04:36,640
+So it's something that even experts will struggle with.
+
+69
+00:04:36,660 --> 00:04:41,430
+We're going to spend a lot more time with the key word this as we go forward when we learn about events
+
+70
+00:04:41,880 --> 00:04:46,710
+when we talk about Jay query and when we move to the back end and talk about databases as well.
+
+71
+00:04:46,710 --> 00:04:55,110
+So for now in this case the word this refers to the object comments so I'll show you if I hit enter
+
+72
+00:04:55,110 --> 00:04:55,780
+here.
+
+73
+00:04:55,920 --> 00:05:00,660
+Let's look at what common looks like now it has two things.
+
+74
+00:05:00,660 --> 00:05:03,870
+Data and array and then this print method.
+
+75
+00:05:04,110 --> 00:05:08,070
+And remember that the print method is referring to this data.
+
+76
+00:05:08,100 --> 00:05:13,880
+So when we're inside a print this is referring to the entire object that has data inside of it.
+
+77
+00:05:13,950 --> 00:05:19,860
+So this data is how we can go from inside a print can access this data.
+
+78
+00:05:19,860 --> 00:05:26,940
+So to use that method now all I need to do is say comments Prince and we get our three comments printed
+
+79
+00:05:26,940 --> 00:05:27,880
+out.
+
+80
+00:05:27,900 --> 00:05:32,670
+So what I've just shown is a really common pattern for how we organize code.
+
+81
+00:05:32,670 --> 00:05:38,010
+We can take some data put it inside of an object and then take associated functions and functionality
+
+82
+00:05:38,010 --> 00:05:44,340
+and add them as methods to the same object and use the keyword this to access the data that we predefined
+
+83
+00:05:44,350 --> 00:05:44,790
+.
+
+84
+00:05:45,210 --> 00:05:49,600
+If you're feeling a little bit confused about the key word this that's definitely to be expected.
+
+85
+00:05:49,620 --> 00:05:51,390
+We only have just scratched the surface.
+
+86
+00:05:51,390 --> 00:05:54,440
+And as I mentioned we're going to keep revisiting it over and over.
+
+87
+00:05:54,630 --> 00:05:57,960
+All I want you to understand is that there is a keyword called this.
+
+88
+00:05:57,960 --> 00:05:59,150
+It's a little bit tricky.
+
+89
+00:05:59,340 --> 00:06:07,800
+And in one context the one that I showed here by writing this instead of a method it refers to the object
+
+90
+00:06:07,950 --> 00:06:09,540
+that the method is defined in.
+
+91
+00:06:09,930 --> 00:06:12,170
+OK so that's it for objects for now.
+
+92
+00:06:12,360 --> 00:06:13,410
+Very exciting.
+
+93
+00:06:13,410 --> 00:06:18,590
+Next up we get to finally talk about HDMI and see assess interacting with our javascript
+

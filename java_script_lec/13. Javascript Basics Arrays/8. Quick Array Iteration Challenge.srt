@@ -1,0 +1,244 @@
+﻿1
+00:00:00,270 --> 00:00:01,620
+OK welcome back.
+
+2
+00:00:01,620 --> 00:00:06,630
+So as I mentioned at the end of the last video on iterating through an array with four loops and four
+
+3
+00:00:06,630 --> 00:00:09,640
+inches this is going to be a very quick exercise.
+
+4
+00:00:09,630 --> 00:00:14,040
+There's only one here and all you need to do is evaluate this code.
+
+5
+00:00:14,250 --> 00:00:17,010
+So we have two arrays and we're doing a for each.
+
+6
+00:00:17,190 --> 00:00:22,260
+So take a moment try and walk through this mentally or remember what we talked about how foreach works
+
+7
+00:00:22,260 --> 00:00:26,140
+how it's different than a for loop what array iteration is.
+
+8
+00:00:26,220 --> 00:00:30,720
+All of that and take a moment to think about what this prints out and then we'll go over it.
+
+9
+00:00:30,900 --> 00:00:31,300
+All right.
+
+10
+00:00:31,350 --> 00:00:35,140
+So puzzle video don't cheat.
+
+11
+00:00:36,120 --> 00:00:37,050
+OK great.
+
+12
+00:00:37,050 --> 00:00:42,050
+So let's take a moment first to appreciate how impressive that animation was.
+
+13
+00:00:42,180 --> 00:00:46,260
+Here let me show it to you again and I can even change colors.
+
+14
+00:00:46,420 --> 00:00:49,250
+And there's a few more animations Tim's like you're not really that impressed.
+
+15
+00:00:49,320 --> 00:00:51,420
+So let's just talk about the solution I guess.
+
+16
+00:00:51,450 --> 00:00:58,920
+So to arrays numbers which is an array of numbers going from one to 10 and colors are all colors array
+
+17
+00:00:59,250 --> 00:01:02,630
+red orange yellow and green for strings.
+
+18
+00:01:02,700 --> 00:01:05,970
+Then we're running numbers dot for each.
+
+19
+00:01:06,240 --> 00:01:12,480
+And I tried to confuse you a little bit where I threw a few wrenches in here where we have the variable
+
+20
+00:01:12,480 --> 00:01:19,310
+name color which is not a good name for this for each because we're not dealing with colors.
+
+21
+00:01:19,320 --> 00:01:22,070
+We're running for each on the numbers array.
+
+22
+00:01:22,110 --> 00:01:27,140
+So we're running foreach on this array and it takes this whole function right there.
+
+23
+00:01:27,360 --> 00:01:30,240
+And it applies it to every single item in this array.
+
+24
+00:01:30,240 --> 00:01:32,700
+So in this case 10 different numbers.
+
+25
+00:01:33,390 --> 00:01:39,750
+And again recalling that temporary variable name the placeholder color but it's going to be referring
+
+26
+00:01:39,750 --> 00:01:43,370
+to numbers in our case but it doesn't actually matter as far as JavaScript concerned.
+
+27
+00:01:43,380 --> 00:01:48,630
+This is just like any other function argument that we declare that we write it can be named whatever
+
+28
+00:01:48,630 --> 00:01:54,610
+we want as long as it follows the basic rules of javascript where it's a valid name for a variable.
+
+29
+00:01:55,140 --> 00:02:02,360
+And then I threw a little Maggiolo in here so if color mod 3 is equal to zero.
+
+30
+00:02:02,490 --> 00:02:08,560
+So what that means is that the number needs to be evenly divisible by three.
+
+31
+00:02:08,790 --> 00:02:12,750
+If that's the case then we print out color which is actually a number.
+
+32
+00:02:13,260 --> 00:02:15,860
+So loop through all of them.
+
+33
+00:02:15,900 --> 00:02:23,040
+This will be run but only on a few of them will this constant out log be executed.
+
+34
+00:02:23,460 --> 00:02:28,580
+So the numbers that are divisible by 3 are 3 6 and 9.
+
+35
+00:02:28,590 --> 00:02:31,440
+So we would expect to see 3 6 and 9.
+
+36
+00:02:31,950 --> 00:02:34,750
+And just to walk you through that first few numbers.
+
+37
+00:02:35,100 --> 00:02:40,510
+First time through this code is called with 10:01 as color.
+
+38
+00:02:40,920 --> 00:02:44,190
+So color is equal to 1 if color mod 3 is zero.
+
+39
+00:02:44,220 --> 00:02:44,920
+That's false.
+
+40
+00:02:44,940 --> 00:02:46,830
+So we're done then.
+
+41
+00:02:46,890 --> 00:02:49,680
+For each does the same thing with two.
+
+42
+00:02:50,400 --> 00:02:53,450
+And it passes two into this function as color.
+
+43
+00:02:53,670 --> 00:02:57,220
+So color mod 3 that's also not equal to zero.
+
+44
+00:02:57,300 --> 00:02:58,720
+So we don't don't like it.
+
+45
+00:02:58,950 --> 00:03:04,410
+And then next this is the last and I'll do three is passed in to this function.
+
+46
+00:03:04,590 --> 00:03:08,460
+So colors three three my three is zero.
+
+47
+00:03:08,460 --> 00:03:10,640
+So we find they print out colored.
+
+48
+00:03:11,100 --> 00:03:17,560
+So let's copy this up and evaluate the whole thing and we get 3 6 and 9.
+
+49
+00:03:17,790 --> 00:03:18,190
+Awesome.
+
+50
+00:03:18,210 --> 00:03:19,730
+So that's all we need to do here.
+
+51
+00:03:19,740 --> 00:03:20,940
+Quick exercise.
+
+52
+00:03:20,940 --> 00:03:22,780
+I made it a little bit tricky.
+
+53
+00:03:22,860 --> 00:03:24,720
+What would be a good practice for you.
+
+54
+00:03:24,720 --> 00:03:30,290
+Another good exercise is to go through and just rewrite this code that will only print out 3 6 and 9
+
+55
+00:03:30,290 --> 00:03:30,330
+.
+
+56
+00:03:30,330 --> 00:03:32,850
+Only the numbers that are divisible by three.
+
+57
+00:03:32,880 --> 00:03:38,580
+So not just always 3 6 and 9 but if we had 50 items in this array it should always print out the ones
+
+58
+00:03:38,850 --> 00:03:42,390
+divisible by three but use a for loop rather than for each.
+
+59
+00:03:42,390 --> 00:03:46,060
+So rewrite or translate this code into a for loop.
+
+60
+00:03:46,620 --> 00:03:46,960
+Great.
+
+61
+00:03:46,980 --> 00:03:51,280
+I'll see in the next video where we return to our To-Do list and we implement a re iteration
+

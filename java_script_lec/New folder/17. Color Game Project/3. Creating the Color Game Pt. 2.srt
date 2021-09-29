@@ -1,0 +1,992 @@
+﻿1
+00:00:00,180 --> 00:00:01,330
+W porządku, witaj z powrotem.
+
+2
+00:00:01,530 --> 00:00:03,330
+Zacznijmy od tego.
+
+3
+00:00:03,330 --> 00:00:05,160
+RG będzie zgadywania aplikacji gry.
+
+4
+00:00:05,220 --> 00:00:10,270
+Najpierw zrobię plik h tim, a C S S i utworzę prostą siatkę.
+
+5
+00:00:10,290 --> 00:00:14,460
+Więc nie zamierzamy stylizować go za pomocą kolorów tła i czcionek,
+
+6
+00:00:14,820 --> 00:00:19,980
+a teraz to już tylko zaczynamy proste od sześciu kwadratów i nadamy im trochę
+
+7
+00:00:19,980 --> 00:00:25,110
+kolorów tła, może trochę między nimi, ale nie będziemy dodawać zaokrąglone rogi, ale nie
+
+8
+00:00:25,110 --> 00:00:26,340
+będziemy dodawać żadnych animacji.
+
+9
+00:00:26,420 --> 00:00:31,710
+Zanikanie i zanikanie wszystkiego, co zrobimy, to zdobycie sześciu kwadratów, a następnie dodamy podstawową logikę szybkich
+
+10
+00:00:31,710 --> 00:00:34,780
+zdarzeń i sprawdzenie, czy otrzymamy właściwy kolor i tak dalej.
+
+11
+00:00:34,950 --> 00:00:37,970
+Więc najpierw musimy zrobić mu kopię pliku, który mam tutaj.
+
+12
+00:00:37,980 --> 00:00:42,910
+Ja nazywam tę kolorową grę za każdym razem, więc dodamy tutaj nasz zespół.
+
+13
+00:00:43,110 --> 00:00:44,070
+Płyta kotła.
+
+14
+00:00:44,430 --> 00:00:45,370
+Daj mu tytuł.
+
+15
+00:00:45,420 --> 00:00:47,090
+Zagram kolorową grę.
+
+16
+00:00:47,910 --> 00:00:50,450
+Dodajmy sześć kwadratów.
+
+17
+00:00:50,610 --> 00:00:51,790
+Więc zamierzam zrobić z nich divy.
+
+18
+00:00:51,810 --> 00:00:57,090
+Każdy z nich jest div z klasą kwadratu, a my użyjemy tej kwadratowej klasy do ich późniejszego stylu.
+
+19
+00:00:57,510 --> 00:01:05,610
+W porządku, więc zrobimy div class równy Square i nie będziemy musieli wkładać niczego do środka, a
+
+20
+00:01:05,610 --> 00:01:07,380
+będziemy mieli ich sześć.
+
+21
+00:01:07,380 --> 00:01:12,660
+A potem, po prostu, żeby zrobić to czystsze, zamierzam umieścić je wszystkie zamiast innego elementu div, który będziemy
+
+22
+00:01:12,660 --> 00:01:13,410
+mogli później stylizować.
+
+23
+00:01:13,560 --> 00:01:15,490
+Mam zamiar nazwać to pojemnikiem.
+
+24
+00:01:15,810 --> 00:01:18,210
+Więc nie zrobi nic z góry.
+
+25
+00:01:18,240 --> 00:01:22,510
+Ostatecznie użyjemy go, aby strona była responsywna i aby sieć się zmniejszyła.
+
+26
+00:01:22,530 --> 00:01:26,640
+Na razie po prostu je pogrupujemy, więc nie będziemy mieli tylko 6 pól.
+
+27
+00:01:26,850 --> 00:01:28,970
+OK, więc mamy tutaj sześć kwadratów.
+
+28
+00:01:29,160 --> 00:01:33,270
+Jeśli otworzymy to w grze przeglądarkowej, która mu się spodoba.
+
+29
+00:01:33,600 --> 00:01:36,420
+Nie widzimy niczego oczywiście z kilku powodów.
+
+30
+00:01:36,430 --> 00:01:42,360
+Jeden, mimo że mamy sześć div, których nie ma. Nie ma marginesu, nie ma koloru, więc
+
+31
+00:01:42,360 --> 00:01:43,390
+nic nie widzimy.
+
+32
+00:01:43,710 --> 00:01:46,520
+Więc zaczniemy od stylizacji ich w zasadzie.
+
+33
+00:01:46,710 --> 00:01:52,800
+Musisz więc dodać arkusz stylów, więc najpierw utworzę link do arkusza stylów, którego nie utworzyłem i sprawię, że
+
+34
+00:01:52,800 --> 00:01:53,700
+będzie trochę większy.
+
+35
+00:01:53,820 --> 00:02:04,650
+Nazwę to kolorową grą, zobacz SS i zapisz, a potem utwórz tę grę kolorystyczną plików C Ss, a pierwszą rzeczą,
+
+36
+00:02:04,650 --> 00:02:10,110
+którą zrobię, jest dodanie koloru tła do całego naszego ciała.
+
+37
+00:02:10,140 --> 00:02:17,600
+Jak dotąd kolor tła i kolor, który zamierzam użyć, to kod szesnastkowy.
+
+38
+00:02:17,730 --> 00:02:23,960
+To jest 2 3 2 3 2 3 i zapisz, upewnij się, że jest podłączony.
+
+39
+00:02:24,120 --> 00:02:24,510
+Tak.
+
+40
+00:02:24,630 --> 00:02:26,810
+Otrzymujemy poprawny kolor tła.
+
+41
+00:02:26,820 --> 00:02:31,730
+Dalej idź do przodu i zacznij układać nasze kwadraty.
+
+42
+00:02:32,040 --> 00:02:38,100
+Zamierzamy użyć tej samej strategii, której używamy do stworzenia witryny VSS dla fotografii, w
+
+43
+00:02:38,100 --> 00:02:40,410
+której mieliśmy responsywną siatkę kwadratowych obrazów.
+
+44
+00:02:40,410 --> 00:02:41,640
+Wszystkie były czarno-białe.
+
+45
+00:02:41,670 --> 00:02:43,400
+Czy możesz użyć tego samego pomysłu tutaj.
+
+46
+00:02:43,410 --> 00:02:49,770
+Więc sposób, w jaki to zrobimy, polega na tym, że każdy z nich znajduje się wewnątrz kontenera i każdy z
+
+47
+00:02:49,770 --> 00:02:51,870
+nich zajmuje 30 procent tego kontenera.
+
+48
+00:02:51,870 --> 00:02:55,000
+Więc pojemnik idzie tylko wokół tych kwadratów.
+
+49
+00:02:55,020 --> 00:02:58,100
+Tu nie chodzi o całe ciało wokół kwadratów.
+
+50
+00:02:58,140 --> 00:03:02,360
+Zajmują 30 procent, a następnie mamy margines między nimi ze wszystkich stron.
+
+51
+00:03:02,540 --> 00:03:04,180
+1. 6 6 procent.
+
+52
+00:03:04,320 --> 00:03:07,770
+Wszystko to składa się na 100 procent kontenera.
+
+53
+00:03:08,040 --> 00:03:13,880
+Więc zrobimy pierwszy kwadrat z 30 procentami.
+
+54
+00:03:14,460 --> 00:03:22,140
+A jeśli możemy to po prostu zostawić i dać mu tło, zróbmy je fioletowe i uratujmy i
+
+55
+00:03:22,140 --> 00:03:24,060
+nie widzimy jeszcze nic.
+
+56
+00:03:24,150 --> 00:03:29,820
+A powód, dla którego to się dzieje, pokażę ci, jeśli sprawdzimy, czy nasze życie jest na stronie.
+
+57
+00:03:29,850 --> 00:03:31,400
+Po prostu wciąż są puste.
+
+58
+00:03:31,410 --> 00:03:32,610
+Co musimy zrobić.
+
+59
+00:03:32,640 --> 00:03:38,480
+Ostatnim razem mieliśmy obrazy i obrazy, które mają w sobie pewną zawartość, ale te elementy są puste.
+
+60
+00:03:38,640 --> 00:03:42,280
+Więc dodamy trochę przestrzeni i użyjemy podkładki dolnej.
+
+61
+00:03:42,330 --> 00:03:49,000
+Moglibyśmy również użyć wierzchu do wyściełania, ale tak, aby wyściełało dno, a także 30 procent.
+
+62
+00:03:49,410 --> 00:03:50,680
+Więc jeśli odświeżam.
+
+63
+00:03:51,080 --> 00:03:51,940
+OK.
+
+64
+00:03:52,290 --> 00:03:57,480
+Teraz mamy sześć kwadratów, chociaż wszystkie są w linii, której nie chcemy.
+
+65
+00:03:57,480 --> 00:03:59,280
+Chcemy, aby były na tej samej linii.
+
+66
+00:03:59,610 --> 00:04:03,420
+Musimy więc przesunąć je na lewo, co też zrobiliśmy z siatką obrazów.
+
+67
+00:04:03,420 --> 00:04:06,480
+Więc pływaj w lewo i ocal odświeżamy.
+
+68
+00:04:06,750 --> 00:04:09,400
+A teraz kończymy z tą ogromną siatką tutaj.
+
+69
+00:04:09,670 --> 00:04:12,990
+Och, idź dalej i na marginesie, żebyś mógł zobaczyć, co się dzieje.
+
+70
+00:04:13,020 --> 00:04:19,590
+Więc będziemy mieli margines 1. 6 6 procent i oszczędzaj.
+
+71
+00:04:19,790 --> 00:04:25,630
+Teraz możesz zobaczyć, że mamy tutaj naszą siatkę, a ta siatka zajmuje cały ekran.
+
+72
+00:04:25,670 --> 00:04:27,530
+Więc trochę to zmienię.
+
+73
+00:04:27,530 --> 00:04:29,400
+Nie chcemy, żeby była tak ogromna.
+
+74
+00:04:29,690 --> 00:04:35,270
+A my możemy użyć tego kontenera, który dostarczyliśmy ten pojemnik ID div.
+
+75
+00:04:35,450 --> 00:04:43,910
+Jeśli więc zaprojektujemy div z ideą kontenera, który wybieralibyśmy właśnie tak i możemy zacząć
+
+76
+00:04:43,910 --> 00:04:48,770
+od stwierdzenia, że powinna to być maksymalna szerokość.
+
+77
+00:04:48,770 --> 00:04:51,200
+I myślę, że wybrałem 600 pikseli.
+
+78
+00:04:51,200 --> 00:04:52,510
+Możemy grać z tym numerem.
+
+79
+00:04:52,540 --> 00:04:56,350
+Teraz jeśli odświeżam Teraz możesz zobaczyć, że jest znacznie mniejszy.
+
+80
+00:04:56,690 --> 00:04:57,810
+To część tego.
+
+81
+00:04:58,070 --> 00:05:00,030
+A następnie to, co jest również Centrum tego.
+
+82
+00:05:00,350 --> 00:05:03,000
+Więc mamy 2 marginesy.
+
+83
+00:05:03,380 --> 00:05:04,420
+0 auto.
+
+84
+00:05:04,550 --> 00:05:09,860
+Zapamiętaj tę sztuczkę zerowym marginesem na górze i na dole kontenera, a auto z lewej i prawej
+
+85
+00:05:09,860 --> 00:05:13,100
+strony sprawi, że będzie taki sam rozmiar po każdej stronie.
+
+86
+00:05:13,130 --> 00:05:15,330
+A teraz mamy tę miłe centrum siatki.
+
+87
+00:05:15,500 --> 00:05:16,400
+W porządku.
+
+88
+00:05:16,400 --> 00:05:22,400
+I zróbmy jeszcze jedną rzecz, która jest w naszym H-1, więc zamierzam mieć tutaj H1 i
+
+89
+00:05:22,400 --> 00:05:27,920
+po prostu powie wielki R. SOL. bądź kolorową grą i po prostu zaczniemy tak.
+
+90
+00:05:28,160 --> 00:05:31,110
+A jeśli odświeżymy, to naprawdę trudno zobaczyć.
+
+91
+00:05:31,370 --> 00:05:37,440
+Zróbmy więc biały kolor H-1 biały i oszczędzajmy.
+
+92
+00:05:37,820 --> 00:05:39,610
+I zaczniemy od tego.
+
+93
+00:05:39,620 --> 00:05:41,810
+A więc teraz użyjmy javascript.
+
+94
+00:05:41,810 --> 00:05:45,340
+Ustawimy javascript, aby każdy z nich miał inny kolor.
+
+95
+00:05:45,650 --> 00:05:50,830
+Więc chodźmy zrobić nowy plik, a my nazwiemy to kolorową grą.
+
+96
+00:05:50,970 --> 00:05:53,360
+JOT. S. i zapisz.
+
+97
+00:05:53,360 --> 00:05:58,870
+I jak zawsze chcę to zrobić dodajmy nasz alert, który mówi, że jest podłączony.
+
+98
+00:05:58,880 --> 00:06:04,670
+Dodajmy teraz skrypt w źródłowej równej kolorowej grze.
+
+99
+00:06:04,750 --> 00:06:10,290
+Tak, zapisz stronę i otrzymamy powiązany alert.
+
+100
+00:06:10,790 --> 00:06:13,550
+OK, więc zmienię rozmiar okna.
+
+101
+00:06:13,550 --> 00:06:16,400
+Teraz dodajmy kod, aby nadać im różne kolory.
+
+102
+00:06:16,580 --> 00:06:18,770
+Tak więc w końcu wynik w końcowej grze.
+
+103
+00:06:18,770 --> 00:06:25,870
+Za każdym razem, gdy strona się ładuje, wybiera sześć losowych kolorów, a następnie przypisuje każdy kolor do jednego z elementów div.
+
+104
+00:06:26,150 --> 00:06:30,350
+Zaczniemy od losowego aspektu, a my po prostu przypiszemy sześć kolorów, które zawsze
+
+105
+00:06:30,350 --> 00:06:31,250
+są takie same.
+
+106
+00:06:31,400 --> 00:06:33,800
+A potem przejdziemy do ich losowania.
+
+107
+00:06:33,800 --> 00:06:39,680
+Przejdźmy więc do mojej kolorystycznej gry Tak i zacznę od zrobienia listy kolorów i nazwałbym
+
+108
+00:06:39,680 --> 00:06:40,430
+ją kolorami.
+
+109
+00:06:40,430 --> 00:06:41,190
+To jest tablica.
+
+110
+00:06:41,360 --> 00:06:45,610
+I pamiętaj, że w naszym produkcie końcowym będzie to losowa lista kolorów.
+
+111
+00:06:45,680 --> 00:06:48,820
+Na razie dodam tylko własne.
+
+112
+00:06:48,980 --> 00:06:52,050
+Więc G-B i zacznę od wszystkiego czerwonego.
+
+113
+00:06:52,070 --> 00:06:59,790
+Tak więc 2 5 5 0 0 i tylko po to, aby było to dla ciebie czytelne, Zróbmy to wszystko na osobnych liniach.
+
+114
+00:06:59,900 --> 00:07:02,240
+Więc będziemy mieli sześć takich.
+
+115
+00:07:02,420 --> 00:07:08,710
+A pierwszy będzie czerwony, a potem drugi, czerwony i zielony, który
+
+116
+00:07:08,710 --> 00:07:09,670
+będzie żółty.
+
+117
+00:07:09,830 --> 00:07:16,030
+A następnie następny będzie 0 czerwony i cały zielony.
+
+118
+00:07:16,970 --> 00:07:27,790
+A potem następny następny będzie zero czerwony lub zielony i cały niebieski, a następnie zrobi.
+
+119
+00:07:27,830 --> 00:07:40,130
+Czyli 0 zielony 255 niebieski, a my zrobimy 255 czerwony 0 zielony 255 niebieski, co da nam tablicę
+
+120
+00:07:40,130 --> 00:07:42,680
+sześciu kolorów jako ciągi.
+
+121
+00:07:42,680 --> 00:07:48,770
+A następnie chcemy zaznaczyć, że wszystkie sześć kwadratów przechodzi przez nie, a następnie przypisać jeden z tych
+
+122
+00:07:48,770 --> 00:07:51,110
+kolorów do tła każdego z nich.
+
+123
+00:07:51,290 --> 00:07:58,640
+Tak więc najpierw musimy wybrać, a my nazwiemy ją kwadratami, co jest dokumentem i mamy tu wiele
+
+124
+00:07:58,640 --> 00:07:59,710
+opcji do wyboru.
+
+125
+00:07:59,720 --> 00:08:02,010
+Zamierzam użyć selektora zapytań.
+
+126
+00:08:02,390 --> 00:08:05,810
+Tak więc upewniam się, że otrzymam wszystkie sześć, a nie tylko pierwsze.
+
+127
+00:08:05,990 --> 00:08:08,930
+A my wybierzemy na podstawie kwadratu klasy.
+
+128
+00:08:09,440 --> 00:08:13,930
+Jeśli właśnie zrobiliśmy div pamiętaj, że mamy pojemnik div i nie chcemy go wybierać.
+
+129
+00:08:14,000 --> 00:08:23,030
+Chcemy tylko, aby te sześć kwadratowych elementów div było kwadratowych, a następnie przejdziemy przez cztery zmienne równe zero.
+
+130
+00:08:23,450 --> 00:08:35,310
+Mam mniej niż kwadraty i plus plus zamiast tutaj, wtedy mówimy, że kwadraty i kropka oznaczają tło w stylu kropki i jest
+
+131
+00:08:35,420 --> 00:08:43,010
+to interesująca część, którą zamierzamy wziąć za oko i użyć jej do uzyskania dostępu
+
+132
+00:08:43,010 --> 00:08:43,710
+do kolorów.
+
+133
+00:08:44,750 --> 00:08:49,990
+Albo to Colt, jestem tutaj z małą poprawką, którą dodaję po fakcie.
+
+134
+00:08:50,130 --> 00:08:51,080
+Po prostu szybka notatka.
+
+135
+00:08:51,330 --> 00:08:58,650
+Jest o wiele bardziej preferowany niż kolor tła twojego stylu, więc kolor tła jest jednym słowem z dużą
+
+136
+00:08:58,710 --> 00:09:04,180
+literą C, a nie tłem w stylu kropki, którego używam w tym filmie.
+
+137
+00:09:04,350 --> 00:09:08,230
+Więc za każdym razem, gdy widzisz stylizowane tło, zmień je na kolor tła.
+
+138
+00:09:08,400 --> 00:09:13,590
+Powodem tego jest to, że będzie działać we wszystkich przeglądarkach w stylu, ale
+
+139
+00:09:13,590 --> 00:09:17,880
+tło nie działa w Firefoksie, więc technicznie działa w dobrym stylu.
+
+140
+00:09:17,910 --> 00:09:23,160
+To tło będzie działać w Chrome na przykład dobrze, a gra działa, ale mam wiele
+
+141
+00:09:23,160 --> 00:09:28,490
+pytań o to, co się dzieje w Firefoksie i jest to główny kolor tła w
+
+142
+00:09:28,670 --> 00:09:29,200
+stylu winowajcy.
+
+143
+00:09:29,400 --> 00:09:34,320
+Chciałbym także pomyśleć, że Del Anderson jest jednym z uczniów na forach dyskusyjnych
+
+144
+00:09:34,320 --> 00:09:37,450
+za wskazanie tego, że ostatnio wrócę do kodowania.
+
+145
+00:09:37,500 --> 00:09:45,300
+Tak więc, co robimy, mamy sześć kwadratów i nasze oko przejdzie od 0 1 2 3 4 5, które przejdzie
+
+146
+00:09:45,300 --> 00:09:46,420
+przez każdy kwadrat.
+
+147
+00:09:46,560 --> 00:09:51,890
+A kiedy dojdę do pierwszego kwadratu, zamierzam zabrać zero i nadać mu kolor tła
+
+148
+00:09:51,890 --> 00:09:53,300
+zero, który jest tutaj.
+
+149
+00:09:53,340 --> 00:09:54,360
+Tak by było dobrze.
+
+150
+00:09:54,630 --> 00:10:00,780
+A potem idziemy dalej i bierzemy jedną dla drugiego diva i nadajemy mu drugi kolor z indeksem
+
+151
+00:10:00,780 --> 00:10:03,330
+1 i robimy to aż do końca.
+
+152
+00:10:03,330 --> 00:10:08,010
+Zasadniczo idziemy po to, aby divy były na stronie w kolejności, w jakiej będą one kolorowe
+
+153
+00:10:08,490 --> 00:10:10,420
+za pomocą tych kolorów z tablicy.
+
+154
+00:10:10,680 --> 00:10:16,170
+A jeśli zaoszczędzimy na odświeżeniu, zobaczymy, że otrzymujemy sześć podstawowych kolorów.
+
+155
+00:10:16,710 --> 00:10:20,740
+Mamy więc czerwoną, zieloną, niebiesko-niebiesko-niebieską magenta.
+
+156
+00:10:20,970 --> 00:10:22,330
+Więc na razie wszystko w porządku.
+
+157
+00:10:22,500 --> 00:10:24,730
+Skupimy się na losowaniu kolorów później.
+
+158
+00:10:24,870 --> 00:10:30,420
+Ale jako podgląd, chociaż musimy zrobić, to wygenerować trzy liczby trzy różne liczby od
+
+159
+00:10:30,420 --> 00:10:32,960
+0 do 255, a następnie je połączyć.
+
+160
+00:10:33,210 --> 00:10:36,180
+To tylko trzy różne kanały losowe.
+
+161
+00:10:36,180 --> 00:10:40,340
+A potem robimy je w jeden wielki ciąg za pomocą r. g B i nawiasy wokół nich.
+
+162
+00:10:40,590 --> 00:10:42,720
+Ale na razie będziemy mieli te kolory.
+
+163
+00:10:42,720 --> 00:10:46,210
+Następną rzeczą, którą musimy zrobić, to za każdym razem, gdy strona się ładuje.
+
+164
+00:10:46,300 --> 00:10:49,640
+Pokażę ci tutaj nie tylko sześć wybranych kolorów.
+
+165
+00:10:49,740 --> 00:10:55,590
+Jeden z tych kolorów jest wybrany jako cel lub kolor, którego szukamy.
+
+166
+00:10:55,590 --> 00:10:58,490
+W tym przypadku jest to wybrany kolor.
+
+167
+00:10:58,500 --> 00:11:03,540
+Więc zrobimy to również i zamierzamy uruchomić Portusa, żeby to zakodować, a potem będziemy je
+
+168
+00:11:03,540 --> 00:11:04,310
+losowo wybierać.
+
+169
+00:11:04,410 --> 00:11:08,610
+Więc zaczniemy od stwierdzenia, że złoty kolor to cyjan.
+
+170
+00:11:08,790 --> 00:11:11,940
+To jest czwarty indeks koloru trzech.
+
+171
+00:11:11,970 --> 00:11:20,070
+Tak więc zmienna tutaj zmienny wybrany kolor jest równy indeksowi tablicy kolorów 3.
+
+172
+00:11:20,800 --> 00:11:23,900
+A to wybierze Suyin lub ten kolor tutaj R. SOL. B.
+
+173
+00:11:23,910 --> 00:11:31,380
+0 2 5 5 2 5 5 i pamiętaj o tym, co chcemy zrobić, to zaktualizować naszą stronę tak, aby była
+
+174
+00:11:31,380 --> 00:11:33,690
+zgodna z opisem tutaj, tak jak tutaj.
+
+175
+00:11:33,990 --> 00:11:38,030
+Oczywiście nie jest stylizowany w ten sam sposób, ale chcemy, żeby mówił R. SOL. B.
+
+176
+00:11:38,040 --> 00:11:45,960
+A następnie w nawiasach 0 2 5 5 5 5, aby to zrobić, będziemy musieli się trochę zmienić lub
+
+177
+00:11:45,960 --> 00:11:52,990
+trochę do niego odejść, jeśli potraficie przypomnieć sobie grę sekretarza, w której mieliśmy H1 i zmieniamy to.
+
+178
+00:11:53,010 --> 00:11:55,670
+Gracz jeden gracz dwa początkowo wyniki.
+
+179
+00:11:56,040 --> 00:12:02,310
+Mieliśmy samolot H-1, a kiedy go zaktualizowaliśmy, automatycznie nadpisał wszystko, co tam
+
+180
+00:12:02,310 --> 00:12:02,840
+było.
+
+181
+00:12:03,030 --> 00:12:04,160
+Ale nie chcemy tego robić.
+
+182
+00:12:04,170 --> 00:12:10,320
+Chcemy, aby tekst był świetną grą kolorystyczną, a nasz kolor właśnie tu trafia, ale nie chcemy mieć
+
+183
+00:12:10,320 --> 00:12:13,970
+oddzielnego H-1 lub czegoś, ponieważ te będą się układać osobno.
+
+184
+00:12:14,040 --> 00:12:20,070
+Więc użyjemy przęsła tak, jak to zrobiliśmy w grze sędziowskich i po prostu dodamy R. SOL. bądź tam jako
+
+185
+00:12:20,070 --> 00:12:21,180
+symbol zastępczy.
+
+186
+00:12:21,180 --> 00:12:24,320
+Nic nie wygląda inaczej, ale jeśli sprawdzimy.
+
+187
+00:12:25,110 --> 00:12:30,180
+Widać, że mamy teraz rozpiętość, co oznacza, że możesz łatwo wybrać i manipulować tekstem.
+
+188
+00:12:30,510 --> 00:12:33,250
+I zamierzamy dać temu pomysł, aby było jeszcze łatwiej.
+
+189
+00:12:33,510 --> 00:12:34,950
+Więc damy mu identyfikator.
+
+190
+00:12:35,220 --> 00:12:37,850
+I nazwijmy to kolorowym wyświetlaczem.
+
+191
+00:12:39,040 --> 00:12:41,720
+Następnie przejdziemy do naszego javascript i wybierzemy to.
+
+192
+00:12:41,890 --> 00:12:50,230
+Do tej pory wyświetlacz kolorów jest równy dokumentowi, a my otrzymamy element po id tylko dla elementu kid
+
+193
+00:12:50,230 --> 00:12:51,400
+sake od ID.
+
+194
+00:12:51,730 --> 00:12:53,940
+I to był kolorowy wyświetlacz.
+
+195
+00:12:54,610 --> 00:12:57,330
+I uratujemy i sprawimy, że będzie to trochę większe.
+
+196
+00:12:57,610 --> 00:13:04,640
+Zapisz plik, a następnie zaktualizuj kolorowy wyświetlacz tak, aby wskazywał ten kolor, który wybraliśmy.
+
+197
+00:13:05,050 --> 00:13:17,880
+Tak więc będzie to tekst w kolorze, który będzie wyglądał tak samo, jak kolor i odśwież.
+
+198
+00:13:17,920 --> 00:13:20,500
+A teraz kończymy z naszym kolorem tutaj.
+
+199
+00:13:20,500 --> 00:13:21,030
+Wspaniały.
+
+200
+00:13:21,130 --> 00:13:23,280
+Dodajmy teraz logikę zdarzeń kliknięcia.
+
+201
+00:13:23,350 --> 00:13:28,660
+Więc kiedy klikam na jeden z tych kwadratów, chcemy uruchomić kod, który pozwoli zorientować się, który
+
+202
+00:13:28,840 --> 00:13:30,470
+kolor jest kwadratem, który kliknęliśmy.
+
+203
+00:13:30,640 --> 00:13:34,350
+A kiedy już mamy ten kolor, porównamy go do koloru piksela.
+
+204
+00:13:34,360 --> 00:13:35,430
+Ten tutaj właśnie.
+
+205
+00:13:35,740 --> 00:13:40,360
+A jeśli są inne Zamierzamy zmienić kolor tła tego kwadratu, tak aby zmienił
+
+206
+00:13:40,360 --> 00:13:42,740
+kolor na taki sam, jak tło ciała.
+
+207
+00:13:43,030 --> 00:13:46,930
+A jeśli są takie same, oznacza to, że gracz ma taki sam.
+
+208
+00:13:46,930 --> 00:13:48,570
+I musimy zrobić kilka wyjątkowych rzeczy.
+
+209
+00:13:48,640 --> 00:13:52,930
+A jeśli są inne, oznacza to, że gracz wybrał niewłaściwy kolor i będzie musiał również zająć się
+
+210
+00:13:53,680 --> 00:13:54,320
+tym, aby rozpocząć.
+
+211
+00:13:54,370 --> 00:13:58,580
+Dodajmy tylko procedurę obsługi zdarzeń po zwykłym kliknięciu, która ostrzega, gdy klikniemy.
+
+212
+00:13:58,870 --> 00:14:03,100
+Więc dodamy procedurę obsługi zdarzeń do każdego z kwadratów, więc możemy po prostu użyć tej
+
+213
+00:14:03,100 --> 00:14:04,140
+samej pętli, którą mamy.
+
+214
+00:14:04,360 --> 00:14:13,660
+Więc dodam komentarz tutaj, dodaj początkowe kolory do kwadratów, a następnie następna część
+
+215
+00:14:15,850 --> 00:14:18,720
+będzie słuchać dwóch kwadratów.
+
+216
+00:14:18,760 --> 00:14:23,700
+Więc kolejny z tych kwadratów I kropka dodaje detektor zdarzeń.
+
+217
+00:14:24,350 --> 00:14:28,720
+Czas na Click i naszą funkcję zwrotną.
+
+218
+00:14:29,860 --> 00:14:37,830
+Wszystko, co zrobimy, to ostrzeżenie o kwadracie i upewnij się, że wszyscy z sześciu nas powiadomią.
+
+219
+00:14:37,860 --> 00:14:39,600
+Kliknij prawym przyciskiem myszy na kwadrat.
+
+220
+00:14:39,610 --> 00:14:44,130
+W porządku, wygląda na to, że wszystkie działają dobrze, tak jak powinny.
+
+221
+00:14:44,350 --> 00:14:55,950
+Teraz musimy pobrać kolor klikniętego kwadratu, a następnie porównać kolor, aby wybrać kolor.
+
+222
+00:14:55,960 --> 00:15:01,560
+Zmieniliśmy zdefiniowany przez nas zmienny kolor obrazu, dzięki czemu zaczniemy uzyskiwać ten kolor.
+
+223
+00:15:01,840 --> 00:15:06,450
+Pamiętaj, że możemy użyć tego, co odnosi się do przedmiotu, który został kliknięty na kwadracie.
+
+224
+00:15:06,580 --> 00:15:10,460
+Więc możemy powiedzieć, że ten styl tła.
+
+225
+00:15:10,780 --> 00:15:15,060
+A teraz zróbmy kolejny alert i zobaczmy, co otrzymamy.
+
+226
+00:15:15,070 --> 00:15:18,310
+Więc jeśli kliknę na czerwony, to ostrzega mnie.
+
+227
+00:15:18,310 --> 00:15:25,510
+RG B 2 5 5 0 0 i jeśli kliknę na przypisanie jednej R G B 0 2 5 5 2 5 5.
+
+228
+00:15:25,720 --> 00:15:26,850
+Więc to działa.
+
+229
+00:15:27,220 --> 00:15:34,630
+To, co teraz zrobimy, zapisze to zmiennej, którą właśnie nazwiemy klikniętym kolorem.
+
+230
+00:15:35,020 --> 00:15:41,260
+A potem zamierzamy napisać instrukcję JEŻELI, aby porównać kolory Quicka, więc jeśli jest to kolor
+
+231
+00:15:42,390 --> 00:15:48,770
+potrójny, to wybierz kolor ładny rym tam, jeśli to jest przypadek, że ostrzeżenie zostanie poprawione.
+
+232
+00:15:49,590 --> 00:15:55,690
+A jeśli nie będą pasować, inaczej będziemy alarmować źle.
+
+233
+00:15:57,240 --> 00:16:00,170
+Dajmy mu odświeżenie strzału.
+
+234
+00:16:00,290 --> 00:16:01,390
+Klikam na ten.
+
+235
+00:16:01,410 --> 00:16:02,330
+Źle.
+
+236
+00:16:02,640 --> 00:16:03,210
+Źle.
+
+237
+00:16:03,210 --> 00:16:04,370
+I prawdziwy test.
+
+238
+00:16:04,400 --> 00:16:07,310
+Klikam na właściwą, która jest poprawna.
+
+239
+00:16:07,350 --> 00:16:13,110
+Tak więc nasza logika działa, mimo że nie mamy żadnych losowych kolorów w tym, co
+
+240
+00:16:13,110 --> 00:16:18,600
+mamy, to zestaw sześciu kolorów, które są zakodowane i przypisujemy kolor do każdego kwadratu,
+
+241
+00:16:18,600 --> 00:16:19,640
+a następnie wybieramy.
+
+242
+00:16:19,650 --> 00:16:25,050
+W tym przypadku cyan i to będzie oczywiście losowe, ale wybieramy jeden kolor, który jest naszą odpowiedzią.
+
+243
+00:16:25,320 --> 00:16:30,570
+Następnie dodajemy detektor zdarzeń do każdego kwadratu, gdy użytkownik kliknie na ten kwadrat lub dowolny kwadrat.
+
+244
+00:16:30,570 --> 00:16:34,110
+Porównujemy kolor danego kwadratu z kolorem obrazu, jeśli pasują do siebie.
+
+245
+00:16:34,110 --> 00:16:35,010
+Robimy jedną rzecz.
+
+246
+00:16:35,130 --> 00:16:39,840
+Jeśli nie pasują, robimy coś innego w kolejnym filmie, o którym będziemy mówić, o tym, co faktycznie
+
+247
+00:16:39,840 --> 00:16:40,700
+robimy, jeśli pasują.
+
+248
+00:16:40,710 --> 00:16:42,000
+I co robimy, jeśli nie pasują.
+

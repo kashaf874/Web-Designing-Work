@@ -1,0 +1,380 @@
+﻿1
+00:00:00,530 --> 00:00:02,660
+OK so let's start with the first one here.
+
+2
+00:00:02,670 --> 00:00:06,330
+Print all the numbers between negative 10 and 19.
+
+3
+00:00:06,600 --> 00:00:10,560
+So before we actually start writing code we need to make our files.
+
+4
+00:00:10,560 --> 00:00:12,510
+So I have a simple Tim file
+
+5
+00:00:15,330 --> 00:00:18,090
+and I need to create a script to connect.
+
+6
+00:00:18,300 --> 00:00:19,950
+So let's save our script.
+
+7
+00:00:20,130 --> 00:00:21,250
+Let's call it loops.
+
+8
+00:00:21,400 --> 00:00:31,330
+Yes save that and then I'll add an alert because I always want to make sure they're connected.
+
+9
+00:00:31,950 --> 00:00:39,700
+Go back to wild study DML and then just link to that script which was loops that.
+
+10
+00:00:39,720 --> 00:00:41,230
+Yes.
+
+11
+00:00:41,280 --> 00:00:46,620
+So now if we go and open that up we should get our nice alert.
+
+12
+00:00:46,710 --> 00:00:47,780
+Great.
+
+13
+00:00:47,790 --> 00:00:49,360
+So let's tackle the first one.
+
+14
+00:00:49,370 --> 00:00:53,360
+Print all numbers between negative 10 and 19.
+
+15
+00:00:54,540 --> 00:00:56,800
+So we're going to start with a WHILE loop.
+
+16
+00:00:57,180 --> 00:01:04,530
+We're going to start with the variable var let's say counter starts at negative 10 then we'll just have
+
+17
+00:01:04,530 --> 00:01:13,660
+a wild loop where we're checking while counter is less than 20.
+
+18
+00:01:14,370 --> 00:01:22,580
+Cancel that log counter and then we'll add 1 to counter just like that.
+
+19
+00:01:22,590 --> 00:01:24,220
+So we started negative 10.
+
+20
+00:01:24,540 --> 00:01:29,400
+We printed out we add 1 while Kountry is less than 20.
+
+21
+00:01:29,430 --> 00:01:35,380
+We could also refactor this to be while it's less than or equal to 19.
+
+22
+00:01:35,430 --> 00:01:40,470
+Either one works in a do this one just for variety sake so save.
+
+23
+00:01:40,680 --> 00:01:50,160
+And let's go at a con. that log up top just to make it clear we're printing all numbers between negative
+
+24
+00:01:50,160 --> 00:01:55,520
+10 and 19 save and run this.
+
+25
+00:01:55,560 --> 00:01:57,880
+So will refresh the page.
+
+26
+00:01:58,500 --> 00:02:04,170
+Don't see anything because it's all on the console and you can see we get all numbers between negative
+
+27
+00:02:04,170 --> 00:02:06,040
+10 and 19.
+
+28
+00:02:06,300 --> 00:02:09,210
+Make sure it includes 19 negative 10.
+
+29
+00:02:09,210 --> 00:02:10,610
+Great.
+
+30
+00:02:10,680 --> 00:02:15,760
+So the next challenge is to print out all even numbers between 10 and 40.
+
+31
+00:02:16,140 --> 00:02:20,110
+So I'm just going to copy this and modify it just a little bit.
+
+32
+00:02:20,190 --> 00:02:28,400
+So printing all even numbers between 10 and 40 save.
+
+33
+00:02:28,770 --> 00:02:37,590
+So we'll start with our counter just equal to 10 while counter is less than 41 or less than or equal
+
+34
+00:02:37,590 --> 00:02:38,970
+to 40.
+
+35
+00:02:38,970 --> 00:02:40,380
+Let's do it this way.
+
+36
+00:02:40,650 --> 00:02:43,390
+We're going to print it out only if it's even.
+
+37
+00:02:43,650 --> 00:02:45,570
+So there's a few ways to do this.
+
+38
+00:02:45,630 --> 00:02:50,760
+The first one is that we always print it out but we count by twos.
+
+39
+00:02:51,330 --> 00:02:53,770
+So this means that we start at 10.
+
+40
+00:02:53,820 --> 00:02:58,560
+Then we add then we print 10 out and we add two and then we are at 12.
+
+41
+00:02:58,730 --> 00:03:01,010
+So then we print out 12 and then we add two.
+
+42
+00:03:01,020 --> 00:03:04,180
+So that's one way of doing it just to make sure that works.
+
+43
+00:03:04,230 --> 00:03:12,290
+Let's refresh open the console and you can see printing all evens between 10 and 40.
+
+44
+00:03:12,390 --> 00:03:13,980
+And that works fine.
+
+45
+00:03:14,010 --> 00:03:16,230
+So there's another way that we could have written this.
+
+46
+00:03:16,500 --> 00:03:18,910
+And I'll just copy this to show you.
+
+47
+00:03:19,470 --> 00:03:20,740
+We could write it this way.
+
+48
+00:03:21,000 --> 00:03:24,240
+So we loop through for every number.
+
+49
+00:03:24,270 --> 00:03:29,400
+So we don't count by twos and then we're going to have an if statement in here to check if a number
+
+50
+00:03:29,400 --> 00:03:30,200
+is even.
+
+51
+00:03:30,510 --> 00:03:36,180
+And that looks like if counter mod 2 is zero.
+
+52
+00:03:36,390 --> 00:03:42,870
+So that's how you tell for numbers even if it's evenly divisible by two then we'll print it out and
+
+53
+00:03:42,870 --> 00:03:44,340
+then we'll just add one.
+
+54
+00:03:44,820 --> 00:03:49,920
+So this way is shorter and it's a little more efficient because this loop is only going to run half
+
+55
+00:03:49,920 --> 00:03:53,750
+as many times as this one because we're counting by twos.
+
+56
+00:03:53,940 --> 00:03:58,700
+So we never run this loop for the odd numbers versus this one down here.
+
+57
+00:03:58,950 --> 00:04:05,090
+If we start with 10 if counter 2 is zero it is constant at like 10.
+
+58
+00:04:05,220 --> 00:04:06,140
+We add 1.
+
+59
+00:04:06,330 --> 00:04:07,840
+So now we do it for 11.
+
+60
+00:04:08,010 --> 00:04:13,200
+So this code is evaluated is 11 divisible by 2 and it's not.
+
+61
+00:04:13,230 --> 00:04:18,130
+So this isn't printed out but the code in the loop is still run every single time.
+
+62
+00:04:18,300 --> 00:04:23,940
+So there is one advantage of this set up here which is it will always print out the even numbers no
+
+63
+00:04:23,940 --> 00:04:27,750
+matter what number we start it versus this one.
+
+64
+00:04:27,840 --> 00:04:33,520
+If we started at 11 it's always going to just add to to that base number.
+
+65
+00:04:33,540 --> 00:04:39,900
+So we'll have 11 13 15 which aren't even but this one is actually checking if they are even.
+
+66
+00:04:40,080 --> 00:04:44,790
+So I'm going to comment that out for now and let's go with just the short version which for insert the
+
+67
+00:04:44,790 --> 00:04:48,980
+even numbers between 10 and 40 as we see here.
+
+68
+00:04:50,160 --> 00:04:56,310
+So next up we have print all odd numbers between 300 and 333.
+
+69
+00:04:56,310 --> 00:04:59,060
+So again it's very very similar to this.
+
+70
+00:04:59,100 --> 00:05:11,910
+I'm just going to copy all of this again and change this so printing all odd numbers between 300 and
+
+71
+00:05:11,910 --> 00:05:18,080
+333 and then we're going to start with counter at 300.
+
+72
+00:05:18,090 --> 00:05:21,060
+So this one won't work because we're starting at 300.
+
+73
+00:05:21,060 --> 00:05:24,730
+If we add two there will be 300 two and that will count by evens.
+
+74
+00:05:24,780 --> 00:05:28,880
+So I'm going to get rid of it and let's use the slightly longer way.
+
+75
+00:05:29,220 --> 00:05:33,710
+So to check if something is odd We want to make sure that it's not divisible by 2.
+
+76
+00:05:33,870 --> 00:05:41,010
+So that looks like if counter Montu is not equal to zero then we'll print out counter and the other
+
+77
+00:05:41,010 --> 00:05:46,920
+thing we need to change is this loop is going to start at 300 and we're checking if it's less than 40
+
+78
+00:05:46,930 --> 00:05:46,960
+.
+
+79
+00:05:46,980 --> 00:05:49,110
+So right now this code won't even run.
+
+80
+00:05:49,350 --> 00:05:57,980
+So we want to make this 333 So let's save and refresh and you can see we get all the odd numbers 3 or
+
+81
+00:05:57,990 --> 00:06:01,560
+1 all the way to 333.
+
+82
+00:06:01,560 --> 00:06:10,170
+So the last one here is to print all numbers divisible by five and three that are between 5 and 50.
+
+83
+00:06:10,230 --> 00:06:13,440
+So going to copy are set up one more time.
+
+84
+00:06:13,560 --> 00:06:18,990
+So this time I'm going to cancel that log printing all numbers divisible by
+
+85
+00:06:22,080 --> 00:06:31,350
+5 and 3 between 5 and 50.
+
+86
+00:06:31,410 --> 00:06:38,460
+So to do that we're going to start with our counter at 5 and it's going to go until 50.
+
+87
+00:06:39,720 --> 00:06:45,200
+And our logic here is not checking if it's not divisible by 2 which is what we have here.
+
+88
+00:06:45,750 --> 00:06:50,930
+What we want to do is check if it is divisible by 5 and divisible by 3.
+
+89
+00:06:51,210 --> 00:07:04,800
+So that's going to look like counter maade 5 equals zero and counter maade three equals zero and that's
+
+90
+00:07:04,800 --> 00:07:05,520
+it.
+
+91
+00:07:05,520 --> 00:07:12,470
+So both of these need to be true divisible by five evenly and 3 in order for us to printed out.
+
+92
+00:07:12,810 --> 00:07:13,890
+So that's all we need to do.
+
+93
+00:07:13,950 --> 00:07:20,190
+Let's go ahead and refresh our browser and you can see we get all numbers that are divisible both by
+
+94
+00:07:20,190 --> 00:07:25,370
+5 and 3 that are between 5 and 50 and there's only three of them.
+
+95
+00:07:25,380 --> 00:07:27,740
+All right so that's it for this while loops problem set.
+

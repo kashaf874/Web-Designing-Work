@@ -1,0 +1,600 @@
+﻿1
+00:00:01,100 --> 00:00:06,540
+And this video I'm going to go over creating the solutions to this array problem set starting from scratch
+
+2
+00:00:06,540 --> 00:00:07,270
+.
+
+3
+00:00:07,290 --> 00:00:10,250
+So the first one we have is print referrers.
+
+4
+00:00:10,260 --> 00:00:11,100
+So before we start.
+
+5
+00:00:11,100 --> 00:00:15,780
+And when I get my files set up correctly I already have an aged him file.
+
+6
+00:00:15,780 --> 00:00:18,020
+I just called that solution that HMO.
+
+7
+00:00:18,450 --> 00:00:27,840
+I'm going to include a script tag source equal to solution that J S and then I need to create that file
+
+8
+00:00:27,870 --> 00:00:28,170
+.
+
+9
+00:00:28,450 --> 00:00:30,620
+So let's save that solution.
+
+10
+00:00:30,730 --> 00:00:31,840
+Yes.
+
+11
+00:00:32,940 --> 00:00:37,860
+And as always I'd like to start with my council but log connected.
+
+12
+00:00:39,090 --> 00:00:39,650
+Let's go.
+
+13
+00:00:39,660 --> 00:00:41,490
+Open this up in the browser.
+
+14
+00:00:42,450 --> 00:00:45,830
+Open up the console and we see are connected.
+
+15
+00:00:46,110 --> 00:00:46,860
+All right.
+
+16
+00:00:46,860 --> 00:00:49,390
+So let's start with print reverse.
+
+17
+00:00:49,450 --> 00:00:51,180
+So print reverse is a function.
+
+18
+00:00:51,540 --> 00:00:57,640
+So I'll start by defining the function print reverse which takes a single argument and array.
+
+19
+00:00:57,690 --> 00:01:03,340
+I'll just call it a r r and all we need to do is loop through the array.
+
+20
+00:01:03,600 --> 00:01:08,430
+Except we want to loop backwards from the end of the array to the beginning and then we'll just call
+
+21
+00:01:08,430 --> 00:01:10,140
+its var log each item.
+
+22
+00:01:10,200 --> 00:01:12,510
+So a foreach isn't going to be ideal here.
+
+23
+00:01:12,690 --> 00:01:17,160
+We're going to use a for loop which is a little more flexible in the order that we traverse the list
+
+24
+00:01:17,180 --> 00:01:17,780
+.
+
+25
+00:01:18,390 --> 00:01:24,570
+So for var I instead of starting at zero we're going to start it at the end of the array.
+
+26
+00:01:24,630 --> 00:01:32,130
+So var equals array don't like minus 1 and we have to add that minus 1 because the length is always
+
+27
+00:01:32,130 --> 00:01:34,550
+one greater than the greatest index.
+
+28
+00:01:34,740 --> 00:01:36,730
+So it's spaced out a bit.
+
+29
+00:01:36,750 --> 00:01:38,590
+Next we're going to keep going.
+
+30
+00:01:38,670 --> 00:01:42,480
+While I is greater than equal to zero.
+
+31
+00:01:42,510 --> 00:01:47,400
+And then lastly we're going to minus minus.
+
+32
+00:01:47,640 --> 00:01:49,470
+So I will start at.
+
+33
+00:01:49,740 --> 00:02:03,050
+In the case of print reverse of this array 3 6 to 5 I will start at this index which would be three
+
+34
+00:02:03,690 --> 00:02:13,470
+and we'll print out the log array if I so that will print out 5 and then you subtract 1 from I and print
+
+35
+00:02:13,470 --> 00:02:21,160
+out a array of I gives us 2 and then 6 and then 3 and the last time through is equal to zero.
+
+36
+00:02:21,300 --> 00:02:23,460
+So we print out three and then we're done.
+
+37
+00:02:23,700 --> 00:02:25,120
+So let's take a look.
+
+38
+00:02:25,170 --> 00:02:28,070
+I'm going to call this print refers with this array.
+
+39
+00:02:28,080 --> 00:02:36,070
+Run it in the browser and you can see we get 5 to 6 and 3 which is what we expected.
+
+40
+00:02:36,150 --> 00:02:38,580
+Five to six and three.
+
+41
+00:02:38,790 --> 00:02:40,880
+Let's move on to the next problem.
+
+42
+00:02:41,460 --> 00:02:47,160
+So the next problem is is uniform which takes an array as an argument again and returns true.
+
+43
+00:02:47,190 --> 00:02:49,890
+Only if all the elements are exactly the same.
+
+44
+00:02:50,430 --> 00:02:57,930
+So I'm going to start by just writing a note that this is where is uniform starts because this file
+
+45
+00:02:57,930 --> 00:02:59,930
+will be pretty full by the end of this.
+
+46
+00:03:00,150 --> 00:03:01,700
+So I just want to make it clear.
+
+47
+00:03:02,220 --> 00:03:08,940
+So let's start by defining our function is uniform and it's going to take a single array.
+
+48
+00:03:09,510 --> 00:03:15,120
+So the way that I'm going to solve this I'm going to make a variable equal to the very first item.
+
+49
+00:03:15,660 --> 00:03:22,200
+So in this case 1 and then I'm going to loop through the array and compare that first item to every
+
+50
+00:03:22,200 --> 00:03:27,840
+other item and if at any point they're not the same then we're going to return false and just end the
+
+51
+00:03:27,840 --> 00:03:28,990
+entire function.
+
+52
+00:03:29,280 --> 00:03:33,060
+But if we make it to the end that means that every item is the same.
+
+53
+00:03:33,060 --> 00:03:34,530
+So we can return true.
+
+54
+00:03:35,010 --> 00:03:41,890
+So I'm going to start by making my first variable var first is equal to the first item.
+
+55
+00:03:43,080 --> 00:03:45,340
+Then I'm going to loop through the array.
+
+56
+00:03:45,660 --> 00:03:50,100
+So I'm going to use a for loop here and there is a reason I'm not using a foreach which I'll explain
+
+57
+00:03:50,310 --> 00:03:51,390
+after this.
+
+58
+00:03:51,390 --> 00:04:01,260
+So I'm going to start looping through I less than Array don't like I plus plus and I'm just going to
+
+59
+00:04:01,260 --> 00:04:07,810
+check if array high is not equal to first.
+
+60
+00:04:07,890 --> 00:04:10,410
+That means that our array is not uniform.
+
+61
+00:04:10,590 --> 00:04:12,920
+So I will return false.
+
+62
+00:04:13,860 --> 00:04:19,820
+And then at the very end of my array if we make it through the whole loop I can return true.
+
+63
+00:04:20,790 --> 00:04:28,140
+There is one small optimization here which is I'm currently comparing the first item arrays zero to
+
+64
+00:04:28,140 --> 00:04:29,120
+the first item.
+
+65
+00:04:29,280 --> 00:04:30,680
+The very first time through the loop.
+
+66
+00:04:30,690 --> 00:04:35,710
+If I start says 0 and checking is erase the row equal to first.
+
+67
+00:04:35,790 --> 00:04:36,900
+So I don't want to do that.
+
+68
+00:04:36,960 --> 00:04:39,090
+I'm just going to start it at index 1.
+
+69
+00:04:39,660 --> 00:04:41,280
+Let's test it out.
+
+70
+00:04:41,280 --> 00:04:49,310
+Refresh our page is uniform of the array 1 1 1.
+
+71
+00:04:49,500 --> 00:04:50,600
+That's true.
+
+72
+00:04:50,790 --> 00:04:52,360
+But how about 1 1 2.
+
+73
+00:04:52,620 --> 00:04:55,540
+That's false and two went.
+
+74
+00:04:55,620 --> 00:04:57,250
+That's also false.
+
+75
+00:04:57,780 --> 00:04:58,290
+OK.
+
+76
+00:04:58,290 --> 00:05:01,380
+So I mentioned that I didn't want to use a for each.
+
+77
+00:05:01,470 --> 00:05:08,780
+And the reason behind that is that if I wrote a foreach comment this out and instead of a for loop here
+
+78
+00:05:10,110 --> 00:05:21,690
+if I did a red dot for each function and I call it element and I'm going to check if element is not
+
+79
+00:05:21,750 --> 00:05:23,700
+equal to First
+
+80
+00:05:26,890 --> 00:05:29,350
+I will return false.
+
+81
+00:05:29,380 --> 00:05:34,840
+This is exactly the same logic except we added in a foreach instead of a for loop.
+
+82
+00:05:35,120 --> 00:05:41,140
+We have a problem and the problem is that when I return false here this only returns out of the first
+
+83
+00:05:41,140 --> 00:05:43,860
+function which is right here.
+
+84
+00:05:44,080 --> 00:05:50,540
+So it doesn't exit all of its uniform it just exit out of the first function which then brings us to
+
+85
+00:05:50,540 --> 00:05:55,040
+this level and then it just runs the next line which is returned true.
+
+86
+00:05:55,900 --> 00:06:00,500
+So rather than have to deal with the work around here I'm just going to use a for loop because it's
+
+87
+00:06:00,500 --> 00:06:03,400
+much simpler but I want you to understand what the problem is.
+
+88
+00:06:03,440 --> 00:06:06,910
+So to sum that up again I return instead of one function.
+
+89
+00:06:06,940 --> 00:06:12,940
+It only peels back one layer so it only returns that exact function and then the next function that
+
+90
+00:06:12,940 --> 00:06:16,760
+it's inside of it still finishes its execution.
+
+91
+00:06:16,750 --> 00:06:22,460
+So I will come with this one out and let's just leave this one as our real solution.
+
+92
+00:06:23,950 --> 00:06:26,220
+Next up we have some array.
+
+93
+00:06:26,620 --> 00:06:31,420
+So some array takes a single array and it sums every item inside of it.
+
+94
+00:06:31,430 --> 00:06:41,660
+So we're going to start with my comment some array and I'm going to declare the function some array
+
+95
+00:06:42,800 --> 00:06:44,280
+takes a single array.
+
+96
+00:06:44,890 --> 00:06:48,710
+And in this case we need to make a variable to hold the total.
+
+97
+00:06:48,800 --> 00:06:52,920
+And then we need to loop through the entire array and add to that total.
+
+98
+00:06:52,940 --> 00:06:57,170
+So I'll start with my variable total equals zero.
+
+99
+00:06:57,880 --> 00:06:59,850
+And then I'm going to do it for each.
+
+100
+00:07:00,310 --> 00:07:02,480
+So array for each.
+
+101
+00:07:02,500 --> 00:07:11,090
+And I could just do a regular for loop and I'm just going to call this element and I'm just going to
+
+102
+00:07:11,090 --> 00:07:15,010
+add in to total every time.
+
+103
+00:07:15,010 --> 00:07:18,300
+So total plus equals elements.
+
+104
+00:07:19,340 --> 00:07:23,340
+And then the end return total and that's all I have to do.
+
+105
+00:07:23,380 --> 00:07:30,050
+So start total zero loop through the array take every element and added into total and then return total
+
+106
+00:07:30,050 --> 00:07:30,960
+at the end.
+
+107
+00:07:31,390 --> 00:07:33,750
+Let's test it out.
+
+108
+00:07:34,060 --> 00:07:37,640
+Let's try doing some array on the array.
+
+109
+00:07:37,630 --> 00:07:41,500
+One two three and I get six.
+
+110
+00:07:41,530 --> 00:07:45,300
+And how about 10 10 10 and you get 30.
+
+111
+00:07:45,680 --> 00:07:47,710
+OK so that's some array.
+
+112
+00:07:48,250 --> 00:07:53,220
+The last one here is determining the max element in an array of numbers.
+
+113
+00:07:53,530 --> 00:07:57,430
+So I'm going to add my comments in first.
+
+114
+00:07:58,180 --> 00:08:03,130
+We're going to work on Max here and I'm going to define that function first.
+
+115
+00:08:03,160 --> 00:08:09,550
+So function Max takes a single array again and the logic here is that we're going to have a variable
+
+116
+00:08:09,620 --> 00:08:15,800
+to keep track of the maximum and we'll just started as the first element by default and then we're going
+
+117
+00:08:15,800 --> 00:08:20,270
+to loop through every other item and compare that to the current maximum.
+
+118
+00:08:20,840 --> 00:08:25,390
+And if it ever is greater than the current maximum then that element is our new maximum.
+
+119
+00:08:25,550 --> 00:08:27,670
+And then we return that at the end.
+
+120
+00:08:27,880 --> 00:08:38,800
+So I'm going to start var Max equals array 0 and then I'm going to loop through the array and just for
+
+121
+00:08:38,810 --> 00:08:41,220
+variety's sake I'm going to use a for loop.
+
+122
+00:08:41,270 --> 00:08:43,950
+So for var I equals zero.
+
+123
+00:08:44,140 --> 00:08:46,060
+And actually you can start it at 1.
+
+124
+00:08:46,610 --> 00:08:51,660
+Because we're already using a ratio for the same reason they can start this one at 1.
+
+125
+00:08:52,310 --> 00:08:54,940
+So I started at 1 4 equals zero.
+
+126
+00:08:55,060 --> 00:08:59,080
+I have less than a radar link plus plus.
+
+127
+00:08:59,330 --> 00:09:03,260
+And all I want to do is check if array of I.
+
+128
+00:09:03,250 --> 00:09:12,450
+So if the individual element is greater than the max then Max is now equal to Array.
+
+129
+00:09:13,510 --> 00:09:19,210
+So this will constantly change its value or potentially change its value if it encounters a new maximum
+
+130
+00:09:19,220 --> 00:09:20,030
+.
+
+131
+00:09:20,060 --> 00:09:25,110
+So in this exercise here one two three at the very beginning.
+
+132
+00:09:25,220 --> 00:09:26,990
+One is the max.
+
+133
+00:09:26,990 --> 00:09:29,610
+And then we go through the loop and we compare it to two.
+
+134
+00:09:29,920 --> 00:09:31,120
+Two is greater than one.
+
+135
+00:09:31,220 --> 00:09:32,760
+So two is the new maximum.
+
+136
+00:09:33,010 --> 00:09:35,830
+And then that repeats three is greater than two.
+
+137
+00:09:35,840 --> 00:09:41,600
+So three is a new maximum and the last line that we're missing is once the loop is done we just return
+
+138
+00:09:41,920 --> 00:09:43,440
+Max.
+
+139
+00:09:43,750 --> 00:09:45,040
+And what should be good to go.
+
+140
+00:09:45,430 --> 00:09:54,550
+So let's try this out refresh and let's try running max on 1 2 3 and we get three.
+
+141
+00:09:54,620 --> 00:09:59,840
+Now let's try adding 20 in the middle and we get 20.
+
+142
+00:10:00,290 --> 00:10:03,790
+And lastly let's play with a negative number and make sure that works.
+
+143
+00:10:03,800 --> 00:10:05,160
+And we still get 20.
+
+144
+00:10:05,480 --> 00:10:06,010
+OK.
+
+145
+00:10:06,110 --> 00:10:08,290
+So we have four solutions here.
+
+146
+00:10:08,380 --> 00:10:11,890
+All of them needed to use a loop we used for each and some of them.
+
+147
+00:10:11,890 --> 00:10:14,550
+We used a for loop and some of them and all of them.
+
+148
+00:10:14,570 --> 00:10:16,410
+We practice a race.
+
+149
+00:10:16,550 --> 00:10:17,050
+Awesome.
+
+150
+00:10:17,090 --> 00:10:21,430
+So next up we're going to learn about our next data structure and javascript's which is the object
+

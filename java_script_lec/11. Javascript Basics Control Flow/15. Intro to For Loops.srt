@@ -1,0 +1,268 @@
+﻿1
+00:00:00,900 --> 00:00:05,770
+OK so it's time to learn about another type of loop in javascript called the for loop.
+
+2
+00:00:05,820 --> 00:00:10,490
+So the for loop is similar to the while loop and that they both let us repeat code.
+
+3
+00:00:10,740 --> 00:00:12,710
+They're a little bit different in their syntax.
+
+4
+00:00:12,930 --> 00:00:14,340
+So our objective is here.
+
+5
+00:00:14,430 --> 00:00:19,070
+You want to understand the purpose of for loops why you use one versus a while loop.
+
+6
+00:00:19,230 --> 00:00:24,280
+You want to write valid for loops and then compare and contrast while loops and for loops.
+
+7
+00:00:24,930 --> 00:00:28,420
+So to start here's a recipe for a for loop.
+
+8
+00:00:28,920 --> 00:00:34,440
+We write the word for a keyword and then in parentheses there are three parts.
+
+9
+00:00:34,500 --> 00:00:40,300
+And so I've some them up as the initialize the condition and the step.
+
+10
+00:00:40,770 --> 00:00:45,340
+So this will take a little bit to sink in and we'll clarify this over the next few slides.
+
+11
+00:00:45,690 --> 00:00:51,450
+But the key takeaway here is that we write the word for we have parentheses three different things go
+
+12
+00:00:51,450 --> 00:00:55,040
+in the parentheses and then we have curly braces.
+
+13
+00:00:55,350 --> 00:00:57,400
+So here's an example.
+
+14
+00:00:57,570 --> 00:01:02,470
+This is how you print the numbers from 1 to 5 with a for loop.
+
+15
+00:01:02,520 --> 00:01:04,290
+So we start with four.
+
+16
+00:01:04,530 --> 00:01:06,450
+Then we create a variable.
+
+17
+00:01:06,630 --> 00:01:09,650
+I'm calling it count and set it equal to zero.
+
+18
+00:01:09,750 --> 00:01:16,820
+In this first chunk then we have our condition while count is less than 6.
+
+19
+00:01:17,370 --> 00:01:22,530
+And then we have our increment which is going to add one to count.
+
+20
+00:01:22,530 --> 00:01:26,280
+So this is conceptually very similar to the wildlife's who've been writing.
+
+21
+00:01:26,280 --> 00:01:28,620
+So you can see the equivalent while loop down here.
+
+22
+00:01:28,680 --> 00:01:34,140
+The big difference is that this is just shorter and the other difference is that this variable count
+
+23
+00:01:34,560 --> 00:01:37,400
+only exists inside the loop.
+
+24
+00:01:37,500 --> 00:01:44,520
+So this variable for a while loop must be initialized outside so that we can use it here in a for loop
+
+25
+00:01:44,520 --> 00:01:44,680
+.
+
+26
+00:01:44,760 --> 00:01:48,650
+We can make a variable that exists only for a moment inside of this loop.
+
+27
+00:01:49,080 --> 00:01:56,100
+So to go over this one more time we're making a variable called count and it starts at zero every time
+
+28
+00:01:56,100 --> 00:01:56,780
+through the loop.
+
+29
+00:01:56,850 --> 00:02:00,680
+We add 1 to count and we keep going while count.
+
+30
+00:02:00,690 --> 00:02:02,300
+It's less than six.
+
+31
+00:02:02,640 --> 00:02:05,140
+So the first time we run this count is zero.
+
+32
+00:02:05,190 --> 00:02:08,480
+We printed out the next time we've added 1.
+
+33
+00:02:08,700 --> 00:02:14,960
+It's still less less than 6 so then we printed out and we keep going until count is six.
+
+34
+00:02:15,000 --> 00:02:18,330
+It's no longer less than six and the code stops running.
+
+35
+00:02:18,750 --> 00:02:27,660
+So I'm going to copy this to my counsel and just demonstrate that I paste that in and we get 0 1 2 3
+
+36
+00:02:27,660 --> 00:02:30,800
+4 5.
+
+37
+00:02:33,210 --> 00:02:38,100
+So here's another example taking what we did of the while loop where we printed every character in a
+
+38
+00:02:38,100 --> 00:02:40,750
+string but doing it with a for loop.
+
+39
+00:02:41,220 --> 00:02:47,370
+So once again you can see we don't have to create this count variable outside of a loop like we do for
+
+40
+00:02:47,370 --> 00:02:48,060
+the while loop.
+
+41
+00:02:48,270 --> 00:02:52,610
+We can create a temporary variable and I use one called I.
+
+42
+00:02:52,710 --> 00:02:58,590
+The reason I did that is that it's pretty conventional to see for loop variables be very short single
+
+43
+00:02:58,590 --> 00:03:05,220
+letter variable names like i or j or K and that's because they don't exist for any other purpose but
+
+44
+00:03:05,220 --> 00:03:06,710
+to live inside the loop.
+
+45
+00:03:06,750 --> 00:03:09,710
+So some people would argue it's better to keep them short.
+
+46
+00:03:10,020 --> 00:03:12,090
+So over here I used to count.
+
+47
+00:03:12,090 --> 00:03:17,340
+You can name these whatever you want but you'll see a lot more often in the real world.
+
+48
+00:03:17,760 --> 00:03:22,060
+So we make a variable equal to zero every time through the loop.
+
+49
+00:03:22,170 --> 00:03:25,560
+We're going to add one and we're going to keep going.
+
+50
+00:03:25,580 --> 00:03:28,470
+While it's less than the length of the string.
+
+51
+00:03:28,920 --> 00:03:31,270
+So the logic is the same as what we're doing here.
+
+52
+00:03:31,500 --> 00:03:33,720
+Make a variable called Count set it to zero.
+
+53
+00:03:34,140 --> 00:03:39,960
+Add one every time through and keep going while count is less than the length.
+
+54
+00:03:40,350 --> 00:03:44,080
+So when I run this I'll copy it.
+
+55
+00:03:44,160 --> 00:03:45,840
+Open up the console.
+
+56
+00:03:45,840 --> 00:03:50,350
+Paste that in and we get H E L L O.
+
+57
+00:03:50,640 --> 00:03:53,170
+And it prints one L with a 2 next to it.
+
+58
+00:03:53,190 --> 00:03:58,010
+That's just how Chrome does repeated confidant logs.
+
+59
+00:03:58,050 --> 00:04:02,670
+So to sum this up one more time instead of a for loop there are three parts.
+
+60
+00:04:02,670 --> 00:04:07,950
+There's the Initialize where we declare a variable and set it to some initial value does not have to
+
+61
+00:04:07,950 --> 00:04:08,840
+be zero.
+
+62
+00:04:09,120 --> 00:04:15,270
+Then the next part we have a condition which is when this loop should keep running.
+
+63
+00:04:15,270 --> 00:04:17,370
+And then the last part is our step.
+
+64
+00:04:17,370 --> 00:04:19,460
+So what do we do at the end of every iteration.
+
+65
+00:04:19,500 --> 00:04:23,690
+Do we add 1 to count or to subtract 1 Do we multiply it.
+
+66
+00:04:23,700 --> 00:04:25,540
+There's all sorts of different things.
+
+67
+00:04:25,560 --> 00:04:30,000
+Most often though you'll see it with a plus plus just like we did with while loops
+

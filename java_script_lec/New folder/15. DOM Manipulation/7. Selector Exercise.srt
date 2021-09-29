@@ -1,0 +1,240 @@
+﻿1
+00:00:00,460 --> 00:00:00,950
+All right.
+
+2
+00:00:00,960 --> 00:00:02,990
+So it's time for a quick exercise.
+
+3
+00:00:03,000 --> 00:00:06,300
+This one is going to cover the different DOM selectors that we just discussed.
+
+4
+00:00:06,600 --> 00:00:14,340
+So the way that works giving you some H M L simple shemale and H-1 three four paragraphs.
+
+5
+00:00:14,340 --> 00:00:16,920
+Some have ideas some have classes some have nothing.
+
+6
+00:00:17,040 --> 00:00:22,350
+And what I want you to do is come up with four different ways to select the first paragraph.
+
+7
+00:00:22,440 --> 00:00:27,270
+So at least for there's more than that using the different methods that we talked about Document get
+
+8
+00:00:27,300 --> 00:00:33,750
+element by ID by class name by tag name Corey selector queries like are all mix and match those and
+
+9
+00:00:33,750 --> 00:00:36,340
+come up with four different ways to select this.
+
+10
+00:00:36,660 --> 00:00:38,940
+If you'd like you can download the code attached to it.
+
+11
+00:00:39,060 --> 00:00:43,980
+Otherwise go ahead and just type this up yourself come up with for examples puzzle video and I'll be
+
+12
+00:00:43,980 --> 00:00:46,440
+back in just a few seconds.
+
+13
+00:00:47,670 --> 00:00:50,300
+OK so let's talk about how we could solve this.
+
+14
+00:00:50,310 --> 00:00:52,760
+I have the H Tim L file here.
+
+15
+00:00:53,130 --> 00:00:57,990
+We've got an H1 and here's the paragraph that we're after the first paragraph.
+
+16
+00:00:57,990 --> 00:01:01,230
+It has ID equal to first class is special.
+
+17
+00:01:01,230 --> 00:01:03,650
+And then there's some other paragraphs that we don't really care about.
+
+18
+00:01:03,990 --> 00:01:06,760
+So to select it we have a few different options.
+
+19
+00:01:06,930 --> 00:01:09,500
+Let's start with get element by ID.
+
+20
+00:01:09,500 --> 00:01:16,030
+So just to document type get element by ID first.
+
+21
+00:01:16,980 --> 00:01:22,710
+We could also select based off of the ID first using queries selector to document that query selector
+
+22
+00:01:22,710 --> 00:01:23,730
+.
+
+23
+00:01:23,730 --> 00:01:30,840
+And we can't just say first we also need to see a selector syntax which means adding that Octa Thorp
+
+24
+00:01:30,930 --> 00:01:36,020
+which tells Querrey selector that this is an id called first and we get the same thing.
+
+25
+00:01:36,420 --> 00:01:40,600
+So we can also select based off of the class which is special.
+
+26
+00:01:40,800 --> 00:01:50,010
+So we could do document that get elements by class name and the class name is special and that's going
+
+27
+00:01:50,010 --> 00:01:52,700
+to give us two elements that have that class name.
+
+28
+00:01:52,710 --> 00:02:00,310
+So to narrow it down to just the first one we would add on zero afterwards square brackets zero.
+
+29
+00:02:00,390 --> 00:02:02,710
+And that gives us the first paragraph.
+
+30
+00:02:02,880 --> 00:02:10,500
+We could also use query selector and we use the dot syntax because it's a class.
+
+31
+00:02:10,500 --> 00:02:15,780
+This time we don't need the square bracket zero because regular old query selector only gives us the
+
+32
+00:02:15,780 --> 00:02:16,850
+first result.
+
+33
+00:02:17,070 --> 00:02:23,490
+If we used query selector all we could add zero afterwards and it would work the same way.
+
+34
+00:02:23,490 --> 00:02:25,920
+We get the same first paragraph.
+
+35
+00:02:26,010 --> 00:02:31,260
+The other option we have is to select based off of the tag name which is paragraph or P so we can do
+
+36
+00:02:31,260 --> 00:02:40,180
+document Get elements by tag name pass in P and that gives us all paragraphs.
+
+37
+00:02:40,500 --> 00:02:44,290
+So we would do bracket zero.
+
+38
+00:02:44,340 --> 00:02:45,980
+We could also use query selector.
+
+39
+00:02:46,020 --> 00:02:52,840
+So document that query selector and we don't need to change what's inside the print CS because India
+
+40
+00:02:52,880 --> 00:02:55,410
+says this is how you select a paragraph tag.
+
+41
+00:02:55,620 --> 00:02:57,780
+So query selector will give us the first one.
+
+42
+00:02:57,850 --> 00:03:07,320
+So you can see here or we could also do queries like are all and add in zero.
+
+43
+00:03:07,530 --> 00:03:12,140
+We can also make life harder on ourselves and use some more creative CSSA selectors.
+
+44
+00:03:12,240 --> 00:03:20,250
+For instance I know that this paragraph the first one is the first paragraph directly after an H-1 they're
+
+45
+00:03:20,250 --> 00:03:28,260
+adjacent so I could write a CSSA selector that says Select the paragraphs after an H1 or adjacent to
+
+46
+00:03:28,320 --> 00:03:29,840
+each one with the plus sign.
+
+47
+00:03:29,970 --> 00:03:31,320
+So that would look like this.
+
+48
+00:03:31,320 --> 00:03:32,880
+If I really wanted to do it.
+
+49
+00:03:33,120 --> 00:03:39,150
+Cory selector and that would be H-1 plus paragraph.
+
+50
+00:03:39,720 --> 00:03:42,920
+And that also gives me the first paragraph.
+
+51
+00:03:42,960 --> 00:03:45,630
+There are plenty of other ways that we could do it as well.
+
+52
+00:03:45,630 --> 00:03:48,090
+We could do first of type paragraph.
+
+53
+00:03:48,210 --> 00:03:53,250
+We can get pretty creative but there's no reason to do that if we can just get it with an ID or a class
+
+54
+00:03:53,250 --> 00:03:54,690
+name or tag name.
+
+55
+00:03:54,990 --> 00:03:55,220
+OK.
+
+56
+00:03:55,230 --> 00:04:00,000
+So hopefully you are able to come up with at least four of those as you can see there's a lot of options
+
+57
+00:04:00,120 --> 00:04:03,760
+just like in C S S we can target something in so many different ways.
+
+58
+00:04:03,780 --> 00:04:08,630
+There's not really one right answer in this case because it has an ID.
+
+59
+00:04:08,730 --> 00:04:14,520
+I would probably just use queries selector with the ID which is what we did up here.
+
+60
+00:04:14,520 --> 00:04:15,800
+Or get element by ID
+

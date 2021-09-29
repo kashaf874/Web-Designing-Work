@@ -1,0 +1,556 @@
+﻿1
+00:00:00,780 --> 00:00:01,860
+Welcome back.
+
+2
+00:00:01,860 --> 00:00:06,930
+So in the last few videos we've been talking about javascript arrays which are the first data structure
+
+3
+00:00:06,960 --> 00:00:09,250
+that we've talked about in the next few videos.
+
+4
+00:00:09,270 --> 00:00:12,660
+We're going to introduce a nother data structure called the object.
+
+5
+00:00:13,140 --> 00:00:16,070
+So we have two main objectives just like we did with arrays.
+
+6
+00:00:16,080 --> 00:00:20,070
+We first want to understand what objects are why we use them.
+
+7
+00:00:20,100 --> 00:00:21,900
+How do they compare to an array.
+
+8
+00:00:21,900 --> 00:00:26,350
+And then the second objective is how do we write some code using javascript objects.
+
+9
+00:00:26,790 --> 00:00:29,370
+Let's go ahead and get started.
+
+10
+00:00:29,400 --> 00:00:31,470
+So here's a hypothetical situation.
+
+11
+00:00:31,470 --> 00:00:35,730
+Suppose that I wanted to model a single person in javascript's.
+
+12
+00:00:35,760 --> 00:00:38,850
+Each person has a name and age and a city.
+
+13
+00:00:38,850 --> 00:00:45,030
+So there's a lot of ways I could do that I could have three different variables name age and city but
+
+14
+00:00:45,030 --> 00:00:46,580
+then they're not related to one another.
+
+15
+00:00:46,590 --> 00:00:47,780
+They're totally separate.
+
+16
+00:00:47,970 --> 00:00:54,560
+So if I wanted to connect them I could use an array like I'm doing here var person is equal to array
+
+17
+00:00:54,930 --> 00:00:57,510
+where the first item is name Cindy.
+
+18
+00:00:57,600 --> 00:01:03,780
+The second item is age 32 and the last item is Missoula or the city.
+
+19
+00:01:03,780 --> 00:01:08,510
+This is not really a great use of an array because this data is not really a list.
+
+20
+00:01:08,760 --> 00:01:13,920
+Yes we can force it into an array but it doesn't lend itself to the format of an array where we have
+
+21
+00:01:13,920 --> 00:01:16,440
+lists that often have a logical order.
+
+22
+00:01:16,530 --> 00:01:20,770
+There really isn't a logical order here to access the city out of this array.
+
+23
+00:01:21,000 --> 00:01:23,970
+I would need to write person bracket too.
+
+24
+00:01:24,270 --> 00:01:28,360
+And that requires me to know that the city is at index too.
+
+25
+00:01:28,500 --> 00:01:36,030
+So if I accidentally reverse the order and I had Traviss the name upfront index 0 but then I mix these
+
+26
+00:01:36,030 --> 00:01:36,530
+two up.
+
+27
+00:01:36,540 --> 00:01:41,300
+So I had at index 1 city an age at index 2.
+
+28
+00:01:41,520 --> 00:01:48,060
+Then if I tried to access person to bracket 2 I would get age instead of city.
+
+29
+00:01:48,060 --> 00:01:53,370
+So this is all just to show that an array is not the perfect solution for every situation.
+
+30
+00:01:53,370 --> 00:01:58,040
+There is much better data structure for us to use here which is the javascript object.
+
+31
+00:01:58,110 --> 00:02:03,930
+You can see an example down here of how we would take the person array with name age and city and turn
+
+32
+00:02:03,930 --> 00:02:05,630
+it into a javascript object.
+
+33
+00:02:05,790 --> 00:02:10,140
+The first thing you should notice is that we have curly braces rather than square brackets for an array
+
+34
+00:02:10,140 --> 00:02:10,820
+.
+
+35
+00:02:10,890 --> 00:02:15,470
+The next important piece is that every item in this object is a key value pair.
+
+36
+00:02:15,750 --> 00:02:21,050
+So we have a property Colan value name is.
+
+37
+00:02:21,180 --> 00:02:25,500
+Age is 32 city is Missoula.
+
+38
+00:02:25,500 --> 00:02:27,360
+This slide shows the exact same thing.
+
+39
+00:02:27,450 --> 00:02:34,860
+We have a different person object var person equals curly braces and inside that we're setting name
+
+40
+00:02:34,860 --> 00:02:42,060
+to be Travis age to be 21 in-city to be L.A. down here we have a simple diagram of what this data structure
+
+41
+00:02:42,060 --> 00:02:43,020
+looks like.
+
+42
+00:02:43,020 --> 00:02:47,970
+We have three different slots in this object and it's really important to note that objects don't have
+
+43
+00:02:48,000 --> 00:02:53,690
+any built in order unlike an array where there's a first item and a second item and a third item.
+
+44
+00:02:53,700 --> 00:02:58,380
+Think of the items instead of a given object as just floating around inside if there there isn't an
+
+45
+00:02:58,380 --> 00:02:59,040
+order.
+
+46
+00:02:59,040 --> 00:03:04,860
+No property comes first or second it doesn't matter how I declared them in what order they're all treated
+
+47
+00:03:04,860 --> 00:03:05,600
+the same.
+
+48
+00:03:05,610 --> 00:03:10,180
+So this diagram shows them in an order but that's just because I had to pick an order.
+
+49
+00:03:10,680 --> 00:03:14,620
+So you can see Travis is stored under the key name.
+
+50
+00:03:14,850 --> 00:03:17,220
+21 is stored under the key age.
+
+51
+00:03:17,370 --> 00:03:23,190
+And L.A. is stored under the key city to retrieve data out of an object.
+
+52
+00:03:23,190 --> 00:03:24,970
+We have two choices.
+
+53
+00:03:25,200 --> 00:03:31,800
+We can either use the name of the object person square brackets and then the name of the key.
+
+54
+00:03:32,130 --> 00:03:35,820
+So in this case I'm getting Travis out of the person object.
+
+55
+00:03:35,820 --> 00:03:39,610
+So I right person square brackets name in quotes.
+
+56
+00:03:39,630 --> 00:03:41,620
+So that's very similar to arrays.
+
+57
+00:03:41,670 --> 00:03:43,920
+The only difference is that this is not a number.
+
+58
+00:03:43,950 --> 00:03:45,890
+This is a string.
+
+59
+00:03:45,930 --> 00:03:51,140
+The other option is to use dot notation dot notation is a little bit shorter and simpler.
+
+60
+00:03:51,150 --> 00:03:58,500
+Right Person dot name and name has to match obviously the name of the key and that will also give us
+
+61
+00:03:58,500 --> 00:03:59,610
+Travis.
+
+62
+00:03:59,880 --> 00:04:02,320
+I'm going to go ahead and demonstrate that in the con..
+
+63
+00:04:02,340 --> 00:04:10,640
+I'm going to make a new object called dog and my dog is going to have a property name as always.
+
+64
+00:04:10,740 --> 00:04:14,390
+Rusty He is the best dog and half breed.
+
+65
+00:04:14,760 --> 00:04:22,140
+He's a mutt Lassally age and he is three.
+
+66
+00:04:22,590 --> 00:04:24,720
+So that gives me my object dog.
+
+67
+00:04:24,840 --> 00:04:28,350
+And if we look at it in the console you can see it tells me it's an object.
+
+68
+00:04:28,350 --> 00:04:32,180
+Your name is resti breed as mud ages 3.
+
+69
+00:04:32,190 --> 00:04:39,990
+So if I want to access his age out of the dog object I can do the first intact dog and then in quotes
+
+70
+00:04:40,350 --> 00:04:47,970
+age they get three or I can do dog dot age and I also get three.
+
+71
+00:04:48,120 --> 00:04:50,190
+It's up to you to use either one.
+
+72
+00:04:50,190 --> 00:04:53,100
+I prefer to use dog dog age because it's shorter.
+
+73
+00:04:53,100 --> 00:04:54,380
+You don't have to use the quotes.
+
+74
+00:04:54,390 --> 00:04:56,570
+You don't need double brackets on either side.
+
+75
+00:04:56,700 --> 00:04:57,880
+You just need it.
+
+76
+00:04:58,350 --> 00:05:01,100
+But there are a few differences on this slide.
+
+77
+00:05:01,110 --> 00:05:03,750
+I demonstrate three of the main differences.
+
+78
+00:05:04,140 --> 00:05:08,850
+So you can not use dot notation if the property starts with a number.
+
+79
+00:05:08,850 --> 00:05:14,580
+So you can see that here some object at DOT one blah is not valid.
+
+80
+00:05:15,090 --> 00:05:20,660
+But if I had a property called One blah I would have to use square brackets and put it in quotes and
+
+81
+00:05:20,660 --> 00:05:23,040
+that's just the way that it's set up in javascript.
+
+82
+00:05:23,040 --> 00:05:28,290
+I'm going to jump down to the third example here which is that you can't use dot notation if your property
+
+83
+00:05:28,290 --> 00:05:31,450
+name has a space in it like fav color.
+
+84
+00:05:31,500 --> 00:05:33,240
+Obviously this it doesn't work.
+
+85
+00:05:33,240 --> 00:05:38,820
+Javascript thinks that we're accessing dot fav So if we want a property with the space which is not
+
+86
+00:05:38,820 --> 00:05:42,600
+really a good practice anyway but if we did we would need to use quotes.
+
+87
+00:05:42,620 --> 00:05:43,130
+Fav.
+
+88
+00:05:43,170 --> 00:05:46,150
+Space color using square bracket notation.
+
+89
+00:05:46,890 --> 00:05:51,370
+And then the middle example shows that you can look up things using a variable.
+
+90
+00:05:51,420 --> 00:05:53,160
+If you use bracket notation.
+
+91
+00:05:53,370 --> 00:06:00,900
+So if I have a variable here called string or as TR And it's equal to name in quotes if I try and do
+
+92
+00:06:00,900 --> 00:06:09,300
+some object as TR It will just look for the property as TR But if I do some object square bracket as
+
+93
+00:06:09,300 --> 00:06:14,970
+TR It's going to evaluate as TR which gives us name in quotes.
+
+94
+00:06:14,970 --> 00:06:19,560
+So this will then look up the name property in some object.
+
+95
+00:06:19,560 --> 00:06:22,290
+So this is something we actually will see occasionally.
+
+96
+00:06:22,320 --> 00:06:24,040
+So it's worth knowing the difference here.
+
+97
+00:06:24,060 --> 00:06:29,700
+You can use square bracket notation using a variable name to look up a property.
+
+98
+00:06:29,820 --> 00:06:34,140
+The next thing that we want to do is be able to update data inside of an object.
+
+99
+00:06:34,410 --> 00:06:40,190
+So it's very similar to arrays where we access the data and then reassign it with an equal sign.
+
+100
+00:06:40,470 --> 00:06:47,970
+So here you can see we have our same person object name as Travis age is 21 city is L.A. If I want to
+
+101
+00:06:47,970 --> 00:06:51,230
+add one to Traviss age it's his birthday.
+
+102
+00:06:51,450 --> 00:06:54,160
+All I need to do is access person age.
+
+103
+00:06:54,570 --> 00:06:58,430
+I can use square brackets or the dot notation and then re-assigning.
+
+104
+00:06:58,560 --> 00:07:01,170
+So person age plus equals 1.
+
+105
+00:07:01,710 --> 00:07:08,940
+So that will add one person that age is now 22 or I can use person dot city and reassign that to be
+
+106
+00:07:08,940 --> 00:07:09,500
+London.
+
+107
+00:07:09,660 --> 00:07:15,490
+So person up city equals London will now set person to have city of London.
+
+108
+00:07:15,510 --> 00:07:16,990
+So just to demonstrate that.
+
+109
+00:07:17,280 --> 00:07:22,200
+Let's go back to our dog object which has name as Rusty breeders mutt.
+
+110
+00:07:22,230 --> 00:07:23,850
+Age is three.
+
+111
+00:07:23,880 --> 00:07:28,050
+Rusty just had a birthday so I'm going to change his age dog.
+
+112
+00:07:28,080 --> 00:07:34,080
+Age equals and I could either do this equals four which is just going to make it four no matter what
+
+113
+00:07:34,730 --> 00:07:36,260
+and I can look at dog.
+
+114
+00:07:36,930 --> 00:07:39,070
+Or I could do dog.
+
+115
+00:07:39,150 --> 00:07:45,940
+Age plus equals one which will just add one to the existing age and that gives us five.
+
+116
+00:07:45,990 --> 00:07:49,180
+I'll also demonstrate doing that with the square bracket notation.
+
+117
+00:07:49,230 --> 00:07:53,110
+Let's say that I want to change Rusty's name to be his nickname Tater.
+
+118
+00:07:53,450 --> 00:08:01,710
+I would write dog square bracket name and that just gives me resti and then I'll reassign it to be Tator
+
+119
+00:08:01,720 --> 00:08:02,730
+.
+
+120
+00:08:03,120 --> 00:08:10,200
+And if you look at dog we now have named Tator freed at age 5.
+
+121
+00:08:10,320 --> 00:08:16,050
+There are a few different ways of initialising objects just like we saw with a race so we can either
+
+122
+00:08:16,050 --> 00:08:19,540
+make an empty object first like we have here.
+
+123
+00:08:19,740 --> 00:08:24,560
+Var person equals empty curly braces and then we can add the data after the fact.
+
+124
+00:08:24,600 --> 00:08:26,240
+One piece at a time.
+
+125
+00:08:26,360 --> 00:08:33,330
+Person name is Travis person that age 21 person that city is L.A. we can do it all at once which is
+
+126
+00:08:33,330 --> 00:08:37,040
+what we've seen so far is called object literal notation.
+
+127
+00:08:37,140 --> 00:08:43,860
+So far person equals and then inside the curly braces I just write my property's name Travis age call
+
+128
+00:08:43,860 --> 00:08:50,910
+and 21 city Colan L.A. and the last way which you won't see very often until much later in javascript
+
+129
+00:08:50,910 --> 00:08:51,260
+.
+
+130
+00:08:51,330 --> 00:08:57,450
+He said I can use the new object which is a function just like a new array that will make us a new object
+
+131
+00:08:57,510 --> 00:08:59,740
+and return it to us as an empty object.
+
+132
+00:08:59,880 --> 00:09:03,570
+And then I can add person name person not age in person city.
+
+133
+00:09:03,810 --> 00:09:08,940
+So you'll definitely see this syntax and this syntax much more often for now.
+
+134
+00:09:08,940 --> 00:09:14,160
+Another point I'd like to make about objects is that just like arrays they can hold any sort of data
+
+135
+00:09:14,170 --> 00:09:14,330
+.
+
+136
+00:09:14,610 --> 00:09:21,410
+So our data can be numbers or strings or booleans an array even another object as you can see here.
+
+137
+00:09:21,630 --> 00:09:24,460
+Just like arrays we can mix and match as much as we'd like.
+
+138
+00:09:24,480 --> 00:09:28,770
+So we're going to stop here for now in the next video we're going to do a comparison between objects
+
+139
+00:09:28,800 --> 00:09:29,850
+and erase syntax
+

@@ -1,0 +1,360 @@
+﻿1
+00:00:00,270 --> 00:00:05,310
+In this video we're going to discuss a concept called scope in javascript.
+
+2
+00:00:05,310 --> 00:00:09,640
+Scope refers to the context that some code is being executed in.
+
+3
+00:00:09,900 --> 00:00:14,610
+So wherever we have some code let's say it's inside of a function called Say hello.
+
+4
+00:00:15,210 --> 00:00:18,550
+That code is running in a specific context.
+
+5
+00:00:18,720 --> 00:00:23,970
+And so it might have some variables and might have some properties and scope is referring to whichever
+
+6
+00:00:23,970 --> 00:00:27,620
+variables and properties are visible in that function.
+
+7
+00:00:27,750 --> 00:00:32,820
+And that could be different inside of another function or if we had functions nested inside of each
+
+8
+00:00:32,820 --> 00:00:33,290
+other.
+
+9
+00:00:33,360 --> 00:00:34,740
+Which is something you can do.
+
+10
+00:00:34,950 --> 00:00:39,070
+We might have different scopes and different variables are visible.
+
+11
+00:00:39,150 --> 00:00:41,490
+So this will make sense with a few examples.
+
+12
+00:00:41,490 --> 00:00:46,830
+This is definitely a notoriously difficult and complicated topic but I'm going to try my best to simplify
+
+13
+00:00:46,830 --> 00:00:47,950
+it for you.
+
+14
+00:00:48,660 --> 00:00:50,880
+Let's start with something simple here.
+
+15
+00:00:50,880 --> 00:01:03,720
+Declare function do math and all that do math we'll do is declare variable x equal to 40 and then it's
+
+16
+00:01:03,720 --> 00:01:09,390
+going to cancel that log X..
+
+17
+00:01:09,690 --> 00:01:10,980
+So let's run do math
+
+18
+00:01:14,040 --> 00:01:15,970
+and they get 40 printed out.
+
+19
+00:01:16,320 --> 00:01:22,720
+So inside of this function in this scope we would call it x is equal to 40.
+
+20
+00:01:22,740 --> 00:01:28,760
+However outside of the function if I try and access X what do you expect to happen.
+
+21
+00:01:29,760 --> 00:01:32,810
+I get an error it tells me x is not defined.
+
+22
+00:01:32,880 --> 00:01:38,650
+So what this shows us is that we have two different scopes inside of this function is one context.
+
+23
+00:01:38,760 --> 00:01:45,150
+X is defined in here but outside of that and what we would call the global scope we're not inside any
+
+24
+00:01:45,150 --> 00:01:46,200
+function.
+
+25
+00:01:46,350 --> 00:01:49,900
+When I type X I get an error because it doesn't know what X is.
+
+26
+00:01:49,920 --> 00:01:52,840
+It's not visible in this scope.
+
+27
+00:01:53,010 --> 00:02:01,200
+So if we do define x for x equals let's just call this low.
+
+28
+00:02:01,260 --> 00:02:07,020
+Now if I access X when I'm outside of this function just in the global scope I get.
+
+29
+00:02:07,030 --> 00:02:07,810
+Hello.
+
+30
+00:02:08,160 --> 00:02:10,450
+So in this context X is hello.
+
+31
+00:02:10,770 --> 00:02:17,200
+But if I run do math again what do you expect to happen this time.
+
+32
+00:02:17,400 --> 00:02:21,180
+It's still 40 inside of this context.
+
+33
+00:02:21,180 --> 00:02:22,490
+So that's really important.
+
+34
+00:02:22,800 --> 00:02:27,250
+When we create a function it has its own scope its own set of variables.
+
+35
+00:02:27,510 --> 00:02:33,060
+That doesn't mean though that instead of a function we can't access variables that are defined outside
+
+36
+00:02:33,060 --> 00:02:33,770
+of the function.
+
+37
+00:02:33,960 --> 00:02:35,290
+So I'll show you an example.
+
+38
+00:02:35,520 --> 00:02:42,890
+I'm going to clear everything here and this time let's use a variable Y variable y is equal to ninety
+
+39
+00:02:42,890 --> 00:02:43,700
+nine.
+
+40
+00:02:44,280 --> 00:02:47,510
+So in the global scope I can access y.
+
+41
+00:02:47,610 --> 00:02:52,380
+Now if I declare a function Let's call this do more math
+
+42
+00:02:56,100 --> 00:02:58,260
+if I want to cancel that log.
+
+43
+00:02:58,260 --> 00:03:01,220
+Why do you think will have an error.
+
+44
+00:03:01,500 --> 00:03:03,360
+Or will this work just fine.
+
+45
+00:03:04,230 --> 00:03:08,480
+Let's try it do more math with parentheses.
+
+46
+00:03:08,850 --> 00:03:10,420
+And that gives me 99.
+
+47
+00:03:10,830 --> 00:03:17,310
+So what this shows us here is that when we define something outside of a function we still have access
+
+48
+00:03:17,310 --> 00:03:19,520
+to it inside of that function.
+
+49
+00:03:19,530 --> 00:03:21,780
+Think of this as a child scope.
+
+50
+00:03:21,900 --> 00:03:27,630
+This is more specific it's drilling down into a deeper level and child scopes have access to things
+
+51
+00:03:27,630 --> 00:03:30,200
+to find in the parent scope.
+
+52
+00:03:30,300 --> 00:03:32,900
+So if that analogy helps you go ahead and run with it.
+
+53
+00:03:33,090 --> 00:03:38,530
+But basically to sum it up if we define a variable outside of function we can use it inside the function
+
+54
+00:03:38,540 --> 00:03:38,980
+.
+
+55
+00:03:39,210 --> 00:03:41,840
+But the opposite is not true.
+
+56
+00:03:43,020 --> 00:03:44,390
+So here's another example.
+
+57
+00:03:44,460 --> 00:03:50,290
+What if inside of do more math I actually change the value of y.
+
+58
+00:03:50,370 --> 00:03:56,260
+So I say why is equal to 100.
+
+59
+00:03:56,550 --> 00:03:58,200
+And then I print y.
+
+60
+00:03:58,710 --> 00:04:02,090
+What do you think happens in this case.
+
+61
+00:04:02,330 --> 00:04:03,260
+That's a try.
+
+62
+00:04:03,510 --> 00:04:05,060
+So let's look at what y is right now.
+
+63
+00:04:05,070 --> 00:04:06,130
+It's ninety nine.
+
+64
+00:04:06,430 --> 00:04:07,920
+And if I do more math
+
+65
+00:04:13,050 --> 00:04:14,910
+it prints out 100.
+
+66
+00:04:14,910 --> 00:04:19,080
+So inside the function y is on hundred and it printed out 100.
+
+67
+00:04:19,080 --> 00:04:21,370
+But how about outside the function.
+
+68
+00:04:21,720 --> 00:04:23,960
+What happens if I just type Y.
+
+69
+00:04:24,210 --> 00:04:26,160
+It's also 100.
+
+70
+00:04:26,610 --> 00:04:33,930
+So what happened here is I declared y first as '99 outside the function in the global scope.
+
+71
+00:04:34,380 --> 00:04:37,820
+And then inside the function I changed y.
+
+72
+00:04:37,980 --> 00:04:44,850
+So this didn't declare a new variable y in the scope it actually found the old one that was declared
+
+73
+00:04:44,850 --> 00:04:47,670
+up here and it changed it.
+
+74
+00:04:47,670 --> 00:04:49,770
+So in here.
+
+75
+00:04:49,770 --> 00:04:54,280
+Why is one hundred and outside Why is also 100.
+
+76
+00:04:54,300 --> 00:04:57,140
+So here's one more example let's clear all of this.
+
+77
+00:04:57,420 --> 00:05:07,380
+Let's make a variable phrase equals high there and then let's make a function do something.
+
+78
+00:05:07,380 --> 00:05:16,720
+I know these names are not terribly creative and instead of do something I'm going to try changing.
+
+79
+00:05:17,010 --> 00:05:23,350
+I'm going to make a new VAR phrase equals goodbye.
+
+80
+00:05:24,270 --> 00:05:30,520
+And then on the next line I'm going to print it.
+
+81
+00:05:30,570 --> 00:05:33,730
+So what do you expect to happen here.
+
+82
+00:05:34,830 --> 00:05:36,840
+If we run do something
+
+83
+00:05:40,110 --> 00:05:42,100
+it print goodbye.
+
+84
+00:05:42,120 --> 00:05:47,570
+So what that tells us is instead of do something for A's is equal to good bye.
+
+85
+00:05:47,880 --> 00:05:52,190
+But outside of it what is phrase equal to it's still high there.
+
+86
+00:05:52,500 --> 00:05:56,290
+So by adding far here var phrase equals goodbye.
+
+87
+00:05:56,430 --> 00:06:00,780
+That makes us a new variable rather than using the one defined up here.
+
+88
+00:06:00,780 --> 00:06:07,500
+It makes new phrase variable that exists only in this scope only inside of do something is phrased goodbye
+
+89
+00:06:07,500 --> 00:06:08,190
+.
+
+90
+00:06:08,250 --> 00:06:12,020
+So inside it's goodbye outside we get Hi there
+

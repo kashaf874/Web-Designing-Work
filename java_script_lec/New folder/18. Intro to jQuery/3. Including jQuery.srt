@@ -1,0 +1,508 @@
+﻿1
+00:00:00,120 --> 00:00:05,250
+So now that you've heard my introduction to Jay Cory as well as my own opinion on teaching Jay query
+
+2
+00:00:05,430 --> 00:00:11,250
+and the approach that we're taking here which to summarize briefly is we started with vanilla javascript
+
+3
+00:00:11,760 --> 00:00:15,130
+and now that we're confident doing things that way we're moving on to Jay Querrey.
+
+4
+00:00:15,510 --> 00:00:20,770
+So the first thing we need to talk about is how do we include a query into an application.
+
+5
+00:00:20,880 --> 00:00:26,430
+So I'm going to start with a very simple application here just adding in my age to mouth and give it
+
+6
+00:00:26,430 --> 00:00:27,250
+a title.
+
+7
+00:00:27,370 --> 00:00:28,310
+Jay queery demo
+
+8
+00:00:30,840 --> 00:00:33,390
+Jay on Jay queery is always lower case.
+
+9
+00:00:33,450 --> 00:00:37,990
+Don't ask me why Q Is uppercase all that in just a few elements.
+
+10
+00:00:38,030 --> 00:00:38,310
+J.
+
+11
+00:00:38,310 --> 00:00:39,380
+Corey demo.
+
+12
+00:00:39,870 --> 00:00:46,710
+Just like that and maybe an ally or two and these will just be random text.
+
+13
+00:00:47,100 --> 00:00:49,980
+OK so three allies etc. you.
+
+14
+00:00:50,040 --> 00:00:52,440
+And H-1 and will save.
+
+15
+00:00:52,710 --> 00:00:55,920
+And of course we'll go ahead and open that in the browser.
+
+16
+00:00:56,580 --> 00:00:58,960
+And here's our demo page.
+
+17
+00:00:59,190 --> 00:01:04,220
+There are a few ways to add a query to our own application and to our own age html files.
+
+18
+00:01:04,440 --> 00:01:07,140
+Remember that J query is just a javascript file.
+
+19
+00:01:07,230 --> 00:01:10,080
+It's no different than the files that we've written so far.
+
+20
+00:01:10,080 --> 00:01:13,320
+Like our color game dodge A-S or our To Do list.
+
+21
+00:01:13,410 --> 00:01:18,570
+Yes or whatever javascript files we've created and linked using a script tag.
+
+22
+00:01:18,570 --> 00:01:21,990
+So in both methods here we're using a script tag.
+
+23
+00:01:21,990 --> 00:01:24,900
+The only difference is the source attribute.
+
+24
+00:01:25,080 --> 00:01:30,600
+And in this case we're linking to the file locally and what that means is that I downloaded the code
+
+25
+00:01:30,600 --> 00:01:36,020
+for a query and they put it in the same directory as my project and then I linked to it.
+
+26
+00:01:36,120 --> 00:01:43,530
+So I'll show you how we do that if we go to the J Crew documentation and we click on download and then
+
+27
+00:01:43,530 --> 00:01:49,740
+we need to pick a version and I'm going to go with the latest which is 2.1 point 4 and we have a few
+
+28
+00:01:49,740 --> 00:01:50,460
+options.
+
+29
+00:01:50,550 --> 00:01:56,700
+We can download the compressed production Jey query 2.0 point 1.4 and the uncompressed development version
+
+30
+00:01:56,700 --> 00:01:57,130
+.
+
+31
+00:01:57,180 --> 00:01:58,500
+I'm going to do both.
+
+32
+00:01:58,500 --> 00:02:03,330
+Usually I would just do this one because it's compressed the whole point is that it's faster to load
+
+33
+00:02:03,340 --> 00:02:03,530
+.
+
+34
+00:02:03,630 --> 00:02:05,380
+But I do want to show you what it looks like.
+
+35
+00:02:05,550 --> 00:02:09,960
+So I'm going to get the uncompress one and the compressed one and you can see if we get two different
+
+36
+00:02:09,960 --> 00:02:10,860
+files.
+
+37
+00:02:10,860 --> 00:02:17,820
+We have Jay queery to point one point for Dot J.S. and we have J queried 2.1 percent for men.
+
+38
+00:02:18,030 --> 00:02:19,080
+Yes.
+
+39
+00:02:19,080 --> 00:02:22,310
+So I'm going to open both of those up in sublime here.
+
+40
+00:02:22,530 --> 00:02:26,880
+Just drag them in and let's take a look at them.
+
+41
+00:02:26,970 --> 00:02:29,720
+So this file here is the uncompressed version.
+
+42
+00:02:29,970 --> 00:02:31,810
+And as I scroll through.
+
+43
+00:02:32,310 --> 00:02:35,730
+Notice that it's just one really long javascript file.
+
+44
+00:02:36,000 --> 00:02:44,730
+It's over 9000 lines so we can include this file or we can include the minimized version which is the
+
+45
+00:02:44,730 --> 00:02:50,160
+same code behind the scenes but when something is minimized or compressed all the whitespace is taken
+
+46
+00:02:50,160 --> 00:02:50,730
+out.
+
+47
+00:02:50,730 --> 00:02:56,940
+So all these returns all the comments are gone and all the names of variables and properties are shortened
+
+48
+00:02:56,940 --> 00:03:06,150
+to single characters so you can see that we have things like em or we have things like A B C which are
+
+49
+00:03:06,150 --> 00:03:12,630
+definitely not the names of properties and arguments inside if the uncompressed file so we can include
+
+50
+00:03:12,630 --> 00:03:13,320
+either one.
+
+51
+00:03:13,500 --> 00:03:17,580
+And to do that we just need to make sure that we add the files to the correct directory.
+
+52
+00:03:17,940 --> 00:03:22,540
+So I'm going to make a new folder instead of my project and I'm going to call it lib.
+
+53
+00:03:22,710 --> 00:03:24,650
+And we don't have to do this.
+
+54
+00:03:24,690 --> 00:03:30,780
+We could just drag our two files to be in the same directory as our h team.
+
+55
+00:03:30,780 --> 00:03:33,100
+I'll file and I'll start with it that way to show you.
+
+56
+00:03:33,330 --> 00:03:41,730
+So I'm going to open up my H Tim L file and add a script here script tag and I need source equals and
+
+57
+00:03:41,760 --> 00:03:50,130
+I need to write this name right here which is J query to point one point for Dot J us and we need that
+
+58
+00:03:50,130 --> 00:03:50,740
+dash.
+
+59
+00:03:50,760 --> 00:03:55,750
+So I'm going to copy it and just set the source to a query dash 2. 1.4.
+
+60
+00:03:55,780 --> 00:03:56,050
+J.
+
+61
+00:03:56,060 --> 00:04:04,560
+Yes and as long as this file J Curry demo aged him out is in the same place as Jay Querrey 2.1 14:4
+
+62
+00:04:04,890 --> 00:04:05,760
+we should be good.
+
+63
+00:04:06,030 --> 00:04:11,670
+So I'll save and open it back in the browser and refresh.
+
+64
+00:04:11,790 --> 00:04:17,150
+If we open up the console we can actually type the word J Query and hit enter.
+
+65
+00:04:17,250 --> 00:04:22,050
+And if we don't get an error that tells us that the query is correctly added to our application.
+
+66
+00:04:22,560 --> 00:04:29,370
+So a better way to structure this is to actually put these in a separate directory called the lib just
+
+67
+00:04:29,370 --> 00:04:35,640
+so that we can separate our own javascript files from library javascript files so that we don't confuse
+
+68
+00:04:35,640 --> 00:04:40,350
+them and we don't clutter up our directory structure so it's not mandatory at all.
+
+69
+00:04:40,350 --> 00:04:42,220
+As you saw we had Jay query working.
+
+70
+00:04:42,540 --> 00:04:46,320
+But a better way to do it is to make a directory and we can call this anything.
+
+71
+00:04:46,440 --> 00:04:48,320
+You could call it J-curve if you wanted to.
+
+72
+00:04:48,480 --> 00:04:51,820
+I'm going to go with lib and then I need to change my link here.
+
+73
+00:04:51,840 --> 00:04:59,330
+My source to be lib slash Jay query dashed to point one point four and I'll do mine.
+
+74
+00:04:59,550 --> 00:05:01,140
+Yes and you don't have to do that.
+
+75
+00:05:01,140 --> 00:05:03,660
+There's no difference in functionality.
+
+76
+00:05:03,660 --> 00:05:07,980
+The only difference is that this is faster to load but I need to have that one here.
+
+77
+00:05:08,220 --> 00:05:10,350
+So to reiterate we do not need both of them.
+
+78
+00:05:10,380 --> 00:05:13,810
+We just need one and we need to link to that one correctly.
+
+79
+00:05:14,250 --> 00:05:15,670
+So let's verify that it worked.
+
+80
+00:05:15,710 --> 00:05:18,660
+If I refresh rate that works well.
+
+81
+00:05:18,720 --> 00:05:24,390
+You can type J query and we can also type dollar sign and if those work we know that sheet query is
+
+82
+00:05:24,390 --> 00:05:25,680
+correctly installed.
+
+83
+00:05:26,070 --> 00:05:31,640
+So that's the first way we can download a query locally and then link to it with the script tag.
+
+84
+00:05:31,840 --> 00:05:38,310
+There is another option though which is to use a CD in CD and stands for content distributed network
+
+85
+00:05:38,760 --> 00:05:44,640
+and think of it as just a way of grabbing a file from online without actually having to download it
+
+86
+00:05:44,640 --> 00:05:45,750
+to your machine.
+
+87
+00:05:45,810 --> 00:05:52,410
+So I'll show you if we just copy this you Arel right here which happens to be AJ queery CDN for version
+
+88
+00:05:52,410 --> 00:05:53,680
+2.0 1.4.
+
+89
+00:05:53,770 --> 00:05:58,660
+And if I just go to that you URL you'll see that it's just the J Corey file here.
+
+90
+00:05:58,920 --> 00:06:04,380
+What we can do is link to this you Arel or any other J queery CD and you know there's a lot of them
+
+91
+00:06:04,380 --> 00:06:09,850
+on line and that will work the same way as linking to the file here locally.
+
+92
+00:06:09,870 --> 00:06:14,850
+The only difference is that this will actually load a little bit faster because it's local on our computer
+
+93
+00:06:15,360 --> 00:06:20,410
+and if we replace it with the CD then it won't be noticeable to us.
+
+94
+00:06:20,530 --> 00:06:25,800
+But under the hood it does take a little longer but of course it is a lot easier and simpler to use
+
+95
+00:06:25,920 --> 00:06:30,430
+because we don't have to download a copy of Jay query for every application that we make.
+
+96
+00:06:30,780 --> 00:06:33,010
+So I'll refresh.
+
+97
+00:06:33,750 --> 00:06:37,350
+And if we type J query here it should still work and it does.
+
+98
+00:06:37,770 --> 00:06:40,190
+Lastly I'll show you how I found that CDN.
+
+99
+00:06:40,230 --> 00:06:47,580
+Just open up a new tab and look for Cdn Jay queery and if we just do a search for Cdn and then any other
+
+100
+00:06:47,580 --> 00:06:50,770
+library which will see some some other ones later on.
+
+101
+00:06:50,810 --> 00:06:52,110
+Mike J query.
+
+102
+00:06:52,110 --> 00:06:53,650
+You'll see that we get a bunch of links.
+
+103
+00:06:53,850 --> 00:06:55,850
+So Jay query has an official one.
+
+104
+00:06:55,860 --> 00:07:02,100
+There's the Cdn dodge city NJ s dot com and we have a bunch of you or else here that we can just copy
+
+105
+00:07:02,100 --> 00:07:02,880
+.
+
+106
+00:07:02,910 --> 00:07:07,040
+We would have to pay attention to the version so this is for 3.00.
+
+107
+00:07:07,200 --> 00:07:14,210
+If we go to 2.20 point 4 it gives us a uncompress the normal version and a modified version.
+
+108
+00:07:14,470 --> 00:07:17,090
+And just to show you if I go to that you are well.
+
+109
+00:07:17,310 --> 00:07:18,720
+I see them in a file file.
+
+110
+00:07:19,110 --> 00:07:20,490
+So to wrap up.
+
+111
+00:07:20,700 --> 00:07:22,130
+Either way works.
+
+112
+00:07:22,230 --> 00:07:28,440
+We need a script tag in both cases but the source is either going to be a local file or a file that's
+
+113
+00:07:28,440 --> 00:07:32,000
+hosted somewhere that we're linking to using a CDN.
+
+114
+00:07:32,100 --> 00:07:36,870
+The last thing you want to do is give you a quick 30 second preview of what she court looks like.
+
+115
+00:07:37,110 --> 00:07:39,930
+So here's a little bit of what J query looks like.
+
+116
+00:07:39,930 --> 00:07:45,300
+First thing you might notice is there's a dollar sign being used in four different places.
+
+117
+00:07:45,300 --> 00:07:51,480
+We have a bunch of methods like Dom click that see SS dot fade out dot remove.
+
+118
+00:07:51,690 --> 00:07:57,900
+So what this code will actually do is select a button with ID trigger and when it is clicked it runs
+
+119
+00:07:57,900 --> 00:08:04,350
+all this code and when it's clicked we're going to change the background color of the body to be yellow
+
+120
+00:08:04,350 --> 00:08:04,940
+.
+
+121
+00:08:04,980 --> 00:08:08,290
+We're going to fade out all images on the page.
+
+122
+00:08:08,370 --> 00:08:13,470
+It's going to take 3 seconds to fade them out and then when the fade out is done we're going to remove
+
+123
+00:08:13,470 --> 00:08:15,340
+those three images from the page.
+
+124
+00:08:15,750 --> 00:08:18,380
+So click on the button with IDF trigger.
+
+125
+00:08:18,390 --> 00:08:23,580
+Change the body color fade out images over three seconds and then remove images when they're done.
+
+126
+00:08:23,970 --> 00:08:26,640
+All right so that was the speed preview of a query.
+
+127
+00:08:26,730 --> 00:08:29,100
+Now let's actually start writing some in the next video.
+

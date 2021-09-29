@@ -1,0 +1,368 @@
+﻿1
+00:00:00,510 --> 00:00:01,740
+Hear they're welcome back.
+
+2
+00:00:02,070 --> 00:00:06,180
+So in this unit we're making probably my favorite thing ever.
+
+3
+00:00:06,180 --> 00:00:08,630
+It's this simple but fun toy.
+
+4
+00:00:09,120 --> 00:00:15,170
+Using animation and an animation library some graphics some audio and audio library.
+
+5
+00:00:15,270 --> 00:00:20,970
+And we're going to make a simple simple clone of that pad a tap app that I showed you early on where
+
+6
+00:00:21,150 --> 00:00:29,220
+you can hit keys on your keyboard and each key corresponds to a sound that is played and a little animation
+
+7
+00:00:29,340 --> 00:00:30,700
+and are just going to be simple.
+
+8
+00:00:30,720 --> 00:00:32,390
+We're not going to have a bunch of different animations.
+
+9
+00:00:32,400 --> 00:00:33,700
+I'll show you what it looks like.
+
+10
+00:00:33,840 --> 00:00:35,690
+Every key has its own sound.
+
+11
+00:00:35,850 --> 00:00:41,370
+And when I hit that key the sound is played and we get a colored circle through every key has its own
+
+12
+00:00:41,370 --> 00:00:43,710
+color and then the circles animate.
+
+13
+00:00:43,710 --> 00:00:44,900
+They basically shrink down.
+
+14
+00:00:44,910 --> 00:00:54,990
+So I'll show you what I mean and turn it up a bit.
+
+15
+00:00:55,640 --> 00:00:59,560
+We're going to make this movie isn't the same sound here.
+
+16
+00:00:59,610 --> 00:01:02,370
+Yes it's pretty fun but.
+
+17
+00:01:02,400 --> 00:01:06,190
+But the reason that we're doing this is not just because it's a fun project.
+
+18
+00:01:06,390 --> 00:01:11,870
+We're doing it because we have to use libraries here and we're going to use two libraries and mentioned
+
+19
+00:01:11,880 --> 00:01:15,310
+one is called Paper genius and another is called How they're genius.
+
+20
+00:01:15,720 --> 00:01:20,760
+And I just want you to see what the process is like when you incorporate a library into your code.
+
+21
+00:01:20,760 --> 00:01:26,460
+And whenever I'm writing curriculum whether it's for an evening course or a six month or a three month
+
+22
+00:01:26,460 --> 00:01:32,820
+course or an online course I always make sure that there's some there's some project or some assignment
+
+23
+00:01:32,850 --> 00:01:39,330
+that forces students to do a little bit of digging into the docks of a library or figuring out how to
+
+24
+00:01:39,330 --> 00:01:42,810
+incorporate some external code into their own app.
+
+25
+00:01:42,810 --> 00:01:48,570
+And I usually try and make it into something that's kind of fun sort of a toy maybe or a cool interactive
+
+26
+00:01:48,570 --> 00:01:49,210
+demo.
+
+27
+00:01:49,320 --> 00:01:55,260
+So I've done things with audio before with animations but also with the webcam and face tracking and
+
+28
+00:01:55,260 --> 00:01:56,640
+head tracking.
+
+29
+00:01:56,820 --> 00:02:01,050
+There are libraries that can do pretty much anything now with the browser it's it's really impressive
+
+30
+00:02:01,050 --> 00:02:01,420
+.
+
+31
+00:02:01,440 --> 00:02:03,750
+This one though is really fun.
+
+32
+00:02:03,990 --> 00:02:10,380
+Again we're taking two libraries Paperchase and how lurgy as we use paperchase to help out with graphics
+
+33
+00:02:10,380 --> 00:02:11,490
+and animations.
+
+34
+00:02:11,790 --> 00:02:15,330
+So they have some really really fun examples.
+
+35
+00:02:15,480 --> 00:02:23,490
+If you click on Showcase actually and on paper Jasc dot showcase they show you some real use cases where
+
+36
+00:02:23,490 --> 00:02:27,110
+people have used paper just in the wilds of clear cut examples.
+
+37
+00:02:27,270 --> 00:02:32,930
+There's some fun toys I really love this one here can probably play with this for hours.
+
+38
+00:02:33,060 --> 00:02:36,910
+Something is just very relaxing about this to me.
+
+39
+00:02:37,260 --> 00:02:40,360
+So fun things that we can do with paperchase.
+
+40
+00:02:40,470 --> 00:02:48,210
+Again anything that Paperchase does we can do on our own without Paperchase but it's a lot of work.
+
+41
+00:02:48,360 --> 00:02:50,460
+So I'll show you what I mean.
+
+42
+00:02:50,460 --> 00:02:51,680
+The code here.
+
+43
+00:02:51,690 --> 00:02:57,990
+So I hit a key in this case the letter P to make that circle and to shrink it down like that to do that
+
+44
+00:02:57,990 --> 00:03:01,830
+animation and also notice it it changes color a little bit.
+
+45
+00:03:02,040 --> 00:03:05,970
+I don't know if you can see that but it goes from purple or blue down to purple.
+
+46
+00:03:06,060 --> 00:03:09,870
+Or if I do another one this goes from yellow down to green.
+
+47
+00:03:10,200 --> 00:03:16,890
+That animation and that transition without paper J us might be 50 lines.
+
+48
+00:03:17,040 --> 00:03:19,920
+Maybe we could get by with 20 or so lines with paper.
+
+49
+00:03:19,950 --> 00:03:20,280
+Yes.
+
+50
+00:03:20,280 --> 00:03:21,550
+It's less than five.
+
+51
+00:03:21,690 --> 00:03:23,240
+It's really really simple.
+
+52
+00:03:23,250 --> 00:03:26,960
+Same thing with Hausler so howler helps us play audio.
+
+53
+00:03:27,120 --> 00:03:33,030
+We can do all of this without however just like we can do all of J queery everything that it does and
+
+54
+00:03:33,030 --> 00:03:37,940
+we can get by without j queery it just often means that we have to write more code.
+
+55
+00:03:38,070 --> 00:03:43,230
+So this plays a sound Here's an example we're going to do something very similar to this where we're
+
+56
+00:03:43,230 --> 00:03:48,090
+just going to play a sound when you hit a key and each key has its own unique sound so I'm hitting q
+
+57
+00:03:48,700 --> 00:03:57,070
+q always plays that noise and it always is that light blue color transition to a darker blue.
+
+58
+00:03:57,120 --> 00:04:02,520
+One last note is that the circles are in a random respond in a random location every time you press
+
+59
+00:04:02,520 --> 00:04:03,390
+that key.
+
+60
+00:04:03,510 --> 00:04:09,300
+So the location is not set doesn't correspond to the key just the color and the sound that's played
+
+61
+00:04:09,320 --> 00:04:09,710
+.
+
+62
+00:04:10,180 --> 00:04:11,430
+Okay great.
+
+63
+00:04:11,430 --> 00:04:13,560
+So in the next video we'll get started.
+
+64
+00:04:13,560 --> 00:04:18,580
+One thing I do want to point out before we get started is that all of these sound that you hear play
+
+65
+00:04:19,080 --> 00:04:21,670
+them all really.
+
+66
+00:04:23,630 --> 00:04:26,940
+Yes some really nice sounds.
+
+67
+00:04:27,060 --> 00:04:29,560
+We actually can use them in this project together.
+
+68
+00:04:29,970 --> 00:04:31,600
+I've included them as a download.
+
+69
+00:04:31,770 --> 00:04:36,660
+I'll show you here if you download the sound zip file.
+
+70
+00:04:36,690 --> 00:04:37,740
+There's a bunch of sounds.
+
+71
+00:04:37,740 --> 00:04:40,260
+Twenty something sounds in that file.
+
+72
+00:04:40,290 --> 00:04:44,550
+So there's some really nice sounds there and we actually can use all of those.
+
+73
+00:04:44,580 --> 00:04:46,970
+They're from an open source project and ghetto.
+
+74
+00:04:47,310 --> 00:04:52,270
+It's actually what patta tap uses or what Pedda tap actually is.
+
+75
+00:04:52,590 --> 00:04:54,680
+It's this neuronal synchrony on get her.
+
+76
+00:04:54,690 --> 00:04:58,900
+So it has animations if you want to look at those animations that we're not going to do.
+
+77
+00:04:58,970 --> 00:05:02,410
+So a lot more complex but it also has all the sounds.
+
+78
+00:05:02,640 --> 00:05:08,730
+So what I did is I just took the sound from this a folder right here all of these sounds and I zipped
+
+79
+00:05:08,730 --> 00:05:09,570
+them together.
+
+80
+00:05:09,570 --> 00:05:14,330
+There are a lot more if you want to choose different sounds you can go to get haven't download this
+
+81
+00:05:14,760 --> 00:05:19,160
+but I like the sounds that are in that a folder.
+
+82
+00:05:19,330 --> 00:05:21,750
+Also point out the license here.
+
+83
+00:05:21,750 --> 00:05:25,030
+We can use it MIT license take a look at it if you like.
+
+84
+00:05:25,320 --> 00:05:29,790
+Really nice sound so I'm not sure who made them if the creator here made them.
+
+85
+00:05:29,790 --> 00:05:33,690
+But there's some really really good sounds that we'll be using and they're identical to what patta tap
+
+86
+00:05:33,690 --> 00:05:34,250
+uses.
+
+87
+00:05:34,410 --> 00:05:35,620
+So download those.
+
+88
+00:05:35,640 --> 00:05:38,600
+It looks like this just a directory with a bunch of sounds.
+
+89
+00:05:38,640 --> 00:05:40,860
+And we'll be using that in the next few lessons.
+
+90
+00:05:41,160 --> 00:05:46,970
+So we go ahead and get started in the next video and I'll just leave you the last few seconds here and
+
+91
+00:05:46,990 --> 00:05:50,010
+make something on this CD
+
+92
+00:05:57,320 --> 00:06:03,370
+.
+

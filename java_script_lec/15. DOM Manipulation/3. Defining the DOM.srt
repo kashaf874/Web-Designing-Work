@@ -1,0 +1,432 @@
+﻿1
+00:00:00,600 --> 00:00:03,770
+So far we've talked about why dominate appellation is exciting.
+
+2
+00:00:03,960 --> 00:00:05,100
+Why you should care.
+
+3
+00:00:05,100 --> 00:00:09,420
+The different sites that use it the endless possibilities the games all the exciting things.
+
+4
+00:00:09,570 --> 00:00:12,710
+But we still haven't really talked about what the DOM actually is.
+
+5
+00:00:12,810 --> 00:00:16,380
+So we're going to do that in this video to start let's just define it.
+
+6
+00:00:16,380 --> 00:00:17,180
+Dio am.
+
+7
+00:00:17,220 --> 00:00:20,040
+Dom stands for Document object model.
+
+8
+00:00:20,190 --> 00:00:24,100
+The meaning of those three words will make a little more sense in the coming slides.
+
+9
+00:00:24,100 --> 00:00:26,780
+But let's start by defining it at a higher level.
+
+10
+00:00:26,820 --> 00:00:30,560
+The Dom is the interface between your javascript and your age.
+
+11
+00:00:30,570 --> 00:00:37,080
+Tim Mounty SS It's basically a bunch of special javascript objects javascript methods functions that
+
+12
+00:00:37,080 --> 00:00:42,870
+we can use to interact with our H.M.S. assess we can change things we can add elements remove elements
+
+13
+00:00:42,870 --> 00:00:48,930
+change colors animate things all sorts of exciting ways to interact with their H.M.S. assess.
+
+14
+00:00:49,380 --> 00:00:54,270
+On this slide I talk a little bit about how the DOM is constructed and why it's called the document
+
+15
+00:00:54,330 --> 00:00:56,070
+object model.
+
+16
+00:00:56,070 --> 00:01:02,180
+So when we load up an email page it looks like this in a browser and it's just some simple edged him
+
+17
+00:01:02,180 --> 00:01:09,210
+out so you have a title and a tag with my link as the text and an H-1 with my header as the text and
+
+18
+00:01:09,210 --> 00:01:09,950
+that's it.
+
+19
+00:01:10,260 --> 00:01:16,360
+So when I open this up in the browser I see this but behind the scenes the DOM is created.
+
+20
+00:01:16,380 --> 00:01:19,190
+It's constructed from this right here.
+
+21
+00:01:19,320 --> 00:01:24,270
+So what I mean is that this age Tim is turned into a bunch of javascript objects.
+
+22
+00:01:24,270 --> 00:01:27,440
+Each object models one of these elements.
+
+23
+00:01:27,450 --> 00:01:31,340
+That's where we get the object model part of document object model.
+
+24
+00:01:31,650 --> 00:01:37,530
+So again just to reiterate we load up each team in the browser the browser displays things to us like
+
+25
+00:01:37,530 --> 00:01:38,060
+this.
+
+26
+00:01:38,220 --> 00:01:43,890
+But behind the scenes it actually makes this model of every single element with a javascript object
+
+27
+00:01:44,220 --> 00:01:47,490
+just like we modeled my dog Rusty using a javascript object.
+
+28
+00:01:47,490 --> 00:01:50,770
+He had a property name and an other one breed and age.
+
+29
+00:01:50,850 --> 00:01:55,080
+These objects are fundamentally the same thing except the content is different.
+
+30
+00:01:55,110 --> 00:02:03,120
+They're going to have things like type of tag text source attributes color background color text size
+
+31
+00:02:03,120 --> 00:02:07,290
+all different properties that are all contained inside of each object.
+
+32
+00:02:07,290 --> 00:02:11,460
+We're definitely going to spend a lot of time working with these objects so the specifics aren't important
+
+33
+00:02:11,460 --> 00:02:11,620
+.
+
+34
+00:02:11,640 --> 00:02:14,970
+All that I want to emphasize here is that we load up each tim L..
+
+35
+00:02:15,120 --> 00:02:21,810
+It's displayed in the browser and the browser takes that Tim L and takes each element and turns it into
+
+36
+00:02:21,900 --> 00:02:22,610
+an object.
+
+37
+00:02:22,680 --> 00:02:24,510
+So that covers the object model part.
+
+38
+00:02:24,540 --> 00:02:25,860
+What about the document.
+
+39
+00:02:26,070 --> 00:02:31,950
+So you can see here this is a little diagram of the type of structure that we get from the DOM the top
+
+40
+00:02:31,950 --> 00:02:38,250
+level object that everything is contained inside of our entire model of the H.T. mounseers us is called
+
+41
+00:02:38,250 --> 00:02:38,930
+the document.
+
+42
+00:02:39,120 --> 00:02:41,200
+So we can go to any web page at all.
+
+43
+00:02:41,220 --> 00:02:45,190
+So I have Google open and I'm just going to type in the con. The word document.
+
+44
+00:02:45,390 --> 00:02:49,470
+And when I do that I get this big thing that comes back this big object.
+
+45
+00:02:49,470 --> 00:02:51,900
+Except it doesn't look like a javascript object.
+
+46
+00:02:51,900 --> 00:02:53,740
+It's not really what we would expect.
+
+47
+00:02:53,760 --> 00:02:56,030
+That's because the browser is kind of hiding it from me.
+
+48
+00:02:56,130 --> 00:03:01,860
+What it actually is showing me is with the HQ mail looks like as text but it's not showing me the actual
+
+49
+00:03:01,860 --> 00:03:04,480
+objects that are modeled on this Timo.
+
+50
+00:03:04,740 --> 00:03:11,550
+So to get that we need to use cancel dot D I R which is another method on the console object and we're
+
+51
+00:03:11,550 --> 00:03:17,430
+going to cancel that D.I.R. document all that this will do is print out the entire document object in
+
+52
+00:03:17,430 --> 00:03:19,990
+this object syntax that we're familiar with.
+
+53
+00:03:20,070 --> 00:03:25,680
+So you can see it's just a regular object just like the ones we've written on our own just the same
+
+54
+00:03:25,710 --> 00:03:30,220
+as Rusty the dog object except there's a lot more information here.
+
+55
+00:03:30,510 --> 00:03:40,050
+So we have things like fonts or images links but we also have things like body and this body represents
+
+56
+00:03:40,050 --> 00:03:41,040
+the entire body.
+
+57
+00:03:41,040 --> 00:03:44,320
+So every element that you see on here is inside of body.
+
+58
+00:03:44,340 --> 00:03:49,710
+So if I open body up you'll see that we have a whole bunch of other properties including one called
+
+59
+00:03:49,710 --> 00:03:51,050
+Child's nodes.
+
+60
+00:03:51,150 --> 00:03:57,960
+So child nodes shows us that there is a div there's a script tag and there's another div inside of the
+
+61
+00:03:57,960 --> 00:03:58,590
+body.
+
+62
+00:03:58,590 --> 00:04:00,710
+And if we went to elements we would see that.
+
+63
+00:04:00,710 --> 00:04:03,360
+So here's the body inside of body.
+
+64
+00:04:03,420 --> 00:04:07,990
+We have that first div we have a script tag and we have the second div.
+
+65
+00:04:08,430 --> 00:04:15,480
+And then what say we open up that third div we would expect to see two more divs inside if that second
+
+66
+00:04:15,480 --> 00:04:15,890
+div.
+
+67
+00:04:15,900 --> 00:04:23,390
+And if we go over to the consul and we look at the second div and then we look at child nodes we see
+
+68
+00:04:23,430 --> 00:04:28,360
+OK there's two more divs So as you can see the dom gets really huge really fast.
+
+69
+00:04:28,500 --> 00:04:32,610
+There's hundreds and hundreds of different properties and methods and different nodes and this whole
+
+70
+00:04:32,610 --> 00:04:34,730
+crazy structure of nested objects.
+
+71
+00:04:34,890 --> 00:04:36,250
+It's just so much stuff.
+
+72
+00:04:36,270 --> 00:04:39,570
+It's one of those times that I mentioned at the beginning of this class where you're going to have to
+
+73
+00:04:39,570 --> 00:04:42,060
+be comfortable not knowing everything.
+
+74
+00:04:42,420 --> 00:04:46,450
+I can tell you now that most developers don't know half of the properties here.
+
+75
+00:04:46,500 --> 00:04:49,200
+I'd say they work with about 10 percent at most.
+
+76
+00:04:49,200 --> 00:04:52,630
+There's so much more stuff here that we almost never need to use.
+
+77
+00:04:52,680 --> 00:04:57,150
+And then sometime down the line something comes up and we have to do something we've never done before
+
+78
+00:04:57,150 --> 00:04:57,280
+.
+
+79
+00:04:57,330 --> 00:05:03,690
+We google it and we find out oh alright so that's what the uncured change property is for.
+
+80
+00:05:03,750 --> 00:05:04,560
+I had no idea.
+
+81
+00:05:04,680 --> 00:05:06,500
+And that's really what it's like to be a developer.
+
+82
+00:05:06,510 --> 00:05:11,190
+Up until now with javascript we've been working in a little bit of a small controlled world where we
+
+83
+00:05:11,190 --> 00:05:14,380
+learn about functions and objects we learn about variables.
+
+84
+00:05:14,610 --> 00:05:19,110
+And there's a finite number of ways of doing things and there's a very specific subset of knowledge
+
+85
+00:05:19,110 --> 00:05:21,440
+that you just need to know with the DOM.
+
+86
+00:05:21,450 --> 00:05:25,500
+Now we have this huge huge ecosystem to work in so many properties.
+
+87
+00:05:25,620 --> 00:05:28,020
+So I just want to reiterate there's so much here.
+
+88
+00:05:28,170 --> 00:05:32,100
+We're going to focus on the important pieces but the goal is not to memorize.
+
+89
+00:05:32,130 --> 00:05:34,780
+The goal is not to master every single property.
+
+90
+00:05:34,920 --> 00:05:39,560
+Again 10 percent at most is all that you need to be a competent web developer.
+
+91
+00:05:40,000 --> 00:05:43,080
+OK so let's go back and I just want to go over this one more time.
+
+92
+00:05:43,080 --> 00:05:44,450
+Summarize what we talked about.
+
+93
+00:05:44,700 --> 00:05:48,030
+So the DOM stands for document object model.
+
+94
+00:05:48,150 --> 00:05:52,150
+It's the interface between your javascript and your H.M.S..
+
+95
+00:05:52,280 --> 00:05:55,180
+It's how we can use our javascript to make things interactive.
+
+96
+00:05:55,260 --> 00:06:01,800
+It's how we do things like add a new element to the page or change the ref attribute of a link or change
+
+97
+00:06:01,800 --> 00:06:07,320
+the background image on our body or how we can get the value out of a form or we can do custom validations
+
+98
+00:06:07,320 --> 00:06:13,160
+and animations and interactive elements where you click in some code runs all these different possibilities
+
+99
+00:06:13,410 --> 00:06:18,960
+all stemmed from the fact that the document object model connects our javascript with their H.M.S. access
+
+100
+00:06:18,970 --> 00:06:19,110
+.
+
+101
+00:06:19,260 --> 00:06:24,930
+So the object model part of document object model tells us that it's a bunch of javascript objects that
+
+102
+00:06:24,930 --> 00:06:27,470
+are modeling elements in our H.T. amount.
+
+103
+00:06:27,870 --> 00:06:32,980
+So we have an ATAC here we end up with an object here representing that atec.
+
+104
+00:06:33,180 --> 00:06:37,770
+And then we end up with another object representing this H1 tag which we see over here.
+
+105
+00:06:37,980 --> 00:06:42,930
+Lastly it's called the document object model because everything lives inside of that one object called
+
+106
+00:06:42,930 --> 00:06:43,740
+the document.
+
+107
+00:06:43,830 --> 00:06:46,850
+It's the root node where everything else lives inside of.
+
+108
+00:06:47,070 --> 00:06:49,030
+So the next video we're going to start writing some code.
+

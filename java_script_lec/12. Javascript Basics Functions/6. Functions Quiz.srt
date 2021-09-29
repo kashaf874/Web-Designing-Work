@@ -1,0 +1,104 @@
+﻿1
+00:00:00,820 --> 00:00:01,310
+OK.
+
+2
+00:00:01,380 --> 00:00:05,730
+So it's time again for a few quick javascript function exercises.
+
+3
+00:00:05,880 --> 00:00:10,740
+So like the first few problem sets I'm not going to have you actually write code just yet.
+
+4
+00:00:10,740 --> 00:00:15,870
+I'm just going to give you a function here and a little bit of code and I'd like for you to evaluate
+
+5
+00:00:16,080 --> 00:00:18,140
+what happens when I run this code.
+
+6
+00:00:18,180 --> 00:00:18,830
+So go ahead.
+
+7
+00:00:18,830 --> 00:00:25,660
+Pause the video and then we'll talk about what actually happens in just a few moments.
+
+8
+00:00:25,680 --> 00:00:32,850
+So in this code we're declaring a function called test and it takes two arguments x and y and then all
+
+9
+00:00:32,850 --> 00:00:38,610
+that it does is a returned Y which is the second argument minus X which is the first.
+
+10
+00:00:38,610 --> 00:00:45,610
+So when I called test here with 10 and 40 X is going to be 10 y is going to be 40.
+
+11
+00:00:45,630 --> 00:00:50,770
+So we end up with a return 40 minus 10 which should return 30.
+
+12
+00:00:51,060 --> 00:00:55,220
+So let's verify that by opening up the cancel and pasting the code in.
+
+13
+00:00:55,590 --> 00:00:58,610
+And you can see we get 30 great.
+
+14
+00:00:58,900 --> 00:00:59,170
+OK.
+
+15
+00:00:59,190 --> 00:01:00,670
+So we have one more here.
+
+16
+00:01:00,720 --> 00:01:05,850
+This is another function also called test like for you to pause the video and evaluate what happens
+
+17
+00:01:05,850 --> 00:01:07,770
+when we run this code.
+
+18
+00:01:08,790 --> 00:01:17,010
+OK so this function test takes a single argument x and then it returned X times 2 and then it looks
+
+19
+00:01:17,010 --> 00:01:21,950
+like it also confidant logs X and then it returns X divided by two.
+
+20
+00:01:22,530 --> 00:01:28,020
+But if you'll remember from the video on the return key word as soon as we return something execution
+
+21
+00:01:28,020 --> 00:01:29,850
+of a function stops.
+
+22
+00:01:29,850 --> 00:01:33,980
+So when we return x times 2 the function is over.
+
+23
+00:01:34,020 --> 00:01:36,350
+And so neither of these lines actually runs.
+
+24
+00:01:36,600 --> 00:01:42,710
+So test 40 is going to return 80 and then that's it.
+
+25
+00:01:42,720 --> 00:01:45,570
+So to verify that open up the con..
+
+26
+00:01:45,570 --> 00:01:52,700
+Paste this in and you can see we get 80 but we never get counted out log 40 or return 20
+

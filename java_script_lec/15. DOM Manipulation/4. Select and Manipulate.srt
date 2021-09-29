@@ -1,0 +1,332 @@
+﻿1
+00:00:00,300 --> 00:00:03,940
+So now we've discussed why you should care about the Domm why it's exciting.
+
+2
+00:00:03,990 --> 00:00:07,640
+And we've also talked about what it is what the document object model means.
+
+3
+00:00:07,680 --> 00:00:13,320
+The fact that it's just a model of every element on a page using javascript objects the top level object
+
+4
+00:00:13,350 --> 00:00:15,130
+is called the document.
+
+5
+00:00:15,240 --> 00:00:18,340
+So that's great but we haven't seen how to do anything with it yet.
+
+6
+00:00:18,390 --> 00:00:23,460
+So in this video I'm going to briefly introduce the process of manipulating things using the dog.
+
+7
+00:00:23,790 --> 00:00:29,630
+So I've boiled down the whole process to two keywords select and manipulate.
+
+8
+00:00:29,670 --> 00:00:36,540
+So just like see assess where we write a selector to select something with the class of special or all
+
+9
+00:00:36,540 --> 00:00:43,620
+h ones or all image tags we select elements and then we apply styles like background color purple border
+
+10
+00:00:43,710 --> 00:00:47,840
+one pixel solid black with javascript and Dom and population.
+
+11
+00:00:47,850 --> 00:00:51,380
+We also select elements although we do it in a very different way.
+
+12
+00:00:51,480 --> 00:00:56,910
+We write javascript code which goes and selects elements and returns them back to us and then we change
+
+13
+00:00:56,910 --> 00:01:01,260
+properties on them so we select something and then we manipulate it.
+
+14
+00:01:01,290 --> 00:01:06,810
+So in the next few slides I'm going to show you how he could select this H-1 my header and how we could
+
+15
+00:01:06,810 --> 00:01:09,750
+change it to be pink.
+
+16
+00:01:09,750 --> 00:01:14,070
+I've been saying this a lot in the last few videos but I don't want you to focus on the syntax as much
+
+17
+00:01:14,160 --> 00:01:15,290
+as the concepts.
+
+18
+00:01:15,330 --> 00:01:18,930
+The next few videos will get into the nitty gritty of selecting and manipulating.
+
+19
+00:01:18,930 --> 00:01:21,150
+This is just an overview of how it works.
+
+20
+00:01:21,150 --> 00:01:25,600
+So on this slide I'm going to show how you could select that H1 just like with C.
+
+21
+00:01:25,620 --> 00:01:28,580
+There's a lot of different ways of selecting a given element.
+
+22
+00:01:28,800 --> 00:01:36,270
+In this case this line of code document dot queries selector H-1 is going to select the H-1 on this
+
+23
+00:01:36,270 --> 00:01:36,920
+page.
+
+24
+00:01:37,050 --> 00:01:40,960
+So I've highlighted here with this green box so you can see what's being selected.
+
+25
+00:01:41,340 --> 00:01:48,640
+So again var H-1 this is just any any variable we want equals document that query selector 8:1.
+
+26
+00:01:48,690 --> 00:01:52,420
+So we'll spend a lot more time with queries selector and define what it is and how it works.
+
+27
+00:01:52,470 --> 00:01:59,920
+But it returns an object that represents this H1 and it saves that in the H-1 variable.
+
+28
+00:01:59,970 --> 00:02:02,190
+So that's the selecting process.
+
+29
+00:02:02,190 --> 00:02:08,340
+The next part is manipulating it so to manipulate it I can do all sorts of things and all that I'm going
+
+30
+00:02:08,340 --> 00:02:11,170
+to do here is change the color to be pink.
+
+31
+00:02:11,490 --> 00:02:18,470
+So we just write H-1 which is our variable that has the object representing the H-1 dot style.
+
+32
+00:02:18,510 --> 00:02:24,690
+That's one property and that style property is a huge object with a bunch of other properties and color
+
+33
+00:02:24,690 --> 00:02:25,580
+is one of them.
+
+34
+00:02:25,920 --> 00:02:28,920
+So H-1 does style but color equals pink.
+
+35
+00:02:28,920 --> 00:02:30,240
+And then that's all we have to do.
+
+36
+00:02:30,270 --> 00:02:35,400
+And the browser sees that I change that property to pink and it automatically updates what's displayed
+
+37
+00:02:35,820 --> 00:02:37,500
+by turning it pink.
+
+38
+00:02:37,500 --> 00:02:41,140
+So we selected here and then we manipulated.
+
+39
+00:02:42,120 --> 00:02:43,560
+So I have one more example here.
+
+40
+00:02:43,610 --> 00:02:45,230
+It's a little more complicated.
+
+41
+00:02:45,240 --> 00:02:50,610
+We're doing a very simple animation where every second we're changing the background color of the body
+
+42
+00:02:50,910 --> 00:02:52,940
+between blue and white.
+
+43
+00:02:52,950 --> 00:02:58,620
+So what we need to do first is select the body and then manipulate it so to select it.
+
+44
+00:02:58,740 --> 00:03:03,300
+I have another line using document dump query selector which again we're going to come back to in the
+
+45
+00:03:03,300 --> 00:03:06,720
+next video document that query selector body.
+
+46
+00:03:06,780 --> 00:03:11,880
+So that gives me the body element where it actually gives me the object representation the model of
+
+47
+00:03:11,880 --> 00:03:15,450
+it that I save in the body variable.
+
+48
+00:03:15,450 --> 00:03:20,490
+Then I have this variable is blue which is just a boolean that I'm going to use because I need to know
+
+49
+00:03:20,640 --> 00:03:23,940
+if I'm going from blue to white or white to blue.
+
+50
+00:03:24,030 --> 00:03:28,870
+So it starts out as false and then I'm using set interval which we covered a few years ago.
+
+51
+00:03:28,920 --> 00:03:32,230
+If you don't remember how it works it basically takes two arguments.
+
+52
+00:03:32,340 --> 00:03:38,880
+The first one is some code to run a function and the second one is a number or a time in milliseconds
+
+53
+00:03:38,900 --> 00:03:39,030
+.
+
+54
+00:03:39,150 --> 00:03:44,880
+So it takes this number of milliseconds which is one thousand or one second and every one second it
+
+55
+00:03:44,880 --> 00:03:46,230
+will call this code.
+
+56
+00:03:46,560 --> 00:03:51,080
+So what this code does is it checks if the background is currently blue if it is.
+
+57
+00:03:51,180 --> 00:03:56,330
+We then change it to be white if the background is white then we change it to be blue.
+
+58
+00:03:56,610 --> 00:04:00,030
+So to take a closer look we have our if is blue.
+
+59
+00:04:00,120 --> 00:04:01,640
+So that's just variable.
+
+60
+00:04:01,650 --> 00:04:02,900
+It starts out as false.
+
+61
+00:04:02,910 --> 00:04:07,890
+So the very first time the page loads the background is white is blue is false.
+
+62
+00:04:07,920 --> 00:04:15,240
+So this line doesn't run but this one does else body does style dark background equals to this hexadecimal
+
+63
+00:04:15,240 --> 00:04:16,570
+color which is blue.
+
+64
+00:04:16,770 --> 00:04:18,840
+So that changes the background to be blue.
+
+65
+00:04:19,140 --> 00:04:22,960
+So then we just change our is blue variable from false to true.
+
+66
+00:04:23,130 --> 00:04:27,690
+And that's a nice sort way of doing it with the exclamation point or the not operator.
+
+67
+00:04:27,780 --> 00:04:32,550
+So then this code runs again next time is blue is already true.
+
+68
+00:04:32,850 --> 00:04:36,870
+So this code does run body does style but background equals white.
+
+69
+00:04:36,870 --> 00:04:38,550
+So now we're going back to white.
+
+70
+00:04:38,670 --> 00:04:42,980
+This doesn't run and then we change is blue back to false.
+
+71
+00:04:43,290 --> 00:04:44,980
+And that keeps going forever.
+
+72
+00:04:45,090 --> 00:04:49,740
+So not that you would ever want something as distracting as a background color that changes every second
+
+73
+00:04:49,760 --> 00:04:49,950
+.
+
+74
+00:04:50,190 --> 00:04:56,160
+But this does go to show that we can do things more complex than just changing an H1 from black to pink
+
+75
+00:04:56,160 --> 00:04:57,450
+.
+
+76
+00:04:57,450 --> 00:05:03,930
+So to wrap all of this up two words select manipulate we select We grab some objects that represent
+
+77
+00:05:03,930 --> 00:05:06,260
+elements and then we do something to them.
+
+78
+00:05:06,750 --> 00:05:11,010
+So the rest of this unit is going to be focused on different ways of selecting and then different ways
+
+79
+00:05:11,010 --> 00:05:12,370
+of manipulating.
+
+80
+00:05:12,390 --> 00:05:16,830
+So the next video is going to dive deep into the different ways of selecting elements using javascript
+
+81
+00:05:16,830 --> 00:05:17,190
+.
+
+82
+00:05:17,190 --> 00:05:19,470
+We've seen one already queery selector.
+
+83
+00:05:19,500 --> 00:05:21,450
+We're going to expand on that and learn a few more
+

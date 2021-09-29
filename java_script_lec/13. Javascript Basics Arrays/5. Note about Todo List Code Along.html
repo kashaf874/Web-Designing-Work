@@ -1,0 +1,94 @@
+<p>Hi All,</p>
+
+<p>In the following lecture you will be using the prompt function in your JavaScript to display messages and accept input from the user.</p>
+
+
+
+
+
+
+
+
+
+<p>Chrome browser behaves a little strangely when using alert, prompt, or confirm functions. It doesn't display the HTML on the page until after the popup has been closed. This is problematic since our HTML contains instructions for the user to be able to use the app we're building.</p>
+
+
+
+
+
+
+
+
+
+<p>You can avoid this by wrapping your JS code in the following setTimeout function:</p>
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">window.setTimeout(function() {
+  // put all of your JS code from the lecture here
+}, 500);</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>This gives the HTML a half second to load before running the JS, which circumvents the issue of the prompt function blocking the HTML from loading right away.</p>
+
+
+
+
+
+
+
+<p>This is not something you would have to deal with in the real world as prompt, alert, and confirm functions are almost never used and when they are it's typically not on page load.</p>
+
+
+
+
+
+
+
+<p>You'll also learn jQuery in latter sections which has a cool <code>$('document').ready()</code>  function that you could use in place of the window.setTimeout workaround mentioned above.</p>
+
+
+
+<p>Note, if you want to be able to access the <strong>todos</strong> variable from the chrome developer console then you'll need to put it in the global scope, see example below:</p>
+
+
+
+<pre class="prettyprint linenums">var todos = ["Buy New Turtle"];
+window.setTimeout(function() {
+  // put all the rest of your JS code from the lecture here
+}, 500);</pre>
+
+
+
+
+
+
+
+<p>If you include the todos array inside of the window.setTimeout() function then it's scope will be local to the anonymous function (callback) and you won't be able to access it from the chrome console.</p>
+
+
+
+
+
+
+
+<p>-------<br>Thanks,<br>Ian <a href="https://www.youtube.com/channel/UCqo2YWBtmFSWhuUk4WEyfGg" rel="nofollow" target="_blank">Learn more</a></p>

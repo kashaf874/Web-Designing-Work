@@ -1,0 +1,984 @@
+﻿1
+00:00:00,720 --> 00:00:03,160
+I might come back in this lesson.
+
+2
+00:00:03,150 --> 00:00:07,480
+We're continuing to talk about a race and we're going to focus on array iteration.
+
+3
+00:00:07,740 --> 00:00:12,930
+So up until this point we've seen how we can create an array how an array is just a list of data we
+
+4
+00:00:12,930 --> 00:00:14,470
+can store whatever we want in there.
+
+5
+00:00:14,520 --> 00:00:20,180
+We can store numbers and strings and boolean values we can store other arrays but the idea is that we
+
+6
+00:00:20,290 --> 00:00:25,620
+have stored things in there and we've taken things out and we've accessed information like give me the
+
+7
+00:00:25,620 --> 00:00:30,410
+first item give me the last item or we've used push and pop and shift and n shift.
+
+8
+00:00:30,450 --> 00:00:36,360
+But up until this point we haven't seen how we could access every piece of an array or do some code
+
+9
+00:00:36,360 --> 00:00:38,470
+to every item in an array.
+
+10
+00:00:38,820 --> 00:00:44,380
+And that's what array iteration refers to iterating over a list iterating over an array.
+
+11
+00:00:44,400 --> 00:00:50,140
+Basically looping through that array and doing something to each item or with each item.
+
+12
+00:00:50,250 --> 00:00:55,560
+So I'll give you a few real world applications some real examples of array iteration.
+
+13
+00:00:55,560 --> 00:00:59,010
+So a common example is comments and posts.
+
+14
+00:00:59,010 --> 00:01:04,650
+So a blog posts whether it's tumblr or Reddit I guess tumblr doesn't really have comments but let's
+
+15
+00:01:04,650 --> 00:01:06,450
+say read it and read it.
+
+16
+00:01:06,450 --> 00:01:08,620
+Post has a bunch of comments.
+
+17
+00:01:08,850 --> 00:01:14,700
+Well those comments are stored in an array and in order to display all of those comments what actually
+
+18
+00:01:14,700 --> 00:01:21,180
+happens is that some code loops through it iterates over that array with 10000 comments potentially
+
+19
+00:01:21,600 --> 00:01:27,450
+and for each one it makes them each time all content and makes a little ally or it makes a paragraph
+
+20
+00:01:27,750 --> 00:01:31,740
+whatever the comments are that aged him out is generated in a loop.
+
+21
+00:01:31,830 --> 00:01:37,160
+When we iterate over in Iraq we'll be doing something very very similar with comments as well.
+
+22
+00:01:37,200 --> 00:01:42,360
+Later in this course when we talk about Noad and express it back in development we'll be using a loop
+
+23
+00:01:42,630 --> 00:01:46,080
+to iterate over an array of comments to print out each comment.
+
+24
+00:01:46,080 --> 00:01:49,140
+We'll also be using array iteration when you make it to do list.
+
+25
+00:01:49,170 --> 00:01:54,330
+So we've already started a simple to do list but when we actually add in each to malmsey SS will be
+
+26
+00:01:54,330 --> 00:02:00,690
+using a loop to go for each to do and make a little div for each to do and then we'll style each one
+
+27
+00:02:00,690 --> 00:02:01,380
+.
+
+28
+00:02:01,410 --> 00:02:06,900
+Same thing when you make a blog app we're going to use a loop and for each blog in our array of blogs
+
+29
+00:02:07,290 --> 00:02:08,170
+we're going to do something.
+
+30
+00:02:08,280 --> 00:02:10,250
+We'll make a little blog post on the page.
+
+31
+00:02:10,440 --> 00:02:12,480
+So radiation is really important.
+
+32
+00:02:12,480 --> 00:02:15,180
+It's probably the most common thing that we do with arrays.
+
+33
+00:02:15,210 --> 00:02:16,360
+We have a list of data.
+
+34
+00:02:16,470 --> 00:02:19,500
+Usually you want to do something to everything in that list.
+
+35
+00:02:19,560 --> 00:02:25,560
+Otherwise if you only want to work at the first thing always or the seventh item always maybe you shouldn't
+
+36
+00:02:25,560 --> 00:02:26,780
+be using an array.
+
+37
+00:02:26,820 --> 00:02:28,910
+Maybe you just store that item on its own.
+
+38
+00:02:29,220 --> 00:02:30,990
+So we have three objectives here.
+
+39
+00:02:31,080 --> 00:02:36,030
+The first one is I want to show you how you can use a for loop to iterate over an array and then I'm
+
+40
+00:02:36,030 --> 00:02:39,130
+going to show you something brand new called for each.
+
+41
+00:02:39,420 --> 00:02:44,310
+So you've seen four loops before but a foreach is something brand new it's it's exciting in my opinion
+
+42
+00:02:44,310 --> 00:02:44,340
+.
+
+43
+00:02:44,340 --> 00:02:46,460
+It's really really useful as well.
+
+44
+00:02:46,530 --> 00:02:49,340
+And then the last thing we'll do is compare the two.
+
+45
+00:02:49,350 --> 00:02:54,940
+So let's start here I have an example of using a for loop to loop through an array.
+
+46
+00:02:55,260 --> 00:03:00,480
+So we have an array of colors that has four items for strings red orange yellow and green.
+
+47
+00:03:00,760 --> 00:03:06,530
+Now if I wanted to print out each one if we didn't talk about this we didn't do a re iteration.
+
+48
+00:03:06,900 --> 00:03:08,750
+I'll copy this over here.
+
+49
+00:03:09,480 --> 00:03:12,180
+What I would have to do is something like this.
+
+50
+00:03:12,220 --> 00:03:16,700
+Cancel that log colors zero
+
+51
+00:03:19,770 --> 00:03:23,420
+and then do the same thing for 1 and 2.
+
+52
+00:03:23,910 --> 00:03:31,380
+And then finally for 3 which gives us green and guests heads up noxious but that's nowhere near as bad
+
+53
+00:03:31,380 --> 00:03:37,170
+as it could be if we had ten thousand colors in this array or 10000 comments on or read a post.
+
+54
+00:03:37,320 --> 00:03:40,020
+So obviously that wouldn't really work for us.
+
+55
+00:03:40,290 --> 00:03:42,960
+Not to mention the fact that it's not dry code.
+
+56
+00:03:42,960 --> 00:03:44,810
+We're repeating ourselves all the time.
+
+57
+00:03:45,000 --> 00:03:51,030
+So we use a loop to help automate this process because what we're doing here is the same operation.
+
+58
+00:03:51,030 --> 00:03:53,860
+The only thing that changes is the number 8 here.
+
+59
+00:03:54,240 --> 00:03:55,990
+And each time we're just adding one.
+
+60
+00:03:56,190 --> 00:04:00,480
+So we're starting at the beginning of the array and we're going all the way to the end so you can just
+
+61
+00:04:00,480 --> 00:04:03,070
+do that with a for loop as you can see here.
+
+62
+00:04:03,390 --> 00:04:09,450
+So our FOR loop our eye our variable starts at zero because that's always the first index in the array
+
+63
+00:04:09,450 --> 00:04:09,640
+.
+
+64
+00:04:09,750 --> 00:04:13,440
+And then we add one to it each time through the loop and we keep going.
+
+65
+00:04:13,530 --> 00:04:14,350
+Wow.
+
+66
+00:04:14,440 --> 00:04:17,290
+It's less than the length of the colors array.
+
+67
+00:04:17,340 --> 00:04:20,510
+So remember the length of this array is four.
+
+68
+00:04:20,520 --> 00:04:27,990
+So while I has less than four hours it should never equal four because colors four isn't defined.
+
+69
+00:04:28,140 --> 00:04:30,360
+So this type of for loop is really really common.
+
+70
+00:04:30,510 --> 00:04:37,740
+So let me just type it out here for our eye equals zero eyes less than color outflank and you don't
+
+71
+00:04:37,740 --> 00:04:39,050
+have to do it that way.
+
+72
+00:04:39,060 --> 00:04:43,740
+You can also do less than or equal two colors of length.
+
+73
+00:04:43,770 --> 00:04:49,500
+Amanda Swon which is a little bit longer so most people wouldn't write it that way but it's the same
+
+74
+00:04:49,500 --> 00:04:50,050
+thing.
+
+75
+00:04:50,280 --> 00:04:57,200
+So close out like I plus plus and open up our brackets.
+
+76
+00:04:57,720 --> 00:05:05,110
+And what we'll do here instead of counsel about logging let's do in on alerts alert colors.
+
+77
+00:05:05,120 --> 00:05:07,910
+I just like that.
+
+78
+00:05:08,060 --> 00:05:14,330
+So actually this shouldn't be all that new seeing seeing us using a for loop like this is new but there's
+
+79
+00:05:14,340 --> 00:05:16,290
+nothing new here as far as concepts.
+
+80
+00:05:16,290 --> 00:05:21,160
+It's just taking a for loop that you've already seen a number starting at zero and we're going up and
+
+81
+00:05:21,160 --> 00:05:26,180
+tell some other number and then all that we're doing is plugging that number into an array.
+
+82
+00:05:26,190 --> 00:05:28,130
+So let's try this.
+
+83
+00:05:28,650 --> 00:05:34,700
+And I hope you can read this I end up with red orange yellow green.
+
+84
+00:05:34,980 --> 00:05:40,440
+And let's do the same thing just with the council dot Lague instead.
+
+85
+00:05:40,440 --> 00:05:41,360
+And there we go.
+
+86
+00:05:41,730 --> 00:05:47,230
+So again what we would actually do with something like comments that do for of our I call.
+
+87
+00:05:47,250 --> 00:05:52,650
+And then I asked less and comments at length rather than canceled out logging something we might have
+
+88
+00:05:52,650 --> 00:05:58,890
+a function called make comment edged him out or something like that and that would be responsible for
+
+89
+00:05:59,120 --> 00:06:04,070
+making all the iChat him Alpher one comment and now we're doing it to every item in the comments array
+
+90
+00:06:04,090 --> 00:06:04,280
+.
+
+91
+00:06:04,460 --> 00:06:04,820
+OK.
+
+92
+00:06:04,860 --> 00:06:06,490
+So that's how we can use a for loop.
+
+93
+00:06:06,500 --> 00:06:11,330
+We could also go backwards so we start at the end of the array and we keep going until we hit zero.
+
+94
+00:06:11,400 --> 00:06:17,110
+But that's a little bit less common but there's a whole other way of iterating through an array called
+
+95
+00:06:17,110 --> 00:06:18,100
+a foreach.
+
+96
+00:06:18,270 --> 00:06:24,720
+And in my opinion foreach is much nicer to use it's simpler it's shorter and it's more common nowadays
+
+97
+00:06:24,720 --> 00:06:25,230
+.
+
+98
+00:06:25,230 --> 00:06:27,990
+Now for each has an always been a part of Javascript.
+
+99
+00:06:28,170 --> 00:06:33,440
+So it's relatively new compared to using a for loop or plain old for loop to loop through an array.
+
+100
+00:06:33,480 --> 00:06:37,210
+It came out in a I think 2009 or so.
+
+101
+00:06:37,440 --> 00:06:42,720
+So there will be tutorials and there are some older books that don't reference it but for what it's
+
+102
+00:06:42,720 --> 00:06:47,190
+worth I think that it's the the best way to loop through an array.
+
+103
+00:06:47,220 --> 00:06:52,020
+There's a little bit of a hurdle to get over at the very beginning as you'll see here.
+
+104
+00:06:52,200 --> 00:06:56,880
+It's something new it's a little intimidating where we're actually passing a function into another function
+
+105
+00:06:56,880 --> 00:06:57,090
+.
+
+106
+00:06:57,090 --> 00:06:58,940
+So I'll explain that in just a moment.
+
+107
+00:06:58,950 --> 00:07:02,970
+But once you get past that once you kind of learn the syntax and get used to it and you know when you
+
+108
+00:07:02,970 --> 00:07:07,680
+need to have brackets in parentheses and there's there's kind of a little bit of baggage that you have
+
+109
+00:07:07,680 --> 00:07:12,480
+to get through at the beginning but once you're comfortable with it it's so much easier than using a
+
+110
+00:07:12,480 --> 00:07:13,260
+for loop.
+
+111
+00:07:13,320 --> 00:07:19,470
+It's faster and you'll see it all over the place and I'll do my best to try and be balanced use for
+
+112
+00:07:19,470 --> 00:07:24,930
+loops use foreach just to kind of hit you from both directions so that you get used to both of them
+
+113
+00:07:24,940 --> 00:07:25,310
+.
+
+114
+00:07:25,360 --> 00:07:27,880
+But I'll tell you now I'm partial to four each.
+
+115
+00:07:27,890 --> 00:07:29,070
+So here's what it is.
+
+116
+00:07:29,160 --> 00:07:33,600
+It's a method called for each that's defined on every single array.
+
+117
+00:07:33,620 --> 00:07:38,090
+It's part of something called the array prototype which is where all of those methods like push and
+
+118
+00:07:38,100 --> 00:07:40,620
+pop and shift and unshipped It's where they all live.
+
+119
+00:07:40,740 --> 00:07:44,920
+So what it does is it takes a function as an argument as you can see here.
+
+120
+00:07:44,940 --> 00:07:51,500
+So we we write array whatever the name of the array is coloureds comments dot for each camel cost per
+
+121
+00:07:51,500 --> 00:07:52,270
+case.
+
+122
+00:07:52,500 --> 00:07:55,080
+And then we pass in a function.
+
+123
+00:07:55,320 --> 00:07:56,580
+So it doesn't actually look like this.
+
+124
+00:07:56,580 --> 00:08:01,620
+Normally what you'll see most often is an anonymous function like we have here.
+
+125
+00:08:02,340 --> 00:08:09,330
+So you pass in this entire thing which is a function and then that function is called for every single
+
+126
+00:08:09,330 --> 00:08:10,720
+element in the array.
+
+127
+00:08:11,190 --> 00:08:13,150
+So let me show you an example here.
+
+128
+00:08:13,250 --> 00:08:14,870
+We'll just take this code.
+
+129
+00:08:14,970 --> 00:08:19,340
+Copy this array over and then clear the screen first.
+
+130
+00:08:20,160 --> 00:08:25,200
+So we have the colors array and then we write colors for each.
+
+131
+00:08:25,200 --> 00:08:30,510
+And whenever I pass in we'll be called on each element and then typically we'll have nano misfunction
+
+132
+00:08:30,500 --> 00:08:33,580
+here and I'm not going to give it any arguments.
+
+133
+00:08:33,580 --> 00:08:36,180
+I'll explain what that argument is in just a moment.
+
+134
+00:08:36,170 --> 00:08:37,300
+So colourist up for each.
+
+135
+00:08:37,320 --> 00:08:39,570
+And then just the empty function.
+
+136
+00:08:39,600 --> 00:08:48,530
+And for now we'll do constant waterlog inside the for each Just like that.
+
+137
+00:08:48,570 --> 00:08:53,480
+Take a moment think about what you expect to happen I said that it causes function for every item in
+
+138
+00:08:53,490 --> 00:08:56,660
+the array and I'll hit enter.
+
+139
+00:08:57,360 --> 00:09:04,110
+And I always forget about this it doesn't make very good video here but Chrome will compress all those
+
+140
+00:09:04,110 --> 00:09:05,970
+councils logs into one line.
+
+141
+00:09:06,090 --> 00:09:07,790
+But there's a number for red here.
+
+142
+00:09:07,950 --> 00:09:11,840
+So it is repeating it four times one for each item in the array.
+
+143
+00:09:12,240 --> 00:09:21,120
+So an easier way to see that actually would be an alert and they get one letter to alert three and four
+
+144
+00:09:21,120 --> 00:09:22,160
+alerts.
+
+145
+00:09:22,160 --> 00:09:24,440
+So it's doing it for each item in the array.
+
+146
+00:09:24,920 --> 00:09:32,000
+But that's not all that useful just to run some code x number of times or length minus one number of
+
+147
+00:09:32,000 --> 00:09:33,820
+times for an array.
+
+148
+00:09:33,870 --> 00:09:36,830
+We usually want to use the data in that array somehow.
+
+149
+00:09:36,840 --> 00:09:42,030
+Whether it's making comment each time now whether it's saving something to the database whether it's
+
+150
+00:09:42,500 --> 00:09:47,670
+adding something to a score for each item but we usually want to interact or manipulate that data in
+
+151
+00:09:47,660 --> 00:09:52,530
+some way rather than just arbitrarily alerting or comes to that logging.
+
+152
+00:09:52,710 --> 00:09:57,870
+So the way that we get that data is by having our function whatever this function is whether it's an
+
+153
+00:09:57,870 --> 00:10:01,220
+anonymous function a named function function expression.
+
+154
+00:10:01,290 --> 00:10:01,850
+It doesn't matter.
+
+155
+00:10:01,860 --> 00:10:08,520
+But whatever that function is we have it except an argument so let me rewrite this here and it can be
+
+156
+00:10:08,520 --> 00:10:11,600
+called anything we want just like any other function that we define.
+
+157
+00:10:11,620 --> 00:10:19,230
+So I'll start with a terrible name like I love dogs which you would hopefully never use in your code
+
+158
+00:10:19,500 --> 00:10:22,130
+unless it really made sense in some situation.
+
+159
+00:10:22,480 --> 00:10:27,060
+I can't think of many though and what I'll do is take either of dogs and print.
+
+160
+00:10:27,100 --> 00:10:30,850
+I love dogs each time so don't log inside the for each.
+
+161
+00:10:31,000 --> 00:10:40,770
+Plus I love dogs and I'll hit enter and you'll see we get inside the forage read inside the forage orange
+
+162
+00:10:40,870 --> 00:10:44,490
+inside the forage yellow and finally inside the for each green.
+
+163
+00:10:44,830 --> 00:10:53,230
+So what's happening is that I love dogs is holding the value of each item in that array as we loop through
+
+164
+00:10:53,230 --> 00:10:55,230
+or as the foreach loops through.
+
+165
+00:10:55,380 --> 00:11:00,080
+So it's calling this function for each item this entire function here.
+
+166
+00:11:00,360 --> 00:11:05,820
+And not only is it just calling it but it's passing in red and then orange and then yellow and then
+
+167
+00:11:05,830 --> 00:11:08,050
+green into this function.
+
+168
+00:11:08,070 --> 00:11:10,010
+So let me show you an alternate syntax.
+
+169
+00:11:10,120 --> 00:11:14,690
+Well it's not really an alternate syntax but another way of defining a function and passing it in.
+
+170
+00:11:14,790 --> 00:11:16,650
+So it's just like any other function.
+
+171
+00:11:16,750 --> 00:11:25,140
+And going to call it print color and all that it will do is take an argument called Color and then instead
+
+172
+00:11:25,140 --> 00:11:35,320
+of here I'll do a constant log and let's just do a line of stars there to start and I'll copy that line
+
+173
+00:11:36,390 --> 00:11:40,500
+and then below it will do not log color.
+
+174
+00:11:41,790 --> 00:11:44,240
+And then again a piece outline.
+
+175
+00:11:44,710 --> 00:11:45,120
+OK.
+
+176
+00:11:45,220 --> 00:11:47,190
+So we've to find a simple function.
+
+177
+00:11:47,190 --> 00:11:52,120
+Hopefully this is review at this point takes an argument called Color and I hit Enter nothing happens
+
+178
+00:11:52,290 --> 00:11:54,080
+because I've only defined the function.
+
+179
+00:11:54,150 --> 00:11:58,590
+But now if I call it print color and let's do purple.
+
+180
+00:11:58,680 --> 00:12:03,830
+Obviously the best color I get stars Purple stars.
+
+181
+00:12:04,620 --> 00:12:10,030
+And just as review I get undefined because my function doesn't actually return anything but it prints
+
+182
+00:12:10,020 --> 00:12:10,800
+three lines.
+
+183
+00:12:10,980 --> 00:12:17,490
+OK so I can use for each to run this print color on every item in the array and all that I have to do
+
+184
+00:12:17,640 --> 00:12:25,410
+is colors which is my array for each and then rather than typing out a whole function here.
+
+185
+00:12:25,480 --> 00:12:32,170
+All I do is pass in print color and this is a really important note that I don't put parentheses here
+
+186
+00:12:33,000 --> 00:12:35,060
+if I do put those parentheses there.
+
+187
+00:12:35,190 --> 00:12:37,570
+I'm going to immediately call that function.
+
+188
+00:12:37,570 --> 00:12:42,630
+Remember whenever javascript's sees a function followed by parentheses it executes it.
+
+189
+00:12:42,730 --> 00:12:47,710
+So it doesn't matter that I'm passing it into for each It will be called before we want it to be called
+
+190
+00:12:48,410 --> 00:12:55,220
+what we actually want to do is just pass in print color without parentheses we're telling for each.
+
+191
+00:12:55,360 --> 00:12:55,920
+Here we go.
+
+192
+00:12:55,920 --> 00:12:56,640
+Here's the function.
+
+193
+00:12:56,660 --> 00:12:58,450
+I want you to call for me later.
+
+194
+00:12:58,570 --> 00:13:01,880
+When you loop through and I want you to call it on each item in the array.
+
+195
+00:13:02,040 --> 00:13:04,770
+So then what will happen if we fast forward.
+
+196
+00:13:04,840 --> 00:13:13,320
+Well let me hit enter first and you'll see we get purple while it starts here red orange yellow and
+
+197
+00:13:13,330 --> 00:13:14,070
+green.
+
+198
+00:13:14,470 --> 00:13:20,980
+So what's happening behind the scenes is that for each is taking print color and it's running print
+
+199
+00:13:21,000 --> 00:13:28,440
+color red print color orange Except it doesn't really look like that.
+
+200
+00:13:28,440 --> 00:13:40,090
+It looks more like this print color colors Pi which starts at 0 and then pretty colors colors one.
+
+201
+00:13:40,260 --> 00:13:43,960
+So it's taking our print colors function and it's actually calling it for us.
+
+202
+00:13:44,010 --> 00:13:47,970
+So we just tell it what to call and it we'll call it on the items.
+
+203
+00:13:48,100 --> 00:13:53,110
+So for each It's really nice because we don't have to work with I we don't have to write out the syntax
+
+204
+00:13:53,110 --> 00:14:01,020
+for a for loop and we don't have to access colors I inside of our code or that we access is whatever
+
+205
+00:14:01,020 --> 00:14:01,820
+we call it here.
+
+206
+00:14:01,890 --> 00:14:07,330
+So color in this case but remember I showed that as I love dogs which is not a good name really but
+
+207
+00:14:07,680 --> 00:14:13,130
+it can be anything that we want and hopefully it means more than colors.
+
+208
+00:14:13,620 --> 00:14:20,230
+So again we can use both of them for and for each for each is newer more popular and I prefer it but
+
+209
+00:14:20,230 --> 00:14:26,220
+I'll do my best to give you a balanced perspective or at least force you to see both.
+
+210
+00:14:26,350 --> 00:14:31,170
+And then here's a comparison of the two ways of looping through and there's more than two ways we could
+
+211
+00:14:31,170 --> 00:14:34,380
+use a while loop of course which I'll show you briefly.
+
+212
+00:14:34,440 --> 00:14:36,970
+We could do the same thing for colors.
+
+213
+00:14:37,300 --> 00:14:40,420
+All we need to do is define a variable.
+
+214
+00:14:40,410 --> 00:14:43,710
+Let's call it count and it's equal to zero at the beginning.
+
+215
+00:14:44,230 --> 00:14:51,400
+And then we're going to do while count is less than colourist out length just like our for each.
+
+216
+00:14:51,390 --> 00:14:53,620
+I mean just like a for loop.
+
+217
+00:14:54,100 --> 00:15:01,820
+And then instead of here we have to increment count before we forget and then we can just do a constant
+
+218
+00:15:01,830 --> 00:15:05,440
+alt log colour's counts.
+
+219
+00:15:05,860 --> 00:15:11,200
+So it's a little more syntax just like every while loop is usually compared to a for loop.
+
+220
+00:15:11,350 --> 00:15:17,340
+We have to define a variable first and then we have to increment it inside the loop and we end up with
+
+221
+00:15:17,350 --> 00:15:18,800
+red orange yellow green.
+
+222
+00:15:19,200 --> 00:15:24,460
+So you could use a while loop but it's it's really rare almost never will you see anyone do that.
+
+223
+00:15:24,450 --> 00:15:27,420
+It's almost always a for loop or a for each.
+
+224
+00:15:27,420 --> 00:15:30,760
+And increasingly it's pretty much always for each.
+
+225
+00:15:30,820 --> 00:15:36,070
+There are cases though where for each doesn't exist which I'll make sure to point out with some of the
+
+226
+00:15:36,070 --> 00:15:41,670
+browser stuff some of the H M L C Ss and Javascript stuff when we combine everything together there
+
+227
+00:15:41,670 --> 00:15:46,150
+will be moments where we're working with things that look like arrays but they're actually not.
+
+228
+00:15:46,170 --> 00:15:47,890
+And it's really confusing.
+
+229
+00:15:47,880 --> 00:15:51,990
+But I'll make sure that you're aware of it and we can't use it for each then.
+
+230
+00:15:52,200 --> 00:15:56,230
+So it's always good to remember how you write a for loop and how you do the same thing with for each
+
+231
+00:15:56,240 --> 00:15:56,400
+.
+
+232
+00:15:56,560 --> 00:16:00,500
+So that's what this code shows you here take a moment to study it if you'd like.
+
+233
+00:16:00,510 --> 00:16:04,860
+The key differences are the fact that in a for loop we're dealing with a number.
+
+234
+00:16:04,920 --> 00:16:09,850
+So we're going from a number from zero up until the end of the array and we're actually using that number
+
+235
+00:16:09,850 --> 00:16:11,450
+to access the array colors.
+
+236
+00:16:11,460 --> 00:16:15,610
+I in a foreach that's abstracted away from us.
+
+237
+00:16:15,630 --> 00:16:22,720
+So all that we're dealing with is a name that we've created a temporary placeholder color or item or
+
+238
+00:16:22,710 --> 00:16:29,070
+thing whatever it is comments post friend and you use that instead of a function.
+
+239
+00:16:29,250 --> 00:16:35,010
+And most common most often you'll see an anonymous function here unless there's a function that you
+
+240
+00:16:35,010 --> 00:16:39,910
+want to reuse later on and you want to call it some other parts of your code then you might define it
+
+241
+00:16:39,900 --> 00:16:42,350
+you might give it a name outside the foreach.
+
+242
+00:16:42,660 --> 00:16:43,200
+OK.
+
+243
+00:16:43,360 --> 00:16:44,240
+So we covered a lot.
+
+244
+00:16:44,250 --> 00:16:50,880
+They're really important stuff loops plus functions plus arrays things kind of coming together now.
+
+245
+00:16:51,120 --> 00:16:56,200
+Again I'll do my best to make sure you see both ways of writing a loop throughout the course and next
+
+246
+00:16:56,200 --> 00:17:00,970
+up we have a really short very quick exercise shouldn't take more than 30 seconds.
+

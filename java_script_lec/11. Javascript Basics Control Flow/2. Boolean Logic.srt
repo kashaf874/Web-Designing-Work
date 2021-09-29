@@ -1,0 +1,336 @@
+﻿1
+00:00:00,400 --> 00:00:01,670
+Well welcome back.
+
+2
+00:00:02,040 --> 00:00:07,050
+So the next few videos I'll cover a really important topic which is how do we make decisions in our
+
+3
+00:00:07,050 --> 00:00:08,260
+Javascript code.
+
+4
+00:00:08,640 --> 00:00:11,960
+And the first step is learning about something called boolean logic.
+
+5
+00:00:12,300 --> 00:00:17,160
+So if you can recall back to the first few videos we talked about a data type in javascript called billions
+
+6
+00:00:17,640 --> 00:00:19,110
+and billions are very simple.
+
+7
+00:00:19,110 --> 00:00:21,680
+There's only two possible options for a boolean value.
+
+8
+00:00:21,810 --> 00:00:23,420
+True or false.
+
+9
+00:00:23,760 --> 00:00:29,380
+So boolean logic is simply writing statements that evaluate to be true or false.
+
+10
+00:00:29,610 --> 00:00:34,800
+And eventually we'll use these statements to actually run certain parts of our code if something is
+
+11
+00:00:34,800 --> 00:00:38,610
+true and some other parts of our code if something else is false.
+
+12
+00:00:38,640 --> 00:00:40,590
+So these statements can be things like.
+
+13
+00:00:40,830 --> 00:00:42,130
+A user is logged in.
+
+14
+00:00:42,240 --> 00:00:49,160
+That's true or false but it could also be something as simple as if subtotal is greater than $10000
+
+15
+00:00:49,210 --> 00:00:49,480
+.
+
+16
+00:00:49,770 --> 00:00:51,790
+And those of value to be true or false.
+
+17
+00:00:51,810 --> 00:00:54,420
+And we do something with them in our code.
+
+18
+00:00:55,080 --> 00:01:00,450
+So the first thing we have to start with are comparison operators and comparison operators are things
+
+19
+00:01:00,450 --> 00:01:03,800
+that most of us use all the time in our day to day life.
+
+20
+00:01:03,930 --> 00:01:08,490
+It's how we compare two values to one another and it's how javascript does the same thing.
+
+21
+00:01:08,490 --> 00:01:12,050
+So this chart here goes over all the comparison operators.
+
+22
+00:01:12,210 --> 00:01:17,400
+It assumes that x is equal to 5 and you can plug in five wherever you see X..
+
+23
+00:01:17,460 --> 00:01:21,120
+So let's start with the simplest one greater then.
+
+24
+00:01:21,360 --> 00:01:25,350
+So x is greater than 10 is five greater than 10.
+
+25
+00:01:25,560 --> 00:01:26,190
+No.
+
+26
+00:01:26,370 --> 00:01:29,500
+So that evaluates to be false.
+
+27
+00:01:29,850 --> 00:01:33,980
+Next is greater than or equal to five greater than or equal to five.
+
+28
+00:01:34,110 --> 00:01:35,560
+That is true.
+
+29
+00:01:36,120 --> 00:01:39,000
+Next we have less than and less than or equal to.
+
+30
+00:01:39,120 --> 00:01:45,040
+You can see that Plug-In 5 5 is not less than negative 50 so it evaluates to be false.
+
+31
+00:01:45,060 --> 00:01:47,870
+Five is less than or equal to 100.
+
+32
+00:01:47,880 --> 00:01:49,600
+So this evaluates to be true.
+
+33
+00:01:50,370 --> 00:01:52,560
+The next four are a little bit different.
+
+34
+00:01:52,620 --> 00:01:55,350
+They cover equality and non equality.
+
+35
+00:01:55,350 --> 00:02:03,120
+So it's how we check if X is exactly equal to the number 5 or x is equal to that string 5 or X is anything
+
+36
+00:02:03,120 --> 00:02:05,000
+but the number 20.
+
+37
+00:02:05,040 --> 00:02:08,460
+It's how we basically check for equality.
+
+38
+00:02:08,460 --> 00:02:12,130
+One thing you'll notice though is that there are two ways to check for equality.
+
+39
+00:02:12,150 --> 00:02:16,610
+So there's one with two equal signs and one with three equal signs.
+
+40
+00:02:16,620 --> 00:02:19,340
+Likewise there are two ways to check for quality.
+
+41
+00:02:19,620 --> 00:02:25,320
+One with one equal sign and an exclamation point and another one with an exclamation point and two equal
+
+42
+00:02:25,320 --> 00:02:26,220
+signs.
+
+43
+00:02:26,340 --> 00:02:28,920
+So they both kind of go together in pairs.
+
+44
+00:02:29,100 --> 00:02:31,890
+We'll start by talking about double equals here.
+
+45
+00:02:31,890 --> 00:02:35,180
+Notice that X double equals the string five.
+
+46
+00:02:35,280 --> 00:02:40,770
+So X is number five x double equals the string five is true.
+
+47
+00:02:41,670 --> 00:02:46,560
+But if we do X triple the cross the string five that's false.
+
+48
+00:02:46,560 --> 00:02:52,230
+And the reason for that is on my next slide here it has to do with something called type coercion.
+
+49
+00:02:52,260 --> 00:02:55,770
+So when we use double equals it performs type coercion.
+
+50
+00:02:55,770 --> 00:03:01,440
+And what that means is it basically takes the two numbers or the two strings or the two variables whatever
+
+51
+00:03:01,440 --> 00:03:02,070
+they are.
+
+52
+00:03:02,280 --> 00:03:06,100
+And it tries to turn them into a similar type so that I can compare them.
+
+53
+00:03:06,300 --> 00:03:09,980
+So in this example x is in number 99.
+
+54
+00:03:10,170 --> 00:03:16,890
+And when we double equals x with the string ninety nine that is true because javascript performs type
+
+55
+00:03:16,890 --> 00:03:17,420
+coercion.
+
+56
+00:03:17,430 --> 00:03:23,850
+It tries to get them to be the same format and then compare the value versus triple equals does not
+
+57
+00:03:23,850 --> 00:03:27,060
+perform type scores and it cares not only about value.
+
+58
+00:03:27,090 --> 00:03:33,090
+So not only that they both say 99 but that one is a string and one is a number which is not valid triple
+
+59
+00:03:33,090 --> 00:03:33,770
+equals.
+
+60
+00:03:34,020 --> 00:03:37,880
+So as a rule of thumb you should always use triple equals it's much safer.
+
+61
+00:03:37,890 --> 00:03:45,120
+It's much more specific and it's not that as another example you can see here if we have no bar Y is
+
+62
+00:03:45,120 --> 00:03:51,750
+equal to no no double equals undefined it's actually true even though they are very different values
+
+63
+00:03:51,750 --> 00:03:51,780
+.
+
+64
+00:03:51,780 --> 00:03:53,200
+They're not the same thing.
+
+65
+00:03:53,280 --> 00:03:58,930
+Double equals considers that to be true and triple equals considers that to be false.
+
+66
+00:03:58,950 --> 00:04:04,260
+So the last thing that I want to do here is show a few interesting cases of using double equals.
+
+67
+00:04:04,320 --> 00:04:08,570
+And it basically behaves in ways you definitely would not expect.
+
+68
+00:04:08,580 --> 00:04:11,120
+So this is just another warning of why you should not use it.
+
+69
+00:04:11,250 --> 00:04:14,680
+But it also reveals a few of the underlying quirks in Javascript.
+
+70
+00:04:14,970 --> 00:04:21,890
+So we can take the number excuse me the boolean true and double equals the string 1.
+
+71
+00:04:22,140 --> 00:04:23,780
+And that's actually true.
+
+72
+00:04:24,210 --> 00:04:26,920
+However if we do that with any other string number.
+
+73
+00:04:26,940 --> 00:04:28,290
+So if I say true.
+
+74
+00:04:28,470 --> 00:04:30,110
+So just to show you two equals 1.
+
+75
+00:04:30,180 --> 00:04:37,030
+That is true but true equals 12 is false.
+
+76
+00:04:37,050 --> 00:04:41,510
+Likewise I say zero doubles equals false.
+
+77
+00:04:42,070 --> 00:04:43,350
+And that is true.
+
+78
+00:04:43,710 --> 00:04:46,640
+No double equals undefined as we just saw is true.
+
+79
+00:04:46,830 --> 00:04:50,150
+And probably the weirdest one is not a number.
+
+80
+00:04:50,190 --> 00:04:57,120
+Double equals not a number is actually false even though they look like exactly the same thing.
+
+81
+00:04:57,120 --> 00:04:58,980
+It's one of the weirdest quirks in javascript.
+
+82
+00:04:58,980 --> 00:05:05,920
+The way that not numbers implemented it is actually not comparable to not a number.
+
+83
+00:05:06,090 --> 00:05:09,810
+So the next thing that we're going to talk about is how do we actually change some of these together
+
+84
+00:05:09,870 --> 00:05:12,900
+and make those more complex statements that we talked about earlier.
+

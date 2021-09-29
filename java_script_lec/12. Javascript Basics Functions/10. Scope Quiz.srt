@@ -1,0 +1,148 @@
+﻿1
+00:00:00,600 --> 00:00:03,240
+So to finish up here I have a quick little quiz.
+
+2
+00:00:03,330 --> 00:00:10,230
+I'm just going to paste in some code and I'd like you to evaluate mentally without typing this up what
+
+3
+00:00:10,230 --> 00:00:11,960
+you think this returns.
+
+4
+00:00:12,270 --> 00:00:15,320
+So we define the function and then recalling it at the end.
+
+5
+00:00:15,510 --> 00:00:17,220
+So what's returned from do math
+
+6
+00:00:17,220 --> 00:00:22,920
+.
+
+7
+00:00:23,070 --> 00:00:25,290
+So the answer here is true.
+
+8
+00:00:25,620 --> 00:00:28,360
+So let's step through how that works.
+
+9
+00:00:28,410 --> 00:00:32,490
+Very first thing we're declaring numb to be 8.
+
+10
+00:00:32,580 --> 00:00:37,180
+Then we have a function do math but that doesn't run yet.
+
+11
+00:00:37,200 --> 00:00:40,840
+So the next thing that runs is numb plus equals 1.
+
+12
+00:00:40,950 --> 00:00:42,730
+So number is now 9.
+
+13
+00:00:43,140 --> 00:00:49,830
+So this is the same as this one appear because they're in the same scope then we're calling and do math
+
+14
+00:00:49,830 --> 00:00:50,390
+.
+
+15
+00:00:50,400 --> 00:00:54,310
+So instead of do math we're writing numb plus equals 1.
+
+16
+00:00:54,450 --> 00:00:55,960
+SO NUMB was nine.
+
+17
+00:00:56,190 --> 00:00:57,880
+This is referring to the same number.
+
+18
+00:00:58,020 --> 00:00:59,950
+So it's now 10.
+
+19
+00:01:01,020 --> 00:01:05,560
+So all this does here is check if numb is evenly divisible by five.
+
+20
+00:01:05,820 --> 00:01:08,260
+So 10 is divisible by five.
+
+21
+00:01:08,280 --> 00:01:11,670
+So we return true and that's it.
+
+22
+00:01:11,670 --> 00:01:15,120
+So as I mentioned scope is notoriously tricky to explain.
+
+23
+00:01:15,150 --> 00:01:20,100
+It's something that we've only scratched the surface of here but we covered the important parts which
+
+24
+00:01:20,100 --> 00:01:26,010
+is that anytime you define a new function it gets its own new scope and it can access variables that
+
+25
+00:01:26,010 --> 00:01:32,190
+were defined outside the function but inside a function if we defined something it's not accessible
+
+26
+00:01:32,370 --> 00:01:34,060
+outside the function.
+
+27
+00:01:34,740 --> 00:01:39,860
+So there's one more quick example I want to highlight which is if I have two functions one called the
+
+28
+00:01:39,860 --> 00:01:50,520
+high end inside of hi I'm just going to declare a variable name equals Rusti and then I'm going to cost
+
+29
+00:01:50,520 --> 00:01:51,330
+about Lague name
+
+30
+00:01:54,660 --> 00:02:02,250
+and then I'm going to have another function called by and I'm not going to define Rustie there but I
+
+31
+00:02:02,250 --> 00:02:08,580
+am going to Conchobar blog name if I run high and I execute it.
+
+32
+00:02:08,910 --> 00:02:13,730
+I of course get rusty because I defined a variable name is Rusty instead of high.
+
+33
+00:02:13,740 --> 00:02:15,320
+And then I printed it.
+
+34
+00:02:15,420 --> 00:02:19,560
+If I do this with by However I get undefined
+
+35
+00:02:22,270 --> 00:02:28,740
+and that's happening because name is not accessible in the scope of this by function.
+
+36
+00:02:29,310 --> 00:02:34,950
+So this goes to show that every function has its own scope and they're not shared between functions
+
+37
+00:02:34,960 --> 00:02:35,080
+.
+

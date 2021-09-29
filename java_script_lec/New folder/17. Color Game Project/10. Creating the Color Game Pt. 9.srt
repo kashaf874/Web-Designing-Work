@@ -1,0 +1,452 @@
+﻿1
+00:00:00,330 --> 00:00:05,310
+OK so there's one last place we can use the reset function which is at the very beginning of our code
+
+2
+00:00:05,310 --> 00:00:05,440
+.
+
+3
+00:00:05,550 --> 00:00:11,000
+When the page loads the very first time what we need to happen is we need to pick random colors which
+
+4
+00:00:11,010 --> 00:00:17,220
+you've done then we need to pick one color out of those new random colors which we already have here
+
+5
+00:00:17,230 --> 00:00:17,440
+.
+
+6
+00:00:17,820 --> 00:00:24,570
+And then we need to assign a color to each square on the page so we can use our reset function because
+
+7
+00:00:24,570 --> 00:00:26,290
+that's basically what it does.
+
+8
+00:00:26,490 --> 00:00:31,960
+And I'm going to clean things up by actually just running a function at the very beginning called init
+
+9
+00:00:32,340 --> 00:00:33,430
+and that doesn't exist.
+
+10
+00:00:33,600 --> 00:00:38,610
+And inside of our init function we're going to put everything that needs to run when the page loads
+
+11
+00:00:38,620 --> 00:00:38,820
+.
+
+12
+00:00:39,000 --> 00:00:41,490
+So we'll have function init.
+
+13
+00:00:41,790 --> 00:00:47,970
+And then inside of our net function the first thing that we can do is go ahead and add in our mode button
+
+14
+00:00:47,970 --> 00:00:49,070
+listeners.
+
+15
+00:00:50,250 --> 00:00:52,200
+And this is really just to clean things up.
+
+16
+00:00:52,230 --> 00:00:55,110
+So it's not just floating around in the middle of nowhere.
+
+17
+00:00:55,320 --> 00:00:56,850
+So it will indent this properly.
+
+18
+00:00:57,000 --> 00:01:05,260
+So this is our mode buttons event listeners and I'm going to grab this code here.
+
+19
+00:01:05,400 --> 00:01:10,420
+And what this does is it changes the color of each square which we can just get rid of.
+
+20
+00:01:10,560 --> 00:01:16,410
+We don't need to do that anymore because we'll use that reset and then it also adds klick listeners
+
+21
+00:01:16,410 --> 00:01:21,780
+to each square so that when you click we still need all of this logic can clean this up a little bit
+
+22
+00:01:21,780 --> 00:01:22,620
+.
+
+23
+00:01:22,620 --> 00:01:26,980
+We're changing the message display we're changing the reset button changing colors.
+
+24
+00:01:27,030 --> 00:01:33,780
+So I'm just going to copy this up into our init function because we also want that to run at the beginning
+
+25
+00:01:33,900 --> 00:01:38,560
+when the page loads so well and done this properly as well.
+
+26
+00:01:38,820 --> 00:01:44,970
+And then the very last thing once we have set up the event handlers here for the buttons mode buttons
+
+27
+00:01:45,060 --> 00:01:52,080
+and for the squares then we want to just reset the screen which means running the reset function and
+
+28
+00:01:52,080 --> 00:01:59,610
+what reset will do is it will actually generate our colors so we can just have colors be undefined or
+
+29
+00:01:59,610 --> 00:02:01,260
+an empty array at the start.
+
+30
+00:02:01,260 --> 00:02:02,230
+I'll just start with it.
+
+31
+00:02:02,280 --> 00:02:04,040
+Well we'll give it an empty array first.
+
+32
+00:02:04,350 --> 00:02:11,910
+And then what we can do is set picked color just to be a variable with no value and save that and to
+
+33
+00:02:11,910 --> 00:02:13,920
+make things a little bit cleaner.
+
+34
+00:02:14,010 --> 00:02:19,980
+I'm going to move my selectors down here so that up top we have are three variables that aren't selecting
+
+35
+00:02:19,980 --> 00:02:20,760
+things.
+
+36
+00:02:20,760 --> 00:02:25,620
+And then we have variables that are selecting the different elements on the page.
+
+37
+00:02:26,100 --> 00:02:26,620
+OK.
+
+38
+00:02:26,790 --> 00:02:29,360
+So again what happens to the very beginning.
+
+39
+00:02:29,550 --> 00:02:34,600
+We run the init function that's going to run all of this code here.
+
+40
+00:02:35,010 --> 00:02:42,160
+And that code is going to set up our mode button listeners and it's going to set up our square listeners
+
+41
+00:02:42,600 --> 00:02:49,050
+and then we run reset which picks colors it picks a random color out of those colors it picks it changes
+
+42
+00:02:49,050 --> 00:02:50,980
+the text content and all of that.
+
+43
+00:02:51,150 --> 00:02:56,400
+And we can get rid of this line because we're doing this now inside of the init function which is calling
+
+44
+00:02:56,520 --> 00:02:57,730
+reset.
+
+45
+00:02:57,780 --> 00:03:01,720
+So let's make sure that this works before we move on.
+
+46
+00:03:02,610 --> 00:03:04,860
+We refresh open up the con..
+
+47
+00:03:04,890 --> 00:03:05,860
+No errors.
+
+48
+00:03:06,180 --> 00:03:11,370
+And you can see I refresh the page and all of that code is being run in that init function.
+
+49
+00:03:11,370 --> 00:03:15,270
+And inside of there it's resetting everything that we see.
+
+50
+00:03:15,270 --> 00:03:17,190
+So our listeners are set up correctly.
+
+51
+00:03:17,460 --> 00:03:19,140
+We get the correct message.
+
+52
+00:03:19,140 --> 00:03:20,160
+Let's play again.
+
+53
+00:03:20,370 --> 00:03:21,890
+Everything's working just fine.
+
+54
+00:03:22,170 --> 00:03:24,440
+Let's play it easy mode.
+
+55
+00:03:25,680 --> 00:03:26,340
+There we go.
+
+56
+00:03:26,340 --> 00:03:31,430
+Let's play again one more time.
+
+57
+00:03:31,530 --> 00:03:32,000
+Great.
+
+58
+00:03:32,100 --> 00:03:35,880
+So it works just fine.
+
+59
+00:03:35,910 --> 00:03:40,890
+There's one more change we could make which is that this function right here and now it is a little
+
+60
+00:03:40,890 --> 00:03:45,750
+bit long and some people that I've worked with have really strict rules about how long function should
+
+61
+00:03:45,750 --> 00:03:46,290
+be.
+
+62
+00:03:46,290 --> 00:03:51,900
+Some people will say if your code is longer than 10 lines you need to split it into its own function
+
+63
+00:03:51,900 --> 00:03:52,140
+.
+
+64
+00:03:52,230 --> 00:03:53,500
+So we could do that here.
+
+65
+00:03:53,700 --> 00:03:59,370
+This could be a function of its own all that it does is set up a mode button listeners so we could do
+
+66
+00:03:59,370 --> 00:04:00,000
+that here.
+
+67
+00:04:00,040 --> 00:04:09,690
+Or just writing mode button let's call it set up mode buttons and then we'll declare that function down
+
+68
+00:04:09,690 --> 00:04:15,010
+here function set up mode buttons.
+
+69
+00:04:15,960 --> 00:04:24,900
+And inside here we'll just paste that code which will then run an indent properly one time just at the
+
+70
+00:04:24,900 --> 00:04:25,470
+beginning.
+
+71
+00:04:25,470 --> 00:04:29,450
+We set up the mode button listeners and we can do the same thing here.
+
+72
+00:04:29,460 --> 00:04:38,100
+Copy this code and we'll give this one a name of set up square listeners or let's just call it set up
+
+73
+00:04:38,100 --> 00:04:45,120
+squares like that and then we'll write a function set up.
+
+74
+00:04:45,120 --> 00:04:48,240
+And I'm noticing I didn't use a capital are you there.
+
+75
+00:04:48,300 --> 00:04:55,740
+So I need to pay attention to that set up squares here and we'll make sure that our code works the same
+
+76
+00:04:55,740 --> 00:04:56,340
+way.
+
+77
+00:04:56,340 --> 00:04:59,130
+So now our init is really nice and clean.
+
+78
+00:04:59,250 --> 00:05:04,610
+It sets up the mode buttons it sets up the squares and it resets everything that we see.
+
+79
+00:05:04,680 --> 00:05:06,850
+Let's try to refresh.
+
+80
+00:05:07,170 --> 00:05:10,970
+Looks like it worked our Square still work just fine.
+
+81
+00:05:11,100 --> 00:05:15,510
+If we refresh them more our mode buttons still work just fine as well.
+
+82
+00:05:15,510 --> 00:05:19,040
+So that's all great and it looks like everything is working just fine.
+
+83
+00:05:19,430 --> 00:05:21,600
+That's as far as we'll take to refactor for now.
+
+84
+00:05:21,600 --> 00:05:26,360
+But I will show you a few things that we would want to improve in future videos.
+
+85
+00:05:26,610 --> 00:05:31,020
+Once we learn a bit more about javascript and get more comfortable with it we'll talk about some design
+
+86
+00:05:31,020 --> 00:05:36,690
+patterns and Design Patterns are basically ways of structuring your code so we can have this code.
+
+87
+00:05:36,690 --> 00:05:42,030
+It works the same way the same logic to make the same game and 10 different people could write it in
+
+88
+00:05:42,030 --> 00:05:47,690
+10 different ways and it's not just about what functions we ride or the names of the variables.
+
+89
+00:05:47,820 --> 00:05:53,100
+It's also about how we structure things in general and the simplest one or one of the most common ones
+
+90
+00:05:53,460 --> 00:05:55,650
+is called the module design pattern.
+
+91
+00:05:55,890 --> 00:06:01,860
+And what that means is we can add a bunch of properties into objects so we don't have any variables
+
+92
+00:06:01,860 --> 00:06:05,460
+like this floating around that are not inside of an object.
+
+93
+00:06:05,550 --> 00:06:10,000
+We don't have any functions that are just on their own like this on the window object.
+
+94
+00:06:10,080 --> 00:06:12,790
+Rather we add them to our own object.
+
+95
+00:06:12,870 --> 00:06:16,840
+So it would look something like this you could have a game object.
+
+96
+00:06:17,280 --> 00:06:21,840
+And then we might write Game dot and we'll just do one part of it.
+
+97
+00:06:21,870 --> 00:06:30,690
+Game dot init is a function and we would just copy this code up there and we would do this for every
+
+98
+00:06:30,690 --> 00:06:36,590
+single function every single property variable and then at the very end we would just run game.
+
+99
+00:06:36,620 --> 00:06:41,130
+And the reasoning behind this is a little bit more complicated.
+
+100
+00:06:41,130 --> 00:06:44,720
+The short version is that it helps us keep things structured and organized.
+
+101
+00:06:44,940 --> 00:06:50,290
+And it also helps avoid namespace collisions which I mentioned earlier in one of the object videos.
+
+102
+00:06:50,460 --> 00:06:52,620
+So I won't go through this entire refactor.
+
+103
+00:06:52,620 --> 00:06:53,730
+What we have is good enough.
+
+104
+00:06:53,730 --> 00:06:54,880
+It works just fine.
+
+105
+00:06:54,990 --> 00:06:59,100
+But as you continue to grow as a developer and you learn more and more one of the things you'll pay
+
+106
+00:06:59,100 --> 00:07:04,590
+attention to once you get more comfortable is javascript design patterns and there are books written
+
+107
+00:07:04,590 --> 00:07:05,010
+on this.
+
+108
+00:07:05,010 --> 00:07:10,740
+There's essays and blogs and so many videos and there's entire courses actually online just about structuring
+
+109
+00:07:10,740 --> 00:07:11,670
+your javascript.
+
+110
+00:07:11,790 --> 00:07:12,940
+So that's not the focus.
+
+111
+00:07:12,970 --> 00:07:18,390
+And I still really just want to focus on the content the the code the HTML the javascript the C assess
+
+112
+00:07:18,450 --> 00:07:20,910
+the logic and the structure can come later.
+
+113
+00:07:21,210 --> 00:07:24,260
+But I just want you to be aware there are other ways of structuring this
+

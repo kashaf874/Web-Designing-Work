@@ -1,0 +1,792 @@
+﻿1
+00:00:00,240 --> 00:00:00,610
+OK.
+
+2
+00:00:00,690 --> 00:00:01,960
+So let's get started here.
+
+3
+00:00:02,040 --> 00:00:07,390
+And this video will focus on getting Paperchase set up and doing some simple simple animations.
+
+4
+00:00:07,440 --> 00:00:09,110
+So no audio just yet.
+
+5
+00:00:09,120 --> 00:00:12,400
+First thing I'll point out I'm in a new directory I created.
+
+6
+00:00:12,720 --> 00:00:14,930
+I added that sounds directory in here.
+
+7
+00:00:14,940 --> 00:00:19,500
+So make sure that you don't have to do it necessarily for this video because you won't be playing the
+
+8
+00:00:19,500 --> 00:00:19,970
+sounds.
+
+9
+00:00:19,980 --> 00:00:25,950
+But if you want to follow along make a directory make sure you drag or copy that sounds folder into
+
+10
+00:00:25,950 --> 00:00:26,820
+it.
+
+11
+00:00:26,850 --> 00:00:33,960
+The next thing you need to do is make our file so I'll make a file save it into the correct directory
+
+12
+00:00:34,740 --> 00:00:38,650
+and I'll just call it circles each time.
+
+13
+00:00:39,810 --> 00:00:46,490
+Well I in our h tim L. skeleton of course just like that and we'll leave it at that for now.
+
+14
+00:00:46,800 --> 00:00:51,110
+So let's just open it up shouldn't really see anything.
+
+15
+00:00:51,120 --> 00:00:53,710
+Now let's go to paper genius.
+
+16
+00:00:54,000 --> 00:00:55,370
+Again I really love this one.
+
+17
+00:00:55,560 --> 00:01:00,530
+But we're going to move away from this and we're going to go to download to start.
+
+18
+00:01:01,350 --> 00:01:06,390
+And the first thing we'll do is just download the most recent version which I've actually already done
+
+19
+00:01:06,390 --> 00:01:07,140
+.
+
+20
+00:01:07,260 --> 00:01:10,810
+So when you're done with that it will look like this.
+
+21
+00:01:11,010 --> 00:01:15,050
+And the first thing we can do is just take a look in the examples directory.
+
+22
+00:01:15,090 --> 00:01:19,600
+Let's take a look at animated animated star.
+
+23
+00:01:19,860 --> 00:01:23,880
+Pretty fun to play around with this makes me dizzy so I'm going to shut that off.
+
+24
+00:01:23,880 --> 00:01:26,280
+But you can take a look at some of the other ones as well.
+
+25
+00:01:26,280 --> 00:01:28,300
+Candy crash.
+
+26
+00:01:29,310 --> 00:01:32,010
+So there's some cool animation you can do.
+
+27
+00:01:32,130 --> 00:01:35,590
+There's a little physics involved here.
+
+28
+00:01:35,610 --> 00:01:38,120
+What else do we have.
+
+29
+00:01:38,130 --> 00:01:45,110
+This cool line animation and a whole bunch of other ones are you.
+
+30
+00:01:45,110 --> 00:01:49,290
+I really like this one this kind of parallax effect as you move your mouse.
+
+31
+00:01:49,830 --> 00:01:50,150
+OK.
+
+32
+00:01:50,190 --> 00:01:52,400
+So you can spend hours doing this.
+
+33
+00:01:52,410 --> 00:01:55,450
+There's lots of great examples you can open any of them up if you want.
+
+34
+00:01:55,470 --> 00:01:56,980
+Take a look at how it works.
+
+35
+00:01:57,060 --> 00:02:04,500
+So let's look at that space one first thing that you'll see that we're including paper J.S..
+
+36
+00:02:04,590 --> 00:02:08,060
+We need that file of course the library just like we need for Jay Querrey.
+
+37
+00:02:08,460 --> 00:02:14,670
+But there's something that you haven't seen before which is that we have a script type equals text slash
+
+38
+00:02:14,730 --> 00:02:16,070
+paper script.
+
+39
+00:02:16,260 --> 00:02:22,620
+So there's a particular type of file or a script that we can write called paper script that is a domain
+
+40
+00:02:22,620 --> 00:02:29,240
+specific language which is basically it's a language that is made specifically for paperchase.
+
+41
+00:02:29,250 --> 00:02:33,350
+So it's not something that will work unless we have Paperchase included.
+
+42
+00:02:33,570 --> 00:02:37,960
+And then you also see this canvas attribute canvas equals canvas.
+
+43
+00:02:37,980 --> 00:02:42,370
+So this is kind of weird what a canvas is it's an aged hymnal element.
+
+44
+00:02:42,540 --> 00:02:45,550
+So it's actually where everything that we do.
+
+45
+00:02:45,600 --> 00:02:47,590
+I'll show you inspect this right now.
+
+46
+00:02:47,730 --> 00:02:50,280
+This is the working version or the final version.
+
+47
+00:02:50,380 --> 00:02:54,070
+If I take a look first to show you how it works.
+
+48
+00:02:54,070 --> 00:02:59,450
+Again if I take a look and I inspect this black background it's not the body.
+
+49
+00:02:59,700 --> 00:03:06,900
+It's something called canvas and canvas is an HMO element that basically acts as a place to do animations
+
+50
+00:03:06,930 --> 00:03:08,040
+and graphics.
+
+51
+00:03:08,280 --> 00:03:15,990
+So if I go to DN a look for canvas can see that added an aged smell five to each smoke cannabis element
+
+52
+00:03:16,020 --> 00:03:19,010
+can be used to draw graphics to be a scripting in Javascript.
+
+53
+00:03:19,290 --> 00:03:20,300
+So that's really all it is.
+
+54
+00:03:20,310 --> 00:03:26,000
+It's an element in canvas that on its own without javascript it really doesn't do a thing.
+
+55
+00:03:26,280 --> 00:03:33,030
+But then we go and add javascript's to say things like make it rectangle here make it green make a 3-D
+
+56
+00:03:33,030 --> 00:03:37,140
+shape here do this animation and we do that all with Javascript.
+
+57
+00:03:37,140 --> 00:03:40,830
+So paper J.S. uses a canvas element.
+
+58
+00:03:40,920 --> 00:03:45,000
+It's the stage it's where it adds in all the animations in all the graphics.
+
+59
+00:03:45,000 --> 00:03:49,140
+So we need to have a canvas on our page as you can see for this space example.
+
+60
+00:03:49,560 --> 00:03:56,370
+If I go to the very bottom the only thing in the body is this right here a canvas and it has ID equal
+
+61
+00:03:56,370 --> 00:03:59,760
+to canvas and also the background set to black.
+
+62
+00:03:59,850 --> 00:04:04,500
+So Id equal the canvas corresponds to this line right here.
+
+63
+00:04:04,500 --> 00:04:06,300
+Canvas equals canvas.
+
+64
+00:04:06,300 --> 00:04:14,220
+So we're just telling this paper script file or this paper script script what ID to look for which in
+
+65
+00:04:14,220 --> 00:04:16,460
+the example that just named but canvas.
+
+66
+00:04:16,800 --> 00:04:18,890
+So we're going to do something very similar to this.
+
+67
+00:04:18,930 --> 00:04:22,820
+But before we get there we need to make sure we include paper yes.
+
+68
+00:04:23,220 --> 00:04:26,250
+So when you go to the download.
+
+69
+00:04:26,250 --> 00:04:32,190
+And rather than opening examples we're going to look indexed and then we can pick either paper full
+
+70
+00:04:32,190 --> 00:04:35,870
+or paper full of men and understand the full one here.
+
+71
+00:04:35,910 --> 00:04:45,450
+So I'm going to copy that over into our directory so paper Dasch full but us then in our own app we
+
+72
+00:04:45,450 --> 00:04:47,410
+need to make sure to include that.
+
+73
+00:04:47,670 --> 00:04:55,200
+So Source equals paper Dasch full japes just like that and save.
+
+74
+00:04:55,620 --> 00:04:59,760
+And then what we'll do is just refresh the page in Chrome.
+
+75
+00:05:00,120 --> 00:05:01,630
+Make sure we don't get an error.
+
+76
+00:05:01,740 --> 00:05:02,390
+Great.
+
+77
+00:05:02,430 --> 00:05:04,590
+So it found the file just fine.
+
+78
+00:05:04,590 --> 00:05:11,580
+Now let's go to paper genius's docs and look at tutorials so I actually didn't do this early on.
+
+79
+00:05:12,120 --> 00:05:15,490
+But I do want to read the description of what paper JSA is.
+
+80
+00:05:15,780 --> 00:05:21,290
+So it's an open source vector graphics scripting framework that runs on top of the age to my five canvas
+
+81
+00:05:21,290 --> 00:05:21,960
+.
+
+82
+00:05:22,080 --> 00:05:28,200
+It offers a clean scene graph slash document object model and a lot of powerful functionality to create
+
+83
+00:05:28,230 --> 00:05:33,540
+and work with vector graphics and Bezier curves all neatly wrapped up in a well-designed consistent
+
+84
+00:05:33,540 --> 00:05:35,950
+and clean programming interface.
+
+85
+00:05:36,000 --> 00:05:37,540
+So kind of a mouthful.
+
+86
+00:05:37,560 --> 00:05:42,120
+Basically it's a kick ass drawing library animation library graphics library.
+
+87
+00:05:42,120 --> 00:05:43,560
+That's really pretty popular.
+
+88
+00:05:43,560 --> 00:05:50,250
+There are a few of them out there so it's not it's not like a query where it's pretty much the one DOM
+
+89
+00:05:50,250 --> 00:05:52,270
+manipulation library.
+
+90
+00:05:52,290 --> 00:05:54,030
+The one event handling library.
+
+91
+00:05:54,030 --> 00:05:59,400
+There are a lot of animation in graphics things out there but paper is is I'm pretty confident saying
+
+92
+00:05:59,400 --> 00:06:00,790
+it's the most popular.
+
+93
+00:06:01,110 --> 00:06:06,660
+OK so let's go back to tutorials and take a look at getting started.
+
+94
+00:06:06,660 --> 00:06:09,000
+I think yes getting started working with paper.
+
+95
+00:06:09,020 --> 00:06:09,900
+Yes.
+
+96
+00:06:10,470 --> 00:06:14,280
+And we'll scroll down and take a look at their example here.
+
+97
+00:06:14,820 --> 00:06:17,380
+So what we could do is copy this entire thing in.
+
+98
+00:06:17,400 --> 00:06:21,290
+But I want to do it one piece at a time so that you see how it works.
+
+99
+00:06:21,540 --> 00:06:29,270
+So let's start by copying this canvas just copy the whole line and we'll put it in our body.
+
+100
+00:06:29,970 --> 00:06:36,180
+So canvas I.D. equals my canvas and if I refresh the page we won't see anything at all.
+
+101
+00:06:36,270 --> 00:06:44,100
+If we expected we would see there is a canvas there but if we go back let's copy this script text or
+
+102
+00:06:44,100 --> 00:06:48,260
+type because text size paper script canvas is my canvas.
+
+103
+00:06:48,260 --> 00:06:52,850
+And let's put that in here and paste.
+
+104
+00:06:53,130 --> 00:06:59,150
+So if we look at what's happening here there's some nice comments says that it creates a paper G-S path
+
+105
+00:06:59,170 --> 00:07:00,000
+to draw a line.
+
+106
+00:07:00,120 --> 00:07:04,400
+So we make a path and you're going to see a lot of syntax here that you've never seen.
+
+107
+00:07:04,410 --> 00:07:05,730
+And again that's the point.
+
+108
+00:07:05,940 --> 00:07:09,740
+The point is that I'm forcing you to see some new things to read the docs.
+
+109
+00:07:09,800 --> 00:07:16,470
+It can desensitize you to this feeling of I don't know what I'm doing I've never seen this code before
+
+110
+00:07:16,480 --> 00:07:17,890
+I don't know how it works.
+
+111
+00:07:17,940 --> 00:07:19,370
+That's kind of the point of the library.
+
+112
+00:07:19,380 --> 00:07:23,310
+You don't have to know how it works especially for something like animations.
+
+113
+00:07:23,310 --> 00:07:26,120
+Just be glad that someone else is taking care of it for you.
+
+114
+00:07:26,130 --> 00:07:28,700
+I definitely am it saved my life a lot of times.
+
+115
+00:07:28,920 --> 00:07:33,070
+So we create a new path here save it to a variable.
+
+116
+00:07:33,070 --> 00:07:40,800
+We change the stroke color to be black and then we create a point for the start at 100 comma 100 and
+
+117
+00:07:40,800 --> 00:07:50,960
+then we move our path to that start and then we draw a line to start plus 100 X and negative 50 y.
+
+118
+00:07:51,210 --> 00:07:57,780
+So I'll show you exactly what that does but it draws a line starting from 100 100 and then it moves
+
+119
+00:07:57,780 --> 00:08:04,800
+that line or it connects out first point to 300 comma 50.
+
+120
+00:08:04,800 --> 00:08:09,260
+So if we take a look make sure everything is working if we are fresh.
+
+121
+00:08:10,260 --> 00:08:12,160
+We end up with a line.
+
+122
+00:08:13,170 --> 00:08:16,730
+So the best thing to do when you have something new like this is play around.
+
+123
+00:08:17,040 --> 00:08:18,480
+So try changing this.
+
+124
+00:08:18,630 --> 00:08:25,980
+So it's red and start is now 0 100.
+
+125
+00:08:25,980 --> 00:08:33,250
+There we go we just moved our line or let's change this to be something more drastic like 500.
+
+126
+00:08:33,510 --> 00:08:36,070
+So you can play around with this all day long.
+
+127
+00:08:36,420 --> 00:08:43,140
+But what I want to really point out is that we're creating a paper script script not text so it's javascript
+
+128
+00:08:43,140 --> 00:08:50,340
+paper script and we're setting this canvas attribute canvas equals my canvas which is the name or the
+
+129
+00:08:50,340 --> 00:08:51,580
+ID that we assigned it.
+
+130
+00:08:51,660 --> 00:08:58,110
+So these have to match and the whole point of that is just to tell this paper script file where to draw
+
+131
+00:08:58,110 --> 00:08:58,530
+things.
+
+132
+00:08:58,560 --> 00:09:00,040
+What canvas to use.
+
+133
+00:09:00,300 --> 00:09:02,360
+So we can play around quite a bit more.
+
+134
+00:09:02,460 --> 00:09:09,990
+And I would highly recommend that you stop the video and take a look at the tutorials try some other
+
+135
+00:09:09,990 --> 00:09:10,890
+things.
+
+136
+00:09:11,100 --> 00:09:17,720
+So I'll just point you towards path's predefined shapes which is what we'll be using.
+
+137
+00:09:17,820 --> 00:09:21,280
+We're going to be making circles with our application here.
+
+138
+00:09:21,690 --> 00:09:24,270
+So this is what we'll need to do.
+
+139
+00:09:24,690 --> 00:09:30,510
+Let's just copy this code right here so Pat new path dot circle and then you have to give it a point
+
+140
+00:09:30,630 --> 00:09:31,820
+to make a circle.
+
+141
+00:09:32,160 --> 00:09:34,240
+And then the radius it looks like.
+
+142
+00:09:34,320 --> 00:09:43,770
+So you can see there's an explanation so it needs a center point x 100 y 70 and a radius of 50 and then
+
+143
+00:09:43,770 --> 00:09:44,690
+a fill color.
+
+144
+00:09:45,000 --> 00:09:51,120
+So let's take a look just copy this to the bottom of our code and see what happens.
+
+145
+00:09:51,720 --> 00:09:56,160
+Which is kind of what you do a lot with J S and similar libraries.
+
+146
+00:09:56,340 --> 00:09:57,340
+You just experiment.
+
+147
+00:09:57,480 --> 00:10:01,520
+So let's change radius to be 10.
+
+148
+00:10:01,530 --> 00:10:02,880
+There you go.
+
+149
+00:10:03,540 --> 00:10:09,000
+So we could also try doing another circle by just copying this down to another line.
+
+150
+00:10:09,150 --> 00:10:15,610
+Let's call it var circle 2 equals new path dot.
+
+151
+00:10:15,840 --> 00:10:18,340
+And let's make this one really large and purple.
+
+152
+00:10:18,630 --> 00:10:22,250
+So new point and let's put it at 50.
+
+153
+00:10:22,250 --> 00:10:25,740
+Come a 50 and it's going to be huge.
+
+154
+00:10:25,740 --> 00:10:34,730
+So it give it a radius of 300 and then circle to fill color equals purple.
+
+155
+00:10:34,830 --> 00:10:38,180
+Just like that refresh.
+
+156
+00:10:38,670 --> 00:10:43,650
+And you can see we end up with that gigantic circle that you actually can't tell how big it is because
+
+157
+00:10:43,710 --> 00:10:46,740
+our canvas hasn't taken up the entire width of our screen.
+
+158
+00:10:46,950 --> 00:10:52,860
+So let's do that next because we do want that we want our canvas to take up the entire width.
+
+159
+00:10:52,860 --> 00:11:00,660
+So I'll go and make a new style sheet so I added link tag here a Tref equals circle's dot SS which doesn't
+
+160
+00:11:00,660 --> 00:11:01,790
+exist.
+
+161
+00:11:02,430 --> 00:11:10,870
+And then let's save a file called Circle Stut see assess and what we'll do is add in canvas with 100
+
+162
+00:11:10,900 --> 00:11:12,210
+percent.
+
+163
+00:11:12,840 --> 00:11:17,930
+And let's also give it a background of black.
+
+164
+00:11:17,930 --> 00:11:21,880
+And if we are fresh you can see we're close but we have a few things.
+
+165
+00:11:21,870 --> 00:11:25,210
+The first of which is that our body doesn't actually go all the way down.
+
+166
+00:11:25,230 --> 00:11:28,860
+So our canvas takes up when 100 percent of the width.
+
+167
+00:11:28,980 --> 00:11:31,830
+But even if we give it 100 percent height right now
+
+168
+00:11:35,490 --> 00:11:38,840
+it's not going to actually change the way that we want it to.
+
+169
+00:11:38,850 --> 00:11:41,570
+Then we also have this margin that we want to get rid of.
+
+170
+00:11:42,000 --> 00:11:46,390
+So rather than spend too much time going over that I'll just show you what we need to do.
+
+171
+00:11:46,770 --> 00:11:54,500
+Well just set height to be 100 percent and margin to be zero.
+
+172
+00:11:54,810 --> 00:11:58,490
+And if I refresh the page now it takes up the full screen.
+
+173
+00:11:58,860 --> 00:12:05,160
+So if you want to go more into detail and understand exactly why we did that inspect the body before
+
+174
+00:12:05,190 --> 00:12:10,440
+we add this code in and then uncommented inspect the body again and you'll see what happens.
+
+175
+00:12:10,560 --> 00:12:15,570
+Basically we're just making sure that the body takes up the entire width and height and there's no margin
+
+176
+00:12:15,630 --> 00:12:20,020
+which means that our canvas will then expand to take up that entire space as well.
+
+177
+00:12:20,250 --> 00:12:20,910
+OK.
+
+178
+00:12:20,910 --> 00:12:24,680
+So we created a canvas now that's really the last thing I'll do in this video.
+
+179
+00:12:24,690 --> 00:12:30,420
+I just wanted to introduce you to how paperwork's we have paper script scripts.
+
+180
+00:12:30,420 --> 00:12:35,140
+We give it a canvas and then we put some code in here that you've never seen before.
+
+181
+00:12:35,190 --> 00:12:40,770
+A lot of this I've never seen before until I made this video or until I made this project for this video
+
+182
+00:12:40,770 --> 00:12:41,030
+.
+
+183
+00:12:41,100 --> 00:12:42,380
+I've definitely seen it before.
+
+184
+00:12:42,390 --> 00:12:43,820
+This exact video.
+
+185
+00:12:43,830 --> 00:12:46,580
+But the point is that it's new.
+
+186
+00:12:46,650 --> 00:12:48,130
+And that's why we're doing this.
+
+187
+00:12:48,150 --> 00:12:54,200
+It's a really important skill to be able to take code redox and basically copy it in and change it.
+
+188
+00:12:54,330 --> 00:12:54,980
+Great.
+
+189
+00:12:54,990 --> 00:12:59,940
+So in the next video I will be giving you a quick optional exercise so if you just want to get to the
+
+190
+00:12:59,940 --> 00:13:05,980
+project and skip the educational learning experience whatever you wanna call it.
+
+191
+00:13:06,000 --> 00:13:11,170
+But if you only get to kind of the payoff go ahead skip the next video.
+
+192
+00:13:11,190 --> 00:13:13,040
+I would recommend that you do it though.
+
+193
+00:13:13,050 --> 00:13:17,070
+We're not going to make the most impressive thing but I'm going to have you do an exercise with some
+
+194
+00:13:17,070 --> 00:13:17,860
+circles.
+
+195
+00:13:17,940 --> 00:13:18,500
+Very exciting.
+
+196
+00:13:18,510 --> 00:13:18,960
+I know.
+
+197
+00:13:19,200 --> 00:13:19,480
+OK.
+
+198
+00:13:19,500 --> 00:13:20,360
+I'll see you then.
+

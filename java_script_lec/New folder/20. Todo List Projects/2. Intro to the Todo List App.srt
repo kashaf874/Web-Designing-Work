@@ -1,0 +1,240 @@
+﻿1
+00:00:00,360 --> 00:00:02,460
+OK we'll come back in this video.
+
+2
+00:00:02,490 --> 00:00:06,370
+I want to introduce the project that we're going to build over the next few videos.
+
+3
+00:00:06,660 --> 00:00:11,910
+So we're going to make AJ Querrey based to do app but it's also going to have a pretty heavy focus on
+
+4
+00:00:12,030 --> 00:00:18,210
+CSSA and styling some animation some effects and overall it's going to be a pretty polished application
+
+5
+00:00:18,210 --> 00:00:18,630
+.
+
+6
+00:00:18,630 --> 00:00:22,200
+So I'll give you a quick demo of what it looks like and how it works.
+
+7
+00:00:22,200 --> 00:00:24,850
+So here is our To Do list.
+
+8
+00:00:24,930 --> 00:00:28,580
+The first thing I'll point out is that it's responsive.
+
+9
+00:00:28,890 --> 00:00:35,490
+So we can resize it but to do list is for Harry Potter in this case of fill that with some sample data
+
+10
+00:00:35,510 --> 00:00:35,720
+.
+
+11
+00:00:35,940 --> 00:00:42,650
+And as I hover over things you'll see I get this nice little delete button with the trash can icon.
+
+12
+00:00:43,080 --> 00:00:51,300
+And if I click on that it will delete the to do entirely or if I just click on the text I can check
+
+13
+00:00:51,300 --> 00:00:53,230
+it off if I want to keep it there.
+
+14
+00:00:53,310 --> 00:00:57,810
+Sometimes you know when making a to do list you cross things off but you might want to be able to go
+
+15
+00:00:57,810 --> 00:01:01,790
+back and uncheck them or keep them there so that you can see them again.
+
+16
+00:01:01,890 --> 00:01:04,290
+And some people just want to delete things entirely.
+
+17
+00:01:04,410 --> 00:01:06,630
+They don't care about seeing what they've already done.
+
+18
+00:01:06,630 --> 00:01:08,550
+So then you can click on the delete button.
+
+19
+00:01:08,700 --> 00:01:16,730
+Let's say that I killed Voldemort click on that button and it fades out and then it disappears.
+
+20
+00:01:17,120 --> 00:01:19,610
+And then I can also add in a new to do.
+
+21
+00:01:19,740 --> 00:01:21,250
+So let's add one here.
+
+22
+00:01:21,480 --> 00:01:29,400
+Go to Potions class and all I have to do is hit enter and we automatically get a new to do down here
+
+23
+00:01:29,480 --> 00:01:29,670
+.
+
+24
+00:01:29,760 --> 00:01:32,660
+I can check off or remove.
+
+25
+00:01:32,700 --> 00:01:38,330
+Also of note is the fact that this button here will hide the form.
+
+26
+00:01:38,400 --> 00:01:43,860
+If I just want to view my list I can click on that or I can click again and view the form and start
+
+27
+00:01:43,860 --> 00:01:45,060
+adding to deuce.
+
+28
+00:01:45,630 --> 00:01:47,840
+So that's a preview of the functionality.
+
+29
+00:01:47,850 --> 00:01:52,260
+Now I want to talk a bit about behind the scenes what we're going to talk about and some of the new
+
+30
+00:01:52,260 --> 00:01:54,310
+things that we're going to learn.
+
+31
+00:01:54,420 --> 00:01:59,700
+As I mentioned earlier this is a lot of Jay query and a lot of seeis us and in particular we're going
+
+32
+00:01:59,700 --> 00:02:06,300
+to talk about some of the common methods we already learned about like key press and on for events fade
+
+33
+00:02:06,410 --> 00:02:13,020
+out slide out fade toggle slide toggle all the different effects and then also selecting are going to
+
+34
+00:02:13,020 --> 00:02:15,390
+be doing a lot of selecting here as well.
+
+35
+00:02:15,390 --> 00:02:21,350
+And then wase SS We'll get more practice with the box model margin and padding and border.
+
+36
+00:02:21,390 --> 00:02:25,540
+We'll talk more about floating elements and we'll get more practice with font's.
+
+37
+00:02:25,650 --> 00:02:31,440
+And then there's also a whole host of new features new methods new properties for Jay queery and assess
+
+38
+00:02:31,470 --> 00:02:36,690
+both that I'm going to introduce through this video and the first one up here is that we're going to
+
+39
+00:02:36,690 --> 00:02:40,540
+be using a better folder structure in this application.
+
+40
+00:02:40,560 --> 00:02:41,950
+We're going to have Jay queery.
+
+41
+00:02:41,970 --> 00:02:46,350
+We're going to have our Each team will have to see assess but we'll also have another library called
+
+42
+00:02:46,350 --> 00:02:51,420
+fun awesome and we need a better way of keeping things organized rather than just having everything
+
+43
+00:02:51,420 --> 00:02:53,160
+in one folder together.
+
+44
+00:02:53,220 --> 00:02:58,010
+We're going to have some subdirectories in and break things out into different sections.
+
+45
+00:02:58,500 --> 00:03:01,930
+As far as J.A.G. goes we're going to introduce two new methods.
+
+46
+00:03:02,100 --> 00:03:07,470
+One is called pairings and another one is called append along with the pen and we're also going to talk
+
+47
+00:03:07,470 --> 00:03:11,460
+about how we create new elements and add them to the page and the last point.
+
+48
+00:03:11,460 --> 00:03:13,720
+Here is something called event delegation.
+
+49
+00:03:13,870 --> 00:03:20,070
+But then as far as CSSA goes we're going to use Fonte awesome to get some new icons in our application
+
+50
+00:03:20,510 --> 00:03:25,020
+so you can see we have the trashcan here and the plus sign here that's coming from a library called
+
+51
+00:03:25,020 --> 00:03:25,310
+fun.
+
+52
+00:03:25,320 --> 00:03:26,220
+Awesome.
+
+53
+00:03:26,250 --> 00:03:32,400
+We'll also talk about box shadow and other property called transition that we saw when we made the color
+
+54
+00:03:32,400 --> 00:03:33,220
+guessing game.
+
+55
+00:03:33,300 --> 00:03:37,620
+We're going to see how to use it in a slightly different way and then we're also going to look at CSSA
+
+56
+00:03:37,620 --> 00:03:40,130
+gradients which is how I made this background here.
+
+57
+00:03:40,320 --> 00:03:44,680
+So it's not actually an image CSSA is making this for me.
+
+58
+00:03:44,760 --> 00:03:48,660
+All right so there's a lot of fun stuff packed into here things that we're going to get more practice
+
+59
+00:03:48,660 --> 00:03:50,290
+with and some new things.
+
+60
+00:03:50,290 --> 00:03:53,280
+We're also going to throw in there so we'll get started in the next video.
+

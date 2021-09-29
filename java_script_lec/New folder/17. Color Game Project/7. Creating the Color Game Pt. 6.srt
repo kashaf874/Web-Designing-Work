@@ -1,0 +1,880 @@
+﻿1
+00:00:00,240 --> 00:00:01,080
+Welcome back.
+
+2
+00:00:01,080 --> 00:00:06,360
+In this video we're going to focus on adding the easy and hard buttons here that will impact the difficulty
+
+3
+00:00:06,360 --> 00:00:07,350
+of the game.
+
+4
+00:00:07,350 --> 00:00:13,920
+So when we load the page up hard is already selected and we see six different buttons here or six different
+
+5
+00:00:13,920 --> 00:00:14,590
+squares.
+
+6
+00:00:14,760 --> 00:00:18,610
+And then I can click on easy and that remains selected.
+
+7
+00:00:18,900 --> 00:00:21,180
+And we only have three squares to pick from.
+
+8
+00:00:21,270 --> 00:00:23,270
+And then I can go back to heart.
+
+9
+00:00:23,520 --> 00:00:26,860
+We're going to start by adding in the two buttons that we need.
+
+10
+00:00:27,000 --> 00:00:31,050
+So I'm going to go into my HMO and add in two buttons.
+
+11
+00:00:31,560 --> 00:00:33,800
+The first one we'll say easy.
+
+12
+00:00:34,020 --> 00:00:37,470
+The second one will say hard and will refresh.
+
+13
+00:00:37,900 --> 00:00:38,440
+OK.
+
+14
+00:00:38,520 --> 00:00:40,610
+And that looks fine for now.
+
+15
+00:00:41,160 --> 00:00:44,030
+You'll notice our span isn't taking up any space yet.
+
+16
+00:00:44,300 --> 00:00:46,020
+And I see there's some text shows up.
+
+17
+00:00:46,020 --> 00:00:51,600
+It pushes those buttons away will focus on the styling later but there is one element of the styling
+
+18
+00:00:51,600 --> 00:00:57,600
+that I do want to focus on which is making it look selected when the page loads or when we choose easy
+
+19
+00:00:57,600 --> 00:01:01,900
+or hard the corresponding button should stay blue.
+
+20
+00:01:02,160 --> 00:01:06,540
+And the way that we do that is using a class and turning that class on and off.
+
+21
+00:01:06,540 --> 00:01:11,940
+So I'm going to define a class here and it's going to be simpler than this style styling here it's just
+
+22
+00:01:11,940 --> 00:01:12,780
+going to be a color.
+
+23
+00:01:12,810 --> 00:01:18,390
+So our background color and the class is going to be called selected because that's what we're doing
+
+24
+00:01:18,410 --> 00:01:18,520
+.
+
+25
+00:01:18,720 --> 00:01:22,110
+We're adding the selected class to the button that is selected.
+
+26
+00:01:22,440 --> 00:01:25,870
+And it's just going to have a background set to you to start.
+
+27
+00:01:26,280 --> 00:01:33,820
+And then what we're going to do is just give the hard mode button class equal selected.
+
+28
+00:01:34,500 --> 00:01:39,600
+And if we refresh on our code you can see that hard is engaged.
+
+29
+00:01:39,810 --> 00:01:44,540
+It's hideous Yes but it at least shows us that we're on hard mode.
+
+30
+00:01:44,550 --> 00:01:49,980
+So then what we want to do is add the code that's a switch that when they click on easy and then the
+
+31
+00:01:49,980 --> 00:01:54,390
+trickiest part is showing the three colors when you click on the easy and the six colors when you click
+
+32
+00:01:54,390 --> 00:01:55,070
+on heart.
+
+33
+00:01:55,350 --> 00:01:56,340
+OK.
+
+34
+00:01:56,610 --> 00:01:58,580
+Let's get started here.
+
+35
+00:01:58,650 --> 00:02:03,750
+So to make these buttons actually work we need to select them in our javascript and then have some quick
+
+36
+00:02:03,750 --> 00:02:08,460
+listeners and do some and run some code when each of them is clicked.
+
+37
+00:02:08,520 --> 00:02:14,490
+So let's make it easier to select and I'm going to start by giving them each an ID easy.
+
+38
+00:02:14,590 --> 00:02:22,650
+DTN and then hard ETN and we will be changing this if you're seeing any red flags here or if you're
+
+39
+00:02:22,650 --> 00:02:24,230
+thinking we're using too many ideas.
+
+40
+00:02:24,330 --> 00:02:26,660
+We will be refactoring this in just a few moments.
+
+41
+00:02:26,760 --> 00:02:28,630
+But we're going to start with two different IDs.
+
+42
+00:02:28,650 --> 00:02:30,500
+Easy Button hard button.
+
+43
+00:02:30,660 --> 00:02:32,570
+Go to our javascript and select them.
+
+44
+00:02:32,580 --> 00:02:40,100
+So var easy ETN equals document doc query selector with Octa.
+
+45
+00:02:40,410 --> 00:02:42,430
+Easy ETN.
+
+46
+00:02:42,600 --> 00:02:45,210
+Make sure that we capitalize things the same.
+
+47
+00:02:45,270 --> 00:02:46,270
+There we go.
+
+48
+00:02:46,650 --> 00:02:54,240
+And the same thing for hard and I don't know if you caught that in sublime.
+
+49
+00:02:54,240 --> 00:02:59,940
+If you select the word easy and you hit Kamandi it will then automatically select the next instance
+
+50
+00:03:00,000 --> 00:03:05,040
+and I can keep doing that to select all of them but I just want these two and I'm going to type hard
+
+51
+00:03:05,070 --> 00:03:06,140
+instead.
+
+52
+00:03:06,210 --> 00:03:09,670
+So we have two buttons and then we can do something like this.
+
+53
+00:03:09,960 --> 00:03:13,690
+Easy PTEN add event listener.
+
+54
+00:03:13,800 --> 00:03:23,950
+Click and all we're going to do is just alert that the easy button was quit just like this.
+
+55
+00:03:24,600 --> 00:03:31,170
+Alert easy button clicked and make sure that that works.
+
+56
+00:03:31,200 --> 00:03:38,340
+So we refresh click on Easy OK says Easy button clicked and then we'll duplicate this for hard button
+
+57
+00:03:40,800 --> 00:03:47,640
+and we'll say that hard button was quit and refresh easy still works and hard but it tells us that the
+
+58
+00:03:47,640 --> 00:03:49,050
+hard button was clicked.
+
+59
+00:03:49,410 --> 00:03:56,250
+So rather than just doing that let's work on getting the class the selected class to reflect which one
+
+60
+00:03:56,250 --> 00:03:57,390
+is selected.
+
+61
+00:03:57,810 --> 00:04:02,020
+So if we click on the easy button all we want to do is easy button.
+
+62
+00:04:02,070 --> 00:04:11,120
+Doc class list add selected and if we refresh now I click on easy.
+
+63
+00:04:11,420 --> 00:04:12,920
+It has a selected class.
+
+64
+00:04:12,940 --> 00:04:19,630
+Easy but the problem is that it still remains on the hard button so that's easy to fix.
+
+65
+00:04:19,650 --> 00:04:29,460
+We just want to have a hard button doc Cross list dot remove it and now if we click on easy the hard
+
+66
+00:04:29,460 --> 00:04:30,520
+mode goes away.
+
+67
+00:04:30,660 --> 00:04:36,990
+But if we click on hard we still don't have that logic so we can fix that by just copying this code
+
+68
+00:04:36,990 --> 00:04:46,740
+over and we'll now have hard buttons classless that add selected easy button class list that remove
+
+69
+00:04:46,740 --> 00:04:47,630
+selected.
+
+70
+00:04:48,160 --> 00:04:49,970
+OK let's test it out.
+
+71
+00:04:50,890 --> 00:04:51,630
+All right.
+
+72
+00:04:51,630 --> 00:04:57,450
+So we now have the easier part done which is the two buttons showing which one is currently selected
+
+73
+00:04:57,680 --> 00:05:02,930
+and I refresh and hard is automatically selected because we do have six elements.
+
+74
+00:05:02,940 --> 00:05:09,210
+Next up we need to add the logic to actually change the difficulty not just the style of these buttons
+
+75
+00:05:09,210 --> 00:05:12,730
+here but to only show three elements or six squares.
+
+76
+00:05:12,930 --> 00:05:15,840
+So we need to do that next before we get started.
+
+77
+00:05:15,870 --> 00:05:19,110
+Let's check again on the solution to see how it works.
+
+78
+00:05:19,110 --> 00:05:26,420
+So if I refresh and I click on easy notice that we get new colors and we have to do that because there's
+
+79
+00:05:26,460 --> 00:05:33,450
+a risk that I have six colors here and the color that is selected here might be one of these three that
+
+80
+00:05:33,450 --> 00:05:36,510
+when I click on easy those three are removed.
+
+81
+00:05:36,510 --> 00:05:39,400
+So that could be a pretty game breaking bug.
+
+82
+00:05:39,600 --> 00:05:42,860
+So rather than deal with that we're just going to pick three new colors.
+
+83
+00:05:42,990 --> 00:05:45,870
+So the process is we refresh that.
+
+84
+00:05:45,930 --> 00:05:51,840
+So the process is when I click on the easy button we're going to generate three new colors for the colors
+
+85
+00:05:51,850 --> 00:05:54,640
+array are going to pick one color from those three.
+
+86
+00:05:54,750 --> 00:05:57,490
+We're going to update that appear with a picked color.
+
+87
+00:05:57,510 --> 00:05:59,450
+We're going to update the three squares here.
+
+88
+00:05:59,640 --> 00:06:05,880
+And the important part is that we also hide the three other squares so we don't delete them we just
+
+89
+00:06:05,880 --> 00:06:08,610
+hide them by setting display to be none.
+
+90
+00:06:09,120 --> 00:06:11,010
+And then same thing goes for hard.
+
+91
+00:06:11,010 --> 00:06:13,930
+We generate six new colors in the colors array.
+
+92
+00:06:13,950 --> 00:06:16,080
+We pick one to be our picks colored.
+
+93
+00:06:16,230 --> 00:06:17,850
+We display that up here.
+
+94
+00:06:18,000 --> 00:06:23,740
+Then we show the three squares at the bottom and then set each one to have a color.
+
+95
+00:06:24,270 --> 00:06:24,730
+OK.
+
+96
+00:06:24,810 --> 00:06:26,570
+So let's tackle this now.
+
+97
+00:06:26,820 --> 00:06:31,170
+First of all when we click on the easy button let's start there.
+
+98
+00:06:31,380 --> 00:06:39,520
+We're going to want to generate new colors so colors equals generate random colors this time 3.
+
+99
+00:06:40,410 --> 00:06:47,370
+And then once we have that done we're going to want to pick a new picked color so picked color equals
+
+100
+00:06:47,880 --> 00:06:50,820
+pick color just like that.
+
+101
+00:06:50,820 --> 00:06:56,490
+So once we have our colors and our picked color we can start by just changing the display up here to
+
+102
+00:06:56,490 --> 00:06:58,400
+show the new picture color.
+
+103
+00:06:59,070 --> 00:07:06,050
+So that's as easy as saying color display text content equals picked color.
+
+104
+00:07:06,360 --> 00:07:11,410
+And if we refresh I'm going to get some new colors here just to show you a few things.
+
+105
+00:07:11,580 --> 00:07:17,520
+When I click on easy as you mentioned before the color is changing and behind the scenes there is a
+
+106
+00:07:17,520 --> 00:07:19,630
+colors array that changes as well.
+
+107
+00:07:19,650 --> 00:07:25,100
+So let's look at what colors is right now and then I click on easy mode and I look at what colors is
+
+108
+00:07:25,110 --> 00:07:27,490
+again and it's different.
+
+109
+00:07:27,870 --> 00:07:30,990
+And it also picked color is different.
+
+110
+00:07:30,990 --> 00:07:37,650
+So now let's talk about how we hide the three bottom divs when we click on easy mode or we can hide
+
+111
+00:07:37,650 --> 00:07:38,190
+the top three.
+
+112
+00:07:38,190 --> 00:07:38,730
+It doesn't matter.
+
+113
+00:07:38,730 --> 00:07:43,260
+But I'm going to do the bottom three the way that we'll do that is by looping through and setting the
+
+114
+00:07:43,260 --> 00:07:46,360
+bottom threes display property to be none.
+
+115
+00:07:46,560 --> 00:07:48,440
+So let me show you how that works.
+
+116
+00:07:48,510 --> 00:07:49,870
+I'm just going to pick one of them.
+
+117
+00:07:49,980 --> 00:08:01,850
+So let's do a document query selector all square or a square and then work with the fifth one.
+
+118
+00:08:02,250 --> 00:08:11,320
+Well actually the sixth one with index of five and then set that style display to be none.
+
+119
+00:08:12,150 --> 00:08:13,760
+And you'll see that it disappears.
+
+120
+00:08:13,770 --> 00:08:19,000
+And then if I want it to come back which I will if we click on hard mode I just need to say style.
+
+121
+00:08:19,050 --> 00:08:22,160
+Display equals lock.
+
+122
+00:08:22,500 --> 00:08:23,280
+All right.
+
+123
+00:08:23,490 --> 00:08:28,980
+So let's go ahead and implement this in our code the way that will achieve this is by looping through
+
+124
+00:08:29,250 --> 00:08:30,980
+all six at first.
+
+125
+00:08:31,170 --> 00:08:34,820
+And for the first three we're going to give them a new color.
+
+126
+00:08:35,040 --> 00:08:37,380
+And for the bottom three we're going to hide them.
+
+127
+00:08:37,410 --> 00:08:40,380
+So rather than having two loops to do that we'll do it at once.
+
+128
+00:08:40,560 --> 00:08:43,980
+So for var I equals zero.
+
+129
+00:08:43,980 --> 00:08:48,140
+I just less than squares out length.
+
+130
+00:08:48,300 --> 00:08:54,390
+Plus plus we're going to take advantage of the fact that colors has three items in it.
+
+131
+00:08:54,390 --> 00:08:58,000
+So we're going to do something like this if colors I.
+
+132
+00:08:58,440 --> 00:09:02,350
+So if there is a next color so this will happen on the first three.
+
+133
+00:09:02,610 --> 00:09:11,020
+We're going to write squares I style the background equals color.
+
+134
+00:09:12,660 --> 00:09:18,540
+So for the first three in our case because colors only has three items we're going to loop through all
+
+135
+00:09:18,540 --> 00:09:22,740
+of the squares and check if there is a color at that index.
+
+136
+00:09:22,770 --> 00:09:27,320
+And if there is we're going to change the color of those first three.
+
+137
+00:09:27,390 --> 00:09:29,160
+So let's let's make sure that works.
+
+138
+00:09:29,160 --> 00:09:33,990
+I click on easy and you'll see only the top three are changing.
+
+139
+00:09:33,990 --> 00:09:35,470
+So we're close.
+
+140
+00:09:35,520 --> 00:09:38,550
+All we want to do now is hide the bottom three.
+
+141
+00:09:39,000 --> 00:09:41,040
+So we'll do that with else.
+
+142
+00:09:42,370 --> 00:09:48,970
+Squares I style that display equals none.
+
+143
+00:09:49,600 --> 00:09:56,770
+And if we refresh and make it full screen if I click on easy mode you can see that we lose the bottom
+
+144
+00:09:56,770 --> 00:10:00,010
+three and the colors of the top three are changing.
+
+145
+00:10:00,640 --> 00:10:03,010
+And let's try to figure out which one this is.
+
+146
+00:10:03,050 --> 00:10:08,850
+So hundred sixty three red 125 green and a little bit of blue.
+
+147
+00:10:08,950 --> 00:10:10,190
+There we go.
+
+148
+00:10:10,300 --> 00:10:13,200
+You can refresh try a few more.
+
+149
+00:10:13,210 --> 00:10:19,030
+We do have one small problem as I refresh some of these and I click on easy mode.
+
+150
+00:10:19,030 --> 00:10:21,010
+We're only generating three colors here.
+
+151
+00:10:21,140 --> 00:10:26,600
+But if I click on the new colors button so I'll show you what colors looks like right now.
+
+152
+00:10:26,740 --> 00:10:27,640
+It's three items.
+
+153
+00:10:27,760 --> 00:10:32,330
+If I click on new colors though and then I look at colors.
+
+154
+00:10:33,070 --> 00:10:38,340
+It's actually six items and that's because we're not keeping track of which mode that we're on.
+
+155
+00:10:38,350 --> 00:10:40,440
+So that code is right here on the reset button.
+
+156
+00:10:40,510 --> 00:10:44,520
+We're just saying colors is equal to generate random colors.
+
+157
+00:10:44,680 --> 00:10:46,370
+So we need to fix that eventually.
+
+158
+00:10:46,600 --> 00:10:52,090
+But before we do that let's get our hard button so that it sets us back to six squares and each one
+
+159
+00:10:52,090 --> 00:10:54,700
+has its own color to do that.
+
+160
+00:10:54,850 --> 00:11:00,000
+I'm going to just take some of this code and duplicate it down here which is always a bad sign.
+
+161
+00:11:00,490 --> 00:11:03,250
+And that's why we're going to refactor this in just a little bit.
+
+162
+00:11:03,280 --> 00:11:04,870
+So the first thing I want to do.
+
+163
+00:11:04,870 --> 00:11:09,380
+I'm just going to copy all of it into our hard button event listener colors.
+
+164
+00:11:09,400 --> 00:11:16,000
+It's going to be six colors picks color will be the same color display text content is the same.
+
+165
+00:11:16,000 --> 00:11:18,880
+And then we're going to loop through all of them in this loop.
+
+166
+00:11:18,880 --> 00:11:20,590
+We need to do two different things.
+
+167
+00:11:20,590 --> 00:11:24,200
+The first is to assign a new color to every square.
+
+168
+00:11:24,460 --> 00:11:29,980
+But we also potentially need to make sure that the three are unhidden at the bottom.
+
+169
+00:11:30,430 --> 00:11:36,910
+So we're going to get rid of the if statement for now and we're just going to set all the squares to
+
+170
+00:11:36,910 --> 00:11:38,990
+have a background color to be colors.
+
+171
+00:11:39,430 --> 00:11:43,880
+And all the squares will have a display of block.
+
+172
+00:11:44,230 --> 00:11:49,960
+So this is a little bit wasteful because we only need the last three technically and we're resetting
+
+173
+00:11:49,990 --> 00:11:51,710
+all of them to be display block.
+
+174
+00:11:51,850 --> 00:11:54,940
+But that's a really minor thing we can focus on later.
+
+175
+00:11:55,000 --> 00:12:02,440
+So let's just see if this works refresh tells us we have a syntax error on line 36 Let's see what we're
+
+176
+00:12:02,440 --> 00:12:03,150
+missing.
+
+177
+00:12:03,670 --> 00:12:05,600
+And we just have an extra curly brace here.
+
+178
+00:12:05,710 --> 00:12:10,210
+So if we save now and refresh we have six colors like we always have.
+
+179
+00:12:10,210 --> 00:12:12,190
+If I click on easy we get three.
+
+180
+00:12:12,310 --> 00:12:15,260
+If I click on hard I now go back to six.
+
+181
+00:12:15,370 --> 00:12:18,780
+I get a new color up here and let's just make sure that that keeps working.
+
+182
+00:12:18,850 --> 00:12:23,280
+So easy hard easy hard when I go to hard mode.
+
+183
+00:12:23,380 --> 00:12:25,510
+Let's click on new colors again.
+
+184
+00:12:25,570 --> 00:12:29,570
+Go back to easy go back to hard easy and hard.
+
+185
+00:12:29,650 --> 00:12:29,930
+All right.
+
+186
+00:12:29,920 --> 00:12:32,320
+And let's play this and see if it works.
+
+187
+00:12:32,320 --> 00:12:37,410
+So pick color is 196 170 57.
+
+188
+00:12:37,450 --> 00:12:42,240
+So a lot of read a lot of green and a little bit of blue.
+
+189
+00:12:42,460 --> 00:12:44,970
+So that's a lot of red and green is a yellow color.
+
+190
+00:12:45,070 --> 00:12:46,650
+So it's not going to be that one or that one.
+
+191
+00:12:46,660 --> 00:12:52,120
+That one is going to be this one real quick and that looks like it's working just fine.
+
+192
+00:12:52,380 --> 00:12:55,880
+If I click on easy again we go back to three colors.
+
+193
+00:12:56,050 --> 00:13:01,750
+The most pressing issue facing us though is when I'm in easy mode and I click play again this is going
+
+194
+00:13:01,750 --> 00:13:07,960
+to generate six colors not three and it's going to pick a random color out of six which may not be displaying
+
+195
+00:13:07,960 --> 00:13:11,350
+to us which is going to be problematic to fix that.
+
+196
+00:13:11,350 --> 00:13:15,730
+All we need to do is have a variable that keeps track of what mode that we're on.
+
+197
+00:13:15,730 --> 00:13:19,650
+Easy or hard or the number of squares three or six.
+
+198
+00:13:19,840 --> 00:13:21,530
+So we'll do that up here.
+
+199
+00:13:21,640 --> 00:13:29,620
+We'll have a variable called number of squares and that will start at 6 and we'll just declare that
+
+200
+00:13:29,880 --> 00:13:39,220
+up here and say colors equals generate random colors of number and let's make it number of squares or
+
+201
+00:13:39,490 --> 00:13:40,180
+squares.
+
+202
+00:13:40,240 --> 00:13:41,080
+It's a little easier
+
+203
+00:13:44,170 --> 00:13:47,020
+like that and save.
+
+204
+00:13:47,140 --> 00:13:50,120
+And then we need to replace that in a few places.
+
+205
+00:13:50,170 --> 00:13:57,970
+So when we click on easy mode you want numb squares to be three and then we generate random colors with
+
+206
+00:13:57,970 --> 00:14:00,040
+no squares.
+
+207
+00:14:00,430 --> 00:14:09,010
+And then further down when we click on the hard button we want some squares to be 6 so numb squares
+
+208
+00:14:09,100 --> 00:14:17,290
+equals six and then generate random colors squares and then there's a few other places right here when
+
+209
+00:14:17,290 --> 00:14:18,850
+we click on that reset button.
+
+210
+00:14:18,850 --> 00:14:24,540
+We want to generate the correct number of colors which would be Nahm squares there as well.
+
+211
+00:14:24,580 --> 00:14:28,970
+So that should take care of it for us if we go back and refresh.
+
+212
+00:14:29,530 --> 00:14:33,080
+We go to easy mode and let's win this one.
+
+213
+00:14:33,190 --> 00:14:35,280
+So mostly red a little blue.
+
+214
+00:14:35,320 --> 00:14:37,350
+Not this one.
+
+215
+00:14:37,660 --> 00:14:38,740
+Not that one.
+
+216
+00:14:38,740 --> 00:14:39,830
+There we go.
+
+217
+00:14:39,880 --> 00:14:47,140
+And if I click on play again let's make sure when I type colors we only see three colors.
+
+218
+00:14:47,140 --> 00:14:55,240
+And if I looked at picked color hopes picked a color you can see it's inside of the colors array.
+
+219
+00:14:55,450 --> 00:14:56,880
+So we don't have to worry about that anymore.
+
+220
+00:14:57,040 --> 00:14:57,970
+Our logic now works
+

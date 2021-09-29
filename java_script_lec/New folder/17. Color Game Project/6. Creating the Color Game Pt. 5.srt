@@ -1,0 +1,604 @@
+﻿1
+00:00:00,650 --> 00:00:02,670
+OK we'll come back in this video.
+
+2
+00:00:02,670 --> 00:00:05,040
+We're going to work on a few new features.
+
+3
+00:00:05,040 --> 00:00:08,190
+The first one is when I win the game.
+
+4
+00:00:08,460 --> 00:00:09,410
+It tells me correct.
+
+5
+00:00:09,630 --> 00:00:15,440
+And then I can click play again to get new colors and if I haven't won yet.
+
+6
+00:00:15,530 --> 00:00:19,460
+But I also want new colors because for some reason I don't like the colors that I have.
+
+7
+00:00:19,680 --> 00:00:21,750
+I can also click that new colors button.
+
+8
+00:00:21,930 --> 00:00:27,300
+So basically we need a button that will reset the game pick new colors pick a new random color appear
+
+9
+00:00:27,300 --> 00:00:32,770
+out of the six random colors and we'll come back to the easy and hard mode last.
+
+10
+00:00:32,940 --> 00:00:35,870
+So this button it does the same thing.
+
+11
+00:00:36,040 --> 00:00:42,240
+The text changes though if we've won the game and it asked if we want to play again so we can click
+
+12
+00:00:42,240 --> 00:00:44,150
+play again and that will reset it.
+
+13
+00:00:44,220 --> 00:00:48,540
+But I can also click new colors and that will also reset it.
+
+14
+00:00:48,570 --> 00:00:49,840
+So that's what we're going to focus on.
+
+15
+00:00:50,010 --> 00:00:55,590
+And to start I'm going to go ahead and add in the button and add that stripe that goes across so that
+
+16
+00:00:55,590 --> 00:01:00,290
+stripe will contain this button for a new color or for play again.
+
+17
+00:01:00,870 --> 00:01:02,890
+And it contains the message that we already have.
+
+18
+00:01:03,060 --> 00:01:04,970
+And then the two buttons that we'll do later.
+
+19
+00:01:05,250 --> 00:01:11,590
+So if we go the first thing we need to do we already have a div I'm just going to give it id of stripe
+
+20
+00:01:12,750 --> 00:01:14,240
+and then we can use that.
+
+21
+00:01:14,550 --> 00:01:19,560
+And then we already have our span inside that will show something like correct or try again.
+
+22
+00:01:19,590 --> 00:01:27,990
+And inside here we'll just add our button and this button will start by saying new colors we can save
+
+23
+00:01:28,780 --> 00:01:29,820
+we refresh.
+
+24
+00:01:30,160 --> 00:01:33,140
+OK that looks about just as bad as you would expect.
+
+25
+00:01:33,330 --> 00:01:39,330
+Let's go ahead and add the white background color and center everything in this div So our div is called
+
+26
+00:01:39,330 --> 00:01:40,210
+stripe.
+
+27
+00:01:40,590 --> 00:01:45,220
+Let's go to our C Ss and we're going to select Strype which is an ID.
+
+28
+00:01:45,360 --> 00:01:48,970
+So we need to use stripe with an afterthought.
+
+29
+00:01:49,260 --> 00:01:54,580
+And we're going to set a background color background to be white.
+
+30
+00:01:54,660 --> 00:02:02,460
+I'm going to set the height to be 30 pixels so that we have a nice and tall div are relatively tall
+
+31
+00:02:02,460 --> 00:02:09,030
+div and I'm going to set text align to be Center.
+
+32
+00:02:09,300 --> 00:02:13,330
+And now if I refresh you get a white div goes all the way across.
+
+33
+00:02:13,350 --> 00:02:15,220
+It's a little bit taller than it was.
+
+34
+00:02:15,240 --> 00:02:17,230
+We have a button in here just in to anything.
+
+35
+00:02:17,400 --> 00:02:23,640
+And if I win or lose or get the wrong answer there's a span you just can't see it.
+
+36
+00:02:23,640 --> 00:02:27,290
+And that's because the text from that span is white.
+
+37
+00:02:28,380 --> 00:02:34,950
+So what you might think about doing is going into our stripe the div and saying the text color should
+
+38
+00:02:34,950 --> 00:02:38,690
+be black but unfortunately that doesn't work.
+
+39
+00:02:38,880 --> 00:02:45,390
+And this is an issue of specificity because we're saying that with this line right here everything inside
+
+40
+00:02:45,390 --> 00:02:52,110
+the thing with the idea of stripe should be black text color black and you would think OK that's snidey
+
+41
+00:02:52,170 --> 00:02:58,890
+that is super specific if you can think back to our early C S S specificity lectures and ID is very
+
+42
+00:02:58,890 --> 00:02:59,710
+specific.
+
+43
+00:02:59,790 --> 00:03:05,440
+The thing is though this is setting the colors to be black on the div with ID stripe.
+
+44
+00:03:05,970 --> 00:03:13,080
+And then we're setting all spans so you can see here to be color white so that setting this to be white
+
+45
+00:03:13,140 --> 00:03:17,820
+and that makes it more specific because we're actually targeting the element itself rather than the
+
+46
+00:03:17,820 --> 00:03:20,630
+parent and having it inherit the color.
+
+47
+00:03:21,090 --> 00:03:22,570
+So we have a few options.
+
+48
+00:03:22,590 --> 00:03:25,960
+What I will do is actually just get rid of this for now.
+
+49
+00:03:26,040 --> 00:03:31,710
+We're not going to set the color to be white anymore and we can refresh and you'll see that this doesn't
+
+50
+00:03:31,710 --> 00:03:36,720
+change color it's still a white span even though we got rid of the line that said all spans are white
+
+51
+00:03:37,050 --> 00:03:42,960
+and that's because it's inside of an H1 and it inherits the H1 text color which is white.
+
+52
+00:03:42,990 --> 00:03:45,590
+Same way that this span here is black.
+
+53
+00:03:45,600 --> 00:03:51,720
+It inherited the text color of black or just regular colored black from the stripe div that's around
+
+54
+00:03:51,720 --> 00:03:55,160
+it which you can see here color black.
+
+55
+00:03:55,410 --> 00:03:56,770
+And that's our striked it.
+
+56
+00:03:57,060 --> 00:03:57,660
+OK.
+
+57
+00:03:57,810 --> 00:04:06,720
+So let's now work on getting this button to reset the game so to start we need to add an event listener
+
+58
+00:04:06,730 --> 00:04:06,800
+.
+
+59
+00:04:06,870 --> 00:04:09,750
+And before we can do that we need to select that button.
+
+60
+00:04:09,960 --> 00:04:18,000
+So I'm going to give that button and ID here we'll just call it ID equals reset and then we'll select
+
+61
+00:04:18,000 --> 00:04:21,000
+that reset button instead of a Javascript.
+
+62
+00:04:21,000 --> 00:04:31,980
+So var reset button equals document that query selector with our octave or reset.
+
+63
+00:04:31,980 --> 00:04:37,120
+And then as always I'd like to add my simple test event listener.
+
+64
+00:04:37,140 --> 00:04:40,680
+So reset button does add event listener.
+
+65
+00:04:40,860 --> 00:04:51,990
+Click and when we click all that we'll do is do a simple alert quick reset button just like that be
+
+66
+00:04:52,070 --> 00:04:52,820
+refresh.
+
+67
+00:04:52,970 --> 00:04:57,590
+And if I click on this I get my alert and that means we're good to go.
+
+68
+00:04:57,590 --> 00:05:01,030
+So next up we can actually work on the logic to reset.
+
+69
+00:05:01,250 --> 00:05:03,890
+So what we need to do let's write the pseudo code.
+
+70
+00:05:03,890 --> 00:05:10,030
+When you click on that button need to generate all new colors.
+
+71
+00:05:10,040 --> 00:05:20,750
+We need to pick a new random color from array and then we need to change the colors of the squares on
+
+72
+00:05:20,750 --> 00:05:22,030
+the page.
+
+73
+00:05:22,280 --> 00:05:28,310
+So to generate all new colors we actually already have that function existing generate random colors
+
+74
+00:05:28,310 --> 00:05:28,910
+.
+
+75
+00:05:29,030 --> 00:05:33,940
+So we'll just say colors is now equal to generate random colors of six.
+
+76
+00:05:34,580 --> 00:05:41,270
+And then we'll pick a new random color so pick the color is now equal to pick color the method or the
+
+77
+00:05:41,270 --> 00:05:42,860
+function that we defined.
+
+78
+00:05:42,860 --> 00:05:48,890
+There's one more thing we actually need to do which is change this display color to match the new picks
+
+79
+00:05:48,890 --> 00:05:49,540
+color.
+
+80
+00:05:49,850 --> 00:05:52,040
+So we'll just say change
+
+81
+00:05:55,250 --> 00:06:01,090
+color display to match picked color so that one is simple.
+
+82
+00:06:01,160 --> 00:06:08,870
+All we need to do is say color display dot text content
+
+83
+00:06:12,890 --> 00:06:21,890
+equals picked color and if we refresh our page and we try clicking new colors what it's doing is generating
+
+84
+00:06:21,890 --> 00:06:23,110
+six new colors.
+
+85
+00:06:23,120 --> 00:06:25,400
+We're not seeing them yet because we don't have that code.
+
+86
+00:06:25,580 --> 00:06:30,750
+And then it's picking one of those as picked color and then changing what we see here to match picta
+
+87
+00:06:30,770 --> 00:06:31,410
+color.
+
+88
+00:06:31,730 --> 00:06:36,220
+So it gives us a new random color up there and six random colors behind the scenes.
+
+89
+00:06:36,230 --> 00:06:42,230
+So the last piece is to reflect those six new colors on the page and we've done that before.
+
+90
+00:06:42,260 --> 00:06:49,070
+Down here we're looping through all the squares and we're changing squared up style that background
+
+91
+00:06:49,460 --> 00:06:50,440
+to be colors.
+
+92
+00:06:50,450 --> 00:06:56,060
+I so I'm going to start by just duplicating all of that here and we will refactor this.
+
+93
+00:06:56,350 --> 00:06:58,340
+But to start to put it all here.
+
+94
+00:06:58,370 --> 00:07:07,170
+So loop through all the squares squares to outflank I plus plus and then all we need to do is say squares
+
+95
+00:07:07,450 --> 00:07:12,600
+I style that background equals colors.
+
+96
+00:07:13,020 --> 00:07:15,820
+I will save.
+
+97
+00:07:16,070 --> 00:07:21,660
+And if we refresh and we click on new colors it generates 60 random colors.
+
+98
+00:07:21,740 --> 00:07:22,820
+It picks one.
+
+99
+00:07:22,820 --> 00:07:29,090
+It updates the display to reflect the picture color and it changes all the six squares to match the
+
+100
+00:07:29,090 --> 00:07:30,360
+new six colors.
+
+101
+00:07:30,710 --> 00:07:34,730
+So let's try it out and see if our previous logic holds up as well.
+
+102
+00:07:35,240 --> 00:07:35,850
+OK.
+
+103
+00:07:36,290 --> 00:07:39,130
+So this one is decent amount of red.
+
+104
+00:07:39,140 --> 00:07:41,460
+Very little green and a decent amount of blue.
+
+105
+00:07:41,840 --> 00:07:45,280
+Let's try clicking on some that we don't think are right.
+
+106
+00:07:46,160 --> 00:07:48,880
+And now let's go for one of the purples.
+
+107
+00:07:49,070 --> 00:07:50,940
+So it looks like a little more red the blue.
+
+108
+00:07:50,960 --> 00:07:56,510
+So I'm going to guess this and we're right and it looks like things are still working just fine.
+
+109
+00:07:56,540 --> 00:07:58,470
+Quick new colors again.
+
+110
+00:07:58,610 --> 00:08:00,320
+We want to reset this.
+
+111
+00:08:00,320 --> 00:08:01,960
+That's a really minor cosmetic thing.
+
+112
+00:08:02,030 --> 00:08:08,470
+But when we click on new colors we should reset the display here so that it goes back to black or to
+
+113
+00:08:08,510 --> 00:08:11,000
+this dark gray color.
+
+114
+00:08:11,000 --> 00:08:16,670
+The other thing we want to do is that when we when we want it to say play again as you can see here
+
+115
+00:08:17,030 --> 00:08:18,480
+so I'll win here.
+
+116
+00:08:18,530 --> 00:08:20,350
+This one is a lot of green.
+
+117
+00:08:20,540 --> 00:08:24,980
+I win and it tells me play again and it does the same thing.
+
+118
+00:08:24,980 --> 00:08:29,260
+Functionally it doesn't really change it's just us and different text.
+
+119
+00:08:29,300 --> 00:08:31,060
+So that's simple to do.
+
+120
+00:08:31,100 --> 00:08:35,150
+All we need to do is find where the code is to check if you win.
+
+121
+00:08:35,180 --> 00:08:36,240
+That's right here.
+
+122
+00:08:36,620 --> 00:08:39,500
+And then we just want to change the text content of that button.
+
+123
+00:08:39,740 --> 00:08:41,820
+So the button was called reset button.
+
+124
+00:08:41,930 --> 00:08:51,740
+So reset button that text content equals play again with a question mark refresh it says new colors
+
+125
+00:08:51,740 --> 00:08:52,700
+.
+
+126
+00:08:52,790 --> 00:08:54,560
+Now let's try playing one of these.
+
+127
+00:08:54,740 --> 00:08:58,750
+So this one is a lot of red and a lot of green and a little bit of blue.
+
+128
+00:08:58,790 --> 00:09:02,070
+So a lot of red and a lot of green is going to give us a yellow color.
+
+129
+00:09:02,210 --> 00:09:04,100
+So let's narrow down some of them.
+
+130
+00:09:04,100 --> 00:09:08,180
+And then a little bit of blue is going to make it lighter and brighter.
+
+131
+00:09:08,480 --> 00:09:13,590
+So if we try one of these like this or this one you'll see that they're not quite right.
+
+132
+00:09:13,880 --> 00:09:17,230
+And this is our answer here and it tells us play again.
+
+133
+00:09:17,300 --> 00:09:20,120
+And real quick and it does the exact same thing.
+
+134
+00:09:20,180 --> 00:09:23,570
+The last thing as I mentioned is changing the background color back.
+
+135
+00:09:23,570 --> 00:09:28,430
+So right here we can just do that at the end of the reset button.
+
+136
+00:09:28,520 --> 00:09:30,950
+We're just going to select that H-1.
+
+137
+00:09:31,200 --> 00:09:34,610
+It's one dot which we selected here.
+
+138
+00:09:34,670 --> 00:09:37,090
+That's dial up background.
+
+139
+00:09:37,160 --> 00:09:40,600
+UPS equals.
+
+140
+00:09:40,640 --> 00:09:47,600
+And it's that hexadecimal 2 3 2 3 2 3 which is if you forgot about that you could go look in SEE assess
+
+141
+00:09:47,900 --> 00:09:49,560
+the body background color.
+
+142
+00:09:49,800 --> 00:09:55,410
+Or we set it down here when we eliminate one of the colors if you pick the wrong color.
+
+143
+00:09:55,580 --> 00:09:58,680
+We change the background color to be the same as the body.
+
+144
+00:09:59,150 --> 00:10:02,130
+OK let's refresh new colors.
+
+145
+00:10:02,330 --> 00:10:03,820
+Let's win now.
+
+146
+00:10:04,010 --> 00:10:10,760
+Just quick randomly just for the sake of time we click on play again and it changes back to a black
+
+147
+00:10:10,760 --> 00:10:11,300
+background.
+
+148
+00:10:11,310 --> 00:10:13,060
+Or the dark gray background.
+
+149
+00:10:13,570 --> 00:10:15,530
+OK so that's all for this video.
+
+150
+00:10:15,530 --> 00:10:19,790
+Next up we're going to add the buttons to pick between easy and hard mode.
+
+151
+00:10:19,820 --> 00:10:22,590
+And then lastly we're going to style things so that they look nice
+

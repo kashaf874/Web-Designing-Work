@@ -1,0 +1,724 @@
+﻿1
+00:00:00,780 --> 00:00:04,590
+In this video we're going to make a few improvements to this to do list.
+
+2
+00:00:04,590 --> 00:00:10,140
+So here is the new version that we're going to try and make it has a new command which is delete and
+
+3
+00:00:10,140 --> 00:00:14,500
+on top of that the list command has changed the way that it prints to use out.
+
+4
+00:00:14,520 --> 00:00:16,200
+So I'll show you what this looks like.
+
+5
+00:00:16,200 --> 00:00:19,470
+I'll refresh the page and I'll start by adding a new to do.
+
+6
+00:00:19,980 --> 00:00:24,120
+And let's add in kill Voldemort.
+
+7
+00:00:24,960 --> 00:00:31,920
+And this time it tells me kill Voldemort added to the list and then if I look at the list I get this
+
+8
+00:00:31,920 --> 00:00:35,340
+nice little printout where every item is on its own line.
+
+9
+00:00:35,490 --> 00:00:39,540
+What we used to have before is that it just printed the whole array on one line.
+
+10
+00:00:39,540 --> 00:00:46,500
+So now we get them on separate lines and then also I can delete one by typing delete and it asks me
+
+11
+00:00:46,500 --> 00:00:47,830
+for an index.
+
+12
+00:00:47,850 --> 00:00:50,230
+So let's say I want to delete kill Voldemort.
+
+13
+00:00:50,370 --> 00:00:51,860
+I accomplish that task.
+
+14
+00:00:51,900 --> 00:00:55,560
+I type the number one and it tells me to do is removed.
+
+15
+00:00:55,740 --> 00:01:01,620
+And I could verify that by typing list and I see now my list only has one item.
+
+16
+00:01:01,710 --> 00:01:03,230
+So that's what we're aiming for here.
+
+17
+00:01:03,510 --> 00:01:08,450
+Let's go ahead and get started by adding some of these features to our old version of the app.
+
+18
+00:01:09,360 --> 00:01:14,230
+The first thing I want to do is just demonstrate how our LIST command currently works.
+
+19
+00:01:14,370 --> 00:01:15,900
+So I'll add something new.
+
+20
+00:01:15,960 --> 00:01:17,380
+Just some random letters.
+
+21
+00:01:17,550 --> 00:01:22,560
+And now if I type a list it just prints the array all in one line.
+
+22
+00:01:22,560 --> 00:01:28,890
+So what I want to do instead is printed on separate lines like we had over here where we got this nice
+
+23
+00:01:29,220 --> 00:01:37,470
+asterisk dividers and then in between we have zero colon by new turtle one colon and so on for ever
+
+24
+00:01:37,470 --> 00:01:42,340
+to do that we have to accomplish that we can't just count about log all to do.
+
+25
+00:01:42,690 --> 00:01:47,730
+We're going to need to loop through the to do's and print out each one individually.
+
+26
+00:01:47,730 --> 00:01:48,850
+So we have a few choices.
+
+27
+00:01:48,930 --> 00:01:51,810
+We can use a for loop or a For Each loop.
+
+28
+00:01:51,960 --> 00:01:55,010
+I'm going to use for each because that's what I prefer.
+
+29
+00:01:55,140 --> 00:01:57,180
+But it's really just a matter of preference.
+
+30
+00:01:57,630 --> 00:02:04,730
+So to do stuff for each we give it this function and we'll just put to do in there.
+
+31
+00:02:04,770 --> 00:02:10,900
+Remember that just the name that we make up a placeholder and all we'll do is cancel that log to do
+
+32
+00:02:12,560 --> 00:02:15,850
+and then we'll get rid of this and save.
+
+33
+00:02:16,560 --> 00:02:20,400
+So we're going to loop through to do's just give it a name to do.
+
+34
+00:02:20,400 --> 00:02:22,570
+That's a placeholder for each individual to do.
+
+35
+00:02:22,590 --> 00:02:26,830
+And we just print out each to do refresh the page.
+
+36
+00:02:27,510 --> 00:02:29,460
+Let's add a new one.
+
+37
+00:02:30,330 --> 00:02:31,600
+Random letters again.
+
+38
+00:02:31,860 --> 00:02:33,470
+Now that's the list.
+
+39
+00:02:33,490 --> 00:02:36,060
+And now we have two lines.
+
+40
+00:02:36,810 --> 00:02:42,540
+So the next step is going to be adding in those numbers with a For Each loop.
+
+41
+00:02:42,660 --> 00:02:48,790
+We don't immediately have access to the index or the number that each item corresponds to.
+
+42
+00:02:48,810 --> 00:02:56,700
+We could do something a little bit hacky like this where we would do to Doo's that index of to do which
+
+43
+00:02:56,700 --> 00:03:00,300
+would take by new turtle plug it into to do this.
+
+44
+00:03:00,510 --> 00:03:02,640
+And then that would give us a number back.
+
+45
+00:03:02,640 --> 00:03:04,210
+So that's not an ideal solution.
+
+46
+00:03:04,470 --> 00:03:11,730
+What we can do is just add a second argument to our for each function I'll call it index can be called
+
+47
+00:03:11,760 --> 00:03:13,520
+anything of course maybe just I.
+
+48
+00:03:13,800 --> 00:03:17,040
+And that's going to refer to the index.
+
+49
+00:03:17,040 --> 00:03:23,130
+So the first one it's going to be the item to do and then this will be the index of that particular
+
+50
+00:03:23,130 --> 00:03:23,430
+to do.
+
+51
+00:03:23,430 --> 00:03:26,080
+So each time through we get both of them.
+
+52
+00:03:26,640 --> 00:03:33,960
+So for this first item to do will be by new turtle index will be zero for this item to do will be this
+
+53
+00:03:33,960 --> 00:03:38,080
+whole string of letters and I or index will be one.
+
+54
+00:03:38,370 --> 00:03:40,590
+So all we want to do is print that out.
+
+55
+00:03:40,590 --> 00:03:47,050
+So the format that I followed was the number the index colon that to do with the space between.
+
+56
+00:03:47,430 --> 00:03:52,200
+So that looks like this I plus.
+
+57
+00:03:52,200 --> 00:03:57,200
+And then we need our colon and our space plus the to do.
+
+58
+00:03:57,510 --> 00:03:59,040
+Let's go ahead and test this out.
+
+59
+00:03:59,340 --> 00:04:09,420
+So I'll refresh and I'll add in a new to do this time by Hogwarts textbooks.
+
+60
+00:04:09,450 --> 00:04:10,300
+OK.
+
+61
+00:04:11,030 --> 00:04:18,150
+Now all type list and I see I get both of my to use on separate lines each one with a number next to
+
+62
+00:04:18,150 --> 00:04:18,710
+it.
+
+63
+00:04:19,140 --> 00:04:19,720
+Awesome.
+
+64
+00:04:19,920 --> 00:04:26,540
+So the very last thing that I want to do is add those asterisks around the list like we have here.
+
+65
+00:04:26,550 --> 00:04:28,140
+So that's very simple.
+
+66
+00:04:28,140 --> 00:04:32,570
+All we need to do is a con. But log star star star.
+
+67
+00:04:32,610 --> 00:04:34,050
+I think I did 10.
+
+68
+00:04:34,140 --> 00:04:35,080
+It doesn't matter.
+
+69
+00:04:35,190 --> 00:04:36,850
+And I'm just going to copy that before.
+
+70
+00:04:37,080 --> 00:04:39,060
+And then after the foreach.
+
+71
+00:04:39,330 --> 00:04:40,880
+And that will give us what we want.
+
+72
+00:04:41,160 --> 00:04:42,940
+So I'll demonstrate that.
+
+73
+00:04:42,940 --> 00:04:49,070
+Go to our version refresh and type list and we get our little asterisks surrounding our list.
+
+74
+00:04:50,760 --> 00:04:55,030
+So the next piece of functionality here is going to be delete.
+
+75
+00:04:55,100 --> 00:05:01,580
+So I'm going to go back to my list what age to him how I'm going to add a new list item just as the
+
+76
+00:05:01,580 --> 00:05:02,860
+instructions here.
+
+77
+00:05:02,990 --> 00:05:11,010
+So delete and that will remove a specific to do.
+
+78
+00:05:11,540 --> 00:05:18,440
+So the way that it works is I first need to provide the index of what we're going to delete and then
+
+79
+00:05:18,440 --> 00:05:19,500
+we delete it.
+
+80
+00:05:20,030 --> 00:05:27,620
+So I'm going to add in an else if input equals equals equals delete.
+
+81
+00:05:27,620 --> 00:05:42,260
+We need to then ask for index of 2 to be deleted and then we need to delete that to do so that's our
+
+82
+00:05:42,260 --> 00:05:43,430
+steps here.
+
+83
+00:05:43,430 --> 00:05:45,670
+First to ask for the index.
+
+84
+00:05:45,680 --> 00:05:47,230
+It's pretty straightforward.
+
+85
+00:05:47,360 --> 00:05:51,500
+We'll just make a variable called index because prompt
+
+86
+00:05:54,260 --> 00:05:59,340
+enter index of to do to delete.
+
+87
+00:05:59,810 --> 00:06:02,590
+So that will give us the index like zero.
+
+88
+00:06:03,200 --> 00:06:07,860
+And then we need to use that index to remove that item from from the array.
+
+89
+00:06:07,970 --> 00:06:09,680
+And that's a little bit trickier.
+
+90
+00:06:09,740 --> 00:06:12,490
+We actually haven't talked about how to delete something from an array.
+
+91
+00:06:12,500 --> 00:06:16,730
+Aside from using POP and shift but those are only removed from the end of an array.
+
+92
+00:06:16,830 --> 00:06:17,830
+But the beginning.
+
+93
+00:06:18,110 --> 00:06:21,940
+What we want to do here is potentially remove from anywhere inside the array.
+
+94
+00:06:22,040 --> 00:06:26,650
+So there's another method called splice.
+
+95
+00:06:26,650 --> 00:06:28,950
+And so I'll show you how we use place.
+
+96
+00:06:29,120 --> 00:06:36,650
+We're going to write to use that splice and this will basically make a cut and remove a specific number
+
+97
+00:06:36,650 --> 00:06:38,390
+of elements out of an array.
+
+98
+00:06:38,420 --> 00:06:41,770
+So the first argument is where we want to make that cut.
+
+99
+00:06:41,990 --> 00:06:48,770
+So that's just going to be the index the user provided and then the second argument is how many items
+
+100
+00:06:48,770 --> 00:06:49,990
+you want to delete.
+
+101
+00:06:50,060 --> 00:06:51,770
+Following that index.
+
+102
+00:06:51,770 --> 00:06:54,110
+So we only want to delete one item.
+
+103
+00:06:54,110 --> 00:06:55,910
+So that's all we need to do.
+
+104
+00:06:55,920 --> 00:07:01,350
+Splice index one that will ask the user which to duty want to delete.
+
+105
+00:07:01,370 --> 00:07:02,310
+Give me a number.
+
+106
+00:07:02,600 --> 00:07:05,180
+Let's say the user types in three.
+
+107
+00:07:05,570 --> 00:07:12,470
+Then to start splice is going to find the item with index 3 and delete one item.
+
+108
+00:07:12,470 --> 00:07:17,030
+If we added this it would delete 10 items following that index.
+
+109
+00:07:17,090 --> 00:07:18,430
+So we only want one.
+
+110
+00:07:18,530 --> 00:07:21,350
+Let's go ahead and test this out in our browser.
+
+111
+00:07:21,350 --> 00:07:24,910
+I'm going to refresh and let's start by adding a few to do.
+
+112
+00:07:25,270 --> 00:07:26,600
+So the first one.
+
+113
+00:07:27,140 --> 00:07:31,400
+Do the dishes definitely need to do that right now.
+
+114
+00:07:31,400 --> 00:07:32,000
+Next one
+
+115
+00:07:35,060 --> 00:07:37,430
+do laundry.
+
+116
+00:07:37,430 --> 00:07:39,770
+I can probably wait a few more weeks before I do that.
+
+117
+00:07:39,950 --> 00:07:42,200
+And the last one here.
+
+118
+00:07:43,880 --> 00:07:45,000
+Eat dinner.
+
+119
+00:07:45,490 --> 00:07:46,150
+OK.
+
+120
+00:07:46,160 --> 00:07:51,230
+So let's list them out and we get this nice list here.
+
+121
+00:07:51,320 --> 00:07:57,080
+Still we have five new turtle So let's say I want to delete find new turtle either because I already
+
+122
+00:07:57,080 --> 00:08:01,910
+bought a new turtle or I had a change of heart and I realized that turtles are probably the worst pet
+
+123
+00:08:02,000 --> 00:08:03,440
+that you could ever own.
+
+124
+00:08:03,680 --> 00:08:08,070
+So let's delete that and you type delete.
+
+125
+00:08:09,020 --> 00:08:16,610
+Now it asks me for an index so that is index zero and it would be nice if we had a little feedback.
+
+126
+00:08:16,610 --> 00:08:19,910
+That said item deleted so we can add that next.
+
+127
+00:08:20,330 --> 00:08:21,720
+But to verify that it worked.
+
+128
+00:08:21,740 --> 00:08:26,200
+If we type list we see that our array has now changed.
+
+129
+00:08:26,210 --> 00:08:32,540
+Now we no longer have buy a new turtle and we just have do dishes do laundry and eat dinner so let's
+
+130
+00:08:32,540 --> 00:08:35,830
+quit and let's add in a little bit of feedback.
+
+131
+00:08:35,840 --> 00:08:44,810
+Let's start when you delete something we'll cancel that log to do let's say deleted to do and save that
+
+132
+00:08:46,010 --> 00:08:54,680
+and let's do the same thing for when you add it to do we'll do a concert log added to do just so that
+
+133
+00:08:54,680 --> 00:08:56,450
+we see what's happening.
+
+134
+00:08:57,440 --> 00:09:03,620
+And while I'm here I'm noticing that this loop is getting a little bit long so what we probably want
+
+135
+00:09:03,620 --> 00:09:06,710
+to do is break this out into separate functions.
+
+136
+00:09:06,770 --> 00:09:11,930
+So we're going to refactor this so functionally nothing is going to change about how it works.
+
+137
+00:09:11,990 --> 00:09:14,770
+It's just a matter of how the code is organized.
+
+138
+00:09:14,900 --> 00:09:17,290
+So here's how I would like it to work.
+
+139
+00:09:17,330 --> 00:09:20,200
+We have a separate function here.
+
+140
+00:09:20,250 --> 00:09:26,300
+I'm going to copy all of that and cut it out and our function will just be called List to do this and
+
+141
+00:09:26,300 --> 00:09:32,150
+that's all that we're going to put inside if this if input is equal to the list then we'll go down here
+
+142
+00:09:32,150 --> 00:09:35,950
+and define list to do's.
+
+143
+00:09:36,050 --> 00:09:41,640
+And we're just going to paste that code in and that's all.
+
+144
+00:09:44,030 --> 00:09:45,300
+Just like this.
+
+145
+00:09:45,410 --> 00:09:47,480
+I'm going to repeat the same thing.
+
+146
+00:09:47,540 --> 00:09:54,980
+So if the user inputs knew where to copy this code cut it out and we're just going to call a function
+
+147
+00:09:54,980 --> 00:09:55,900
+we're going to write code.
+
+148
+00:09:55,910 --> 00:10:05,960
+Add to do then I need to write my function had to do paste that code in indent this properly and save
+
+149
+00:10:07,520 --> 00:10:08,870
+one more.
+
+150
+00:10:08,870 --> 00:10:17,840
+If the user enters delete are going to add a new function called Delete to do so we're going to create
+
+151
+00:10:17,840 --> 00:10:28,370
+that down here function delete to do and paste that code in space it correctly and now we should be
+
+152
+00:10:28,370 --> 00:10:29,250
+good to go.
+
+153
+00:10:29,750 --> 00:10:35,000
+So you can see that we didn't really change the functionality at all but we cleaned this logic up a
+
+154
+00:10:35,000 --> 00:10:35,630
+lot.
+
+155
+00:10:35,810 --> 00:10:42,650
+So our loop is much shorter and easier to see what happens if the user enters list list the tidies if
+
+156
+00:10:42,710 --> 00:10:48,950
+the user enters new had to do for user enters delete delete that to do and then check and ask for input
+
+157
+00:10:48,980 --> 00:10:51,310
+again and repeat the whole process.
+
+158
+00:10:51,740 --> 00:10:53,810
+So let's just verify that it works.
+
+159
+00:10:53,870 --> 00:10:54,960
+Refresh the page.
+
+160
+00:10:55,010 --> 00:10:56,180
+What would we like to do.
+
+161
+00:10:56,300 --> 00:10:59,950
+Let's do list and we get our list.
+
+162
+00:11:00,620 --> 00:11:08,500
+Let's go ahead and add a new to do finish dishes.
+
+163
+00:11:09,170 --> 00:11:14,100
+Let's list again and we get our two to do listed.
+
+164
+00:11:14,180 --> 00:11:18,550
+Now if we remove one delete this time.
+
+165
+00:11:18,560 --> 00:11:21,050
+I did buy a turtle index 0.
+
+166
+00:11:21,140 --> 00:11:22,490
+I'm going to remove that.
+
+167
+00:11:22,910 --> 00:11:27,010
+I get my message deleted to do and let's go ahead and quit.
+
+168
+00:11:27,230 --> 00:11:28,950
+It tells me alright you quit.
+
+169
+00:11:29,550 --> 00:11:31,730
+That's all we are going to do for now.
+
+170
+00:11:31,760 --> 00:11:33,440
+There are a few things that I want to summarize.
+
+171
+00:11:33,470 --> 00:11:37,540
+The first of which is that we use a for each to list out the to do.
+
+172
+00:11:37,850 --> 00:11:41,270
+And we could pass in a second argument to be named anything.
+
+173
+00:11:41,400 --> 00:11:45,730
+And that refers to the index of every item that's passed in.
+
+174
+00:11:45,890 --> 00:11:52,400
+The other thing that we did is learned about splice and splice how we deleted a specific item from the
+
+175
+00:11:52,400 --> 00:11:53,170
+array.
+
+176
+00:11:53,180 --> 00:11:55,130
+It takes two arguments.
+
+177
+00:11:55,130 --> 00:12:01,550
+The position of the thing to be deleted and then a number of how many items to delete after that index
+
+178
+00:12:01,550 --> 00:12:02,200
+.
+
+179
+00:12:02,270 --> 00:12:07,310
+The last thing that I want to talk about here is that we refactored things into separate functions so
+
+180
+00:12:07,310 --> 00:12:12,400
+even though we didn't call these functions more than once we only wrote them one time.
+
+181
+00:12:12,410 --> 00:12:18,700
+It's more about organization and making our code simple and short inside of this logic heavy loop
+

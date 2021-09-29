@@ -1,0 +1,256 @@
+﻿1
+00:00:00,810 --> 00:00:06,210
+So one of the thing that we'll see pretty commonly going forward is the use of objects inside of arrays
+
+2
+00:00:06,570 --> 00:00:08,640
+or arrays instead of objects.
+
+3
+00:00:08,970 --> 00:00:15,290
+Let's say that I'm building an app where I have posts like a blog post and each post has comments.
+
+4
+00:00:15,300 --> 00:00:17,290
+Let's start by representing.
+
+5
+00:00:17,730 --> 00:00:19,860
+Let's talk about how we might represent that data.
+
+6
+00:00:19,860 --> 00:00:22,150
+So this is going to be a complex structure here.
+
+7
+00:00:22,230 --> 00:00:24,510
+I'm going to clear out my cons..
+
+8
+00:00:25,050 --> 00:00:26,430
+And this is what it will look like.
+
+9
+00:00:26,460 --> 00:00:32,700
+So our Web site will have an array of posts so each post will actually be its own object and we'll have
+
+10
+00:00:32,700 --> 00:00:39,270
+properties like title and author and then maybe comments or votes or likes or something.
+
+11
+00:00:39,270 --> 00:00:43,670
+So we're going to start by doing an array of posts.
+
+12
+00:00:45,750 --> 00:00:51,350
+And rather than just a post being a string like hello like we have seen with dogs so far we just did
+
+13
+00:00:51,360 --> 00:00:52,270
+strings.
+
+14
+00:00:52,380 --> 00:00:54,420
+We're actually going to make each post an object
+
+15
+00:00:57,210 --> 00:01:07,740
+and each post object will have its own properties like title cats are mediocre.
+
+16
+00:01:09,540 --> 00:01:15,240
+I do feel like it can say that I've owned a few cats and honestly my experiences were very underwhelming
+
+17
+00:01:16,590 --> 00:01:24,570
+so I'll alter that post and this is our first item in the array so post index 0 gives us this entire
+
+18
+00:01:24,570 --> 00:01:26,350
+object.
+
+19
+00:01:26,370 --> 00:01:27,250
+Let's do one more
+
+20
+00:01:30,210 --> 00:01:37,340
+and this time we'll have another post.
+
+21
+00:01:37,350 --> 00:01:40,060
+Cats are actually awesome.
+
+22
+00:01:40,290 --> 00:01:43,070
+And this post was not written by me.
+
+23
+00:01:43,260 --> 00:01:47,150
+It was written by cat lover.
+
+24
+00:01:47,150 --> 00:01:51,540
+All right so we can hit enter here and this will make an array of posts.
+
+25
+00:01:51,570 --> 00:01:56,970
+Each post is actually its own object so this is a kind of structure that will see all the time or we
+
+26
+00:01:56,970 --> 00:02:03,000
+have a list and each item in that list is its own object whether it's an array of comments or an array
+
+27
+00:02:03,000 --> 00:02:07,730
+of posts or an array of friends where each one is its own object.
+
+28
+00:02:07,770 --> 00:02:11,430
+When we build web apps we'll see this all the time.
+
+29
+00:02:11,430 --> 00:02:14,010
+So just to show you one more thing that we can do.
+
+30
+00:02:14,010 --> 00:02:19,680
+We could actually embed an array of comments instead of each individual post so we could have comments
+
+31
+00:02:20,670 --> 00:02:24,080
+as a key and the value would be an array.
+
+32
+00:02:24,390 --> 00:02:26,380
+And this is where it gets a little crazy.
+
+33
+00:02:26,400 --> 00:02:28,440
+We could have two comments.
+
+34
+00:02:28,440 --> 00:02:36,150
+First one will be some post and the second one will be terrible post.
+
+35
+00:02:36,240 --> 00:02:37,950
+We can do the same thing down here.
+
+36
+00:02:38,370 --> 00:02:46,140
+Add another key which is called comments and the value is an array and the first one will just be somebody
+
+37
+00:02:46,140 --> 00:02:51,930
+commenting a heart and the second one will be go to hell.
+
+38
+00:02:51,930 --> 00:02:54,430
+I hate you just have to be realistic here.
+
+39
+00:02:54,470 --> 00:03:00,330
+These are the kind of comments you get all the time and if we hit enter here we now have our complete
+
+40
+00:03:00,330 --> 00:03:01,380
+data structure.
+
+41
+00:03:01,380 --> 00:03:04,650
+So let's open up posts or just type it into what we get.
+
+42
+00:03:04,650 --> 00:03:06,840
+We have an array with two items in it.
+
+43
+00:03:06,900 --> 00:03:16,650
+So posts length two items each one is an object and each one of those post objects has an author comments
+
+44
+00:03:16,710 --> 00:03:19,460
+which is an array and title which is a string.
+
+45
+00:03:19,830 --> 00:03:27,930
+So if I want to access out cats or mediocre the title of the first post I need to do posts zero and
+
+46
+00:03:27,930 --> 00:03:29,400
+then I need to access title.
+
+47
+00:03:29,550 --> 00:03:33,180
+So post zero title that gives me.
+
+48
+00:03:33,180 --> 00:03:34,640
+Cats are mediocre.
+
+49
+00:03:35,130 --> 00:03:39,860
+If I wanted to access the second comment of the second post.
+
+50
+00:03:40,200 --> 00:03:43,260
+So that is going to be the second post.
+
+51
+00:03:43,260 --> 00:03:44,090
+Open up comments.
+
+52
+00:03:44,100 --> 00:03:46,710
+The second comment this very angry realistic one.
+
+53
+00:03:46,720 --> 00:03:47,130
+Go to help.
+
+54
+00:03:47,130 --> 00:03:47,900
+I hate you.
+
+55
+00:03:48,140 --> 00:03:51,100
+I'm going to need to go ahead and open up posts.
+
+56
+00:03:51,360 --> 00:03:56,310
+The second one index one and then dumb comments.
+
+57
+00:03:56,330 --> 00:04:03,300
+It's going to give me the array and then I want the second item which is index of 1 and we get go to
+
+58
+00:04:03,300 --> 00:04:06,210
+hell I hate you so this is an important skill.
+
+59
+00:04:06,210 --> 00:04:10,210
+Being able to take a data structure like this and this one is actually not too bad.
+
+60
+00:04:10,350 --> 00:04:14,940
+But we will see some very very complex data structures later on where things are nested.
+
+61
+00:04:14,970 --> 00:04:21,510
+Five six seven levels deep and you need to be able to eventually at least go through an access one layer
+
+62
+00:04:21,510 --> 00:04:23,290
+at a time like we did here.
+
+63
+00:04:23,940 --> 00:04:28,470
+So hopefully this video helps you understand the differences between arrays and objects and also prove
+
+64
+00:04:28,470 --> 00:04:30,720
+to you that we often use them in conjunction together.
+

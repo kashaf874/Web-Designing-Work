@@ -1,0 +1,1100 @@
+﻿1
+00:00:00,390 --> 00:00:01,650
+All right welcome back.
+
+2
+00:00:01,660 --> 00:00:05,770
+In this video we're going to work on the styling of our site right now.
+
+3
+00:00:05,850 --> 00:00:09,530
+It's definitely nowhere near what it's supposed to look like at the end.
+
+4
+00:00:09,810 --> 00:00:12,960
+So let's actually compare them side by side.
+
+5
+00:00:13,530 --> 00:00:14,840
+Here's ours over here.
+
+6
+00:00:15,030 --> 00:00:21,280
+So some of the big changes we need to make rounding the corners adding some spacing here up top.
+
+7
+00:00:21,360 --> 00:00:23,260
+Changing the styling of the buttons here.
+
+8
+00:00:23,490 --> 00:00:27,750
+So these buttons don't really look like buttons until you hover over them and we get a hover effect
+
+9
+00:00:28,470 --> 00:00:32,370
+our buttons are definitely hideous and we don't have any hover effect on them.
+
+10
+00:00:32,370 --> 00:00:35,200
+Also the position of them is a little bit wrong.
+
+11
+00:00:35,550 --> 00:00:43,130
+As you can see if i guess here I get text but if I were fresh that tech space is already taken up versus
+
+12
+00:00:43,200 --> 00:00:48,310
+on our version if I guess the text pushes everything away to the sides.
+
+13
+00:00:48,470 --> 00:00:51,480
+Also there's an animation here.
+
+14
+00:00:51,510 --> 00:01:00,360
+So when I click notice how they fade out slowly on ours when we click well if I click an incorrect one
+
+15
+00:01:01,170 --> 00:01:02,990
+it just immediately is removed.
+
+16
+00:01:03,000 --> 00:01:05,790
+So we want to add a transition to that.
+
+17
+00:01:05,790 --> 00:01:09,200
+Also we have the H-1 up here that needs some work on ours.
+
+18
+00:01:09,390 --> 00:01:10,920
+It needs to take up more space.
+
+19
+00:01:11,130 --> 00:01:12,930
+We need to change the background color.
+
+20
+00:01:12,930 --> 00:01:14,520
+We want to change the font.
+
+21
+00:01:14,910 --> 00:01:21,240
+We need to make sure that the span of our color is formatted correctly so it's on its own line and it's
+
+22
+00:01:21,240 --> 00:01:22,610
+a larger font.
+
+23
+00:01:22,710 --> 00:01:25,910
+Also we need to change the font for the entire body.
+
+24
+00:01:25,950 --> 00:01:28,020
+So these are all the same font.
+
+25
+00:01:28,080 --> 00:01:32,970
+And lastly you'll notice we have a little bit of space right here between the stripe and the end of
+
+26
+00:01:32,970 --> 00:01:37,470
+the body and in the solution version there is no space at all.
+
+27
+00:01:38,030 --> 00:01:38,490
+OK.
+
+28
+00:01:38,550 --> 00:01:41,580
+Let's get started by first tackling this H-1.
+
+29
+00:01:41,990 --> 00:01:49,740
+So we're going to go to my subline text and go to the H-1 and the first thing that will do is just align
+
+30
+00:01:49,740 --> 00:01:52,700
+things in the middle as you can see in the solution.
+
+31
+00:01:52,890 --> 00:01:54,170
+Things are aligned to center.
+
+32
+00:01:54,210 --> 00:02:03,070
+So all we need to do is add text align center and save and refresh.
+
+33
+00:02:03,360 --> 00:02:06,520
+Ok slight improvement.
+
+34
+00:02:06,540 --> 00:02:14,010
+Next up let's change the background color so the color is going to be still blue but you'll notice that
+
+35
+00:02:14,010 --> 00:02:17,280
+if I refresh the page right now it works just fine.
+
+36
+00:02:17,400 --> 00:02:23,010
+But if I refresh again and then I win the game or I click on new colors.
+
+37
+00:02:23,010 --> 00:02:28,230
+It goes back to black and that's because our javascript code is overwriting that we're setting it back
+
+38
+00:02:28,230 --> 00:02:31,970
+to this dark gray blackish color in our javascript.
+
+39
+00:02:32,010 --> 00:02:37,320
+We need to find the places where we're resetting it to this color which is 2 3 2 3 2 3.
+
+40
+00:02:37,320 --> 00:02:38,040
+Here we go.
+
+41
+00:02:38,100 --> 00:02:40,820
+We just want to change this to be still blue.
+
+42
+00:02:41,340 --> 00:02:44,690
+And that's also when I refresh it starts it's still blue.
+
+43
+00:02:44,850 --> 00:02:45,970
+I get new colors.
+
+44
+00:02:45,990 --> 00:02:47,870
+It stays as still blue.
+
+45
+00:02:48,360 --> 00:02:48,810
+OK.
+
+46
+00:02:48,870 --> 00:02:49,830
+So that's that.
+
+47
+00:02:49,830 --> 00:02:54,430
+Now let's get rid of all the black space on either side of our H-1.
+
+48
+00:02:54,870 --> 00:03:02,230
+So in our H-1 we're going to get rid of all margin margin zero on top and bottom left and right.
+
+49
+00:03:02,250 --> 00:03:04,820
+So notice what happens when to do that.
+
+50
+00:03:04,820 --> 00:03:10,590
+That black space goes away on all sides except for this little bit of spacing on the left top and right
+
+51
+00:03:10,590 --> 00:03:10,720
+.
+
+52
+00:03:10,830 --> 00:03:14,870
+And that's not coming from or H-1 that's actually coming from the body.
+
+53
+00:03:14,940 --> 00:03:19,420
+So to fix that we can go to the body and give it margin zero.
+
+54
+00:03:19,680 --> 00:03:24,230
+And to now pay attention to this little gap I'll refresh and that goes away.
+
+55
+00:03:24,390 --> 00:03:30,040
+So our white stripe goes all the way to the side just like it does in this version here.
+
+56
+00:03:30,150 --> 00:03:30,970
+OK.
+
+57
+00:03:31,080 --> 00:03:33,080
+Next up let's focus on the fun.
+
+58
+00:03:33,450 --> 00:03:36,180
+So the fun is going to be the same for all of our elements.
+
+59
+00:03:36,180 --> 00:03:41,690
+The buttons and the H-1 and the span here it's all the same font slightly different font weights.
+
+60
+00:03:41,850 --> 00:03:46,660
+And we're going to use just one of the built in fonts the system vaunts which is called Avenir.
+
+61
+00:03:46,920 --> 00:03:52,730
+So that's going to be font family Avenir.
+
+62
+00:03:53,430 --> 00:03:56,440
+That is a font that may not work on every system out there.
+
+63
+00:03:56,580 --> 00:04:03,930
+So we're going to add in a another option which is Mont. Serat just like that.
+
+64
+00:04:04,740 --> 00:04:10,050
+So we end up with this fun here which obviously doesn't look exactly the same.
+
+65
+00:04:10,170 --> 00:04:12,460
+And that comes down to our font weight.
+
+66
+00:04:12,540 --> 00:04:16,040
+So we need to change the weight of this font because it's an H1.
+
+67
+00:04:16,050 --> 00:04:21,520
+The default is to make it bolded or to have like 700 or 800 or even 900 font weight.
+
+68
+00:04:21,600 --> 00:04:24,350
+What we want to do is give it font weight normal.
+
+69
+00:04:24,420 --> 00:04:32,230
+So when our H-1 can add font weight normal and save.
+
+70
+00:04:32,400 --> 00:04:33,400
+Refresh.
+
+71
+00:04:33,710 --> 00:04:34,700
+That's looking closer.
+
+72
+00:04:34,700 --> 00:04:37,550
+Now there's a few other things we need to change.
+
+73
+00:04:37,590 --> 00:04:44,030
+The first of which is that this is all uppercase and we can do that with R C S S using text transform
+
+74
+00:04:45,330 --> 00:04:52,580
+uppercase and save So now look closer and will also want to make sure that our color is on its own line
+
+75
+00:04:52,700 --> 00:04:56,510
+and that we style that span slightly differently to do that.
+
+76
+00:04:56,570 --> 00:05:00,950
+We're going to go over here into our team and actually we're going to edit the aged him out a little
+
+77
+00:05:00,950 --> 00:05:01,340
+bit.
+
+78
+00:05:01,700 --> 00:05:04,120
+And this is the first way that we're going to make this work.
+
+79
+00:05:04,160 --> 00:05:09,350
+We'll see another way of doing it with Pearcey SS But we're going to start by styling this where we
+
+80
+00:05:09,350 --> 00:05:12,590
+have the great on one line and then to add a break.
+
+81
+00:05:12,590 --> 00:05:19,070
+We can use a b r tag and actually this is not a great idea as far as style it's a little bit frowned
+
+82
+00:05:19,070 --> 00:05:24,080
+upon but it's a quick and easy way to get started adding some returns and some line breaks and that's
+
+83
+00:05:24,080 --> 00:05:26,440
+all that this tag does is it adds a line break.
+
+84
+00:05:26,620 --> 00:05:33,200
+So we want one after the Great we want a break and then our span and then we want another break and
+
+85
+00:05:33,200 --> 00:05:37,970
+then color game at the bottom and if we refresh Now you can see we're getting closer.
+
+86
+00:05:38,060 --> 00:05:41,280
+Now we need to focus on making the span a lot larger.
+
+87
+00:05:41,660 --> 00:05:44,160
+So this band has an idea of color display.
+
+88
+00:05:44,300 --> 00:05:49,730
+So we're going to go over to R C S S and select color display just like this.
+
+89
+00:05:49,900 --> 00:05:58,200
+Id color display and then we're going to say font size is 200 percent of the H-1 font size.
+
+90
+00:05:58,550 --> 00:06:01,860
+And if we refresh we now get this much larger font size.
+
+91
+00:06:02,210 --> 00:06:03,630
+And we're getting closer.
+
+92
+00:06:03,680 --> 00:06:05,210
+We have our breaks in here.
+
+93
+00:06:05,330 --> 00:06:10,040
+You also notice though that we have a lot more space between the lines than we do over here.
+
+94
+00:06:10,280 --> 00:06:12,970
+So there's a few things that we can do to work on that.
+
+95
+00:06:12,980 --> 00:06:15,780
+The first one is change the line height.
+
+96
+00:06:16,280 --> 00:06:21,580
+So we'll give it a line height of 1.1 and save.
+
+97
+00:06:22,190 --> 00:06:27,040
+And let's look at our version again and refresh and you can see that shrinks down a bit.
+
+98
+00:06:27,290 --> 00:06:30,440
+But now we lost the space on the top and the bottom.
+
+99
+00:06:30,440 --> 00:06:32,190
+We need a little bit of space there.
+
+100
+00:06:32,210 --> 00:06:35,050
+So what we'll do is go in and add some padding.
+
+101
+00:06:35,450 --> 00:06:40,610
+So we're going to add padding to the top and bottom only not the left and right and we want 20 pixels
+
+102
+00:06:40,610 --> 00:06:47,050
+on the top and bottom so we can do that just like this padding 20 pixels and zero.
+
+103
+00:06:47,300 --> 00:06:54,980
+We could also have done padding top 20 pixels and padding bottom but this is a nicer short way of doing
+
+104
+00:06:54,980 --> 00:06:58,590
+it refresh and you can see we're almost there now.
+
+105
+00:06:58,880 --> 00:07:00,670
+So our header looks fine.
+
+106
+00:07:00,880 --> 00:07:05,830
+We have the correct font the correct font way it's all in uppercase the correct background color.
+
+107
+00:07:05,870 --> 00:07:11,240
+Let's make sure as I play stays correct looks all good.
+
+108
+00:07:11,300 --> 00:07:14,800
+The next thing we should tackle are the buttons on this nav bar.
+
+109
+00:07:15,130 --> 00:07:18,080
+So we definitely have a long way to go to improve those.
+
+110
+00:07:18,080 --> 00:07:23,000
+The first thing we want to do is get rid of the borders so we don't have this obvious border around
+
+111
+00:07:23,000 --> 00:07:23,840
+the button.
+
+112
+00:07:23,870 --> 00:07:27,230
+We also want to get rid of the background color.
+
+113
+00:07:27,320 --> 00:07:29,290
+So there should be no background as you can see here.
+
+114
+00:07:29,330 --> 00:07:33,210
+It's just wait until we hover or until we select one.
+
+115
+00:07:33,250 --> 00:07:37,790
+Also we want to make sure the font family is the same as this font up here.
+
+116
+00:07:37,790 --> 00:07:39,230
+So let's get started.
+
+117
+00:07:39,230 --> 00:07:48,620
+And I'm going to select all buttons so button and we're just going to say border none and save.
+
+118
+00:07:48,800 --> 00:07:50,850
+Pay attention to the buttons when I refresh.
+
+119
+00:07:51,170 --> 00:07:51,790
+OK.
+
+120
+00:07:51,980 --> 00:07:53,520
+So we now have no border.
+
+121
+00:07:53,720 --> 00:07:55,600
+But we still have that background color.
+
+122
+00:07:55,850 --> 00:08:02,760
+So now that same background none and save and refresh and we're getting closer.
+
+123
+00:08:02,950 --> 00:08:04,800
+So now we have just plain text.
+
+124
+00:08:05,120 --> 00:08:09,520
+And we'll start by making all that text uppercase like we have over here.
+
+125
+00:08:09,740 --> 00:08:16,330
+So we use text transform again just copy that line over paste that in there and refresh.
+
+126
+00:08:16,400 --> 00:08:18,840
+Now our buttons are all in uppercase.
+
+127
+00:08:18,920 --> 00:08:23,240
+The next thing we want to do is make sure that the button goes all the way from the top to the bottom
+
+128
+00:08:23,260 --> 00:08:25,370
+of the div stripe container.
+
+129
+00:08:25,400 --> 00:08:31,580
+Right now it only takes up part of the space so we can do that by setting height to be 100 percent.
+
+130
+00:08:31,750 --> 00:08:37,490
+And that means it will take up 100 percent of the containing element as you can see that gets us a lot
+
+131
+00:08:37,490 --> 00:08:38,900
+closer.
+
+132
+00:08:38,930 --> 00:08:44,870
+We just now need to change some colors change the font size the font weight and then change the hover
+
+133
+00:08:44,870 --> 00:08:47,540
+effect which we don't have set up yet.
+
+134
+00:08:48,010 --> 00:08:54,050
+The next thing that will do is make the font wait a little bit heavier and change the color to be still
+
+135
+00:08:54,050 --> 00:08:54,980
+blue as well.
+
+136
+00:08:55,040 --> 00:09:02,350
+So font weight will do seven hundred and then color will also be still blue.
+
+137
+00:09:02,650 --> 00:09:05,370
+And let's check that out refresh.
+
+138
+00:09:06,020 --> 00:09:11,180
+So it gets a little bit older and you can also see that the color has now changed to that still blue
+
+139
+00:09:11,240 --> 00:09:14,750
+the same color we have back here.
+
+140
+00:09:14,760 --> 00:09:21,740
+There's a really minor change that we can make which is to change the letter spacing to be one pixel
+
+141
+00:09:21,740 --> 00:09:21,810
+.
+
+142
+00:09:21,830 --> 00:09:27,260
+And if you pay attention when I refresh you can see things spaced out just a little bit between each
+
+143
+00:09:27,260 --> 00:09:28,390
+letter.
+
+144
+00:09:29,090 --> 00:09:31,690
+Leslie let's focus on the font size.
+
+145
+00:09:31,700 --> 00:09:33,690
+They seem a little bit too small.
+
+146
+00:09:33,980 --> 00:09:39,340
+So we're going to just use font size and set it to be inherit.
+
+147
+00:09:39,500 --> 00:09:44,750
+And if I refresh you can see that they inherit the font size and we don't have to explicitly said it
+
+148
+00:09:44,750 --> 00:09:45,600
+.
+
+149
+00:09:45,620 --> 00:09:47,120
+So let's take a look now.
+
+150
+00:09:47,620 --> 00:09:51,380
+One of the big differences is that they're currently spaced differently.
+
+151
+00:09:51,670 --> 00:09:55,490
+As soon as the page is loaded we have the space here on our version.
+
+152
+00:09:55,490 --> 00:09:59,460
+However we don't have that space until we click on a button.
+
+153
+00:09:59,480 --> 00:10:08,860
+So what we need to do is actually style the span that's right here and that span is called message and
+
+154
+00:10:08,870 --> 00:10:14,480
+we're going to want to go and give that some properties to make it take up that space and all we need
+
+155
+00:10:14,480 --> 00:10:17,220
+to do is change one property actually.
+
+156
+00:10:17,360 --> 00:10:24,980
+So we're going to select display our message which is this fan and we're going to change the display
+
+157
+00:10:24,980 --> 00:10:28,830
+property to be in line.
+
+158
+00:10:28,830 --> 00:10:34,880
+BLOCK So what that will do if I refresh you won't notice a big difference right away but that's because
+
+159
+00:10:34,880 --> 00:10:41,790
+we also need to assign it a with you know give it a with of 20 percent and save and refresh.
+
+160
+00:10:42,230 --> 00:10:48,530
+We now have this span even though it doesn't have anything in it that takes up 20 percent of this screen
+
+161
+00:10:48,530 --> 00:10:48,790
+.
+
+162
+00:10:49,000 --> 00:10:52,920
+So that pushes these elements to the side which is exactly what we want.
+
+163
+00:10:53,500 --> 00:10:55,690
+Let's take a look and compare them.
+
+164
+00:10:55,700 --> 00:10:56,960
+All right so that looks pretty close.
+
+165
+00:10:56,960 --> 00:11:03,340
+Now what we'll work on next is getting the selected class to match the right color and having our hover
+
+166
+00:11:03,350 --> 00:11:05,450
+effect as well.
+
+167
+00:11:05,450 --> 00:11:10,460
+So that's going to be down in our button and we're going to add the hover effect first.
+
+168
+00:11:10,460 --> 00:11:15,970
+So all we need to do is add in button Colan Huffer
+
+169
+00:11:18,920 --> 00:11:27,140
+and we're going to change the font color to be white and the background color to be steel blue.
+
+170
+00:11:27,130 --> 00:11:31,370
+So we're basically reversing the colors and we'll save and refresh.
+
+171
+00:11:31,630 --> 00:11:34,090
+Now as I hover you can see I get that effect.
+
+172
+00:11:34,670 --> 00:11:35,550
+Perfect.
+
+173
+00:11:35,600 --> 00:11:39,920
+And our selected class that we have is going to look just the same.
+
+174
+00:11:39,950 --> 00:11:42,360
+Just going to copy the styles.
+
+175
+00:11:42,530 --> 00:11:45,980
+There is no difference when we're hovering over something versus when it's selected.
+
+176
+00:11:45,980 --> 00:11:47,260
+They should look the same.
+
+177
+00:11:47,420 --> 00:11:52,790
+So you can see that looks right and I hover and only while I hover.
+
+178
+00:11:52,850 --> 00:11:55,270
+Does it get that blue background and white text color.
+
+179
+00:11:55,340 --> 00:11:57,410
+And when I move it goes away.
+
+180
+00:11:57,680 --> 00:11:59,010
+There is a slight difference.
+
+181
+00:11:59,300 --> 00:12:04,470
+If I hover over the solution buttons notice that it fades in that color.
+
+182
+00:12:04,550 --> 00:12:08,390
+It's not just an instant switch on my version.
+
+183
+00:12:08,650 --> 00:12:10,550
+It just toggles instantly.
+
+184
+00:12:10,820 --> 00:12:16,440
+We can fix that using a C Ss transition property inside the button selector.
+
+185
+00:12:16,670 --> 00:12:19,720
+We're going to write transition and pass it.
+
+186
+00:12:19,720 --> 00:12:26,150
+Two arguments are two values and the first one is what we want to transition and in our case we're just
+
+187
+00:12:26,140 --> 00:12:30,610
+going to add it to every property and then the next one is how long we want it to take.
+
+188
+00:12:30,710 --> 00:12:34,390
+So I'm going to exaggerate it at first with two seconds.
+
+189
+00:12:34,390 --> 00:12:41,210
+So again the transition property is how we can tell CSX how to animate transitions between color changes
+
+190
+00:12:41,210 --> 00:12:43,790
+or font size changes and properties.
+
+191
+00:12:43,790 --> 00:12:49,730
+So what I said here is that any time property changes on any button which in our case will really just
+
+192
+00:12:49,730 --> 00:12:51,900
+be color and background.
+
+193
+00:12:52,070 --> 00:12:57,680
+So whenever the color changes and the background color changes it should take two seconds and you'll
+
+194
+00:12:57,680 --> 00:12:59,190
+see when I refresh.
+
+195
+00:12:59,420 --> 00:13:00,410
+And I hover.
+
+196
+00:13:00,560 --> 00:13:01,880
+Oh that's still not working.
+
+197
+00:13:01,900 --> 00:13:04,750
+I'm missing my s here 2.00 s.
+
+198
+00:13:04,850 --> 00:13:12,140
+And now if I refresh and hover it takes two seconds to fade in and when I click to add the selected
+
+199
+00:13:12,130 --> 00:13:17,520
+class it also takes two seconds and it takes two seconds to fade out when I leave.
+
+200
+00:13:17,750 --> 00:13:20,140
+So two seconds is definitely too long.
+
+201
+00:13:20,560 --> 00:13:23,580
+I think I'm aiming for about point three seconds.
+
+202
+00:13:23,750 --> 00:13:25,950
+Let's test that out.
+
+203
+00:13:25,970 --> 00:13:26,630
+There we go.
+
+204
+00:13:26,650 --> 00:13:28,990
+It looks pretty good to me.
+
+205
+00:13:29,060 --> 00:13:35,570
+The last big thing is getting the rounded corners on these squares the way that we get those rounded
+
+206
+00:13:35,570 --> 00:13:38,550
+corners is using a property called Border radius.
+
+207
+00:13:38,690 --> 00:13:41,990
+So I have the median docs open if you want to take a look.
+
+208
+00:13:42,130 --> 00:13:42,970
+It's a good read.
+
+209
+00:13:43,100 --> 00:13:46,760
+But they show you some examples on the different things you can do with board a radius.
+
+210
+00:13:46,900 --> 00:13:52,000
+So what we're going to do is give it a slight border radius and these are squares here.
+
+211
+00:13:52,150 --> 00:13:54,340
+And let's take a look at what we're aiming for.
+
+212
+00:13:54,350 --> 00:13:56,140
+So those are what we want to get.
+
+213
+00:13:56,180 --> 00:13:58,810
+So it was slight slight curve.
+
+214
+00:13:59,500 --> 00:14:06,740
+Let's go up to our square class and assign a border radius and let's do something really exaggerated
+
+215
+00:14:06,740 --> 00:14:10,130
+to start I'll show you what happens if we do 50 percent.
+
+216
+00:14:10,490 --> 00:14:13,850
+We get circles and you might actually prefer to use circles.
+
+217
+00:14:13,850 --> 00:14:20,230
+I was considering using them but in the end I preferred these rounded corner squares and the number
+
+218
+00:14:20,240 --> 00:14:22,780
+that I used is 15 percent.
+
+219
+00:14:23,510 --> 00:14:25,590
+And we'll just double check and compare those.
+
+220
+00:14:25,850 --> 00:14:27,060
+OK so that looks good.
+
+221
+00:14:27,080 --> 00:14:32,900
+Fifteen percent but if you wanted I'll show you what happens if we did something like 5 percent and
+
+222
+00:14:32,890 --> 00:14:33,770
+refresh.
+
+223
+00:14:34,010 --> 00:14:36,160
+We get very slightly rounded corners.
+
+224
+00:14:36,290 --> 00:14:43,430
+So I'll go back to my 15 refresh and now we have our nice rounded corners but we also need to work on
+
+225
+00:14:43,420 --> 00:14:47,810
+getting the animation effect because when I click on one of these.
+
+226
+00:14:47,810 --> 00:14:54,740
+Notice how when the color changes it fades out just like the hover effect faded in and out.
+
+227
+00:14:54,740 --> 00:14:59,920
+To achieve that we also need to use the transition property but in a slightly different way.
+
+228
+00:14:59,990 --> 00:15:06,170
+So I'm going to go to square and the only thing that we want to transition is the background color or
+
+229
+00:15:06,160 --> 00:15:07,170
+just background.
+
+230
+00:15:07,220 --> 00:15:12,470
+And again let's do a long time like 2.0 seconds and see how that looks.
+
+231
+00:15:12,500 --> 00:15:16,160
+So I'll refresh and I'll click on one of these.
+
+232
+00:15:16,250 --> 00:15:19,710
+You can see it takes two whole seconds to fade out.
+
+233
+00:15:19,940 --> 00:15:21,940
+So we don't want something to last that long.
+
+234
+00:15:22,120 --> 00:15:26,290
+Probably go for zero point six maybe.
+
+235
+00:15:26,750 --> 00:15:27,970
+Let's try that.
+
+236
+00:15:28,420 --> 00:15:28,850
+OK.
+
+237
+00:15:28,850 --> 00:15:31,610
+That seems reasonable.
+
+238
+00:15:32,500 --> 00:15:36,680
+So you can see whenever that background changes it takes 0.6 seconds.
+
+239
+00:15:36,670 --> 00:15:42,460
+What's different though is that when other properties change it doesn't animate them like our buttons
+
+240
+00:15:42,560 --> 00:15:46,710
+where we said when any property changes it should take point three seconds.
+
+241
+00:15:46,900 --> 00:15:49,790
+We're only targeting the background and that changes.
+
+242
+00:15:49,810 --> 00:15:52,450
+It should take 0.6 seconds.
+
+243
+00:15:52,490 --> 00:15:58,010
+One minor thing that we do want to be aware of is that the transition property won't work in all browsers
+
+244
+00:15:58,040 --> 00:16:02,140
+the way that we have it written right now to be as browser friendly as possible.
+
+245
+00:16:02,140 --> 00:16:07,770
+We actually need to add in two more properties which we won't notice any difference in functionality
+
+246
+00:16:08,600 --> 00:16:10,650
+but there are just for browser support.
+
+247
+00:16:10,660 --> 00:16:19,460
+So the first one is Web Kit Dasch transition and we'll just add the same exact value here just like
+
+248
+00:16:19,460 --> 00:16:20,250
+that.
+
+249
+00:16:20,360 --> 00:16:26,550
+And then we need another one which is this should be one dash Moz M. Ozy.
+
+250
+00:16:26,600 --> 00:16:30,070
+So these are actually browser prefixes.
+
+251
+00:16:30,230 --> 00:16:36,020
+So Web Kit is for Web Kit which is a an engine that browsers use like Safari.
+
+252
+00:16:36,200 --> 00:16:41,700
+And then we have Moz and Mozy which is short form is Zilah which is what Firefox is built on.
+
+253
+00:16:42,050 --> 00:16:47,300
+So these are just to add some more support because the transition property isn't built into every single
+
+254
+00:16:47,300 --> 00:16:48,650
+browser yet.
+
+255
+00:16:48,640 --> 00:16:49,790
+So we refresh.
+
+256
+00:16:50,060 --> 00:16:51,850
+Nothing should seem different.
+
+257
+00:16:51,860 --> 00:16:56,660
+Our game still works the same way and we still get the same animation and we should do the same thing
+
+258
+00:16:56,870 --> 00:17:05,210
+down here when we have transitioned all just duplicate this and change that to be transitional and transition
+
+259
+00:17:05,200 --> 00:17:08,660
+all 0.3 seconds for the MOOC transition.
+
+260
+00:17:08,650 --> 00:17:15,040
+One last thing that we can fix here is the bit of spacing in between the stripe and the start of our
+
+261
+00:17:15,050 --> 00:17:15,630
+grid.
+
+262
+00:17:15,800 --> 00:17:18,950
+So you can see we have some more spacing here that we don't have here.
+
+263
+00:17:19,150 --> 00:17:25,740
+And right now if we inspect we have an element that is around our grid.
+
+264
+00:17:26,140 --> 00:17:34,210
+We have our squares and we have a div ID container and that container div goes around all 6 squares
+
+265
+00:17:34,220 --> 00:17:34,320
+.
+
+266
+00:17:34,390 --> 00:17:40,400
+So we can use that and just add some spacing to that container div we'll just add a margin to the top
+
+267
+00:17:40,390 --> 00:17:41,950
+and bottom.
+
+268
+00:17:42,110 --> 00:17:44,540
+So I think we have styled it already a little bit.
+
+269
+00:17:44,540 --> 00:17:45,550
+Here we go.
+
+270
+00:17:45,590 --> 00:17:47,510
+So we said margin is zero.
+
+271
+00:17:47,650 --> 00:17:54,770
+And auto what we'll do instead is say margin is 20 pixels on the top and bottom and auto on the left
+
+272
+00:17:54,770 --> 00:17:57,020
+and right which is how it is centered.
+
+273
+00:17:57,050 --> 00:18:01,820
+So we want that to be auto on left and right but 20 pixels on top refresh.
+
+274
+00:18:02,330 --> 00:18:03,590
+We have our spacing.
+
+275
+00:18:04,120 --> 00:18:05,940
+OK so we're done with the styling for now.
+

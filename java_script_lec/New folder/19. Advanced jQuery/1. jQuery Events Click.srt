@@ -1,0 +1,420 @@
+﻿1
+00:00:00,260 --> 00:00:01,440
+OK we'll come back.
+
+2
+00:00:01,440 --> 00:00:06,330
+So far we've talked about how we can select the elements with J Querrey and also how we can manipulate
+
+3
+00:00:06,330 --> 00:00:06,810
+them.
+
+4
+00:00:06,990 --> 00:00:11,790
+Now we're going to introduce the final big missing piece which is events in J query.
+
+5
+00:00:11,850 --> 00:00:13,700
+So think back to vanilla J.S..
+
+6
+00:00:13,740 --> 00:00:17,780
+When we added event listeners we used a method called an event listener.
+
+7
+00:00:18,150 --> 00:00:22,230
+Well it turns out that Jay where he has a ton of methods that have to do with events.
+
+8
+00:00:22,350 --> 00:00:28,190
+So I have the event section open on Jake where he can get there by just clicking on events here.
+
+9
+00:00:28,260 --> 00:00:32,720
+So as I scroll through here you can see just how many.
+
+10
+00:00:32,810 --> 00:00:37,210
+Coria event methods there are chikor it comes with a ton of them.
+
+11
+00:00:37,230 --> 00:00:41,820
+So what I'm going to do is highlight the three most important ones the three that you can use.
+
+12
+00:00:41,830 --> 00:00:49,190
+Ninety nine percent of the time those three methods are quick key press and on.
+
+13
+00:00:49,650 --> 00:00:53,010
+And I said that these three you could use 99 percent of the time.
+
+14
+00:00:53,160 --> 00:00:55,950
+It's actually more like this one right here.
+
+15
+00:00:55,950 --> 00:00:58,050
+You can use 99 percent of the time.
+
+16
+00:00:58,110 --> 00:01:03,000
+So I'm going to show you click and key press first but my main objective is to show you how awesome
+
+17
+00:01:03,030 --> 00:01:04,600
+the method is.
+
+18
+00:01:05,130 --> 00:01:06,450
+So let's get started.
+
+19
+00:01:06,450 --> 00:01:12,030
+So Jay equerries quick method is how we can very quickly and easily add a click listener to a single
+
+20
+00:01:12,030 --> 00:01:14,620
+element or a collection of elements.
+
+21
+00:01:14,730 --> 00:01:18,210
+So you can see I have two examples in this case.
+
+22
+00:01:18,210 --> 00:01:22,070
+I'm selecting something and then adding a click listener with a click.
+
+23
+00:01:22,290 --> 00:01:26,070
+So we select something with the idea of submit we run.
+
+24
+00:01:26,100 --> 00:01:32,490
+Click on it and then we pass in a callback function and this callback function will be run when something
+
+25
+00:01:32,490 --> 00:01:34,470
+with the idea of submit is clicked.
+
+26
+00:01:34,680 --> 00:01:37,400
+And because it's an ID there's only one on the page.
+
+27
+00:01:37,530 --> 00:01:40,920
+So when that one item is clicked this code is run.
+
+28
+00:01:41,340 --> 00:01:46,290
+If you take a look down here you can see that I'm selecting all buttons on the page which it could be
+
+29
+00:01:46,290 --> 00:01:46,650
+one.
+
+30
+00:01:46,650 --> 00:01:51,080
+It could be 10 buttons and I'm adding a click listener to all of them.
+
+31
+00:01:51,120 --> 00:01:55,800
+So any time a button is quick it will alert someone click the button.
+
+32
+00:01:55,830 --> 00:01:56,760
+So let me demonstrate that.
+
+33
+00:01:56,750 --> 00:02:03,480
+Now I have a simple HTL page with Jay queery included as a CDN.
+
+34
+00:02:03,750 --> 00:02:10,730
+And I'm going to add in let's do Jay query events and I will add in a few buttons.
+
+35
+00:02:11,370 --> 00:02:15,240
+So the first one I say don't correct me.
+
+36
+00:02:16,020 --> 00:02:21,230
+And then the next one will say seriously ok me.
+
+37
+00:02:21,390 --> 00:02:27,690
+And the last one will say this is your last warning.
+
+38
+00:02:28,080 --> 00:02:36,300
+So we'll save and open this in the browser and always just check that J loaded.
+
+39
+00:02:38,320 --> 00:02:38,780
+OK.
+
+40
+00:02:38,850 --> 00:02:40,040
+Looks good.
+
+41
+00:02:40,650 --> 00:02:46,110
+So we'll start easy here by adding a quick listener to this H-1 and there's only one on the page.
+
+42
+00:02:46,110 --> 00:02:50,170
+So we just need to select first with dollar sign.
+
+43
+00:02:50,680 --> 00:02:55,610
+So one that gives us the right H-1 which only one and then we run.
+
+44
+00:02:55,640 --> 00:03:02,220
+Don't click on that and then we need to pass in a callback function which will be run whenever we click
+
+45
+00:03:02,220 --> 00:03:03,670
+on that H-1.
+
+46
+00:03:03,690 --> 00:03:11,010
+So behind the scenes click is using an event listener and it's adding a click listener on this H-1 and
+
+47
+00:03:11,010 --> 00:03:18,540
+we can either do an anonymous function which is way more common to see but somewhat more intimidating
+
+48
+00:03:18,600 --> 00:03:24,120
+for newer students or we could write a named function separately and then pass the name of that function
+
+49
+00:03:24,120 --> 00:03:24,940
+in here.
+
+50
+00:03:25,260 --> 00:03:27,900
+But like I said anonymous functions are way more common.
+
+51
+00:03:28,200 --> 00:03:37,080
+So what we want to do is just alert each one correct and I'll hit enter here and now if I click on this
+
+52
+00:03:37,130 --> 00:03:42,380
+H-1 you'll see I get H-1 quit and that doesn't happen on any other element.
+
+53
+00:03:42,630 --> 00:03:48,990
+It does happen over here remember because my H-1 goes all the way across the screen so that CSSA issue
+
+54
+00:03:48,990 --> 00:03:54,990
+if I want to change the size of the one but it only happens when I do click on the one element.
+
+55
+00:03:54,990 --> 00:04:00,020
+Now what I want to do is show how we can add a quick listener to a collection of elements.
+
+56
+00:04:00,150 --> 00:04:02,530
+So I'm going to select all buttons here.
+
+57
+00:04:02,640 --> 00:04:12,630
+So a dollar sign button and then we add our click just like that and we can pass in an anonymous function
+
+58
+00:04:12,630 --> 00:04:14,050
+again as our callback.
+
+59
+00:04:14,580 --> 00:04:24,420
+And this will be run whenever any button is clicked and we'll just do an alert button click just like
+
+60
+00:04:24,420 --> 00:04:27,130
+that and hit enter.
+
+61
+00:04:27,630 --> 00:04:35,470
+And now if I click on any of those buttons there we go button clicked button click button quit.
+
+62
+00:04:35,490 --> 00:04:41,150
+So think back to vanilla javascript to add an event listener to a collection of buttons.
+
+63
+00:04:41,190 --> 00:04:46,380
+I would have to select them all with query selector all or get elements by tag name and then I would
+
+64
+00:04:46,380 --> 00:04:51,240
+have to use a for loop to loop through all of them and then I would have to individually add an event
+
+65
+00:04:51,240 --> 00:04:54,780
+listener which to be clear is happening behind the scenes.
+
+66
+00:04:54,870 --> 00:04:59,700
+But all I have to do is write this line and that will loop for me that will add the event listeners
+
+67
+00:04:59,730 --> 00:05:05,660
+individually which makes her life really easy rather than just a learning button clicked.
+
+68
+00:05:05,820 --> 00:05:10,940
+What if I wanted to change the style change the background color of the button that was clicked.
+
+69
+00:05:11,430 --> 00:05:13,970
+So I would need to add a click listener again.
+
+70
+00:05:13,970 --> 00:05:16,780
+I'm just at the up arrow and rather than alerting.
+
+71
+00:05:17,040 --> 00:05:26,730
+What we'll do is change the background color so that's going to be something that C-s s background and
+
+72
+00:05:26,730 --> 00:05:30,290
+we'll change it to be pink.
+
+73
+00:05:30,450 --> 00:05:36,090
+So the issue is what are we calling Dotsie CSSA on and back with vanilla javascript.
+
+74
+00:05:36,090 --> 00:05:37,360
+We would use this.
+
+75
+00:05:37,380 --> 00:05:43,530
+The key word this and that refers to the element that was clicked on however NJ query that won't quite
+
+76
+00:05:43,530 --> 00:05:49,720
+work what we need to do is use the J Querrey version of this.
+
+77
+00:05:49,950 --> 00:05:53,010
+This is always a little bit of a confusing idea.
+
+78
+00:05:53,010 --> 00:05:58,830
+I think it helps to remember that what Shakeri does is it takes plain vanilla Yes and it wraps it in
+
+79
+00:05:58,830 --> 00:06:03,830
+Jay query and it's big J.A.G. hug and it gives it some special properties and methods.
+
+80
+00:06:03,840 --> 00:06:10,680
+So if we want to use dot CSSA which is a J query method we have to make sure that we're running it on
+
+81
+00:06:10,950 --> 00:06:12,660
+a J query object.
+
+82
+00:06:12,660 --> 00:06:17,560
+So just plain old this is the regular vanilla javascript this.
+
+83
+00:06:17,670 --> 00:06:21,440
+So we need to wrap it and tell it this is the J query version.
+
+84
+00:06:21,660 --> 00:06:23,190
+So let's test that out.
+
+85
+00:06:23,370 --> 00:06:30,630
+Hit enter here and now let's click on the button first we have that alert because we never got rid of
+
+86
+00:06:30,630 --> 00:06:32,460
+this first click listener.
+
+87
+00:06:32,880 --> 00:06:40,280
+And then the background changes to pink and you can see that will happen to each one that I click.
+
+88
+00:06:40,440 --> 00:06:42,010
+We could also do something like this.
+
+89
+00:06:42,030 --> 00:06:47,610
+So I hit the up arrow and I refresh the page rather than just changing them to be pink.
+
+90
+00:06:47,670 --> 00:06:55,540
+We could also do a cancel that log and Walcott's adult log the text of the button that was clicked.
+
+91
+00:06:55,650 --> 00:07:03,870
+So it would be something like you clicked plus and then I'll make a variable to store this so variable
+
+92
+00:07:04,560 --> 00:07:14,040
+text equals dollar sign this dot and to get that text out of there we just need to use the text method
+
+93
+00:07:14,460 --> 00:07:22,430
+just like that kaso that log you clicked us text which is our variable name and enter.
+
+94
+00:07:22,920 --> 00:07:27,510
+And now if I click one you clicked don't click me you clicked.
+
+95
+00:07:27,540 --> 00:07:28,890
+This is your last warning.
+
+96
+00:07:29,460 --> 00:07:30,360
+And you clicked.
+
+97
+00:07:30,420 --> 00:07:31,830
+Seriously don't click me.
+
+98
+00:07:32,190 --> 00:07:32,640
+OK.
+
+99
+00:07:32,670 --> 00:07:33,930
+So that's all I'll demonstrate about.
+
+100
+00:07:33,930 --> 00:07:34,650
+Click.
+
+101
+00:07:34,650 --> 00:07:39,520
+To summarize we can add a listener to one element at a time like we did for the H-1.
+
+102
+00:07:39,780 --> 00:07:43,870
+Or we can do it to a collection which is where it really becomes useful.
+
+103
+00:07:43,890 --> 00:07:49,320
+And then lastly if we want to refer to the element that was clicked we need to use dollar sign this
+
+104
+00:07:49,680 --> 00:07:53,670
+which is the J queery wrapper the J.A.G. version of the Vanilla.
+
+105
+00:07:53,690 --> 00:07:54,480
+Yes this
+

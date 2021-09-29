@@ -1,0 +1,816 @@
+﻿1
+00:00:00,110 --> 00:00:00,530
+All right.
+
+2
+00:00:00,530 --> 00:00:01,500
+Welcome back.
+
+3
+00:00:01,500 --> 00:00:03,350
+So let's start writing some code.
+
+4
+00:00:03,480 --> 00:00:07,290
+And the first thing we're going to learn how to do is how to select elements.
+
+5
+00:00:07,290 --> 00:00:13,190
+So just like with regular dominant relation or phonology Yes we need to select things and then manipulate
+
+6
+00:00:13,220 --> 00:00:13,310
+.
+
+7
+00:00:13,380 --> 00:00:17,880
+I know I'm a bit of a broken record there but it is a really important process select and then change
+
+8
+00:00:17,880 --> 00:00:18,300
+things.
+
+9
+00:00:18,300 --> 00:00:23,790
+This video is going to be mainly focused on selecting elements with J Query for two main objectives
+
+10
+00:00:23,790 --> 00:00:24,230
+here.
+
+11
+00:00:24,390 --> 00:00:30,600
+The first one is learning how to select elements with the dollar sign function and then also using the
+
+12
+00:00:30,740 --> 00:00:33,500
+C assessed method to style elements.
+
+13
+00:00:33,630 --> 00:00:38,160
+So we're not just getting select things just print them out but to make it more visual We'll select
+
+14
+00:00:38,160 --> 00:00:44,010
+them and then change the background color and Jay query we can select everything that we want using
+
+15
+00:00:44,010 --> 00:00:45,210
+just one function.
+
+16
+00:00:45,570 --> 00:00:46,800
+The dollar sign.
+
+17
+00:00:46,920 --> 00:00:52,860
+So unlike vanilla J.S. where we have document that get element by id query selector query selector all
+
+18
+00:00:52,920 --> 00:00:55,650
+get elements of a class name get elements by tag name.
+
+19
+00:00:55,650 --> 00:01:00,660
+There are so many different ways of selecting the dollar sign and Jay query will replace all of them
+
+20
+00:01:00,680 --> 00:01:00,840
+.
+
+21
+00:01:00,990 --> 00:01:07,230
+It basically works like queries selector all in that we give it a C Ss style selector.
+
+22
+00:01:07,320 --> 00:01:12,370
+And then Jay query returns all the matching elements that match the selector that we give it.
+
+23
+00:01:12,720 --> 00:01:18,360
+So I have an example here if we wanted to select all of the image tags on the page it just looks like
+
+24
+00:01:18,360 --> 00:01:25,460
+this if we wanted to select all the elements with class of scale we do dot scale.
+
+25
+00:01:25,620 --> 00:01:28,380
+Remember this is set style selectors.
+
+26
+00:01:28,380 --> 00:01:33,840
+So for an ID we need the arc to Thorpe for a class who need the dot and we can also do some more advanced
+
+27
+00:01:33,840 --> 00:01:39,000
+things like this selecting all anchor tags that are inside of list elements.
+
+28
+00:01:39,360 --> 00:01:41,900
+So I'll do a quick demo here of how this works.
+
+29
+00:01:42,060 --> 00:01:47,750
+So we have our Jake Querrey demo aged him our page set up where I have the Cdn included.
+
+30
+00:01:48,300 --> 00:01:53,190
+And it doesn't matter if we use the N word or if you want to use the downloaded copy it will work the
+
+31
+00:01:53,190 --> 00:01:54,180
+same way.
+
+32
+00:01:54,180 --> 00:01:58,110
+So we need that script here and then we need some content to play with.
+
+33
+00:01:58,110 --> 00:02:00,410
+So I'll keep the H-1 S.J. core demo.
+
+34
+00:02:00,510 --> 00:02:05,970
+I'll change these allies to make them a bit more unique so I'll fill it with some of my favorite animals
+
+35
+00:02:05,990 --> 00:02:06,270
+.
+
+36
+00:02:06,480 --> 00:02:08,260
+So end is for Newt.
+
+37
+00:02:08,520 --> 00:02:14,100
+My five year old self's favorite part of the animal alphabet song will add in another one of my favorites
+
+38
+00:02:14,410 --> 00:02:15,510
+album Monkey.
+
+39
+00:02:15,870 --> 00:02:19,050
+And then lastly the pine martin.
+
+40
+00:02:19,680 --> 00:02:24,820
+And if you've never seen the pine marten they are equally adorable and terrifying animal.
+
+41
+00:02:24,950 --> 00:02:27,190
+So you can see pretty adorable here.
+
+42
+00:02:28,060 --> 00:02:32,690
+But if you take a look at them in action they're crazy predators and pretty scary.
+
+43
+00:02:33,000 --> 00:02:33,270
+OK.
+
+44
+00:02:33,300 --> 00:02:38,770
+So some of my favorite animals in the list will save and let's open this up now.
+
+45
+00:02:39,720 --> 00:02:41,150
+Make sure we're in the right directory.
+
+46
+00:02:41,200 --> 00:02:47,730
+Jay quarried demo that each Chimo and what I'll do is move this out in its own window and we'll just
+
+47
+00:02:47,730 --> 00:02:53,190
+go in the console make the font size a little bigger and let's use a query to select some of these things
+
+48
+00:02:53,190 --> 00:02:53,620
+.
+
+49
+00:02:53,640 --> 00:02:56,100
+So remember a dollar sign is a function.
+
+50
+00:02:56,520 --> 00:03:00,490
+And if I just type dollar sign on it's own without the parentheses.
+
+51
+00:03:00,720 --> 00:03:06,930
+That's just like me typing alert without parentheses or con. dot log without the parentheses doesn't
+
+52
+00:03:06,930 --> 00:03:08,700
+really do anything except tell me.
+
+53
+00:03:08,940 --> 00:03:12,610
+Yeah I know about that code but it doesn't actually execute it.
+
+54
+00:03:13,170 --> 00:03:16,860
+Let's begin by selecting the only H-1 on the page to do that.
+
+55
+00:03:16,860 --> 00:03:24,550
+We can use dollar sign and the s selector to select h ones is just H-1 and we hit enter.
+
+56
+00:03:24,600 --> 00:03:27,480
+You can see it returns the J queery demo H-1.
+
+57
+00:03:27,630 --> 00:03:30,110
+So also notice that it's inside of a list.
+
+58
+00:03:30,300 --> 00:03:36,480
+So unlike query selector where it returns the first instance the dollar sign selector for.
+
+59
+00:03:36,480 --> 00:03:42,360
+Query will return a list even if there's only one item which is actually useful and we'll see that in
+
+60
+00:03:42,360 --> 00:03:43,310
+a little bit.
+
+61
+00:03:43,320 --> 00:03:51,570
+So let's try selecting all the allies now so we can do something like Dollar Sign ally and we get three
+
+62
+00:03:51,570 --> 00:03:53,150
+allies just like that.
+
+63
+00:03:53,490 --> 00:03:59,130
+We can also select the body by typing body and to make things a little more interesting.
+
+64
+00:03:59,130 --> 00:04:08,550
+Let's go back to our age e-mail and add in an I.D. to pine martin we'll call it adorable as the id and
+
+65
+00:04:08,550 --> 00:04:16,560
+then we can also on our howler monkey will add an A tag howler monkey and it will just go to monkey
+
+66
+00:04:16,620 --> 00:04:20,430
+dot com and this will just be monkey dot com.
+
+67
+00:04:20,730 --> 00:04:28,640
+And if we refresh if I want to select that link I would use dollar sign and I could just do anchor tag
+
+68
+00:04:29,130 --> 00:04:30,550
+and that will give it to me.
+
+69
+00:04:30,600 --> 00:04:34,740
+I could also say anchor tag inside of an ally.
+
+70
+00:04:34,980 --> 00:04:40,040
+I could also if I really wanted to say only the anchor tags inside of allies that are instead of a will
+
+71
+00:04:40,040 --> 00:04:40,770
+.
+
+72
+00:04:41,100 --> 00:04:43,990
+And in all cases so far those are identical.
+
+73
+00:04:44,160 --> 00:04:51,270
+But if I add another anchor tag just at the bottom of the page Google dot com and I refresh.
+
+74
+00:04:51,810 --> 00:04:55,290
+And now I do my dollar sign anchor tag.
+
+75
+00:04:55,290 --> 00:04:57,350
+I get both anchor tags.
+
+76
+00:04:57,820 --> 00:05:05,370
+If I do a dollar sign UL with an ally with an anchor tag inside of that it only gives me this anchor
+
+77
+00:05:05,370 --> 00:05:05,820
+tag.
+
+78
+00:05:05,970 --> 00:05:13,660
+Or they could've just shortened it to this here and there we go to select the item with the idea adorable
+
+79
+00:05:13,950 --> 00:05:19,700
+it works just like queery select or all or query selector or C Ss for that matter where I need the Arctic
+
+80
+00:05:19,770 --> 00:05:27,890
+or hash symbol Plus the ID name adorable and that gives me the pine marten ally.
+
+81
+00:05:27,940 --> 00:05:32,250
+So we've seen how we select and it's not very exciting just to print things out to the console or just
+
+82
+00:05:32,250 --> 00:05:33,660
+to see them returned here.
+
+83
+00:05:33,670 --> 00:05:38,530
+But I actually want to do is introduce one method we're going to see a lot more methods in the next
+
+84
+00:05:38,520 --> 00:05:43,300
+few videos but I'm going to show one right now that will help us make things visual and help us alter
+
+85
+00:05:43,300 --> 00:05:51,060
+the styling so that method is called Dotsie SS and the way that it works is we type a selector dollar
+
+86
+00:05:51,060 --> 00:05:57,580
+sign and some selector and then we can add Dotsie SS on the end of that and pass it in some properties
+
+87
+00:05:57,610 --> 00:06:00,440
+and values to change.
+
+88
+00:06:00,450 --> 00:06:07,150
+So here's an example I'm selecting something with the idea of special and then I'm running up CSSA on
+
+89
+00:06:07,140 --> 00:06:11,220
+it and changing the border to be two pixel solid red.
+
+90
+00:06:11,500 --> 00:06:13,190
+So let me demonstrate that.
+
+91
+00:06:13,300 --> 00:06:15,400
+Let's do it to the H-1.
+
+92
+00:06:15,390 --> 00:06:21,390
+So I select dollar sign H-1 Dotsie SS Just like this.
+
+93
+00:06:21,610 --> 00:06:30,380
+And then instead of here let's change the color to be yellow just like that.
+
+94
+00:06:30,630 --> 00:06:31,480
+And I hit enter.
+
+95
+00:06:31,600 --> 00:06:34,980
+And you can see it changes to yellow which is awesome.
+
+96
+00:06:35,310 --> 00:06:39,420
+So it's always good to keep in mind how you would do this without j Querrey.
+
+97
+00:06:39,630 --> 00:06:49,270
+So we would do something like document that get and let's do document query selector H-1 dot and B don't
+
+98
+00:06:49,260 --> 00:06:54,840
+have that C Ss So we need to do dot style dot color equals.
+
+99
+00:06:54,940 --> 00:06:56,700
+And let's change it to orange.
+
+100
+00:06:57,690 --> 00:06:58,400
+And there we go.
+
+101
+00:06:58,440 --> 00:07:04,110
+We changed it to orange but this line right here is actually a lot more powerful and can do a lot more
+
+102
+00:07:04,380 --> 00:07:06,300
+than we can do with this single line here.
+
+103
+00:07:06,550 --> 00:07:11,490
+So let's suppose that I wanted to change multiple styles about this H-1 I wanted to change the color
+
+104
+00:07:11,680 --> 00:07:14,100
+and the background color and the border.
+
+105
+00:07:14,110 --> 00:07:19,240
+What I can do is define my styles in an object and pass an object in.
+
+106
+00:07:19,480 --> 00:07:24,250
+So I don't have to just do a string Porter comma the value for Porter.
+
+107
+00:07:24,550 --> 00:07:29,920
+I can define an object with multiple properties multiple key value pairs and pass that in and they will
+
+108
+00:07:29,910 --> 00:07:31,070
+all be applied.
+
+109
+00:07:31,360 --> 00:07:32,500
+So let's do that now.
+
+110
+00:07:32,760 --> 00:07:37,080
+Let's define our styles and we don't have to make a separate object.
+
+111
+00:07:37,120 --> 00:07:38,250
+I'll show you that.
+
+112
+00:07:38,350 --> 00:07:50,220
+And instead of here will say color should be red background should be pink and we'll do border should
+
+113
+00:07:50,230 --> 00:07:56,340
+be two pixels solid purple just like that.
+
+114
+00:07:56,740 --> 00:08:02,460
+And if we hit Enter we now have our styles object and again that can be called anything.
+
+115
+00:08:02,740 --> 00:08:05,060
+And then what we'll do is select the H-1.
+
+116
+00:08:05,310 --> 00:08:14,200
+So dollar sign H-1 again gutsiest us and we just pass in our styles object and all of those styles are
+
+117
+00:08:14,190 --> 00:08:14,950
+applied.
+
+118
+00:08:15,190 --> 00:08:19,720
+So to do that without j query would require us to do three separate lines.
+
+119
+00:08:19,750 --> 00:08:26,830
+You'd need to do document that querist let your H-1 style dark color is equal to red and then dot style
+
+120
+00:08:26,880 --> 00:08:32,400
+dot background is equal to pink and then that style that border is equal to two pixel solid purple.
+
+121
+00:08:32,710 --> 00:08:35,580
+Hopefully you can see already that with just a few lines.
+
+122
+00:08:35,640 --> 00:08:38,240
+J Query is already proven to be pretty powerful.
+
+123
+00:08:38,520 --> 00:08:44,020
+And while we can do everything without it it's definitely saving us some time and making our code cleaner
+
+124
+00:08:44,030 --> 00:08:44,370
+.
+
+125
+00:08:44,710 --> 00:08:51,330
+There's another feature of the dot CSSA method that makes it even more useful that I'll show now what
+
+126
+00:08:51,340 --> 00:08:57,570
+we can do is actually style multiple elements at once rather than just selecting the first one and making
+
+127
+00:08:57,580 --> 00:08:58,160
+it yellow.
+
+128
+00:08:58,260 --> 00:09:03,290
+We could select all the ones or all allies and we just need one line to do that.
+
+129
+00:09:03,340 --> 00:09:04,110
+So I'll show you that.
+
+130
+00:09:04,110 --> 00:09:06,430
+Now let's make all the lies.
+
+131
+00:09:06,970 --> 00:09:09,580
+So to do that I need to select allies.
+
+132
+00:09:09,730 --> 00:09:11,550
+So just like that.
+
+133
+00:09:11,550 --> 00:09:12,650
+And if I hit enter.
+
+134
+00:09:12,780 --> 00:09:19,120
+You'll see that it gives me the three allies and then I need to chain on C Ss and I'll just give it
+
+135
+00:09:19,120 --> 00:09:28,410
+a single property color and change it to be blue just like that and I'll hit enter and notice this one
+
+136
+00:09:28,410 --> 00:09:31,940
+line changes all three allies.
+
+137
+00:09:32,350 --> 00:09:34,610
+So definitely very powerful.
+
+138
+00:09:34,650 --> 00:09:41,990
+All we do is select with our selector dollar sign ally and that gives us three allies and by doing Dotsie
+
+139
+00:09:42,000 --> 00:09:46,030
+SS on an array here of ALWIS this list of allies.
+
+140
+00:09:46,240 --> 00:09:51,310
+It actually will make them all blue and we don't even have to manually loop through like we would without
+
+141
+00:09:51,340 --> 00:09:52,320
+a query.
+
+142
+00:09:52,360 --> 00:09:58,410
+So just to remind you if I want to change all of them to be green without query I first need to select
+
+143
+00:09:58,480 --> 00:09:59,360
+all of them.
+
+144
+00:09:59,500 --> 00:10:06,570
+So var allies equals document that query selector all pass in the string ally.
+
+145
+00:10:06,790 --> 00:10:08,390
+And then I need to loop through.
+
+146
+00:10:08,520 --> 00:10:15,350
+So for var I equals zero is less than Elvises at length I plus plus.
+
+147
+00:10:16,260 --> 00:10:22,410
+And then inside the loop we need to do allies I that style that color
+
+148
+00:10:25,170 --> 00:10:30,100
+equals and we'll do green just like that and we'll hit enter.
+
+149
+00:10:30,390 --> 00:10:32,850
+And you can see they all change to green.
+
+150
+00:10:32,860 --> 00:10:36,800
+So again it's doable without a query but it's significantly more code.
+
+151
+00:10:36,900 --> 00:10:40,780
+We need to select them all first and even just selecting them is painful.
+
+152
+00:10:40,770 --> 00:10:43,820
+This is a lot longer than just a dollar sign.
+
+153
+00:10:43,870 --> 00:10:49,060
+And then we also need to loop through manually with a for loop or a while loop and then change each
+
+154
+00:10:49,060 --> 00:10:53,450
+one individually and then we're done with a query though.
+
+155
+00:10:53,560 --> 00:11:01,030
+All we had to do to change back to blue is select all allies Dotsie SS and then pass in our property
+
+156
+00:11:01,090 --> 00:11:02,900
+which is blue color blue.
+
+157
+00:11:03,420 --> 00:11:05,260
+I'll demonstrate a few more examples here.
+
+158
+00:11:05,430 --> 00:11:13,710
+Let's select all anchor tags just like this a tag that C Ss and will make their font size bigger so
+
+159
+00:11:13,710 --> 00:11:20,970
+font size and it will be 40 pixels and there we go.
+
+160
+00:11:20,980 --> 00:11:27,460
+We get big links I'll also show that we can define an object full of styles like we did earlier and
+
+161
+00:11:27,450 --> 00:11:31,140
+we can use that to style multiple elements not just one.
+
+162
+00:11:31,240 --> 00:11:39,120
+So we'll select all the lies and style them together and rather than just doing the SS and passing in
+
+163
+00:11:39,120 --> 00:11:44,890
+a string like color we'll give it an object and just define it in place here.
+
+164
+00:11:45,550 --> 00:11:47,920
+And we'll add in some space here to type.
+
+165
+00:11:48,420 --> 00:11:52,340
+And the first thing we'll do is change the font size of all of them.
+
+166
+00:11:52,540 --> 00:12:00,300
+So NCSA as the font size is font Dasch size or height and size in javascript and in J query we have
+
+167
+00:12:00,310 --> 00:12:01,300
+to use camel case.
+
+168
+00:12:01,480 --> 00:12:09,540
+So font size no space or no dash but we uppercase s member that's Kimbal case and we'll make them 10
+
+169
+00:12:09,820 --> 00:12:20,930
+let's do yet 10 pixels and then we'll add in a border and this one will be three pixel dasht purple
+
+170
+00:12:20,930 --> 00:12:21,140
+.
+
+171
+00:12:21,340 --> 00:12:23,610
+Those dashed borders are always stunning.
+
+172
+00:12:23,980 --> 00:12:27,840
+And then lastly add in the background color background.
+
+173
+00:12:28,140 --> 00:12:30,490
+And let's just make up our own R.G. color.
+
+174
+00:12:30,660 --> 00:12:31,670
+So R.G. B.
+
+175
+00:12:31,710 --> 00:12:33,540
+And we'll do our G.P.A. actually.
+
+176
+00:12:33,690 --> 00:12:36,640
+And the first one read will too.
+
+177
+00:12:37,070 --> 00:12:43,340
+89 red 45 Green 20 blue.
+
+178
+00:12:43,480 --> 00:12:49,490
+And then 0.5 Alpha which is the opacity or transparency channel.
+
+179
+00:12:49,620 --> 00:12:54,490
+And if we hit enter you can see that all of those are applied at once.
+
+180
+00:12:54,630 --> 00:12:58,110
+So our font size shrink We've got 10 pixels.
+
+181
+00:12:58,260 --> 00:13:05,910
+We have these stunning borders around the allies that are three pixels dasht purple and then we have
+
+182
+00:13:05,910 --> 00:13:11,620
+the background color which is whatever this color turned out to be it looks like sort of a light brownish
+
+183
+00:13:11,620 --> 00:13:13,060
+color.
+
+184
+00:13:13,090 --> 00:13:13,360
+All right.
+
+185
+00:13:13,360 --> 00:13:18,330
+So hopefully you can see from that quick demonstration just two different things that we're doing selecting
+
+186
+00:13:18,340 --> 00:13:22,070
+with dollar sign and that on its own is incredibly powerful.
+
+187
+00:13:22,090 --> 00:13:26,390
+It basically works like queery Slichter and queery selector all combined.
+
+188
+00:13:26,640 --> 00:13:29,620
+And it's a much shorter and easier to write syntax.
+
+189
+00:13:29,910 --> 00:13:36,270
+And then there's the CSSA method which is also extremely powerful because we can change individual properties
+
+190
+00:13:36,270 --> 00:13:42,300
+like we did here but we can also massas sign CSSA properties like we did right here where we pass in
+
+191
+00:13:42,310 --> 00:13:45,040
+an object full of key value pairs.
+
+192
+00:13:45,100 --> 00:13:51,270
+Probably the most important part of all of this is that when I select a collection like all allies like
+
+193
+00:13:51,280 --> 00:13:57,550
+I did right here I don't have to manually loop through and apply something individually like I did up
+
+194
+00:13:57,550 --> 00:14:03,830
+here where we had to loop through all the allies and change the color one at a time with J query.
+
+195
+00:14:03,930 --> 00:14:10,710
+If I have a collection of elements it automatically loops over that and applies Dotsie assess to every
+
+196
+00:14:10,710 --> 00:14:12,990
+single one.
+
+197
+00:14:12,990 --> 00:14:14,600
+So it's extremely powerful.
+
+198
+00:14:14,770 --> 00:14:19,770
+And that's why as a side note that's why it always returns an array here.
+
+199
+00:14:19,890 --> 00:14:25,260
+Even if I just have one element with the ID adorable it always returns it in the list because all the
+
+200
+00:14:25,270 --> 00:14:28,370
+logic behind the scenes involves looping over that list.
+
+201
+00:14:28,470 --> 00:14:31,860
+So it will loop over this and it just happens that there's one item here.
+
+202
+00:14:31,890 --> 00:14:33,030
+So it doesn't really loop.
+
+203
+00:14:33,040 --> 00:14:34,540
+It just goes over one time.
+
+204
+00:14:34,890 --> 00:14:38,070
+All right hopefully enjoyed that and are starting to see the power of equerry
+

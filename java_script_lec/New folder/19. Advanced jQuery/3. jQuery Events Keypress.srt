@@ -1,0 +1,408 @@
+﻿1
+00:00:00,410 --> 00:00:05,190
+This video I'm going to pick up where we left off and keep talking about those three Jay queery events
+
+2
+00:00:05,190 --> 00:00:05,580
+.
+
+3
+00:00:05,580 --> 00:00:10,620
+So the next one that I want to introduce is called Keep press so key press is one of the ways in Jay
+
+4
+00:00:10,620 --> 00:00:17,730
+Cory that we can add a key press listener to elements so I'll show you on the docks here if we go down
+
+5
+00:00:17,730 --> 00:00:24,180
+to the event section and we look at key down and key press and key up these are three different events
+
+6
+00:00:24,480 --> 00:00:30,900
+that are triggered when a user type something on the keyboard and the differences are a little bit nuanced
+
+7
+00:00:30,910 --> 00:00:31,020
+.
+
+8
+00:00:31,140 --> 00:00:37,950
+So key down is fired any time that we press a key and it's fired right after we press it down and then
+
+9
+00:00:37,950 --> 00:00:43,180
+key up is fired when we release the key and then key press is a little bit different.
+
+10
+00:00:43,230 --> 00:00:48,720
+Some people will tell you that key press is fired when you press a key down and then release it so that
+
+11
+00:00:48,720 --> 00:00:51,390
+it represents the entire key press up and down.
+
+12
+00:00:51,390 --> 00:00:52,890
+And that is not true.
+
+13
+00:00:52,890 --> 00:00:55,790
+It actually fires in between down and keep up.
+
+14
+00:00:55,800 --> 00:00:57,450
+Usually not always.
+
+15
+00:00:57,450 --> 00:00:59,520
+So we have a great stack overflow post.
+
+16
+00:00:59,670 --> 00:01:01,580
+So I recommend that you read.
+
+17
+00:01:02,160 --> 00:01:08,400
+I want to point out this little piece here so key down and key up provide a code indicating which key
+
+18
+00:01:08,400 --> 00:01:12,370
+is pressed while key press indicates which character was entered.
+
+19
+00:01:12,810 --> 00:01:19,050
+So a good example of this is that if I have a text input and someone types shift and then a and they're
+
+20
+00:01:19,050 --> 00:01:26,400
+trying to make an uppercase a key down and key up will fire on the shift key and on the lower case a
+
+21
+00:01:27,200 --> 00:01:33,840
+VS key press will fire on an uppercase a so it actually gives me the character not just that the key
+
+22
+00:01:33,840 --> 00:01:38,520
+is that were pressed and in what order but the actual end result character when we use a modifier key
+
+23
+00:01:38,790 --> 00:01:42,860
+like shift at the end of the day the three different events are very similar.
+
+24
+00:01:42,930 --> 00:01:48,000
+And most of the time you can get away with using any of them and I'm going to Shoki press just because
+
+25
+00:01:48,000 --> 00:01:54,730
+it's the most common so key press works just like Click where we select something with dollar sign.
+
+26
+00:01:54,750 --> 00:01:57,600
+So here's an example which selects something with dollar sign.
+
+27
+00:01:57,600 --> 00:02:03,480
+And then we change on key press and we pass in a callback function and that callback function will be
+
+28
+00:02:03,480 --> 00:02:10,100
+called any time a key press event is triggered on the selected element or collection of elements.
+
+29
+00:02:10,110 --> 00:02:17,520
+So I'm going to demonstrate that now I'll go back to my HMO and let's add in an input type equals text
+
+30
+00:02:18,690 --> 00:02:19,750
+just like that.
+
+31
+00:02:20,250 --> 00:02:23,660
+And we'll leave it at that and refresh our page.
+
+32
+00:02:24,340 --> 00:02:26,090
+OK so now we have an input here.
+
+33
+00:02:26,550 --> 00:02:31,900
+And let's get some code that will just cancel that log any time a key is pressed in here.
+
+34
+00:02:32,190 --> 00:02:39,800
+So open up the console and we need to first select the input so we can just do inputs like that.
+
+35
+00:02:40,380 --> 00:02:42,800
+And that's not very specific in this case.
+
+36
+00:02:42,810 --> 00:02:44,790
+There's only one input so that's fine.
+
+37
+00:02:44,910 --> 00:02:51,480
+But if we had checkboxes and if we had color inputs and radio buttons we would want to specify only
+
+38
+00:02:51,480 --> 00:02:54,740
+where type is equal to text.
+
+39
+00:02:55,290 --> 00:02:57,370
+But for now input is fine.
+
+40
+00:02:57,390 --> 00:03:03,280
+Make sure we get it right that selects it then we add that key press just like that.
+
+41
+00:03:03,660 --> 00:03:11,480
+And then inside of here we add a callback function which will be called any time a key is pressed.
+
+42
+00:03:11,490 --> 00:03:21,220
+So in this case let's just have it cancel the log you've pressed a key and hit enter.
+
+43
+00:03:21,840 --> 00:03:24,470
+And now if I go over here and I type a key.
+
+44
+00:03:24,510 --> 00:03:26,530
+So I'm hitting the letter P right now.
+
+45
+00:03:26,910 --> 00:03:33,060
+You can see I get you press to key and if I type another key All it does is show me a number here.
+
+46
+00:03:33,060 --> 00:03:34,770
+That's just how Chrome does it.
+
+47
+00:03:34,770 --> 00:03:38,480
+But I'm getting a different concept log as I type for every character.
+
+48
+00:03:38,820 --> 00:03:44,040
+So that's how we could cancel that log to character something that we often want to do is run some code
+
+49
+00:03:44,190 --> 00:03:46,630
+depending on which character was pressed.
+
+50
+00:03:46,650 --> 00:03:52,470
+We'll be making a to do list app with Jay Querrey where you can type in new to do like Walk the dog
+
+51
+00:03:52,890 --> 00:03:58,890
+and hit enter and that will then take that text in here and make a new to do and then clear the input
+
+52
+00:03:59,100 --> 00:04:01,520
+so you don't have to click a button like submit.
+
+53
+00:04:01,560 --> 00:04:02,900
+You just hit the enter key.
+
+54
+00:04:03,180 --> 00:04:09,110
+So what we want to do is listen for a key press but only do something if the user hits enter.
+
+55
+00:04:09,270 --> 00:04:12,760
+In order to do that we actually need to change our code a little bit here.
+
+56
+00:04:12,840 --> 00:04:18,640
+So I'm going to just copy this and I'll refresh the page and paste this back in.
+
+57
+00:04:18,660 --> 00:04:23,430
+So we're still listening for key press but we're going to work with the event object.
+
+58
+00:04:23,440 --> 00:04:29,580
+I'm going to add an argument here I'll call it event and this object will just contain all of the information
+
+59
+00:04:29,910 --> 00:04:31,890
+about the key press event.
+
+60
+00:04:31,890 --> 00:04:37,260
+So I'm just going to cancel that log event so you can see that and I hit enter.
+
+61
+00:04:37,260 --> 00:04:43,710
+And now if I type you can see that I'm constantly logging in event every time and this event tells me
+
+62
+00:04:43,710 --> 00:04:45,200
+that type is key press.
+
+63
+00:04:45,210 --> 00:04:49,250
+It gives me a time stamp gives me a few other things.
+
+64
+00:04:49,350 --> 00:04:53,360
+One of the important parts is this char code 106.
+
+65
+00:04:53,490 --> 00:04:56,910
+Also there's key code 1 or 6 and there's.
+
+66
+00:04:56,910 --> 00:05:00,340
+Which are right here and they all point to one or six.
+
+67
+00:05:00,360 --> 00:05:02,870
+There are some slight differences which I won't go into.
+
+68
+00:05:03,090 --> 00:05:07,650
+We're going to just stick with which which is the one that the J Querrey docs use officially as well
+
+69
+00:05:07,680 --> 00:05:07,840
+.
+
+70
+00:05:07,980 --> 00:05:11,860
+So what this refers to is the code of the key that was pressed.
+
+71
+00:05:11,910 --> 00:05:18,540
+So every key has its own code and it can show you here the javascript character codes.
+
+72
+00:05:18,760 --> 00:05:21,900
+There's a page here that will interactively show you.
+
+73
+00:05:21,900 --> 00:05:27,480
+So if I type I want to know what the letter see the corresponding code is.
+
+74
+00:05:27,480 --> 00:05:33,910
+At 67 if I want to check what enter is I need to hit the enter key which I'll do now.
+
+75
+00:05:34,180 --> 00:05:36,570
+And it tells me key code there at the end.
+
+76
+00:05:36,870 --> 00:05:40,800
+So that's one of the only ones that I know by heart because we do this a lot where we want something
+
+77
+00:05:40,800 --> 00:05:42,860
+to happen when you hit the enter key.
+
+78
+00:05:43,200 --> 00:05:43,440
+OK.
+
+79
+00:05:43,440 --> 00:05:45,390
+So let's remember that key code 13.
+
+80
+00:05:45,660 --> 00:05:52,020
+Go back to our code here and all we want to do is write an IF statement instead of our listener that
+
+81
+00:05:52,020 --> 00:05:54,740
+says if the user hit enter.
+
+82
+00:05:54,750 --> 00:06:10,200
+So if a event which is equal to 13 that means that the user hit enter and we'll just alert you hit enter
+
+83
+00:06:11,310 --> 00:06:18,250
+just like that and get rid of this for now because of that log.
+
+84
+00:06:18,870 --> 00:06:23,160
+So a user types any sort of key press instead of this input.
+
+85
+00:06:23,400 --> 00:06:29,160
+Then we have this event object that we now added to our callback which was already it was being passed
+
+86
+00:06:29,160 --> 00:06:29,490
+in.
+
+87
+00:06:29,520 --> 00:06:32,880
+Even if we left this out but we weren't capturing it in a variable.
+
+88
+00:06:33,030 --> 00:06:36,160
+So now we're capturing it in a variable called event.
+
+89
+00:06:36,210 --> 00:06:39,870
+You'll also see this called E sometimes but that can be called anything.
+
+90
+00:06:39,870 --> 00:06:41,580
+Remember it's totally up to you.
+
+91
+00:06:41,700 --> 00:06:48,150
+And then we're checking if the which property is 13 which is the enter key character code.
+
+92
+00:06:48,150 --> 00:06:49,360
+Hit enter.
+
+93
+00:06:50,040 --> 00:06:55,830
+And now let's go over to this and we'll type some non enter keys and we don't get those alerts.
+
+94
+00:06:55,860 --> 00:07:01,130
+We do get the consul out logs because we set up the original listener up here.
+
+95
+00:07:01,980 --> 00:07:05,740
+But now I'm I delete all that and I'll type some things and then I'll hit enter.
+
+96
+00:07:06,240 --> 00:07:08,160
+And now I get you hit enter.
+
+97
+00:07:08,190 --> 00:07:11,960
+So every time I type enter so I'll do it right now.
+
+98
+00:07:12,300 --> 00:07:13,900
+It tells me you hit enter.
+
+99
+00:07:14,190 --> 00:07:14,670
+All right.
+
+100
+00:07:14,760 --> 00:07:19,140
+So that's all I want to show about key press will be using this to make or to do list in just a few
+
+101
+00:07:19,140 --> 00:07:20,390
+videos from now.
+
+102
+00:07:20,760 --> 00:07:24,150
+And we'll also be checking if event out which is 13
+

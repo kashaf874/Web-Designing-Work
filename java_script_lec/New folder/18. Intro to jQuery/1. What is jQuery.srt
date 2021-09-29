@@ -1,0 +1,164 @@
+﻿1
+00:00:00,630 --> 00:00:06,360
+Welcome back in this unit I'm going to introduce a new tool called Jay queery And before we get writing
+
+2
+00:00:06,360 --> 00:00:12,990
+Jay Corey I'm going to take a little bit to talk about conceptually what it is and then talk about why
+
+3
+00:00:12,990 --> 00:00:17,790
+you would use a query and why you might not use it and give you a little bit of my own opinion on that
+
+4
+00:00:17,790 --> 00:00:18,710
+debate.
+
+5
+00:00:19,260 --> 00:00:21,050
+OK let's get started.
+
+6
+00:00:21,840 --> 00:00:25,990
+So what is Jay query if you've done any research on your own.
+
+7
+00:00:26,040 --> 00:00:31,040
+If you've been taking any classes online or reading books you've probably encountered the term before
+
+8
+00:00:31,350 --> 00:00:36,330
+and you may have learned a little bit of it as well and that's because it is the most popular tool out
+
+9
+00:00:36,330 --> 00:00:37,600
+there for javascript.
+
+10
+00:00:37,680 --> 00:00:40,600
+It's the most popular javascript library period.
+
+11
+00:00:41,040 --> 00:00:43,900
+And what it does is it helps us manipulate the DOM.
+
+12
+00:00:44,190 --> 00:00:48,290
+So I have the J query docs open here the official homepage.
+
+13
+00:00:48,450 --> 00:00:55,960
+J Querrey dot com and I'm just going to read briefly this paragraph right here so it tells us queery
+
+14
+00:00:56,040 --> 00:01:02,880
+is a fast small and feature rich javascript library and makes things like H.T. mail document traversal
+
+15
+00:01:03,120 --> 00:01:07,080
+and manipulation event handling animation and Ajax.
+
+16
+00:01:07,080 --> 00:01:13,650
+Much simpler with an easy use API that works across a multitude of browsers with a combination of versatility
+
+17
+00:01:13,920 --> 00:01:15,270
+and extensibility.
+
+18
+00:01:15,390 --> 00:01:19,140
+Jay Querrey has changed the way that millions of people write javascript.
+
+19
+00:01:19,230 --> 00:01:24,600
+To sum that up Jay query is a javascript library that makes our lives easier.
+
+20
+00:01:24,630 --> 00:01:30,030
+It helps us do things like selecting elements and manipulating elements changing styles adding event
+
+21
+00:01:30,030 --> 00:01:34,840
+handlers animating things and Ajax which we'll talk about in another unit.
+
+22
+00:01:35,310 --> 00:01:40,290
+So the point of J query is that it helps us do things faster and it makes it easier to do those things
+
+23
+00:01:40,290 --> 00:01:41,580
+.
+
+24
+00:01:41,580 --> 00:01:45,030
+Now let's talk about the term javascript library.
+
+25
+00:01:45,030 --> 00:01:50,130
+So this says here that J query is a fast small and feature rich javascript library.
+
+26
+00:01:50,310 --> 00:01:52,290
+So what is a library.
+
+27
+00:01:52,290 --> 00:01:57,450
+The concept of a library in javascript is actually one that exists in other programming languages as
+
+28
+00:01:57,450 --> 00:01:58,200
+well.
+
+29
+00:01:58,200 --> 00:02:03,810
+The core idea is that we can take code that someone else wrote and we can add it to our own project
+
+30
+00:02:03,900 --> 00:02:05,700
+and use it instead of her own code.
+
+31
+00:02:06,120 --> 00:02:06,870
+So that's all that J.
+
+32
+00:02:06,870 --> 00:02:07,620
+Korea's.
+
+33
+00:02:07,770 --> 00:02:13,920
+It's a single file that someone else wrote a team wrote now with a bunch of methods and properties inside
+
+34
+00:02:13,920 --> 00:02:19,380
+of it and then we just add it to our own project so that we can use all of those methods and I'll show
+
+35
+00:02:19,380 --> 00:02:21,230
+you on the API docs here.
+
+36
+00:02:21,450 --> 00:02:24,700
+J worry comes with a ton of methods and you can see over here.
+
+37
+00:02:24,870 --> 00:02:27,590
+Let's click on one of these categories see SS.
+
+38
+00:02:27,780 --> 00:02:32,860
+And these are all the methods that J Querrey comes with that have to do with C Ss.
+
+39
+00:02:33,090 --> 00:02:36,830
+We'll talk about how we include J query and just a little bit.
+
+40
+00:02:37,830 --> 00:02:42,900
+Again it helps us with things like selecting and manipulating elements creating elements adding event
+
+41
+00:02:42,900 --> 00:02:48,250
+listeners animating adding effects and then this last thing AJAX which we haven't talked about yet.
+

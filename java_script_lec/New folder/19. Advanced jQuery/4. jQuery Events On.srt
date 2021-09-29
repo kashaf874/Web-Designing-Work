@@ -1,0 +1,392 @@
+﻿1
+00:00:00,210 --> 00:00:01,440
+OK we'll come back.
+
+2
+00:00:01,470 --> 00:00:03,590
+So we have one less method that I want to talk about.
+
+3
+00:00:03,740 --> 00:00:09,160
+As I mentioned in the introduction video to J Korea events the on method is what we'll be using.
+
+4
+00:00:09,200 --> 00:00:13,980
+Ninety nine percent of the time it's by far the most used Jay queery event method.
+
+5
+00:00:14,280 --> 00:00:14,490
+OK.
+
+6
+00:00:14,490 --> 00:00:18,580
+So let's talk about how it works on is very similar to the vanilla.
+
+7
+00:00:18,620 --> 00:00:20,790
+Yes an event listener.
+
+8
+00:00:20,790 --> 00:00:22,270
+Obviously it's a lot shorter.
+
+9
+00:00:22,290 --> 00:00:28,200
+It's just two characters but it behaves in a similar way where we give it the name of the event that
+
+10
+00:00:28,200 --> 00:00:29,590
+we want to listen for it.
+
+11
+00:00:29,760 --> 00:00:37,650
+So unlike click or key press which only will fire on one type of an event click or a keypress on allows
+
+12
+00:00:37,650 --> 00:00:45,780
+us to specify if we're doing a click like we're doing here submit on click or if we're doing a double
+
+13
+00:00:45,780 --> 00:00:53,730
+click like I have here button on double click or a drag start or a key press so it can take the place
+
+14
+00:00:53,730 --> 00:00:58,760
+of all of the things you've already seen with click and key press and all the other methods here.
+
+15
+00:00:58,870 --> 00:01:06,670
+There's a ton of them like scroll and submit and toggle key press creeky up key down.
+
+16
+00:01:06,780 --> 00:01:10,410
+All of that can be done with just the on method.
+
+17
+00:01:10,410 --> 00:01:15,480
+It works pretty much the same way though where we need to select something with dollar sign first.
+
+18
+00:01:15,870 --> 00:01:17,450
+So I'll show you an example here.
+
+19
+00:01:17,730 --> 00:01:23,490
+We select something in this case all the teachers inside of the body inside of something with the idea
+
+20
+00:01:23,490 --> 00:01:28,500
+of data table and then we run it on and then the type of the event.
+
+21
+00:01:28,500 --> 00:01:33,740
+So this is new compared to click and key press which only take a callback function.
+
+22
+00:01:33,840 --> 00:01:36,560
+We have to specify what event we're listening for.
+
+23
+00:01:36,750 --> 00:01:40,810
+So click in this case and then comma the callback function.
+
+24
+00:01:40,830 --> 00:01:42,550
+We want to be run.
+
+25
+00:01:42,660 --> 00:01:45,930
+So let's try this out to refresh my page.
+
+26
+00:01:45,930 --> 00:01:47,100
+My AJ quarried demo.
+
+27
+00:01:47,130 --> 00:01:51,390
+So we have no click listeners so no clicks we have no keypresses.
+
+28
+00:01:51,390 --> 00:01:53,350
+Nothing happens on our buttons either.
+
+29
+00:01:53,760 --> 00:01:57,600
+Let's go and try and add some quick listeners first.
+
+30
+00:01:57,630 --> 00:02:00,660
+Let's change the color of the H-1 when we click on it.
+
+31
+00:02:00,720 --> 00:02:10,230
+So we need to select each one and then we're going to do on the first argument is the event type which
+
+32
+00:02:10,230 --> 00:02:13,570
+is quick and then our callback function.
+
+33
+00:02:13,950 --> 00:02:20,640
+And inside the callback function if we wanted to change the color of the H-1 we could do something like
+
+34
+00:02:20,640 --> 00:02:30,750
+this where we just say H-1 gutsiest us Color Purple and see if you can think of why this might be a
+
+35
+00:02:30,750 --> 00:02:31,260
+problem.
+
+36
+00:02:31,320 --> 00:02:38,880
+So I'll hit enter and it works just fine it turns purple but I'm going to copy this code and refresh
+
+37
+00:02:38,880 --> 00:02:44,700
+the page and I'm going to add in another H-1 three of them and save.
+
+38
+00:02:44,790 --> 00:02:46,340
+Now we have three H-1.
+
+39
+00:02:46,770 --> 00:02:55,160
+And if I run this code again says any H-1 when we click on it change all h ones to be purple.
+
+40
+00:02:55,200 --> 00:02:57,060
+So I'll try that.
+
+41
+00:02:57,090 --> 00:03:02,910
+They all change to purple which maybe is a feature that we want but most of the time we want to affect
+
+42
+00:03:03,060 --> 00:03:04,670
+the one item that we click on.
+
+43
+00:03:04,950 --> 00:03:13,830
+So to do that all refresh we need to use the keyword this and remember it needs to be the J query wrapper
+
+44
+00:03:13,980 --> 00:03:14,790
+for this.
+
+45
+00:03:14,790 --> 00:03:21,600
+So dollar sign parentheses this and that refers to the one H-1 or the one thing that was clicked on
+
+46
+00:03:21,620 --> 00:03:22,160
+.
+
+47
+00:03:22,180 --> 00:03:28,400
+And now if I hit enter and I try clicking only the correct H-1 changes to purple.
+
+48
+00:03:29,040 --> 00:03:31,770
+OK so that's how we can use on to do a click.
+
+49
+00:03:31,770 --> 00:03:34,150
+Now let's see how to use it for a key press.
+
+50
+00:03:34,290 --> 00:03:35,760
+So we'll select our input
+
+51
+00:03:38,610 --> 00:03:50,070
+like that dot on and then we'll add key press and the second argument is the callback function and we'll
+
+52
+00:03:50,070 --> 00:03:51,740
+just do a simple conses log.
+
+53
+00:03:51,870 --> 00:03:59,170
+So cancel the log key pressed just like that and we'll hit enter.
+
+54
+00:03:59,200 --> 00:04:06,540
+Now if I go type a key in here I get he pressed every time I type a key.
+
+55
+00:04:06,540 --> 00:04:09,740
+Let's try one more type of event here I'll refresh.
+
+56
+00:04:10,080 --> 00:04:12,190
+Let's do something when we hover over a button.
+
+57
+00:04:12,390 --> 00:04:15,770
+We'll change the font to be bolded when I hover.
+
+58
+00:04:15,840 --> 00:04:21,670
+So we need to first select all the buttons just like that and then add our on.
+
+59
+00:04:21,880 --> 00:04:24,730
+And the event that we'll use is called Mouse enter.
+
+60
+00:04:24,930 --> 00:04:25,860
+Just like that.
+
+61
+00:04:26,280 --> 00:04:31,280
+And we'll start with just cancelled out logging when the mouse enters.
+
+62
+00:04:31,290 --> 00:04:38,240
+So we'll do a built log mouse enter like that.
+
+63
+00:04:38,610 --> 00:04:44,090
+And now if I hover over I get a mouse enter just like that.
+
+64
+00:04:44,340 --> 00:04:46,420
+And it's only when we first enter the element.
+
+65
+00:04:46,680 --> 00:04:50,300
+So it doesn't keep triggering over and over until I leave and come back.
+
+66
+00:04:50,750 --> 00:04:51,060
+OK.
+
+67
+00:04:51,060 --> 00:04:55,450
+So when we do mouse enter we're not going to want to constantly log.
+
+68
+00:04:55,470 --> 00:05:02,880
+We're going to want to select the J very wrapper for this and do the SS too bold something we need to
+
+69
+00:05:02,880 --> 00:05:04,140
+change the font weight.
+
+70
+00:05:04,350 --> 00:05:13,020
+So fun ways and we'll make that fold just like that and hit enter.
+
+71
+00:05:13,020 --> 00:05:18,310
+Now if I hover it's hard to see what it changes to be bold.
+
+72
+00:05:18,390 --> 00:05:21,200
+Of course it stays bold it never changes back.
+
+73
+00:05:21,390 --> 00:05:29,670
+So we could add that feature by doing the same thing with button on mouse leave which is another event
+
+74
+00:05:30,150 --> 00:05:32,040
+and then rather than changing it to font weight.
+
+75
+00:05:32,040 --> 00:05:32,670
+Bold.
+
+76
+00:05:32,670 --> 00:05:36,800
+We can change it back to normal just like that.
+
+77
+00:05:36,810 --> 00:05:40,420
+Now if I leave it goes back to normal.
+
+78
+00:05:40,830 --> 00:05:43,530
+And if I enter as bold I leave it's normal.
+
+79
+00:05:43,950 --> 00:05:50,610
+So this is how we could do something with javascript to do a sort of like hover selection effect.
+
+80
+00:05:50,670 --> 00:05:57,000
+However with CSSA now we can easily do that without any javascript at all with the hover pseudo selector
+
+81
+00:05:57,000 --> 00:05:57,490
+.
+
+82
+00:05:57,490 --> 00:06:00,510
+And I just wanted to demonstrate that there are other events out there.
+
+83
+00:06:00,720 --> 00:06:06,060
+So all the events that we could use with an event listener we can use with on which makes it really
+
+84
+00:06:06,060 --> 00:06:06,890
+really useful.
+
+85
+00:06:06,990 --> 00:06:09,500
+As I mentioned we'll be using it all the time.
+
+86
+00:06:09,840 --> 00:06:14,690
+So there is one last point I'd like to make about on and as an example I'm going to use.
+
+87
+00:06:14,690 --> 00:06:16,440
+Click and on.
+
+88
+00:06:16,440 --> 00:06:19,510
+Click and talk about how they are slightly different.
+
+89
+00:06:19,800 --> 00:06:22,230
+So they they both will generally work for you.
+
+90
+00:06:22,230 --> 00:06:28,290
+They'll add a quick listener but there is a small difference which is that click will only add click
+
+91
+00:06:28,290 --> 00:06:31,590
+listeners for elements that are on the page at that time.
+
+92
+00:06:32,040 --> 00:06:37,790
+And the on click will add listeners for all future elements or potential future elements.
+
+93
+00:06:37,980 --> 00:06:40,430
+So this will make sense when you make the to do list.
+
+94
+00:06:40,530 --> 00:06:47,010
+But basically we need to use dot on click rather than click because we're going to have to do's that
+
+95
+00:06:47,010 --> 00:06:52,060
+are added to the page that aren't there when the page loads a user types into a form and hits enter
+
+96
+00:06:52,070 --> 00:06:52,190
+.
+
+97
+00:06:52,260 --> 00:06:57,090
+And that will make a new to do and we want those new to do to have their own click listeners.
+
+98
+00:06:57,090 --> 00:07:01,930
+So we need to use on again that will make more sense when we actually started to do list.
+

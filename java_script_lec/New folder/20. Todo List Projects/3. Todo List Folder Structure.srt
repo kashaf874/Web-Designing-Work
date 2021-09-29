@@ -1,0 +1,296 @@
+﻿1
+00:00:00,270 --> 00:00:04,500
+At the end of the last video I mentioned that we're going to introduce a new folder structure so we're
+
+2
+00:00:04,500 --> 00:00:09,300
+going to start there by creating the correct folders and files first.
+
+3
+00:00:09,330 --> 00:00:14,350
+So I'm going to go to sublime and I'm going to make my new file for each team.
+
+4
+00:00:14,580 --> 00:00:18,700
+Just going to be our main HTML file and I'm going to call it indexed.
+
+5
+00:00:18,720 --> 00:00:23,690
+H Tim L and I have a folder for it I'm just calling to do list project.
+
+6
+00:00:23,790 --> 00:00:32,130
+So index that HD M-L and then we'll add in our basic H-2 mail boilerplate and I'll call this to do list
+
+7
+00:00:32,850 --> 00:00:33,790
+and save.
+
+8
+00:00:34,380 --> 00:00:37,200
+And then we're going to go and make a few new directories.
+
+9
+00:00:37,680 --> 00:00:44,130
+And I'm just going to do that from finder so you can right click and do new folder.
+
+10
+00:00:44,130 --> 00:00:50,270
+You can do command shift and you can also do that from inside of sublime.
+
+11
+00:00:50,400 --> 00:00:58,680
+If you go into a file new file and you save it you can click new folder here however you go about creating
+
+12
+00:00:58,680 --> 00:01:06,120
+the new folder we're going to make a folder called assets and then inside of assets we're going to make
+
+13
+00:01:06,180 --> 00:01:12,720
+two folders one for J.S. and another one for us.
+
+14
+00:01:13,740 --> 00:01:19,360
+And then lastly instead of J.S. we're going to make another folder called lib.
+
+15
+00:01:19,830 --> 00:01:28,950
+So if I open this entire structure up inside of sublime by just dragging the whole project over like
+
+16
+00:01:28,950 --> 00:01:37,620
+this you can see that our structure is now to do this project and we have an index that h t m l and
+
+17
+00:01:37,620 --> 00:01:41,120
+then we have an assets directory instead of assets.
+
+18
+00:01:41,220 --> 00:01:46,700
+We have C Ss and we have javascript and instead of javascript we have a lib directory.
+
+19
+00:01:46,860 --> 00:01:52,770
+So we'll be putting our style sheet instead of the C S S directory and instead of J.S. we'll be putting
+
+20
+00:01:52,770 --> 00:01:58,520
+our own custom javascript where we write the jey query and inside of lib is where we're going to add
+
+21
+00:01:58,560 --> 00:01:58,670
+.
+
+22
+00:01:58,790 --> 00:02:01,520
+Query itself the actual J query file.
+
+23
+00:02:01,800 --> 00:02:02,980
+So we'll start there.
+
+24
+00:02:03,120 --> 00:02:05,310
+Let's go and make sure we have a query.
+
+25
+00:02:05,580 --> 00:02:11,550
+So I'm going to just go to Jay Querrey dot com and rather than doing a CDN because this is more of a
+
+26
+00:02:11,550 --> 00:02:17,540
+serious project we're going to download the most recent compressed version.
+
+27
+00:02:17,640 --> 00:02:22,850
+So that's right here compressed production 2.0 1.4.
+
+28
+00:02:23,430 --> 00:02:28,950
+And then I'm going to find that file and just add it into my assets.
+
+29
+00:02:29,010 --> 00:02:36,870
+J.S. lib just add that in like that and now I'm going to go link to that correct.
+
+30
+00:02:36,880 --> 00:02:39,520
+The inside of my supplier.
+
+31
+00:02:39,870 --> 00:02:43,350
+So in my HMO I need to add a script tag.
+
+32
+00:02:44,250 --> 00:02:53,190
+And the path to get there is assets slash J.S. slash lib slash Jay dashed to point one point for dolmen
+
+33
+00:02:53,330 --> 00:02:53,540
+.
+
+34
+00:02:53,650 --> 00:02:54,500
+Yes.
+
+35
+00:02:54,570 --> 00:03:06,130
+So let's do that now script type because javascript source equals assets slash J.S. slash lib slash
+
+36
+00:03:06,130 --> 00:03:06,390
+.
+
+37
+00:03:06,480 --> 00:03:10,370
+Jay query dash 2.1 point one point four men.
+
+38
+00:03:10,620 --> 00:03:15,300
+That's a yes long file name to get there but save this.
+
+39
+00:03:15,510 --> 00:03:18,300
+And let's just open it up in a browser to start.
+
+40
+00:03:18,300 --> 00:03:23,130
+So go find our index study each time I'll open it up.
+
+41
+00:03:23,160 --> 00:03:24,620
+We don't have anything to see.
+
+42
+00:03:24,870 --> 00:03:27,780
+But if I go here I type a query.
+
+43
+00:03:27,780 --> 00:03:29,180
+Things are working just fine.
+
+44
+00:03:29,400 --> 00:03:34,550
+I could also tested out by doing this selecting the body and that works as well.
+
+45
+00:03:34,560 --> 00:03:36,620
+So that means we're good to go.
+
+46
+00:03:36,690 --> 00:03:42,360
+Next up let's focus on getting our style sheet and our own custom javascript file included.
+
+47
+00:03:42,360 --> 00:03:44,660
+So we're going to make the style sheet first.
+
+48
+00:03:44,760 --> 00:03:53,490
+So let's make a new file and save that and I'll just call it styles that C-s us and I'm going to go
+
+49
+00:03:53,490 --> 00:03:59,890
+into my assets see SS and actually to be consistent let's do to Dewes does the SS.
+
+50
+00:04:00,090 --> 00:04:09,810
+So to do stuff C Ss inside of our assets C Ss directory and save and let's add something like body background
+
+51
+00:04:10,140 --> 00:04:12,820
+purple which we will absolutely get rid of.
+
+52
+00:04:13,020 --> 00:04:20,100
+But just to make sure that it's working and then we'll go over here and add in the linked tag and then
+
+53
+00:04:20,130 --> 00:04:29,910
+add the correct path which is assets slash C. SS slash to Dewes dot C Ss and we'll save and refresh
+
+54
+00:04:30,750 --> 00:04:35,100
+and you can see our style sheet is now connected properly.
+
+55
+00:04:35,100 --> 00:04:39,310
+The last thing we're going to do is get our own custom javascript file going.
+
+56
+00:04:39,420 --> 00:04:45,150
+So I'm going to make a new file and save it and we'll call this one to do Scott J.S. and that's where
+
+57
+00:04:45,150 --> 00:04:49,290
+we're going to write the actual code that will make our To Do List work.
+
+58
+00:04:49,320 --> 00:04:53,250
+So that should go inside of assets.
+
+59
+00:04:53,280 --> 00:04:54,780
+J.S. and that's it.
+
+60
+00:04:54,780 --> 00:04:59,960
+So we don't put it in lib because lib is where we're going to put external code and libraries like Jay
+
+61
+00:05:00,080 --> 00:05:05,870
+Querrey So we're just going to put it in J S and save our structure looks like this.
+
+62
+00:05:05,930 --> 00:05:10,310
+Assets CSSA we have to use instead of J.S..
+
+63
+00:05:10,560 --> 00:05:14,830
+We have a lib directory that has J query in it and we have our own to do.
+
+64
+00:05:14,860 --> 00:05:23,820
+J.S. instead of the G-S folder and votes go add a simple alert connected and save.
+
+65
+00:05:23,850 --> 00:05:31,110
+Now go back to our HQ mail and add in another script tag and this time we're going to add source equal
+
+66
+00:05:31,110 --> 00:05:39,170
+to assets slash J.S. slash to do yes and save.
+
+67
+00:05:39,540 --> 00:05:45,130
+And now let's see what happens when we refresh we get our connected alert.
+
+68
+00:05:46,260 --> 00:05:51,420
+OK so we have the folder structure set up correctly so we will be introducing another file that we need
+
+69
+00:05:51,420 --> 00:05:53,470
+to place once we talk about Funt.
+
+70
+00:05:53,480 --> 00:05:56,180
+Awesome which is a CSSA library.
+
+71
+00:05:56,190 --> 00:05:58,770
+It's basically a bunch of icons that we can include.
+
+72
+00:05:58,770 --> 00:06:02,980
+So we will be returning to this folder structure and adding to it in the future video.
+
+73
+00:06:03,000 --> 00:06:05,240
+For now that's all we need to do in the next video.
+
+74
+00:06:05,250 --> 00:06:06,620
+We'll focus on writing some code
+

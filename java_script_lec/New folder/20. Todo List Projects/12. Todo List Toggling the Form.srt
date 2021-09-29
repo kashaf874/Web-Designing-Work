@@ -1,0 +1,140 @@
+﻿1
+00:00:00,600 --> 00:00:08,460
+The very last thing that we have yet to do is making this Tuggle work so that we can show and hide this
+
+2
+00:00:08,460 --> 00:00:09,420
+input.
+
+3
+00:00:09,420 --> 00:00:11,640
+And that's actually a matter of inquiry.
+
+4
+00:00:12,030 --> 00:00:16,360
+So what we do is have a quick listener on this and when we click.
+
+5
+00:00:16,740 --> 00:00:19,610
+All that will do is fade this in or out.
+
+6
+00:00:19,930 --> 00:00:21,660
+So let's go to Arjay query.
+
+7
+00:00:22,290 --> 00:00:28,080
+Open up our javascript file and we can just do it at the very bottom.
+
+8
+00:00:28,350 --> 00:00:34,900
+We need to select that icon which has a class of F.A. dash plus.
+
+9
+00:00:35,130 --> 00:00:36,420
+And then when we click on that
+
+10
+00:00:39,390 --> 00:00:46,170
+what we want to do pass in this callback that will be executed for us and what we need to do is select
+
+11
+00:00:46,200 --> 00:00:47,410
+the input.
+
+12
+00:00:47,490 --> 00:00:54,610
+So I'll just copy this here input type because text and then will fade out.
+
+13
+00:00:55,050 --> 00:00:58,700
+So fade out just like that.
+
+14
+00:00:58,920 --> 00:01:05,440
+And let's go back and refresh and I'll now click on this and it fades out.
+
+15
+00:01:05,820 --> 00:01:08,460
+But of course it doesn't fade back in.
+
+16
+00:01:08,460 --> 00:01:15,570
+So we'll use fade toggle and fade toggle will keep track of the state if it needs to be fitted in or
+
+17
+00:01:15,570 --> 00:01:18,540
+faded out automatically and all refresh.
+
+18
+00:01:18,790 --> 00:01:25,100
+And now when I click it automatically fades in and out without me having to write all the logic.
+
+19
+00:01:25,950 --> 00:01:26,340
+All right.
+
+20
+00:01:26,340 --> 00:01:28,280
+So that's it here for the To Do list.
+
+21
+00:01:28,530 --> 00:01:30,790
+A few minor things that we might want to talk about.
+
+22
+00:01:31,020 --> 00:01:36,890
+If we go back to our C Ss it's it's pretty long and it's not really organized.
+
+23
+00:01:37,200 --> 00:01:40,390
+So there are a few strategies for organizing success.
+
+24
+00:01:40,500 --> 00:01:47,700
+One of them is to organize by order on the page so that we're selecting from top to bottom and the other
+
+25
+00:01:47,700 --> 00:01:51,670
+one that's more popular is to order things by specificity.
+
+26
+00:01:52,320 --> 00:01:58,380
+So we'll start with the least specific item up top which would be the body and then we'll add in the
+
+27
+00:01:58,380 --> 00:02:09,680
+rest of our element tags and then we'll add the rest of our elements selectors like H-1 UL or body.
+
+28
+00:02:09,870 --> 00:02:14,530
+And I just noticed we should just merge these two bodies together here.
+
+29
+00:02:15,240 --> 00:02:16,370
+There's no reason to.
+
+30
+00:02:16,380 --> 00:02:18,480
+It's like the body twice.
+
+31
+00:02:18,720 --> 00:02:20,060
+So then we have our H-1
+
+32
+00:02:22,520 --> 00:02:24,080
+Juelz.
+
+33
+00:02:24,570 --> 00:02:25,730
+Let's add in the ally
+
+34
+00:02:29,670 --> 00:02:31,680
+and we'll also add in span
+
+35
+00:02:34,680 --> 00:02:37,310
+and this is just really a matter of preference here.
+

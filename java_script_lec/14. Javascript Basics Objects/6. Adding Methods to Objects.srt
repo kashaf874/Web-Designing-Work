@@ -1,0 +1,400 @@
+﻿1
+00:00:00,270 --> 00:00:01,200
+Welcome back.
+
+2
+00:00:01,230 --> 00:00:05,220
+So this is our last video on javascript objects for the next few units.
+
+3
+00:00:05,280 --> 00:00:09,360
+And in this video we're going to cover javascript methods before we do that.
+
+4
+00:00:09,360 --> 00:00:11,110
+I just want to explain my set up.
+
+5
+00:00:11,220 --> 00:00:16,570
+I have a simple HTML file and all I have is a few notes here just for us to follow.
+
+6
+00:00:16,590 --> 00:00:19,690
+So you absolutely don't need to type this up if you want to follow along.
+
+7
+00:00:19,710 --> 00:00:24,330
+You can just do this in the console or make your own file but you don't need this page to him out.
+
+8
+00:00:24,600 --> 00:00:29,600
+So what I'm going to do is start talking about what methods are so in javascript.
+
+9
+00:00:29,610 --> 00:00:33,900
+We've seen that we can make an object which is going to make one called LBJ.
+
+10
+00:00:34,380 --> 00:00:38,050
+And we can put whatever type of data we want instead of that object.
+
+11
+00:00:38,100 --> 00:00:41,580
+So we could have a name that's a string Charke.
+
+12
+00:00:41,980 --> 00:00:51,210
+You can have an age that's a number we can have it is cool that's a boolean we can have friends which
+
+13
+00:00:51,210 --> 00:00:58,580
+is an array and friends can just be Bob and Tina.
+
+14
+00:00:59,370 --> 00:01:04,560
+But what I'm interested in showing you in this video is that we can actually add functions as properties
+
+15
+00:01:04,650 --> 00:01:05,600
+to an object.
+
+16
+00:01:05,640 --> 00:01:08,890
+In that case are actually called methods rather than properties.
+
+17
+00:01:09,060 --> 00:01:14,360
+So again a method is just a function that is a property instead of an object.
+
+18
+00:01:14,400 --> 00:01:15,610
+So I can make one here.
+
+19
+00:01:15,660 --> 00:01:24,280
+Let's just call it add add is a function and it takes two numbers x and y and all that it does.
+
+20
+00:01:24,520 --> 00:01:32,770
+If I indent this properly is return x plus y.
+
+21
+00:01:33,330 --> 00:01:36,370
+So the big thing that's new here is that we're just adding a function.
+
+22
+00:01:36,400 --> 00:01:37,850
+It doesn't matter what the function does.
+
+23
+00:01:37,860 --> 00:01:42,290
+Any function will work here and we're just setting it as a value for the property.
+
+24
+00:01:42,390 --> 00:01:51,270
+And so if I hit enter here and we look at RBJ you can see it's an object and we have aged 45 friends
+
+25
+00:01:51,270 --> 00:01:51,400
+.
+
+26
+00:01:51,420 --> 00:01:54,440
+An array is cool false name Chuck.
+
+27
+00:01:54,450 --> 00:01:56,920
+And then add is a function.
+
+28
+00:01:57,450 --> 00:02:05,610
+So if we wanted to call add we can't just write add anymore what we need to do is write obey j dot and
+
+29
+00:02:06,330 --> 00:02:11,790
+just like this and then let's give two numbers 10 and 5 and we get 15.
+
+30
+00:02:12,270 --> 00:02:15,130
+So calling it works the same way we need parentheses.
+
+31
+00:02:15,150 --> 00:02:16,170
+We need arguments.
+
+32
+00:02:16,200 --> 00:02:19,860
+The only difference is it's not just on it's own like this.
+
+33
+00:02:19,860 --> 00:02:23,490
+It's actually now instead of the OPG object.
+
+34
+00:02:23,520 --> 00:02:26,810
+So this might look a little bit familiar from something like this.
+
+35
+00:02:26,820 --> 00:02:30,350
+Contrl Balog exactly the same format.
+
+36
+00:02:30,420 --> 00:02:36,720
+And it turns out that the consulate was an object and log is a method on that object and recalling it
+
+37
+00:02:36,780 --> 00:02:39,620
+just like we called object dot AD.
+
+38
+00:02:39,720 --> 00:02:41,810
+So they work exactly the same way.
+
+39
+00:02:42,150 --> 00:02:46,230
+So you might be wondering why would we ever want to add a method to an object.
+
+40
+00:02:46,230 --> 00:02:50,340
+Why not just have our functions defined separately like this.
+
+41
+00:02:50,430 --> 00:02:54,190
+Why do we need to added inside of the RBJ object.
+
+42
+00:02:54,210 --> 00:02:55,770
+There's a few reasons.
+
+43
+00:02:55,770 --> 00:03:01,110
+The first is that it helps you keep your code organized so you can group things logically together to
+
+44
+00:03:01,110 --> 00:03:05,580
+illustrate one of the benefits of adding your functions as method on an object.
+
+45
+00:03:05,700 --> 00:03:07,800
+I'm going to do a quick example here.
+
+46
+00:03:07,800 --> 00:03:12,420
+So we're going to go back to our favorite example of cats and dogs and let's say that I wanted to make
+
+47
+00:03:12,420 --> 00:03:14,710
+a method called speak.
+
+48
+00:03:15,870 --> 00:03:22,890
+And let's suppose I wanted to make a function called speak and speak all that it needs to do is return
+
+49
+00:03:23,350 --> 00:03:23,960
+what.
+
+50
+00:03:24,120 --> 00:03:26,770
+So this is for a dog or wolf.
+
+51
+00:03:27,240 --> 00:03:28,330
+And that's it.
+
+52
+00:03:28,530 --> 00:03:29,700
+Very simple.
+
+53
+00:03:29,700 --> 00:03:33,290
+And I can call speak like this and I get what.
+
+54
+00:03:34,080 --> 00:03:39,690
+Let's suppose that I also want a method called Speak to work for cat and it should return.
+
+55
+00:03:39,690 --> 00:03:40,530
+Meow.
+
+56
+00:03:40,830 --> 00:03:43,590
+Well if I write function speak
+
+57
+00:03:46,740 --> 00:03:50,600
+and I return meow.
+
+58
+00:03:51,480 --> 00:03:54,160
+And this time I call speak I get Meow.
+
+59
+00:03:54,450 --> 00:03:58,470
+But now I have no way of accessing my original speak that returned Wolf.
+
+60
+00:03:58,770 --> 00:04:01,830
+So what happened here is something called a namespace collision.
+
+61
+00:04:01,890 --> 00:04:06,180
+So that's just a fancy way of saying that we have two different things that have the same name.
+
+62
+00:04:06,450 --> 00:04:11,930
+So if we instead added these functions as methods to an object we could have two different things named
+
+63
+00:04:12,000 --> 00:04:12,710
+speak.
+
+64
+00:04:12,780 --> 00:04:14,880
+By putting them in different name spaces.
+
+65
+00:04:14,970 --> 00:04:20,490
+So it's really simple to do that we could just make something called var dog space and that's just an
+
+66
+00:04:20,490 --> 00:04:21,740
+empty object.
+
+67
+00:04:22,380 --> 00:04:27,670
+And then we just say dog space dot speak is a function.
+
+68
+00:04:29,640 --> 00:04:34,230
+And we return what.
+
+69
+00:04:35,290 --> 00:04:39,060
+And we do the same thing for Vark cat space.
+
+70
+00:04:39,150 --> 00:04:44,130
+So Dog spacing cat space are just names of making up and they're just going to be empty objects that
+
+71
+00:04:44,130 --> 00:04:45,540
+we add our methods to.
+
+72
+00:04:45,750 --> 00:04:53,910
+So then I can say cat space dot speak equals function and all we do here is return.
+
+73
+00:04:54,040 --> 00:04:55,530
+Yeah.
+
+74
+00:04:56,940 --> 00:05:01,760
+So if I want to call speak for a dog I want it to return Wolf.
+
+75
+00:05:01,790 --> 00:05:07,170
+All they have to do is read Dog space speak and if they want to see me know all I need to do is run
+
+76
+00:05:07,170 --> 00:05:11,480
+cat space dot speak.
+
+77
+00:05:13,020 --> 00:05:15,130
+So again this is just a fancy.
+
+78
+00:05:15,600 --> 00:05:18,660
+So this is just a nice way of organizing our code.
+
+79
+00:05:18,660 --> 00:05:23,850
+First of all it's that we can have a bunch of methods that are grouped logically together so all the
+
+80
+00:05:23,850 --> 00:05:28,060
+dog methods go into that dog space all the cat methods go into that cat space.
+
+81
+00:05:28,320 --> 00:05:31,530
+But it's also a way to avoid these namespace collisions.
+
+82
+00:05:31,530 --> 00:05:36,090
+I know by now you're tired of dogs and cats and it doesn't seem like a very real world example but I
+
+83
+00:05:36,090 --> 00:05:41,790
+can assure you the same exact logic applies for something like comments and posts and tags.
+
+84
+00:05:42,090 --> 00:05:44,990
+You might have a method called new or delete.
+
+85
+00:05:45,180 --> 00:05:48,030
+For comments we might have one called delete posts.
+
+86
+00:05:48,090 --> 00:05:53,040
+Another one called Delete for users and we need to have those namespace properly so that they don't
+
+87
+00:05:53,040 --> 00:05:54,390
+all conflict.
+
+88
+00:05:54,390 --> 00:06:00,930
+So rather than just writing deletes we would have user delete and then we might have post-START delete
+
+89
+00:06:01,530 --> 00:06:07,550
+and comment delete and we will see things like that all the time when we get tabac and programming.
+
+90
+00:06:07,980 --> 00:06:13,530
+So to sum up what we've covered so far we're able to add methods to an object which means we're adding
+
+91
+00:06:13,530 --> 00:06:17,910
+a function as a property and we can add it just like any other property.
+
+92
+00:06:17,940 --> 00:06:20,270
+Treat it just like a string or a number.
+
+93
+00:06:20,430 --> 00:06:23,240
+And that's because functions are values in javascript.
+
+94
+00:06:23,340 --> 00:06:24,650
+We can pass them around.
+
+95
+00:06:24,720 --> 00:06:29,040
+We can add them as a value to an object which is really really useful.
+
+96
+00:06:29,040 --> 00:06:32,080
+The second thing we talked about is why you would ever do that.
+
+97
+00:06:32,100 --> 00:06:37,050
+The first reason we talked about is that it prevents namespace collisions which really just means we
+
+98
+00:06:37,050 --> 00:06:38,370
+can group code together.
+
+99
+00:06:38,520 --> 00:06:43,080
+That means that we can have properties and functions and methods that are named exactly the same way
+
+100
+00:06:43,470 --> 00:06:46,750
+except they're stored in different objects so that they don't conflict
+

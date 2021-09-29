@@ -1,0 +1,300 @@
+﻿1
+00:00:00,640 --> 00:00:05,130
+This video we're going to continue learning about different ways of manipulating elements.
+
+2
+00:00:05,160 --> 00:00:06,360
+Once we select them.
+
+3
+00:00:06,690 --> 00:00:11,040
+So we've talked about manipulating style changing classes removing classes.
+
+4
+00:00:11,040 --> 00:00:15,290
+We've talked about altering the text content and enraged him.
+
+5
+00:00:15,600 --> 00:00:18,600
+Now we're going to talk about manipulating attributes.
+
+6
+00:00:18,810 --> 00:00:25,820
+So remember attributes are things like H.F. equals Google like com or source on an image.
+
+7
+00:00:26,550 --> 00:00:32,460
+So they always follow this some property name equals something inside of quotes and attributes are really
+
+8
+00:00:32,460 --> 00:00:33,330
+important.
+
+9
+00:00:33,330 --> 00:00:36,410
+And sometimes we want to manipulate them we want to change things.
+
+10
+00:00:36,570 --> 00:00:40,890
+So we're going to do some simple things early on like changing every link on Google.
+
+11
+00:00:40,900 --> 00:00:45,950
+Dotcom's homepage to be a link to.
+
+12
+00:00:46,200 --> 00:00:51,040
+So we're going to do some simple things to start like changing every link on Google dot com homepage
+
+13
+00:00:51,060 --> 00:00:52,460
+to be Bing dotcom.
+
+14
+00:00:52,490 --> 00:00:58,280
+But changing attributes is something that is really important and useful in real projects.
+
+15
+00:00:58,320 --> 00:01:05,610
+So if we made an image slider for instance a lot of times image galleries image sliders are made by
+
+16
+00:01:05,610 --> 00:01:11,440
+changing the source of an image and it's just one image and the source is being changed.
+
+17
+00:01:11,730 --> 00:01:16,800
+So that's just one quick example there but we're going to talk about how we can retrieve the value of
+
+18
+00:01:16,890 --> 00:01:21,460
+specific attributes and how we can also alter or manipulate the value.
+
+19
+00:01:21,570 --> 00:01:28,050
+In this example we have an anchor tag with a draft to be google.com and an image tag with source is
+
+20
+00:01:28,050 --> 00:01:30,110
+logo dot DNG.
+
+21
+00:01:30,360 --> 00:01:36,300
+So we select the anchor tag to start query selector a save that to link and there's a method we can
+
+22
+00:01:36,300 --> 00:01:41,880
+use called Get attribute and get attribute does what it sounds like it retrieves or it gets the value
+
+23
+00:01:42,150 --> 00:01:44,360
+of the specific attribute that we ask for.
+
+24
+00:01:44,490 --> 00:01:51,810
+So if we ask for a breath on this link it's going to give us www.youtube.com and then I can also change
+
+25
+00:01:51,810 --> 00:01:56,580
+that attribute using Set attribute and set attribute takes two arguments.
+
+26
+00:01:56,640 --> 00:02:01,890
+The first one is the name of the attribute and the second one is what I want to change it to.
+
+27
+00:02:01,890 --> 00:02:08,820
+So in this case I'm changing the Tref on this link to be WDW that dogs dot com.
+
+28
+00:02:09,540 --> 00:02:13,200
+Let's go ahead and demonstrate this in the browser.
+
+29
+00:02:13,200 --> 00:02:17,940
+So I'm going to use get attribute to retrieve the source of this first image here.
+
+30
+00:02:18,150 --> 00:02:19,430
+So I need to select it.
+
+31
+00:02:19,680 --> 00:02:26,970
+Let's just call it image one equals document and let's do get elements by tag name
+
+32
+00:02:29,610 --> 00:02:33,810
+image and we want the first one.
+
+33
+00:02:33,810 --> 00:02:43,330
+And if we look at it image 1 if we asked for the source we just do get attribute as sarcy.
+
+34
+00:02:44,280 --> 00:02:45,840
+And this is our source.
+
+35
+00:02:46,170 --> 00:02:52,620
+If I wanted to change that image I actually have an image prepared here of another adorable corgi mix
+
+36
+00:02:52,770 --> 00:02:54,290
+a husky corgi.
+
+37
+00:02:54,780 --> 00:03:03,180
+I'm going to go ahead and just copy this you r l and change it using image one dot set attribute like
+
+38
+00:03:03,180 --> 00:03:07,700
+this and then passing it in as the second argument.
+
+39
+00:03:07,700 --> 00:03:12,500
+And we hit enter and I now get my image updated there.
+
+40
+00:03:13,020 --> 00:03:15,700
+And I could do the same thing of course to the second image.
+
+41
+00:03:15,750 --> 00:03:22,290
+I just need to select it so we can do something like this for image to document to get elements by tag
+
+42
+00:03:22,290 --> 00:03:35,970
+name image 1 and then image to set attribute source to be the same thing.
+
+43
+00:03:35,970 --> 00:03:41,520
+Now we have two of those adorable mis proportioned Husky's.
+
+44
+00:03:41,670 --> 00:03:45,220
+So just for variety sake I'll add an anchor tag as well.
+
+45
+00:03:45,360 --> 00:03:53,220
+So just up top will have an anchor tag with Tref BW dot Google dot com and then we'll go in here.
+
+46
+00:03:53,370 --> 00:04:01,380
+Link to Google and what we can do to start is change that links a ref.
+
+47
+00:04:01,390 --> 00:04:07,950
+So if we are fresh the page we have that link we selected so far a equals document that query selector
+
+48
+00:04:08,510 --> 00:04:09,480
+A.
+
+49
+00:04:09,930 --> 00:04:17,880
+And then we'll do a dot set attribute a Tref are not doing source anymore we're changing the nature
+
+50
+00:04:17,880 --> 00:04:27,600
+of attribute and we'll do it to Corgies dot com and if we look first of all if we look at the a tag
+
+51
+00:04:27,910 --> 00:04:32,940
+you can see the way that it's represented to us and the cons. It's changed to Corgies dot com.
+
+52
+00:04:33,090 --> 00:04:35,080
+If I inspect it.
+
+53
+00:04:35,690 --> 00:04:38,200
+HCF has changed the Corgies start com.
+
+54
+00:04:38,370 --> 00:04:46,680
+And lastly if I click on it in a new tab takes us to Corgies dot com and you'll notice it didn't actually
+
+55
+00:04:46,680 --> 00:04:51,620
+take us to the Web site Corgies star com tried to do it on a relative path.
+
+56
+00:04:51,660 --> 00:04:57,390
+So to fix that if we wanted it to actually go to the website Corgies start com which I'm not sure is
+
+57
+00:04:57,390 --> 00:04:58,750
+a real web site.
+
+58
+00:04:59,160 --> 00:05:06,750
+We need to do HTP colon slash slash and that tells the browser that this link is not relative to where
+
+59
+00:05:06,750 --> 00:05:07,280
+we are.
+
+60
+00:05:07,410 --> 00:05:12,210
+It's an absolute path which means just go to this URL don't try and add it onto the end of where we
+
+61
+00:05:12,210 --> 00:05:12,600
+are.
+
+62
+00:05:12,780 --> 00:05:18,260
+So we're using the HTP protocol and I do that now if we inspect.
+
+63
+00:05:18,810 --> 00:05:21,400
+You can see it's changed HGP.
+
+64
+00:05:21,660 --> 00:05:29,070
+And if we click on a new tab Corgies dotcom nobody owns that really or somebody owns it but they don't
+
+65
+00:05:29,070 --> 00:05:30,000
+use it.
+
+66
+00:05:30,000 --> 00:05:32,690
+It's a shame and shame.
+
+67
+00:05:32,700 --> 00:05:37,350
+So the last thing just to update this link that doesn't say link to Google.
+
+68
+00:05:37,350 --> 00:05:38,850
+All we need to do is a.
+
+69
+00:05:39,000 --> 00:05:45,240
+And we have two choices but text content is usually the better option for just changing the text edit
+
+70
+00:05:45,270 --> 00:05:54,940
+text content equals link to corgi dot com and now our tag has changed.
+
+71
+00:05:54,960 --> 00:05:59,260
+It's Atra attribute and the inner content has changed as well.
+
+72
+00:06:00,030 --> 00:06:05,350
+So to wrap up we have get attribute and set attribute and those work on any attributes.
+
+73
+00:06:05,550 --> 00:06:11,400
+So I showed it for a Tref and for source but you could use it if you wanted to change an ID to change
+
+74
+00:06:11,430 --> 00:06:13,970
+a class or any other attribute that's out there.
+
+75
+00:06:13,980 --> 00:06:18,120
+There are quite a few more but these are the more common ones that will work with
+

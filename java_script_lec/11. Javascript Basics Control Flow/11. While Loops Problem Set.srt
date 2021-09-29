@@ -1,0 +1,96 @@
+﻿1
+00:00:00,450 --> 00:00:03,080
+OK so now it's your turn to start writing some while loops.
+
+2
+00:00:03,330 --> 00:00:08,100
+So this is a problem set where you're actually going to be writing code rather than just evaluating
+
+3
+00:00:08,100 --> 00:00:08,600
+it.
+
+4
+00:00:08,610 --> 00:00:10,200
+There are four different problems.
+
+5
+00:00:10,200 --> 00:00:15,440
+I'd like you to do can see them right here and you'll need to write them in a separate file.
+
+6
+00:00:15,600 --> 00:00:17,150
+So not just in the console.
+
+7
+00:00:17,150 --> 00:00:22,620
+So you'll need a HDMI file and a single javascript file and then you can just write all four of these
+
+8
+00:00:22,620 --> 00:00:24,360
+in the same file.
+
+9
+00:00:24,390 --> 00:00:30,570
+So here's the output I'm going to open up the console and it just runs to four problems one after another
+
+10
+00:00:30,570 --> 00:00:31,040
+.
+
+11
+00:00:31,080 --> 00:00:32,090
+So the very first one.
+
+12
+00:00:32,220 --> 00:00:36,020
+Print all numbers between negative 10 and 19.
+
+13
+00:00:36,180 --> 00:00:40,920
+So I added a little the log just to delineate which problem is which.
+
+14
+00:00:41,190 --> 00:00:45,180
+And you can see I get the numbers between negative 10 and 19.
+
+15
+00:00:45,390 --> 00:00:49,010
+Next up print all even numbers between 10 and 40.
+
+16
+00:00:49,050 --> 00:00:51,130
+So I get a little console dialog here.
+
+17
+00:00:51,570 --> 00:01:00,250
+And then even numbers between 10 and forty third one print all the odd numbers between 300 and 333.
+
+18
+00:01:00,390 --> 00:01:04,360
+So we get this output here and then the final one.
+
+19
+00:01:04,530 --> 00:01:09,900
+Print all numbers divisible by both five and three between five and 50.
+
+20
+00:01:09,900 --> 00:01:13,040
+So multiples of five and three there's only three of them.
+
+21
+00:01:13,170 --> 00:01:15,900
+15 30 and 45.
+
+22
+00:01:15,900 --> 00:01:21,090
+So all of these are done with while loops and that's the only requirement here is that you use a while
+
+23
+00:01:21,090 --> 00:01:23,300
+loop for all four parts.
+
+24
+00:01:23,340 --> 00:01:25,830
+So in the next video we'll go and create the solutions
+

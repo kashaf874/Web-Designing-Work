@@ -1,0 +1,528 @@
+﻿1
+00:00:00,410 --> 00:00:01,880
+All right we'll come back.
+
+2
+00:00:02,100 --> 00:00:07,110
+So in this video we're going to discuss our first main data structure which is something called the
+
+3
+00:00:07,110 --> 00:00:08,200
+array.
+
+4
+00:00:09,060 --> 00:00:10,520
+So we have a few objectives here.
+
+5
+00:00:10,710 --> 00:00:15,340
+The first one is we want to understand what arrays are and why we use them.
+
+6
+00:00:15,810 --> 00:00:18,210
+And then secondly we want to use them in our code.
+
+7
+00:00:18,540 --> 00:00:22,840
+So let's start by talking about conceptually what the point of an array is.
+
+8
+00:00:23,130 --> 00:00:25,930
+So suppose I wanted to model a group of friends.
+
+9
+00:00:26,130 --> 00:00:32,380
+So every friend is a string with their name like Charlie and Liz David and Mathias.
+
+10
+00:00:32,640 --> 00:00:35,130
+So I could make for friend variables.
+
+11
+00:00:35,160 --> 00:00:41,100
+Each one is a separate variable and if I wanted to add another one I would need to save our friend 5
+
+12
+00:00:41,340 --> 00:00:42,880
+is equal to some other name.
+
+13
+00:00:43,020 --> 00:00:47,700
+And then I need to know for the next one I need to do forensics and then friend 7.
+
+14
+00:00:47,880 --> 00:00:50,340
+And so this is problematic for a few reasons.
+
+15
+00:00:50,340 --> 00:00:53,730
+One is that this code is not what we would consider dry.
+
+16
+00:00:53,730 --> 00:00:56,040
+There's a lot of repeated code here.
+
+17
+00:00:56,040 --> 00:00:59,150
+Also these friends aren't related to one another.
+
+18
+00:00:59,220 --> 00:01:00,490
+They're totally separate.
+
+19
+00:01:00,690 --> 00:01:02,640
+So it's not really a group of friends.
+
+20
+00:01:02,940 --> 00:01:08,730
+So this is a perfect use case for an array an array lets his group data in a list.
+
+21
+00:01:09,060 --> 00:01:15,930
+So rather than having four separate variables we can write one variable and inside of it we store four
+
+22
+00:01:15,930 --> 00:01:17,840
+different names.
+
+23
+00:01:17,880 --> 00:01:21,260
+So let's take a closer look at how arrays work.
+
+24
+00:01:21,420 --> 00:01:23,340
+I have the same example code here.
+
+25
+00:01:23,490 --> 00:01:26,940
+Var friends equals and then square brackets.
+
+26
+00:01:26,970 --> 00:01:30,080
+So that's what tells javascript this is an array.
+
+27
+00:01:30,120 --> 00:01:35,760
+Up until this point here we're dealing with just a regular javascript variable where on the right side
+
+28
+00:01:35,880 --> 00:01:40,610
+we could just have a string or a number or boolean or undefined or no.
+
+29
+00:01:40,800 --> 00:01:42,850
+But instead we have an array.
+
+30
+00:01:43,260 --> 00:01:45,520
+So the square brackets denote an array.
+
+31
+00:01:45,540 --> 00:01:48,960
+You can see open bracket closed bracket.
+
+32
+00:01:49,140 --> 00:01:53,070
+And inside we have our list of data to declare an array.
+
+33
+00:01:53,310 --> 00:01:55,230
+It's a comma separated list.
+
+34
+00:01:55,320 --> 00:01:59,760
+So we have our values like Charlie comma Liz comma David comma.
+
+35
+00:01:59,790 --> 00:02:00,780
+MATHIAS.
+
+36
+00:02:00,780 --> 00:02:03,920
+And that results in an array of four items.
+
+37
+00:02:03,930 --> 00:02:09,390
+The second important piece of information about arrays is that they are indexed just like characters
+
+38
+00:02:09,420 --> 00:02:15,750
+in a string where there is a specific number that corresponds to every character starting at zero.
+
+39
+00:02:16,020 --> 00:02:18,660
+Arrays are also indexed starting at zero.
+
+40
+00:02:18,900 --> 00:02:22,270
+So every slot in this array has a corresponding number.
+
+41
+00:02:22,410 --> 00:02:28,140
+When we make this array here with these four names Here's a diagram representing how the array is created
+
+42
+00:02:28,140 --> 00:02:29,240
+in memory.
+
+43
+00:02:29,310 --> 00:02:38,100
+So we have Charlie stored with the number zero as index is with one David with two Mathias with three
+
+44
+00:02:38,100 --> 00:02:39,340
+.
+
+45
+00:02:39,600 --> 00:02:44,520
+We use those array indices all the time to get data out of the array.
+
+46
+00:02:44,550 --> 00:02:46,770
+So here I'm initializing the same exact array.
+
+47
+00:02:46,970 --> 00:02:53,550
+And if I want to get Charlie out of the array I need to know the index that corresponds to Charlee which
+
+48
+00:02:53,550 --> 00:02:54,290
+is.
+
+49
+00:02:54,810 --> 00:02:56,820
+And then all I do is write friends.
+
+50
+00:02:57,030 --> 00:02:59,450
+The variable name bracket is 0.
+
+51
+00:02:59,580 --> 00:03:03,300
+Just like we would for string if I wanted the first character again.
+
+52
+00:03:03,340 --> 00:03:08,190
+The only difference is that we're not dealing with a string of characters we're dealing with an array
+
+53
+00:03:08,640 --> 00:03:09,940
+of strings.
+
+54
+00:03:10,530 --> 00:03:13,930
+So friend 0 is going to give me Chartley.
+
+55
+00:03:14,190 --> 00:03:22,500
+Likewise if I did friends one who gives me lives plus a heart plus friends two gives me David and we
+
+56
+00:03:22,500 --> 00:03:23,980
+end up with Liz Hart.
+
+57
+00:03:24,060 --> 00:03:30,370
+David we can also use the indices to update array values.
+
+58
+00:03:30,630 --> 00:03:37,320
+So if Charlie wants to change his name to chuck all I have to do is find Charlie in the array with index
+
+59
+00:03:37,320 --> 00:03:43,300
+zero friends zero and set it equal to another string Chuck.
+
+60
+00:03:43,320 --> 00:03:47,460
+So then our array looks like this where we have Chuck at index 0.
+
+61
+00:03:47,460 --> 00:03:48,990
+Same thing with Liz.
+
+62
+00:03:49,020 --> 00:03:56,670
+She changes her name to Lizzie we just find the correct index for Liz which is one friends of one equals
+
+63
+00:03:56,940 --> 00:03:59,370
+Lizzie as you can see here in our array.
+
+64
+00:03:59,370 --> 00:04:05,090
+Now looks like Chuck at zero Lizzy at 1.
+
+65
+00:04:05,520 --> 00:04:10,280
+The next feature of arrays is that we can also add data to an existing array.
+
+66
+00:04:10,290 --> 00:04:15,150
+So if I got a new friend which would be awesome I could really use some new friends all that I need
+
+67
+00:04:15,150 --> 00:04:20,430
+to do is access friends and put an index in here that doesn't exist yet.
+
+68
+00:04:20,430 --> 00:04:29,490
+So in this case for it and if I do friends for equals family I will get a lead down here index for I'm
+
+69
+00:04:29,490 --> 00:04:36,750
+not going to show you a quick demonstration in the con. I'm going to use an array to model colors to
+
+70
+00:04:36,750 --> 00:04:37,410
+do that.
+
+71
+00:04:37,440 --> 00:04:43,980
+I'm going to define an array of var colors equals and I'm going to put just a few colors in there as
+
+72
+00:04:43,980 --> 00:04:53,030
+strings to start red orange and yellow and I'll hit enter.
+
+73
+00:04:53,070 --> 00:04:55,480
+I now have my colors array defined.
+
+74
+00:04:55,670 --> 00:05:02,840
+If I access colors it has three items in it and if I wanted to print out orange I would do colors for
+
+75
+00:05:02,840 --> 00:05:12,840
+packet 1 because it has an index of 1 and I get orange if I wanted to add in another element after yellow
+
+76
+00:05:12,960 --> 00:05:14,910
+I wanted to add in green.
+
+77
+00:05:14,910 --> 00:05:17,880
+I would need to count 0 1 2.
+
+78
+00:05:18,090 --> 00:05:20,410
+So index of 3 is the next one.
+
+79
+00:05:20,460 --> 00:05:25,240
+Index three colors three equals green.
+
+80
+00:05:25,540 --> 00:05:30,390
+And now if we take a look at colors I get red orange yellow green.
+
+81
+00:05:30,420 --> 00:05:33,930
+Suppose that I wanted to change green to be dark green.
+
+82
+00:05:34,530 --> 00:05:36,120
+I need to access it first.
+
+83
+00:05:36,180 --> 00:05:37,640
+So colors 3.
+
+84
+00:05:37,710 --> 00:05:40,270
+Just verify that that is green.
+
+85
+00:05:40,350 --> 00:05:47,490
+So I'll now change colors three to be dark green and that's it.
+
+86
+00:05:47,490 --> 00:05:57,300
+One quick note if I do something like colors of 10 is equal to Violet and I hit enter.
+
+87
+00:05:57,740 --> 00:05:59,450
+And let's take a look at what colors looks like.
+
+88
+00:05:59,450 --> 00:06:06,280
+Now you can see that I get red orange yellow dark green and then it shows undefined.
+
+89
+00:06:06,290 --> 00:06:08,060
+Times 6.
+
+90
+00:06:08,070 --> 00:06:14,610
+So what happened here is that I added Violet an index of 10 and that leaves us with a lot of blank space
+
+91
+00:06:14,790 --> 00:06:18,030
+between index of 3 and index of 10.
+
+92
+00:06:18,060 --> 00:06:22,000
+So javascript makes empty spaces there and fills some with undefined.
+
+93
+00:06:22,290 --> 00:06:25,680
+So there's a bunch of empty space in this array which isn't ideal.
+
+94
+00:06:25,680 --> 00:06:29,700
+So in the next video I'm going to show you another way of adding data where we don't have to keep track
+
+95
+00:06:29,700 --> 00:06:33,690
+of how many items are in our array at any given time to wrap up here.
+
+96
+00:06:33,690 --> 00:06:36,030
+I have a few other notes about arrays.
+
+97
+00:06:36,030 --> 00:06:40,130
+The first of which is that there are different ways of defining arrays.
+
+98
+00:06:40,170 --> 00:06:44,460
+The first way is to define an empty array using square brackets.
+
+99
+00:06:44,760 --> 00:06:48,960
+In this case I defined a friend's array but I have no friends unfortunately.
+
+100
+00:06:49,140 --> 00:06:51,200
+So it's just empty square brackets.
+
+101
+00:06:51,360 --> 00:06:57,670
+The other way to define an array that you may come across is to write new array with a capital A and
+
+102
+00:06:57,770 --> 00:06:59,560
+parentheses after it.
+
+103
+00:06:59,610 --> 00:07:05,130
+So I won't go into too much detail as to what this is but think of this as a function.
+
+104
+00:07:05,130 --> 00:07:06,020
+It is a function.
+
+105
+00:07:06,070 --> 00:07:07,570
+We're calling it with parentheses.
+
+106
+00:07:07,650 --> 00:07:10,520
+That makes us a new array just like this one does.
+
+107
+00:07:10,650 --> 00:07:12,840
+So these are equivalent in both cases.
+
+108
+00:07:12,840 --> 00:07:15,760
+We have a friend's array that's empty.
+
+109
+00:07:15,900 --> 00:07:19,370
+The next point is that arrays can hold any type of data.
+
+110
+00:07:19,560 --> 00:07:25,140
+So you've only seen them so far with strings like Charlie and Liz but we can fill them with numbers
+
+111
+00:07:25,380 --> 00:07:32,130
+with booleans with no undefined with strings with other arrays which will see a little bit later.
+
+112
+00:07:32,340 --> 00:07:34,340
+So we can fill arrays with all sorts of data.
+
+113
+00:07:34,590 --> 00:07:36,820
+And they don't all have to be of one type.
+
+114
+00:07:36,840 --> 00:07:43,170
+So here's an example with a number of boolean a string and no all in one array.
+
+115
+00:07:43,230 --> 00:07:48,640
+The very last thing I'll point out is that arrays also have a length property just like strings.
+
+116
+00:07:48,960 --> 00:07:54,960
+In this example I'm defining an array of four items and I run nothing startling.
+
+117
+00:07:55,050 --> 00:07:56,430
+It gives me four.
+
+118
+00:07:56,850 --> 00:07:59,490
+I'll go ahead and open up my Consul and demonstrate that.
+
+119
+00:07:59,790 --> 00:08:04,400
+Let's define a new array here called dogs and dogs.
+
+120
+00:08:04,500 --> 00:08:07,370
+I'm going to define a string.
+
+121
+00:08:07,510 --> 00:08:16,460
+Rusty Wyatt and Ali just like that.
+
+122
+00:08:16,740 --> 00:08:24,040
+And if I run Dogstar at length I get three because length just counts.
+
+123
+00:08:24,060 --> 00:08:25,480
+How many things are in there.
+
+124
+00:08:25,770 --> 00:08:31,140
+But remember that the highest index in this array is always one less than the length.
+
+125
+00:08:31,200 --> 00:08:37,630
+So all the is an index to dogs bracket 2 and you get all the.
+
+126
+00:08:37,710 --> 00:08:39,660
+So that's important just like strings.
+
+127
+00:08:39,840 --> 00:08:46,230
+We can define a string var name equals resti and we do named hotlink.
+
+128
+00:08:46,770 --> 00:08:54,000
+We get 5 because there's five characters but the index of the Y is index for name of four.
+
+129
+00:08:54,180 --> 00:08:55,410
+Gives me why.
+
+130
+00:08:55,410 --> 00:08:58,700
+Because indices start at zero.
+
+131
+00:08:58,710 --> 00:08:59,840
+All right so that's it for a race.
+
+132
+00:08:59,850 --> 00:09:02,780
+Now in the next video we're going to have a quick problem set.
+

@@ -1,0 +1,648 @@
+﻿1
+00:00:00,510 --> 00:00:01,810
+All right welcome back.
+
+2
+00:00:01,860 --> 00:00:07,110
+In this video I want to talk a little bit more about some of the different types of events so far we've
+
+3
+00:00:07,110 --> 00:00:14,070
+encountered the click event and the change event that we used on a text input or a number input in the
+
+4
+00:00:14,070 --> 00:00:15,640
+score keeper app.
+
+5
+00:00:15,780 --> 00:00:18,930
+I'm going to start by introducing the M.B.A. event reference.
+
+6
+00:00:18,930 --> 00:00:20,720
+So that's the web page I'm on right here.
+
+7
+00:00:20,940 --> 00:00:26,790
+And this web page is a reference to all the different events that are recognized by the DOM API.
+
+8
+00:00:26,910 --> 00:00:30,840
+And if we scroll down you might be surprised at just how many there are.
+
+9
+00:00:31,260 --> 00:00:36,570
+And I'm actually going to have you in the next exercise write some code just to count how many there
+
+10
+00:00:36,570 --> 00:00:41,040
+are is a fun practical example of using the geometry of cons..
+
+11
+00:00:41,310 --> 00:00:45,990
+So you're going to count how many there are but for now just know that there are a ton of them and there
+
+12
+00:00:45,990 --> 00:00:53,490
+are probably five or six maybe up to 10 really common ones that will use all the time things like for
+
+13
+00:00:53,520 --> 00:01:00,120
+drag and drop for a hovering event click events maybe double clicks key press events but otherwise a
+
+14
+00:01:00,120 --> 00:01:04,780
+lot of the more obscure ones will never use or maybe you'll use them one time in a project.
+
+15
+00:01:05,190 --> 00:01:09,660
+But it's good to know that this web page exists that there are so many events that we may never even
+
+16
+00:01:09,660 --> 00:01:10,510
+use.
+
+17
+00:01:10,740 --> 00:01:15,240
+And this video I'm going to focus on two event in particular that has to do with hovering so hovering
+
+18
+00:01:15,240 --> 00:01:16,980
+over an element with your mouse.
+
+19
+00:01:17,100 --> 00:01:20,490
+And those are called mouse over and mouse out.
+
+20
+00:01:20,790 --> 00:01:26,550
+So I have a simple application and I'm going to make it's called to do that age him in my new file and
+
+21
+00:01:26,580 --> 00:01:31,910
+I'm just going to add my regular boilerplate and this isn't going to be a complete To Do list.
+
+22
+00:01:31,920 --> 00:01:37,950
+We won't be able to add new or that we're going to do is have a UL with three or four allies.
+
+23
+00:01:38,070 --> 00:01:51,060
+Things like wash cat feed cat and we'll do feed cat to dog and save.
+
+24
+00:01:51,060 --> 00:01:54,340
+So we have our three to do's and that's all we need for now.
+
+25
+00:01:54,630 --> 00:01:55,530
+And what I want to do.
+
+26
+00:01:55,530 --> 00:01:58,590
+I'm going to open this up in the browser.
+
+27
+00:01:58,590 --> 00:02:04,380
+I want to be able to click and that should gray out the to do item and maybe strikethrough it put a
+
+28
+00:02:04,380 --> 00:02:05,190
+line through it.
+
+29
+00:02:05,340 --> 00:02:09,250
+But I also want to be able to hover and I want to know which one I'm hovering over.
+
+30
+00:02:09,270 --> 00:02:12,960
+So I get this nice user feedback as I hover over one of these.
+
+31
+00:02:12,960 --> 00:02:18,210
+Maybe you will have it change color or bold will start by just making it green and there are so many
+
+32
+00:02:18,210 --> 00:02:21,640
+nice effects you can do for your user using these hover events.
+
+33
+00:02:21,810 --> 00:02:26,400
+So I'll show that right now before we can actually write any javascript though we need to make our file
+
+34
+00:02:26,400 --> 00:02:26,870
+.
+
+35
+00:02:26,940 --> 00:02:31,010
+So I'm going to save a new file and I'll call it to do's.
+
+36
+00:02:31,180 --> 00:02:32,200
+Yes.
+
+37
+00:02:32,520 --> 00:02:44,580
+And as always I had my alert connected save go back here and add in our script at the bottom and our
+
+38
+00:02:44,580 --> 00:02:51,520
+source is equal to the deuce dot J.S. and we'll save or refresh and we get our alert.
+
+39
+00:02:51,630 --> 00:02:53,190
+That means it's working.
+
+40
+00:02:53,850 --> 00:02:58,710
+Let's go at that first event that I mentioned and the first thing we need to do is select something
+
+41
+00:02:58,770 --> 00:03:00,100
+before we can manipulate.
+
+42
+00:03:00,120 --> 00:03:03,050
+So I'm going to start by just doing it to the first lie.
+
+43
+00:03:03,180 --> 00:03:12,810
+So I'm going to use var first ally ECOs document and I'll do a query selector ally and remember this
+
+44
+00:03:12,810 --> 00:03:18,210
+gives me the first lie because I didn't do a query selector all and then I'm going to add my event listener
+
+45
+00:03:18,270 --> 00:03:19,560
+to first ally.
+
+46
+00:03:19,740 --> 00:03:27,750
+So we went first ally add event listener and the event that we're listening for is not click it's mouse
+
+47
+00:03:28,290 --> 00:03:30,060
+over.
+
+48
+00:03:30,060 --> 00:03:32,350
+And then we give our callback function.
+
+49
+00:03:33,300 --> 00:03:38,650
+And the way that mouseover works it's going to fire as soon as we start hovering over something.
+
+50
+00:03:38,790 --> 00:03:46,170
+So if I was working with this last ally my mouse over it would fire right now and right now and the
+
+51
+00:03:46,170 --> 00:03:47,880
+second one and right now and this first one.
+
+52
+00:03:47,880 --> 00:03:50,760
+So it's about when the hover starts.
+
+53
+00:03:50,910 --> 00:03:57,570
+So first of I'd add event listener mouseover and we'll just do a log instead of a callback mouse over
+
+54
+00:03:59,130 --> 00:04:05,730
+and if we refresh open up our console remember we only did it to the first ally and there we go we get
+
+55
+00:04:05,730 --> 00:04:06,950
+a mouseover.
+
+56
+00:04:07,080 --> 00:04:11,610
+Also it's important to notice it's not continually firing every single time.
+
+57
+00:04:11,660 --> 00:04:16,050
+You know we're over this it's when our hover over an element actually begins.
+
+58
+00:04:16,080 --> 00:04:20,610
+So that's useful so that we're not constantly you know constantly logging or whatever the code is that
+
+59
+00:04:20,610 --> 00:04:21,770
+we have in the callback.
+
+60
+00:04:21,780 --> 00:04:24,530
+It only happens when we mouse over initially.
+
+61
+00:04:24,900 --> 00:04:29,660
+So rather than just cancel that logging let's work on changing the color of the ally.
+
+62
+00:04:29,670 --> 00:04:30,640
+Let's make it green.
+
+63
+00:04:30,720 --> 00:04:32,880
+So when you hover over it turns green.
+
+64
+00:04:32,880 --> 00:04:43,870
+So we need to do first ally dot style that color equals green and we save refresh and now watch I'll
+
+65
+00:04:43,880 --> 00:04:49,950
+make him a little bigger and make this a little bigger here and refresh as I start my mouse over it
+
+66
+00:04:49,950 --> 00:04:50,800
+turns green.
+
+67
+00:04:51,240 --> 00:04:55,300
+And then when I go away it stays green which is not what we want.
+
+68
+00:04:55,410 --> 00:04:57,110
+We just want this to be a hover effect.
+
+69
+00:04:57,150 --> 00:04:59,460
+So when I hover over the ally it turns green.
+
+70
+00:04:59,490 --> 00:05:05,010
+But when I stop it goes back to being black to do that we actually need another event and that event
+
+71
+00:05:05,010 --> 00:05:07,380
+will fire when our hover is over.
+
+72
+00:05:07,410 --> 00:05:13,730
+So when we leave this element and it's called Mouse out so we're going to do the same thing first ally
+
+73
+00:05:13,750 --> 00:05:13,940
+.
+
+74
+00:05:14,090 --> 00:05:18,280
+But at event Lessner mouse out.
+
+75
+00:05:19,680 --> 00:05:27,510
+And then our callback function and we'll just do a first fly style attack color and set it back to black
+
+76
+00:05:27,510 --> 00:05:27,960
+.
+
+77
+00:05:28,080 --> 00:05:37,130
+Just like that and if we refresh you can see it goes green and then the mouse out goes back to black
+
+78
+00:05:37,130 --> 00:05:39,590
+and mouse over a green and so on.
+
+79
+00:05:40,020 --> 00:05:45,000
+So now we get this little hover effect that shows us what we're hovering over basically which to do
+
+80
+00:05:45,190 --> 00:05:46,960
+is selected.
+
+81
+00:05:46,950 --> 00:05:50,130
+So now let's get this to work for every single lie.
+
+82
+00:05:50,160 --> 00:05:52,230
+It's just a few small changes that we need to do.
+
+83
+00:05:52,260 --> 00:05:55,460
+And the first of them is we need to select all allies.
+
+84
+00:05:55,510 --> 00:06:02,940
+Are going to change very variable to be far lies documented queries letter all allies so that gives
+
+85
+00:06:02,940 --> 00:06:05,070
+us a list with the three allies.
+
+86
+00:06:05,400 --> 00:06:10,690
+And then of course unfortunately we can't just do this lies that an event listener that doesn't work
+
+87
+00:06:10,690 --> 00:06:11,170
+.
+
+88
+00:06:11,160 --> 00:06:14,860
+We need to do a for loop four of our equals zero.
+
+89
+00:06:15,090 --> 00:06:18,950
+I less than lies that link.
+
+90
+00:06:19,080 --> 00:06:20,710
+Plus plus.
+
+91
+00:06:20,870 --> 00:06:25,150
+And hopefully you're starting to feel a little more comfortable doing this adding events or manipulating
+
+92
+00:06:25,140 --> 00:06:30,100
+something instead of a loop where we select a bunch of them and then we loop through and we do something
+
+93
+00:06:30,090 --> 00:06:30,990
+individually.
+
+94
+00:06:31,180 --> 00:06:35,490
+Like I said a few videos ago really common pattern really important that we start to get comfortable
+
+95
+00:06:35,500 --> 00:06:36,470
+with it.
+
+96
+00:06:36,490 --> 00:06:40,550
+So inside of here rather than doing first else I'd add event listener.
+
+97
+00:06:40,650 --> 00:06:45,760
+We're working with allies bracket eyes so that's our individual ally.
+
+98
+00:06:45,930 --> 00:06:51,950
+And then I'm going to just copy this code and there is a problem with this code.
+
+99
+00:06:51,960 --> 00:06:55,090
+I mean it will work but it won't work in the way that we want it to.
+
+100
+00:06:55,360 --> 00:07:00,450
+What will happen is we're adding an event listener to each ally allies.
+
+101
+00:07:00,960 --> 00:07:06,430
+But when we mouse over any of them we're only changing first ally dot style black colored.
+
+102
+00:07:06,540 --> 00:07:09,800
+And actually it won't work because first lie is not defined anymore.
+
+103
+00:07:09,810 --> 00:07:10,860
+We changed the name.
+
+104
+00:07:11,040 --> 00:07:12,740
+But that's not what we wanted anyways.
+
+105
+00:07:12,750 --> 00:07:17,220
+We want it to be the ally that was hovered over that the mouse over event occurred on.
+
+106
+00:07:17,440 --> 00:07:21,110
+So we can change this to the word this.
+
+107
+00:07:21,270 --> 00:07:26,400
+Remember that the key word this instead of an event listener refers to the item or the element that
+
+108
+00:07:26,400 --> 00:07:28,020
+the event was triggered on.
+
+109
+00:07:28,260 --> 00:07:33,210
+So this style but colored equal screen and then we'll just duplicate this code again.
+
+110
+00:07:33,850 --> 00:07:41,940
+But instead of mouse over we'll do a mouse out and instead of going to Green we'll go back to black
+
+111
+00:07:42,630 --> 00:07:48,780
+and then we can get rid of this and refresh and there we go.
+
+112
+00:07:48,880 --> 00:07:50,710
+We have our nice little hover effect.
+
+113
+00:07:51,060 --> 00:07:55,830
+So the last thing they will talk about is adding a click listener just to make this a little more complete
+
+114
+00:07:55,830 --> 00:07:56,210
+.
+
+115
+00:07:56,230 --> 00:08:07,150
+So same thing like I thought had event listener click add or a callback function.
+
+116
+00:08:07,480 --> 00:08:10,610
+And what we're going to do here is use a class.
+
+117
+00:08:10,830 --> 00:08:12,910
+So I'm going to just add the class first.
+
+118
+00:08:12,900 --> 00:08:19,520
+It doesn't exist but I'm going to say this does class list and will do toggle the start class list that
+
+119
+00:08:19,600 --> 00:08:20,290
+toggle.
+
+120
+00:08:20,560 --> 00:08:22,680
+And we'll just call the class done.
+
+121
+00:08:23,110 --> 00:08:29,930
+So the point is I can click on one of these and it should Gray out and have a strikethrough effect.
+
+122
+00:08:30,030 --> 00:08:35,920
+And even though I don't have a class done defined it's still added so I can show you that open up the
+
+123
+00:08:35,910 --> 00:08:38,720
+console and let's inspect one of these.
+
+124
+00:08:39,070 --> 00:08:44,080
+And then let's actually click on it and you can see or click on the first one you can see by the way
+
+125
+00:08:44,080 --> 00:08:48,470
+the color green and black changing over here as a hover.
+
+126
+00:08:48,490 --> 00:08:52,920
+But as I click on this first one you can see it adds class done.
+
+127
+00:08:52,920 --> 00:08:55,740
+And then I click again and it goes away.
+
+128
+00:08:55,750 --> 00:08:58,070
+So now we just need to define the class done.
+
+129
+00:08:58,330 --> 00:08:59,290
+So let's do that now.
+
+130
+00:08:59,380 --> 00:09:07,350
+I'll go over to sublime and make a new file and I'm going to save this as to do's that C Ss and the
+
+131
+00:09:07,360 --> 00:09:10,310
+first thing we do is define our class done.
+
+132
+00:09:10,950 --> 00:09:16,960
+And I'm going to give it a strikethrough effect which we do with text decoration and we set that line
+
+133
+00:09:16,950 --> 00:09:24,450
+through and also change the opacity so opacity will be 0.5 and save.
+
+134
+00:09:24,820 --> 00:09:30,160
+And then of course you need to link this to do start to assess to or aged him file with them like tag
+
+135
+00:09:30,900 --> 00:09:33,990
+to Due's gutsiest us and we can save.
+
+136
+00:09:34,000 --> 00:09:35,440
+Now let's test it out.
+
+137
+00:09:35,660 --> 00:09:36,830
+You refresh the page.
+
+138
+00:09:36,850 --> 00:09:37,470
+I hover.
+
+139
+00:09:37,500 --> 00:09:41,520
+So get are two events changing the color black and green.
+
+140
+00:09:41,520 --> 00:09:45,360
+And now I can click and we get a strikethrough effect.
+
+141
+00:09:45,540 --> 00:09:47,900
+And this line through as well.
+
+142
+00:09:48,120 --> 00:09:53,550
+There are a few small changes I would make However if we go back to our javascript file the first one
+
+143
+00:09:53,560 --> 00:09:56,590
+is rather than changing the color manually here.
+
+144
+00:09:56,640 --> 00:09:58,350
+Changing it to be green and black.
+
+145
+00:09:58,600 --> 00:10:00,800
+I think it's still better to do it with our own class.
+
+146
+00:10:00,850 --> 00:10:07,240
+So I'm going to make a new class and I'm going to call this one selected and then I'm going to say when
+
+147
+00:10:07,240 --> 00:10:12,060
+it's selected text or color should be green just like that.
+
+148
+00:10:12,310 --> 00:10:13,880
+And then we'll go with the Javascript.
+
+149
+00:10:13,990 --> 00:10:21,250
+And when we mouse over all we want to do is say this class list add selected.
+
+150
+00:10:23,160 --> 00:10:29,340
+And this comes back to that separation of concerns idea where we don't want our javascript's manipulating
+
+151
+00:10:29,350 --> 00:10:36,250
+individual styles rather we can use javascript to turn on parts of our C Ss and the SAS will actually
+
+152
+00:10:36,250 --> 00:10:38,170
+be in charge of the styling.
+
+153
+00:10:38,460 --> 00:10:44,550
+So that will give it the class selected when we hover over and when we leave or when we mess out we'll
+
+154
+00:10:44,560 --> 00:10:55,040
+do this dumb class list remove selected and if we save refresh you can see it looks pretty good.
+
+155
+00:10:55,530 --> 00:10:59,460
+We click we get our strikethrough.
+
+156
+00:11:00,080 --> 00:11:00,590
+All right.
+
+157
+00:11:00,610 --> 00:11:02,260
+There's a little to do list.
+
+158
+00:11:02,740 --> 00:11:05,000
+So this is a slightly nicer way of doing it.
+
+159
+00:11:05,050 --> 00:11:06,390
+Functionally it looks the same.
+
+160
+00:11:06,420 --> 00:11:11,720
+It's just a better practice to use classes rather than adding and tweaking styles one at a time.
+
+161
+00:11:11,740 --> 00:11:16,270
+So to sum up here we saw two new events mouseover and mouse out.
+
+162
+00:11:16,530 --> 00:11:21,690
+And we also got some more practice setting up events instead of a loop where we used this keyword
+

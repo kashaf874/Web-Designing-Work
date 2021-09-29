@@ -1,0 +1,596 @@
+﻿1
+00:00:00,570 --> 00:00:01,430
+Welcome back.
+
+2
+00:00:01,590 --> 00:00:06,000
+In this video we're going to pick up where we left off and keep talking about some of these important
+
+3
+00:00:06,000 --> 00:00:11,220
+methods that I want to showcase the next one we're going to discuss is after eight.
+
+4
+00:00:11,370 --> 00:00:16,290
+And it's short for attribute so I'm going to go to the docs and just look for attributes.
+
+5
+00:00:16,530 --> 00:00:19,550
+It's going to be up top here ETR.
+
+6
+00:00:19,680 --> 00:00:20,500
+There we go.
+
+7
+00:00:20,730 --> 00:00:24,930
+And what we use it for is to retrieve the value of an attribute.
+
+8
+00:00:25,230 --> 00:00:30,510
+So according to the docs it gets the value of an attribute for the first element in a set of matched
+
+9
+00:00:30,540 --> 00:00:34,680
+elements or set one or more attributes for every matched element.
+
+10
+00:00:34,680 --> 00:00:39,170
+So we can retrieve an attribute or we can set an attribute.
+
+11
+00:00:39,210 --> 00:00:45,240
+Hopefully you're noticing a pattern by now where with these methods we can either get information retrieve
+
+12
+00:00:45,360 --> 00:00:51,320
+an attribute or retrieve styling or retrieve the text or enraged him out.
+
+13
+00:00:51,540 --> 00:00:55,610
+And then we can also set them by passing it an argument to the method.
+
+14
+00:00:55,620 --> 00:00:57,810
+So one method behaves in two different ways.
+
+15
+00:00:57,960 --> 00:01:02,970
+And this paradigm is called the getter and setter paradigm where we have a getter to retrieve information
+
+16
+00:01:03,000 --> 00:01:05,600
+and a setter to set a new value.
+
+17
+00:01:06,060 --> 00:01:08,520
+Let's take a look at some of the examples here.
+
+18
+00:01:08,520 --> 00:01:15,140
+The G-code docs always have excellent examples and documentation and tutorial style writing.
+
+19
+00:01:15,150 --> 00:01:16,570
+So let's take a look here.
+
+20
+00:01:16,710 --> 00:01:25,170
+We have an image and it has an I.D. a source and an alt text so we can select that so we can select
+
+21
+00:01:25,170 --> 00:01:30,610
+the image with great photo ID great photo dot H.
+
+22
+00:01:31,050 --> 00:01:35,160
+And we pass in what we're trying to change which is Alt.
+
+23
+00:01:35,250 --> 00:01:42,990
+And then we can pass it in a new value and you can also see down here we can use TTR to set multiple
+
+24
+00:01:42,990 --> 00:01:45,050
+values at once or multiple attributes.
+
+25
+00:01:45,120 --> 00:01:51,580
+So we can set the text and the title attribute by passing in an object just like the CSSA method.
+
+26
+00:01:51,880 --> 00:01:52,130
+OK.
+
+27
+00:01:52,140 --> 00:01:53,540
+So let's play around with this.
+
+28
+00:01:53,820 --> 00:01:56,050
+Here's our page we've been working with.
+
+29
+00:01:56,130 --> 00:01:59,770
+I'm going to add in a little bit more of each team I'll content.
+
+30
+00:01:59,790 --> 00:02:06,750
+So at the bottom here I'm going to add an image tag and the source is going to be my favorite pine martin
+
+31
+00:02:06,760 --> 00:02:06,980
+.
+
+32
+00:02:07,230 --> 00:02:08,460
+So adorable.
+
+33
+00:02:08,460 --> 00:02:16,500
+And what we're going to do is use J query and the TTR method to change that image source to the terrifying
+
+34
+00:02:16,560 --> 00:02:17,530
+pine martin.
+
+35
+00:02:18,020 --> 00:02:18,620
+OK.
+
+36
+00:02:18,930 --> 00:02:20,500
+So Will refresh our page.
+
+37
+00:02:20,630 --> 00:02:27,540
+Here is our image and what would be a good first exercise is to select the image and make it a little
+
+38
+00:02:27,540 --> 00:02:29,620
+bit more manageable so smaller.
+
+39
+00:02:29,780 --> 00:02:37,740
+So we'll select image see us and we can start by just looking at what the width currently is which is
+
+40
+00:02:38,070 --> 00:02:42,550
+1133 pixels and let's make it a lot smaller.
+
+41
+00:02:42,630 --> 00:02:48,600
+So we'll change with 2 500 pixels just like that.
+
+42
+00:02:48,920 --> 00:02:50,780
+OK that looks a lot better.
+
+43
+00:02:51,450 --> 00:02:57,050
+And actually that's a little smaller and months even to 200.
+
+44
+00:02:57,060 --> 00:02:57,630
+There we go.
+
+45
+00:02:57,720 --> 00:02:59,600
+There's our adorable pine martin.
+
+46
+00:02:59,790 --> 00:03:04,150
+So we'll use TTR to go ahead and change the image source.
+
+47
+00:03:04,350 --> 00:03:09,790
+So we need to select the image again like that dot 8.
+
+48
+00:03:10,290 --> 00:03:14,580
+And we can get the value of source first just retrieve it.
+
+49
+00:03:14,580 --> 00:03:21,060
+This is the image source and then we can also set it by passing in our second argument which is the
+
+50
+00:03:21,210 --> 00:03:25,380
+URL that I copied and have on my clipboard and there we go.
+
+51
+00:03:25,410 --> 00:03:26,830
+It updates automatically.
+
+52
+00:03:26,880 --> 00:03:29,910
+And there's our terrifying pine martin.
+
+53
+00:03:30,930 --> 00:03:32,460
+So that's one example.
+
+54
+00:03:32,460 --> 00:03:38,850
+Another thing that we could do here is select this input which is type equals text and we could change
+
+55
+00:03:38,850 --> 00:03:41,110
+the value of the type attribute.
+
+56
+00:03:41,280 --> 00:03:47,260
+So we'll do that here input and then let's look at the attribute.
+
+57
+00:03:47,400 --> 00:03:49,110
+Well let's start by just looking at input.
+
+58
+00:03:49,170 --> 00:03:50,890
+It's the only one on the page.
+
+59
+00:03:51,270 --> 00:04:01,290
+And then we'll do that attribute type and we see type is text and now we can play around with it and
+
+60
+00:04:01,290 --> 00:04:03,500
+change that to be type is colored.
+
+61
+00:04:03,720 --> 00:04:07,000
+And watch this input here as I hit enter.
+
+62
+00:04:07,380 --> 00:04:11,670
+It now changes to a color input and we can do the same thing.
+
+63
+00:04:11,760 --> 00:04:15,340
+Change it this time to be a checkbox.
+
+64
+00:04:15,360 --> 00:04:16,630
+There we go.
+
+65
+00:04:17,430 --> 00:04:17,740
+OK.
+
+66
+00:04:17,760 --> 00:04:23,890
+Let's go back to text because we are going to use this later in the video as a text input.
+
+67
+00:04:24,090 --> 00:04:30,360
+The last thing that I want to demonstrate is the behavior of the TR method on multiple elements so let's
+
+68
+00:04:30,360 --> 00:04:32,700
+add in a few image tags.
+
+69
+00:04:32,820 --> 00:04:38,850
+So we'll do one two three images and I am going to need to refresh to get those.
+
+70
+00:04:39,000 --> 00:04:40,890
+And there those gigantic images.
+
+71
+00:04:40,980 --> 00:04:53,880
+So I'm going to resize again and that will be Image dot see SS with Khama 200 acts and because of the
+
+72
+00:04:53,880 --> 00:04:58,000
+magic of J Query that will make all of them 200 pixels.
+
+73
+00:04:58,440 --> 00:05:04,380
+OK let's suppose I want to only change the first one here to be the scary pine marten photo with the
+
+74
+00:05:04,380 --> 00:05:05,070
+teeth.
+
+75
+00:05:05,380 --> 00:05:12,120
+What I did earlier won't work if I try and just select the image that is actually all images and so
+
+76
+00:05:12,120 --> 00:05:14,620
+it will change all three of their image sources.
+
+77
+00:05:14,610 --> 00:05:23,460
+So if I only want the first one I can use image colon and remember there is first of type like that
+
+78
+00:05:24,210 --> 00:05:31,380
+for the built in J queery first which is shorter but actually slightly slower because it's not using
+
+79
+00:05:31,620 --> 00:05:33,420
+a built in CSSA selector.
+
+80
+00:05:33,570 --> 00:05:40,010
+So I'll go back to first of type and then we can change source to be our scary image you know.
+
+81
+00:05:40,140 --> 00:05:44,250
+And if I hit enter it only impacts that first image.
+
+82
+00:05:44,670 --> 00:05:51,060
+And if I wanted to update the last image to have the same image source this terrifying pine martin I
+
+83
+00:05:51,060 --> 00:05:59,400
+have a few options and the first one that I'll show is to select all images like this and then use the
+
+84
+00:05:59,420 --> 00:06:05,280
+dot last method which is something you haven't seen yet and this will return the last element from a
+
+85
+00:06:05,280 --> 00:06:06,240
+given selector.
+
+86
+00:06:06,420 --> 00:06:12,240
+So this selects all three images and then we're asking for the last one and then we can do that ATSDR
+
+87
+00:06:12,750 --> 00:06:16,820
+source and then we can paste in our image source and hit enter.
+
+88
+00:06:17,070 --> 00:06:20,670
+And you can see that the last image is changed as well.
+
+89
+00:06:20,700 --> 00:06:25,800
+And then lastly I'll demonstrate changing all three of them together so I have a new image you are.
+
+90
+00:06:25,830 --> 00:06:32,440
+I'll copy over here and will change the source attribute on all of them by just selecting all images
+
+91
+00:06:33,960 --> 00:06:41,280
+like this and then running that attribute source comma and pasting in our New You are all and all three
+
+92
+00:06:41,280 --> 00:06:43,310
+images change simultaneously.
+
+93
+00:06:43,750 --> 00:06:48,810
+So to summarize TTR if we just give it one argument like source.
+
+94
+00:06:48,880 --> 00:06:51,020
+But we don't pass in a second argument.
+
+95
+00:06:51,090 --> 00:06:53,540
+It will just return the value of source.
+
+96
+00:06:53,790 --> 00:06:54,810
+So that's the getter.
+
+97
+00:06:54,930 --> 00:07:00,450
+And then if we provide a second argument like a new you r l like we did here that will actually update
+
+98
+00:07:00,450 --> 00:07:06,070
+the value of source on every single element that we selected previously.
+
+99
+00:07:06,090 --> 00:07:10,020
+So the next thing that I want to demonstrate is the Vau method.
+
+100
+00:07:10,020 --> 00:07:16,490
+So VHDL what Val does is that it helps us extract the value from an input.
+
+101
+00:07:16,530 --> 00:07:22,200
+So if you can think back to when you made that scorekeeper with plain javascript and we had that number
+
+102
+00:07:22,290 --> 00:07:28,740
+input and that input you could specify the winning score for playing to 5 or to 10 and we needed to
+
+103
+00:07:28,750 --> 00:07:30,640
+extract the value out of there.
+
+104
+00:07:30,630 --> 00:07:33,010
+We use a property called value.
+
+105
+00:07:33,250 --> 00:07:38,160
+Well Vau is J queries wrapper for value just like each tim.
+
+106
+00:07:38,190 --> 00:07:44,360
+It's a wrapper for enraged Jamail and text is the wrapper for text content.
+
+107
+00:07:44,370 --> 00:07:47,630
+You can take a look at a few examples as you can see here.
+
+108
+00:07:47,790 --> 00:07:53,950
+If we don't pass in any arguments it will return the value of a particular element that we select.
+
+109
+00:07:54,490 --> 00:08:00,480
+So in this case we are grabbing the dropdown menu at the select element with class of foo and then we're
+
+110
+00:08:00,490 --> 00:08:06,990
+doing Val on it which will tell us which element or which part of the dropdown is selected and then
+
+111
+00:08:07,000 --> 00:08:12,720
+we can also use the same syntax but we pass in an argument and that will change the value of an input
+
+112
+00:08:12,720 --> 00:08:13,230
+.
+
+113
+00:08:13,240 --> 00:08:18,870
+So let's go to our text input here and I'm going to clear the console and we'll go ahead and select
+
+114
+00:08:19,020 --> 00:08:20,560
+this text input.
+
+115
+00:08:20,910 --> 00:08:28,090
+So a dollar sign input just like that and then we'll run Val with no arguments.
+
+116
+00:08:28,350 --> 00:08:33,420
+And right now it would give us an empty string because the value in here is an empty string.
+
+117
+00:08:33,420 --> 00:08:34,600
+There's nothing inside there.
+
+118
+00:08:34,890 --> 00:08:41,900
+So if we type something now like my name and then we ask for the value it tells us cold steel.
+
+119
+00:08:42,150 --> 00:08:48,720
+So whatever is in here is grabbed when we run up though and then like all the other methods we've seen
+
+120
+00:08:48,900 --> 00:08:51,290
+it will also act as a setter method.
+
+121
+00:08:51,450 --> 00:09:01,080
+So if I pass in something like rusty steel and I hit enter I can see that it updates the input to now
+
+122
+00:09:01,090 --> 00:09:03,070
+say resti still.
+
+123
+00:09:03,180 --> 00:09:07,320
+You might be wondering when we would actually write code to update an input.
+
+124
+00:09:07,330 --> 00:09:10,150
+Usually we let a user update the input.
+
+125
+00:09:10,230 --> 00:09:14,630
+The one common use case that I can think of is if we wanted to clear the value.
+
+126
+00:09:14,710 --> 00:09:20,550
+So if this was a To Do list and we wanted the user to be able to add new Candie's or something I could
+
+127
+00:09:20,550 --> 00:09:28,410
+type in jelly beans which are way overrated by the way and we get hit enter and we want to add a new
+
+128
+00:09:28,420 --> 00:09:31,670
+ally and then we want to delete what's inside of here.
+
+129
+00:09:31,840 --> 00:09:33,460
+We would use dot.
+
+130
+00:09:33,540 --> 00:09:35,290
+So I'll show you.
+
+131
+00:09:35,290 --> 00:09:36,290
+Just looks like this.
+
+132
+00:09:36,390 --> 00:09:42,490
+And then we're going to set it to an empty string and that erases the content inside of there so we
+
+133
+00:09:42,480 --> 00:09:45,040
+will be doing that actually when we make our own to do list.
+
+134
+00:09:45,080 --> 00:09:49,960
+We'll use Vau with an empty string to reset it text and put.
+
+135
+00:09:49,960 --> 00:09:54,890
+Last thing I'll mention is that Darvell works on all elements that have a value attribute.
+
+136
+00:09:55,050 --> 00:10:01,170
+So it's not just inputs with type calls text it's things like checkboxes and color for color inputs
+
+137
+00:10:01,410 --> 00:10:07,110
+but it also includes dropdown menus which I can go ahead and write will make a new dropdown menu which
+
+138
+00:10:07,120 --> 00:10:16,740
+is a select element and then inside this select we add in options and each option represents one choice
+
+139
+00:10:16,750 --> 00:10:16,850
+.
+
+140
+00:10:17,040 --> 00:10:27,480
+So our options will contain some of the most popular pets in the country like ostrich and turtle and
+
+141
+00:10:27,480 --> 00:10:28,210
+Toad.
+
+142
+00:10:28,600 --> 00:10:35,950
+OK and we'll save and refresh the page and you can see that we now have a dropdown menu with three choices
+
+143
+00:10:36,140 --> 00:10:43,080
+and if I want to know which choice the user has selected I could go over here and I don't just select
+
+144
+00:10:43,330 --> 00:10:44,600
+input any more.
+
+145
+00:10:44,790 --> 00:10:53,070
+I would need to select either select which will give me that dropdown menu and then I just run Vau on
+
+146
+00:10:53,080 --> 00:10:58,210
+that and it tells me that the user has selected toad All right.
+
+147
+00:10:58,230 --> 00:11:06,250
+So to wrap up 80 TR is used to access any specific attribute that we want or to set an attribute and
+
+148
+00:11:06,240 --> 00:11:12,670
+then fülle is used to retrieve the value or set the value of any sort of input or dropdown menu.
+
+149
+00:11:13,110 --> 00:11:13,500
+All right
+

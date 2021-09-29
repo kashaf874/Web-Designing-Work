@@ -1,0 +1,200 @@
+﻿1
+00:00:00,300 --> 00:00:01,660
+Hi welcome to unit 9.
+
+2
+00:00:01,890 --> 00:00:07,980
+So this is the second unit focusing only on javascript no edged him out no CSSA just yet we have this
+
+3
+00:00:07,980 --> 00:00:10,300
+unit which talks about control flow.
+
+4
+00:00:10,410 --> 00:00:14,570
+We just learned about the basics of javascript's of primitives variables.
+
+5
+00:00:14,610 --> 00:00:19,740
+Some of the basic built in methods and we also talked about how we run files and how to use the chrome
+
+6
+00:00:19,740 --> 00:00:25,530
+developer cons. And this unit we're talking about control flow which is really about making decisions
+
+7
+00:00:25,740 --> 00:00:27,980
+and controlling the way that our code runs.
+
+8
+00:00:28,170 --> 00:00:31,950
+So we're going to talk about some really important concepts including IF statements or conditionals
+
+9
+00:00:32,070 --> 00:00:33,180
+and loops.
+
+10
+00:00:33,210 --> 00:00:37,720
+And before I dive into these specific objectives I just want to give you a lay for land.
+
+11
+00:00:37,740 --> 00:00:39,810
+We have three more units after this one.
+
+12
+00:00:39,840 --> 00:00:45,350
+So four more basic gyroscope units in total before we go back to each timeout and see assess.
+
+13
+00:00:45,360 --> 00:00:49,500
+And then we add in javascript together and we talked about something called Dom and inflation.
+
+14
+00:00:49,680 --> 00:00:52,170
+So once we do that we can start making some fun games.
+
+15
+00:00:52,160 --> 00:00:56,850
+We can start really building applications things that are interactive and that look really nice and
+
+16
+00:00:56,850 --> 00:01:03,740
+are styled well not just simple console games or javascript basic games but really substantial applications
+
+17
+00:01:03,750 --> 00:01:06,410
+so we're getting there but I don't need to skip ahead to that.
+
+18
+00:01:06,420 --> 00:01:10,830
+It might be tempting but trust me it's really important that you understand everything that we're going
+
+19
+00:01:10,830 --> 00:01:12,470
+to talk about in the next few minutes.
+
+20
+00:01:12,480 --> 00:01:16,030
+These are probably the most important for the rest of the course.
+
+21
+00:01:16,170 --> 00:01:20,460
+You might think that they're the most boring or the least exciting reasons for not making something
+
+22
+00:01:20,580 --> 00:01:23,040
+there's no exciting finished product there's no real payoff.
+
+23
+00:01:23,130 --> 00:01:27,270
+But if promise if you just wait a few units you'll make it through this section which hopefully is exciting
+
+24
+00:01:27,270 --> 00:01:27,930
+enough.
+
+25
+00:01:27,930 --> 00:01:30,270
+We talk about how programming languages work.
+
+26
+00:01:30,300 --> 00:01:34,770
+We talk about writing logic it's really a creative endeavor in my opinion it's not something that's
+
+27
+00:01:34,800 --> 00:01:37,910
+as dry or intimidating as it might appear at first.
+
+28
+00:01:37,950 --> 00:01:42,420
+But the point is that what we're going to learn here is foundational for everything else for no Jay
+
+29
+00:01:42,420 --> 00:01:47,490
+asked for Express for Jay Querrey for Dominey relation for databases authentication everything that
+
+30
+00:01:47,490 --> 00:01:52,260
+we're going to talk about in this unit and the next three units is going to carry over to every other
+
+31
+00:01:52,260 --> 00:01:54,750
+topic in this course that involves Javascript.
+
+32
+00:01:54,750 --> 00:01:57,960
+So hang in there we'll get to making those games really really soon.
+
+33
+00:01:57,960 --> 00:02:03,180
+As far as this particular unit is concerned we have four main objectives and they really revolve around
+
+34
+00:02:03,180 --> 00:02:08,280
+two main categories and two main topics which as I mentioned earlier are conditional statements and
+
+35
+00:02:08,280 --> 00:02:08,900
+loops.
+
+36
+00:02:08,910 --> 00:02:14,310
+The first objective is that by the end of this unit I want you to be able to evaluate complex logical
+
+37
+00:02:14,310 --> 00:02:15,160
+statements.
+
+38
+00:02:15,480 --> 00:02:20,460
+So you'll be using things like boolean operators and logical operators and comparison operators.
+
+39
+00:02:20,460 --> 00:02:25,410
+Basically I want you to understand how they work and how they interact and that's closely related to
+
+40
+00:02:25,410 --> 00:02:31,230
+the next objective which is that I want you to be able to write conditional statements with if else
+
+41
+00:02:31,230 --> 00:02:32,870
+if and else components.
+
+42
+00:02:33,000 --> 00:02:38,220
+So three part conditional statements which is how we make decisions in javascript and then the next
+
+43
+00:02:38,220 --> 00:02:40,250
+two objectives pertain to loops.
+
+44
+00:02:40,290 --> 00:02:42,000
+So the first one is pretty simple.
+
+45
+00:02:42,030 --> 00:02:46,770
+I just want you to be able to write for loops and while loops and incorporate them into your own applications
+
+46
+00:02:47,070 --> 00:02:48,450
+and your own exercises.
+
+47
+00:02:48,510 --> 00:02:52,980
+So two types of loops for loops and while loops and then the last objective is that I'd like you to
+
+48
+00:02:52,980 --> 00:02:55,520
+be able to translate from one type to another.
+
+49
+00:02:55,560 --> 00:03:00,400
+So from a for loop to a while loop or take an existing while loop and turn it into a for loop.
+
+50
+00:03:00,510 --> 00:03:05,580
+And then of course sprinkled throughout the unit there are a few exercises small projects and Equus
+

@@ -1,0 +1,620 @@
+﻿1
+00:00:00,210 --> 00:00:03,460
+The next thing we'll tackle is the background on the body.
+
+2
+00:00:03,660 --> 00:00:08,430
+And this actually isn't a background image though if we found one that looked like this that would work
+
+3
+00:00:08,430 --> 00:00:09,270
+just fine.
+
+4
+00:00:09,420 --> 00:00:13,590
+But but it's actually a gradient that CSX is adding for me.
+
+5
+00:00:13,650 --> 00:00:19,430
+So in essence we can write linear gradients and rather than writing them on our own from scratch I'm
+
+6
+00:00:19,470 --> 00:00:25,290
+going to show you a great resource that has some nice pre-done color gradients that we can work with
+
+7
+00:00:25,560 --> 00:00:27,470
+that we can update and edit on our own.
+
+8
+00:00:27,750 --> 00:00:29,850
+So it's called gradients dot com.
+
+9
+00:00:30,030 --> 00:00:35,580
+And then it has a bunch of different gradients we can use arrow keys to see some of them.
+
+10
+00:00:36,180 --> 00:00:39,860
+So I just went through until I found one that I liked.
+
+11
+00:00:40,050 --> 00:00:46,080
+So let's say I wanted to use this all that we need to do is click on get CSSA code or hit the enter
+
+12
+00:00:46,080 --> 00:00:52,120
+key and then copy this code to a clipboard and then we'll select the body.
+
+13
+00:00:52,360 --> 00:00:56,960
+So body and paste that in.
+
+14
+00:00:57,540 --> 00:01:02,610
+So it's really just one line but there are all the different browser prefixes.
+
+15
+00:01:02,880 --> 00:01:09,130
+So for Internet Explorer for Firefox for Chrome for opera all these different prefixes.
+
+16
+00:01:09,240 --> 00:01:09,990
+But what it does.
+
+17
+00:01:10,020 --> 00:01:16,170
+We're setting the background to linear gradient and we're picking two colors and different percentages
+
+18
+00:01:16,170 --> 00:01:18,740
+of those colors and also the angle.
+
+19
+00:01:18,750 --> 00:01:24,390
+So let me show you what it looks like now if we refresh ours.
+
+20
+00:01:24,390 --> 00:01:26,190
+We have this nice gradient.
+
+21
+00:01:26,580 --> 00:01:28,420
+So we can keep playing around there.
+
+22
+00:01:28,620 --> 00:01:31,890
+You can check out a few more and feel free to use your own.
+
+23
+00:01:31,980 --> 00:01:35,860
+The one that I decided on is called Bora-Bora right here.
+
+24
+00:01:36,210 --> 00:01:42,840
+So we'll just copy that copy to clipboard and replace this code.
+
+25
+00:01:42,840 --> 00:01:49,410
+All of this here with that new gradient which again is just another linear gradient that someone else
+
+26
+00:01:49,410 --> 00:01:52,870
+wrote two colors different percentages of each.
+
+27
+00:01:53,150 --> 00:01:54,450
+And we'll save.
+
+28
+00:01:54,780 --> 00:01:56,250
+And go check it out now.
+
+29
+00:01:56,520 --> 00:01:57,830
+And there we go.
+
+30
+00:01:57,840 --> 00:01:59,190
+So we're getting closer.
+
+31
+00:01:59,430 --> 00:02:02,860
+The next big thing that we need to work on are the icons.
+
+32
+00:02:03,060 --> 00:02:05,530
+So we have a plus icon appear.
+
+33
+00:02:05,640 --> 00:02:10,130
+And what this does is it shows and hides the form and then we have the trash can.
+
+34
+00:02:10,130 --> 00:02:16,100
+I can see that we also need to include those icons are part of a library called font.
+
+35
+00:02:16,110 --> 00:02:16,780
+Awesome.
+
+36
+00:02:17,050 --> 00:02:22,650
+So go to font awesome and just google for the Web site is Fonte awesome.
+
+37
+00:02:22,660 --> 00:02:24,030
+I get her I.
+
+38
+00:02:24,930 --> 00:02:29,660
+And all that it is is a collection of a bunch of icons.
+
+39
+00:02:29,970 --> 00:02:36,780
+So let me show you if we look under icons there's a huge list of all the different icons we can use
+
+40
+00:02:38,260 --> 00:02:39,720
+so you can see there.
+
+41
+00:02:40,380 --> 00:02:48,030
+So we need to include this library inside of our application so we can either go to download it right
+
+42
+00:02:48,030 --> 00:02:52,740
+there and click on download or we could also do a font.
+
+43
+00:02:52,740 --> 00:02:57,370
+Awesome CDN and just use one of these CDN as well.
+
+44
+00:02:57,450 --> 00:02:58,710
+Either one would work.
+
+45
+00:02:59,100 --> 00:03:06,030
+So for variety sake since they already downloaded Jay query I will use the CD and here copy that link
+
+46
+00:03:06,030 --> 00:03:06,800
+.
+
+47
+00:03:07,470 --> 00:03:15,780
+Then I'll go to my index page Timo and I need to add a link tag because it is CSSA file so it's not
+
+48
+00:03:15,780 --> 00:03:23,100
+actually a javascript file or a font but it's a C Ss file and I'll save and what that does is it actually
+
+49
+00:03:23,100 --> 00:03:29,540
+gives me a bunch of classes that are pre-built and pre-made that I can then add to elements so I'll
+
+50
+00:03:29,550 --> 00:03:30,940
+show you a few examples.
+
+51
+00:03:31,230 --> 00:03:40,740
+If you wanted to use say the battery empty or battery threequarters all we need to know is that the
+
+52
+00:03:40,740 --> 00:03:47,760
+class is called f a dash battery dash 3 dash courters So we need to add one just copy the code here
+
+53
+00:03:49,140 --> 00:03:51,350
+somewhere into our application.
+
+54
+00:03:51,510 --> 00:03:53,400
+Let's put it in the H-1.
+
+55
+00:03:53,400 --> 00:03:58,980
+It's an eye tag which stands for icon and we give it a class and we don't have to put anything in here
+
+56
+00:03:58,980 --> 00:03:59,060
+.
+
+57
+00:03:59,070 --> 00:04:02,560
+We leave that empty and this stands Rifan awesome.
+
+58
+00:04:02,700 --> 00:04:10,890
+And then this is the name of the icon and will save refresh and we now have that battery icon rather
+
+59
+00:04:10,890 --> 00:04:13,500
+than the three quarter battery icon.
+
+60
+00:04:13,500 --> 00:04:20,700
+We want the plus sign and the garbage can so we'll go over here and inside the H-1 will keep the icon
+
+61
+00:04:21,480 --> 00:04:28,070
+and keep the f a class but we want F.A. dash plus and feel free to use your own icon.
+
+62
+00:04:28,110 --> 00:04:33,420
+If you go on to find awesome and you find another one that you like because we could also use one of
+
+63
+00:04:33,420 --> 00:04:40,050
+the like a pencil looking icon or a pencil and paper and if I were fresh and now have the plus sign
+
+64
+00:04:40,800 --> 00:04:48,330
+which went into style and move over to the right and all we need to do for that is select it first so
+
+65
+00:04:48,330 --> 00:04:49,990
+we'll select dog.
+
+66
+00:04:50,280 --> 00:05:00,000
+F a dash plus and will floated right just like that and refresh and it's now over on the right site
+
+67
+00:05:00,000 --> 00:05:00,950
+.
+
+68
+00:05:00,960 --> 00:05:06,250
+Now let's tackle the garbage cans and we're not going to deal with the animation just yet.
+
+69
+00:05:06,300 --> 00:05:09,810
+We're just going to get the garbage can to show up at all instead of an X.
+
+70
+00:05:10,260 --> 00:05:17,640
+So let's go back and on our spand we're actually going to get rid of the X's and inside the span we're
+
+71
+00:05:17,640 --> 00:05:27,030
+going to add another e-tag and the e-TAG is going to have a class of FAA and the name of the garbage
+
+72
+00:05:27,030 --> 00:05:38,430
+can icon is FAA Dasch trash let's copy that over to the other span's and this is only for the existing
+
+73
+00:05:38,920 --> 00:05:44,520
+to use when the page loads but we get three garbage cans for the new ones.
+
+74
+00:05:44,730 --> 00:05:46,280
+We're still dealing with the ex.
+
+75
+00:05:46,530 --> 00:05:50,310
+So then we want to go over here to our Javascript.
+
+76
+00:05:50,310 --> 00:05:54,990
+And when we pen new one we don't want to append a span with X.
+
+77
+00:05:55,290 --> 00:06:00,930
+You want to append an icon and we need to make sure our quotes don't interfere.
+
+78
+00:06:00,930 --> 00:06:08,290
+So if we use single quotes there and save and now we should have a trash can icon inside of the span
+
+79
+00:06:08,300 --> 00:06:08,690
+.
+
+80
+00:06:08,870 --> 00:06:10,830
+So let's add a few new ones.
+
+81
+00:06:10,830 --> 00:06:11,650
+There we go.
+
+82
+00:06:12,030 --> 00:06:15,320
+And I can still click because they're still inside of a span.
+
+83
+00:06:15,450 --> 00:06:18,680
+So it's an icon element instead of a span.
+
+84
+00:06:19,530 --> 00:06:22,440
+So I click event still work.
+
+85
+00:06:22,470 --> 00:06:28,380
+Now let's work on this simple animation and this is all done with C assess the spans here are actually
+
+86
+00:06:28,380 --> 00:06:30,210
+hidden when the page loads.
+
+87
+00:06:30,210 --> 00:06:31,630
+They have a wealth of zero.
+
+88
+00:06:31,860 --> 00:06:38,760
+And then when I hover we're actually increasing the width to 40 pixels and then we're making it animated
+
+89
+00:06:39,030 --> 00:06:40,950
+using the transition property.
+
+90
+00:06:41,430 --> 00:06:44,070
+So let's go attempt some of that.
+
+91
+00:06:44,400 --> 00:06:53,850
+Open up our CSSA file and the first thing we'll do is style spans so span and we're going to give them
+
+92
+00:06:54,510 --> 00:07:06,270
+a background color that red color which is e 7 4 C 3 C and will refresh.
+
+93
+00:07:06,460 --> 00:07:10,820
+And now we have that red background around it.
+
+94
+00:07:10,830 --> 00:07:19,470
+Next thing we'll do is give them a height of 40 pixels which doesn't seem to do much yet but once we
+
+95
+00:07:19,470 --> 00:07:22,680
+add in a few more properties you'll notice a difference.
+
+96
+00:07:23,250 --> 00:07:29,140
+Let's add a margin to the right of 20 pixels and go back.
+
+97
+00:07:29,200 --> 00:07:34,420
+Now that gives us the space that we wanted here.
+
+98
+00:07:35,550 --> 00:07:38,760
+Next let's give them text align Center
+
+99
+00:07:41,970 --> 00:07:45,700
+which is just a very slight difference on the spans here.
+
+100
+00:07:45,990 --> 00:07:55,110
+The icons inside an important one is to make the icon too white so color white.
+
+101
+00:07:55,110 --> 00:07:55,970
+All right.
+
+102
+00:07:56,220 --> 00:08:01,730
+So I'm going to show you how to get them to look like this first without the animation so that they're
+
+103
+00:08:01,740 --> 00:08:02,640
+always there.
+
+104
+00:08:02,930 --> 00:08:06,830
+And then we'll get them to animate so that they're hidden until we hover.
+
+105
+00:08:06,870 --> 00:08:12,190
+So we're getting close but we need these to take up more space vertically and horizontally.
+
+106
+00:08:12,390 --> 00:08:20,360
+So I'm going to add in a with a 40 pixels that eventually we're going to set to zero and to set display
+
+107
+00:08:20,510 --> 00:08:21,990
+two in line Block.
+
+108
+00:08:22,440 --> 00:08:23,950
+And I refresh now.
+
+109
+00:08:24,870 --> 00:08:26,790
+And that looks just right.
+
+110
+00:08:26,790 --> 00:08:29,460
+So the next thing is to do the animation.
+
+111
+00:08:29,760 --> 00:08:33,630
+And the way that that works we're actually going to set the width to be zero.
+
+112
+00:08:33,780 --> 00:08:40,410
+So all of these spans have with a zero until I hover over an ally and then we increase that with to
+
+113
+00:08:40,410 --> 00:08:42,420
+be 40 on that span.
+
+114
+00:08:42,870 --> 00:08:44,580
+So let's do that now.
+
+115
+00:08:45,020 --> 00:08:53,370
+I'm going to set with zero and then when we hover over an ally and not just the span but when we hover
+
+116
+00:08:53,370 --> 00:08:54,810
+over an ally
+
+117
+00:08:57,930 --> 00:09:02,480
+we want to select the span that's inside of an ally that's being hovered over.
+
+118
+00:09:02,790 --> 00:09:08,020
+Then we're going to set with to be 40 pixels just like that.
+
+119
+00:09:08,070 --> 00:09:11,310
+And let's go back to our own version and refresh.
+
+120
+00:09:11,670 --> 00:09:13,920
+You can see that the spans are now gone.
+
+121
+00:09:14,310 --> 00:09:19,330
+And when I hover over and fly the span appears and the button works.
+
+122
+00:09:19,800 --> 00:09:25,470
+So the next feature is getting it to animate so that it doesn't just appear instantly and to do that
+
+123
+00:09:25,800 --> 00:09:27,860
+we'll just use the transition property.
+
+124
+00:09:28,170 --> 00:09:38,340
+So on the span we're going to add transition zero point two seconds and we'll make it linear which just
+
+125
+00:09:38,340 --> 00:09:43,680
+refers to the easing which means that it will move at a constant speed.
+
+126
+00:09:43,680 --> 00:09:44,520
+And there we go.
+
+127
+00:09:44,520 --> 00:09:46,680
+We have our nice animation.
+
+128
+00:09:47,250 --> 00:09:54,420
+There is one small item that does bother me here which is that the icon still shows even when the span
+
+129
+00:09:54,420 --> 00:09:56,110
+is zero pixels wide.
+
+130
+00:09:56,340 --> 00:09:59,970
+So it's really hard to see but watch the icon here.
+
+131
+00:09:59,970 --> 00:10:03,230
+It's still there even when I'm not hovering over it.
+
+132
+00:10:03,240 --> 00:10:11,040
+So what we'll do is just set the opacity on the span to be zero and then set it to be one when we hover
+
+133
+00:10:11,040 --> 00:10:11,210
+.
+
+134
+00:10:11,370 --> 00:10:17,580
+So opacity zero and then opacity 1.0 when we hover.
+
+135
+00:10:18,420 --> 00:10:19,840
+And that should take care of it.
+
+136
+00:10:19,860 --> 00:10:22,370
+So now we can't see the icons.
+
+137
+00:10:22,500 --> 00:10:28,680
+There it is and then it disappears and it fades out as well because the transition property is affecting
+
+138
+00:10:28,950 --> 00:10:29,790
+everything.
+
+139
+00:10:30,120 --> 00:10:34,740
+So let's make it 2.2 seconds and I'll show you.
+
+140
+00:10:35,640 --> 00:10:40,810
+Notice how it fades in and then fades out.
+
+141
+00:10:40,890 --> 00:10:42,560
+So that's a very slow version.
+
+142
+00:10:43,200 --> 00:10:46,830
+And we'll just do 0.2.
+
+143
+00:10:47,070 --> 00:10:53,250
+There is one small annoying thing that we have left which is if you look really closely here or increase
+
+144
+00:10:53,250 --> 00:10:59,530
+the size there is a small gap between the input and then this list the UL.
+
+145
+00:11:00,060 --> 00:11:03,810
+But the gap goes away when I focus there now flush.
+
+146
+00:11:04,200 --> 00:11:07,220
+And then when I am not focused it comes back.
+
+147
+00:11:07,500 --> 00:11:13,450
+So to fix that we're going to add a small border that's invisible actually it's going to have a color
+
+148
+00:11:13,530 --> 00:11:23,340
+just a small border of R.G. be 0 0 0 0 0 0 which we'll just take up the same space as our border does
+
+149
+00:11:23,340 --> 00:11:24,690
+when we're focused.
+
+150
+00:11:25,080 --> 00:11:34,560
+So we'll go back and like the input which we have here and give it a border of three pixel solid R-Ga.
+
+151
+00:11:35,150 --> 00:11:38,640
+zero zero zero zero.
+
+152
+00:11:39,210 --> 00:11:41,770
+So that will end up giving us an invisible border.
+
+153
+00:11:41,880 --> 00:11:47,420
+But notice here I'll refresh right now that little gap goes away.
+
+154
+00:11:47,850 --> 00:11:53,580
+So now not only is the border flush when we have it focused but there's also a border that it helps
+
+155
+00:11:53,580 --> 00:11:56,000
+us make it flush that we don't actually see
+

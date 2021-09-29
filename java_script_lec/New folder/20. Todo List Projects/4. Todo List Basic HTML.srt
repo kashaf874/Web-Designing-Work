@@ -1,0 +1,308 @@
+﻿1
+00:00:00,360 --> 00:00:01,140
+Welcome back.
+
+2
+00:00:01,320 --> 00:00:06,480
+So now that we have the folder structure set up and we have our files created We're going to spend some
+
+3
+00:00:06,480 --> 00:00:10,020
+time in this video creating the actual team structure.
+
+4
+00:00:10,020 --> 00:00:12,590
+So the elements that we need for our To Do list.
+
+5
+00:00:12,990 --> 00:00:18,060
+Let's begin by taking a look at the final version that we are working towards throughout the course
+
+6
+00:00:18,090 --> 00:00:19,270
+of this unit.
+
+7
+00:00:19,650 --> 00:00:21,400
+So here's the final to do list.
+
+8
+00:00:21,600 --> 00:00:26,490
+And the big elements that we have here we have a heading right here.
+
+9
+00:00:26,570 --> 00:00:29,200
+You have a button here some sort of element.
+
+10
+00:00:29,340 --> 00:00:36,510
+We have a text input here input type equals text and then this is a well and each one of these is an
+
+11
+00:00:36,510 --> 00:00:38,580
+ally in that UL.
+
+12
+00:00:39,030 --> 00:00:44,960
+And then each button right here is a span that we're showing and hiding and changing the with on.
+
+13
+00:00:44,970 --> 00:00:50,000
+And we also need some sort of element to contain everything and we'll just use a device to do that.
+
+14
+00:00:50,040 --> 00:00:59,070
+So we need a div inside that div we'll make an H-1 a text input a UL with a bunch of allies and then
+
+15
+00:00:59,070 --> 00:01:01,230
+some span's in there as well.
+
+16
+00:01:01,230 --> 00:01:07,110
+So we'll start by just writing out some aged him l no real C Ss and just to let you know the way that
+
+17
+00:01:07,110 --> 00:01:12,660
+we're going to go about this is by creating a ugly to do list that functions and then going back and
+
+18
+00:01:12,690 --> 00:01:14,590
+adding in the C S.
+
+19
+00:01:14,640 --> 00:01:20,280
+So I want to get to the meat of this which is the J query and the logic of making new to do's and deleting
+
+20
+00:01:20,280 --> 00:01:24,380
+them and then we'll go back and add some of the pretty stuff at the end.
+
+21
+00:01:24,610 --> 00:01:24,860
+OK.
+
+22
+00:01:24,870 --> 00:01:26,990
+So let's start with the HD.
+
+23
+00:01:27,300 --> 00:01:34,380
+I'm going to make a div and let's give it an ID container and we're going to put everything inside of
+
+24
+00:01:34,380 --> 00:01:44,280
+that div and then instead of that div will have an H1 and it will just say to do list and then we'll
+
+25
+00:01:44,280 --> 00:01:46,640
+have a text input.
+
+26
+00:01:46,990 --> 00:01:50,580
+So input type equals text.
+
+27
+00:01:50,580 --> 00:01:52,380
+And let's just see how that's shaping up.
+
+28
+00:01:52,680 --> 00:02:00,650
+I'm going to get rid of the purple background for now and let's go over here.
+
+29
+00:02:01,200 --> 00:02:04,230
+And I'm also going to get rid of this alert.
+
+30
+00:02:04,230 --> 00:02:06,270
+So let's do that now.
+
+31
+00:02:06,270 --> 00:02:07,240
+There we go.
+
+32
+00:02:07,790 --> 00:02:08,140
+OK.
+
+33
+00:02:08,190 --> 00:02:12,420
+So we have our input we have our text for the H-1.
+
+34
+00:02:12,600 --> 00:02:15,450
+I guess we should make it to dasht do list.
+
+35
+00:02:15,690 --> 00:02:18,970
+And then the next thing we'll do is add the UL.
+
+36
+00:02:19,080 --> 00:02:24,240
+So let's make those changes to Dasch do list.
+
+37
+00:02:24,240 --> 00:02:30,660
+And after that we'll add in our UL and each to do is lie inside of there.
+
+38
+00:02:30,660 --> 00:02:35,130
+And let's start by adding in three or four starter Tutu's.
+
+39
+00:02:35,430 --> 00:02:38,640
+So I'll have go to Potions class
+
+40
+00:02:42,450 --> 00:02:48,350
+new robes and we'll also add visit Hagrid.
+
+41
+00:02:48,360 --> 00:02:48,630
+All right.
+
+42
+00:02:48,630 --> 00:02:51,740
+So we have three to do this in our list.
+
+43
+00:02:51,750 --> 00:02:59,630
+Very unremarkable list so far but we have our H-1 our text input and our three allies inside of it.
+
+44
+00:02:59,680 --> 00:03:06,150
+Well now let's go ahead and add in a delete button and we're not going to have this trash can delete
+
+45
+00:03:06,150 --> 00:03:09,820
+button with all the styling to start that will come afterwards.
+
+46
+00:03:09,840 --> 00:03:15,030
+We're going to just have a simpler button and it's actually not even going to be a button.
+
+47
+00:03:15,180 --> 00:03:16,460
+It's just going to look like this.
+
+48
+00:03:16,590 --> 00:03:23,400
+So the letter X that we can click on and if we click on that X it will delete that to do.
+
+49
+00:03:23,460 --> 00:03:28,830
+And that's just how we'll start out rather than just having the letter be part of the lie though I'm
+
+50
+00:03:28,830 --> 00:03:32,840
+going to use a span so span with a letter X.
+
+51
+00:03:33,330 --> 00:03:38,200
+So let's copy that down.
+
+52
+00:03:38,340 --> 00:03:39,810
+We have three spand.
+
+53
+00:03:39,990 --> 00:03:44,080
+Each one has a letter X there refresh.
+
+54
+00:03:44,100 --> 00:03:45,160
+Nothing looks different.
+
+55
+00:03:45,450 --> 00:03:51,810
+But now we can select that span separately and we'll be adding a quick listener.
+
+56
+00:03:51,840 --> 00:03:56,890
+So when we click on that span we want to delete this to do or this whole lie.
+
+57
+00:03:57,290 --> 00:03:57,530
+OK.
+
+58
+00:03:57,540 --> 00:03:59,820
+So that's all the basic markup we need.
+
+59
+00:04:00,060 --> 00:04:02,750
+Let's do a tiny tiny bit of styling.
+
+60
+00:04:02,790 --> 00:04:09,300
+The first thing we'll do is center this div So the div is ID container.
+
+61
+00:04:09,720 --> 00:04:21,330
+Let's go in here and select that in our CSSA file select the tidy container and let's give it a nice
+
+62
+00:04:22,020 --> 00:04:26,430
+background Gray just to start and see what we get.
+
+63
+00:04:26,430 --> 00:04:28,670
+You can see the div goes all the way across.
+
+64
+00:04:28,860 --> 00:04:32,590
+Let's go ahead and add in a with so that it doesn't go all the way across.
+
+65
+00:04:32,820 --> 00:04:39,900
+And then we'll try and center it in the middle of the screen so the width will do is three hundred and
+
+66
+00:04:39,900 --> 00:04:41,840
+sixty six.
+
+67
+00:04:42,120 --> 00:04:48,930
+And if we save that it's just the same width that I have with the final version.
+
+68
+00:04:48,930 --> 00:04:53,870
+So 360 pixels and then the next thing we want to do of course is center that.
+
+69
+00:04:54,210 --> 00:04:57,000
+And the easiest way is to use that margin trick.
+
+70
+00:04:57,150 --> 00:05:02,760
+So we set the margin on top and bottom to be zero and the left and right to be Ahto.
+
+71
+00:05:03,570 --> 00:05:07,640
+And if we refresh now we have a nice center to do list.
+
+72
+00:05:07,680 --> 00:05:11,650
+So that's all the time out and assess that we can do to start here.
+
+73
+00:05:11,700 --> 00:05:13,760
+We'll add in some things as we need them.
+
+74
+00:05:13,950 --> 00:05:18,930
+And then once we get the basic functionality down we'll focus on making this pretty and getting the
+
+75
+00:05:18,930 --> 00:05:24,780
+right you know the animations and the effects the fades and the slides and making things just look and
+
+76
+00:05:24,780 --> 00:05:26,470
+feel a lot nicer.
+
+77
+00:05:27,060 --> 00:05:29,870
+OK so in the next video we're going to start writing some inquiry
+

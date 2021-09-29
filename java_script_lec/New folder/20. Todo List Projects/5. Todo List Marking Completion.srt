@@ -1,0 +1,520 @@
+﻿1
+00:00:00,330 --> 00:00:00,660
+All right.
+
+2
+00:00:00,650 --> 00:00:01,490
+Welcome back.
+
+3
+00:00:01,680 --> 00:00:06,210
+And this video we're going to start by tackling some of the basic functionality of our list.
+
+4
+00:00:06,210 --> 00:00:11,400
+We're going to start nice and easy by adding the quick listeners to the allies so that when we click
+
+5
+00:00:11,730 --> 00:00:16,380
+we get a little strikethrough effect that you can see here and they grea out.
+
+6
+00:00:16,890 --> 00:00:20,750
+And before we do that I'm actually going to change our background a little bit here.
+
+7
+00:00:21,000 --> 00:00:22,910
+I'm going to get rid of that background.
+
+8
+00:00:23,190 --> 00:00:25,020
+And then I'm going to add a border instead.
+
+9
+00:00:25,200 --> 00:00:33,630
+So our border will be two pixel solid gray just a small change but it will make it so that it's easier
+
+10
+00:00:33,630 --> 00:00:35,800
+to see when we turn these gray.
+
+11
+00:00:35,880 --> 00:00:39,170
+If we had a great background then it would just totally blend in.
+
+12
+00:00:39,490 --> 00:00:40,180
+OK.
+
+13
+00:00:40,200 --> 00:00:47,370
+So what we want to happen is when we click on an ally the text inside the eye is gray and we add a strikethrough
+
+14
+00:00:47,370 --> 00:00:48,190
+effect.
+
+15
+00:00:48,570 --> 00:00:50,930
+So let's go to our javascript file.
+
+16
+00:00:51,210 --> 00:01:00,780
+Let's start by adding a simple comment where we can check off specific to Dewes by clicking and then
+
+17
+00:01:00,780 --> 00:01:01,820
+let's make that work.
+
+18
+00:01:02,010 --> 00:01:04,540
+So we need to select all the allies.
+
+19
+00:01:04,830 --> 00:01:11,020
+So all we need to do is ally instead of the dollar sign and then we'll do a click.
+
+20
+00:01:12,150 --> 00:01:18,360
+And when we click here is the function that we want to run the callback function and we'll start with
+
+21
+00:01:18,360 --> 00:01:28,050
+just a nice alert clicked ally and go back and make sure that when we refresh and click on an ally it
+
+22
+00:01:28,050 --> 00:01:32,520
+tells us that we clicked an ally but nowhere else does that happen.
+
+23
+00:01:32,550 --> 00:01:34,260
+Great.
+
+24
+00:01:34,260 --> 00:01:39,930
+Next up let's work on changing the individual ally that we clicked on and changing its color color and
+
+25
+00:01:39,930 --> 00:01:47,050
+the strikethrough or the text decoration effect rather than alerting what we want to do is use the dot
+
+26
+00:01:47,150 --> 00:01:54,270
+CSSA method and with that see SS We're going to want to work with the color property and turn the color
+
+27
+00:01:54,290 --> 00:01:59,210
+gray and the text decoration property and make that line through.
+
+28
+00:01:59,690 --> 00:02:01,210
+Let's start with the color.
+
+29
+00:02:01,380 --> 00:02:05,090
+So it would look like color gray just like that.
+
+30
+00:02:05,370 --> 00:02:09,610
+And then we have to decide what are we applying that to what are we selecting.
+
+31
+00:02:09,990 --> 00:02:15,180
+And this is not what we want to do if we just select a lie and do gutsiest us.
+
+32
+00:02:15,210 --> 00:02:20,670
+Now when I click they all turn gray and I know it's a little bit difficult to see if I make that something
+
+33
+00:02:20,670 --> 00:02:24,000
+more obvious like red when I click.
+
+34
+00:02:24,060 --> 00:02:29,880
+They all turn red which is not what we want what we want instead is only the one that was clicked.
+
+35
+00:02:30,150 --> 00:02:34,410
+And that's where the key word this comes in with the J Querrey wrapper.
+
+36
+00:02:34,410 --> 00:02:40,260
+This refers to the specific lie that was clicked and we want to change only that one SEUS us so that
+
+37
+00:02:40,260 --> 00:02:41,460
+its color is gray.
+
+38
+00:02:41,760 --> 00:02:43,510
+And we'll test that out.
+
+39
+00:02:43,560 --> 00:02:47,740
+Now I click on the individual ally and it turns gray.
+
+40
+00:02:47,910 --> 00:02:51,000
+Of course it doesn't turn back to black when I click again.
+
+41
+00:02:51,030 --> 00:02:53,790
+We don't have that functionality.
+
+42
+00:02:53,790 --> 00:02:59,370
+Now let's get the strikethrough with a line through effect so we can do another line like this.
+
+43
+00:02:59,370 --> 00:03:15,300
+This does SEUS us and then text decoration colon or comma line dash through and save and go back missing
+
+44
+00:03:15,330 --> 00:03:18,200
+a Prentis see here.
+
+45
+00:03:20,070 --> 00:03:27,940
+Now when we click we get a strikethrough effect there and the color changes to be gray.
+
+46
+00:03:29,610 --> 00:03:32,200
+But of course there's always an easier way of doing that.
+
+47
+00:03:32,220 --> 00:03:38,280
+So rather than doing it on two separate lines you might have remembered how we could define object with
+
+48
+00:03:38,280 --> 00:03:43,100
+key value pairs and just do one single this CSSA call.
+
+49
+00:03:43,290 --> 00:03:52,880
+So we had add an object in here just like that and we need to add in color gray comma.
+
+50
+00:03:53,280 --> 00:03:59,110
+And this is a little tricky if we do text Dasch decoration in the object and set that to be line through
+
+51
+00:03:59,120 --> 00:03:59,300
+.
+
+52
+00:03:59,580 --> 00:04:05,520
+And I save and refresh you see nothing happens.
+
+53
+00:04:05,530 --> 00:04:10,530
+They actually get an error because in javascript You can't have property names that have hyphens in
+
+54
+00:04:10,530 --> 00:04:11,240
+them.
+
+55
+00:04:11,760 --> 00:04:19,410
+So if we are using the syntax where we define an object we need to use text declaration camel case which
+
+56
+00:04:19,410 --> 00:04:20,890
+is always a little bit tricky.
+
+57
+00:04:20,940 --> 00:04:27,360
+And if we are fresh Now you can see that it finds that text decoration so CSSA property and it applies
+
+58
+00:04:27,360 --> 00:04:30,290
+the line through and the gray color.
+
+59
+00:04:30,510 --> 00:04:35,510
+The next thing you might want to do is turn it back to black and get rid of the line through one click
+
+60
+00:04:35,520 --> 00:04:36,540
+again.
+
+61
+00:04:37,460 --> 00:04:39,800
+To do that we'll use a simple IF statement.
+
+62
+00:04:39,900 --> 00:04:45,600
+So we'll check if Ally is gray then we will turn it black
+
+63
+00:04:48,510 --> 00:04:49,020
+else
+
+64
+00:04:51,670 --> 00:04:53,780
+turn it gray.
+
+65
+00:04:53,920 --> 00:05:00,820
+So to check if the lie is gray we can do if and we can use this stuff.
+
+66
+00:05:00,890 --> 00:05:13,150
+SS And if we just do it like this so if to check if an ally is gray we can actually use this dot C Ss
+
+67
+00:05:13,870 --> 00:05:19,230
+and ask it for color without providing another value and that will retrieve the current color.
+
+68
+00:05:19,620 --> 00:05:28,370
+So we'll have an if statement if this does see a sense of color is equal to gray.
+
+69
+00:05:29,410 --> 00:05:39,120
+Let's just do a concert log is currently gray and that's all due to start.
+
+70
+00:05:39,490 --> 00:05:41,790
+So let's clean this up a little bit
+
+71
+00:05:47,310 --> 00:05:51,150
+and we don't have or else yet so we'll just leave it how it is and go back.
+
+72
+00:05:51,310 --> 00:05:58,170
+So if we refresh and we open up the console and I click on one of these it doesn't tell us anything
+
+73
+00:05:58,180 --> 00:06:00,030
+yet because it's not gray.
+
+74
+00:06:00,190 --> 00:06:03,230
+But now if I click again it still doesn't work.
+
+75
+00:06:03,270 --> 00:06:05,420
+And the reason for that is a little bit tricky.
+
+76
+00:06:05,470 --> 00:06:06,930
+If we go back here.
+
+77
+00:06:07,180 --> 00:06:12,820
+Let's take a look at what this does CSSA color is outside of the if statement.
+
+78
+00:06:12,910 --> 00:06:15,400
+So we'll do a console that log.
+
+79
+00:06:15,690 --> 00:06:19,760
+This starts the SS color and refresh the page.
+
+80
+00:06:20,250 --> 00:06:25,230
+And when I click you'll see that it starts out as R.G. 000.
+
+81
+00:06:25,440 --> 00:06:31,750
+And if I click again we're setting the color to be gray and we think that it's gray right now if we
+
+82
+00:06:31,750 --> 00:06:33,270
+inspected.
+
+83
+00:06:33,750 --> 00:06:40,100
+It says that color is gray but when I click again it's actually the R.G. version.
+
+84
+00:06:40,320 --> 00:06:45,550
+So when we're comparing to check if the color is equal to Gray that's not going to work.
+
+85
+00:06:45,670 --> 00:06:49,820
+We need to compare it to R.G. be 1 2 8 1 2 8 1 2 8.
+
+86
+00:06:50,310 --> 00:06:57,840
+And now if we try this and refresh we should see when I click the first time nothing I click again.
+
+87
+00:06:58,090 --> 00:07:00,730
+It now says it is currently gray.
+
+88
+00:07:01,150 --> 00:07:01,460
+OK.
+
+89
+00:07:01,480 --> 00:07:02,710
+So we can use that.
+
+90
+00:07:03,030 --> 00:07:05,710
+So instead of just printing it is currently Gray.
+
+91
+00:07:05,920 --> 00:07:08,070
+What we want to do is turn it black.
+
+92
+00:07:08,130 --> 00:07:15,950
+So we'll do a this that see us color and we'll just go back to black.
+
+93
+00:07:16,120 --> 00:07:16,930
+Just like that.
+
+94
+00:07:17,110 --> 00:07:20,670
+And then we can handle the text decoration in just a second.
+
+95
+00:07:20,980 --> 00:07:24,240
+So we refresh and we click and we get gray.
+
+96
+00:07:24,420 --> 00:07:26,660
+And if I click again it still won't work.
+
+97
+00:07:26,840 --> 00:07:29,650
+And that's because we're just overwriting it at the end here.
+
+98
+00:07:29,710 --> 00:07:31,870
+We're turning it gray every time.
+
+99
+00:07:31,960 --> 00:07:39,210
+So we want to move that into our else so we'll add an else statement here and we'll do this only if
+
+100
+00:07:39,270 --> 00:07:41,060
+it's not currently Gray.
+
+101
+00:07:41,740 --> 00:07:42,220
+All right.
+
+102
+00:07:42,390 --> 00:07:43,260
+So we should be good.
+
+103
+00:07:43,260 --> 00:07:50,400
+Now we just move this comment here clean things up a little bit and refresh.
+
+104
+00:07:50,640 --> 00:07:54,490
+We click it turns gray cook again it goes back to black.
+
+105
+00:07:54,550 --> 00:07:58,110
+We still have the line through but at least the color is changing.
+
+106
+00:07:58,420 --> 00:08:05,870
+So to get rid of the line through all we need to do is basically copy this or redo an object.
+
+107
+00:08:06,780 --> 00:08:10,460
+And rather than setting color to be gray we'll make it black.
+
+108
+00:08:10,840 --> 00:08:15,560
+And rather than text decoration to line through we'll set it to be none.
+
+109
+00:08:15,900 --> 00:08:23,950
+And now if we were fresh and real quick we're toggling that done on and off where we have the gray and
+
+110
+00:08:23,950 --> 00:08:25,390
+the line through.
+
+111
+00:08:26,010 --> 00:08:31,260
+Hopefully as we're going through this you're seeing that it's sort of a lot of work to do this checking
+
+112
+00:08:31,260 --> 00:08:31,560
+.
+
+113
+00:08:31,650 --> 00:08:33,230
+Is it currently Gray.
+
+114
+00:08:33,250 --> 00:08:39,580
+RGV 128 128 128 if it is then we'll make it black and remove the text decoration.
+
+115
+00:08:39,700 --> 00:08:41,310
+Otherwise do this.
+
+116
+00:08:41,490 --> 00:08:46,020
+There's a much easier way that we don't have to actually do any of this logic.
+
+117
+00:08:46,450 --> 00:08:54,460
+What we can do is create a class so we'll create a class in our C Ss and we'll call it completed or
+
+118
+00:08:54,460 --> 00:08:59,630
+just completed and it will have color is gray.
+
+119
+00:08:59,800 --> 00:09:00,890
+We don't need those quotes.
+
+120
+00:09:01,000 --> 00:09:08,980
+We're not in javascript and text decoration will be a line through and save and then are to do that
+
+121
+00:09:09,000 --> 00:09:09,070
+.
+
+122
+00:09:09,140 --> 00:09:20,310
+Yes we can actually replace all of this code and it deleted all and all we want to do is this dot toggle
+
+123
+00:09:20,320 --> 00:09:20,890
+class
+
+124
+00:09:23,700 --> 00:09:27,240
+completed single line.
+
+125
+00:09:27,490 --> 00:09:33,960
+So when we click on an ally we're going to toggled the class on the slide that we clicked on the class
+
+126
+00:09:33,970 --> 00:09:40,510
+completed and that will make it gray and give it a line through effect and it will keep track of if
+
+127
+00:09:40,500 --> 00:09:43,980
+it needs to remove it or added automatically.
+
+128
+00:09:44,380 --> 00:09:48,240
+So you can see here it looks exactly the same as it did before.
+
+129
+00:09:48,370 --> 00:09:54,700
+But we only had to write one line of code rather than 10 or so lines and the next video will talk about
+
+130
+00:09:54,690 --> 00:09:57,490
+how we can get the X to actually to lead it to do
+

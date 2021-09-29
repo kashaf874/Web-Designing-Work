@@ -1,0 +1,512 @@
+﻿1
+00:00:00,440 --> 00:00:00,840
+OK.
+
+2
+00:00:00,840 --> 00:00:01,770
+Welcome back.
+
+3
+00:00:01,770 --> 00:00:07,420
+So as I mentioned in this video will actually start working on a pet attack clone here.
+
+4
+00:00:07,430 --> 00:00:13,220
+So the first thing we want to do is figure out how to add a circle which we've actually already seen
+
+5
+00:00:13,680 --> 00:00:21,570
+but we want to do a few things at a Circle when the user hits any key actually in my case I'm only doing
+
+6
+00:00:21,570 --> 00:00:23,520
+it for her kids.
+
+7
+00:00:23,750 --> 00:00:25,730
+It works the same way for any other key.
+
+8
+00:00:25,800 --> 00:00:32,080
+So when a user hits the key at a circle and then we also need to figure out the animation of that circle
+
+9
+00:00:32,090 --> 00:00:32,270
+.
+
+10
+00:00:32,610 --> 00:00:36,200
+And lastly we want to add that circle to a random coordinate.
+
+11
+00:00:36,330 --> 00:00:41,890
+So to start we'll just hit a key and add a circle to the middle of the screen.
+
+12
+00:00:42,570 --> 00:00:50,610
+So let's go to the paper japes docs and take a look at interaction and look at keyboard interaction
+
+13
+00:00:50,620 --> 00:00:51,070
+.
+
+14
+00:00:51,690 --> 00:00:58,290
+And I know it seems like well I didn't know where to look here but the first time I came here it took
+
+15
+00:00:58,290 --> 00:01:05,580
+me a lot longer to find that I just went through most of these and searched for keyboard basically trying
+
+16
+00:01:05,580 --> 00:01:11,820
+to say that most likely if I was doing this again by myself and I hadn't prepared for this video it
+
+17
+00:01:11,820 --> 00:01:16,920
+would've taken me a lot longer to find that I might've done a search anyway so that's scroll down and
+
+18
+00:01:16,920 --> 00:01:18,810
+just look at some of the examples.
+
+19
+00:01:18,840 --> 00:01:26,190
+This first one quick here to focus and then press some keys and it tells you what key was pressed and
+
+20
+00:01:26,190 --> 00:01:27,910
+when it was released as well.
+
+21
+00:01:28,350 --> 00:01:32,860
+So right now I'm pressing K and then releasing it.
+
+22
+00:01:33,150 --> 00:01:38,450
+And if you look at the code it's really easy just on key down and Anchia up.
+
+23
+00:01:38,520 --> 00:01:43,530
+So it's not there's no document on at event listener there's no Jay queery event listeners behind the
+
+24
+00:01:43,530 --> 00:01:46,670
+scenes there are documented at event listeners happening.
+
+25
+00:01:46,920 --> 00:01:52,680
+But for paper script we just have to write this super simple line so we can take that actually just
+
+26
+00:01:52,680 --> 00:01:57,210
+copy this will do key down for our app.
+
+27
+00:01:57,360 --> 00:01:59,070
+We want the sound to play immediately.
+
+28
+00:01:59,070 --> 00:02:06,240
+So as I press the key not when I am released thinking that's a little bit slower it's sort of like a
+
+29
+00:02:06,240 --> 00:02:12,090
+piano that when you hit a piano or the noise the sound that is generated is generated right when you
+
+30
+00:02:12,090 --> 00:02:14,880
+press the key or right afterwards not when you release.
+
+31
+00:02:15,240 --> 00:02:16,290
+So Will do key down.
+
+32
+00:02:16,290 --> 00:02:21,440
+I copied that and we'll start by just making a new circle so we need this code.
+
+33
+00:02:21,630 --> 00:02:24,310
+But we just want one so we don't need the loops anymore.
+
+34
+00:02:24,390 --> 00:02:30,870
+Get rid of that and we'll make that new circle on key down.
+
+35
+00:02:32,220 --> 00:02:38,430
+So this process is pretty realistic where you're taking different pieces and you're just kind of fitting
+
+36
+00:02:38,430 --> 00:02:39,360
+them together.
+
+37
+00:02:39,810 --> 00:02:42,440
+So I found this in the docs on key down.
+
+38
+00:02:42,840 --> 00:02:43,730
+You can get rid of that.
+
+39
+00:02:43,860 --> 00:02:49,940
+And I found this in the docs as well and we do need to change this X and Y aren't defined.
+
+40
+00:02:50,010 --> 00:02:55,410
+So let's just do it at 100 comma 100 and let's make Phil color orange.
+
+41
+00:02:55,740 --> 00:02:58,380
+So on down run this code.
+
+42
+00:02:59,280 --> 00:03:04,410
+And again it's very different than what we've seen or we have documented an event listener.
+
+43
+00:03:04,410 --> 00:03:07,260
+And then we would have to add in some element.
+
+44
+00:03:07,410 --> 00:03:19,470
+So we'd have to do like document dot query selector some element like a div dot add event listener and
+
+45
+00:03:19,470 --> 00:03:23,300
+then we'd have to tell it click or key press or key up.
+
+46
+00:03:23,400 --> 00:03:25,160
+It's a lot more code.
+
+47
+00:03:25,290 --> 00:03:28,950
+This is done for us with Paperchase really simple.
+
+48
+00:03:29,010 --> 00:03:32,070
+So on key down let's see what happens.
+
+49
+00:03:32,310 --> 00:03:37,650
+I'm going to press the key and we end up with a circle and every time I press 1 I do get another circle
+
+50
+00:03:37,650 --> 00:03:37,710
+.
+
+51
+00:03:37,710 --> 00:03:39,210
+You just can't see it.
+
+52
+00:03:39,690 --> 00:03:45,270
+So now let's work on this so that we are adding a circle to a random place on the screen.
+
+53
+00:03:45,720 --> 00:03:52,140
+And the way that we do that actually took me a little bit of work to find that we could do it ourselves
+
+54
+00:03:52,380 --> 00:04:01,120
+where we generate two numbers basically from zero all the way up until the maximum width of our screen
+
+55
+00:04:01,800 --> 00:04:06,170
+and then the other number from zero up until the maximum height of our screen.
+
+56
+00:04:06,570 --> 00:04:12,270
+And that's not too much work but we do have to figure out the width and height and the dimensions which
+
+57
+00:04:12,270 --> 00:04:19,180
+if you go to Paperchase and if we look at where you reference.
+
+58
+00:04:20,010 --> 00:04:23,220
+And then when that's open look in view.
+
+59
+00:04:23,550 --> 00:04:27,080
+And again I just found this a few days ago I took a little bit.
+
+60
+00:04:27,090 --> 00:04:35,040
+But if we look at you and we look at bounds and or maybe it's size the size of the visible area and
+
+61
+00:04:35,040 --> 00:04:36,390
+project coordinates.
+
+62
+00:04:36,390 --> 00:04:46,860
+So if we did something like consul that log view size which again I just found here and refresh the
+
+63
+00:04:46,860 --> 00:04:56,240
+page and see what we get we get height and width so we can take that height and width.
+
+64
+00:04:56,380 --> 00:05:05,290
+So you're not size dot height and then cancel that log you that size start with and we could use that
+
+65
+00:05:06,030 --> 00:05:09,370
+refresh and I prosequi.
+
+66
+00:05:10,020 --> 00:05:16,880
+Currently the view that size is six hundred ninety two by seven hundred.
+
+67
+00:05:17,100 --> 00:05:20,700
+But if I resize it you'll see that changes next time.
+
+68
+00:05:20,730 --> 00:05:21,930
+Persecutee.
+
+69
+00:05:22,240 --> 00:05:26,430
+So we can use that to generate those two points that we need.
+
+70
+00:05:26,640 --> 00:05:32,770
+But the other thing that we can do is there's actually a built in method that I found that will make
+
+71
+00:05:32,760 --> 00:05:38,570
+us a random points so I'll show you that as well.
+
+72
+00:05:38,580 --> 00:05:46,890
+So rather than having to do math at random which gives us something between 1 0 and 1 non-inclusive
+
+73
+00:05:47,150 --> 00:05:50,340
+and then we have to multiply that and shift it up or down.
+
+74
+00:05:50,380 --> 00:05:51,960
+It's kind of kind of a pain.
+
+75
+00:05:52,170 --> 00:05:58,500
+So what we'll do instead is use this nice paper J S way that I found looks like this.
+
+76
+00:05:58,500 --> 00:06:07,680
+So I'll make a maximum points so the maximum point that we can add a circle to is going to be new point
+
+77
+00:06:08,340 --> 00:06:10,170
+view dot size.
+
+78
+00:06:10,560 --> 00:06:15,700
+And then we want with comma that size dot height.
+
+79
+00:06:15,720 --> 00:06:19,400
+So x and y are maximum X or maximum y.
+
+80
+00:06:20,160 --> 00:06:25,740
+So that makes our max points and I'll show you if we do a constant alt log Max point
+
+81
+00:06:30,900 --> 00:06:31,560
+there we go
+
+82
+00:06:34,440 --> 00:06:42,450
+and let's actually add our circle to max point.
+
+83
+00:06:42,720 --> 00:06:47,720
+So instead of making a new point here at 100 Kamo 100 we'll just give it Max point.
+
+84
+00:06:47,940 --> 00:06:48,510
+OK.
+
+85
+00:06:48,900 --> 00:06:54,350
+So let's try that out now and get rid of those to refresh the page.
+
+86
+00:06:54,510 --> 00:06:55,870
+I hit a key.
+
+87
+00:06:55,950 --> 00:06:58,580
+See we get one right down here in the bottom right corner.
+
+88
+00:06:58,590 --> 00:07:06,390
+And if I resize and do it again and I hit a key we now get our maximum point right here.
+
+89
+00:07:06,390 --> 00:07:14,250
+So this is nice because as that window changes as the the visible area on this canvas changes our maximum
+
+90
+00:07:14,250 --> 00:07:19,890
+point changes so we're not always generating a random number between you know our screen dimensions
+
+91
+00:07:20,010 --> 00:07:25,540
+or even the window size because as soon as the visible area it's not even the entire window but just
+
+92
+00:07:25,530 --> 00:07:29,940
+the visible area on the canvas changes our maximum point changes.
+
+93
+00:07:30,250 --> 00:07:32,740
+OK so we have that.
+
+94
+00:07:33,150 --> 00:07:39,540
+Now what we want to do is take that maximum point and we're going to generate a random point.
+
+95
+00:07:39,660 --> 00:07:46,810
+So we'll just call it random point and there's a method point dot random and that will give us a random
+
+96
+00:07:46,800 --> 00:07:53,090
+point between 0 and 1 non-inclusive just like mascot Rande except with one line.
+
+97
+00:07:53,130 --> 00:07:54,960
+We get a point object.
+
+98
+00:07:55,480 --> 00:07:56,520
+So it's basically doing this.
+
+99
+00:07:56,520 --> 00:08:07,470
+New points math dot random comma math dot random and then we want to take that make another variable
+
+100
+00:08:07,590 --> 00:08:19,060
+that we'll call just point and it's equal to max points times random point just like that.
+
+101
+00:08:19,120 --> 00:08:21,970
+So we're multiplying those two points together.
+
+102
+00:08:22,650 --> 00:08:32,310
+It's kind of a lot of weird math but basically we're generating a point between 0 0 and 1 1 but technically
+
+103
+00:08:32,310 --> 00:08:36,770
+it would be point 9 9 9 9 and so on.
+
+104
+00:08:36,880 --> 00:08:45,640
+So let's say we generate a point as point five point five then the next thing that we do is we have
+
+105
+00:08:45,630 --> 00:08:50,500
+our max point which will always be the very maximum that we could make.
+
+106
+00:08:50,550 --> 00:09:01,530
+So something like 12 80 by 720 or whatever our window size is 600 by 300 and then we multiply them together
+
+107
+00:09:01,870 --> 00:09:08,980
+and we end up with a new point that is in this case 300 comma 150.
+
+108
+00:09:09,000 --> 00:09:15,000
+So this is how we can generate a max or a random point that exists on the viewable area.
+
+109
+00:09:15,010 --> 00:09:17,550
+Are they currently visible area of the canvas.
+
+110
+00:09:17,830 --> 00:09:23,660
+OK so now let's just change this so that it goes to points.
+
+111
+00:09:24,900 --> 00:09:26,960
+Let's take a look now refresh.
+
+112
+00:09:26,980 --> 00:09:29,780
+Hit any key and we end up with random circles.
+
+113
+00:09:29,790 --> 00:09:31,750
+Every time you press a key.
+
+114
+00:09:32,340 --> 00:09:33,670
+Whoops.
+
+115
+00:09:34,140 --> 00:09:38,650
+And if I resize the window let's make it halfway across.
+
+116
+00:09:39,720 --> 00:09:42,970
+Every time I press the key we still see it.
+
+117
+00:09:43,000 --> 00:09:47,730
+So it's not generating points over here anymore which is nice.
+
+118
+00:09:47,760 --> 00:09:56,290
+So that if the window happens to resize the user doesn't have to refresh to get new a new visible area
+
+119
+00:09:56,380 --> 00:09:59,030
+to get kind of calculated numbers.
+
+120
+00:09:59,350 --> 00:09:59,850
+Okay great.
+
+121
+00:09:59,860 --> 00:10:04,770
+So that's how we generate a circle which you already see in but it's how we generate a circle when the
+
+122
+00:10:04,770 --> 00:10:06,870
+user hits a key any key.
+
+123
+00:10:07,200 --> 00:10:11,000
+And we talked about how to make a random point in the next video.
+
+124
+00:10:11,080 --> 00:10:16,740
+We'll see how we can do some simple animations by first changing the colors of these points and having
+
+125
+00:10:16,750 --> 00:10:19,060
+them fade to different hues different colors.
+
+126
+00:10:19,170 --> 00:10:21,450
+And then also by shrinking them down.
+
+127
+00:10:21,580 --> 00:10:25,220
+So we'll see that the next video and then we'll go back and add in sound.
+
+128
+00:10:25,330 --> 00:10:26,040
+In the last video
+

@@ -1,0 +1,548 @@
+﻿1
+00:00:00,320 --> 00:00:05,640
+In this video we're going to learn about a few builtin Array methods that every single array comes with
+
+2
+00:00:05,880 --> 00:00:09,600
+that are going to make arrays even more useful for us.
+
+3
+00:00:09,660 --> 00:00:12,020
+There are six methods that we're going to cover here.
+
+4
+00:00:12,390 --> 00:00:18,090
+Two of them are paired together so push and pop are a pair and then shift and upshift are also a pair
+
+5
+00:00:18,110 --> 00:00:18,330
+.
+
+6
+00:00:18,600 --> 00:00:21,900
+And then we're going to talk about index of and slice.
+
+7
+00:00:21,930 --> 00:00:28,440
+So before I actually dive into that I want to show you an empty an Mozilla developer network on the
+
+8
+00:00:28,440 --> 00:00:33,910
+page for Auray on the left hand side you can see a method section.
+
+9
+00:00:34,110 --> 00:00:37,590
+And these are all the builtin methods that every array comes with.
+
+10
+00:00:37,590 --> 00:00:41,420
+We're only going to cover six of these but they're the six most important.
+
+11
+00:00:41,580 --> 00:00:45,990
+There's quite a few that you'll most likely never need to use though there are some that we will be
+
+12
+00:00:45,990 --> 00:00:47,650
+covering in future videos.
+
+13
+00:00:48,060 --> 00:00:50,250
+So I just wanted to show that you can see them all here.
+
+14
+00:00:50,280 --> 00:00:55,200
+And then if you wanted to learn about one like slice you could open it up.
+
+15
+00:00:55,440 --> 00:01:01,370
+There's a great explanation and there are also examples at the bottom of the page.
+
+16
+00:01:01,470 --> 00:01:06,570
+So let's go back to our slides and let's start by talking about push and pop.
+
+17
+00:01:06,570 --> 00:01:15,690
+So what we saw last time was that if we make an array like colors and I give it three colors red orange
+
+18
+00:01:15,900 --> 00:01:22,950
+and yellow and if I want to add a fourth color green I first need to figure out what index to add it
+
+19
+00:01:22,950 --> 00:01:23,760
+at.
+
+20
+00:01:23,760 --> 00:01:27,240
+So I would count 0 1 2.
+
+21
+00:01:27,540 --> 00:01:30,920
+So then I would know the next index would be 3.
+
+22
+00:01:31,350 --> 00:01:35,210
+So I could write colors three equals green.
+
+23
+00:01:36,060 --> 00:01:40,440
+And this isn't great because I have to keep counting or I have to keep track of that number.
+
+24
+00:01:40,470 --> 00:01:44,910
+So if I want to add blue I now have to figure out how many items are in the array.
+
+25
+00:01:45,240 --> 00:01:46,500
+So there's four.
+
+26
+00:01:46,500 --> 00:01:52,920
+So I know I need to do colors of four equals blue.
+
+27
+00:01:53,960 --> 00:01:57,510
+There's a built in method however that makes this much easier.
+
+28
+00:01:57,510 --> 00:02:01,830
+This is something that we do a lot which is push into an array.
+
+29
+00:02:02,010 --> 00:02:06,980
+So push refers to adding something to the very end of an array.
+
+30
+00:02:07,110 --> 00:02:13,650
+In this example you can see we also have a colour's Ray and to push into it to add green to the very
+
+31
+00:02:13,650 --> 00:02:16,550
+end we write colors dot push.
+
+32
+00:02:16,710 --> 00:02:19,920
+And then in parentheses we pass in green.
+
+33
+00:02:19,980 --> 00:02:21,460
+So I'll try it out here.
+
+34
+00:02:21,670 --> 00:02:25,300
+Stub push and I'm going to add in indigo to the end.
+
+35
+00:02:25,590 --> 00:02:30,870
+And just like the functions that we've written ourself we need to put parentheses to actually call push
+
+36
+00:02:30,880 --> 00:02:31,160
+.
+
+37
+00:02:31,350 --> 00:02:35,900
+And then we pass in indigo as an argument.
+
+38
+00:02:36,930 --> 00:02:44,490
+And if I hit Enter NOW and I look at colors you'll see that Indigo has been added to the end and I didn't
+
+39
+00:02:44,490 --> 00:02:50,050
+even have to specify which index to add it to push always knows where the end of the array is.
+
+40
+00:02:50,100 --> 00:02:53,330
+And it adds whatever we pass in to the very end.
+
+41
+00:02:53,370 --> 00:02:59,050
+Push also returns the length of the array after your new element has been added in.
+
+42
+00:02:59,400 --> 00:03:05,010
+So you can see this returns 6 and we have 1 2 3 4 5 6 items.
+
+43
+00:03:05,610 --> 00:03:12,920
+So I'll push one more time colors push and I'll do Violet and you'll see it returns 7.
+
+44
+00:03:13,380 --> 00:03:18,480
+So we can use that occasionally if we want to save that value in a variable.
+
+45
+00:03:18,480 --> 00:03:22,410
+Next up is the SR method of push which is pop.
+
+46
+00:03:22,410 --> 00:03:27,810
+So pop does the opposite in that it removes the last element in an array.
+
+47
+00:03:27,810 --> 00:03:29,380
+So I'll show you how we use it.
+
+48
+00:03:29,400 --> 00:03:34,090
+It doesn't take any arguments we just write colors pop.
+
+49
+00:03:34,380 --> 00:03:38,040
+And if I hit enter here you'll see two things.
+
+50
+00:03:38,160 --> 00:03:45,300
+One it returns to me the last item in the array which was violent and if I look at colors it now doesn't
+
+51
+00:03:45,300 --> 00:03:46,980
+have violet.
+
+52
+00:03:46,980 --> 00:03:51,320
+So we use pop a lot to remove things from an array and then do something with them.
+
+53
+00:03:51,600 --> 00:03:56,790
+So push takes one argument and it will add to the end of an array and return the length of that array
+
+54
+00:03:56,810 --> 00:03:57,190
+.
+
+55
+00:03:57,450 --> 00:04:03,960
+And Pop takes no argument and it returns the last item in the array that it removes.
+
+56
+00:04:03,960 --> 00:04:06,210
+Next up we have shift and shift.
+
+57
+00:04:06,450 --> 00:04:12,330
+And these are a pair just like push and pop and they work very similarly except rather than adding and
+
+58
+00:04:12,330 --> 00:04:16,960
+removing to the end of the array they add and remove from the beginning of the array.
+
+59
+00:04:17,040 --> 00:04:22,170
+If you're curious about where the names shift and shift or push and pop originate from they come from
+
+60
+00:04:22,170 --> 00:04:27,150
+these data structures called Stacks and Qs that exist in other programming languages.
+
+61
+00:04:27,210 --> 00:04:28,710
+So they're sort of just leftovers.
+
+62
+00:04:28,860 --> 00:04:33,800
+They exist mainly because they've been used for a long time in other programming languages.
+
+63
+00:04:34,530 --> 00:04:39,270
+So as I mentioned shift to non shift are the opposite of push and pop.
+
+64
+00:04:39,270 --> 00:04:45,600
+So we can use an shift to add to the front of an array and I think that it's confusing that it's called
+
+65
+00:04:45,690 --> 00:04:48,170
+an shift when you're actually adding something.
+
+66
+00:04:48,450 --> 00:04:49,700
+But that's just how it is.
+
+67
+00:04:49,860 --> 00:04:55,800
+So you can see an example here if I wanted to add infrared red to the beginning of the array I could
+
+68
+00:04:55,800 --> 00:05:00,430
+use colors start on shift infrared and that will add at the beginning.
+
+69
+00:05:01,420 --> 00:05:07,220
+That I also have shift which removes the first item in the array and it returns that item.
+
+70
+00:05:07,550 --> 00:05:14,030
+So you can see I have colors and if I wanted to remove red I would do colors dot shift with parentheses
+
+71
+00:05:14,060 --> 00:05:17,880
+and no arguments and that will remove the first element red.
+
+72
+00:05:18,110 --> 00:05:24,410
+So you can see we end up with orange and yellow and if we did it again colors that shift it would remove
+
+73
+00:05:24,440 --> 00:05:27,770
+orange and remember that it returns to the removed element.
+
+74
+00:05:27,800 --> 00:05:30,510
+So I could store it in a variable like I do here.
+
+75
+00:05:30,890 --> 00:05:41,420
+So let's do a quick example will make an array of numbers and we'll just do 34 54 22 and if I want to
+
+76
+00:05:41,480 --> 00:05:48,920
+add a number to the beginning I do start on shift in parentheses and I'm actually going to do a string
+
+77
+00:05:52,520 --> 00:05:55,110
+and that will add to the beginning of numbers.
+
+78
+00:05:55,440 --> 00:06:02,690
+Hello then if I want to remove Hello I can just write numskulls shift with parentheses and that returns
+
+79
+00:06:02,690 --> 00:06:03,270
+Hello.
+
+80
+00:06:03,320 --> 00:06:09,270
+And if I look at Nom's it's back to being just numbers.
+
+81
+00:06:09,500 --> 00:06:16,190
+So the next method is called index of what index does is it takes an argument like a string or a number
+
+82
+00:06:16,340 --> 00:06:19,930
+and it tries to find that argument in a given array.
+
+83
+00:06:20,270 --> 00:06:24,380
+And if it finds it it will return the index where it's found.
+
+84
+00:06:24,500 --> 00:06:30,140
+I have an example here of a friend's array and this array I have five different friends Charlie list
+
+85
+00:06:30,140 --> 00:06:37,840
+David Mathias and another is if I wanted to know where David is located in this array I can write friends
+
+86
+00:06:37,910 --> 00:06:42,590
+dot index of David and I need to make sure that it matches exactly.
+
+87
+00:06:42,820 --> 00:06:47,880
+It's going to go and find the string in the array which is the third item with index of two.
+
+88
+00:06:48,050 --> 00:06:51,800
+So it returns to if I try it on Ms.
+
+89
+00:06:51,800 --> 00:06:56,140
+However it's going to return the first instance of Liz.
+
+90
+00:06:56,240 --> 00:06:57,520
+So there are two.
+
+91
+00:06:57,560 --> 00:06:59,270
+It's going to return this one.
+
+92
+00:06:59,270 --> 00:07:01,010
+And that has an index of 1.
+
+93
+00:07:01,160 --> 00:07:04,150
+Not this one which has an index of four.
+
+94
+00:07:05,390 --> 00:07:10,210
+So we can also use index of to determine if an element is not present in an array.
+
+95
+00:07:10,370 --> 00:07:14,390
+And to do that we just check to see if index of returns negative 1.
+
+96
+00:07:14,420 --> 00:07:15,400
+That's how it behaves.
+
+97
+00:07:15,400 --> 00:07:19,830
+If it doesn't find the given argument so let me give you an example.
+
+98
+00:07:20,270 --> 00:07:26,030
+Let's go back to colors of red orange and yellow
+
+99
+00:07:29,720 --> 00:07:32,510
+and then I'm going to get rid of this so we can't see it.
+
+100
+00:07:32,540 --> 00:07:38,360
+I want to know if Orange is located somewhere in my array and if so where is it.
+
+101
+00:07:38,390 --> 00:07:47,120
+So I'll just write colors that index of yellow and it tells me it's that index too.
+
+102
+00:07:47,300 --> 00:07:52,420
+So I could access it by doing index colors index too.
+
+103
+00:07:53,200 --> 00:07:58,450
+And I get yellow if I wanted to know if Green was in my array.
+
+104
+00:07:58,550 --> 00:07:59,790
+I could do the same thing.
+
+105
+00:07:59,900 --> 00:08:02,830
+Color set index of green.
+
+106
+00:08:03,770 --> 00:08:09,170
+And I get negative 1 which tells me it's not present.
+
+107
+00:08:09,170 --> 00:08:12,030
+The last method that I want to talk about is called slice.
+
+108
+00:08:12,080 --> 00:08:15,700
+We use slice to copy different portions of an array.
+
+109
+00:08:15,950 --> 00:08:23,180
+So I have an example of fruits here an array with banana orange lemon Apple and mango.
+
+110
+00:08:23,660 --> 00:08:26,640
+And if I wanted to copy the citrus is out of here.
+
+111
+00:08:26,780 --> 00:08:31,920
+Only orange and lemon and I want it to make a new array with just orange and lemon.
+
+112
+00:08:32,000 --> 00:08:39,770
+I could use slice so you can see here fruit dot slice and slice takes two arguments.
+
+113
+00:08:39,770 --> 00:08:41,690
+The first one is the starting index.
+
+114
+00:08:41,780 --> 00:08:43,710
+It's where the cut begins.
+
+115
+00:08:43,760 --> 00:08:51,860
+So at index 1 right here Orange and then the second argument is where the slice should stop which is
+
+116
+00:08:51,860 --> 00:08:58,500
+an apple and it's not inclusive so it includes orange and lemon but not the last index of three.
+
+117
+00:08:58,760 --> 00:09:01,040
+So it leaves Apple in disarray.
+
+118
+00:09:01,060 --> 00:09:07,010
+So when we run this citrus is actually going to be a new array that looks like this orange and lemon
+
+119
+00:09:07,220 --> 00:09:12,550
+two items and it's also important to note that the original array fruit is an altered.
+
+120
+00:09:12,680 --> 00:09:16,700
+So it still contains orange and lemon.
+
+121
+00:09:17,060 --> 00:09:20,810
+We can also use slice to copy an entire array to do that.
+
+122
+00:09:20,810 --> 00:09:23,580
+We just don't pass in any starting and end points.
+
+123
+00:09:23,600 --> 00:09:29,200
+We just do numbs that slice with empty parentheses and that duplicates the entire array.
+
+124
+00:09:29,630 --> 00:09:31,410
+So again I'll do a quick example.
+
+125
+00:09:31,490 --> 00:09:40,400
+We'll make an array this time let's do Nom's and I'm going to put some numbers in here and I certainly
+
+126
+00:09:40,700 --> 00:09:44,710
+put a letter or two in there as well.
+
+127
+00:09:44,960 --> 00:09:48,950
+And then a few more numbers.
+
+128
+00:09:50,300 --> 00:09:57,280
+So I look at Nom's and if I want to extract a and b and make a new array called letters I would do Varda
+
+129
+00:09:57,280 --> 00:10:05,040
+letters equals and then I'm going to do numbs slice and then I need to provide two indices.
+
+130
+00:10:05,150 --> 00:10:07,390
+The first one is where to make the first cut.
+
+131
+00:10:07,610 --> 00:10:11,800
+So that is 0 1 2 3 index of 3.
+
+132
+00:10:12,230 --> 00:10:15,830
+And then where to stop which is at this number here.
+
+133
+00:10:15,830 --> 00:10:21,250
+So that's going to be 0 1 2 3 4 5.
+
+134
+00:10:21,950 --> 00:10:27,560
+And if we look at letters we get a and b two items in an array.
+
+135
+00:10:28,250 --> 00:10:34,120
+So that was returned and stored in the letters variable while Gnome's is unchanged.
+
+136
+00:10:35,200 --> 00:10:38,530
+OK so those are the six different methods that I want to show.
+
+137
+00:10:38,580 --> 00:10:43,010
+We had push and pop we had shift and unshipped index of and slice
+

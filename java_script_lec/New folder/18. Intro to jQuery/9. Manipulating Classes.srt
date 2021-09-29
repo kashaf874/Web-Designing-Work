@@ -1,0 +1,324 @@
+﻿1
+00:00:00,220 --> 00:00:02,490
+OK so there's three more methods I want to talk about.
+
+2
+00:00:02,520 --> 00:00:04,160
+And they all are very similar.
+
+3
+00:00:04,170 --> 00:00:06,480
+They have to do with classes.
+
+4
+00:00:06,600 --> 00:00:14,160
+So if you think back to the class list property and the DOT Add Remove and toggle methods that go along
+
+5
+00:00:14,160 --> 00:00:15,510
+with class list.
+
+6
+00:00:15,510 --> 00:00:19,650
+These are the J.A.G. analogs So this will be a quick question.
+
+7
+00:00:19,720 --> 00:00:21,600
+Just going to demonstrate those really quickly.
+
+8
+00:00:21,720 --> 00:00:28,500
+So I'm going to go to my HMO and the first thing I'm going to do is define the style tag and I'm just
+
+9
+00:00:28,500 --> 00:00:32,500
+going to do it in line for the second time and I'm going to add a few classes.
+
+10
+00:00:32,700 --> 00:00:34,350
+So the first one will add in.
+
+11
+00:00:34,380 --> 00:00:39,520
+Well just call it Dot correct and it will make something turn green.
+
+12
+00:00:39,540 --> 00:00:47,700
+So we'll just do colored green and we'll add another one dot wrong and that will make color red and
+
+13
+00:00:47,730 --> 00:00:51,170
+background pink.
+
+14
+00:00:51,690 --> 00:00:59,820
+And then lastly will do dot done which will be like for a To Do list and we'll do color is gray and
+
+15
+00:01:00,360 --> 00:01:05,160
+text decoration is line through.
+
+16
+00:01:05,700 --> 00:01:11,670
+OK so now we have three classes and then we're going to use J query to add and remove those classes
+
+17
+00:01:11,690 --> 00:01:12,260
+.
+
+18
+00:01:12,900 --> 00:01:14,300
+So I'll take a look at the docs.
+
+19
+00:01:14,320 --> 00:01:15,300
+Just one of them.
+
+20
+00:01:15,300 --> 00:01:18,640
+Let's take a look at add class.
+
+21
+00:01:20,070 --> 00:01:26,850
+You can see that it adds the specified class or classes to each element in the set of matched elements
+
+22
+00:01:26,850 --> 00:01:27,360
+.
+
+23
+00:01:27,360 --> 00:01:31,470
+So this will add two classes to all paragraphs.
+
+24
+00:01:31,680 --> 00:01:38,040
+My class and your class to all paragraphs which makes it really useful if we want to assign a class
+
+25
+00:01:38,040 --> 00:01:39,770
+to a bunch of elements at once.
+
+26
+00:01:40,110 --> 00:01:41,640
+So let's go back here.
+
+27
+00:01:41,730 --> 00:01:47,360
+So let's begin by making this H-1 have the correct class which just turned to green.
+
+28
+00:01:47,490 --> 00:01:52,020
+So we select H-1 make sure we have it.
+
+29
+00:01:52,110 --> 00:01:56,030
+Does it add class.
+
+30
+00:01:56,040 --> 00:01:57,030
+Correct.
+
+31
+00:01:57,180 --> 00:01:58,980
+Just like that.
+
+32
+00:01:59,430 --> 00:02:00,520
+And it turns green.
+
+33
+00:02:00,540 --> 00:02:05,400
+And if we inspect it you can see that it has class equals correct.
+
+34
+00:02:05,940 --> 00:02:10,770
+And then we can do remove class to do the same thing but in reverse.
+
+35
+00:02:10,770 --> 00:02:12,960
+So H-1 remove.
+
+36
+00:02:12,960 --> 00:02:13,790
+Class.
+
+37
+00:02:14,040 --> 00:02:15,180
+Correct.
+
+38
+00:02:15,330 --> 00:02:21,620
+We'll remove the class correct from that element and now it no longer has that class.
+
+39
+00:02:22,290 --> 00:02:24,480
+So we can also do that to a collection.
+
+40
+00:02:24,480 --> 00:02:28,290
+So we will select all allies.
+
+41
+00:02:28,770 --> 00:02:32,330
+We get three of them and then we'll add the class.
+
+42
+00:02:32,640 --> 00:02:35,960
+Wrong just like that.
+
+43
+00:02:36,210 --> 00:02:41,390
+And all of them now have that class where they have a pink background and text color is red.
+
+44
+00:02:41,400 --> 00:02:43,300
+You can see it added them to three.
+
+45
+00:02:43,650 --> 00:02:49,080
+So once again I know I'm a broken record here but if we did this without j Querrey we would have to
+
+46
+00:02:49,080 --> 00:02:54,810
+select all three of these manually with a query selector all possibly and then we would loop through
+
+47
+00:02:54,810 --> 00:02:59,840
+with the for loop and for each one we would do class classless add wrong.
+
+48
+00:03:00,240 --> 00:03:01,690
+So we don't have to do any of that.
+
+49
+00:03:01,860 --> 00:03:05,610
+This has an implicit loop that takes care of it all for us.
+
+50
+00:03:06,180 --> 00:03:13,990
+So let's now remove that class wrong from all of them and let's add the class.
+
+51
+00:03:14,060 --> 00:03:14,690
+Correct.
+
+52
+00:03:14,700 --> 00:03:16,540
+All of them just like that.
+
+53
+00:03:16,560 --> 00:03:18,450
+And now they all turn green.
+
+54
+00:03:18,450 --> 00:03:19,800
+Perfect.
+
+55
+00:03:19,830 --> 00:03:24,530
+So the last one that I'll demonstrate is toggle class which works just like.
+
+56
+00:03:24,540 --> 00:03:31,410
+Class list toggle does where it takes a argument a class name and it will either apply that class or
+
+57
+00:03:31,410 --> 00:03:34,320
+add it to the Elman or set of elements.
+
+58
+00:03:34,320 --> 00:03:39,150
+If they don't have it yet and if they do have that class it will remove it.
+
+59
+00:03:39,150 --> 00:03:40,870
+So let's try that now.
+
+60
+00:03:41,520 --> 00:03:47,990
+Let's go and do a toggle so all allies toggle.
+
+61
+00:03:48,120 --> 00:03:49,550
+Class.
+
+62
+00:03:49,620 --> 00:03:50,300
+Correct.
+
+63
+00:03:50,340 --> 00:03:52,200
+And they already have that class.
+
+64
+00:03:52,320 --> 00:03:53,470
+So that will remove it.
+
+65
+00:03:53,520 --> 00:03:57,870
+And if we run it again that will add it and remove it and add it and remove it.
+
+66
+00:03:57,870 --> 00:04:02,820
+So let's try something a little bit different and only do it for the first ally.
+
+67
+00:04:02,820 --> 00:04:07,840
+So Elijah it first which is just like the last that I showed you.
+
+68
+00:04:08,160 --> 00:04:13,630
+And we'll toggle the class done.
+
+69
+00:04:14,190 --> 00:04:19,110
+And so only the first one is great out and has that strikethrough effect.
+
+70
+00:04:19,110 --> 00:04:30,090
+Now if I select all of them allies that toggle class done and I hit enter you can see that it toggles
+
+71
+00:04:30,120 --> 00:04:31,520
+each one individually.
+
+72
+00:04:31,710 --> 00:04:33,290
+So this one had the class done.
+
+73
+00:04:33,300 --> 00:04:36,310
+So it was removed and these two didn't have the class.
+
+74
+00:04:36,390 --> 00:04:39,060
+So it automatically added declasse.
+
+75
+00:04:39,540 --> 00:04:40,920
+That's all I wanted to demonstrate.
+
+76
+00:04:40,920 --> 00:04:46,920
+We have I'd class remove class and toggle class and they worked very similarly to how they did with
+
+77
+00:04:46,920 --> 00:04:48,310
+class list with vanilla.
+
+78
+00:04:48,360 --> 00:04:49,040
+Yes.
+
+79
+00:04:49,170 --> 00:04:54,570
+The big difference like everything in J query is that we can act on a collection of elements without
+
+80
+00:04:54,570 --> 00:04:56,310
+actually having to write the loop.
+
+81
+00:04:56,760 --> 00:04:57,380
+OK.
+

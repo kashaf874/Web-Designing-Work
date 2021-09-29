@@ -1,0 +1,1184 @@
+﻿1
+00:00:00,330 --> 00:00:07,200
+Welcome back in this lesson we'll focus on adding in the audio so adding in the music samples that we'll
+
+2
+00:00:07,200 --> 00:00:14,850
+play when we hit each key and also focus on giving each key its own color so that we don't always get
+
+3
+00:00:14,850 --> 00:00:20,730
+these orange fading to yellow and then green but we'll have some that are purple some that are blue
+
+4
+00:00:20,730 --> 00:00:23,720
+as you can see here all different colors.
+
+5
+00:00:24,300 --> 00:00:33,900
+But it's always the same color for any given key like H has always this orange cue is always this that's
+
+6
+00:00:34,760 --> 00:00:36,980
+T Y and so on.
+
+7
+00:00:37,250 --> 00:00:37,570
+OK.
+
+8
+00:00:37,590 --> 00:00:42,030
+So to get started we'll just figure out how we can play a sound at all.
+
+9
+00:00:42,030 --> 00:00:45,000
+So just how we trigger a sound using Hallard.
+
+10
+00:00:45,030 --> 00:00:52,800
+Yes in the Hausler is basically the opposite of Paperchase as far as its complexity it's really really
+
+11
+00:00:52,800 --> 00:00:55,250
+simple which makes it really nice.
+
+12
+00:00:55,290 --> 00:01:00,390
+Again you can play audio without a library but it is a little bit.
+
+13
+00:01:00,390 --> 00:01:05,220
+It's a little painful when you want to do something like what we want to do where we're not just playing
+
+14
+00:01:05,220 --> 00:01:10,890
+a sound one time but I want to be able to trigger a sound ten times in a row like let's say I'm doing
+
+15
+00:01:11,280 --> 00:01:13,230
+this crap here I want to be able to do something like
+
+16
+00:01:16,170 --> 00:01:22,200
+there's a little bit of work involved to making that actually behave the way that we want it to.
+
+17
+00:01:22,320 --> 00:01:27,830
+It's really easy to play a sound like play a song which is really annoying but if you go onto a Web
+
+18
+00:01:27,830 --> 00:01:32,850
+site and there's some you know some sort of sound or song it's playing in the background that's really
+
+19
+00:01:32,850 --> 00:01:35,910
+simple to do with h tim owl and javascript's.
+
+20
+00:01:35,910 --> 00:01:40,470
+But to do something like this where we can have a bunch of simultaneous sound going and we can repeat
+
+21
+00:01:40,470 --> 00:01:44,550
+things and that would be a lot easier to use something like Hallard J us.
+
+22
+00:01:44,820 --> 00:01:45,980
+So again not impossible.
+
+23
+00:01:45,990 --> 00:01:48,630
+Like anything that a library does you can do it yourself.
+
+24
+00:01:48,810 --> 00:01:50,950
+But we wouldn't really want to.
+
+25
+00:01:51,570 --> 00:01:56,550
+So if we take a look at how it works this is all that we'll need to use this little bit of code here
+
+26
+00:01:56,900 --> 00:01:59,110
+where we create a new how.
+
+27
+00:01:59,130 --> 00:02:02,800
+So how is the thing that we're initialising and knew how.
+
+28
+00:02:02,970 --> 00:02:08,420
+Then we give it a list of a few URLs of the files that we want to play.
+
+29
+00:02:08,500 --> 00:02:15,300
+So the reason that we give it an array of these different you are different files even though they look
+
+30
+00:02:15,300 --> 00:02:20,490
+like they're the same they're just different file types and the order that you put them in is the order
+
+31
+00:02:20,490 --> 00:02:24,330
+that howler will try and load them in.
+
+32
+00:02:24,330 --> 00:02:29,490
+So basically there are certain file types that will work in every browser some of them that won't work
+
+33
+00:02:29,520 --> 00:02:30,600
+in every browser.
+
+34
+00:02:30,600 --> 00:02:32,700
+So you can specify certain backups.
+
+35
+00:02:32,850 --> 00:02:33,680
+We're not going to do that.
+
+36
+00:02:33,690 --> 00:02:35,260
+We'll just have a single file.
+
+37
+00:02:35,340 --> 00:02:40,620
+But if you wanted to have backups basically the way that that works as far as I know at least you can
+
+38
+00:02:40,620 --> 00:02:42,590
+read about it here I'm sure.
+
+39
+00:02:42,630 --> 00:02:48,250
+Here we go you or else the source you are else to the track or tracks to be loaded for the sound.
+
+40
+00:02:48,310 --> 00:02:49,640
+These should be an order of preference.
+
+41
+00:02:49,650 --> 00:02:53,630
+Howard Jasc will automatically load the first one that is compatible with the current browser.
+
+42
+00:02:53,640 --> 00:02:54,760
+So there you go.
+
+43
+00:02:54,900 --> 00:02:58,120
+We could add in other versions of the same song.
+
+44
+00:02:58,140 --> 00:03:04,690
+In our case the same sample and holler would automatically load the first one that's compatible.
+
+45
+00:03:04,980 --> 00:03:05,680
+OK.
+
+46
+00:03:05,880 --> 00:03:08,690
+So the code that we need though is new Howell.
+
+47
+00:03:09,000 --> 00:03:12,050
+And then you go and that's it.
+
+48
+00:03:12,090 --> 00:03:14,340
+And then when we're ready to play it we just call plays.
+
+49
+00:03:14,340 --> 00:03:14,970
+You can see here
+
+50
+00:03:18,420 --> 00:03:19,590
+and we won't be stopping it.
+
+51
+00:03:19,590 --> 00:03:20,750
+We won't be pausing.
+
+52
+00:03:20,790 --> 00:03:23,510
+We won't be looping because our sounds are really short.
+
+53
+00:03:23,610 --> 00:03:26,280
+So we just want them to play and let them finish out.
+
+54
+00:03:26,280 --> 00:03:29,660
+Each one is about somewhere between half a second and a second.
+
+55
+00:03:29,850 --> 00:03:35,760
+So if you haven't done so already go ahead and download that zip file that has all the sounds and dragged
+
+56
+00:03:35,760 --> 00:03:39,650
+into the same directory where you been writing your code.
+
+57
+00:03:39,750 --> 00:03:42,700
+So instead of sounds we have all these files.
+
+58
+00:03:43,620 --> 00:03:44,400
+All right.
+
+59
+00:03:44,460 --> 00:03:48,090
+And the next thing we need to do is install HAUSLER In order to use it.
+
+60
+00:03:48,150 --> 00:03:49,500
+So you can download it.
+
+61
+00:03:49,750 --> 00:03:52,600
+But just for variety sake I'll use a CDN.
+
+62
+00:03:52,620 --> 00:03:54,990
+So I just did a search for howler CDN
+
+63
+00:03:57,640 --> 00:03:58,460
+copy this first.
+
+64
+00:03:58,470 --> 00:04:02,850
+You are all here could always test it out see if it is valid.
+
+65
+00:04:02,850 --> 00:04:03,420
+Here we go.
+
+66
+00:04:03,480 --> 00:04:05,870
+Here's the code that is for howler.
+
+67
+00:04:05,970 --> 00:04:06,710
+Perfect.
+
+68
+00:04:06,960 --> 00:04:08,040
+Let's go back to our app
+
+69
+00:04:11,460 --> 00:04:13,230
+and then we'll just add in a script.
+
+70
+00:04:13,230 --> 00:04:19,860
+So after paper can duplicate that and just change the source to be the howler you know let's make sure
+
+71
+00:04:19,860 --> 00:04:22,470
+it loads OK without any issue.
+
+72
+00:04:23,700 --> 00:04:25,090
+Perfect.
+
+73
+00:04:25,770 --> 00:04:29,330
+Next let's actually make our first howl.
+
+74
+00:04:29,490 --> 00:04:32,010
+So let's copy this code again from hower.
+
+75
+00:04:32,040 --> 00:04:33,480
+Just take this first one right here
+
+76
+00:04:36,420 --> 00:04:38,930
+and let's do it up top start.
+
+77
+00:04:39,120 --> 00:04:46,920
+So we'll just do it right here and we'll say VAR's sound equals knew how and then we'll just put in
+
+78
+00:04:46,920 --> 00:04:50,700
+one file and let's do the first one that we see.
+
+79
+00:04:50,700 --> 00:04:57,340
+So Bubbles got MP 3 so that's inside the sound directory slash bubbles stud MP 3.
+
+80
+00:04:57,420 --> 00:04:58,390
+So sound.
+
+81
+00:04:58,440 --> 00:04:59,950
+Slash bubble.
+
+82
+00:04:59,970 --> 00:05:01,530
+I already forgot to use bubbles.
+
+83
+00:05:01,530 --> 00:05:01,970
+There you go.
+
+84
+00:05:02,010 --> 00:05:03,130
+Is pluralized.
+
+85
+00:05:03,180 --> 00:05:04,970
+So sound like you Bubbles.
+
+86
+00:05:04,980 --> 00:05:06,900
+MP 3 and that's all we need.
+
+87
+00:05:07,380 --> 00:05:09,450
+And let's not play it right away.
+
+88
+00:05:09,900 --> 00:05:10,960
+Let's just create that.
+
+89
+00:05:10,980 --> 00:05:12,310
+That's all we need to do.
+
+90
+00:05:12,750 --> 00:05:14,670
+And then to play it let's just play it.
+
+91
+00:05:14,670 --> 00:05:23,380
+When you press a key down so it's sound dot play really nice and simple let's take a look try it out
+
+92
+00:05:23,380 --> 00:05:25,130
+.
+
+93
+00:05:25,480 --> 00:05:26,770
+There we go.
+
+94
+00:05:26,800 --> 00:05:34,680
+So every key pressing a bunch of different keys now triggers that sound ok.
+
+95
+00:05:34,720 --> 00:05:36,220
+Hopefully that wasn't too annoying.
+
+96
+00:05:36,220 --> 00:05:40,040
+So next up let's focus on adding in another sound.
+
+97
+00:05:40,270 --> 00:05:41,830
+So we'll just do two to start.
+
+98
+00:05:41,830 --> 00:05:42,730
+So we have bubbles.
+
+99
+00:05:42,760 --> 00:05:54,250
+Let's do Clay MP3 so that we could do is just duplicate this and do a sound two equals new Howell and
+
+100
+00:05:54,250 --> 00:05:58,490
+we'll do sound slash clay and P3.
+
+101
+00:05:59,320 --> 00:06:03,510
+And then what we'll do in here is have an if statement.
+
+102
+00:06:03,580 --> 00:06:05,210
+So let's focus on two keys.
+
+103
+00:06:05,230 --> 00:06:07,610
+Let's do a and s.
+
+104
+00:06:07,720 --> 00:06:17,470
+So if you press a if key is a then we'll play sound and let's call it sound one just to make it clearer
+
+105
+00:06:19,180 --> 00:06:25,150
+if key is s you put quotes around this as well.
+
+106
+00:06:25,150 --> 00:06:28,340
+Then we'll play sound too.
+
+107
+00:06:28,390 --> 00:06:36,160
+So to tell what key was pressed it's really easy with Paperchase we have this event object here and
+
+108
+00:06:36,220 --> 00:06:39,280
+we need to do is event dot key.
+
+109
+00:06:39,280 --> 00:06:45,360
+So we'll just read an if statement if event that key equals a.
+
+110
+00:06:46,540 --> 00:06:48,810
+Then we'll just do a play sound one.
+
+111
+00:06:48,810 --> 00:06:56,410
+So that's sound one play and then do the same thing.
+
+112
+00:06:56,500 --> 00:07:04,100
+If event dot key equals equals X then will do play sound too.
+
+113
+00:07:04,120 --> 00:07:07,190
+So sound to play just like that.
+
+114
+00:07:07,870 --> 00:07:08,740
+So we can try that out.
+
+115
+00:07:08,740 --> 00:07:13,420
+So only key keys and S should trigger things.
+
+116
+00:07:13,420 --> 00:07:17,710
+So I'll tell you right now I'm hitting q looks like we have an error.
+
+117
+00:07:18,280 --> 00:07:19,530
+What are we getting here.
+
+118
+00:07:19,870 --> 00:07:21,930
+Sound is not defined.
+
+119
+00:07:21,940 --> 00:07:26,770
+Ignore these warnings here for now we will be fixing those at the very end.
+
+120
+00:07:26,830 --> 00:07:31,260
+It's a more complex issue but it actually won't get in the way of our code working to start.
+
+121
+00:07:31,450 --> 00:07:34,030
+But this will so silly error.
+
+122
+00:07:34,360 --> 00:07:37,790
+I was referencing sound right here.
+
+123
+00:07:37,810 --> 00:07:39,150
+We don't have sound anymore.
+
+124
+00:07:39,740 --> 00:07:40,320
+OK.
+
+125
+00:07:40,720 --> 00:07:42,460
+So now nothing should play.
+
+126
+00:07:42,460 --> 00:07:50,050
+When I hit most keys but I'll hit a K other keys and now had s.
+
+127
+00:07:50,260 --> 00:07:52,980
+So we have a n s.
+
+128
+00:07:53,650 --> 00:07:54,700
+Perfect.
+
+129
+00:07:54,790 --> 00:08:01,380
+And what we could do as well is now assign a color to each one so we could do something like this.
+
+130
+00:08:01,420 --> 00:08:09,790
+Let's move this to the bottom of the same key down but right before we push we could have something
+
+131
+00:08:09,790 --> 00:08:21,670
+like this if event he has a play that sound and we can set the color of new circle dot fill color equals
+
+132
+00:08:22,150 --> 00:08:32,210
+and then we can give it a color like to see 3 5 0 and then do the same thing.
+
+133
+00:08:32,230 --> 00:08:45,270
+If we press S but with a different color like let's do 16 a 0 8 5 and then we can have an else
+
+134
+00:08:48,520 --> 00:08:52,460
+and hopefully you're thinking to yourself This probably isn't the best way of doing this.
+
+135
+00:08:52,480 --> 00:08:57,890
+It might be OK for two and us but what about 20 30 or 50 keys.
+
+136
+00:08:57,910 --> 00:09:00,530
+We use the entire keyboard and all different characters.
+
+137
+00:09:00,640 --> 00:09:02,390
+That would be a lot of code.
+
+138
+00:09:02,860 --> 00:09:05,020
+But let me just show you right now.
+
+139
+00:09:05,140 --> 00:09:09,490
+So cue most colors or most keys don't play sound.
+
+140
+00:09:09,560 --> 00:09:10,830
+They give us the same color.
+
+141
+00:09:10,930 --> 00:09:21,500
+Now if I had a UPS I hit two keys a gives us a slightly different color as gives us a blue.
+
+142
+00:09:21,820 --> 00:09:26,460
+So of course the color that I picked here is hard.
+
+143
+00:09:26,460 --> 00:09:29,760
+It is hard to see let me change changes to be purple.
+
+144
+00:09:30,130 --> 00:09:32,650
+And technically we should make this an else.
+
+145
+00:09:32,710 --> 00:09:40,810
+If so we'll check if key is a LCF and else if we have two if statements.
+
+146
+00:09:40,810 --> 00:09:46,960
+This one will run and then we have another if and if that's not true then the elso be true but it won't
+
+147
+00:09:46,960 --> 00:09:48,580
+take into account this one appear.
+
+148
+00:09:48,570 --> 00:09:54,970
+So if we only want one of these to be true which is we only want one color purple blue or orange.
+
+149
+00:09:54,970 --> 00:09:58,570
+Then we want them to be part of one if statement but it doesn't really matter because we are going to
+
+150
+00:09:58,570 --> 00:10:00,210
+change this in just a second.
+
+151
+00:10:00,310 --> 00:10:02,760
+Now our refresh here is normal keys.
+
+152
+00:10:02,860 --> 00:10:09,290
+I hit a though we get purple hit as we get blue and two different sounds.
+
+153
+00:10:09,290 --> 00:10:09,820
+OK.
+
+154
+00:10:10,150 --> 00:10:12,170
+So that's how we use Hausler.
+
+155
+00:10:12,190 --> 00:10:17,940
+Now we want to do this for every single key and there's a much better way than what we have here.
+
+156
+00:10:17,950 --> 00:10:20,190
+So I'm actually going to get rid of all of this
+
+157
+00:10:22,890 --> 00:10:23,880
+because we could.
+
+158
+00:10:23,910 --> 00:10:30,240
+As I mentioned earlier have an if statement for every single key if key is a do this if key is B and
+
+159
+00:10:30,300 --> 00:10:31,240
+for every single key.
+
+160
+00:10:31,250 --> 00:10:33,590
+But that's really not a good practice.
+
+161
+00:10:33,600 --> 00:10:42,810
+So what we'll do instead is define an object and we'll just call it key data and it's an object.
+
+162
+00:10:42,990 --> 00:10:44,480
+And this is what it will look like.
+
+163
+00:10:44,580 --> 00:10:46,710
+So we'll have a key like a.
+
+164
+00:10:47,000 --> 00:10:57,930
+And then when a is pressed we'll say that color should be purple and that sound should be.
+
+165
+00:10:57,930 --> 00:11:01,740
+And let's just put this entire thing in there.
+
+166
+00:11:03,030 --> 00:11:04,620
+So I'll go over this in just a second.
+
+167
+00:11:04,620 --> 00:11:13,070
+Let me put this here first and then we can do the exact same thing again for us.
+
+168
+00:11:13,230 --> 00:11:20,100
+So when is pressed color should be green and sound should be new.
+
+169
+00:11:20,100 --> 00:11:21,420
+How will.
+
+170
+00:11:21,540 --> 00:11:28,950
+Same thing you are or else and let's do sound slash Clay thought MP3
+
+171
+00:11:32,610 --> 00:11:34,630
+and then we could do that for every single key.
+
+172
+00:11:34,680 --> 00:11:40,950
+And yes it's a lot of syntax here but the advantage is that we have one place for all of our data is
+
+173
+00:11:40,960 --> 00:11:47,450
+defined and then we don't need an if statement or in a separate conditional for every single key.
+
+174
+00:11:47,580 --> 00:11:53,640
+All that we have to do is take where are you event dot key which actually got rid of.
+
+175
+00:11:53,630 --> 00:11:54,540
+Take this right here.
+
+176
+00:11:54,540 --> 00:11:58,390
+Event dot key which is the key that was pressed.
+
+177
+00:11:58,920 --> 00:12:04,560
+And let's say that that's the letter J.
+
+178
+00:12:04,860 --> 00:12:11,350
+If that's the case we just take it and plug it into key data and that will give us color purple sound
+
+179
+00:12:11,350 --> 00:12:11,630
+.
+
+180
+00:12:11,730 --> 00:12:12,720
+Is this sound.
+
+181
+00:12:12,720 --> 00:12:13,710
+So I'll show you what I mean.
+
+182
+00:12:13,740 --> 00:12:20,910
+Let's just go with these two examples and to make it more obvious let's add in one more duplicate what
+
+183
+00:12:20,910 --> 00:12:23,000
+we have.
+
+184
+00:12:23,280 --> 00:12:26,360
+So we have a n s let's also do D.
+
+185
+00:12:26,490 --> 00:12:33,750
+And color can be it's too yellow and then sound.
+
+186
+00:12:33,750 --> 00:12:34,960
+What else do we have.
+
+187
+00:12:35,220 --> 00:12:40,480
+Let's do confetti.
+
+188
+00:12:41,190 --> 00:12:42,240
+Perfect.
+
+189
+00:12:42,240 --> 00:12:43,770
+Get rid of this trailing comma.
+
+190
+00:12:43,980 --> 00:12:50,040
+We can get rid of this now and we'll need to change this around a little bit and the next thing that
+
+191
+00:12:50,040 --> 00:12:57,690
+will do is take that event duck key and plug it in to our key data.
+
+192
+00:12:58,410 --> 00:12:59,640
+So we could do something like this.
+
+193
+00:12:59,630 --> 00:13:09,480
+Key data bracket event key and that would give us for if if s was event he gives us this entire thing
+
+194
+00:13:09,480 --> 00:13:15,320
+here and then we can do color so we can start there.
+
+195
+00:13:16,200 --> 00:13:24,590
+So what we'll do is before we push new circle and we'll just say new circle fill color equals key data
+
+196
+00:13:24,970 --> 00:13:28,290
+event key color.
+
+197
+00:13:28,350 --> 00:13:32,660
+So just to reiterate the dark key is a letter.
+
+198
+00:13:33,300 --> 00:13:35,030
+Well in our case we'll make sure it's a letter.
+
+199
+00:13:35,040 --> 00:13:39,110
+Technically could be a number or shiftier tab but it's the key that was pressed.
+
+200
+00:13:39,190 --> 00:13:41,590
+Then we take that and plug it into key data.
+
+201
+00:13:41,610 --> 00:13:44,260
+We get this entire thing out.
+
+202
+00:13:44,280 --> 00:13:50,520
+If eventime key is a if the user pressed a then we're doing dark color which gives us purple.
+
+203
+00:13:50,520 --> 00:13:53,250
+So then we're setting new circle but fill color to be purple.
+
+204
+00:13:53,280 --> 00:13:57,890
+If event Duck Key is a but notice we don't have to have an if statement to do that.
+
+205
+00:13:58,170 --> 00:14:03,480
+So we don't have to say if Turkey has a do this if event that key is asked to do this.
+
+206
+00:14:03,480 --> 00:14:04,990
+This is the same line no matter what.
+
+207
+00:14:05,100 --> 00:14:11,220
+Because we have this one dictionary or this one source of our data defined there is a problem of course
+
+208
+00:14:11,220 --> 00:14:11,610
+.
+
+209
+00:14:11,910 --> 00:14:14,170
+This will only work for a S and D right now.
+
+210
+00:14:14,280 --> 00:14:18,670
+So I'll show you refresh make sure we don't have any syntax errors.
+
+211
+00:14:18,720 --> 00:14:24,080
+We do cannot read color or cannot read properly colored undefined and that's not a syntax error.
+
+212
+00:14:24,210 --> 00:14:25,660
+That's the error that I'm expecting.
+
+213
+00:14:25,710 --> 00:14:26,760
+So I'll show you.
+
+214
+00:14:26,850 --> 00:14:31,830
+I'll press a good press a or s are also good and D.
+
+215
+00:14:32,070 --> 00:14:35,030
+But now I press Q And we have a problem.
+
+216
+00:14:35,460 --> 00:14:41,580
+And that's because this is undefined key data of Q doesn't exist.
+
+217
+00:14:41,580 --> 00:14:43,320
+We have a S and D.
+
+218
+00:14:43,400 --> 00:14:45,030
+So that's a problem.
+
+219
+00:14:45,030 --> 00:14:47,540
+The way to fix that is simple.
+
+220
+00:14:47,550 --> 00:14:52,470
+All we'll do is check if you do this right here.
+
+221
+00:14:52,580 --> 00:15:00,840
+Top inside of that key press if key data bracket event Docky.
+
+222
+00:15:00,890 --> 00:15:08,390
+So remember if this is truthy Basically if it exists then we'll do all of this.
+
+223
+00:15:08,760 --> 00:15:14,520
+Otherwise if it doesn't exist we won't do anything to start.
+
+224
+00:15:14,740 --> 00:15:16,590
+I actually won't do anything at all.
+
+225
+00:15:16,590 --> 00:15:22,500
+So right now our Apple only work it will do anything or only do anything when you press a S and D.
+
+226
+00:15:22,500 --> 00:15:26,440
+So just to go back let's make sure that works now.
+
+227
+00:15:26,490 --> 00:15:27,690
+Q Nothing happens.
+
+228
+00:15:27,810 --> 00:15:29,480
+I'm pressing a bunch of keys.
+
+229
+00:15:29,610 --> 00:15:30,550
+Now I hit a.
+
+230
+00:15:30,600 --> 00:15:31,180
+And it works.
+
+231
+00:15:31,180 --> 00:15:34,130
+S and D but no other key does anything.
+
+232
+00:15:34,320 --> 00:15:35,440
+Great.
+
+233
+00:15:35,450 --> 00:15:37,380
+So now let's get the sound to play.
+
+234
+00:15:37,770 --> 00:15:39,200
+So that's also nice and simple.
+
+235
+00:15:39,210 --> 00:15:49,800
+We just need key data event key sound and I'm not sure why I named these two sounds that should have
+
+236
+00:15:49,800 --> 00:15:51,140
+been sound.
+
+237
+00:15:51,170 --> 00:15:55,070
+There we go that sound dot play.
+
+238
+00:15:55,080 --> 00:15:59,290
+Remember the Venki plugs into this savey press D.
+
+239
+00:15:59,430 --> 00:16:00,780
+We get this object.
+
+240
+00:16:00,960 --> 00:16:02,400
+We do dat sound on it.
+
+241
+00:16:02,430 --> 00:16:06,720
+We get this which we then run play on just like before.
+
+242
+00:16:07,080 --> 00:16:09,590
+OK let's give it a shot.
+
+243
+00:16:09,890 --> 00:16:11,960
+A As the.
+
+244
+00:16:12,240 --> 00:16:14,460
+And the other keys don't do anything.
+
+245
+00:16:14,900 --> 00:16:15,460
+Perfect.
+
+246
+00:16:15,510 --> 00:16:21,900
+So all we have left to do here is really just add in all of her other keys and that would be really
+
+247
+00:16:21,890 --> 00:16:25,320
+painful for you to watch me type from scratch.
+
+248
+00:16:25,320 --> 00:16:29,720
+I have that pre-done I gave you the file in the download.
+
+249
+00:16:30,060 --> 00:16:31,090
+I called it day to day.
+
+250
+00:16:31,190 --> 00:16:31,830
+Yes.
+
+251
+00:16:31,860 --> 00:16:37,490
+So if we open that up it's just a giant object that has all of the letter keys.
+
+252
+00:16:37,620 --> 00:16:40,110
+So we have q w e r.
+
+253
+00:16:40,120 --> 00:16:41,570
+They're not really in any order.
+
+254
+00:16:41,610 --> 00:16:45,600
+Well they are but no particular order as far as colors and sounds.
+
+255
+00:16:45,720 --> 00:16:48,750
+I just picked random ones and they each have a color.
+
+256
+00:16:49,020 --> 00:16:56,040
+So if we copy this and replace what we have here make sure we call it key data
+
+257
+00:16:58,800 --> 00:17:01,290
+perfect.
+
+258
+00:17:01,290 --> 00:17:11,210
+We've now provided this Dictionary of sounding colors for every single key every single alphabet key
+
+259
+00:17:11,220 --> 00:17:11,980
+at least.
+
+260
+00:17:12,360 --> 00:17:13,460
+And we can use that.
+
+261
+00:17:13,500 --> 00:17:15,220
+We don't have to change our code at all.
+
+262
+00:17:15,270 --> 00:17:21,410
+So it's really nice if we want to add in numeric keys where we want to add in tab and shift and escape
+
+263
+00:17:21,840 --> 00:17:26,770
+and whatever else we just add an extra properties on this object.
+
+264
+00:17:26,850 --> 00:17:32,580
+So let's try out close it down refresh.
+
+265
+00:17:32,580 --> 00:17:36,800
+Perfect.
+
+266
+00:17:36,840 --> 00:17:37,550
+All right.
+
+267
+00:17:37,700 --> 00:17:38,880
+So don't get carried away here.
+
+268
+00:17:38,900 --> 00:17:39,420
+Pretty fun though
+
+269
+00:17:40,720 --> 00:17:44,810
+.
+
+270
+00:17:47,660 --> 00:17:48,100
+OK.
+
+271
+00:17:48,200 --> 00:17:49,100
+All right that's enough.
+
+272
+00:17:49,350 --> 00:17:54,720
+So we've covered a lot but at the end of the day all we really did was take some code that we found
+
+273
+00:17:55,050 --> 00:17:56,600
+to make a circle.
+
+274
+00:17:56,720 --> 00:18:01,650
+We took some code that we found to animate a circle to change the color.
+
+275
+00:18:01,800 --> 00:18:03,740
+We found some code to do events.
+
+276
+00:18:03,780 --> 00:18:04,960
+So when you press a key.
+
+277
+00:18:05,180 --> 00:18:09,530
+And then we combine that with some other code we found to play some music.
+
+278
+00:18:09,650 --> 00:18:13,970
+And when you put it together you can make some cool things and there's a lot more you can do here.
+
+279
+00:18:14,150 --> 00:18:16,500
+And we're not 100 percent done.
+
+280
+00:18:16,500 --> 00:18:20,860
+We are done with the functionality so we're not adding in any new features and won't look any different
+
+281
+00:18:20,870 --> 00:18:21,110
+.
+
+282
+00:18:21,450 --> 00:18:29,480
+But if you do open up the console you'll see we get all of these cannot load files SML HTP request cross
+
+283
+00:18:29,490 --> 00:18:30,060
+origin.
+
+284
+00:18:30,060 --> 00:18:31,050
+Blah blah blah.
+
+285
+00:18:31,260 --> 00:18:32,750
+I'll cover that in the next video.
+
+286
+00:18:32,760 --> 00:18:36,590
+Talk about why that's happening and also how we can fix it.
+
+287
+00:18:36,680 --> 00:18:42,380
+And then the other thing that we'll do is talk about a small way of refactoring this because right now
+
+288
+00:18:42,720 --> 00:18:48,420
+every time I press I'm adding a new circle to the circle's array and I'm never removing them from that
+
+289
+00:18:48,410 --> 00:18:49,250
+array.
+
+290
+00:18:49,400 --> 00:18:53,700
+So I might have 10000 in there right now.
+
+291
+00:18:53,820 --> 00:19:00,020
+Well I don't but I might have a hundred and there are 200 and we're looping over that entire thing.
+
+292
+00:19:00,060 --> 00:19:03,450
+Even if we don't see the circles because they're so small.
+
+293
+00:19:03,720 --> 00:19:07,000
+So we'll make a small change to get rid of those in the next video.
+
+294
+00:19:07,140 --> 00:19:11,550
+But again we're done with functionality so if you don't care to see that you just liked making this
+
+295
+00:19:11,550 --> 00:19:12,760
+and you want to move on.
+
+296
+00:19:12,990 --> 00:19:14,350
+Go ahead and move on to the next unit.
+

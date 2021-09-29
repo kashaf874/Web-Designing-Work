@@ -1,0 +1,444 @@
+﻿1
+00:00:00,210 --> 00:00:04,980
+Already Welcome Back in this video we're going to talk about some of the other common J Querrey methods
+
+2
+00:00:05,070 --> 00:00:07,430
+that we'll want to use.
+
+3
+00:00:07,470 --> 00:00:11,940
+So here are the seven methods that I want to discuss and the way that I'm going to do this here is I'll
+
+4
+00:00:11,940 --> 00:00:14,750
+make an HTML file which already have.
+
+5
+00:00:15,090 --> 00:00:17,700
+I call that method study Timo.
+
+6
+00:00:17,880 --> 00:00:22,530
+And then I'll add in my basic age L and I'll just call it J.
+
+7
+00:00:22,560 --> 00:00:25,380
+Queery methods in the title.
+
+8
+00:00:25,380 --> 00:00:31,950
+And I'm going to just steal the CD and script that I added from the last exercise just so I don't have
+
+9
+00:00:31,950 --> 00:00:35,800
+to go through that whole process so I'll just use the Cdn.
+
+10
+00:00:36,090 --> 00:00:40,360
+And then I'm going to add some HTL here that we're going to work with and I'm going to use this H.T.
+
+11
+00:00:40,400 --> 00:00:43,340
+mouth to demonstrate how all of these methods work.
+
+12
+00:00:43,560 --> 00:00:45,750
+And as always I encourage you to follow along.
+
+13
+00:00:45,960 --> 00:00:51,420
+So the first thing that I'm going to do is add some H to him all in have an H1 and it will just say
+
+14
+00:00:51,800 --> 00:01:03,510
+J Query methods demo page and then we'll add in a text input and put type equals text and we'll give
+
+15
+00:01:03,510 --> 00:01:09,320
+it a placeholder that just says your name just like that.
+
+16
+00:01:09,420 --> 00:01:20,160
+Make this a little bit bigger and then we'll add in a well again with some allies and these allies will
+
+17
+00:01:20,160 --> 00:01:22,060
+be different types of candy.
+
+18
+00:01:22,260 --> 00:01:28,780
+So we'll have skittles and starburst and twix.
+
+19
+00:01:29,190 --> 00:01:33,040
+OK so three types of candies instead of Elyse instead of a single.
+
+20
+00:01:33,170 --> 00:01:39,210
+Well we'll just start with this and let's open it up in the browser see what we're working with.
+
+21
+00:01:39,210 --> 00:01:39,890
+All right.
+
+22
+00:01:40,170 --> 00:01:42,890
+And we'll open up the console to double check that we have.
+
+23
+00:01:42,900 --> 00:01:45,970
+Jay Querrey So there's a lot of ways we can do that.
+
+24
+00:01:46,080 --> 00:01:52,860
+We can type Jake where we can do dollar sign and select H-1 and make sure we get the right each one
+
+25
+00:01:53,070 --> 00:01:53,920
+which we do.
+
+26
+00:01:54,150 --> 00:01:58,200
+So now we know that J query is correctly added to our page.
+
+27
+00:01:58,230 --> 00:01:58,730
+All right.
+
+28
+00:01:58,980 --> 00:02:02,250
+So the first method that I want to talk about is called text.
+
+29
+00:02:02,310 --> 00:02:07,410
+I'm going to go to the J CT documentation and show you how you can find specific methods.
+
+30
+00:02:07,410 --> 00:02:13,260
+So what I like to do is just go to the API documentation home page and this actually contains every
+
+31
+00:02:13,260 --> 00:02:14,410
+single method here.
+
+32
+00:02:14,430 --> 00:02:16,050
+So we're looking for text.
+
+33
+00:02:16,110 --> 00:02:20,330
+I would usually do a command f just to search the page for text.
+
+34
+00:02:20,390 --> 00:02:23,720
+So when to show you how many there are and as you can see there's quite a few.
+
+35
+00:02:24,420 --> 00:02:29,070
+And we'll get to text down here right here.
+
+36
+00:02:29,070 --> 00:02:36,060
+TEXT And I'll open that up and what it tells us is that it gets the combined text contents of each element
+
+37
+00:02:36,360 --> 00:02:40,270
+in the set of matched elements including their descendants.
+
+38
+00:02:40,440 --> 00:02:44,340
+Or we can use it to set the text content of the matched elements.
+
+39
+00:02:44,340 --> 00:02:47,310
+Think of it as the J Querrey version of text content.
+
+40
+00:02:47,730 --> 00:02:50,420
+So the J Querrey docs always have good examples.
+
+41
+00:02:50,580 --> 00:02:55,950
+You can see here they have some h tim else that up and they're selecting the div with the class of demo
+
+42
+00:02:55,950 --> 00:03:02,940
+container which is this div and running dot text on it and they say that it could produce this result
+
+43
+00:03:02,970 --> 00:03:03,390
+here.
+
+44
+00:03:03,540 --> 00:03:08,350
+So all the text demonstration box list item one list item 2.
+
+45
+00:03:08,640 --> 00:03:10,850
+It works just like text content in vanilla.
+
+46
+00:03:10,900 --> 00:03:11,580
+Yes.
+
+47
+00:03:11,610 --> 00:03:12,980
+So I'll demonstrate that.
+
+48
+00:03:13,230 --> 00:03:21,930
+Let's zoom in a little bit and we can do something like this on H-1 that text and that just tells us
+
+49
+00:03:22,140 --> 00:03:25,760
+the text of the H-1 is Jay Querrey methods demo page.
+
+50
+00:03:26,070 --> 00:03:28,590
+I could do the same thing by selecting the UL
+
+51
+00:03:31,400 --> 00:03:37,510
+dot text and that gives me all of the text content instead of the UL.
+
+52
+00:03:37,590 --> 00:03:41,500
+So it strips out all the elements and only gives me the text.
+
+53
+00:03:41,940 --> 00:03:46,130
+Another thing we could do is try to do it on ally.
+
+54
+00:03:46,680 --> 00:03:52,650
+So I'm going to select all the allies and remember that will give me a list of three allies and then
+
+55
+00:03:52,650 --> 00:03:55,890
+I'll run that text on that.
+
+56
+00:03:55,890 --> 00:04:02,490
+What this will do is give me all of the text for all the allies and it will return one string.
+
+57
+00:04:02,490 --> 00:04:07,170
+The other thing we can do with text that will make it really useful is we can pass in a value and that
+
+58
+00:04:07,170 --> 00:04:10,210
+value will actually update what the text is.
+
+59
+00:04:10,230 --> 00:04:18,330
+So I can do something like H-1 that text and change it to new text with some exclamation points and
+
+60
+00:04:18,330 --> 00:04:19,110
+hit enter.
+
+61
+00:04:19,410 --> 00:04:25,290
+And that changes the one that was selected so that it's text content is new text.
+
+62
+00:04:25,290 --> 00:04:32,630
+So now if I ran one text with no argument it tells me it's now new text.
+
+63
+00:04:32,970 --> 00:04:39,150
+And what's really cool about a query as we saw with C Ss is we can apply something to a collection and
+
+64
+00:04:39,150 --> 00:04:41,010
+we don't have to loop through manually.
+
+65
+00:04:41,040 --> 00:04:53,700
+So if I wanted to get all of the lies text and change it to the string rusty cold's dog is adorable
+
+66
+00:04:54,390 --> 00:04:55,410
+which is true.
+
+67
+00:04:56,250 --> 00:04:57,550
+And I hit enter.
+
+68
+00:04:57,600 --> 00:05:02,640
+This will change all three allys text to be rusty cold's dog is adorable.
+
+69
+00:05:02,910 --> 00:05:05,100
+So that's definitely really useful.
+
+70
+00:05:05,100 --> 00:05:11,370
+What we would have to do with vanilla yes is select all three allies loop through with a for loop and
+
+71
+00:05:11,370 --> 00:05:16,490
+for each one set the text content to be rusty cardstock is adorable.
+
+72
+00:05:16,500 --> 00:05:16,800
+All right.
+
+73
+00:05:16,830 --> 00:05:18,590
+So that's the text method.
+
+74
+00:05:18,630 --> 00:05:25,210
+The next one I want to talk about is HMO so you can probably gather that h tim l works just like inner
+
+75
+00:05:25,240 --> 00:05:25,970
+aged.
+
+76
+00:05:26,220 --> 00:05:28,370
+And I'll just do a search on here for HMO.
+
+77
+00:05:28,410 --> 00:05:29,390
+There it is.
+
+78
+00:05:30,180 --> 00:05:36,450
+And read it here says that it gets the HMO contents of the first element in the set of matched elements
+
+79
+00:05:36,810 --> 00:05:40,760
+or set the HMO contents of every matched element.
+
+80
+00:05:41,040 --> 00:05:44,540
+So let's go back to our code here and I'm going to refresh.
+
+81
+00:05:44,760 --> 00:05:50,080
+So we reset our code and I'm going to ask for the h m l of this ul.
+
+82
+00:05:50,130 --> 00:06:00,320
+So I select UL dot aged humo and that will just retrieve the inner h him out of the UL.
+
+83
+00:06:00,480 --> 00:06:07,560
+So the text method corresponds to the text content property and M L corresponds to inner aged him out
+
+84
+00:06:08,520 --> 00:06:16,290
+just like before I can actually provide an argument to that HMO and that will update the H.T. malcontent
+
+85
+00:06:16,380 --> 00:06:16,650
+.
+
+86
+00:06:16,860 --> 00:06:27,150
+So I'll update the out of the UIL to be a new ally inside of there that says I hacked your UL just like
+
+87
+00:06:27,150 --> 00:06:30,600
+that and those the to allies.
+
+88
+00:06:30,630 --> 00:06:31,890
+So I'm going to duplicate this
+
+89
+00:06:35,100 --> 00:06:36,240
+and paste that back.
+
+90
+00:06:36,330 --> 00:06:41,380
+And this other ally will say Rusty is still adorable.
+
+91
+00:06:42,060 --> 00:06:50,260
+So we have one ally two allies instead of a string and we're updating the UL.
+
+92
+00:06:50,300 --> 00:06:51,300
+Hit enter.
+
+93
+00:06:51,510 --> 00:06:54,160
+And you can see that it updates the enraged him.
+
+94
+00:06:54,590 --> 00:06:58,910
+And if we had multiple Juelz on this page it would update both of them.
+
+95
+00:06:59,370 --> 00:07:08,910
+So for instance if I select both allies with Dollar Sign ally and I change the age mail to be an anchor
+
+96
+00:07:08,910 --> 00:07:22,470
+tag and just like that anchor tag and we'll have a Tref equals Google dot com and then click me to go
+
+97
+00:07:22,470 --> 00:07:23,390
+to Google.
+
+98
+00:07:23,460 --> 00:07:26,850
+We're updating the HD mail content inside of this.
+
+99
+00:07:26,850 --> 00:07:34,020
+And if I hit enter you can see that it updates both allies to now reflect that new content.
+
+100
+00:07:34,020 --> 00:07:35,130
+One quick side note.
+
+101
+00:07:35,280 --> 00:07:40,110
+You might think that we could use text to do the same thing but we actually can't and that's because
+
+102
+00:07:40,110 --> 00:07:47,070
+text is considered Tomales safe which means that it's not going to treat what you pass it as HMO.
+
+103
+00:07:47,130 --> 00:07:48,790
+It's going to treat it as text.
+
+104
+00:07:49,020 --> 00:07:50,180
+So I'll show you what I mean.
+
+105
+00:07:50,250 --> 00:07:58,850
+If I try and change the text of both ALWIS to be this what will actually do is just give me the text
+
+106
+00:07:58,950 --> 00:08:02,500
+so it won't treat it like aged him well which is a good thing actually.
+
+107
+00:08:02,790 --> 00:08:08,400
+If we wanted a user to type something into the text box and when he or she hit Enter we wanted to add
+
+108
+00:08:08,400 --> 00:08:15,090
+a new ally with whatever I typed here the user could potentially write their own h team out here and
+
+109
+00:08:15,090 --> 00:08:20,260
+mess up our site or even worse he or she could write some javascript and run that.
+
+110
+00:08:20,430 --> 00:08:22,830
+So if we're letting our user types something in.
+
+111
+00:08:22,830 --> 00:08:26,790
+We don't want to just treat it as HVM Well we usually want to treat it as text
+

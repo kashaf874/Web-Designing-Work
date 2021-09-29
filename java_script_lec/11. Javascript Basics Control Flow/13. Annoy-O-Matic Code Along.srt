@@ -1,0 +1,492 @@
+﻿1
+00:00:00,510 --> 00:00:05,430
+So in this video we're going to do a code along and it's going to illustrate one other way to use a
+
+2
+00:00:05,430 --> 00:00:06,350
+while loop.
+
+3
+00:00:06,360 --> 00:00:10,260
+So so far we've been using a while loop where we use numbers and we have a range.
+
+4
+00:00:10,380 --> 00:00:14,520
+So we print numbers from 10 to 50 and that is a set range.
+
+5
+00:00:14,520 --> 00:00:19,380
+So there's another way to use a while loop where we don't actually know exactly how many times it will
+
+6
+00:00:19,380 --> 00:00:20,890
+run it's not pre-determined.
+
+7
+00:00:21,120 --> 00:00:24,010
+So this annoy o matic that we're going to make it.
+
+8
+00:00:24,130 --> 00:00:29,360
+It's a fancy term for an annoying Web site that constantly asks you Are We There Yet.
+
+9
+00:00:29,430 --> 00:00:31,280
+Until you enter the word yes or yeah.
+
+10
+00:00:31,500 --> 00:00:34,250
+Anything else to ask you Are we there yet again.
+
+11
+00:00:34,290 --> 00:00:36,690
+So let me show you I'll refresh the page.
+
+12
+00:00:36,810 --> 00:00:37,830
+Are we there yet.
+
+13
+00:00:38,010 --> 00:00:40,350
+Let's say no.
+
+14
+00:00:40,410 --> 00:00:41,800
+Are we there yet.
+
+15
+00:00:41,850 --> 00:00:42,860
+Not yet.
+
+16
+00:00:43,050 --> 00:00:43,830
+Are we there yet.
+
+17
+00:00:43,830 --> 00:00:45,950
+And now let's say Yes.
+
+18
+00:00:46,050 --> 00:00:47,930
+And it tells us yes we finally made it.
+
+19
+00:00:48,240 --> 00:00:50,070
+So that's what we're going to make to start.
+
+20
+00:00:50,130 --> 00:00:51,230
+So to get going.
+
+21
+00:00:51,450 --> 00:00:56,260
+We need to have a file with our HMO.
+
+22
+00:00:57,060 --> 00:01:02,730
+And I just called mine and noid HMO and then we're going to add in our scripts tag
+
+23
+00:01:06,480 --> 00:01:07,860
+and then we'll need to make the file.
+
+24
+00:01:07,860 --> 00:01:09,200
+So let's call this annoyed.
+
+25
+00:01:09,320 --> 00:01:14,390
+Yes let's make our new file a noise.
+
+26
+00:01:14,470 --> 00:01:24,160
+J.S. in the same directory and I always like to add my alert connected just to make sure.
+
+27
+00:01:24,250 --> 00:01:31,760
+Now let's open up our version and we won't see anything on the page but it should say connected.
+
+28
+00:01:31,800 --> 00:01:32,580
+All right.
+
+29
+00:01:32,580 --> 00:01:37,180
+So the first thing that we want to do is just ask a user are we there yet.
+
+30
+00:01:37,320 --> 00:01:44,550
+So we'll make it a variable called the answer equal to prompt.
+
+31
+00:01:44,550 --> 00:01:47,320
+Are we there yet.
+
+32
+00:01:47,990 --> 00:01:50,390
+Save that.
+
+33
+00:01:50,520 --> 00:01:54,760
+So then the next step is to check did the user say yes.
+
+34
+00:01:55,140 --> 00:02:05,170
+So we could use an if statement like this if answer equals equals yes then we'll do an alert.
+
+35
+00:02:05,580 --> 00:02:16,410
+Yay we made it and that's great and we could have an else where we then ask again and you don't have
+
+36
+00:02:16,410 --> 00:02:17,390
+to do this part.
+
+37
+00:02:17,580 --> 00:02:22,860
+But I'm just illustrating to you without a while loop we could do this but it will only run one time
+
+38
+00:02:23,340 --> 00:02:25,290
+so it will ask are we there yet.
+
+39
+00:02:25,350 --> 00:02:29,150
+And if I enter no then it will run the else.
+
+40
+00:02:29,160 --> 00:02:31,780
+Var answer equals are we there yet again.
+
+41
+00:02:32,040 --> 00:02:33,390
+And then nothing else happens.
+
+42
+00:02:33,480 --> 00:02:37,950
+So I'll show you that refresh are we there yet.
+
+43
+00:02:37,980 --> 00:02:39,630
+No.
+
+44
+00:02:39,630 --> 00:02:40,480
+Are we there yet.
+
+45
+00:02:40,590 --> 00:02:43,440
+No and that's it.
+
+46
+00:02:43,440 --> 00:02:48,900
+So rather than using just a simple conditional we're going to use a while loop but it's going to use
+
+47
+00:02:48,900 --> 00:02:51,020
+a lot of the same code that we have here.
+
+48
+00:02:51,420 --> 00:02:57,540
+So we just write while answer is not equal to yes.
+
+49
+00:02:57,540 --> 00:03:03,420
+So while the user has not said yes we're going to prompt them again.
+
+50
+00:03:04,940 --> 00:03:06,540
+And that's all there is to it.
+
+51
+00:03:06,540 --> 00:03:10,550
+So while the answer is not equal to the word yes let's ask them again.
+
+52
+00:03:10,710 --> 00:03:11,850
+Are we there yet.
+
+53
+00:03:12,270 --> 00:03:21,150
+And then finally at the very end we can just have an alert that says hey we made it and this won't run
+
+54
+00:03:21,390 --> 00:03:23,150
+Intel this loop is over.
+
+55
+00:03:23,180 --> 00:03:28,450
+And so that means that the user has to have typed in yes in order to get this far.
+
+56
+00:03:28,530 --> 00:03:33,440
+So let's try it out go back to the browser are we there yet.
+
+57
+00:03:33,450 --> 00:03:34,370
+No.
+
+58
+00:03:35,050 --> 00:03:35,610
+Nope.
+
+59
+00:03:35,760 --> 00:03:36,460
+No.
+
+60
+00:03:36,480 --> 00:03:37,420
+No.
+
+61
+00:03:37,440 --> 00:03:38,450
+Anything we want.
+
+62
+00:03:38,520 --> 00:03:42,640
+And then as soon as we type the word yes it tells us yea we made.
+
+63
+00:03:43,230 --> 00:03:47,130
+So I wanted to do this to show you that you can use a while loop in another way.
+
+64
+00:03:47,340 --> 00:03:51,580
+So this is not a pre-determined loop that runs 10 times or five times.
+
+65
+00:03:51,600 --> 00:03:54,760
+It can vary and it's all up to user input.
+
+66
+00:03:54,810 --> 00:03:59,580
+So there was one more requirement which is that we could also type the word Yeah.
+
+67
+00:03:59,820 --> 00:04:02,040
+Why E.H. instead of yes.
+
+68
+00:04:02,060 --> 00:04:04,510
+And either one would work.
+
+69
+00:04:04,560 --> 00:04:06,200
+So that's pretty easy to implement.
+
+70
+00:04:06,420 --> 00:04:13,290
+All we need to do is add in a another part of this conditional where we want to add an and well answer
+
+71
+00:04:13,290 --> 00:04:14,510
+is not equal to yes.
+
+72
+00:04:14,550 --> 00:04:17,790
+And answer is not equal to.
+
+73
+00:04:18,180 --> 00:04:18,980
+Yeah.
+
+74
+00:04:19,200 --> 00:04:20,410
+Then we'll ask again.
+
+75
+00:04:20,520 --> 00:04:22,050
+And that's it.
+
+76
+00:04:22,050 --> 00:04:28,870
+So refresh types of thing it keeps asking then I could enter.
+
+77
+00:04:28,920 --> 00:04:29,810
+Yeah.
+
+78
+00:04:30,120 --> 00:04:34,830
+And it says We made it and I can also do that entering Yes.
+
+79
+00:04:35,520 --> 00:04:40,500
+So there's a version 2 here that's just a little bit more advanced where you don't have to enter the
+
+80
+00:04:40,500 --> 00:04:41,360
+exact word.
+
+81
+00:04:41,400 --> 00:04:46,530
+Yes or yeah only you could enter any phrase as long as has.
+
+82
+00:04:46,550 --> 00:04:48,330
+Yes or yeah in it.
+
+83
+00:04:48,330 --> 00:04:50,040
+So I'll show you.
+
+84
+00:04:50,250 --> 00:04:51,670
+It could be something like.
+
+85
+00:04:52,020 --> 00:04:59,040
+Yes we are which currently doesn't work in our other version because it's checking to see if the entire
+
+86
+00:04:59,040 --> 00:05:00,780
+string is yes or yeah.
+
+87
+00:05:00,840 --> 00:05:07,620
+So what we want to do is check if the string contains Yes if part of it matches yes but not all of it
+
+88
+00:05:07,620 --> 00:05:08,500
+necessarily.
+
+89
+00:05:08,700 --> 00:05:13,120
+So to do that there's a method we can use called index of.
+
+90
+00:05:13,860 --> 00:05:15,990
+So I'll show you an example in the con..
+
+91
+00:05:15,990 --> 00:05:23,490
+If I make a string called Hello world and I use index of.
+
+92
+00:05:23,760 --> 00:05:30,690
+So as Tiare index of in in parentheses I give it a string like w.
+
+93
+00:05:31,050 --> 00:05:39,460
+It's going to give me the number where w occurs which is 6 0 1 2 3 4 5 6.
+
+94
+00:05:39,900 --> 00:05:47,700
+But I can also use it on a full word like world and it tells me that world occurs starting at index
+
+95
+00:05:47,700 --> 00:05:51,410
+6 and if I try and do something that doesn't exist.
+
+96
+00:05:51,420 --> 00:05:55,740
+So in our case let's try Yes that's not in Hello world.
+
+97
+00:05:55,740 --> 00:05:59,900
+It gives me negative 1 so I can use that to my advantage.
+
+98
+00:06:00,000 --> 00:06:05,070
+So I want to check is yes anywhere in the input string anywhere an answer.
+
+99
+00:06:05,340 --> 00:06:12,840
+So to do that and it go back down here and for our version to I'm just going to keep our initial code
+
+100
+00:06:12,860 --> 00:06:17,350
+and commented out and then all right version 2.
+
+101
+00:06:17,930 --> 00:06:19,260
+And put this down here.
+
+102
+00:06:19,620 --> 00:06:21,550
+So this is going to stay the same.
+
+103
+00:06:21,600 --> 00:06:23,400
+This is going to be different.
+
+104
+00:06:23,490 --> 00:06:28,910
+So we're going to want something like answer that index of.
+
+105
+00:06:30,060 --> 00:06:31,150
+Yes.
+
+106
+00:06:31,590 --> 00:06:36,780
+And we want to see is it equal to negative 1.
+
+107
+00:06:36,780 --> 00:06:41,020
+So that means that the word yes does not exist inside of our answer.
+
+108
+00:06:41,280 --> 00:06:44,610
+So let's try that out.
+
+109
+00:06:45,010 --> 00:06:47,100
+Refresh are we there yet.
+
+110
+00:06:47,100 --> 00:06:48,110
+No.
+
+111
+00:06:48,120 --> 00:06:48,630
+Are we there yet.
+
+112
+00:06:48,630 --> 00:06:49,560
+No.
+
+113
+00:06:49,560 --> 00:06:50,450
+Are we there yet.
+
+114
+00:06:50,490 --> 00:06:52,690
+Yes I think so.
+
+115
+00:06:53,370 --> 00:06:55,630
+And it says yeah we made it.
+
+116
+00:06:55,910 --> 00:06:58,500
+Try it again and let's try.
+
+117
+00:06:58,500 --> 00:06:59,780
+We are there.
+
+118
+00:07:00,090 --> 00:07:01,440
+Yes.
+
+119
+00:07:01,620 --> 00:07:03,050
+And it tells us we made it.
+
+120
+00:07:03,360 --> 00:07:03,600
+OK.
+
+121
+00:07:03,600 --> 00:07:07,430
+So that's version 2 and that's all we needed to do there.
+
+122
+00:07:07,500 --> 00:07:08,940
+So that's all there is to version 2.
+
+123
+00:07:08,940 --> 00:07:14,220
+I just want to show that you can use index of to make your input checking a little bit more flexible
+

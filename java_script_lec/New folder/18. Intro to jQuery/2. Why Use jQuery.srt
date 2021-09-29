@@ -1,0 +1,516 @@
+﻿1
+00:00:00,150 --> 00:00:01,020
+Welcome back.
+
+2
+00:00:01,170 --> 00:00:06,000
+This is going to be a quick video on the reasons that you should use Jay Querrey and some reasons that
+
+3
+00:00:06,000 --> 00:00:08,300
+you might not want to use Jake Querrey.
+
+4
+00:00:08,370 --> 00:00:14,160
+So in the intro video I summarized Jake Query as a javascript library that helps us do a lot of the
+
+5
+00:00:14,160 --> 00:00:15,600
+things that we do already.
+
+6
+00:00:15,690 --> 00:00:16,980
+And it just makes them easier.
+
+7
+00:00:17,220 --> 00:00:22,280
+So you might be asking yourself a question after hearing that which is why would we not always use a
+
+8
+00:00:22,280 --> 00:00:22,770
+query.
+
+9
+00:00:22,800 --> 00:00:28,620
+It seems like if it makes life easier and it helps us with all the common dominant mutation features
+
+10
+00:00:28,920 --> 00:00:30,510
+we should just always use it.
+
+11
+00:00:30,510 --> 00:00:35,070
+The truth is that it's a little bit of a debate in the developer community right now so I'm going to
+
+12
+00:00:35,070 --> 00:00:38,210
+start by talking about some of the reasons for using a query.
+
+13
+00:00:38,410 --> 00:00:43,440
+Then I'll talk about some reasons why you might not want to use a query and then I'll also talk about
+
+14
+00:00:43,440 --> 00:00:48,840
+my own opinion and my experience teaching people to program where Jay Querrey fits in best.
+
+15
+00:00:49,350 --> 00:00:55,080
+Before we start here I do want to point out this Web site you might not need Jay Querrey I'm showing
+
+16
+00:00:55,080 --> 00:00:57,090
+this to you for two big reasons.
+
+17
+00:00:57,090 --> 00:01:02,610
+The first of which is that it demonstrates that everything we can do with Jay Querrey we can do without
+
+18
+00:01:02,610 --> 00:01:03,050
+it.
+
+19
+00:01:03,090 --> 00:01:05,970
+That's the point of this website is to show common things.
+
+20
+00:01:05,970 --> 00:01:13,050
+Jay Querrey like hiding and Allaman how you would do them without a query and you'll see that a lot
+
+21
+00:01:13,050 --> 00:01:14,440
+of them are really similar.
+
+22
+00:01:14,640 --> 00:01:20,610
+And on a lot of them Jay curry isn't much shorter but on some of the features like Ajax this is a lot
+
+23
+00:01:20,610 --> 00:01:22,810
+longer over here without Jay query.
+
+24
+00:01:22,830 --> 00:01:28,350
+The second reason I'm showing the site to you is that the very fact that there's even a site called
+
+25
+00:01:28,530 --> 00:01:33,750
+you might not need Jay query is a testament to the debate that's currently ongoing in the developer
+
+26
+00:01:33,750 --> 00:01:39,450
+community and this is just one example of a site that is questioning that you might not need a query
+
+27
+00:01:39,450 --> 00:01:39,760
+.
+
+28
+00:01:39,810 --> 00:01:45,540
+There are hundreds and thousands of blogs and articles and tutorials out there that will tell you you
+
+29
+00:01:45,540 --> 00:01:50,240
+have to use a query or you should never use a query and it's very hotly contested.
+
+30
+00:01:50,280 --> 00:01:57,550
+So let's dive deeper into that debate and talk about why you should use J queery so why you stay quiet
+
+31
+00:01:57,560 --> 00:01:58,370
+.
+
+32
+00:01:58,590 --> 00:02:04,890
+The original reason that it was created is that Dom API all the methods we've been using Document dot
+
+33
+00:02:05,200 --> 00:02:07,380
+of course Lechter get element by ID.
+
+34
+00:02:07,380 --> 00:02:10,570
+All of that used to be considered broken.
+
+35
+00:02:11,010 --> 00:02:17,070
+So the whole goal of Jay query was to make it easier and quicker to use the DOM API by using Jay Querrey
+
+36
+00:02:17,340 --> 00:02:21,150
+which acted as an interface to the broken Dom API.
+
+37
+00:02:21,150 --> 00:02:25,520
+It also makes your code clearer and shorter as you saw here.
+
+38
+00:02:25,830 --> 00:02:30,930
+You know doing something like this without a query is three or four times the amount of code as it is
+
+39
+00:02:31,140 --> 00:02:34,560
+using Jey query so it makes it clearer and shorter.
+
+40
+00:02:34,560 --> 00:02:36,720
+It's easy to use as well.
+
+41
+00:02:36,750 --> 00:02:43,380
+It has built in cross-browser support so that means that Jay query will take care of the differences
+
+42
+00:02:43,380 --> 00:02:49,770
+between a property that works in Internet Explorer 9 and one that works in Internet Explorer 8 and it
+
+43
+00:02:49,770 --> 00:02:52,090
+will take care of all that cross-browser support.
+
+44
+00:02:52,200 --> 00:02:53,510
+Which is kind of messy.
+
+45
+00:02:53,580 --> 00:02:59,700
+And one of the worst parts of being a web developer to be honest in my opinion at least it also provides
+
+46
+00:02:59,760 --> 00:03:01,560
+AJAX which we'll talk about later.
+
+47
+00:03:01,590 --> 00:03:04,290
+It's a subset of features that's really useful.
+
+48
+00:03:04,470 --> 00:03:09,750
+And the last reason on here is that lots of people use a query and I'm not just saying that because
+
+49
+00:03:09,750 --> 00:03:11,260
+lots of people use Jey query.
+
+50
+00:03:11,340 --> 00:03:13,130
+You should obviously use it too.
+
+51
+00:03:13,140 --> 00:03:17,310
+That's not at all what I'm saying but the fact that lots of people use Jey query means that there's
+
+52
+00:03:17,370 --> 00:03:19,200
+a strong community out there.
+
+53
+00:03:19,200 --> 00:03:23,160
+There are lots of tutorials and blog posts and stack overflow questions.
+
+54
+00:03:23,160 --> 00:03:28,290
+People use it all over the place and so there is a lot of materials and resources that pertain to Jay
+
+55
+00:03:28,290 --> 00:03:32,310
+Querrey which is great when you're trying to do something and you need help.
+
+56
+00:03:32,910 --> 00:03:33,610
+OK.
+
+57
+00:03:34,020 --> 00:03:38,790
+So we talked about why Jay queery is great and it probably sounds a little bit like Americorp at this
+
+58
+00:03:38,790 --> 00:03:39,660
+point.
+
+59
+00:03:39,660 --> 00:03:41,220
+So why would we not use it.
+
+60
+00:03:41,400 --> 00:03:48,300
+And the first and most important answer is that the Dom API is no longer broken so it has things that
+
+61
+00:03:48,300 --> 00:03:49,340
+it didn't used to have.
+
+62
+00:03:49,440 --> 00:03:56,070
+So for instance queery selector query selector all did not used to exist as part of Saddam Adamu API
+
+63
+00:03:56,070 --> 00:03:57,710
+is much easier to use.
+
+64
+00:03:57,840 --> 00:04:02,310
+And we've been using it so far and we've been doing just fine without a query.
+
+65
+00:04:02,310 --> 00:04:06,810
+The second reason is that it doesn't do anything you can't do on your own which is the whole point of
+
+66
+00:04:06,810 --> 00:04:08,090
+this site.
+
+67
+00:04:08,160 --> 00:04:11,330
+We can do everything that you would do with a query without it.
+
+68
+00:04:11,820 --> 00:04:18,030
+And along with that if we only wanted to use two or three methods or even 10 methods out of query we're
+
+69
+00:04:18,030 --> 00:04:22,130
+still including you know 100 or 200 plus different methods.
+
+70
+00:04:22,290 --> 00:04:25,790
+So sometimes people will call it an unnecessary dependency.
+
+71
+00:04:25,860 --> 00:04:29,910
+They might say that using j Curry is too heavy a tool for what you're doing.
+
+72
+00:04:29,910 --> 00:04:34,830
+So if you're only using Jay query for animations for instance that's a little bit overkill because there
+
+73
+00:04:34,830 --> 00:04:40,500
+are other tools out there that will help you only with animation while Jay queery does animation Plus
+
+74
+00:04:40,590 --> 00:04:42,170
+you know a hundred other things.
+
+75
+00:04:42,250 --> 00:04:46,630
+And and it's just unnecessary to have that much weight is what people would say.
+
+76
+00:04:47,130 --> 00:04:48,950
+So performance can be an issue.
+
+77
+00:04:49,020 --> 00:04:54,060
+It won't be in our case we won't be doing anything that really is pushing Jay Curry hard but the idea
+
+78
+00:04:54,060 --> 00:04:58,980
+behind that is that if someone is using Jay query and they don't know they're not familiar with the
+
+79
+00:04:58,980 --> 00:05:04,380
+code and the source code of Jay query and how things are written they might use a method they might
+
+80
+00:05:04,380 --> 00:05:06,210
+write some code that's inefficient.
+
+81
+00:05:06,360 --> 00:05:10,170
+That actually is slower than if they had just done it without a query.
+
+82
+00:05:10,260 --> 00:05:13,210
+But as I mentioned that's a little bit of a long shot for us.
+
+83
+00:05:13,410 --> 00:05:16,160
+And the last reason is that lots of people are moving away from J.
+
+84
+00:05:16,160 --> 00:05:21,480
+Cory and that's not to say that just because other people are not using Jay query that you should not
+
+85
+00:05:21,480 --> 00:05:24,720
+use it it's the same reason that I mentioned for Jay query.
+
+86
+00:05:24,750 --> 00:05:28,690
+There's great resources and tutorials and videos lots of information out there.
+
+87
+00:05:28,830 --> 00:05:30,450
+So you really can't go wrong.
+
+88
+00:05:30,840 --> 00:05:35,850
+So now we're going to spend some time discussing my own opinions on this and in particular my experience
+
+89
+00:05:35,880 --> 00:05:40,780
+teaching people to program with Jay Querrey and without it.
+
+90
+00:05:41,160 --> 00:05:46,560
+When I first started teaching people to program and teaching people to become web developers I would
+
+91
+00:05:46,560 --> 00:05:51,080
+start with H Tim L and then C S us and then I would go straight to Jacqui.
+
+92
+00:05:51,720 --> 00:05:56,010
+So I wouldn't do any of the stuff that we've been talking about in the last few units.
+
+93
+00:05:56,130 --> 00:05:57,400
+I would teach events.
+
+94
+00:05:57,480 --> 00:06:02,670
+I would teach selecting and manipulating through Jay query but I wouldn't show students how to do that
+
+95
+00:06:02,670 --> 00:06:04,530
+with vanilla Javascript.
+
+96
+00:06:04,530 --> 00:06:09,910
+So vanilla Agellius or plain G-S just refers to writing javascript without a query.
+
+97
+00:06:10,260 --> 00:06:12,630
+So I didn't used to do any of that in the course.
+
+98
+00:06:12,630 --> 00:06:17,940
+I would start with a query and what I realized is that the developers that I was producing in the class
+
+99
+00:06:18,540 --> 00:06:23,940
+were great developers but if you took Jay Querrey away if they went to a company that was deciding they
+
+100
+00:06:23,940 --> 00:06:27,870
+weren't going to use a query which happened more and more and more students would come to me and tell
+
+101
+00:06:27,870 --> 00:06:33,740
+me this you know my new job is awesome except they don't use Jay Querrey just so you know.
+
+102
+00:06:33,750 --> 00:06:39,360
+And I got that feedback a lot and I realized that the students were dependent on Jay queery obviously
+
+103
+00:06:39,360 --> 00:06:44,670
+by the end of the class they were good enough were they could go learn Fenella Yes and they could they
+
+104
+00:06:44,670 --> 00:06:46,080
+could write code without Jay query.
+
+105
+00:06:46,200 --> 00:06:52,870
+But the point is that their knowledge was centered around a query centric way of writing code.
+
+106
+00:06:52,890 --> 00:06:59,580
+So after teaching people Jay Querrey first for a few classes I change things around and I started by
+
+107
+00:06:59,580 --> 00:07:03,360
+teaching them vanilla javascript Dom manipulation first.
+
+108
+00:07:03,450 --> 00:07:08,490
+So the things that we've been doing up until this point and then I introduced J query afterwards once
+
+109
+00:07:08,490 --> 00:07:15,720
+they had a solid conceptual foundation of how events work and how selecting and manipulating works and
+
+110
+00:07:15,720 --> 00:07:18,570
+all of that that Jay Querrey can help us with.
+
+111
+00:07:18,600 --> 00:07:23,790
+I wanted students to understand how Jay Querrey was doing all these things behind the scenes.
+
+112
+00:07:23,790 --> 00:07:30,120
+After teaching this approach of vanilla ice first and then Jay queery later and doing that for a few
+
+113
+00:07:30,120 --> 00:07:36,450
+classes and watching those students graduate I realized that we were producing much much stronger javascript
+
+114
+00:07:36,450 --> 00:07:37,560
+developers.
+
+115
+00:07:37,560 --> 00:07:42,750
+It wasn't just the fact that my students could take some code and write it in a query and also write
+
+116
+00:07:42,750 --> 00:07:44,890
+the equivalent code without a query.
+
+117
+00:07:45,270 --> 00:07:50,730
+But more importantly I noticed that my students had a much stronger conceptual foundation of the Dom
+
+118
+00:07:50,820 --> 00:07:57,350
+and Dom and violation so their foundation wasn't built on Jay Querrey which is one way of doing it.
+
+119
+00:07:57,360 --> 00:08:01,960
+Their foundation was built on the concepts underlying J query underlying analogy.
+
+120
+00:08:01,970 --> 00:08:02,570
+Yes.
+
+121
+00:08:02,640 --> 00:08:08,580
+So its a more unified approach where students understood at a deeper level how things worked and they
+
+122
+00:08:08,580 --> 00:08:14,820
+saw on one side we can do this with a query and on the other side we can do it without a query rather
+
+123
+00:08:14,820 --> 00:08:18,430
+than structuring their conceptual framework around Jay query.
+
+124
+00:08:18,570 --> 00:08:23,440
+They structured it around the general Dom and the concepts of DOM manipulation.
+
+125
+00:08:23,550 --> 00:08:27,080
+So that was a long winded way of sharing my opinion on this issue.
+
+126
+00:08:27,150 --> 00:08:33,030
+I've come to the conclusion as a developer and also as an educator more importantly that its worth knowing
+
+127
+00:08:33,060 --> 00:08:37,310
+how to do things without a query and also how to do them with a query.
+
+128
+00:08:37,500 --> 00:08:42,290
+So weve seen how to do them without it and now going forward we're going to see how to do things that
+
+129
+00:08:42,300 --> 00:08:43,020
+Jay queery way
+

@@ -1,0 +1,1024 @@
+﻿1
+00:00:00,540 --> 00:00:01,340
+Welcome back.
+
+2
+00:00:01,590 --> 00:00:08,000
+So up until now everything we've been doing around events and event listeners in the dorm and dominant
+
+3
+00:00:08,030 --> 00:00:13,620
+relation and dumps the letters we've just been doing one off quick exercises that don't really amount
+
+4
+00:00:13,620 --> 00:00:14,330
+to much.
+
+5
+00:00:14,370 --> 00:00:17,940
+And that was just to kind of show individual pieces how they worked.
+
+6
+00:00:17,940 --> 00:00:22,140
+Now we're going to see how they all fit together and make a somewhat substantial app.
+
+7
+00:00:22,200 --> 00:00:25,700
+So as you can see this is not the most beautiful app that's coming.
+
+8
+00:00:25,710 --> 00:00:31,020
+We're just focusing on how conceptually the pieces fit together here how we take events how we select
+
+9
+00:00:31,020 --> 00:00:34,490
+elements how we write aged him how and how those all fit together.
+
+10
+00:00:34,500 --> 00:00:35,820
+Styling is just extra.
+
+11
+00:00:35,820 --> 00:00:37,740
+At this point but in the next project we make.
+
+12
+00:00:37,740 --> 00:00:41,120
+We are going to place a lot of focus on styling and making it look nice.
+
+13
+00:00:41,160 --> 00:00:42,050
+I promise.
+
+14
+00:00:42,060 --> 00:00:45,490
+So what we're going to make is a simple scorekeeping app.
+
+15
+00:00:45,570 --> 00:00:50,520
+So I want you to think back to all those times that you've been playing rock paper scissors with a friend
+
+16
+00:00:50,820 --> 00:00:56,940
+or ping pong or tic tac toe and it's just so tiring to keep track of the score and so difficult to know
+
+17
+00:00:56,940 --> 00:01:00,510
+who's winning when this app is for you the way that it works.
+
+18
+00:01:00,600 --> 00:01:03,750
+Two players player 1 score player to score.
+
+19
+00:01:03,750 --> 00:01:07,180
+You load up the page and it tells us we're playing to five.
+
+20
+00:01:07,260 --> 00:01:10,950
+And so all we do is add a point by clicking on a button.
+
+21
+00:01:10,950 --> 00:01:16,950
+So to add a point to player 1 we click on Player 1 if we want to add a point player to click on Player
+
+22
+00:01:16,960 --> 00:01:20,070
+2 and then whoever gets to five.
+
+23
+00:01:20,580 --> 00:01:22,010
+You notice it turns green.
+
+24
+00:01:22,260 --> 00:01:25,180
+And if I try and score again I can't.
+
+25
+00:01:25,350 --> 00:01:26,730
+That's because the game is over.
+
+26
+00:01:26,970 --> 00:01:29,760
+So I can reset by clicking the reset button.
+
+27
+00:01:30,090 --> 00:01:36,420
+And now a top player two totally sweep and that's it we can't play anymore.
+
+28
+00:01:36,420 --> 00:01:37,850
+And that quick reset.
+
+29
+00:01:37,860 --> 00:01:42,080
+So one more feature is that we can also specify what we're playing to.
+
+30
+00:01:42,180 --> 00:01:48,000
+So if you want to have a game that goes until 7:00 I can use this number input here and then all I have
+
+31
+00:01:48,000 --> 00:01:56,730
+to do is let's make this a closer game and player one just sneaks by at the end 4:53 and the game ends
+
+32
+00:01:56,730 --> 00:02:02,500
+at 7 and player 1 turns green and we can't add any more points and then we can reset again.
+
+33
+00:02:02,850 --> 00:02:04,570
+So that's what we're going to focus on building here.
+
+34
+00:02:04,650 --> 00:02:09,660
+So the first thing we want to do is get our file set up and then create the H team L structure and then
+
+35
+00:02:09,660 --> 00:02:12,410
+we'll go in with javascript and make things work.
+
+36
+00:02:12,420 --> 00:02:14,390
+So let's go ahead and get started.
+
+37
+00:02:15,090 --> 00:02:16,890
+So I have a blank I'll document.
+
+38
+00:02:16,920 --> 00:02:24,390
+I'm calling it scorekeeper dot h Timo going to add in our boilerplate and give it a title just like
+
+39
+00:02:24,390 --> 00:02:25,580
+that.
+
+40
+00:02:25,910 --> 00:02:28,960
+I then must start by talking about what we're looking at here.
+
+41
+00:02:28,980 --> 00:02:33,650
+So this isn't H-1 H1 and we will be changing this eventually.
+
+42
+00:02:33,660 --> 00:02:40,110
+We don't want it just to be a solid h one because there's two things inside of this H-1 it needs to
+
+43
+00:02:40,110 --> 00:02:47,190
+be like Player 1 score 2 player to score but we need to be able to select this separately from this
+
+44
+00:02:47,190 --> 00:02:47,560
+.
+
+45
+00:02:47,580 --> 00:02:51,610
+So we do want a way to divide this H1 into smaller pieces.
+
+46
+00:02:51,780 --> 00:02:54,020
+So we'll see how we can do that in just a little bit.
+
+47
+00:02:54,030 --> 00:02:59,090
+So next this is a paragraph you're playing to.
+
+48
+00:02:59,100 --> 00:03:01,440
+And let's just right playing to seven to start.
+
+49
+00:03:01,590 --> 00:03:02,310
+Or let's do five.
+
+50
+00:03:02,310 --> 00:03:04,240
+I think that how had it.
+
+51
+00:03:04,320 --> 00:03:05,830
+And then we have an input here.
+
+52
+00:03:05,880 --> 00:03:10,050
+This is input type equals number.
+
+53
+00:03:10,090 --> 00:03:14,920
+So input type equals number and that's all we need.
+
+54
+00:03:15,000 --> 00:03:17,470
+And then we have our first button.
+
+55
+00:03:17,880 --> 00:03:23,290
+Player 1 or second button player 2.
+
+56
+00:03:23,490 --> 00:03:27,480
+And our last button reset.
+
+57
+00:03:27,480 --> 00:03:33,300
+So if we refresh this page and now we open up our own page that we created.
+
+58
+00:03:33,360 --> 00:03:35,780
+Let's take a look.
+
+59
+00:03:35,820 --> 00:03:37,370
+They look pretty much the same.
+
+60
+00:03:37,410 --> 00:03:41,040
+Zoom in a little bit on this one that looks just right.
+
+61
+00:03:41,040 --> 00:03:43,560
+Of course nothing happens when we click on anything.
+
+62
+00:03:43,560 --> 00:03:46,260
+So now let's go in at our javascript in.
+
+63
+00:03:46,980 --> 00:03:55,020
+So I'm going to create a new file I'm going to call it scorekeeper J.S. and like I always do or add
+
+64
+00:03:55,020 --> 00:03:58,940
+my alert here that is connected.
+
+65
+00:03:59,290 --> 00:04:05,070
+Then I'm going to go over to scorekeepers or h t m l and include my script and I'm going to do it at
+
+66
+00:04:05,070 --> 00:04:06,160
+the bottom here to start.
+
+67
+00:04:06,160 --> 00:04:11,820
+So script type calls javascript source equals scorekeeper.
+
+68
+00:04:11,970 --> 00:04:14,110
+Yes just like that.
+
+69
+00:04:14,140 --> 00:04:15,290
+Now if we refresh.
+
+70
+00:04:15,360 --> 00:04:20,550
+This is my version of the page it tells me javascript alert connected.
+
+71
+00:04:20,670 --> 00:04:21,310
+All right.
+
+72
+00:04:21,540 --> 00:04:23,090
+So we have our e-mail set up.
+
+73
+00:04:23,100 --> 00:04:24,260
+It looks great.
+
+74
+00:04:24,300 --> 00:04:28,740
+What we need to do now is get some javascript code that actually add some functionality.
+
+75
+00:04:28,830 --> 00:04:32,800
+And as always we need to start by selecting the different elements.
+
+76
+00:04:32,820 --> 00:04:37,500
+So let's start by selecting the buttons and let's just do the player one and player or two buttons and
+
+77
+00:04:37,500 --> 00:04:42,380
+the first feature we'll focus on is when we click one of these buttons the score should increment up
+
+78
+00:04:42,380 --> 00:04:43,660
+here.
+
+79
+00:04:43,770 --> 00:04:50,590
+So all we need to do is start by selecting that player one button and if we look it's just a button
+
+80
+00:04:50,930 --> 00:04:59,470
+we may want to add in ID so we'll call this one and done here we'll add one for P2 and then we can also
+
+81
+00:04:59,470 --> 00:05:02,190
+add one for the reset that we'll just call reset.
+
+82
+00:05:02,350 --> 00:05:03,880
+So we have three ideas now.
+
+83
+00:05:04,030 --> 00:05:05,620
+So it's much easier to select.
+
+84
+00:05:05,770 --> 00:05:12,410
+We'll just call it VIP one button equals document query selector.
+
+85
+00:05:12,520 --> 00:05:14,490
+Or we could do get element by ID.
+
+86
+00:05:14,530 --> 00:05:20,830
+I will mix them up here so the first one will do with query selector P1 and then P2.
+
+87
+00:05:20,830 --> 00:05:29,530
+Button will be document dot and we'll do get element by id and we don't need that Octa Thorpe anymore
+
+88
+00:05:29,530 --> 00:05:30,000
+.
+
+89
+00:05:30,130 --> 00:05:32,030
+So that gives us the two buttons.
+
+90
+00:05:32,500 --> 00:05:37,990
+And let's just set up our first listener when we click on this first button will alert or cancel that
+
+91
+00:05:37,990 --> 00:05:39,010
+log something.
+
+92
+00:05:39,400 --> 00:05:49,160
+So we want to write P1 button and add event listener on click and then we add our function here.
+
+93
+00:05:49,390 --> 00:05:56,870
+And inside that function we're just going to alert alert clicked and that's it.
+
+94
+00:05:57,610 --> 00:06:04,390
+So if you refresh our page and retry clicking great that tells us we selected correctly and we added
+
+95
+00:06:04,390 --> 00:06:06,500
+our listener for the Click event correctly.
+
+96
+00:06:06,640 --> 00:06:11,900
+Player 2 though doesn't do anything because we only added that to the player 1 button.
+
+97
+00:06:12,790 --> 00:06:15,490
+So now let's talk about how this will actually work.
+
+98
+00:06:15,550 --> 00:06:20,950
+When I click here we need to have some variable that's called Player 1 score or something that keeps
+
+99
+00:06:20,950 --> 00:06:22,040
+track of how many points.
+
+100
+00:06:22,040 --> 00:06:28,770
+Player one has and I click it should add one to player 1 score and then the last part is updating this
+
+101
+00:06:28,780 --> 00:06:31,180
+here to reflect player 1 score.
+
+102
+00:06:31,420 --> 00:06:36,790
+So I'm going to make a variable let's just call it 1 score and set it to be zero to start.
+
+103
+00:06:37,180 --> 00:06:43,180
+And then all I want to do is when we click we'll start but just always adding one to the player 1 score
+
+104
+00:06:43,200 --> 00:06:43,480
+.
+
+105
+00:06:43,810 --> 00:06:47,760
+So that will just be the one score plus plus.
+
+106
+00:06:47,860 --> 00:06:49,080
+Just like that.
+
+107
+00:06:49,630 --> 00:06:54,620
+And we refresh and we didn't see anything because we should probably cancel that log.
+
+108
+00:06:54,750 --> 00:06:58,350
+He won score first rather than alert.
+
+109
+00:06:58,440 --> 00:07:04,180
+It gets very annoying very fast if we refresh now and open up the console and McCook player 1 score
+
+110
+00:07:04,490 --> 00:07:05,110
+and see how it goes.
+
+111
+00:07:05,130 --> 00:07:09,910
+One two three four five and it's going to keep going.
+
+112
+00:07:10,480 --> 00:07:11,860
+So there's a few problems.
+
+113
+00:07:11,860 --> 00:07:17,030
+One is we're not displaying the score here and two it says we're playing to five.
+
+114
+00:07:17,170 --> 00:07:21,190
+And that's obviously not the case because we're just incrementing it as much as we want.
+
+115
+00:07:21,340 --> 00:07:26,940
+So we need to have some logic that says if greater than five game over or something like that.
+
+116
+00:07:27,190 --> 00:07:31,570
+But let's start by figuring out how we can update this H1.
+
+117
+00:07:31,660 --> 00:07:34,480
+So what we could do is just select the H-1 to start.
+
+118
+00:07:34,660 --> 00:07:37,260
+So let's just call it far.
+
+119
+00:07:37,460 --> 00:07:45,300
+H1 equals document that queries selector H-1 just like that.
+
+120
+00:07:45,610 --> 00:07:56,890
+And then inside of here we'll just say H-1 dot text content equals one score just like that.
+
+121
+00:07:56,950 --> 00:08:01,730
+So we're going to take this one and change the text content to be whatever the score is that we were
+
+122
+00:08:01,960 --> 00:08:02,720
+without logging.
+
+123
+00:08:02,920 --> 00:08:09,640
+And if I score here well that sort of works but you can see that we completely overrode everything that
+
+124
+00:08:09,640 --> 00:08:10,790
+was inside of each one.
+
+125
+00:08:10,870 --> 00:08:14,730
+We want to keep the two and the other score.
+
+126
+00:08:14,800 --> 00:08:17,220
+We just want to change this one number.
+
+127
+00:08:17,380 --> 00:08:22,840
+So there's a way of doing that using some extra h to a male that makes her life a lot easier if we go
+
+128
+00:08:22,840 --> 00:08:27,640
+back to our scorekeeper but each time l we're going to introduce a span element.
+
+129
+00:08:27,640 --> 00:08:32,870
+And the way that the span will work is that it will only wrap around the number the score.
+
+130
+00:08:33,370 --> 00:08:37,300
+So what that means is we can now if I inspect this.
+
+131
+00:08:37,300 --> 00:08:39,940
+Nothing looks like it changes and that's the point of a span.
+
+132
+00:08:40,060 --> 00:08:46,390
+It's just day nonintrusive if you will it's just a way to wrap something with some tag that you can
+
+133
+00:08:46,390 --> 00:08:52,090
+then use later or styled differently or select with javascript which is exactly what we'll do if we
+
+134
+00:08:52,090 --> 00:08:58,280
+look for H-1 but right here we now have a special span wrapping that number.
+
+135
+00:08:58,300 --> 00:09:05,080
+So if we select that span and change that span only We'll still have the tío and our spacing correctly
+
+136
+00:09:05,110 --> 00:09:06,460
+and the other score.
+
+137
+00:09:06,460 --> 00:09:10,660
+So we want to select that span and going to again just do an ID here.
+
+138
+00:09:10,990 --> 00:09:17,220
+So span and we'll just call this P1 display just like that.
+
+139
+00:09:17,800 --> 00:09:21,390
+And now we need to go to our scorekeeper J S and change a few things.
+
+140
+00:09:21,550 --> 00:09:25,480
+So we don't need to select the H-1 any more to get rid of that.
+
+141
+00:09:25,570 --> 00:09:35,620
+We're going to select far one display equals document get and let's do query selector just for variety
+
+142
+00:09:35,620 --> 00:09:37,160
+again Query selector.
+
+143
+00:09:37,180 --> 00:09:45,640
+And we call that P1 display so that will just give us the span and if we wanted to check that that was
+
+144
+00:09:45,630 --> 00:09:46,440
+working.
+
+145
+00:09:46,650 --> 00:09:51,270
+Why don't we just do a concert vault log right here.
+
+146
+00:09:51,630 --> 00:09:58,970
+Won display just to see when we load the page refresh it should print out OK.
+
+147
+00:09:59,000 --> 00:10:00,510
+Selected our spand correctly.
+
+148
+00:10:00,720 --> 00:10:01,280
+OK.
+
+149
+00:10:01,620 --> 00:10:05,840
+So now what we want to do and get rid of that is add one to the score.
+
+150
+00:10:06,350 --> 00:10:10,960
+We can get rid of our other cons. But log in rather than changing the text content on the whole H-1
+
+151
+00:10:11,010 --> 00:10:11,250
+.
+
+152
+00:10:11,350 --> 00:10:17,620
+We just want to change it on our P1 display which is this little span right here.
+
+153
+00:10:17,620 --> 00:10:21,160
+And if we refresh Now there we go.
+
+154
+00:10:21,150 --> 00:10:28,750
+So we get that player 1 display updating player 2 still doesn't do anything but we have this feature
+
+155
+00:10:28,750 --> 00:10:29,400
+working.
+
+156
+00:10:29,590 --> 00:10:31,530
+So let's do the same thing for player 2.
+
+157
+00:10:31,840 --> 00:10:42,790
+So I'll go back add in another span around our zero span ID equals to display and then move to zero
+
+158
+00:10:43,500 --> 00:10:44,830
+in between.
+
+159
+00:10:44,910 --> 00:10:48,520
+We refresh nothing should look different but we now have two spans.
+
+160
+00:10:48,570 --> 00:10:56,280
+So you can see then let's go back to our scorekeeper J us and let's add in two new variables.
+
+161
+00:10:56,280 --> 00:11:01,740
+So we need to display span for player to need to select it with that ID.
+
+162
+00:11:02,110 --> 00:11:03,660
+I'll use query selector again.
+
+163
+00:11:03,900 --> 00:11:09,010
+And then we need a variable for the score player to his we don't want them just to be the same score
+
+164
+00:11:09,000 --> 00:11:09,290
+.
+
+165
+00:11:09,310 --> 00:11:13,480
+Obviously we need two separate ways of tracking their values.
+
+166
+00:11:13,480 --> 00:11:18,710
+So the first thing that I want to do is test that our player to button is selected correctly.
+
+167
+00:11:18,730 --> 00:11:25,980
+So I'm just going to do a concert vault log player to button and just see what it prints out.
+
+168
+00:11:26,710 --> 00:11:32,160
+And if we refresh and we look at the cons. You can see something's awry.
+
+169
+00:11:32,200 --> 00:11:35,090
+We selected the player one button not the player two button.
+
+170
+00:11:35,250 --> 00:11:37,230
+So something is wrong with our selector.
+
+171
+00:11:37,250 --> 00:11:43,190
+You can see here we're selecting element by id P1 which is the same as what we had up here.
+
+172
+00:11:43,210 --> 00:11:45,450
+So we need to select P2 instead.
+
+173
+00:11:45,820 --> 00:11:52,870
+Ok so now that that's taken care of if we refresh we get button ID P2 which is great.
+
+174
+00:11:52,920 --> 00:11:54,640
+Now let's add in our listener.
+
+175
+00:11:54,660 --> 00:12:04,000
+So Pete to button that ad event listener click and I always like to start by just printing something
+
+176
+00:12:04,000 --> 00:12:11,920
+out or alerting something a log P2 click just like that refresh.
+
+177
+00:12:12,620 --> 00:12:17,770
+And we get P2 clicked our player one still works and P2 is running some code.
+
+178
+00:12:17,760 --> 00:12:21,320
+Now we just need to put the right code in there.
+
+179
+00:12:21,330 --> 00:12:26,500
+If we take a look at what we did for the player 1 button we need a player to score a variable increment
+
+180
+00:12:26,500 --> 00:12:27,400
+to start.
+
+181
+00:12:27,390 --> 00:12:30,450
+So far P2 score.
+
+182
+00:12:30,490 --> 00:12:32,770
+And that should start at zero as well.
+
+183
+00:12:32,760 --> 00:12:40,560
+And then we'll just come here and just change this to be P2 score plus for us and then we need to update
+
+184
+00:12:40,570 --> 00:12:43,620
+it in the display which we haven't yet selected.
+
+185
+00:12:43,620 --> 00:12:45,880
+So we also need to select that span.
+
+186
+00:12:45,900 --> 00:12:49,980
+Remember the span right here ID of P2 display.
+
+187
+00:12:50,250 --> 00:12:51,520
+So we're going to do that.
+
+188
+00:12:51,580 --> 00:12:58,750
+She's going to copy that line and change it to display document Duckery selector P2 display and then
+
+189
+00:12:58,770 --> 00:13:06,590
+we'll just change the display on to the text content to be equal to the player to score.
+
+190
+00:13:06,730 --> 00:13:07,810
+So let's take a look.
+
+191
+00:13:07,860 --> 00:13:10,360
+Click on player 1 that still works.
+
+192
+00:13:10,360 --> 00:13:13,090
+How about player 2 that works as well.
+
+193
+00:13:13,680 --> 00:13:14,110
+OK.
+
+194
+00:13:14,160 --> 00:13:16,020
+So there is no end to our game right now.
+
+195
+00:13:16,020 --> 00:13:17,650
+This would just keep going forever.
+
+196
+00:13:17,670 --> 00:13:20,300
+So we need to work on adding that functionality.
+
+197
+00:13:20,400 --> 00:13:25,050
+And the way that we're going to do that is with a variable that's going to keep track of the state of
+
+198
+00:13:25,060 --> 00:13:25,950
+our game.
+
+199
+00:13:26,110 --> 00:13:27,680
+So our game has two states.
+
+200
+00:13:27,790 --> 00:13:32,860
+The first one is the normal state right now where I can click where I can play the game.
+
+201
+00:13:33,000 --> 00:13:37,520
+And the second state would be what we might call game over where someone has one.
+
+202
+00:13:37,840 --> 00:13:42,140
+So we need two states and we can use a boolean to model that just that true or false.
+
+203
+00:13:42,150 --> 00:13:45,200
+And I'm going to call it game over so far.
+
+204
+00:13:45,420 --> 00:13:49,040
+Game over and it starts this false because game over.
+
+205
+00:13:49,120 --> 00:13:50,840
+Not true at the beginning of the game.
+
+206
+00:13:50,950 --> 00:13:57,660
+And then what we'll do is we'll update game over to be true or false depending on if someone wins.
+
+207
+00:13:57,660 --> 00:14:04,150
+So if someone gets to five game over should now be true and that should mean that we can no longer update
+
+208
+00:14:04,140 --> 00:14:09,940
+the score and that we have to hit reset and reset should then make game over false again and start everything
+
+209
+00:14:09,930 --> 00:14:11,050
+over.
+
+210
+00:14:11,050 --> 00:14:12,930
+So let me show you what I mean.
+
+211
+00:14:12,930 --> 00:14:16,000
+The first thing we want to do is add another variable.
+
+212
+00:14:16,000 --> 00:14:17,670
+I'm going to call it winning score.
+
+213
+00:14:18,150 --> 00:14:19,940
+And that's just going to be equal to 5.
+
+214
+00:14:20,130 --> 00:14:24,550
+So that variable is what we're going to compare player 1 and player to score 2.
+
+215
+00:14:24,610 --> 00:14:29,920
+So we're going to check as a player 1 score reached the winning score if he or she has.
+
+216
+00:14:30,100 --> 00:14:32,200
+Then we need to say game over is true.
+
+217
+00:14:32,500 --> 00:14:33,910
+So the logic will look like this.
+
+218
+00:14:33,910 --> 00:14:40,360
+Going to have an if statement and it's just going to look like if game over is not been reached yet
+
+219
+00:14:40,360 --> 00:14:40,620
+.
+
+220
+00:14:40,620 --> 00:14:48,370
+So if not game over then we're going to let you add to the score just like this.
+
+221
+00:14:48,930 --> 00:14:51,930
+When I run this right now you won't notice anything different.
+
+222
+00:14:51,930 --> 00:14:56,890
+It will work exactly the same way for player 1 and that's because game over is always false.
+
+223
+00:14:56,880 --> 00:14:58,030
+It never changes.
+
+224
+00:14:58,260 --> 00:15:00,370
+So when would we change it to be true.
+
+225
+00:15:00,610 --> 00:15:02,040
+Well when there's a game over.
+
+226
+00:15:02,230 --> 00:15:08,390
+And when that happens is when the users score so when player 1 score is equal to the winning score.
+
+227
+00:15:08,760 --> 00:15:18,580
+So after we add one to player 1 score we'll just check if let's do one score triples equals winning
+
+228
+00:15:18,580 --> 00:15:18,940
+score.
+
+229
+00:15:18,930 --> 00:15:25,080
+So if they're equal to one another then let's start by just saying Contador log.
+
+230
+00:15:25,260 --> 00:15:27,280
+Game over.
+
+231
+00:15:27,280 --> 00:15:28,340
+Just like that.
+
+232
+00:15:28,920 --> 00:15:36,790
+And if we refresh and review our Consul and I tried changing this so far this is not true so this never
+
+233
+00:15:36,790 --> 00:15:37,890
+happens.
+
+234
+00:15:38,080 --> 00:15:42,560
+This time though I add one player one score goes to five.
+
+235
+00:15:42,750 --> 00:15:48,220
+We're checking if player 1 score is equal to winning score and we get game over down here.
+
+236
+00:15:48,220 --> 00:15:53,670
+So rather than just cancel the locking game over we actually want to change this state or now.
+
+237
+00:15:53,670 --> 00:15:56,130
+Game over is true.
+
+238
+00:15:56,160 --> 00:16:01,930
+So what that will do for us I'll show you if I refresh it will prevent us from adding more to the score
+
+239
+00:16:02,430 --> 00:16:04,390
+because game over is true.
+
+240
+00:16:04,570 --> 00:16:05,920
+This little check appear.
+
+241
+00:16:05,910 --> 00:16:06,700
+It checks.
+
+242
+00:16:06,790 --> 00:16:07,930
+Is it game over yet.
+
+243
+00:16:08,130 --> 00:16:11,370
+And if it is game over none of this code runs.
+
+244
+00:16:11,530 --> 00:16:13,270
+So let's try that.
+
+245
+00:16:13,390 --> 00:16:15,270
+I get to five and I'm stuck.
+
+246
+00:16:15,460 --> 00:16:17,310
+I can't increase it anymore.
+
+247
+00:16:17,350 --> 00:16:22,730
+However I can go to player 2 and increase that score because our logic is only for player 1.
+
+248
+00:16:23,190 --> 00:16:28,520
+We'll want to go over to this player to button out event listener and add in the same logic.
+
+249
+00:16:28,570 --> 00:16:39,630
+So if it's not game over then we'll let you increment the score and update the display and then we also
+
+250
+00:16:39,630 --> 00:16:49,600
+need to check if the new player to score is equal to the winning score then it is game over.
+
+251
+00:16:49,600 --> 00:16:55,390
+Game over is true which means that the user neither user or player one or player two can continue to
+
+252
+00:16:55,380 --> 00:16:57,240
+increment the score any more.
+
+253
+00:16:57,250 --> 00:17:01,080
+So let's check that this works refresh.
+
+254
+00:17:01,990 --> 00:17:04,390
+OK we can get to five here and we're done.
+
+255
+00:17:04,380 --> 00:17:08,120
+Player 2 doesn't work or we can get to five over here and we're done.
+
+256
+00:17:08,130 --> 00:17:09,810
+And player 1 doesn't work either.
+

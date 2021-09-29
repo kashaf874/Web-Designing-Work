@@ -1,0 +1,548 @@
+﻿1
+00:00:00,550 --> 00:00:06,360
+This video we're going to use boolean logic and some conditionals to build a simple number guessing
+
+2
+00:00:06,360 --> 00:00:06,760
+game.
+
+3
+00:00:06,900 --> 00:00:08,360
+So this is how it works.
+
+4
+00:00:08,460 --> 00:00:15,580
+When I load the page it asks me to guess the number and behind the scenes there is a number.
+
+5
+00:00:15,630 --> 00:00:20,570
+In this case it's set as 7 a number that I need to pick to get it right.
+
+6
+00:00:20,670 --> 00:00:27,800
+So if I guess something like 9 which is too high it tells me to high try again.
+
+7
+00:00:28,380 --> 00:00:33,930
+So if I refresh and this time I guess two tells me that's too low.
+
+8
+00:00:33,930 --> 00:00:35,130
+Try again.
+
+9
+00:00:35,820 --> 00:00:43,590
+And finally if I get it correctly with 7 it tells me you guessed it.
+
+10
+00:00:43,710 --> 00:00:51,850
+So to build this maybe go ahead and open up supply and make a new file game.
+
+11
+00:00:51,910 --> 00:00:57,200
+H Tim L I didn't my e-mail here.
+
+12
+00:00:59,190 --> 00:01:06,750
+And then I'm going to add a script tag and set it equal to B game.
+
+13
+00:01:06,890 --> 00:01:09,380
+Yes which doesn't exist yet.
+
+14
+00:01:09,390 --> 00:01:12,170
+Now I'll add that file.
+
+15
+00:01:12,930 --> 00:01:18,720
+Game dot japes and in there I'm just going to put alert.
+
+16
+00:01:18,970 --> 00:01:19,970
+Hello.
+
+17
+00:01:20,430 --> 00:01:25,000
+Just as always I want to make sure things are connected OK.
+
+18
+00:01:25,150 --> 00:01:28,650
+So now I'm going to open this up.
+
+19
+00:01:28,800 --> 00:01:29,340
+All right.
+
+20
+00:01:29,400 --> 00:01:36,100
+Everything looks good so the first thing that we want to do is figure out our logic.
+
+21
+00:01:36,360 --> 00:01:39,440
+So I'm going to write some comments that are going to guide us throughout this.
+
+22
+00:01:39,500 --> 00:01:51,000
+So the first thing we want to do is create a secret number and then ask user for guess and then check
+
+23
+00:01:51,210 --> 00:01:51,570
+.
+
+24
+00:01:54,630 --> 00:02:00,350
+So to start let's create the secret number which we'll just start with a variable that is hardcoded
+
+25
+00:02:00,410 --> 00:02:00,510
+.
+
+26
+00:02:00,510 --> 00:02:02,460
+So it's always the same.
+
+27
+00:02:02,520 --> 00:02:09,580
+Our secret number equals and let's this time do four.
+
+28
+00:02:10,500 --> 00:02:12,930
+Then we're going to ask the user for their guess.
+
+29
+00:02:12,960 --> 00:02:15,840
+So far I guess he calls prompt
+
+30
+00:02:20,820 --> 00:02:28,360
+let's say guess a number and that's all we need to do their save.
+
+31
+00:02:29,520 --> 00:02:33,610
+And then as our first step let's just alert.
+
+32
+00:02:33,830 --> 00:02:34,170
+Guess
+
+33
+00:02:37,750 --> 00:02:40,210
+so let's go back refresh.
+
+34
+00:02:40,490 --> 00:02:45,420
+Guess a number 104 and then it tells me 104.
+
+35
+00:02:45,450 --> 00:02:46,460
+All right.
+
+36
+00:02:46,890 --> 00:02:50,830
+So the first thing that we want to do is just check if they guessed correctly.
+
+37
+00:02:51,090 --> 00:02:52,810
+So that conditional.
+
+38
+00:02:53,010 --> 00:02:53,400
+That's right.
+
+39
+00:02:53,400 --> 00:02:56,860
+This is check if guess is right.
+
+40
+00:02:57,330 --> 00:03:10,500
+That conditional is just if guess chirpily calls secret number and if that's the case let's do an alert
+
+41
+00:03:10,500 --> 00:03:11,340
+.
+
+42
+00:03:11,430 --> 00:03:15,500
+You got it right and safe.
+
+43
+00:03:16,170 --> 00:03:18,920
+So there is one small problem but I want to show it.
+
+44
+00:03:18,930 --> 00:03:21,930
+Failing first so I'm going to run this.
+
+45
+00:03:21,930 --> 00:03:23,820
+Remember our secret number is four.
+
+46
+00:03:23,850 --> 00:03:32,920
+So if I refresh and I type four I should see you got it right but I'm not and here's why.
+
+47
+00:03:33,120 --> 00:03:35,850
+Open up the javascript Council to illustrate this.
+
+48
+00:03:35,880 --> 00:03:38,610
+When I do prompt when I ask for a number.
+
+49
+00:03:38,640 --> 00:03:40,220
+So let's do this line here.
+
+50
+00:03:40,310 --> 00:03:45,610
+Var gas equals prompt.
+
+51
+00:03:46,880 --> 00:03:47,450
+Yes
+
+52
+00:03:50,280 --> 00:03:55,620
+when I typed the number four in here it's not actually stored as a number.
+
+53
+00:03:55,650 --> 00:03:59,910
+So if I look at what guess is you can see it's a string.
+
+54
+00:04:00,180 --> 00:04:07,890
+And if I wanted to prove that it was a string I could use javascript's type of which tells me type of
+
+55
+00:04:07,890 --> 00:04:09,440
+guess is string.
+
+56
+00:04:09,450 --> 00:04:09,980
+OK.
+
+57
+00:04:10,110 --> 00:04:18,030
+So More importantly though I'm trying to compare it to secret number which remember is a number.
+
+58
+00:04:18,120 --> 00:04:24,480
+So if I move this back here and I pasted in we have secret number which is the number four.
+
+59
+00:04:24,600 --> 00:04:28,520
+And then we have Guess which is the string for.
+
+60
+00:04:28,530 --> 00:04:33,920
+So as we saw in the Boolean logic video those do not triple equals one another.
+
+61
+00:04:34,260 --> 00:04:41,780
+So what we could do is use double calls so I could say guess double equals.
+
+62
+00:04:41,940 --> 00:04:43,380
+Secret number.
+
+63
+00:04:43,710 --> 00:04:49,770
+But there's another way that I prefer because we still get to keep triple equals and the way that we
+
+64
+00:04:49,770 --> 00:04:58,810
+do that is using a bit of new code and it looks like this number capital and guess.
+
+65
+00:04:58,830 --> 00:05:04,830
+So we pass something in and what that will do is actually take the string of gas and turn it into a
+
+66
+00:05:04,830 --> 00:05:05,850
+number.
+
+67
+00:05:06,120 --> 00:05:08,680
+So we get the number four there.
+
+68
+00:05:08,730 --> 00:05:17,650
+So then what we can do is triple equals like that where we would take guess the string.
+
+69
+00:05:17,730 --> 00:05:19,130
+Turn it into a number.
+
+70
+00:05:19,380 --> 00:05:22,120
+Then check if it equals the secret number.
+
+71
+00:05:22,140 --> 00:05:23,560
+So that's what we're going to do.
+
+72
+00:05:23,910 --> 00:05:34,050
+Going to go back over here and just check if the number version I guess is equal to the secret number
+
+73
+00:05:34,240 --> 00:05:35,280
+we're going to print out.
+
+74
+00:05:35,350 --> 00:05:36,330
+You got it right.
+
+75
+00:05:36,610 --> 00:05:42,650
+So let's refresh let's guess four and it tells us you've got it right.
+
+76
+00:05:42,670 --> 00:05:43,690
+Awesome.
+
+77
+00:05:43,750 --> 00:05:50,450
+So if we get it wrong though nothing happens yet so let's add a message that says you got it wrong.
+
+78
+00:05:51,270 --> 00:05:53,470
+So we'll have an otherwise.
+
+79
+00:05:54,430 --> 00:05:55,750
+You got it wrong.
+
+80
+00:05:56,170 --> 00:05:57,780
+And to do that we just want our.
+
+81
+00:05:57,790 --> 00:06:08,860
+Else statement else and we'll just do a alert wrong like that.
+
+82
+00:06:08,860 --> 00:06:12,010
+Now let's try that refresh Let's type in two.
+
+83
+00:06:12,480 --> 00:06:14,210
+And we see wrong.
+
+84
+00:06:14,820 --> 00:06:21,290
+So if you remember earlier on the solution that I had would tell you if you too high or too low.
+
+85
+00:06:21,570 --> 00:06:26,350
+So rather than just saying wrong we actually don't want to do that.
+
+86
+00:06:26,500 --> 00:06:30,350
+We want to say otherwise check if higher
+
+87
+00:06:32,820 --> 00:06:36,600
+otherwise check if lower.
+
+88
+00:06:37,480 --> 00:06:38,710
+So something like this.
+
+89
+00:06:38,800 --> 00:06:43,630
+So to check if guess is higher.
+
+90
+00:06:43,620 --> 00:06:44,330
+We're going to write in.
+
+91
+00:06:44,320 --> 00:06:45,380
+Else if.
+
+92
+00:06:45,670 --> 00:06:50,390
+Else if we need to convert it to a number again.
+
+93
+00:06:51,120 --> 00:06:57,150
+Number guess is greater than secret number.
+
+94
+00:06:57,150 --> 00:07:00,620
+We'll do an alert too.
+
+95
+00:07:00,820 --> 00:07:05,680
+Hi guess again.
+
+96
+00:07:07,200 --> 00:07:08,250
+There we go.
+
+97
+00:07:08,740 --> 00:07:14,250
+And just to check that I refresh and I enter something in too high like nine.
+
+98
+00:07:14,560 --> 00:07:16,790
+It tells me to high Guess again.
+
+99
+00:07:17,100 --> 00:07:21,490
+But if for entrance thing to low like to nothing happens.
+
+100
+00:07:21,490 --> 00:07:27,490
+So then we need to build in the final catch all which is if it's not equal to the secret number and
+
+101
+00:07:27,500 --> 00:07:30,950
+if it's not higher then what about if it's lower.
+
+102
+00:07:31,260 --> 00:07:35,820
+So what we could do is add another else if and I'll just copy this one.
+
+103
+00:07:36,270 --> 00:07:43,750
+We could do LCF number I guess is less than secret number and we could say to low guess again.
+
+104
+00:07:44,130 --> 00:07:47,720
+But there's an easier way which is just to use else.
+
+105
+00:07:47,940 --> 00:07:53,340
+And that's because if the number is not equal and it's not greater then than it has to be less then
+
+106
+00:07:53,350 --> 00:07:53,730
+.
+
+107
+00:07:53,940 --> 00:07:57,970
+So I can just reduce all of this to else.
+
+108
+00:07:57,970 --> 00:08:02,410
+And then we alert to low guess again let's save.
+
+109
+00:08:02,470 --> 00:08:04,330
+Open it up.
+
+110
+00:08:04,320 --> 00:08:10,660
+So let's try something too low like to tells me to low guess again.
+
+111
+00:08:10,810 --> 00:08:16,850
+Let's try something too high like 98 to high Guess again and just try something just right.
+
+112
+00:08:16,900 --> 00:08:18,000
+The number four.
+
+113
+00:08:18,370 --> 00:08:20,020
+You got it right.
+
+114
+00:08:20,010 --> 00:08:20,760
+Excellent.
+
+115
+00:08:21,120 --> 00:08:24,510
+So there's one small small improvement we could make.
+
+116
+00:08:24,550 --> 00:08:28,470
+You'll notice here that this code is being duplicated.
+
+117
+00:08:28,480 --> 00:08:33,540
+We're returning guess the string into a number rather than doing that twice.
+
+118
+00:08:33,580 --> 00:08:40,730
+What we could do is just get it out of the way up top one time right here where I could say Vargus is
+
+119
+00:08:40,810 --> 00:08:48,460
+equal to the number of whatever the user types in to just get it out of the way all in one line and
+
+120
+00:08:48,460 --> 00:08:55,930
+then we can just leave this as guess because guess is now a number rather than a string.
+
+121
+00:08:56,590 --> 00:09:02,890
+And if we try that it works exactly the same.
+
+122
+00:09:02,880 --> 00:09:05,650
+And if you prefer we could make this a little clearer.
+
+123
+00:09:05,640 --> 00:09:09,370
+Some people might argue that doing this on one line is unnecessary.
+
+124
+00:09:09,550 --> 00:09:19,770
+So what we could do instead is something like this Var gas let's call it string guess equals prompt
+
+125
+00:09:20,870 --> 00:09:21,630
+.
+
+126
+00:09:22,120 --> 00:09:28,900
+A number and then we would say Var gas equals number of string guess.
+
+127
+00:09:29,110 --> 00:09:31,200
+So it's more explicit to do it this way.
+
+128
+00:09:31,410 --> 00:09:35,370
+So we get the string guess as just from prompted this string.
+
+129
+00:09:35,430 --> 00:09:39,930
+Then we turn it into a number and save it to a variable called guess.
+
+130
+00:09:40,650 --> 00:09:44,030
+And then we're using that variable called guess.
+
+131
+00:09:45,070 --> 00:09:55,030
+So just double check it still works too high to low just right.
+
+132
+00:09:55,840 --> 00:09:56,130
+OK.
+
+133
+00:09:56,130 --> 00:10:01,540
+So in future versions we're going to make this guessing game actually repeat and give you another turn
+
+134
+00:10:01,840 --> 00:10:03,580
+where you don't have to refresh the page.
+
+135
+00:10:03,580 --> 00:10:05,430
+It will just continue to ask you.
+
+136
+00:10:05,500 --> 00:10:08,590
+Guess again too high Guess again too high I guess again.
+
+137
+00:10:08,740 --> 00:10:10,740
+And then eventually hopefully get it right.
+

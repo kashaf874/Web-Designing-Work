@@ -1,0 +1,144 @@
+﻿1
+00:00:00,460 --> 00:00:05,100
+Hi welcome to unit 10 so unit 10 is all about Javascript functions.
+
+2
+00:00:05,100 --> 00:00:09,230
+Another one those really important components that we're going to use for the rest of the course.
+
+3
+00:00:09,480 --> 00:00:11,730
+And not only is it one of the most important.
+
+4
+00:00:11,820 --> 00:00:14,520
+I'd argue it's the most important part of Javascript.
+
+5
+00:00:14,580 --> 00:00:19,290
+So pretty much anyone who's ever worked with javascript anyone who has any experience with it would
+
+6
+00:00:19,290 --> 00:00:23,790
+tell you that the one thing that you have to know in order to understand and to work with javascript
+
+7
+00:00:23,790 --> 00:00:25,620
+well is functions.
+
+8
+00:00:25,620 --> 00:00:30,050
+Functions are the building blocks of everything and javascript or almost everything.
+
+9
+00:00:30,090 --> 00:00:32,320
+So this unit focuses solely on functions.
+
+10
+00:00:32,340 --> 00:00:37,260
+But we're going to get a lot of practice in every exercise every assignment we do from here on out when
+
+11
+00:00:37,260 --> 00:00:39,130
+we get to know JSM we get J Query.
+
+12
+00:00:39,140 --> 00:00:40,830
+It's all based around functions.
+
+13
+00:00:40,980 --> 00:00:43,880
+So lots and lots of practice coming up later in this lesson.
+
+14
+00:00:43,920 --> 00:00:45,080
+And later in the course.
+
+15
+00:00:45,360 --> 00:00:47,610
+So we have three main objectives in this unit.
+
+16
+00:00:47,670 --> 00:00:53,430
+First is for you to write function declarations and function expressions and don't worry I'll explain
+
+17
+00:00:53,650 --> 00:00:57,110
+in quite a bit of detail what those are and how they're similar and how they're different.
+
+18
+00:00:57,300 --> 00:01:01,620
+So two ways of writing functions I want you you'd be able to write both of them the next objective is
+
+19
+00:01:01,620 --> 00:01:02,990
+a little bit more bite size.
+
+20
+00:01:03,150 --> 00:01:08,130
+I'd like for you to be able to explain the difference between conses not logging something and returning
+
+21
+00:01:08,130 --> 00:01:08,710
+something.
+
+22
+00:01:08,940 --> 00:01:13,740
+So return is a special word it is a key word in javascript that does something special that you'll see
+
+23
+00:01:13,740 --> 00:01:14,590
+in the next unit.
+
+24
+00:01:14,820 --> 00:01:19,530
+So the last objective is that I'd like you to be able to define your own functions whether there are
+
+25
+00:01:19,530 --> 00:01:25,140
+function declarations or function expressions own defined functions that can take multiple arguments
+
+26
+00:01:25,410 --> 00:01:30,330
+and then will wrap up this unit with some more advanced discussions about two topics which are scope
+
+27
+00:01:30,600 --> 00:01:32,080
+and higher order functions.
+
+28
+00:01:32,130 --> 00:01:37,230
+So I don't have the objectives for those because they're not technically core to everything we're talking
+
+29
+00:01:37,230 --> 00:01:40,920
+about they're not central concepts that you absolutely have to understand.
+
+30
+00:01:41,310 --> 00:01:45,480
+Really I'm trying to make those make the objectives of the foundational the fundamental things that
+
+31
+00:01:45,480 --> 00:01:48,470
+you have to know before you leave this course.
+
+32
+00:01:48,850 --> 00:01:52,460
+But scope and higher order functions are two topics that are important.
+
+33
+00:01:52,470 --> 00:01:53,670
+They're intrinsic to J.S..
+
+34
+00:01:53,700 --> 00:01:56,800
+I mean talk about them at length in the last two videos in this unit.
+
+35
+00:01:57,000 --> 00:02:00,060
+So look forward to that or don't skip them if you want.
+
+36
+00:02:00,240 --> 00:02:01,420
+OK I'll see in the next.
+

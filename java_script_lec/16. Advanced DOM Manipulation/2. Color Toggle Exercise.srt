@@ -1,0 +1,508 @@
+﻿1
+00:00:00,380 --> 00:00:02,130
+OK we'll come back.
+
+2
+00:00:02,130 --> 00:00:05,070
+So I think it's time for you to give some of this a shot on your own.
+
+3
+00:00:05,400 --> 00:00:07,310
+So I have a quick exercise.
+
+4
+00:00:07,560 --> 00:00:14,730
+All that you need to do is create a new age or file a new javascript file and add a single button to
+
+5
+00:00:14,730 --> 00:00:15,620
+the age to my file.
+
+6
+00:00:15,630 --> 00:00:16,920
+That's it.
+
+7
+00:00:16,920 --> 00:00:23,490
+And then when I click that button all you need to do is change the background color of the body from
+
+8
+00:00:23,490 --> 00:00:24,780
+white to purple.
+
+9
+00:00:24,780 --> 00:00:25,600
+How you do that.
+
+10
+00:00:25,600 --> 00:00:27,190
+I'll leave it up to you.
+
+11
+00:00:27,240 --> 00:00:31,620
+There's a few different ways that you could do it given the different things that we've talked about
+
+12
+00:00:31,620 --> 00:00:36,570
+so far but you need to run some code when you click on the button and that code should change the background
+
+13
+00:00:36,570 --> 00:00:41,280
+color between two colors whether it's purple and white or you pick some better colors.
+
+14
+00:00:41,280 --> 00:00:42,220
+Totally up to you.
+
+15
+00:00:42,510 --> 00:00:44,010
+So Pasic video right now.
+
+16
+00:00:44,190 --> 00:00:45,560
+Give that a shot on your own.
+
+17
+00:00:45,580 --> 00:00:50,160
+That's really important that you do that and then come back when you're ready and we'll go over a solution
+
+18
+00:00:50,160 --> 00:00:52,460
+together.
+
+19
+00:00:54,620 --> 00:00:55,280
+OK.
+
+20
+00:00:55,350 --> 00:00:58,110
+So let's talk about how we can make this work.
+
+21
+00:00:58,110 --> 00:01:04,870
+First things first we need an aged female file which I have right here need to add in my HMO.
+
+22
+00:01:05,310 --> 00:01:14,550
+Let's call this color toggle and all we need is a single button and we'll just add click me just like
+
+23
+00:01:14,550 --> 00:01:16,590
+that.
+
+24
+00:01:16,650 --> 00:01:22,850
+Now we need our javascript file and we could easily do something where we just add a script tag right
+
+25
+00:01:22,860 --> 00:01:27,260
+here and at our javascript in there but it's not a great practice.
+
+26
+00:01:27,270 --> 00:01:34,170
+So just to get you in the right habit and make a new file we'll just call it toggle.
+
+27
+00:01:34,190 --> 00:01:42,540
+J.S. in the same directory and inside like I always like to do I'll add an alert just to make sure they're
+
+28
+00:01:42,540 --> 00:01:47,910
+connected OK and then we need to go and link to that script
+
+29
+00:01:51,130 --> 00:01:57,450
+and that needs to be source equals toggle dot Jay Yes just like that.
+
+30
+00:01:57,510 --> 00:02:02,880
+So let's go ahead and open this file in the browser and see what we get.
+
+31
+00:02:02,880 --> 00:02:04,640
+First thing that I'll point out here.
+
+32
+00:02:04,800 --> 00:02:10,770
+Notice that we got the alert that says things are connected but the button isn't on the page yet.
+
+33
+00:02:11,220 --> 00:02:14,710
+So we don't actually see the button until I get rid of the alert.
+
+34
+00:02:15,030 --> 00:02:17,450
+And that's really important and we want to fix that.
+
+35
+00:02:17,490 --> 00:02:24,210
+What that tells us is that our code over here is running first before the button is on the page at all
+
+36
+00:02:25,140 --> 00:02:30,060
+and the code that we're going to write is going to rely on the fact the button is on the page.
+
+37
+00:02:30,150 --> 00:02:36,810
+We can't add a quick listener otherwise the event listener is only going to work and add events to items
+
+38
+00:02:36,810 --> 00:02:39,100
+that are on the page at the time that it's run.
+
+39
+00:02:39,450 --> 00:02:41,290
+So we have a few ways of fixing this.
+
+40
+00:02:41,310 --> 00:02:47,040
+The simplest one for now is just to move our script down to the end of the body so that we know for
+
+41
+00:02:47,040 --> 00:02:49,710
+sure OK this button has loaded.
+
+42
+00:02:49,710 --> 00:02:55,020
+We will learn about another way of doing this when we get to Jay query but this works perfectly fine
+
+43
+00:02:55,020 --> 00:02:55,680
+for now.
+
+44
+00:02:55,980 --> 00:02:59,440
+So if we refresh now you'll see the buttons already there.
+
+45
+00:02:59,610 --> 00:03:03,140
+And then we get the alert that says connect it.
+
+46
+00:03:03,210 --> 00:03:05,470
+So now let's talk about the logic.
+
+47
+00:03:05,490 --> 00:03:09,460
+Let's go to our toggle J.S. and select the button.
+
+48
+00:03:09,660 --> 00:03:19,920
+So var button equals document queries selector button and that's just one way to select it of course
+
+49
+00:03:19,920 --> 00:03:20,620
+.
+
+50
+00:03:20,970 --> 00:03:28,030
+And then we want to add our event listener so button that add event listener click
+
+51
+00:03:30,930 --> 00:03:36,650
+and then our function that will run the callback function just like that.
+
+52
+00:03:37,290 --> 00:03:44,100
+And I always like to start again with an alert that just says clicked just to make sure that we're selecting
+
+53
+00:03:44,100 --> 00:03:46,450
+the right thing and that this function is being run.
+
+54
+00:03:46,470 --> 00:03:51,910
+When we do click so refresh Let's click and we get clicked.
+
+55
+00:03:51,960 --> 00:03:52,860
+So that's great.
+
+56
+00:03:52,860 --> 00:03:59,280
+Things are hooked up correctly now all we need to do is change the background color of the body.
+
+57
+00:03:59,700 --> 00:04:04,920
+So I would start by just doing document dump body and let's just set it to be purple.
+
+58
+00:04:05,100 --> 00:04:14,980
+So document up body style that background equals purple and you'll see I used document dot body.
+
+59
+00:04:15,150 --> 00:04:24,830
+We could also do document that queries selector and give the body tag name or something like document
+
+60
+00:04:24,840 --> 00:04:35,510
+diked get elements by tag name body zero but it's much easier just to use document dot body.
+
+61
+00:04:35,670 --> 00:04:38,730
+It's just a shortcut that's built into the document.
+
+62
+00:04:38,730 --> 00:04:42,970
+So I do that I change it to purple and we should be good to go here.
+
+63
+00:04:43,110 --> 00:04:50,770
+If I click we get a purple body but of course part of this problem was toggling back and forth.
+
+64
+00:04:50,940 --> 00:04:56,310
+So when I click here it goes back to white and then I click again and goes back to purple and it keeps
+
+65
+00:04:56,310 --> 00:04:57,870
+switching between the two.
+
+66
+00:04:58,290 --> 00:05:06,030
+So what we'll need to do is add some logic and our logic is going to look something like this if White
+
+67
+00:05:09,150 --> 00:05:16,040
+may get purple else make it with something like that.
+
+68
+00:05:16,350 --> 00:05:21,550
+So the way that I'm going to handle this I'm going to create a boolean value called is purple Savar
+
+69
+00:05:21,630 --> 00:05:29,130
+is purple and it's going to start as false because when I refresh the page it's not purple so purple
+
+70
+00:05:29,130 --> 00:05:29,930
+is false.
+
+71
+00:05:29,970 --> 00:05:37,950
+And then what we'll need to do is inside of our javascript we're going to check if is purple.
+
+72
+00:05:38,910 --> 00:05:45,450
+So if it is purple then we're going to want to make the background color white
+
+73
+00:05:49,200 --> 00:05:50,370
+just like this.
+
+74
+00:05:50,520 --> 00:05:51,630
+And change has to be white
+
+75
+00:05:54,690 --> 00:06:02,020
+and then Otherwise we'll do the same thing except we will make it purple.
+
+76
+00:06:02,040 --> 00:06:06,930
+The only issue of course is that is purple right now is always false.
+
+77
+00:06:06,930 --> 00:06:08,610
+We're going to want to change that.
+
+78
+00:06:08,880 --> 00:06:16,230
+So if is purple if it is purple document up body style but background is equal to white and then we
+
+79
+00:06:16,230 --> 00:06:23,190
+would say is purple is now called the false because we just change it to white and then when we said
+
+80
+00:06:23,190 --> 00:06:27,610
+it to be purple we would say is purple equals true.
+
+81
+00:06:27,840 --> 00:06:35,130
+And this needs to be a boolean value of course not the string true or the string false.
+
+82
+00:06:35,160 --> 00:06:38,280
+So what we've done here is create our own little target tracker.
+
+83
+00:06:38,280 --> 00:06:41,020
+This boolean is purple start's is false.
+
+84
+00:06:41,070 --> 00:06:43,590
+The first time through it is purple.
+
+85
+00:06:43,590 --> 00:06:44,510
+That doesn't happen.
+
+86
+00:06:44,610 --> 00:06:49,990
+So we go to the else we change the background to be purple and then is purple is now true.
+
+87
+00:06:50,190 --> 00:06:54,460
+So next time the user clicks it is purple that's now true.
+
+88
+00:06:54,480 --> 00:06:58,890
+So if we change the background to be white and then is purple is set to false and we keep switching
+
+89
+00:06:58,890 --> 00:06:59,930
+back and forth.
+
+90
+00:06:59,970 --> 00:07:03,640
+So refresh checker council makes sure we have no errors.
+
+91
+00:07:03,900 --> 00:07:08,910
+And now let's try clicking purple white purple and white.
+
+92
+00:07:09,450 --> 00:07:15,030
+So there's a small re factor that we can do which is we don't have to set is purple to be false and
+
+93
+00:07:15,090 --> 00:07:18,180
+is purple to be true inside the if statement.
+
+94
+00:07:18,180 --> 00:07:21,110
+We have a shorter way of doing that just by writing.
+
+95
+00:07:21,150 --> 00:07:25,360
+Is purple equals not is purple.
+
+96
+00:07:25,770 --> 00:07:31,280
+So that's just going to switch it between true and false or false and true just negates it.
+
+97
+00:07:31,440 --> 00:07:33,660
+So that is a nice shortcut.
+
+98
+00:07:34,200 --> 00:07:40,080
+You can see here it now it's Heigl's and it's a little bit shorter but there's an even shorter way of
+
+99
+00:07:40,080 --> 00:07:46,000
+doing office which hopefully some of you thought about when we learned about the class list.
+
+100
+00:07:46,110 --> 00:07:48,230
+There was a method called toggle.
+
+101
+00:07:48,240 --> 00:07:55,320
+So if we define a CSA as class and let's go ahead and do that instead of my style I'm just going to
+
+102
+00:07:55,320 --> 00:08:01,590
+make a style tag for now and add a class called Dot.
+
+103
+00:08:01,590 --> 00:08:04,650
+And let's just call it purple or just purple.
+
+104
+00:08:04,650 --> 00:08:12,630
+That's a class name and we'll just say background is purple and that's all we need to do what we're
+
+105
+00:08:12,630 --> 00:08:16,680
+going to do is toggle this class on and off on the body.
+
+106
+00:08:16,680 --> 00:08:25,140
+So go back here and I'm going to just copy this for now and counted out and all we need to do is when
+
+107
+00:08:25,140 --> 00:08:31,720
+you click on the button and they comment this out or get rid of this get rid of this as well.
+
+108
+00:08:31,740 --> 00:08:37,820
+All of this all we want to do is document up body.
+
+109
+00:08:38,230 --> 00:08:41,900
+Classless toggle.
+
+110
+00:08:42,210 --> 00:08:46,390
+And then the name of the class we just made was called a purple.
+
+111
+00:08:46,470 --> 00:08:53,000
+So remember what this will do is if the body doesn't have the class named purple it will add it.
+
+112
+00:08:53,400 --> 00:08:56,510
+But it checks if it does have the class name purple already.
+
+113
+00:08:56,580 --> 00:08:57,660
+It will remove it.
+
+114
+00:08:57,660 --> 00:09:00,630
+So we don't have to keep track of if it's purple or white.
+
+115
+00:09:00,630 --> 00:09:05,850
+Currently if the class is applied or if it isn't we don't need this is purple Boullion anymore.
+
+116
+00:09:06,270 --> 00:09:09,660
+That's basically all wrapped up instead of classless toggle.
+
+117
+00:09:09,930 --> 00:09:11,390
+So I refresh.
+
+118
+00:09:12,000 --> 00:09:15,980
+I click and you can see it looks the same.
+
+119
+00:09:16,110 --> 00:09:19,890
+But if we inspect and we look at the body.
+
+120
+00:09:19,890 --> 00:09:20,670
+Here we go.
+
+121
+00:09:20,790 --> 00:09:22,930
+Notice class equals purple.
+
+122
+00:09:22,980 --> 00:09:26,310
+And then I click and now we don't have classical purple anymore.
+
+123
+00:09:26,310 --> 00:09:27,570
+It goes away.
+
+124
+00:09:27,990 --> 00:09:29,830
+That's document up body.
+
+125
+00:09:29,910 --> 00:09:32,760
+Class list toggle which is really really useful.
+
+126
+00:09:32,760 --> 00:09:35,490
+It's a lot shorter than this logic here.
+
+127
+00:09:35,490 --> 00:09:37,030
+All right so that's my solution.
+

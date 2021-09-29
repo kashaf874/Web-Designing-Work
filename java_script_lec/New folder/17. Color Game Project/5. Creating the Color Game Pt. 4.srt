@@ -1,0 +1,668 @@
+﻿1
+00:00:00,090 --> 00:00:01,280
+So we're in good shape here.
+
+2
+00:00:01,370 --> 00:00:06,980
+What we want to do next is make it so that we don't use the same six colors every single time.
+
+3
+00:00:07,230 --> 00:00:12,990
+Instead we want to generate six random colors and fill this array with those six random colors and then
+
+4
+00:00:12,990 --> 00:00:15,620
+pick one of those to generate those colors.
+
+5
+00:00:15,630 --> 00:00:18,320
+I'm actually going to write another function to help us out.
+
+6
+00:00:18,390 --> 00:00:24,360
+So our function Nener our race the hardcoded array and I'm going to set colors equal to our function
+
+7
+00:00:24,360 --> 00:00:30,960
+call which we'll call generate random colors and it doesn't exist yet and it's going to take a single
+
+8
+00:00:30,960 --> 00:00:34,590
+argument that decides how many colors to generate in the array.
+
+9
+00:00:34,590 --> 00:00:40,230
+So if we want an array with three items which we will want eventually when we get go to easy mode versus
+
+10
+00:00:40,230 --> 00:00:41,820
+hard mode we want 6.
+
+11
+00:00:42,060 --> 00:00:43,510
+So we'll start with 6.
+
+12
+00:00:43,560 --> 00:00:45,570
+That's what we want when the page loads.
+
+13
+00:00:45,900 --> 00:00:51,900
+Then we need to create the generate random colors function that takes a number and returns X number
+
+14
+00:00:51,960 --> 00:00:54,430
+of random colors instead of an array.
+
+15
+00:00:54,450 --> 00:00:57,900
+So I'll do that down here.
+
+16
+00:00:57,900 --> 00:01:08,730
+Function generate random colors and that should take a argument that we'll just call numb and then instead
+
+17
+00:01:08,730 --> 00:01:09,060
+of here.
+
+18
+00:01:09,060 --> 00:01:10,440
+All right my pseudo code.
+
+19
+00:01:10,440 --> 00:01:12,550
+So I'm going to make an array.
+
+20
+00:01:12,900 --> 00:01:22,410
+I'm going to add some random colors to array and then I'm going to return that array at the very end
+
+21
+00:01:22,410 --> 00:01:23,640
+.
+
+22
+00:01:24,120 --> 00:01:26,370
+So to start this is the easiest part.
+
+23
+00:01:26,370 --> 00:01:28,200
+Make an array just an empty one.
+
+24
+00:01:28,380 --> 00:01:34,590
+So we'll call it a r r just an empty array and then at the bottom we're just going to return the same
+
+25
+00:01:34,590 --> 00:01:35,980
+array.
+
+26
+00:01:36,000 --> 00:01:38,610
+The hard part is the logic that goes in between.
+
+27
+00:01:38,640 --> 00:01:42,660
+So in here we need to add knowm random colors.
+
+28
+00:01:42,690 --> 00:01:46,700
+So what that means is we need to repeat something knowm number of times.
+
+29
+00:01:46,760 --> 00:01:49,000
+So six times or three times.
+
+30
+00:01:49,230 --> 00:01:50,830
+So we'll use a loop to do that.
+
+31
+00:01:51,120 --> 00:01:55,540
+So we'll start with our loop for of our equals zero.
+
+32
+00:01:56,430 --> 00:02:01,800
+I is less than numb I plus plus.
+
+33
+00:02:02,100 --> 00:02:06,930
+And it doesn't matter if we start at zero or if we start at 1 and we make this less than or equal to
+
+34
+00:02:07,410 --> 00:02:13,350
+because we're not actually going to use I it's just a way to loop through three times six times Nahm
+
+35
+00:02:13,350 --> 00:02:13,910
+times.
+
+36
+00:02:14,130 --> 00:02:23,010
+And then in here we're going to actually get random color and push into array.
+
+37
+00:02:23,070 --> 00:02:28,190
+So this line is actually just repeat numb times.
+
+38
+00:02:28,590 --> 00:02:33,360
+So I'm going to make a separate function actually that will generate the random color for us and I'm
+
+39
+00:02:33,360 --> 00:02:36,190
+just going to call that one random color.
+
+40
+00:02:36,270 --> 00:02:41,990
+So function random color and what you're seeing is that I have a function here.
+
+41
+00:02:42,090 --> 00:02:47,310
+Generate random colors that I call inside of that one I'm calling another function just called random
+
+42
+00:02:47,310 --> 00:02:49,860
+color and that's really just to break a code up.
+
+43
+00:02:49,860 --> 00:02:55,410
+Make it clear modular what does what we could have everything in no functions at all it could just be
+
+44
+00:02:55,950 --> 00:02:58,680
+what people would call spaghetti code it's all over the place.
+
+45
+00:02:58,830 --> 00:03:01,760
+So we're going to add some functions here to add some structure.
+
+46
+00:03:01,920 --> 00:03:06,540
+And again at the very end of this project when we have it completed it looks good all the functionality
+
+47
+00:03:06,540 --> 00:03:07,090
+is there.
+
+48
+00:03:07,230 --> 00:03:12,690
+I'll have an optional video on refactoring it and I'll talk about how he can change things around make
+
+49
+00:03:12,690 --> 00:03:18,080
+them a little cleaner a little prettier but it will work exactly the same way.
+
+50
+00:03:18,090 --> 00:03:30,210
+So to start random colors to make a random color we're going to need to pick a read from 0 to 5 5 reps
+
+51
+00:03:31,020 --> 00:03:38,250
+from 0 2 to 5 5 and then we need to pick a green from zero to 2 5 5 and then a blue.
+
+52
+00:03:39,210 --> 00:03:45,490
+And so to pick any number from 0 to 255 we also need to use math not random.
+
+53
+00:03:45,570 --> 00:03:49,230
+So it's going to be math not random.
+
+54
+00:03:49,350 --> 00:03:51,760
+That gives us between 0 and 1.
+
+55
+00:03:51,870 --> 00:03:53,070
+It doesn't include one.
+
+56
+00:03:53,220 --> 00:03:57,900
+We need to multiply by 256 because remember we're rounding down.
+
+57
+00:03:58,050 --> 00:04:05,910
+So we want 255 to be the greatest number possible to many to multiply by one more 256 and then we need
+
+58
+00:04:05,910 --> 00:04:08,730
+to floor that math floor.
+
+59
+00:04:08,900 --> 00:04:16,290
+So go to my counsel and paste in this code you can see if we get a random number between 0 and 255 and
+
+60
+00:04:16,650 --> 00:04:19,630
+you probably won't see that it actually goes to 255.
+
+61
+00:04:19,660 --> 00:04:21,770
+We'll just have to trust me on that one.
+
+62
+00:04:21,900 --> 00:04:23,700
+But you can see at least it gets close.
+
+63
+00:04:23,700 --> 00:04:25,590
+I think we saw 253.
+
+64
+00:04:25,590 --> 00:04:26,770
+That's good enough for now.
+
+65
+00:04:27,060 --> 00:04:33,000
+And you also see all the squares went to purple and that's because our generate random colors doesn't
+
+66
+00:04:33,000 --> 00:04:33,920
+return anything.
+
+67
+00:04:33,930 --> 00:04:36,240
+So it just returns an empty string.
+
+68
+00:04:36,300 --> 00:04:39,300
+So we're not actually looping through and giving a color to each one.
+
+69
+00:04:39,300 --> 00:04:44,360
+So it's just taking the default purple from C Ss just a side note there.
+
+70
+00:04:44,700 --> 00:04:48,480
+So this will generate a number from 0 to 255.
+
+71
+00:04:48,870 --> 00:04:58,080
+We'll save it to a variable called R and then we'll do the same thing for green and for blue so just
+
+72
+00:04:58,080 --> 00:05:05,730
+like this space this correctly and change the names so G and B that will give us three numbers from
+
+73
+00:05:05,730 --> 00:05:07,250
+0 to 255.
+
+74
+00:05:07,530 --> 00:05:14,850
+And the worst part is synthesizing them into this big string that follows the format of R.G. B parentheses
+
+75
+00:05:14,970 --> 00:05:18,640
+and then the numbers inside R G and B.
+
+76
+00:05:18,900 --> 00:05:22,260
+And that means a lot of opening and closing strings and plus signs.
+
+77
+00:05:22,260 --> 00:05:25,390
+So let's start with what looks like this.
+
+78
+00:05:25,410 --> 00:05:32,350
+We're going to have our G-B and then opening parentheses and then plus the red channel.
+
+79
+00:05:32,370 --> 00:05:45,720
+This number from 0 to 2 5 5 plus a comma plus the value of G plus another comma plus the value of B
+
+80
+00:05:46,770 --> 00:05:48,980
+plus our closing parentheses.
+
+81
+00:05:49,620 --> 00:05:51,230
+And we should be good to go now.
+
+82
+00:05:51,340 --> 00:05:52,530
+This big string.
+
+83
+00:05:52,680 --> 00:05:58,570
+And what we want to do is actually return that string just like that.
+
+84
+00:05:58,590 --> 00:06:03,350
+So return this big string and that will generate one random colors.
+
+85
+00:06:03,360 --> 00:06:05,090
+So it's a lot of work for one color.
+
+86
+00:06:05,100 --> 00:06:07,650
+Three different numbers 0 2 2 5 5.
+
+87
+00:06:07,650 --> 00:06:12,450
+We put them together with commas between them parentheses around them the letters R.G. B.
+
+88
+00:06:12,660 --> 00:06:15,650
+And then we return that so we can use it up here.
+
+89
+00:06:15,660 --> 00:06:21,330
+And if we want to just test if that works let's go ahead and refresh the page go to our consul and just
+
+90
+00:06:21,330 --> 00:06:25,600
+try calling random colored and that looks good to me.
+
+91
+00:06:25,620 --> 00:06:26,770
+We're getting a random color.
+
+92
+00:06:26,790 --> 00:06:27,910
+Parentheses are correct.
+
+93
+00:06:27,990 --> 00:06:29,910
+The commas are all good.
+
+94
+00:06:29,910 --> 00:06:33,510
+Let's go now and use that up here.
+
+95
+00:06:34,170 --> 00:06:39,990
+So we're going to call that random color and we're going to push that into our array.
+
+96
+00:06:39,990 --> 00:06:41,240
+Here they are.
+
+97
+00:06:41,280 --> 00:06:46,510
+So our DOT push and we don't have to use push but that's going to do here.
+
+98
+00:06:46,710 --> 00:06:49,820
+And this will now build us a nice array of colors.
+
+99
+00:06:50,210 --> 00:06:52,580
+So generate random colors 6.
+
+100
+00:06:52,770 --> 00:06:56,740
+We call this it repeats six times each time through.
+
+101
+00:06:56,910 --> 00:06:59,230
+It pushes in a random color to the array.
+
+102
+00:06:59,430 --> 00:07:02,440
+So I'm going to just move our comment up here.
+
+103
+00:07:02,460 --> 00:07:03,260
+There we go.
+
+104
+00:07:03,600 --> 00:07:06,040
+And to verify that that works if we refresh.
+
+105
+00:07:06,180 --> 00:07:13,050
+You can see now we get six random colors and not only that are random color that we pick the one color
+
+106
+00:07:13,050 --> 00:07:15,250
+that we picked from the array also changes.
+
+107
+00:07:15,270 --> 00:07:16,520
+So we didn't break that.
+
+108
+00:07:16,530 --> 00:07:19,190
+Everything still works or does it.
+
+109
+00:07:19,200 --> 00:07:20,000
+Let's see.
+
+110
+00:07:20,000 --> 00:07:25,510
+So if I click on some of these colors try again try again try again maybe I just have really bad book
+
+111
+00:07:25,860 --> 00:07:27,210
+but no something's wrong.
+
+112
+00:07:27,400 --> 00:07:28,920
+So the problem's a little bit tricky.
+
+113
+00:07:29,130 --> 00:07:34,830
+It's a little similar to the bug that I brought up when we did the score keeper game when we were comparing
+
+114
+00:07:34,830 --> 00:07:36,500
+things right here.
+
+115
+00:07:36,930 --> 00:07:42,260
+If we're checking if the user is right if they pick the right color something was going wrong before
+
+116
+00:07:42,300 --> 00:07:43,110
+we had a number.
+
+117
+00:07:43,110 --> 00:07:44,880
+And we were comparing it to a string.
+
+118
+00:07:45,030 --> 00:07:46,760
+In this case it's a little bit different.
+
+119
+00:07:46,920 --> 00:07:53,000
+So let me show you just going to do another con. belt log click to color and then pick the color.
+
+120
+00:07:53,250 --> 00:07:56,190
+And let's just see what they look like maybe they're slightly different.
+
+121
+00:07:56,340 --> 00:08:00,570
+Let's refresh the page and open up the con. And let's start clicking.
+
+122
+00:08:00,570 --> 00:08:06,120
+So this one is medium amount of Fred a little green and quite a bit of blue.
+
+123
+00:08:06,300 --> 00:08:07,510
+So let's click on some.
+
+124
+00:08:08,160 --> 00:08:12,700
+And notice the numbers on the left the string RGV and the one on the right.
+
+125
+00:08:12,990 --> 00:08:15,180
+And of course these ones don't match.
+
+126
+00:08:15,840 --> 00:08:21,930
+But if you click on the right one you can see that when they do match it still thinks that we're wrong
+
+127
+00:08:21,930 --> 00:08:21,950
+.
+
+128
+00:08:21,960 --> 00:08:23,220
+It says try again.
+
+129
+00:08:23,490 --> 00:08:28,080
+And if you compare the two strings here this one is the clicked color.
+
+130
+00:08:28,080 --> 00:08:29,420
+This is what's coming back.
+
+131
+00:08:29,550 --> 00:08:36,810
+When we click on an element and we ask for this dot dialed up background and this is the color that
+
+132
+00:08:36,810 --> 00:08:38,290
+we picked from the array.
+
+133
+00:08:38,400 --> 00:08:40,380
+So somehow they're slightly different.
+
+134
+00:08:40,380 --> 00:08:46,740
+And what happens is that when we actually set the background color of an element the SS automatically
+
+135
+00:08:46,740 --> 00:08:50,620
+adds in the dorm automatically add 10 spaces between.
+
+136
+00:08:50,970 --> 00:08:59,370
+So to fix that what we want to do is just add spaces here between our numbers so after the comets and
+
+137
+00:08:59,370 --> 00:09:02,930
+if we do that they'll then compare and be equal to one another.
+
+138
+00:09:02,970 --> 00:09:04,890
+So that's kind of a tricky bug.
+
+139
+00:09:04,920 --> 00:09:10,080
+It just has to do with the way that we're comparing things with triple equals and it's not that double
+
+140
+00:09:10,080 --> 00:09:11,740
+equals would fix that anyways.
+
+141
+00:09:11,820 --> 00:09:15,660
+Double the calls doesn't ignore spaces or anything but it's just a problem with how we generated the
+
+142
+00:09:15,660 --> 00:09:16,460
+colors.
+
+143
+00:09:16,740 --> 00:09:19,240
+So if we try this again and refresh.
+
+144
+00:09:19,410 --> 00:09:20,990
+Now let's just click around.
+
+145
+00:09:21,120 --> 00:09:24,780
+You can see that our spaces are here and these definitely will match.
+
+146
+00:09:24,780 --> 00:09:32,060
+Once we click the right color which is the very last one and we get our correct.
+
+147
+00:09:32,100 --> 00:09:34,650
+So definitely a tricky bug there to wrap up.
+
+148
+00:09:34,650 --> 00:09:40,110
+Let's just try playing a game and a full screen and get rid of the console and refresh and admire our
+
+149
+00:09:40,110 --> 00:09:41,280
+random colors.
+
+150
+00:09:41,280 --> 00:09:48,210
+The last thing that we could do is when we get it correct we could also change the H-1 background like
+
+151
+00:09:48,210 --> 00:09:48,950
+I did here.
+
+152
+00:09:49,110 --> 00:09:52,940
+So when you guess the right color it changes the background color as well.
+
+153
+00:09:53,040 --> 00:09:54,910
+And that's a simple change.
+
+154
+00:09:54,960 --> 00:09:57,540
+All we need to do is select the H-1.
+
+155
+00:09:58,080 --> 00:10:01,920
+So H-1 and we can just select it this the only H-1 on the page.
+
+156
+00:10:01,950 --> 00:10:09,750
+So up here I'm just going to select at the bottom var H-1 equals document that query selector
+
+157
+00:10:13,470 --> 00:10:16,200
+H-1 save that.
+
+158
+00:10:16,200 --> 00:10:25,470
+And then when the user guesses correctly which is right here we're going to change H-1 DOD background
+
+159
+00:10:25,620 --> 00:10:28,460
+or style that background.
+
+160
+00:10:29,610 --> 00:10:39,860
+And that should now equal collect color and we'll save that go to the correct version of our game refresh
+
+161
+00:10:40,080 --> 00:10:42,060
+and let's try clicking.
+
+162
+00:10:42,930 --> 00:10:47,880
+And there we go definitely we have a ways to go with our styling compared to this but we're getting
+
+163
+00:10:47,880 --> 00:10:48,950
+there with the logic.
+
+164
+00:10:49,200 --> 00:10:53,120
+So you guess incorrectly that disappear by just changing the background color.
+
+165
+00:10:53,400 --> 00:10:58,240
+And if you guessed correctly they all change color and the H-1 changes as well.
+
+166
+00:10:58,620 --> 00:11:03,690
+In the next video we're going to add the play again functionality and we'll add a little bit more styling
+
+167
+00:11:03,710 --> 00:11:03,910
+.
+

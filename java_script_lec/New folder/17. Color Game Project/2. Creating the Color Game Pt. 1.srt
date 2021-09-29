@@ -1,0 +1,344 @@
+﻿1
+00:00:00,120 --> 00:00:00,390
+All right.
+
+2
+00:00:00,390 --> 00:00:01,190
+Welcome back.
+
+3
+00:00:01,350 --> 00:00:06,450
+In the next few videos we're going to focus on building a substantial application something that has
+
+4
+00:00:06,450 --> 00:00:12,570
+a lot of moving pieces longer h t m l more CSSA a lot of styling and most importantly a lot of dominant
+
+5
+00:00:12,570 --> 00:00:18,260
+population and event handly what we're going to build is an R.G. be colored guessing game.
+
+6
+00:00:18,510 --> 00:00:23,820
+So it's not only a great demonstration of how all these pieces fit together but it's also a really nice
+
+7
+00:00:23,820 --> 00:00:24,980
+tool for you to have.
+
+8
+00:00:24,990 --> 00:00:30,510
+And for you to practice R.G. be colors because the RGV color system is a little bit unintuitive at first
+
+9
+00:00:30,510 --> 00:00:30,790
+.
+
+10
+00:00:30,810 --> 00:00:35,300
+It's very different than most color systems that people are used to working with.
+
+11
+00:00:35,310 --> 00:00:36,860
+So let me show you how it works.
+
+12
+00:00:36,870 --> 00:00:40,330
+We load up the page and we get six random colors here.
+
+13
+00:00:40,530 --> 00:00:41,750
+These are always different.
+
+14
+00:00:41,850 --> 00:00:47,150
+And one of those colors is listed up here the name of the color in our GP.
+
+15
+00:00:47,250 --> 00:00:50,330
+And our job is to pick which one.
+
+16
+00:00:50,340 --> 00:00:57,390
+Remember that there are three channels red green and blue and each one ranges from 0 to 255 and all
+
+17
+00:00:57,390 --> 00:01:01,020
+that we need are those three colors to make every single color that we could ever want.
+
+18
+00:01:01,170 --> 00:01:07,940
+Black white yellow orange purple all of those are actually made by combining red green and blue.
+
+19
+00:01:08,340 --> 00:01:09,410
+So if we take a look.
+
+20
+00:01:09,570 --> 00:01:13,850
+I have Wikipedia open we can see how additive color mixing works in this diagram.
+
+21
+00:01:13,920 --> 00:01:21,330
+So we have red green and blue and to make yellow we actually combine red and green which is maybe a
+
+22
+00:01:21,330 --> 00:01:24,650
+little different than what you're expected to make magenta.
+
+23
+00:01:25,170 --> 00:01:26,730
+It's blue and red.
+
+24
+00:01:26,940 --> 00:01:31,340
+And to make Cyan is light blue color it's green and blue.
+
+25
+00:01:31,470 --> 00:01:34,810
+And then lastly to make white we combine all three.
+
+26
+00:01:34,810 --> 00:01:38,170
+So here's another diagram done here that makes it a little easier.
+
+27
+00:01:38,190 --> 00:01:44,850
+We have red green and blue and then magenta yellow cyan and white and then no color is black.
+
+28
+00:01:45,000 --> 00:01:49,640
+So if we go back we can use that to try and figure out what color this is.
+
+29
+00:01:49,920 --> 00:01:54,860
+So if we take a look we have a bunch of red almost all red.
+
+30
+00:01:55,140 --> 00:02:00,660
+Up to 255 so almost There are a lot of green and very little blue.
+
+31
+00:02:00,840 --> 00:02:06,960
+So a lot of red in a lot of green if you remember from this chart red and green makes yellow.
+
+32
+00:02:07,260 --> 00:02:11,670
+So if we had 255 red 255 green it would look like this.
+
+33
+00:02:11,970 --> 00:02:16,290
+But we have less than 255 so it's not going to be as bright.
+
+34
+00:02:16,320 --> 00:02:17,440
+So let's go back.
+
+35
+00:02:17,700 --> 00:02:22,860
+Hopefully you can tell which one is the correct answer based off of the diagram we just looked at but
+
+36
+00:02:22,860 --> 00:02:25,790
+I'm going to guess something wrong first to show you what happens.
+
+37
+00:02:25,800 --> 00:02:27,450
+So this one is definitely wrong.
+
+38
+00:02:27,450 --> 00:02:29,970
+This is all red and very little green.
+
+39
+00:02:30,360 --> 00:02:33,900
+I click and it goes away and it tells me try again.
+
+40
+00:02:33,900 --> 00:02:36,750
+So let's keep guessing some wrong ones like that one.
+
+41
+00:02:36,750 --> 00:02:37,690
+This one's wrong.
+
+42
+00:02:37,860 --> 00:02:38,770
+This one's wrong.
+
+43
+00:02:38,990 --> 00:02:39,270
+OK.
+
+44
+00:02:39,270 --> 00:02:41,000
+Knowledge's guess the correct one.
+
+45
+00:02:41,130 --> 00:02:43,140
+Red and green it's going to be very yellow.
+
+46
+00:02:43,320 --> 00:02:44,370
+So this is correct.
+
+47
+00:02:44,520 --> 00:02:48,120
+I'll click and notice that all six squares come back.
+
+48
+00:02:48,150 --> 00:02:53,080
+They all change to the correct color and our background appear changes to be the correct color as well
+
+49
+00:02:53,090 --> 00:02:53,520
+.
+
+50
+00:02:53,760 --> 00:02:59,070
+And to get a message that says correct and if I want I can click on play again and that will generate
+
+51
+00:02:59,070 --> 00:03:00,000
+new colors.
+
+52
+00:03:00,210 --> 00:03:05,680
+My screen goes back to blue up here and I get six new squares and a new random color here.
+
+53
+00:03:06,270 --> 00:03:08,870
+And then what I can also do is change the difficulty.
+
+54
+00:03:08,910 --> 00:03:12,690
+So if I want easier I only have three colors to pick from.
+
+55
+00:03:12,810 --> 00:03:18,990
+This can get a little bit challenging when we have all refresh a few times like here we have two shades
+
+56
+00:03:18,990 --> 00:03:20,510
+of blue that are very similar.
+
+57
+00:03:20,520 --> 00:03:25,080
+Now after you play this game for a while you should be able to determine which one is correct based
+
+58
+00:03:25,080 --> 00:03:27,980
+off of these three pink shades or these two blue shades.
+
+59
+00:03:28,020 --> 00:03:29,220
+And that's really the point here.
+
+60
+00:03:29,340 --> 00:03:32,520
+But to start out you might just want two colors to pick from.
+
+61
+00:03:32,520 --> 00:03:33,420
+So here's another one.
+
+62
+00:03:33,510 --> 00:03:35,290
+Let's do it a little bit of red.
+
+63
+00:03:35,310 --> 00:03:36,470
+Almost no red.
+
+64
+00:03:36,690 --> 00:03:37,800
+A little bit of green.
+
+65
+00:03:37,830 --> 00:03:38,560
+Not very much.
+
+66
+00:03:38,670 --> 00:03:42,890
+And a lot of blue of course it's going to give us very pure blue.
+
+67
+00:03:43,380 --> 00:03:44,690
+Let's go back to hard mode.
+
+68
+00:03:44,700 --> 00:03:50,760
+One other point that I'll show here is that it's a responsive site so I can resize it and my squares
+
+69
+00:03:50,760 --> 00:03:52,830
+move to the middle.
+
+70
+00:03:52,830 --> 00:03:54,870
+Watch this little naff bar here.
+
+71
+00:03:54,870 --> 00:03:59,060
+The space between them on the sides will increase and decrease.
+
+72
+00:03:59,130 --> 00:04:03,290
+And if I have a message so let's click on one of these That's wrong.
+
+73
+00:04:03,780 --> 00:04:04,880
+I get try again.
+
+74
+00:04:05,100 --> 00:04:08,140
+Notice how these move closer together.
+
+75
+00:04:08,820 --> 00:04:11,950
+And then I can move them apart and we get some more spacing in there.
+
+76
+00:04:12,270 --> 00:04:16,970
+So to wrap up before we actually start creating it I just want to summarize a few things.
+
+77
+00:04:17,220 --> 00:04:22,260
+It's going to be a pretty large app to be a lot of javascript about a hundred ish lines quite a bit
+
+78
+00:04:22,260 --> 00:04:25,130
+of success as well and some aged him too.
+
+79
+00:04:25,200 --> 00:04:29,580
+We're going to start kind of bare bones very little styling and we're just going to get the functionality
+
+80
+00:04:29,580 --> 00:04:33,030
+going and then we'll go and add some styling on top of it.
+
+81
+00:04:33,030 --> 00:04:34,160
+The other thing.
+
+82
+00:04:34,530 --> 00:04:40,110
+And then once we finish it hopefully you can use this quite often to brush up on your R.G. skills even
+
+83
+00:04:40,110 --> 00:04:45,820
+just making this for the course has helped me quite a bit to brush up on some of my RGV skills.
+
+84
+00:04:45,870 --> 00:04:49,280
+I've noticed that I tend to rely too much on RGV colored pickers.
+
+85
+00:04:49,410 --> 00:04:54,680
+So this is great for me as well to get some practice and to remind myself how RGV works.
+
+86
+00:04:55,080 --> 00:04:56,970
+So the next video we're going to start writing some code
+

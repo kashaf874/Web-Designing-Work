@@ -1,0 +1,984 @@
+﻿1
+00:00:00,270 --> 00:00:01,320
+Welcome back.
+
+2
+00:00:01,320 --> 00:00:06,270
+In this video we're going to spend time talking about the different ways of selecting elements using
+
+3
+00:00:06,270 --> 00:00:07,770
+javascript and the doll.
+
+4
+00:00:08,100 --> 00:00:12,600
+Before we talk about the actual selectors we need to just review the document one more time.
+
+5
+00:00:12,720 --> 00:00:18,540
+Remember that our entire dorm all the objects all the representations of our elements all live inside
+
+6
+00:00:18,540 --> 00:00:20,160
+of this document object.
+
+7
+00:00:20,220 --> 00:00:23,850
+It's the top level object or the root node.
+
+8
+00:00:25,140 --> 00:00:27,760
+So quickly let's open up any browser window.
+
+9
+00:00:27,870 --> 00:00:32,060
+I'm going to use Google and let's try typing these four lines.
+
+10
+00:00:32,430 --> 00:00:39,660
+So open up the console and type document dot you are l and it shows us the URL of the page that we're
+
+11
+00:00:39,660 --> 00:00:40,300
+on.
+
+12
+00:00:40,610 --> 00:00:46,400
+You can do document dot links and that's a whole list of every single link on the page.
+
+13
+00:00:46,410 --> 00:00:55,350
+Every single anchor tag we can do document that Vadi and this is the entire body with every other element
+
+14
+00:00:55,350 --> 00:01:00,610
+inside of it that lives in the body and we can do document dot head.
+
+15
+00:01:00,660 --> 00:01:03,340
+So we've already seen this in the last few videos.
+
+16
+00:01:03,360 --> 00:01:07,440
+The reason that I'm showing it to you again is that all of the selectors all the methods we're going
+
+17
+00:01:07,440 --> 00:01:10,570
+to learn also live inside the document.
+
+18
+00:01:10,620 --> 00:01:17,250
+So everything we learn about in this video is going to start with document dot something.
+
+19
+00:01:17,280 --> 00:01:21,250
+So I'll show you what those somethings are.
+
+20
+00:01:21,270 --> 00:01:24,030
+There are five main methods we're going to talk about in this video.
+
+21
+00:01:24,030 --> 00:01:25,860
+They're all built into the document.
+
+22
+00:01:25,860 --> 00:01:27,920
+They all start with document dot.
+
+23
+00:01:28,020 --> 00:01:35,820
+You can see them here get element by id get elements by class name get elements by tag name queery selector
+
+24
+00:01:36,060 --> 00:01:37,050
+and queery selector.
+
+25
+00:01:37,050 --> 00:01:42,690
+All if you can think back to the video I did on adding methods to an object where we could basically
+
+26
+00:01:42,690 --> 00:01:46,020
+store a function as a value instead of an object.
+
+27
+00:01:46,140 --> 00:01:52,650
+We had like cat space in dog space and we had to speak method that we added into our dog space object
+
+28
+00:01:52,650 --> 00:01:53,280
+.
+
+29
+00:01:53,310 --> 00:01:55,080
+That's exactly what's happening here.
+
+30
+00:01:55,260 --> 00:02:00,060
+These five methods have all been added in to the document object.
+
+31
+00:02:00,900 --> 00:02:05,760
+So before we actually get started here I want to show you the H-G mail that I'm going to use for demonstration
+
+32
+00:02:05,760 --> 00:02:07,100
+purposes.
+
+33
+00:02:07,230 --> 00:02:10,660
+It's a very very simple page just has a few elements.
+
+34
+00:02:10,890 --> 00:02:16,020
+So our normal head is pretty much empty aside from a title or body.
+
+35
+00:02:16,020 --> 00:02:20,350
+And then inside the body to H-1 is one that says hello.
+
+36
+00:02:20,580 --> 00:02:21,910
+Another that says goodbye.
+
+37
+00:02:22,140 --> 00:02:29,250
+And then three allies instead of a UL and those three allies list item one two and three are slightly
+
+38
+00:02:29,250 --> 00:02:30,160
+different.
+
+39
+00:02:30,180 --> 00:02:35,450
+The first one has an ID highlight and the last to have a class called bolded.
+
+40
+00:02:35,670 --> 00:02:36,720
+So we're going to use that.
+
+41
+00:02:36,720 --> 00:02:40,430
+The fact that some of them are H-1 some of the elements are allies.
+
+42
+00:02:40,440 --> 00:02:41,430
+Some have classes.
+
+43
+00:02:41,430 --> 00:02:42,550
+One has an ID.
+
+44
+00:02:42,630 --> 00:02:47,160
+We're going to use those different properties to select them in different ways and different combinations
+
+45
+00:02:47,160 --> 00:02:48,210
+.
+
+46
+00:02:48,300 --> 00:02:53,850
+So I'm using this same code here in the examples and I'm drawing a green box so you can see in the next
+
+47
+00:02:53,850 --> 00:02:54,680
+few slides.
+
+48
+00:02:54,690 --> 00:02:57,810
+A green box around whatever is selected.
+
+49
+00:02:58,410 --> 00:03:00,680
+OK so let's get started with the first method.
+
+50
+00:03:00,780 --> 00:03:02,640
+Get element by ID.
+
+51
+00:03:02,970 --> 00:03:05,310
+So its name is a little bit self-explanatory.
+
+52
+00:03:05,550 --> 00:03:11,750
+It takes in an ID name and it's going to return the one element that matches that ID.
+
+53
+00:03:11,820 --> 00:03:15,220
+Remember that an ID can only occur one time on a page.
+
+54
+00:03:15,240 --> 00:03:18,560
+So here's an example document diked get element by ID.
+
+55
+00:03:18,600 --> 00:03:26,010
+Highlight is going to select this ally that has Id highlight so it selects the object and then it returns
+
+56
+00:03:26,070 --> 00:03:26,940
+to us.
+
+57
+00:03:27,030 --> 00:03:29,450
+I'll quickly show that in the council.
+
+58
+00:03:29,520 --> 00:03:34,440
+So we'll open up the console to a document type get element by id
+
+59
+00:03:37,530 --> 00:03:40,000
+highlight which is our ID name.
+
+60
+00:03:40,100 --> 00:03:43,020
+Let's save it to a variable called tag.
+
+61
+00:03:43,020 --> 00:03:43,730
+Hit enter.
+
+62
+00:03:43,890 --> 00:03:45,260
+And let's look at TAG.
+
+63
+00:03:45,690 --> 00:03:49,940
+And you can see it gives us the first line that has ID equal to highlight.
+
+64
+00:03:50,040 --> 00:03:52,670
+So we selected something by an ID.
+
+65
+00:03:52,800 --> 00:03:58,140
+Again it is showing it to us as if it's actually aged him well but the result of this is actually a
+
+66
+00:03:58,140 --> 00:03:59,430
+javascript object.
+
+67
+00:03:59,430 --> 00:04:02,980
+So we can do that canceled that Diyar again on tag.
+
+68
+00:04:03,330 --> 00:04:05,030
+And this is actually what it looks like.
+
+69
+00:04:05,040 --> 00:04:06,320
+All these properties.
+
+70
+00:04:06,480 --> 00:04:12,630
+So this is just a nice shortcut for us to visually see what we selected but in actuality it's an object
+
+71
+00:04:12,630 --> 00:04:13,670
+representation.
+
+72
+00:04:13,860 --> 00:04:16,740
+All right so that's all there is to get element by ID.
+
+73
+00:04:17,070 --> 00:04:23,220
+We call the method we pass in a single string argument the name of an ID that we want and then it goes
+
+74
+00:04:23,220 --> 00:04:30,310
+and finds the matching element that has the same ID and it returns the object representation to us.
+
+75
+00:04:31,320 --> 00:04:36,780
+The next one is get elements by class name so its name tells you exactly what it does.
+
+76
+00:04:36,840 --> 00:04:38,690
+Just like get element by ID.
+
+77
+00:04:38,820 --> 00:04:43,540
+Although this is slightly different Get elements plural with an S by class name.
+
+78
+00:04:43,620 --> 00:04:46,990
+Remember a class can occur as many times as we want on a page.
+
+79
+00:04:47,100 --> 00:04:53,520
+So we pass in a string like bolded and that's going to return a list of all the elements on the page
+
+80
+00:04:53,670 --> 00:04:56,130
+that have the matching class name bolded.
+
+81
+00:04:56,160 --> 00:05:01,590
+In this case there's two of them but if there were ten thousand elements on the page that had that class
+
+82
+00:05:02,010 --> 00:05:04,150
+we would get all 10000 in a list.
+
+83
+00:05:04,380 --> 00:05:11,810
+So let's go demonstrate this so will rate document get element by class name and you can see if we get
+
+84
+00:05:11,810 --> 00:05:17,360
+this little autocomplete here so we can select the one that we want get elements by class name and then
+
+85
+00:05:17,360 --> 00:05:19,610
+the class name we want is bolded.
+
+86
+00:05:20,130 --> 00:05:21,650
+Let's save it to a variable.
+
+87
+00:05:21,650 --> 00:05:28,400
+Tags not tag but tags because we're going to get multiple tags back if we look at what tags is.
+
+88
+00:05:28,730 --> 00:05:32,660
+It's a list of two lies both with class equal to bolded.
+
+89
+00:05:32,690 --> 00:05:34,730
+Technically it's not an array.
+
+90
+00:05:34,730 --> 00:05:38,330
+It's something called a node list which is array like.
+
+91
+00:05:38,390 --> 00:05:40,450
+I like to think of it as a lightweight array.
+
+92
+00:05:40,520 --> 00:05:43,700
+So it comes with some of the things that you would expect from an array.
+
+93
+00:05:43,820 --> 00:05:46,430
+But some of the more advanced features are actually missing.
+
+94
+00:05:46,430 --> 00:05:52,000
+So for instance we can access elements like this using an index tags 0.
+
+95
+00:05:52,220 --> 00:05:59,240
+We can do tags to outflank but we can't do a for each loop tags dot for each.
+
+96
+00:05:59,720 --> 00:06:02,930
+And if I just do this it's going to tell me tags are for each.
+
+97
+00:06:02,930 --> 00:06:03,990
+It's not a function.
+
+98
+00:06:04,250 --> 00:06:10,340
+So that's because there is no foreach defined for these node lists that's defined for arrays and these
+
+99
+00:06:10,340 --> 00:06:11,450
+aren't arrays.
+
+100
+00:06:11,750 --> 00:06:17,780
+And just like with get element by id it shows us this nice string representation but behind the scenes
+
+101
+00:06:17,930 --> 00:06:19,450
+it's actually an object.
+
+102
+00:06:19,460 --> 00:06:25,740
+So again just to prove that to you console dot DIR and we do tag's zero.
+
+103
+00:06:26,270 --> 00:06:31,960
+And it actually is this big complex crazy object with tons of properties.
+
+104
+00:06:32,540 --> 00:06:35,130
+OK so let's get elements by class name.
+
+105
+00:06:35,270 --> 00:06:36,320
+It returns a list.
+
+106
+00:06:36,380 --> 00:06:37,600
+Not quite an array.
+
+107
+00:06:37,610 --> 00:06:44,110
+And it contains every element on the page that matches the given class name that we provided.
+
+108
+00:06:44,120 --> 00:06:46,860
+Next up we have get elements by tagged name.
+
+109
+00:06:46,880 --> 00:06:51,050
+So this one works just like get element by ID or get elements by class name.
+
+110
+00:06:51,140 --> 00:06:56,800
+Except it returns a list of elements that match a given tag name like Ally or H-1.
+
+111
+00:06:56,810 --> 00:07:02,780
+So in this case I'm running document dight get elements by tag name Alhaj that's going to return to
+
+112
+00:07:02,780 --> 00:07:06,040
+me a list of the three allies that exist on this page.
+
+113
+00:07:06,500 --> 00:07:16,040
+So again let's demonstrate that var tags equals document that get elements by tag name and let's do
+
+114
+00:07:16,040 --> 00:07:26,630
+Alhaj first and let's look at tags and we get this list also not quite an array it's a node list that
+
+115
+00:07:26,630 --> 00:07:30,200
+has three allies and I won't prove it to you this time.
+
+116
+00:07:30,290 --> 00:07:31,950
+I went to the Consul that DJR.
+
+117
+00:07:32,090 --> 00:07:35,300
+But these are objects they're not just strings or not.
+
+118
+00:07:35,300 --> 00:07:39,030
+H tim l they're actually javascript objects with all those properties.
+
+119
+00:07:39,200 --> 00:07:42,230
+So I can do the same thing for H-1.
+
+120
+00:07:42,410 --> 00:07:50,120
+So we'll select all h ones and we look at tags and we get to h ones and the list.
+
+121
+00:07:50,270 --> 00:07:53,650
+It's not just limited to tags that we see inside the body.
+
+122
+00:07:53,660 --> 00:07:55,100
+I could also do something like this.
+
+123
+00:07:55,100 --> 00:08:03,200
+Get elements by tag name body and it is going to return to me a list with one element the body inside
+
+124
+00:08:03,200 --> 00:08:04,250
+of it.
+
+125
+00:08:04,250 --> 00:08:11,450
+Or I could also do it for the head or the time element or title or whatever I want but the important
+
+126
+00:08:11,450 --> 00:08:16,490
+part is that it returns a list even if there's only one element it still returns a list.
+
+127
+00:08:16,580 --> 00:08:23,360
+So to select the body we could do something like var body ECOs document that get elements by tag name
+
+128
+00:08:24,920 --> 00:08:32,960
+body and then just take the first item because there's only one item in that list.
+
+129
+00:08:32,960 --> 00:08:38,130
+And if we look at what body is we get this giant object that the entire body.
+
+130
+00:08:38,390 --> 00:08:38,690
+OK.
+
+131
+00:08:38,690 --> 00:08:40,880
+So that's Get elements by tag name.
+
+132
+00:08:40,880 --> 00:08:43,960
+Just to reiterate you give it a tag name like Ally.
+
+133
+00:08:44,060 --> 00:08:48,510
+It goes and finds all the elements that match it and returns them all to you in a list.
+
+134
+00:08:48,560 --> 00:08:50,960
+Even if there's only one.
+
+135
+00:08:51,080 --> 00:08:54,070
+So here I have another example doing it with an H-1.
+
+136
+00:08:54,200 --> 00:08:57,270
+You can see that it selects the two H once.
+
+137
+00:08:58,190 --> 00:09:00,620
+Ok so now we change gears a little bit.
+
+138
+00:09:00,710 --> 00:09:05,450
+We no longer have a get element or get elements by something syntax.
+
+139
+00:09:05,540 --> 00:09:10,730
+This is called queery selector and query selector is a newer method that hasn't existed for all that
+
+140
+00:09:10,730 --> 00:09:11,360
+long.
+
+141
+00:09:11,390 --> 00:09:13,640
+That really makes our lives a lot easier.
+
+142
+00:09:13,670 --> 00:09:18,980
+So we actually can use it to do everything that we saw with get element by id get elements by class
+
+143
+00:09:18,980 --> 00:09:23,980
+name get elements with tag name we can replicate all of that with queries selector.
+
+144
+00:09:24,350 --> 00:09:28,260
+So what it does is it takes a CSSA style selector.
+
+145
+00:09:28,370 --> 00:09:34,130
+So a CSSA style selector means just any of the selectors we would use instead of a CSSA document.
+
+146
+00:09:34,130 --> 00:09:40,280
+So in this example I'm selecting something based off of the ID highlight so I can't just write the word
+
+147
+00:09:40,280 --> 00:09:47,540
+highlight like I did with get element by ID but I have to do is use the CSSA syntax with the hash symbol
+
+148
+00:09:47,630 --> 00:09:50,060
+or the Octa Thorpe and then highlight.
+
+149
+00:09:50,060 --> 00:09:52,640
+So this is how you select something with query selector.
+
+150
+00:09:52,640 --> 00:09:58,880
+If you want an ID just like you would with C Ss and we get this first ally with ID equal to highlight
+
+151
+00:09:58,880 --> 00:09:59,180
+.
+
+152
+00:09:59,180 --> 00:10:03,950
+Before I go over to the console and type this out I'll show you we can do the same thing with a class
+
+153
+00:10:03,950 --> 00:10:11,190
+name var tag equals document that queery selector dot folded which is how we would select the bolded
+
+154
+00:10:11,190 --> 00:10:13,070
+class using C Ss.
+
+155
+00:10:13,350 --> 00:10:18,200
+And what's important is that it actually only gives us the very first match.
+
+156
+00:10:18,210 --> 00:10:23,910
+So even though there are two elements that have bolded as class it only gives us the first one and that's
+
+157
+00:10:23,910 --> 00:10:25,240
+the point of selector.
+
+158
+00:10:25,290 --> 00:10:30,960
+It always just returns one element there is another method we'll see shortly that will return all elements
+
+159
+00:10:30,960 --> 00:10:31,990
+that match.
+
+160
+00:10:32,010 --> 00:10:35,540
+So a query selector can also take in a tag name like we have here.
+
+161
+00:10:35,550 --> 00:10:39,140
+H-1 and it returns the very first H-1.
+
+162
+00:10:39,600 --> 00:10:45,570
+So we can take CSSA selectors that we write all the time and see SS and we can use that syntax to select
+
+163
+00:10:45,570 --> 00:10:47,300
+elements with queries selector.
+
+164
+00:10:47,640 --> 00:10:49,190
+So I'll demonstrate that here.
+
+165
+00:10:49,410 --> 00:10:53,830
+Let me clear this out and let's select this first.
+
+166
+00:10:53,830 --> 00:10:54,630
+H-1.
+
+167
+00:10:54,750 --> 00:10:56,310
+So all I need to do.
+
+168
+00:10:56,340 --> 00:11:01,080
+Var H-1 equals document query selector
+
+169
+00:11:03,930 --> 00:11:05,900
+H-1.
+
+170
+00:11:06,450 --> 00:11:11,820
+And if we look at what H1 is again it's a nice string representation but it's actually an object that
+
+171
+00:11:11,820 --> 00:11:13,700
+represents this entire element.
+
+172
+00:11:14,220 --> 00:11:18,160
+So next up let's try selecting based off of an ID.
+
+173
+00:11:18,210 --> 00:11:21,270
+So I'm just going to copy this line rather than H-1.
+
+174
+00:11:21,270 --> 00:11:27,480
+This will be an ally and rather than selecting the first H-1 will select the first item that has the
+
+175
+00:11:27,480 --> 00:11:29,280
+ID highlight.
+
+176
+00:11:29,640 --> 00:11:35,370
+And of course there's only one item because it's an ID of course it's only one item that has this idea
+
+177
+00:11:35,380 --> 00:11:37,160
+on a page and we need this.
+
+178
+00:11:37,170 --> 00:11:38,220
+Octa Thorgeir.
+
+179
+00:11:38,400 --> 00:11:44,180
+Otherwise it's going to look for a tag name called highlight which doesn't exist and H.J. him out.
+
+180
+00:11:45,010 --> 00:11:52,020
+And if I hit enter and look at Alhaj I get that first ally with list item one ID equals highlight.
+
+181
+00:11:52,500 --> 00:11:55,650
+Lastly let's do the same thing with a class.
+
+182
+00:11:55,800 --> 00:12:02,730
+So I use the CSSA Leichter dot folded which is how we select a class and if we look at Ally I get the
+
+183
+00:12:02,730 --> 00:12:07,270
+second ally with class equal bulleted list item 2.
+
+184
+00:12:07,440 --> 00:12:09,350
+So there are other things that we can select.
+
+185
+00:12:09,510 --> 00:12:13,190
+It's not just based off of a tag name or an ID or a class.
+
+186
+00:12:13,200 --> 00:12:19,140
+Those are the most common but we could do other things like this which won't work on my page but I could
+
+187
+00:12:19,140 --> 00:12:25,770
+select all anchor tags inside of an ally with a class of special.
+
+188
+00:12:25,770 --> 00:12:29,550
+And this is a longer C Ss selector but it's valid in the US.
+
+189
+00:12:29,620 --> 00:12:34,710
+So all the anchor tags have class special that are nested inside of an ally and that's totally valid
+
+190
+00:12:34,710 --> 00:12:35,730
+.
+
+191
+00:12:35,730 --> 00:12:37,920
+Again I don't have this set up on my page.
+
+192
+00:12:37,920 --> 00:12:40,900
+So if I hit Enter just going to give me.
+
+193
+00:12:41,520 --> 00:12:44,180
+No because it didn't find any matches.
+
+194
+00:12:45,030 --> 00:12:49,200
+So as I mentioned Querrey selector returns the first match and that's it.
+
+195
+00:12:49,200 --> 00:12:53,040
+Sometimes it's useful for instance if you wanted to select the body.
+
+196
+00:12:53,160 --> 00:12:59,180
+All I have to do is say query selector body and that gives you the body unlike when I did document diked
+
+197
+00:12:59,190 --> 00:13:01,380
+get elements by tag name body.
+
+198
+00:13:01,380 --> 00:13:05,030
+They gave me a list and then they had to ask for the first element.
+
+199
+00:13:05,220 --> 00:13:08,520
+If I use queries selector I'll just get the body right away.
+
+200
+00:13:08,730 --> 00:13:11,570
+But the alternative is queery selector all.
+
+201
+00:13:11,640 --> 00:13:13,570
+So it works exactly the same way.
+
+202
+00:13:13,590 --> 00:13:17,840
+It takes a C a set selector but it returns all matching elements.
+
+203
+00:13:17,850 --> 00:13:27,030
+So in this case I'm using document that query selector all H-1 returns both h once or in this case I'm
+
+204
+00:13:27,030 --> 00:13:28,520
+using the class bolded.
+
+205
+00:13:28,620 --> 00:13:29,820
+So CSSA style.
+
+206
+00:13:29,850 --> 00:13:34,610
+I need dot bolded and that gives me both elements with the class equal bolded.
+
+207
+00:13:34,770 --> 00:13:36,930
+So let's demonstrate that in the con..
+
+208
+00:13:37,050 --> 00:13:40,140
+Let's select all allies so far.
+
+209
+00:13:40,140 --> 00:13:43,200
+Allies equals document that query selector.
+
+210
+00:13:43,440 --> 00:13:46,560
+All ally.
+
+211
+00:13:46,870 --> 00:13:48,300
+And that will give me all of them.
+
+212
+00:13:48,510 --> 00:13:49,820
+I look at allies.
+
+213
+00:13:50,040 --> 00:13:52,010
+You can see it has three allies.
+
+214
+00:13:52,380 --> 00:13:54,370
+One last time I know I'm a broken record.
+
+215
+00:13:54,390 --> 00:13:55,660
+These are objects.
+
+216
+00:13:55,740 --> 00:13:57,200
+They are not HMO.
+
+217
+00:13:57,270 --> 00:14:01,410
+They are javascript objects that are constructed from the HMO.
+
+218
+00:14:02,220 --> 00:14:08,450
+And if I do the same thing but I do it instead with query selector and I hit enter.
+
+219
+00:14:08,760 --> 00:14:12,180
+If I look at allies it's not a list it's only one.
+
+220
+00:14:12,510 --> 00:14:14,520
+So same thing if I did it for a class.
+
+221
+00:14:14,550 --> 00:14:17,670
+So let's do it for the bolded class.
+
+222
+00:14:17,670 --> 00:14:23,320
+We'll just call it bolded and have you document that query selector dot bolded.
+
+223
+00:14:24,060 --> 00:14:27,920
+And I look at that it's just the first item list item too.
+
+224
+00:14:27,990 --> 00:14:29,850
+And if I do query selector all
+
+225
+00:14:32,520 --> 00:14:35,630
+I then get a list with both of them in there.
+
+226
+00:14:35,860 --> 00:14:41,010
+One point of confusion often for my students is that you can still use queries selector all even if
+
+227
+00:14:41,010 --> 00:14:42,940
+there's only one element you're looking for.
+
+228
+00:14:43,120 --> 00:14:51,070
+So you could do something like var ally equals document dot query selector.
+
+229
+00:14:51,300 --> 00:14:59,300
+All of an ID like highlight and I look at Ally and it's a list with one item.
+
+230
+00:14:59,350 --> 00:15:03,700
+It's just pretty rare that you would do that but it will still work if there's only one match.
+
+231
+00:15:04,080 --> 00:15:06,530
+All right so we covered a lot of ground in this video.
+
+232
+00:15:06,900 --> 00:15:10,320
+So let's go back to the beginning and do a really quick wrap up.
+
+233
+00:15:10,530 --> 00:15:15,860
+We started out by talking about how all of these methods are inside of the document object we can select
+
+234
+00:15:15,880 --> 00:15:22,530
+by ID with get element by ID we can select by class name with get elements by class name and that returns
+
+235
+00:15:22,560 --> 00:15:24,530
+a list which isn't actually an array.
+
+236
+00:15:24,610 --> 00:15:26,370
+It's called a node list.
+
+237
+00:15:26,380 --> 00:15:31,140
+We can do the same thing but using GET elements by tag name which will also return a node list based
+
+238
+00:15:31,140 --> 00:15:36,850
+off of an element type that we select by then we have query selector which is a jack of all trades.
+
+239
+00:15:36,990 --> 00:15:40,860
+It returns the first element that matches a given CSSA selector.
+
+240
+00:15:40,980 --> 00:15:46,680
+So we can use it to do everything that get element by id class name and tag name did we can give it
+
+241
+00:15:46,680 --> 00:15:52,210
+an ID like we do here in a class like we do here or an element name.
+
+242
+00:15:52,620 --> 00:15:57,510
+And then there's query selector all which works the same way except it returns a list which is not an
+
+243
+00:15:57,510 --> 00:15:57,900
+array.
+
+244
+00:15:57,900 --> 00:16:01,800
+It's also a node burst with all elements that match a given selector.
+
+245
+00:16:01,800 --> 00:16:02,040
+All right.
+
+246
+00:16:02,040 --> 00:16:04,500
+So next up I'm going to have you do a really quick exercise
+

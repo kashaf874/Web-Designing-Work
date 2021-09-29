@@ -1,0 +1,212 @@
+﻿1
+00:00:00,250 --> 00:00:00,870
+All right.
+
+2
+00:00:00,870 --> 00:00:03,180
+So it's time for another quick set of exercises.
+
+3
+00:00:03,240 --> 00:00:05,640
+This time we're going to cover javascript objects.
+
+4
+00:00:05,640 --> 00:00:06,670
+Just the basics.
+
+5
+00:00:06,810 --> 00:00:07,870
+You know the drill by now.
+
+6
+00:00:08,070 --> 00:00:12,390
+I'm going to give you some code and ask you to evaluate it without just copying it into the console
+
+7
+00:00:12,390 --> 00:00:12,960
+.
+
+8
+00:00:12,960 --> 00:00:18,090
+So here's the first one we are declaring an object and then we're adding four different properties to
+
+9
+00:00:18,090 --> 00:00:19,160
+that object.
+
+10
+00:00:19,380 --> 00:00:23,470
+And I want you to figure out which of these are valid code and which will cause problems.
+
+11
+00:00:23,730 --> 00:00:26,450
+So go ahead post a video and give it a shot.
+
+12
+00:00:27,270 --> 00:00:29,780
+OK so let's discuss the answer here.
+
+13
+00:00:30,420 --> 00:00:38,010
+If we go ahead and create a new object some object equals empty object the first thing that we're doing
+
+14
+00:00:38,010 --> 00:00:42,960
+is trying to add in Hedwig under the key underscore name.
+
+15
+00:00:43,110 --> 00:00:45,330
+So does it work to do that.
+
+16
+00:00:45,420 --> 00:00:47,480
+The answer is yes.
+
+17
+00:00:47,610 --> 00:00:52,880
+If I look at some object you'll see that we have Headrick stored under underscore name.
+
+18
+00:00:52,890 --> 00:00:56,430
+It's a little bit unorthodox to see that but it's definitely OK.
+
+19
+00:00:56,880 --> 00:01:05,160
+So the next one here this is also valid some object dot age you can see get some object it has underscored
+
+20
+00:01:05,190 --> 00:01:06,130
+name Hedwig.
+
+21
+00:01:06,180 --> 00:01:07,910
+Age 6.
+
+22
+00:01:07,920 --> 00:01:12,340
+Next up we're using a variable called Propp which is equal to the string color.
+
+23
+00:01:12,450 --> 00:01:17,850
+And then we're using Propp as the key inside of square brackets and setting the value to be read.
+
+24
+00:01:18,090 --> 00:01:27,780
+So if we copy this over and we look at some object you'll see that we get color Colan red which is valid
+
+25
+00:01:27,790 --> 00:01:28,150
+.
+
+26
+00:01:28,500 --> 00:01:31,700
+Lastly some objects dot one two three.
+
+27
+00:01:31,800 --> 00:01:34,860
+Setting that to be true that's problematic.
+
+28
+00:01:34,980 --> 00:01:38,770
+We can't use the dot notation if we have a property starting with a number.
+
+29
+00:01:38,820 --> 00:01:40,730
+So that's the only one that's an issue.
+
+30
+00:01:40,950 --> 00:01:46,430
+Although again using underscore is not a great idea but it doesn't cause a problem.
+
+31
+00:01:47,820 --> 00:01:49,530
+So here's the second exercise.
+
+32
+00:01:49,680 --> 00:01:56,280
+Have a large nested object and I want you to write code to retrieve the string Malfoy right here from
+
+33
+00:01:56,280 --> 00:01:57,470
+some object.
+
+34
+00:01:57,630 --> 00:01:59,840
+And remember to go one layer at a time.
+
+35
+00:01:59,910 --> 00:02:04,060
+So go ahead post the video and try and write the code to retrieve Malfoy.
+
+36
+00:02:04,840 --> 00:02:12,570
+OK so the answer here is that we first need to access the friends array and to do that it's some object
+
+37
+00:02:13,200 --> 00:02:18,420
+friends and then we need to access the first object instead of the friends array which is right here
+
+38
+00:02:18,430 --> 00:02:18,900
+.
+
+39
+00:02:19,560 --> 00:02:23,090
+And then we need to access the name property out of that array.
+
+40
+00:02:23,400 --> 00:02:25,250
+So let's type that solution.
+
+41
+00:02:25,350 --> 00:02:33,630
+I'm going to just copy some object over and we're going to need to start by accessing the friends array
+
+42
+00:02:33,650 --> 00:02:33,770
+.
+
+43
+00:02:33,870 --> 00:02:37,110
+So Dot friends or we could use square brackets.
+
+44
+00:02:37,260 --> 00:02:42,040
+That gives us an array with three different people each one with a name.
+
+45
+00:02:42,180 --> 00:02:43,580
+We want the first one.
+
+46
+00:02:43,710 --> 00:02:46,890
+So some object friends bracket zero.
+
+47
+00:02:47,040 --> 00:02:50,480
+That gives us an object with name equal to Malfoy.
+
+48
+00:02:50,670 --> 00:02:53,190
+And then we want dot name.
+
+49
+00:02:53,250 --> 00:02:55,920
+And again we could use square brackets as well.
+
+50
+00:02:56,130 --> 00:02:57,480
+So that's all we need to do there.
+
+51
+00:02:57,480 --> 00:03:04,440
+The key to answering these is to go one step at a time burrow down or drill down to friends and then
+
+52
+00:03:04,440 --> 00:03:07,270
+to the first object and then get name.
+
+53
+00:03:07,440 --> 00:03:09,810
+All right so that's it for this quick set of exercises.
+
