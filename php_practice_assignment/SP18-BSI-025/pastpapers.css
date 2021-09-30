@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+*
+{
+	text-decoration:none;
+}
+body
+{
+	margin:0px;
+	
+}
+.header
+{
+	height:143px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .menubar {
+  padding-top: 102px;
+}
+.super 
+{
+	margin-left:9%;
+	margin-right:9%;
+}
+
+.name
+{
+	height:58px;
+	background-color:YellowGreen;
+	font-family:"text-decoration" ;
+}
+
+hr
+{
+	margin:0px;	
+}
+.menubar
+{
+	
+	height:83px;
+	background-color:YellowGreen;
+}
+.elements
+{
+	margin-left:1%;	
+}
+.menubar li{
+	float: left;
+	display:block;
+	padding:10px;
+	text-align:center;
+	font-size:15px;
+	
+}
+.menubar  li:hover{
+	background-color:#EEE;
+	}
+
+.menubar  li a{
+	margin-top: 30px;
+	
+	display:inline-block;
+	color:black;
+	font-family:"Lucida Sans Unicode" ;
+	font-size:20px;
+	
+	}
+
+.mySlides{
+margin-left: -120px;
+	width: 1347px;
+	 height:500px;
+}
+.footer
+{
+		height:270px;		
+	background-color:YellowGreen;
+}
+
+.footer_container a
+{
+		float:left;
+		color: #000;
+		margin-right:10px;
+		margin-top:20px;
+		font-family:Lucida Sans Unicode;
+		font-size:18px;
+	
+}
+.footer a:hover
+{
+	color:#EEE;
+}
+#firstlink
+{
+		margin-left:500px;
+	
+}
+.info {
+	color: black;
+    display: grid;
+    grid-gap: 9%;
+    grid-template-columns: 2fr 2fr 2fr;
+}
+.info span {
+    color: black;
+    font-size: 25px;
+}
